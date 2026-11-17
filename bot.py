@@ -25,7 +25,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds 100% focados em Mercado Financeiro, Ações, Macro e Cripto
+# Feeds 100% voltados para Mercado Financeiro, Ações, Macro e Cripto
 FEEDS_MERCADO = [
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
@@ -38,11 +38,25 @@ FEEDS_MERCADO = [
     "https://br.cointelegraph.com/rss"
 ]
 
-# Bloqueio estrito de FIIs e ruídos não financeiros
-BLOQUEADOS = [
+# BLOQUEIO RIGOROSO DE PROPAGANDAS, PUBLIEDITORIAIS, PROMOÇÕES E RUÍDOS
+BLOQUEADOS_PROPAGANDA = [
+    # Marketing, Promoções e Black Friday
+    "black friday", "black xp", "promoção", "promocao", "desconto", "descontos", "cupom",
+    "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
+    "cashback", "pontos e milhas", "acumule pontos", "compras parceladas", "condições exclusivas",
+    "condicoes exclusivas", "oferta", "ofertas", "compre com", "ganhe até", "sorteio",
+    # Cursos, Mentorias e Captação de Leads
+    "curso gratuito", "inscrições abertas", "inscricoes abertas", "participe do",
+    "webinar", "mentoria", "baixe o e-book", "baixe o app", "abra sua conta",
+    "cadastre-se", "treinamento", "workshop", "evento online", "evento gratuito",
+    # Cartões de crédito e crédito pessoal de varejo
+    "cartão de crédito", "cartao de credito", "cartão black", "anuidade zero",
+    "limite do cartão", "empréstimo pessoal", "financiamento de veículos",
+    # Fundos Imobiliários e bobagens
     "fundo imobiliário", "fundos imobiliários", "fii ", "fiis", "fiagro", "ifix",
-    "por cota", "cotistas", "rendimento por cota", "horóscopo", "signo", "loteria",
-    "mega-sena", "bbb", "fofoca", "onde assistir", "escalação", "futebol", "novela"
+    "por cota", "cotistas", "rendimento por cota",
+    "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
+    "escalação", "futebol", "novela"
 ]
 
 
@@ -92,8 +106,25 @@ def salvar_historico(historico):
         logging.error(f"Erro ao salvar histórico: {e}")
 
 
+def eh_propaganda_ou_lixo(titulo, descricao):
+    """Bloqueia publieditoriais, anúncios de corretora, promoções e cursos."""
+    texto = (titulo + " " + descricao).lower()
+    for b in BLOQUEADOS_PROPAGANDA:
+        if b in texto:
+            return True
+    return False
+
+
+def limpar_caudas_wordpress(texto):
+    """Remove o rodapé de autoria 'The post ... appeared first on InfoMoney'."""
+    t = re.sub(r'The post .*? appeared first on .*$', '', texto, flags=re.IGNORECASE)
+    t = re.sub(r'O post .*? apareceu primeiro em .*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'appeared first on .*$', '', t, flags=re.IGNORECASE)
+    return t.strip()
+
+
 def extrair_midias(item, desc_bruta):
-    """Detecta imagem, vídeo ou áudio (podcast/resumo falado) no XML da notícia."""
+    """Detecta imagem, vídeo ou áudio (podcast/resumo) anexados à notícia."""
     foto_url = None
     video_url = None
     audio_url = None
@@ -110,7 +141,7 @@ def extrair_midias(item, desc_bruta):
         elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
             foto_url = url
 
-    # 2. Tags Media RSS
+    # 2. Tags do padrão Media RSS
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
         m = item.find(tag)
         if m is not None and "url" in m.attrib:
@@ -133,36 +164,36 @@ def extrair_midias(item, desc_bruta):
 
 
 def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
-    """
-    Limpa ruídos e cria um resumo COMPLETO com início, meio e fim.
-    NUNCA corta frases pela metade nem deixa reticências soltas.
-    """
+    """Limpa ruídos, remove créditos e seleciona frases completas com início, meio e fim."""
     if not desc_bruta:
         return ""
 
-    # 1. Remove tags de imagem, figure e scripts inteiras com atributos
-    t = re.sub(r'<figure[^>]*>.*?</figure>', '', desc_bruta, flags=re.DOTALL | re.IGNORECASE)
+    # 1. Remove propaganda de rodapé do InfoMoney/WordPress
+    t = limpar_caudas_wordpress(desc_bruta)
+
+    # 2. Remove tags de mídia inteiras
+    t = re.sub(r'<figure[^>]*>.*?</figure>', '', t, flags=re.DOTALL | re.IGNORECASE)
     t = re.sub(r'<img[^>]*>', '', t, flags=re.IGNORECASE)
     t = re.sub(r'<script[^>]*>.*?</script>', '', t, flags=re.DOTALL | re.IGNORECASE)
 
-    # 2. Limpa tags HTML residuais
+    # 3. Remove tags HTML residuais
     t = re.sub(r'<[^>]+>', '', t)
     t = html.unescape(t)
     t = re.sub(r'\s+', ' ', t).strip()
 
-    # 3. Remove legendas residuais de imagem no início (ex: "Notas de Dólar x Real BCC", "Foto: Reuters")
+    # 4. Remove legendas residuais de imagem no início
     t = re.sub(r'^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])', '', t, flags=re.IGNORECASE)
     t = re.sub(r'^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)', '', t, flags=re.IGNORECASE)
 
-    # 4. Remove repetição do título no início do parágrafo
+    # 5. Remove repetição do título no início do parágrafo
     if titulo and t.lower().startswith(titulo[:25].lower()):
         t = t[len(titulo):].strip()
         t = re.sub(r'^[:\-–—\s]+', '', t)
 
-    # 5. Remove caudas caça-cliques (ex: "; veja mais", "; saiba mais")
+    # 6. Remove caudas caça-cliques
     t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
 
-    # 6. SELEÇÃO DE FRASES COMPLETAS (Início, Meio e Fim)
+    # 7. SELEÇÃO DE FRASES COMPLETAS (Início, Meio e Fim)
     frases = re.split(r'(?<=[.!?])\s+', t)
     frases_selecionadas = []
     tamanho_acumulado = 0
@@ -171,14 +202,12 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
         f = f.strip()
         if not f:
             continue
-        # Mantém até 2 a 3 frases completas que caibam perfeitamente na legenda
         if tamanho_acumulado + len(f) <= 450:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
         else:
             break
 
-    # Se a 1ª frase já for longa, garante pelo menos ela 100% completa
     if not frases_selecionadas and frases:
         frases_selecionadas.append(frases[0])
 
@@ -244,7 +273,11 @@ def carregar_proxima_noticia():
                 if not link or not title or link in historico:
                     continue
 
-                if len(title) < 25 or any(b in title.lower() for b in BLOQUEADOS):
+                if len(title) < 25:
+                    continue
+
+                # FILTRO ANTI-PROPAGANDA: descarta anúncios de corretoras, promoções e cursos
+                if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
                 foto, video, audio = extrair_midias(item, desc_bruta)
