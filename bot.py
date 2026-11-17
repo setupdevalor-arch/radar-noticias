@@ -16,21 +16,22 @@ from datetime import datetime, timezone, timedelta
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ==============================================================================
-# CONFIGURAÇÕES DO BOT E CANAL (PROTEGIDO - RODA DE SEGUNDA A SEGUNDA 24H)
+# CONFIGURAÇÕES DO BOT E CANAL (24H POR DIA - DE SEGUNDA A SEGUNDA)
 # ==============================================================================
 _PADRAO_TOKEN = base64.b64decode("OTAyNTk2MDg1NzpBQUhScGpvN3REaVUyQzhPLTJ6ZG9NNmFLazllTFFrczdqcw==").decode("utf-8")
 _PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
-MAX_HISTORICO = 600
+MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = 1
+MAX_IDADE_MINUTOS = 45  # Só aceita notícias que saíram nos últimos 45 minutos (NUNCA posta notícia antiga)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto (24/7)
+# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto (Varredura 24/7)
 FEEDS = [
     # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
@@ -53,7 +54,7 @@ FEEDS = [
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.folha.uol.com.br/mundo/rss091.xml",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
-    # 5. Criptoativos & Ativos Digitais (Muito ativos na madrugada e fim de semana)
+    # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss"
 ]
@@ -82,18 +83,6 @@ STOPWORDS_DEDUP = {
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
-
-
-def obter_janela_maxima_horas():
-    """
-    Na madrugada e início da manhã (00h às 09h BRT), amplia a busca para 10 horas
-    para varrer todas as notícias que saíram na madrugada.
-    Durante o resto do dia, usa 6 horas para focar apenas nas notícias frescas de hoje.
-    """
-    hora_brt = datetime.now(TZ_BRASILIA).hour
-    if 0 <= hora_brt < 9:
-        return 10.0
-    return 6.0
 
 
 def http_get(url, timeout=10):
@@ -151,14 +140,14 @@ def extrair_data_publicacao(item):
             try:
                 dt = email.utils.parsedate_to_datetime(texto_data)
                 if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
+                    dt = dt.replace(tzinfo=TZ_BRASILIA)
                 return dt.astimezone(timezone.utc)
             except Exception:
                 pass
             try:
                 dt = datetime.fromisoformat(texto_data.replace("Z", "+00:00"))
                 if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
+                    dt = dt.replace(tzinfo=TZ_BRASILIA)
                 return dt.astimezone(timezone.utc)
             except Exception:
                 pass
@@ -412,14 +401,13 @@ def categorizar_materia(titulo, texto):
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
-    Funciona 24h por dia, de segunda a segunda.
-    Coleta notícias de TODOS os feeds, usa janela de 10h na madrugada/manhã (00h-09h)
-    para capturar tudo que saiu de madrugada, e 6h durante o dia, ordenando sempre da mais recente.
+    Varredura 24h por dia, de segunda a segunda.
+    Aceita SOMENTE notícias publicadas nos últimos 45 minutos (MAX_IDADE_MINUTOS).
+    Se não saiu notícia nova nesses minutos, retorna vazio e aguarda o próximo ciclo de 5 min.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
     agora_utc = datetime.now(timezone.utc)
-    max_idade_horas = obter_janela_maxima_horas()
     candidatos = []
 
     for url_feed in FEEDS:
@@ -441,13 +429,13 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if len(title) < 25:
                     continue
 
-                # Verifica data/hora de publicação (pega madrugada + hoje, bloqueia dias anteriores)
+                # REGRA DE TEMPO REAL: Só aceita notícias que acabaram de sair (últimos 45 minutos)
                 dt_pub = extrair_data_publicacao(item)
                 if not dt_pub:
                     continue
 
-                idade_horas = (agora_utc - dt_pub).total_seconds() / 3600.0
-                if idade_horas > max_idade_horas or idade_horas < -1.0:
+                idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
+                if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
                     continue
 
                 # Filtro Anti-Propaganda
@@ -561,10 +549,10 @@ if __name__ == "__main__":
 
     noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
-        logging.info("Nenhuma novidade inédita na janela atual.")
+        logging.info("Nenhuma notícia nova nos últimos 45 minutos. Aguardando próximo ciclo de 5 min.")
         sys.exit(0)
 
-    logging.info(f"Encontradas {len(noticias)} notícias recentes para envio.")
+    logging.info(f"Encontradas {len(noticias)} notícias quentes para envio.")
     for noticia in noticias:
         sucesso = enviar_post(token, chat_id, noticia)
         if sucesso:
