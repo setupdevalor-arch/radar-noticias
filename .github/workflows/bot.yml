@@ -1,56 +1,56 @@
-name: Radar Notícias em Tempo Real
+name: Radar Financeiro Telegram Bot
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'bot.py'
-      - '.github/workflows/bot.yml'
   schedule:
-    - cron: '*/5 * * * *'
+    # Executa de 5 em 5 minutos (24/7)
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 concurrency:
-  group: radar-continuo
+  group: radar-financeiro-bot-state
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
-  enviar-noticias:
+  executar-bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-    permissions:
-      contents: write
+    timeout-minutes: 10
 
     steps:
-      - name: Baixar código do repositório
+      - name: Checkout do Repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
-      - name: Configurar Python
+      - name: Configurar Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.12"
 
-      - name: Rodar Robô a cada 5 minutos sem pegar fila
+      - name: Garantir Existência do Arquivo de Histórico
+        run: |
+          if [ ! -f historico_enviados.json ]; then
+            echo '{"links": [], "titulos": []}' > historico_enviados.json
+          fi
+
+      - name: Executar Bot de Notícias Financeiras
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
+
+      - name: Persistir Histórico de Links no Repositório
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          for i in $(seq 1 18); do
-            echo "=== Disparo $i (a cada 5 min) ==="
-            git pull --rebase origin main || true
-            python bot.py || true
-
-            if [ -n "$(git status --porcelain historico_enviados.json)" ]; then
-              git add historico_enviados.json
-              git commit -m "Atualiza histórico [skip ci]" || true
-              git pull --rebase origin main || true
-              git push origin main || true
-            fi
-
-            echo "Aguardando 5 minutos para a próxima notícia..."
-            sleep 300
-          done
+          git add historico_enviados.json
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração no histórico para commitar."
+          else
+            git commit -m "chore(state): atualiza historico_enviados.json [skip ci]"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin HEAD:${{ github.ref_name }}
+          fi
