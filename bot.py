@@ -19,15 +19,16 @@ TOKEN_FIXO = "9025960857:AAHRpjo7tDiU2C8O-2zdoM6aKk9eLQks7js"
 CHAT_ID_FIXO = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
-MAX_HISTORICO = 500
-MAX_NOTICIAS_POR_VEZ = 2  # Envia exatamente 2 notícias separadas a cada 5 minutos
+MAX_HISTORICO = 600
+MAX_NOTICIAS_POR_VEZ = 2  # 2 notícias por rodada a cada 13 minutos
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds 100% voltados para Mercado Financeiro, Ações, Macro e Cripto
-FEEDS_MERCADO = [
+# Feeds de Economia, Mercado, Política e Geopolítica
+FEEDS = [
+    # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.suno.com.br/noticias/feed/",
@@ -35,33 +36,48 @@ FEEDS_MERCADO = [
     "https://www.seudinheiro.com/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://g1.globo.com/rss/g1/economia/",
+    # 2. Política & Decisões Fiscais
+    "https://www.infomoney.com.br/politica/feed/",
+    "https://g1.globo.com/rss/g1/politica/",
+    "https://www.cnnbrasil.com.br/politica/feed/",
+    "https://feeds.folha.uol.com.br/poder/rss091.xml",
+    # 3. Geopolítica & Mercado Internacional
+    "https://g1.globo.com/rss/g1/mundo/",
+    "https://www.cnnbrasil.com.br/internacional/feed/",
+    "https://feeds.folha.uol.com.br/mundo/rss091.xml",
+    "https://feeds.bbci.co.uk/portuguese/rss.xml",
+    # 4. Criptoativos
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss"
 ]
 
-# BLOQUEIO RIGOROSO DE PROPAGANDAS, PUBLIEDITORIAIS, PROMOÇÕES E RUÍDOS
+# BLOQUEIO RIGOROSO DE PROPAGANDAS E RUÍDOS
 BLOQUEADOS_PROPAGANDA = [
-    # Marketing, Promoções e Black Friday
     "black friday", "black xp", "promoção", "promocao", "desconto", "descontos", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
     "cashback", "pontos e milhas", "acumule pontos", "compras parceladas", "condições exclusivas",
     "condicoes exclusivas", "oferta", "ofertas", "compre com", "ganhe até", "sorteio",
-    # Cursos, Mentorias e Captação de Leads
     "curso gratuito", "inscrições abertas", "inscricoes abertas", "participe do",
     "webinar", "mentoria", "baixe o e-book", "baixe o app", "abra sua conta",
     "cadastre-se", "treinamento", "workshop", "evento online", "evento gratuito",
-    # Cartões de crédito e crédito pessoal de varejo
     "cartão de crédito", "cartao de credito", "cartão black", "anuidade zero",
     "limite do cartão", "empréstimo pessoal", "financiamento de veículos",
-    # Fundos Imobiliários e bobagens
     "fundo imobiliário", "fundos imobiliários", "fii ", "fiis", "fiagro", "ifix",
     "por cota", "cotistas", "rendimento por cota",
     "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
     "escalação", "futebol", "novela"
 ]
 
+STOPWORDS_DEDUP = {
+    "aprova", "anuncia", "diz", "após", "apos", "sobre", "pode", "novo", "nova",
+    "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
+    "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
+    "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
+    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias"
+}
 
-def http_get(url, timeout=12):
+
+def http_get(url, timeout=10):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -86,29 +102,28 @@ def carregar_historico():
         try:
             with open(HISTORICO_ARQUIVO, "r", encoding="utf-8") as f:
                 dados = json.load(f)
-                if isinstance(dados, list):
-                    return dados
+                if isinstance(dados, dict):
+                    return dados.get("links", []), dados.get("titulos", [])
+                elif isinstance(dados, list):
+                    return dados, []
         except Exception as e:
             logging.error(f"Erro ao ler histórico: {e}")
-    return []
+    return [], []
 
 
-def salvar_historico(historico):
+def salvar_historico(links, titulos):
     try:
-        vistos = set()
-        unico = []
-        for link in historico:
-            if link not in vistos:
-                vistos.add(link)
-                unico.append(link)
+        dados = {
+            "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
+            "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:]
+        }
         with open(HISTORICO_ARQUIVO, "w", encoding="utf-8") as f:
-            json.dump(unico[-MAX_HISTORICO:], f, ensure_ascii=False, indent=2)
+            json.dump(dados, f, ensure_ascii=False, indent=2)
     except Exception as e:
         logging.error(f"Erro ao salvar histórico: {e}")
 
 
 def eh_propaganda_ou_lixo(titulo, descricao):
-    """Bloqueia publieditoriais, anúncios de corretora, promoções e cursos."""
     texto = (titulo + " " + descricao).lower()
     for b in BLOQUEADOS_PROPAGANDA:
         if b in texto:
@@ -117,15 +132,46 @@ def eh_propaganda_ou_lixo(titulo, descricao):
 
 
 def limpar_caudas_wordpress(texto):
-    """Remove o rodapé de autoria 'The post ... appeared first on InfoMoney'."""
     t = re.sub(r'The post .*? appeared first on .*$', '', texto, flags=re.IGNORECASE)
     t = re.sub(r'O post .*? apareceu primeiro em .*$', '', t, flags=re.IGNORECASE)
     t = re.sub(r'appeared first on .*$', '', t, flags=re.IGNORECASE)
     return t.strip()
 
 
+def limpar_html(txt):
+    if not txt:
+        return ""
+    txt = re.sub(r'<[^>]+>', '', txt)
+    txt = html.unescape(txt)
+    return " ".join(txt.split()).strip()
+
+
+def eh_mesma_noticia(novo_titulo, titulos_anteriores):
+    """Evita postar notícias iguais de jornais diferentes sobre o mesmo fato."""
+    tokens_novo = {
+        p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', novo_titulo.lower())
+        if len(p) > 3 and p not in STOPWORDS_DEDUP
+    }
+    if not tokens_novo:
+        return False
+
+    for antigo in titulos_anteriores:
+        tokens_antigo = {
+            p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', antigo.lower())
+            if len(p) > 3 and p not in STOPWORDS_DEDUP
+        }
+        if not tokens_antigo:
+            continue
+        inter = tokens_novo & tokens_antigo
+        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
+        # Se coincidir em 2 ou mais termos essenciais e proporção >= 35%, é o mesmo assunto
+        if len(inter) >= 2 and ratio >= 0.35:
+            return True
+    return False
+
+
 def extrair_midias(item, desc_bruta):
-    """Detecta imagem, vídeo ou áudio (podcast/resumo) anexados à notícia."""
+    """Detecta imagem, vídeo ou áudio (podcast/resumo) anexados à matéria."""
     foto_url = None
     video_url = None
     audio_url = None
@@ -164,41 +210,63 @@ def extrair_midias(item, desc_bruta):
     return foto_url, video_url, audio_url
 
 
-def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
+def obter_texto_completo_artigo(url, desc_bruta):
     """
-    Limpa ruídos, remove créditos e seleciona frases completas com início, meio e fim.
-    Resumo ligeiramente mais completo (~650 chars), organizado em parágrafos limpos.
+    Garante que a matéria tenha texto suficiente para um resumo rico de 500 a 600 caracteres.
+    Se o RSS for curto, busca os primeiros parágrafos diretamente da página da notícia.
     """
-    if not desc_bruta:
+    t_limpo = limpar_html(desc_bruta)
+    t_limpo = limpar_caudas_wordpress(t_limpo)
+
+    if len(t_limpo) >= 480:
+        return t_limpo
+
+    try:
+        raw_html = http_get(url, timeout=5).decode("utf-8", errors="replace")
+        paragrafos = re.findall(r'<p[^>]*>(.*?)</p>', raw_html, flags=re.DOTALL | re.IGNORECASE)
+        blocos = []
+        for p in paragrafos:
+            txt = limpar_html(p)
+            if len(txt) < 35 or any(b in txt.lower() for b in ("leia também", "inscreva-se", "newsletter", "publicidade", "compartilhe", "foto:", "crédito:", "the post", "apareceu primeiro")):
+                continue
+            blocos.append(txt)
+            if sum(len(b) for b in blocos) >= 700:
+                break
+        if blocos:
+            return " ".join(blocos)
+    except Exception:
+        pass
+
+    return t_limpo
+
+
+def formatar_resumo_500_600(texto_bruto, titulo):
+    """
+    Produz resumo com início, meio e fim completos, na média de 500 a 600 caracteres.
+    Organizado em parágrafos agradáveis, terminando sempre com pontuação final completa.
+    """
+    if not texto_bruto:
         return ""
 
-    # 1. Remove propaganda de rodapé do InfoMoney/WordPress
-    t = limpar_caudas_wordpress(desc_bruta)
-
-    # 2. Remove tags de mídia inteiras
+    t = limpar_caudas_wordpress(texto_bruto)
     t = re.sub(r'<figure[^>]*>.*?</figure>', '', t, flags=re.DOTALL | re.IGNORECASE)
     t = re.sub(r'<img[^>]*>', '', t, flags=re.IGNORECASE)
     t = re.sub(r'<script[^>]*>.*?</script>', '', t, flags=re.DOTALL | re.IGNORECASE)
+    t = limpar_html(t)
 
-    # 3. Remove tags HTML residuais
-    t = re.sub(r'<[^>]+>', '', t)
-    t = html.unescape(t)
-    t = re.sub(r'\s+', ' ', t).strip()
-
-    # 4. Remove legendas residuais de imagem no início
+    # Remove legendas residuais de imagem no início
     t = re.sub(r'^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])', '', t, flags=re.IGNORECASE)
     t = re.sub(r'^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)', '', t, flags=re.IGNORECASE)
 
-    # 5. Remove repetição do título no início do parágrafo
+    # Remove repetição do título no início do texto
     if titulo and t.lower().startswith(titulo[:25].lower()):
         t = t[len(titulo):].strip()
         t = re.sub(r'^[:\-–—\s]+', '', t)
 
-    # 6. Remove caudas caça-cliques
+    # Remove caudas caça-cliques
     t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
 
-    # 7. SELEÇÃO DE FRASES COMPLETAS (Início, Meio e Fim)
-    # Limite estendido para ~650 caracteres: resumo completo, claro e bem desenvolvido
+    # Seleção de frases completas visando a média de 500 a 600 caracteres
     frases = re.split(r'(?<=[.!?])\s+', t)
     frases_selecionadas = []
     tamanho_acumulado = 0
@@ -210,13 +278,17 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
         if tamanho_acumulado + len(f) <= 650:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
+        elif tamanho_acumulado < 480:
+            frases_selecionadas.append(f)
+            tamanho_acumulado += len(f)
+            break
         else:
             break
 
     if not frases_selecionadas and frases:
         frases_selecionadas.append(frases[0])
 
-    # Se houver 3 ou mais frases, organiza em 2 parágrafos para leitura fluida
+    # Organiza em parágrafos para leitura fluida no Telegram
     if len(frases_selecionadas) >= 3:
         p1 = " ".join(frases_selecionadas[:2])
         p2 = " ".join(frases_selecionadas[2:])
@@ -230,49 +302,49 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
     return resultado
 
 
-def formatar_post_mercado(titulo, desc_bruta):
-    """Monta a postagem executiva para o canal de investimentos."""
+def formatar_post_completo(titulo, desc_bruta, url):
+    """Categoriza o tema (Economia, Mercado, Política, Geopolítica) e monta a mensagem."""
     t = titulo.strip()
     if " - " in t:
         t, _ = t.rsplit(" - ", 1)
 
     t_lower = t.lower()
 
-    # Categoria e Ícone de Mercado
-    if any(p in t_lower for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com")):
-        icone = "💰 <b>DIVIDENDOS</b>"
-    elif any(p in t_lower for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "trimestre")):
-        icone = "📊 <b>RESULTADOS CORPORATIVOS</b>"
-    elif any(p in t_lower for p in ("dólar", "selic", "copom", "ipca", "inflação", "fed", "fiscal", "pib", "câmbio")):
-        icone = "💵 <b>MACRO & CÂMBIO</b>"
-    elif any(p in t_lower for p in ("petrobras", "petr4", "vale", "vale3", "banco do brasil", "bbas3", "itaú", "itub4", "b3")):
-        icone = "🏛️ <b>AÇÕES & B3</b>"
+    # Identificação temática
+    if any(p in t_lower for p in ("lula", "governo", "congresso", "stf", "senado", "câmara", "ministro", "haddad", "fazenda", "reforma", "arcabouço", "planalto")):
+        categoria = "🏛️ <b>POLÍTICA &amp; PODER</b>"
+    elif any(p in t_lower for p in ("eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio", "israel", "otan", "taiwan", "bce", "europa", "geopolítica")):
+        categoria = "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
+    elif any(p in t_lower for p in ("dividendo", "provento", "jcp", "data com")):
+        categoria = "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
+    elif any(p in t_lower for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale", "itaú", "bradesco", "b3", "bolsa")):
+        categoria = "📊 <b>MERCADO &amp; AÇÕES</b>"
+    elif any(p in t_lower for p in ("dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed", "juros", "pib", "câmbio")):
+        categoria = "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
     elif any(p in t_lower for p in ("bitcoin", "btc", "ethereum", "cripto", "solana")):
-        icone = "🪙 <b>CRIPTOATIVOS</b>"
-    elif any(p in t_lower for p in ("eua", "wall street", "s&p", "nasdaq", "china", "petróleo", "brent")):
-        icone = "🌍 <b>MERCADO GLOBAL</b>"
+        categoria = "🪙 <b>CRIPTOATIVOS</b>"
     else:
-        icone = "⚡️ <b>RADAR DE MERCADO</b>"
+        categoria = "⚡️ <b>RADAR EM TEMPO REAL</b>"
 
     if t and t[-1] not in ".!?":
         t += "."
 
-    resumo_completo = limpar_e_resumir_com_inicio_meio_fim(desc_bruta, t)
+    texto_artigo = obter_texto_completo_artigo(url, desc_bruta)
+    resumo_formatado = formatar_resumo_500_600(texto_artigo, t)
 
-    post = f"{icone}\n\n<b>{html.escape(t)}</b>"
-    if resumo_completo and len(resumo_completo) > 25 and resumo_completo.lower() != t.lower():
-        post += f"\n\n{html.escape(resumo_completo)}"
+    post = f"{categoria}\n\n<b>{html.escape(t)}</b>"
+    if resumo_formatado and len(resumo_formatado) > 25 and resumo_formatado.lower() != t.lower():
+        post += f"\n\n{html.escape(resumo_formatado)}"
 
     return post
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
-    """Carrega até 2 notícias inéditas e reais de mercado."""
-    historico = carregar_historico()
+    links_historico, titulos_historico = carregar_historico()
+    titulos_rodada = list(titulos_historico)
     noticias = []
-    titulos_vistos = set()
 
-    for url_feed in FEEDS_MERCADO:
+    for url_feed in FEEDS:
         try:
             conteudo = http_get(url_feed, timeout=10)
             root = ET.fromstring(conteudo)
@@ -285,38 +357,39 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 title = title_el.text.strip() if title_el is not None and title_el.text else ""
                 desc_bruta = desc_el.text if desc_el is not None and desc_el.text else ""
 
-                if not link or not title or link in historico:
+                if not link or not title or link in links_historico:
                     continue
 
                 if len(title) < 25:
                     continue
 
-                # FILTRO ANTI-PROPAGANDA: descarta anúncios de corretoras, promoções e cursos
+                # Filtro Anti-Propaganda
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
-                assinatura = "".join(c for c in title.lower() if c.isalnum())[:35]
-                if assinatura in titulos_vistos:
+                # Anti-Repetição Semântica (evita o mesmo fato tanto do histórico quanto da rodada atual)
+                if eh_mesma_noticia(title, titulos_rodada):
                     continue
-                titulos_vistos.add(assinatura)
 
                 foto, video, audio = extrair_midias(item, desc_bruta)
-                texto = formatar_post_mercado(title, desc_bruta)
+                texto = formatar_post_completo(title, desc_bruta, link)
 
                 noticias.append({
                     "link": link,
+                    "titulo": title,
                     "texto": texto,
                     "imagem": foto,
                     "video": video,
                     "audio": audio
                 })
+                titulos_rodada.append(title)
 
                 if len(noticias) >= limite:
-                    return noticias, historico
+                    return noticias, links_historico, titulos_historico
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    return noticias, historico
+    return noticias, links_historico, titulos_historico
 
 
 def enviar_post(token, chat_id, item):
@@ -359,18 +432,19 @@ if __name__ == "__main__":
     env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
     chat_id = env_chat if env_chat else CHAT_ID_FIXO
 
-    noticias, historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
+    noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
-        logging.info("Nenhuma novidade do mercado no momento.")
+        logging.info("Nenhuma novidade inédita no momento.")
         sys.exit(0)
 
-    logging.info(f"Encontradas {len(noticias)} notícias para envio.")
+    logging.info(f"Encontradas {len(noticias)} notícias inéditas para envio.")
     for noticia in noticias:
         sucesso = enviar_post(token, chat_id, noticia)
         if sucesso:
-            historico.append(noticia["link"])
-            salvar_historico(historico)
-            logging.info(f"Notícia enviada com sucesso: {noticia['link']}")
-            time.sleep(3)  # Pausa elegante de 3 segundos entre os 2 posts
+            links_historico.append(noticia["link"])
+            titulos_historico.append(noticia["titulo"])
+            salvar_historico(links_historico, titulos_historico)
+            logging.info(f"Notícia enviada: {noticia['titulo']}")
+            time.sleep(3)  # Pausa de 3 segundos entre os 2 posts
         else:
-            logging.error("Falha ao enviar notícia para o Telegram.")
+            logging.error("Falha ao enviar post para o Telegram.")
