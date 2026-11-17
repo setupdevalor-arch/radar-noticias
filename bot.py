@@ -23,8 +23,8 @@ _PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
-MAX_NOTICIAS_POR_VEZ = 1
-MAX_IDADE_MINUTOS = 45  # Só aceita notícias que saíram nos últimos 45 minutos (NUNCA posta notícia antiga)
+MAX_NOTICIAS_POR_VEZ = 5  # Se saírem 1, 2, 3, 4 ou 5 notícias novas no ciclo de 5 min, posta todas elas sem pular!
+MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 HEADERS = {
@@ -402,8 +402,8 @@ def categorizar_materia(titulo, texto):
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
-    Aceita SOMENTE notícias publicadas nos últimos 45 minutos (MAX_IDADE_MINUTOS).
-    Se não saiu notícia nova nesses minutos, retorna vazio e aguarda o próximo ciclo de 5 min.
+    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
+    sem pular nenhuma e sem nunca postar notícia antiga.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -429,7 +429,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if len(title) < 25:
                     continue
 
-                # REGRA DE TEMPO REAL: Só aceita notícias que acabaram de sair (últimos 45 minutos)
+                # REGRA DE TEMPO REAL: Só aceita notícias que acabaram de sair (últimos 25 minutos)
                 dt_pub = extrair_data_publicacao(item)
                 if not dt_pub:
                     continue
@@ -452,7 +452,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    # Ordena TODAS as notícias pela mais recente primeiro (últimos minutos no topo)
+    # Ordena das mais recentes primeiro para selecionar o lote novo
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias = []
@@ -504,6 +504,8 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if len(noticias) >= limite:
             break
 
+    # Inverte o lote do ciclo para publicar na ordem cronológica exata em que saíram
+    noticias.reverse()
     return noticias, links_historico, titulos_historico
 
 
@@ -549,10 +551,10 @@ if __name__ == "__main__":
 
     noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
-        logging.info("Nenhuma notícia nova nos últimos 45 minutos. Aguardando próximo ciclo de 5 min.")
+        logging.info("Nenhuma notícia nova nos últimos minutos. Aguardando próximo ciclo de 5 min.")
         sys.exit(0)
 
-    logging.info(f"Encontradas {len(noticias)} notícias quentes para envio.")
+    logging.info(f"Encontradas {len(noticias)} notícias quentes para envio neste ciclo.")
     for noticia in noticias:
         sucesso = enviar_post(token, chat_id, noticia)
         if sucesso:
