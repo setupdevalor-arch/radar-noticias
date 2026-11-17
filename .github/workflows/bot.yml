@@ -2,7 +2,6 @@ name: Radar Financeiro Telegram Bot
 
 on:
   schedule:
-    # Executa de 5 em 5 minutos (24/7)
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
@@ -39,7 +38,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py
+        run: python bot.py
 
       - name: Persistir Histórico de Links no Repositório
         if: always()
