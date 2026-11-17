@@ -24,10 +24,10 @@ _PADRAO_CHAT_ID = "-1003533060222"
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
-MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
+MAX_IDADE_MINUTOS = 60    # Aceita notícias dos últimos 60 min (sem repetir nada que já está no histórico)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
-# Botão nativo do Telegram que aparece embaixo de cada matéria
+# Botão clicável nativo do Telegram que aparece embaixo de cada matéria
 BOTAO_GRUPO = {
     "inline_keyboard": [
         [
@@ -43,7 +43,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias Abertos (G1 no topo para prioridade de velocidade e deduplicação)
+# Feeds de Notícias Abertos (G1 no topo para prioridade de velocidade)
 FEEDS = [
     # 0. Prioridade G1 (Posta na frente dos demais veículos)
     "https://g1.globo.com/rss/g1/economia/",
@@ -190,15 +190,15 @@ def limpar_caudas_wordpress(texto):
 
 def limpar_rastros_data_e_autoria(texto):
     """
-    Remove carimbos de data/hora do G1 e de outros portais, como:
-    '17/11/2026 19h26 • Atualizado 5 minutos atrás', 'Por g1', '1 de 2 — Foto: ...'
+    Apaga apenas carimbos como '17/11/2026 19h26 • Atualizado 5 minutos atrás'
+    sem bloquear a notícia.
     """
     if not texto:
         return ""
 
     t = texto
 
-    # 1. Remove padrão G1/portais: "17/11/2026 19h26 • Atualizado há 5 minutos atrás" (e variações)
+    # Remove padrão G1: "17/11/2026 19h26 • Atualizado há 5 minutos atrás" (e variações)
     t = re.sub(
         r'\b\d{1,2}/\d{1,2}/\d{2,4}\s*(?:às\s*|-?\s*)?\d{1,2}[h:]\d{0,2}'
         r'(?:\s*[•·|\-–—]\s*Atualizado\s*(?:há\s*|em\s*)?[^.!\n]*?(?:atrás|minuto[s]?|hora[s]?|segundo[s]?|dia[s]?|\d{1,2}[h:]\d{0,2}|\d{1,2}/\d{1,2}/\d{2,4}))?',
@@ -207,7 +207,7 @@ def limpar_rastros_data_e_autoria(texto):
         flags=re.IGNORECASE
     )
 
-    # 2. Remove trechos soltos de "Atualizado há X minutos atrás" ou "• Atualizado ..."
+    # Remove trechos soltos de "• Atualizado X minutos atrás"
     t = re.sub(
         r'[•·|\-–—]?\s*\bAtualizado\s+(?:há\s+|em\s+)?\d+\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?\s*(?:atrás)?\b',
         ' ',
@@ -215,32 +215,8 @@ def limpar_rastros_data_e_autoria(texto):
         flags=re.IGNORECASE
     )
 
-    # 3. Remove datas numéricas soltas no início do texto (ex: "17/11/2026 - " ou "17/11/2026 19h26")
-    t = re.sub(
-        r'^\s*(?:Publicado\s+em\s+|Atualizado\s+em\s+)?\d{1,2}/\d{1,2}/\d{2,4}(?:\s+\d{1,2}[h:]\d{0,2})?\s*[•·|\-–—:]?\s*',
-        '',
-        t,
-        flags=re.IGNORECASE
-    )
-
-    # 4. Remove datas por extenso no início (ex: "17 de novembro de 2026")
-    t = re.sub(
-        r'^\s*\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*[•·|\-–—:]?\s*',
-        '',
-        t,
-        flags=re.IGNORECASE
-    )
-
-    # 5. Remove assinaturas de autoria curtas no começo (ex: "Por g1, Brasília — ")
-    t = re.sub(
-        r'^\s*Por\s+(?:g1|Redação|Estadão|InfoMoney|Money\s*Times|Suno|Reuters|Bloomberg|AFP|BBC)[^.!\n]{0,40}[—–\-|:]\s*',
-        '',
-        t,
-        flags=re.IGNORECASE
-    )
-
-    # 6. Remove legendas de galeria do G1 (ex: "1 de 3 Nome da foto — Foto: Reprodução")
-    t = re.sub(r'\b\d+\s+de\s+\d+\s+[^.!\n]*?[—–-]\s*Foto:\s*[^.!\n]*', ' ', t, flags=re.IGNORECASE)
+    # Remove legendas numeradas de fotos do G1 ("1 de 2 ... — Foto: ...")
+    t = re.sub(r'^\s*\d+\s+de\s+\d+\s+.*?(?:Foto|Crédito):.*$', '', t, flags=re.IGNORECASE)
 
     return " ".join(t.split()).strip()
 
@@ -248,7 +224,7 @@ def limpar_rastros_data_e_autoria(texto):
 def limpar_html(txt):
     if not txt:
         return ""
-    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form|figcaption)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
+    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
     txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = html.unescape(txt)
     txt = limpar_rastros_data_e_autoria(txt)
@@ -256,28 +232,21 @@ def limpar_html(txt):
 
 
 def paragrafo_parece_codigo_ou_lixo(txt):
-    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas, datas ou avisos de paywall."""
-    if not txt or len(txt) < 48:
+    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas ou avisos de paywall."""
+    if not txt or len(txt) < 45:
         return True
     sinais_codigo = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
         "sameAs", "http://", "https://", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
         "cssSelector", "gostaria de receber", "últimas notícias", "assine a", "exclusivo para assinantes",
-        "leia também", "veja também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
+        "leia também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
         "publicidade", "todos os direitos reservados", "the post", "apareceu primeiro",
-        "podcasts", "weekend", "atualizado ", "minutos atrás", "horas atrás", "segundos atrás",
-        "canal do g1 no whatsapp", "siga o canal", "receba as notícias"
+        "podcasts", "weekend"
     )
     t_low = txt.lower()
     for s in sinais_codigo:
         if s in t_low:
             return True
-
-    if re.search(r'\b\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}[h:]\d{0,2}\b', t_low):
-        return True
-    if re.match(r'^por\s+[a-záéíóúâêîôûãõç0-9\s,/]+$', t_low) and len(t_low) < 90:
-        return True
-
     if txt.count('"') >= 6 or txt.count('[') >= 2 or txt.count(']') >= 2:
         return True
     return False
@@ -359,8 +328,7 @@ def extrair_midias_do_rss(item, desc_bruta):
 
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
-    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
-    eliminando totalmente blocos de data/atualização do G1, <head>, <script>, menus e rodapés.
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos.
     """
     foto_og = None
     raw_html = ""
@@ -373,16 +341,9 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
 
     if raw_html:
         html_sem_scripts = re.sub(
-            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button|figcaption|time)\b[^>]*>.*?</\1>',
+            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
             ' ',
             raw_html,
-            flags=re.DOTALL | re.IGNORECASE
-        )
-
-        html_sem_scripts = re.sub(
-            r'<p[^>]+class=["\'][^"\']*(?:publication-data|byline|author|date|timestamp|credit|caption|legenda|resumo)[^"\']*["\'][^>]*>.*?</p>',
-            ' ',
-            html_sem_scripts,
             flags=re.DOTALL | re.IGNORECASE
         )
 
@@ -412,7 +373,9 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         if blocos_limpos:
             return " ".join(blocos_limpos), foto_og
 
+    # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+    t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
     t_desc = limpar_rastros_data_e_autoria(t_desc)
     if paragrafo_parece_codigo_ou_lixo(t_desc):
@@ -423,14 +386,12 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
 def formatar_resumo_500_600(texto_bruto, titulo):
     """
     Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
-    Nunca ultrapassa o limite de legenda de foto do Telegram.
     """
     if not texto_bruto:
         return ""
 
     t = limpar_caudas_wordpress(texto_bruto)
     t = limpar_html(t)
-    t = limpar_rastros_data_e_autoria(t)
 
     if paragrafo_parece_codigo_ou_lixo(t):
         return ""
@@ -484,10 +445,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
 
 def categorizar_materia(titulo, texto):
-    """
-    Categoriza com base nos 9 pilares estratégicos usando palavras inteiras (\b)
-    e dando prioridade ao título da matéria.
-    """
+    """Categoriza com base nos 9 pilares estratégicos dando prioridade ao título da matéria."""
     for escopo in (titulo, titulo + " " + texto):
         if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
             return "🚨 <b>RADAR URGENTE</b>"
@@ -542,8 +500,7 @@ def categorizar_materia(titulo, texto):
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
-    Prioriza o G1 na fila de checagem e captura as notícias novas dos últimos minutos,
-    exigindo texto jornalístico limpo e foto de capa.
+    Captura todas as notícias inéditas dentro da janela de tempo, priorizando o G1.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -592,7 +549,8 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    candidatos.sort(key=lambda x: (x["eh_g1"], x["dt_pub"]), reverse=True)
+    # Ordena das mais recentes para as mais antigas (dando preferência ao G1 em empates de horário)
+    candidatos.sort(key=lambda x: (x["dt_pub"], x["eh_g1"]), reverse=True)
 
     noticias = []
     for cand in candidatos:
@@ -623,7 +581,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
-        # Texto limpo sem link no final (a chamada agora vai no botão BOTAO_GRUPO)
         post = (
             f"{categoria}\n\n"
             f"<b>{html.escape(t_limpo)}</b>\n\n"
@@ -648,7 +605,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """Envia com áudio, vídeo ou foto de capa em alta definição + botão para o grupo."""
+    """Envia com áudio, vídeo ou foto de capa em alta definição + botão clicável para o grupo."""
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
         payload_aud = {
@@ -658,9 +615,10 @@ def enviar_post(token, chat_id, item):
             "parse_mode": "HTML",
             "reply_markup": BOTAO_GRUPO
         }
-        status, _ = http_post_json(url_aud, payload_aud, timeout=25)
+        status, resp = http_post_json(url_aud, payload_aud, timeout=25)
         if status == 200:
             return True
+        logging.warning(f"Aviso sendAudio ({status}): {resp[:200]}")
 
     if item.get("video"):
         url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
@@ -671,9 +629,10 @@ def enviar_post(token, chat_id, item):
             "parse_mode": "HTML",
             "reply_markup": BOTAO_GRUPO
         }
-        status, _ = http_post_json(url_vid, payload_vid, timeout=30)
+        status, resp = http_post_json(url_vid, payload_vid, timeout=30)
         if status == 200:
             return True
+        logging.warning(f"Aviso sendVideo ({status}): {resp[:200]}")
 
     if item.get("imagem"):
         url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
@@ -684,9 +643,10 @@ def enviar_post(token, chat_id, item):
             "parse_mode": "HTML",
             "reply_markup": BOTAO_GRUPO
         }
-        status, _ = http_post_json(url_photo, payload_photo, timeout=20)
+        status, resp = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
             return True
+        logging.warning(f"Aviso sendPhoto ({status}): {resp[:200]}")
 
     return False
 
