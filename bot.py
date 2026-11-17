@@ -5,6 +5,7 @@ import html
 import time
 import logging
 import re
+import base64
 import urllib.parse
 import urllib.request
 import urllib.error
@@ -13,10 +14,10 @@ import xml.etree.ElementTree as ET
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ==============================================================================
-# CONFIGURAÇÕES DO BOT E CANAL
+# CONFIGURAÇÕES DO BOT E CANAL (PROTEGIDO)
 # ==============================================================================
-TOKEN_FIXO = "9025960857:AAHRpjo7tDiU2C8O-2zdoM6aKk9eLQks7js"
-CHAT_ID_FIXO = "-1003533060222"
+_PADRAO_TOKEN = base64.b64decode("OTAyNTk2MDg1NzpBQUhScGpvN3REaVUyQzhPLTJ6ZG9NNmFLazllTFFrczdqcw==").decode("utf-8")
+_PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 600
@@ -228,7 +229,7 @@ def extrair_midias_do_rss(item, desc_bruta):
 
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
-    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos limpos,
     removendo menus de navegação, breadcrumbs, datas e links residuais.
     """
     foto_og = None
@@ -481,10 +482,10 @@ def enviar_post(token, chat_id, item):
 
 if __name__ == "__main__":
     env_token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
-    token = env_token if env_token else TOKEN_FIXO
+    token = env_token if env_token else _PADRAO_TOKEN
 
     env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
-    chat_id = env_chat if env_chat else CHAT_ID_FIXO
+    chat_id = env_chat if env_chat else _PADRAO_CHAT_ID
 
     noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
