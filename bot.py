@@ -3,7 +3,6 @@ import sys
 import json
 import html
 import time
-import uuid
 import random
 import logging
 import re
@@ -18,18 +17,18 @@ from datetime import datetime, timezone, timedelta
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ==============================================================================
-# CONFIGURAÇÕES DO BOT E CANAL (24H POR DIA - SEM LINKS EXTERNOS)
+# CONFIGURAÇÕES DO BOT E CANAL (24H POR DIA - DE SEGUNDA A SEGUNDA)
 # ==============================================================================
 _PADRAO_TOKEN = base64.b64decode("OTAyNTk2MDg1NzpBQUhScGpvN3REaVUyQzhPLTJ6ZG9NNmFLazllTFFrczdqcw==").decode("utf-8")
 _PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
-MAX_NOTICIAS_POR_VEZ = 5   # Posta até 5 notícias novas por ciclo
-MAX_IDADE_MINUTOS = 120    # Absorve atrasos do cron do GitHub sem perder matérias (o histórico evita repetição)
+MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
+MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
-# Botão aponta exclusivamente para o seu grupo dentro do Telegram
+# Lista de CTAs persuasivas sorteadas aleatoriamente no botão de cada notícia
 TEXTOS_BOTAO_GRUPO = [
     "💬 E agora? Veja a opinião do grupo",
     "📊 Como isso afeta o mercado? Debata aqui",
@@ -42,12 +41,12 @@ TEXTOS_BOTAO_GRUPO = [
 ]
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
+# Feeds de Notícias Abertos (Sem Paywall): Negócios, Economia, Política, Geopolítica, M&A e Cripto
 FEEDS = [
+    # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.moneytimes.com.br/feed/",
@@ -55,18 +54,23 @@ FEEDS = [
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://g1.globo.com/rss/g1/economia/",
+    # 2. Negócios, M&A e Empresas
     "https://braziljournal.com/feed",
     "https://exame.com/feed/",
+    # 3. Política & Decisões de Brasília
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
     "https://www.cnnbrasil.com.br/politica/feed/",
+    # 4. Geopolítica & Mercado Internacional
     "https://g1.globo.com/rss/g1/mundo/",
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
+    # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss"
 ]
 
+# BLOQUEIO RIGOROSO DE PROPAGANDAS E RUÍDOS
 BLOQUEADOS_PROPAGANDA = [
     "black friday", "black xp", "promoção", "promocao", "desconto", "descontos", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
@@ -93,6 +97,7 @@ STOPWORDS_DEDUP = {
 
 
 def gerar_botao_grupo_aleatorio():
+    """Sorteia uma frase diferente para o botão a cada notícia postada."""
     return {
         "inline_keyboard": [
             [
@@ -106,21 +111,11 @@ def gerar_botao_grupo_aleatorio():
 
 
 def contem_termo(texto, lista_termos):
+    """Verifica palavras inteiras com limite de palavra (evita que 'eth' bata em 'ethics' ou 'fed' em 'federal')."""
     for termo in lista_termos:
-        if re.search(r'(?<!\w)' + re.escape(termo) + r'(?!\w)', texto, flags=re.IGNORECASE):
+        if re.search(r'\b' + re.escape(termo) + r'\b', texto, flags=re.IGNORECASE):
             return True
     return False
-
-
-def normalizar_url(url):
-    if not url:
-        return None
-    url = html.unescape(url.strip())
-    if not url.startswith(("http://", "https://")):
-        return None
-    p = urllib.parse.urlsplit(url)
-    caminho = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/:@&+$,;=-_.~")
-    return urllib.parse.urlunsplit((p.scheme, p.netloc, caminho, p.query, p.fragment))
 
 
 def http_get(url, timeout=10):
@@ -133,37 +128,6 @@ def http_post_json(url, payload, timeout=25):
     dados = json.dumps(payload).encode("utf-8")
     headers = {**HEADERS, "Content-Type": "application/json; charset=utf-8"}
     req = urllib.request.Request(url, data=dados, headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.status, resp.read().decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as e:
-        corpo = e.read().decode("utf-8", errors="replace") if e.fp else str(e)
-        return e.code, corpo
-    except Exception as e:
-        return 0, str(e)
-
-
-def http_post_multipart(url, fields, file_field, file_bytes, filename="cover.jpg", content_type="image/jpeg", timeout=30):
-    """Faz upload direto do arquivo de imagem quando o site de notícias bloqueia o download pelo Telegram."""
-    boundary = f"----TelegramBoundary{uuid.uuid4().hex}"
-    body = bytearray()
-    for name, value in fields.items():
-        body.extend(f"--{boundary}\r\n".encode("utf-8"))
-        body.extend(f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode("utf-8"))
-        body.extend(f"{value}\r\n".encode("utf-8"))
-
-    body.extend(f"--{boundary}\r\n".encode("utf-8"))
-    body.extend(f'Content-Disposition: form-data; name="{file_field}"; filename="{filename}"\r\n'.encode("utf-8"))
-    body.extend(f"Content-Type: {content_type}\r\n\r\n".encode("utf-8"))
-    body.extend(file_bytes)
-    body.extend(f"\r\n--{boundary}--\r\n".encode("utf-8"))
-
-    headers = {
-        **HEADERS,
-        "Content-Type": f"multipart/form-data; boundary={boundary}",
-        "Content-Length": str(len(body))
-    }
-    req = urllib.request.Request(url, data=bytes(body), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.status, resp.read().decode("utf-8", errors="replace")
@@ -201,6 +165,7 @@ def salvar_historico(links, titulos):
 
 
 def extrair_data_publicacao(item):
+    """Extrai a data/hora exata de publicação do item RSS em UTC."""
     for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
@@ -237,58 +202,40 @@ def limpar_caudas_wordpress(texto):
     return t.strip()
 
 
-def remover_carimbo_data_g1(txt):
-    if not txt:
-        return ""
-    txt = re.sub(
-        r'\b\d{1,2}/\d{1,2}/\d{2,4}\s*(?:às\s*|-?\s*)?\d{1,2}[h:]\d{0,2}\b'
-        r'(?:\s*[•·|\-–—]?\s*Atualizado\s*(?:há\s*|em\s*)?(?:\d+|um|uma|poucos|alguns)?\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?)?',
-        ' ',
-        txt,
-        flags=re.IGNORECASE
-    )
-    txt = re.sub(
-        r'[•·|\-–—]?\s*\bAtualizado\s+(?:há\s+|em\s+)?(?:\d+|um|uma|poucos|alguns)\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?\b',
-        ' ',
-        txt,
-        flags=re.IGNORECASE
-    )
-    return " ".join(txt.split()).strip()
-
-
 def limpar_html(txt):
     if not txt:
         return ""
     txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
     txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = html.unescape(txt)
-    # Remove qualquer URL solta do meio do texto para nunca gerar link clicável externo
-    txt = re.sub(r'https?://\S+|www\.\S+', '', txt, flags=re.IGNORECASE)
-    txt = remover_carimbo_data_g1(txt)
     return " ".join(txt.split()).strip()
 
 
 def paragrafo_parece_codigo_ou_lixo(txt):
-    if not txt or len(txt) < 40:
+    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas ou avisos de paywall."""
+    if not txt or len(txt) < 45:
         return True
     sinais_codigo = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
-        "sameAs", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
-        "cssSelector", "gostaria de receber", "assine a", "exclusivo para assinantes",
-        "inscreva-se", "todos os direitos reservados", "the post", "apareceu primeiro"
+        "sameAs", "http://", "https://", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
+        "cssSelector", "gostaria de receber", "últimas notícias", "assine a", "exclusivo para assinantes",
+        "leia também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
+        "publicidade", "todos os direitos reservados", "the post", "apareceu primeiro",
+        "podcasts", "weekend"
     )
     t_low = txt.lower()
     for s in sinais_codigo:
         if s in t_low:
             return True
-    if txt.count('[') >= 3 or txt.count(']') >= 3:
+    if txt.count('"') >= 6 or txt.count('[') >= 2 or txt.count(']') >= 2:
         return True
     return False
 
 
 def eh_mesma_noticia(novo_titulo, titulos_anteriores):
+    """Evita postar notícias repetidas sobre o mesmo fato."""
     tokens_novo = {
-        p for p in re.findall(r'[a-z0-9áàéíóúâêîôûãõç]+', novo_titulo.lower())
+        p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', novo_titulo.lower())
         if len(p) > 3 and p not in STOPWORDS_DEDUP
     }
     if not tokens_novo:
@@ -296,7 +243,7 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
 
     for antigo in titulos_anteriores:
         tokens_antigo = {
-            p for p in re.findall(r'[a-z0-9áàéíóúâêîôûãõç]+', antigo.lower())
+            p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', antigo.lower())
             if len(p) > 3 and p not in STOPWORDS_DEDUP
         }
         if not tokens_antigo:
@@ -309,6 +256,7 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
 
 
 def extrair_og_image_da_pagina(raw_html):
+    """Busca a foto oficial de capa (OpenGraph / Twitter Card) na página do artigo."""
     for padrao in [
         r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
         r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
@@ -316,62 +264,64 @@ def extrair_og_image_da_pagina(raw_html):
         r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']'
     ]:
         m = re.search(padrao, raw_html, re.IGNORECASE)
-        if m:
-            url = normalizar_url(m.group(1))
-            if url:
-                return url
+        if m and m.group(1).startswith("http"):
+            return m.group(1).strip()
     return None
 
 
 def extrair_midias_do_rss(item, desc_bruta):
+    """Detecta imagem, vídeo ou áudio dentro das tags do RSS."""
     foto_url = None
     video_url = None
     audio_url = None
 
     enc = item.find("enclosure")
     if enc is not None and "url" in enc.attrib:
-        url = normalizar_url(enc.attrib["url"])
+        url = enc.attrib["url"]
         tipo = enc.attrib.get("type", "").lower()
-        if url:
-            if "video" in tipo or url.lower().endswith((".mp4", ".mov")):
-                video_url = url
-            elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
-                audio_url = url
-            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
-                foto_url = url
+        if "video" in tipo or url.endswith((".mp4", ".mov")):
+            video_url = url
+        elif "audio" in tipo or url.endswith((".mp3", ".m4a", ".ogg", ".wav")):
+            audio_url = url
+        elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
+            foto_url = url
 
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
         m = item.find(tag)
         if m is not None and "url" in m.attrib:
-            url = normalizar_url(m.attrib["url"])
+            url = m.attrib["url"]
             tipo = m.attrib.get("type", "").lower()
-            if url:
-                if "video" in tipo or url.lower().endswith(".mp4"):
-                    video_url = video_url or url
-                elif "audio" in tipo or url.lower().endswith(".mp3"):
-                    audio_url = audio_url or url
-                elif not foto_url and ("image" in tipo or url.startswith("http")):
-                    foto_url = url
+            if "video" in tipo or url.endswith(".mp4"):
+                video_url = video_url or url
+            elif "audio" in tipo or url.endswith(".mp3"):
+                audio_url = audio_url or url
+            elif not foto_url and ("image" in tipo or url.startswith("http")):
+                foto_url = url
 
     if not foto_url and desc_bruta:
         busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-        if busca:
-            foto_url = normalizar_url(busca.group(1))
+        if busca and busca.group(1).startswith("http"):
+            foto_url = busca.group(1)
 
     return foto_url, video_url, audio_url
 
 
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
+    """
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
+    eliminando totalmente tags <head>, <script>, JSON-LD, menus e rodapés.
+    """
     foto_og = None
     raw_html = ""
 
     try:
-        raw_html = http_get(url, timeout=7).decode("utf-8", errors="replace")
+        raw_html = http_get(url, timeout=6).decode("utf-8", errors="replace")
         foto_og = extrair_og_image_da_pagina(raw_html)
     except Exception:
         pass
 
     if raw_html:
+        # Remove blocos inteiros de script, head, style, nav, footer antes de buscar <p>
         html_sem_scripts = re.sub(
             r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
             ' ',
@@ -379,6 +329,7 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
             flags=re.DOTALL | re.IGNORECASE
         )
 
+        # Usa <p(?:\s[^>]*)?> para nunca confundir <p> com <path>, <picture> ou <param>
         paragrafos = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
         blocos_limpos = []
 
@@ -386,30 +337,37 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
             txt = limpar_html(p)
             if paragrafo_parece_codigo_ou_lixo(txt):
                 continue
+
             if re.search(r'\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}', txt, re.IGNORECASE):
                 continue
+
             if titulo and titulo[:30].lower() in txt.lower():
                 continue
 
             txt = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', txt, flags=re.IGNORECASE)
-            txt = remover_carimbo_data_g1(txt)
             if not paragrafo_parece_codigo_ou_lixo(txt):
                 blocos_limpos.append(txt)
 
-            if sum(len(b) for b in blocos_limpos) >= 850:
+            if sum(len(b) for b in blocos_limpos) >= 800:
                 break
 
         if blocos_limpos:
             return " ".join(blocos_limpos), foto_og
 
+    # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
-    t_desc = remover_carimbo_data_g1(t_desc)
+    if paragrafo_parece_codigo_ou_lixo(t_desc):
+        return "", foto_og
     return t_desc, foto_og
 
 
 def formatar_resumo_500_600(texto_bruto, titulo):
+    """
+    Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
+    Nunca ultrapassa o limite de legenda de foto do Telegram.
+    """
     if not texto_bruto:
         return ""
 
@@ -430,8 +388,8 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     tamanho_acumulado = 0
 
     for f in frases:
-        f = remover_carimbo_data_g1(f.strip())
-        if not f or len(f) < 25:
+        f = f.strip()
+        if not f or paragrafo_parece_codigo_ou_lixo(f):
             continue
         if len(f) > 620:
             f = f[:580].rsplit(" ", 1)[0].rstrip(",;:-") + "."
@@ -465,6 +423,10 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
 
 def categorizar_materia(titulo, texto):
+    """
+    Categoriza com base nos 9 pilares estratégicos usando palavras inteiras (\b)
+    e dando prioridade ao título da matéria.
+    """
     for escopo in (titulo, titulo + " " + texto):
         if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
             return "🚨 <b>RADAR URGENTE</b>"
@@ -517,8 +479,12 @@ def categorizar_materia(titulo, texto):
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
+    """
+    Varredura 24h por dia, de segunda a segunda.
+    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
+    exigindo texto jornalístico limpo e foto de capa.
+    """
     links_historico, titulos_historico = carregar_historico()
-    set_links = set(links_historico)
     titulos_rodada = list(titulos_historico)
     agora_utc = datetime.now(timezone.utc)
     candidatos = []
@@ -531,17 +497,14 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 link_el = item.find("link")
                 title_el = item.find("title")
                 desc_el = item.find("description")
-                content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
 
                 link = link_el.text.strip() if link_el is not None and link_el.text else ""
-                title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
-                desc_bruta = (
-                    desc_el.text if desc_el is not None and desc_el.text
-                    else (content_el.text if content_el is not None and content_el.text else "")
-                )
+                title = title_el.text.strip() if title_el is not None and title_el.text else ""
+                desc_bruta = desc_el.text if desc_el is not None and desc_el.text else ""
 
-                if not link or not title or link in set_links:
+                if not link or not title or link in links_historico:
                     continue
+
                 if len(title) < 25:
                     continue
 
@@ -575,7 +538,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         desc_bruta = cand["desc_bruta"]
         item = cand["item"]
 
-        if link in set_links or eh_mesma_noticia(title, titulos_rodada):
+        if eh_mesma_noticia(title, titulos_rodada):
             continue
 
         foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
@@ -586,7 +549,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
             continue
 
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-        if not resumo_formatado or len(resumo_formatado) < 110:
+        if not resumo_formatado or len(resumo_formatado) < 120:
             continue
 
         categoria = categorizar_materia(title, resumo_formatado)
@@ -597,7 +560,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
-        # Texto 100% nativo sem nenhum link externo
         post = (
             f"{categoria}\n\n"
             f"<b>{html.escape(t_limpo)}</b>\n\n"
@@ -613,7 +575,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
             "audio": audio
         })
         titulos_rodada.append(title)
-        set_links.add(link)
 
         if len(noticias) >= limite:
             break
@@ -623,7 +584,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """Envia mídia nativa (áudio, vídeo ou foto) + botão do grupo, sem links para sites externos."""
+    """Envia com áudio, vídeo ou foto de capa em alta definição + botão com texto randômico."""
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
     if item.get("audio"):
@@ -665,21 +626,6 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-        # Se o site da notícia bloquear o download direto pelo Telegram, baixa a foto e sobe o arquivo binário
-        try:
-            img_bytes = http_get(item["imagem"], timeout=10)
-            fields = {
-                "chat_id": chat_id,
-                "caption": item["texto"],
-                "parse_mode": "HTML",
-                "reply_markup": json.dumps(botao_sorteado)
-            }
-            status_up, _ = http_post_multipart(url_photo, fields, "photo", img_bytes)
-            if status_up == 200:
-                return True
-        except Exception as e:
-            logging.warning(f"Falha no upload binário da imagem: {e}")
-
     return False
 
 
@@ -702,7 +648,7 @@ if __name__ == "__main__":
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada com imagem nativa e botão: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem e botão: {noticia['titulo']}")
             time.sleep(3)
         else:
-            logging.error(f"Falha ao enviar post com mídia: {noticia['titulo']}")
+            logging.error("Falha ao enviar post com mídia para o Telegram.")
