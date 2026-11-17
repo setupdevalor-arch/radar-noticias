@@ -27,6 +27,9 @@ MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min,
 MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
+# CTA com link camuflado no final de cada notícia
+CTA_GRUPO = '💬 <a href="https://t.me/OPapodeInvestidor">Entre na nossa comunidade de investidores e participe da conversa</a>'
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
@@ -367,12 +370,12 @@ def formatar_resumo_500_600(texto_bruto, titulo):
         f = f.strip()
         if not f or paragrafo_parece_codigo_ou_lixo(f):
             continue
-        if len(f) > 650:
-            f = f[:600].rsplit(" ", 1)[0].rstrip(",;:-") + "."
-        if tamanho_acumulado + len(f) <= 650:
+        if len(f) > 620:
+            f = f[:580].rsplit(" ", 1)[0].rstrip(",;:-") + "."
+        if tamanho_acumulado + len(f) <= 620:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
-        elif tamanho_acumulado < 480:
+        elif tamanho_acumulado < 460:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
             break
@@ -392,8 +395,8 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     if resultado and resultado[-1] not in ".!?":
         resultado += "."
 
-    if len(resultado) > 700:
-        resultado = resultado[:680].rsplit(".", 1)[0] + "."
+    if len(resultado) > 660:
+        resultado = resultado[:640].rsplit(".", 1)[0] + "."
 
     return resultado
 
@@ -458,7 +461,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
     Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
-    exigindo texto jornalístico limpo e foto de capa.
+    exigindo texto jornalístico limpo, foto de capa e adicionando o CTA camuflado no final.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -525,7 +528,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
             continue
 
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-        # Exige que a matéria tenha um resumo jornalístico real (mínimo 120 caracteres limpos)
         if not resumo_formatado or len(resumo_formatado) < 120:
             continue
 
@@ -537,7 +539,12 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
-        post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>\n\n{html.escape(resumo_formatado)}"
+        post = (
+            f"{categoria}\n\n"
+            f"<b>{html.escape(t_limpo)}</b>\n\n"
+            f"{html.escape(resumo_formatado)}\n\n"
+            f"{CTA_GRUPO}"
+        )
 
         noticias.append({
             "link": link,
