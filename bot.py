@@ -6,15 +6,17 @@ import time
 import logging
 import re
 import base64
+import email.utils
 import urllib.parse
 import urllib.request
 import urllib.error
 import xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ==============================================================================
-# CONFIGURAÇÕES DO BOT E CANAL (PROTEGIDO)
+# CONFIGURAÇÕES DO BOT E CANAL (PROTEGIDO - RODA DE SEGUNDA A SEGUNDA 24H)
 # ==============================================================================
 _PADRAO_TOKEN = base64.b64decode("OTAyNTk2MDg1NzpBQUhScGpvN3REaVUyQzhPLTJ6ZG9NNmFLazllTFFrczdqcw==").decode("utf-8")
 _PADRAO_CHAT_ID = "-1003533060222"
@@ -22,24 +24,25 @@ _PADRAO_CHAT_ID = "-1003533060222"
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 600
 MAX_NOTICIAS_POR_VEZ = 1
+TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto
+# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto (24/7)
 FEEDS = [
-    # 1. Negócios, M&A e Empresas
-    "https://braziljournal.com/feed",
-    "https://exame.com/feed/",
-    # 2. Economia & Mercado Financeiro
+    # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
-    "https://www.suno.com.br/noticias/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://www.seudinheiro.com/feed/",
+    "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://g1.globo.com/rss/g1/economia/",
+    # 2. Negócios, M&A e Empresas
+    "https://braziljournal.com/feed",
+    "https://exame.com/feed/",
     # 3. Política & Decisões Fiscais
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
@@ -50,7 +53,7 @@ FEEDS = [
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.folha.uol.com.br/mundo/rss091.xml",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
-    # 5. Criptoativos & Ativos Digitais
+    # 5. Criptoativos & Ativos Digitais (Muito ativos na madrugada e fim de semana)
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss"
 ]
@@ -79,6 +82,18 @@ STOPWORDS_DEDUP = {
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
+
+
+def obter_janela_maxima_horas():
+    """
+    Na madrugada e início da manhã (00h às 09h BRT), amplia a busca para 10 horas
+    para varrer todas as notícias que saíram na madrugada.
+    Durante o resto do dia, usa 6 horas para focar apenas nas notícias frescas de hoje.
+    """
+    hora_brt = datetime.now(TZ_BRASILIA).hour
+    if 0 <= hora_brt < 9:
+        return 10.0
+    return 6.0
 
 
 def http_get(url, timeout=10):
@@ -125,6 +140,29 @@ def salvar_historico(links, titulos):
             json.dump(dados, f, ensure_ascii=False, indent=2)
     except Exception as e:
         logging.error(f"Erro ao salvar histórico: {e}")
+
+
+def extrair_data_publicacao(item):
+    """Extrai a data/hora exata de publicação do item RSS em UTC."""
+    for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
+        el = item.find(tag)
+        if el is not None and el.text:
+            texto_data = el.text.strip()
+            try:
+                dt = email.utils.parsedate_to_datetime(texto_data)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt.astimezone(timezone.utc)
+            except Exception:
+                pass
+            try:
+                dt = datetime.fromisoformat(texto_data.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt.astimezone(timezone.utc)
+            except Exception:
+                pass
+    return None
 
 
 def eh_propaganda_ou_lixo(titulo, descricao):
@@ -373,9 +411,16 @@ def categorizar_materia(titulo, texto):
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
+    """
+    Funciona 24h por dia, de segunda a segunda.
+    Coleta notícias de TODOS os feeds, usa janela de 10h na madrugada/manhã (00h-09h)
+    para capturar tudo que saiu de madrugada, e 6h durante o dia, ordenando sempre da mais recente.
+    """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
-    noticias = []
+    agora_utc = datetime.now(timezone.utc)
+    max_idade_horas = obter_janela_maxima_horas()
+    candidatos = []
 
     for url_feed in FEEDS:
         try:
@@ -396,53 +441,80 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if len(title) < 25:
                     continue
 
+                # Verifica data/hora de publicação (pega madrugada + hoje, bloqueia dias anteriores)
+                dt_pub = extrair_data_publicacao(item)
+                if not dt_pub:
+                    continue
+
+                idade_horas = (agora_utc - dt_pub).total_seconds() / 3600.0
+                if idade_horas > max_idade_horas or idade_horas < -1.0:
+                    continue
+
                 # Filtro Anti-Propaganda
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
-                # Anti-Repetição Semântica
-                if eh_mesma_noticia(title, titulos_rodada):
-                    continue
-
-                # Detecta mídias do RSS
-                foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
-
-                # Busca corpo limpo do artigo e imagem da página (og:image)
-                texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
-                foto = foto or foto_og
-
-                # REGRA CRUCIAL: Só envia se TIVER IMAGEM, VÍDEO OU ÁUDIO (nunca envia texto pelado)
-                if not foto and not video and not audio:
-                    continue
-
-                # Formata resumo rico de 500 a 600 caracteres
-                resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-                categoria = categorizar_materia(title, resumo_formatado)
-
-                t_limpo = title.strip()
-                if " - " in t_limpo:
-                    t_limpo, _ = t_limpo.rsplit(" - ", 1)
-                if t_limpo and t_limpo[-1] not in ".!?":
-                    t_limpo += "."
-
-                post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>"
-                if resumo_formatado and len(resumo_formatado) > 25:
-                    post += f"\n\n{html.escape(resumo_formatado)}"
-
-                noticias.append({
+                candidatos.append({
+                    "dt_pub": dt_pub,
+                    "item": item,
                     "link": link,
-                    "titulo": title,
-                    "texto": post,
-                    "imagem": foto,
-                    "video": video,
-                    "audio": audio
+                    "title": title,
+                    "desc_bruta": desc_bruta
                 })
-                titulos_rodada.append(title)
-
-                if len(noticias) >= limite:
-                    return noticias, links_historico, titulos_historico
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
+
+    # Ordena TODAS as notícias pela mais recente primeiro (últimos minutos no topo)
+    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
+
+    noticias = []
+    for cand in candidatos:
+        title = cand["title"]
+        link = cand["link"]
+        desc_bruta = cand["desc_bruta"]
+        item = cand["item"]
+
+        # Anti-Repetição Semântica
+        if eh_mesma_noticia(title, titulos_rodada):
+            continue
+
+        # Detecta mídias do RSS
+        foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
+
+        # Busca corpo limpo do artigo e imagem da página (og:image)
+        texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
+        foto = foto or foto_og
+
+        # REGRA CRUCIAL: Só envia se TIVER IMAGEM, VÍDEO OU ÁUDIO (nunca envia texto pelado)
+        if not foto and not video and not audio:
+            continue
+
+        # Formata resumo rico de 500 a 600 caracteres
+        resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
+        categoria = categorizar_materia(title, resumo_formatado)
+
+        t_limpo = title.strip()
+        if " - " in t_limpo:
+            t_limpo, _ = t_limpo.rsplit(" - ", 1)
+        if t_limpo and t_limpo[-1] not in ".!?":
+            t_limpo += "."
+
+        post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>"
+        if resumo_formatado and len(resumo_formatado) > 25:
+            post += f"\n\n{html.escape(resumo_formatado)}"
+
+        noticias.append({
+            "link": link,
+            "titulo": title,
+            "texto": post,
+            "imagem": foto,
+            "video": video,
+            "audio": audio
+        })
+        titulos_rodada.append(title)
+
+        if len(noticias) >= limite:
+            break
 
     return noticias, links_historico, titulos_historico
 
@@ -489,10 +561,10 @@ if __name__ == "__main__":
 
     noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
-        logging.info("Nenhuma novidade inédita no momento.")
+        logging.info("Nenhuma novidade inédita na janela atual.")
         sys.exit(0)
 
-    logging.info(f"Encontradas {len(noticias)} notícias inéditas para envio.")
+    logging.info(f"Encontradas {len(noticias)} notícias recentes para envio.")
     for noticia in noticias:
         sucesso = enviar_post(token, chat_id, noticia)
         if sucesso:
