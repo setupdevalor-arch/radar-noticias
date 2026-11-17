@@ -20,7 +20,7 @@ CHAT_ID_FIXO = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 600
-MAX_NOTICIAS_POR_VEZ = 1  # 1 notícia por vez a cada 5 minutos
+MAX_NOTICIAS_POR_VEZ = 1
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -150,7 +150,7 @@ def limpar_html(txt):
 
 
 def eh_mesma_noticia(novo_titulo, titulos_anteriores):
-    """Evita postar notícias repetidas de jornais diferentes sobre o mesmo fato."""
+    """Evita postar notícias repetidas sobre o mesmo fato."""
     tokens_novo = {
         p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', novo_titulo.lower())
         if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -172,8 +172,22 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
     return False
 
 
-def extrair_midias(item, desc_bruta):
-    """Detecta imagem, vídeo ou áudio (podcast/resumo) anexados à matéria."""
+def extrair_og_image_da_pagina(raw_html):
+    """Busca a foto oficial de capa (OpenGraph / Twitter Card) na página do artigo."""
+    for padrao in [
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']'
+    ]:
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m and m.group(1).startswith("http"):
+            return m.group(1).strip()
+    return None
+
+
+def extrair_midias_do_rss(item, desc_bruta):
+    """Detecta imagem, vídeo ou áudio dentro das tags do RSS."""
     foto_url = None
     video_url = None
     audio_url = None
@@ -212,39 +226,64 @@ def extrair_midias(item, desc_bruta):
     return foto_url, video_url, audio_url
 
 
-def obter_texto_completo_artigo(url, desc_bruta):
+def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
-    Garante texto suficiente para um resumo rico de 500 a 600 caracteres.
-    Se o RSS for curto, busca os primeiros parágrafos diretamente da página da notícia.
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
+    removendo menus de navegação, breadcrumbs, datas e links residuais.
     """
-    t_limpo = limpar_html(desc_bruta)
-    t_limpo = limpar_caudas_wordpress(t_limpo)
-
-    if len(t_limpo) >= 480:
-        return t_limpo
+    foto_og = None
+    raw_html = ""
 
     try:
-        raw_html = http_get(url, timeout=5).decode("utf-8", errors="replace")
-        paragrafos = re.findall(r'<p[^>]*>(.*?)</p>', raw_html, flags=re.DOTALL | re.IGNORECASE)
-        blocos = []
-        for p in paragrafos:
-            txt = limpar_html(p)
-            if len(txt) < 35 or any(b in txt.lower() for b in ("leia também", "inscreva-se", "newsletter", "publicidade", "compartilhe", "foto:", "crédito:", "the post", "apareceu primeiro")):
-                continue
-            blocos.append(txt)
-            if sum(len(b) for b in blocos) >= 700:
-                break
-        if blocos:
-            return " ".join(blocos)
+        raw_html = http_get(url, timeout=6).decode("utf-8", errors="replace")
+        foto_og = extrair_og_image_da_pagina(raw_html)
     except Exception:
         pass
 
-    return t_limpo
+    # Extração de parágrafos reais do artigo
+    if raw_html:
+        paragrafos = re.findall(r'<p[^>]*>(.*?)</p>', raw_html, flags=re.DOTALL | re.IGNORECASE)
+        blocos_limpos = []
+
+        for p in paragrafos:
+            txt = limpar_html(p)
+            if len(txt) < 40:
+                continue
+
+            # Remove menus de navegação, cabeçalhos com datas e ruídos
+            if re.search(r'\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}', txt, re.IGNORECASE):
+                continue
+            if any(b in txt.lower() for b in (
+                "podcasts", "weekend", "newsletter", "inscreva-se", "leia mais", "leia também",
+                "compartilhe", "foto:", "crédito:", "publicidade", "assinante", "todos os direitos reservados",
+                "the post", "apareceu primeiro"
+            )):
+                continue
+
+            # Remove se o parágrafo repete o título com categorias grudadas
+            if titulo and titulo[:30].lower() in txt.lower():
+                continue
+
+            # Remove palavras residuais de menu grudadas no início
+            txt = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', txt, flags=re.IGNORECASE)
+
+            blocos_limpos.append(txt)
+            if sum(len(b) for b in blocos_limpos) >= 800:
+                break
+
+        if blocos_limpos:
+            return " ".join(blocos_limpos), foto_og
+
+    # Fallback se não conseguir abrir o site: usa a descrição do RSS limpa
+    t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+    t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
+    t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
+    return t_desc, foto_og
 
 
 def formatar_resumo_500_600(texto_bruto, titulo):
     """
-    Produz resumo com início, meio e fim completos, na média de 500 a 600 caracteres.
+    Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
     Organizado em parágrafos agradáveis, terminando sempre com pontuação final.
     """
     if not texto_bruto:
@@ -304,49 +343,32 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     return resultado
 
 
-def formatar_post_completo(titulo, desc_bruta, url):
-    """Categoriza com base nos 9 pilares estratégicos do portal financeiro."""
-    t = titulo.strip()
-    if " - " in t:
-        t, _ = t.rsplit(" - ", 1)
+def categorizar_materia(titulo, texto):
+    """Categoriza com base nos 9 pilares estratégicos de mercado com alta precisão."""
+    t_busca = (titulo + " " + texto).lower()
 
-    t_busca = (t + " " + desc_bruta).lower()
-
-    # Identificação por relevância temática
     if any(p in t_busca for p in ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
-        categoria = "🚨 <b>RADAR URGENTE</b>"
-    elif any(p in t_busca for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com", "bonificação em ações", "rendimento")):
-        categoria = "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
-    elif any(p in t_busca for p in ("petróleo", "brent", "wti", "opep", "minério de ferro", "dalian", "commodities", "commodity", "soja", "milho", "safra", "ouro", "gás natural")):
-        categoria = "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
+        return "🚨 <b>RADAR URGENTE</b>"
+    elif any(p in t_busca for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com", "bonificação em ações")):
+        return "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
+    elif any(p in t_busca for p in ("energia", "leilão de energia", "leilões de energia", "eletricidade", "setor elétrico", "petróleo", "brent", "wti", "opep", "minério de ferro", "dalian", "commodities", "commodity", "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina")):
+        return "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
     elif any(p in t_busca for p in ("fusão", "aquisição", "compra fatia", "m&a", "incorporação", "ipo", "oferta pública", "reestruturação", "privatização", "joint venture", "concessão")):
-        categoria = "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
+        return "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
     elif any(p in t_busca for p in ("inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores", "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc")):
-        categoria = "🤖 <b>TECNOLOGIA &amp; IA</b>"
+        return "🤖 <b>TECNOLOGIA &amp; IA</b>"
     elif any(p in t_busca for p in ("bitcoin", "btc", "ethereum", "eth", "cripto", "criptomoeda", "solana", "drex", "blockchain", "tokenização")):
-        categoria = "🪙 <b>CRIPTOATIVOS</b>"
-    elif any(p in t_busca for p in ("lula", "governo", "congresso", "stf", "senado", "câmara", "ministro", "haddad", "fazenda", "reforma tributária", "arcabouço", "planalto", "orçamento")):
-        categoria = "🏛️ <b>POLÍTICA &amp; PODER</b>"
+        return "🪙 <b>CRIPTOATIVOS</b>"
+    elif any(p in t_busca for p in ("lula", "congresso", "stf", "senado", "câmara dos deputados", "haddad", "ministério da fazenda", "reforma tributária", "arcabouço fiscal", "palácio do planalto", "orçamento da união")):
+        return "🏛️ <b>POLÍTICA &amp; PODER</b>"
     elif any(p in t_busca for p in ("eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio", "israel", "otan", "taiwan", "bce", "europa", "geopolítica")):
-        categoria = "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
+        return "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
     elif any(p in t_busca for p in ("dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed", "juros", "pib", "câmbio", "focus")):
-        categoria = "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
+        return "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
     elif any(p in t_busca for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale", "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500")):
-        categoria = "📊 <b>MERCADO &amp; AÇÕES</b>"
+        return "📊 <b>MERCADO &amp; AÇÕES</b>"
     else:
-        categoria = "⚡️ <b>RADAR DE MERCADO</b>"
-
-    if t and t[-1] not in ".!?":
-        t += "."
-
-    texto_artigo = obter_texto_completo_artigo(url, desc_bruta)
-    resumo_formatado = formatar_resumo_500_600(texto_artigo, t)
-
-    post = f"{categoria}\n\n<b>{html.escape(t)}</b>"
-    if resumo_formatado and len(resumo_formatado) > 25 and resumo_formatado.lower() != t.lower():
-        post += f"\n\n{html.escape(resumo_formatado)}"
-
-    return post
+        return "⚡️ <b>RADAR DE MERCADO</b>"
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
@@ -381,13 +403,35 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if eh_mesma_noticia(title, titulos_rodada):
                     continue
 
-                foto, video, audio = extrair_midias(item, desc_bruta)
-                texto = formatar_post_completo(title, desc_bruta, link)
+                # Detecta mídias do RSS
+                foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
+
+                # Busca corpo limpo do artigo e imagem da página (og:image)
+                texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
+                foto = foto or foto_og
+
+                # REGRA CRUCIAL: Só envia se TIVER IMAGEM, VÍDEO OU ÁUDIO (nunca envia texto pelado)
+                if not foto and not video and not audio:
+                    continue
+
+                # Formata resumo rico de 500 a 600 caracteres
+                resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
+                categoria = categorizar_materia(title, resumo_formatado)
+
+                t_limpo = title.strip()
+                if " - " in t_limpo:
+                    t_limpo, _ = t_limpo.rsplit(" - ", 1)
+                if t_limpo and t_limpo[-1] not in ".!?":
+                    t_limpo += "."
+
+                post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>"
+                if resumo_formatado and len(resumo_formatado) > 25:
+                    post += f"\n\n{html.escape(resumo_formatado)}"
 
                 noticias.append({
                     "link": link,
                     "titulo": title,
-                    "texto": texto,
+                    "texto": post,
                     "imagem": foto,
                     "video": video,
                     "audio": audio
@@ -428,7 +472,7 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-    # 4. Fallback em texto
+    # 4. Fallback em texto (só se tudo falhar)
     url_msg = f"https://api.telegram.org/bot{token}/sendMessage"
     payload_msg = {"chat_id": chat_id, "text": item["texto"], "parse_mode": "HTML", "disable_web_page_preview": False}
     status, _ = http_post_json(url_msg, payload_msg, timeout=20)
@@ -454,7 +498,7 @@ if __name__ == "__main__":
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem: {noticia['titulo']}")
             time.sleep(3)
         else:
             logging.error("Falha ao enviar post para o Telegram.")
