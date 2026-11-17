@@ -34,8 +34,12 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias Abertos (Sem Paywall): Negócios, Economia, Política, Geopolítica, M&A e Cripto
+# Feeds de Notícias Abertos (G1 no topo para prioridade de velocidade e deduplicação)
 FEEDS = [
+    # 0. Prioridade G1 (Posta na frente dos demais veículos)
+    "https://g1.globo.com/rss/g1/economia/",
+    "https://g1.globo.com/rss/g1/politica/",
+    "https://g1.globo.com/rss/g1/mundo/",
     # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
@@ -43,16 +47,13 @@ FEEDS = [
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
-    "https://g1.globo.com/rss/g1/economia/",
     # 2. Negócios, M&A e Empresas
     "https://braziljournal.com/feed",
     "https://exame.com/feed/",
     # 3. Política & Decisões de Brasília
     "https://www.infomoney.com.br/politica/feed/",
-    "https://g1.globo.com/rss/g1/politica/",
     "https://www.cnnbrasil.com.br/politica/feed/",
     # 4. Geopolítica & Mercado Internacional
-    "https://g1.globo.com/rss/g1/mundo/",
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     # 5. Criptoativos & Ativos Digitais
@@ -178,31 +179,97 @@ def limpar_caudas_wordpress(texto):
     return t.strip()
 
 
+def limpar_rastros_data_e_autoria(texto):
+    """
+    Remove carimbos de data/hora do G1 e de outros portais, como:
+    '17/11/2026 19h26 • Atualizado 5 minutos atrás', 'Por g1', '1 de 2 — Foto: ...'
+    """
+    if not texto:
+        return ""
+
+    t = texto
+
+    # 1. Remove padrão G1/portais: "17/11/2026 19h26 • Atualizado há 5 minutos atrás" (e variações)
+    t = re.sub(
+        r'\b\d{1,2}/\d{1,2}/\d{2,4}\s*(?:às\s*|-?\s*)?\d{1,2}[h:]\d{0,2}'
+        r'(?:\s*[•·|\-–—]\s*Atualizado\s*(?:há\s*|em\s*)?[^.!\n]*?(?:atrás|minuto[s]?|hora[s]?|segundo[s]?|dia[s]?|\d{1,2}[h:]\d{0,2}|\d{1,2}/\d{1,2}/\d{2,4}))?',
+        ' ',
+        t,
+        flags=re.IGNORECASE
+    )
+
+    # 2. Remove trechos soltos de "Atualizado há X minutos atrás" ou "• Atualizado ..."
+    t = re.sub(
+        r'[•·|\-–—]?\s*\bAtualizado\s+(?:há\s+|em\s+)?\d+\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?\s*(?:atrás)?\b',
+        ' ',
+        t,
+        flags=re.IGNORECASE
+    )
+
+    # 3. Remove datas numéricas soltas no início do texto (ex: "17/11/2026 - " ou "17/11/2026 19h26")
+    t = re.sub(
+        r'^\s*(?:Publicado\s+em\s+|Atualizado\s+em\s+)?\d{1,2}/\d{1,2}/\d{2,4}(?:\s+\d{1,2}[h:]\d{0,2})?\s*[•·|\-–—:]?\s*',
+        '',
+        t,
+        flags=re.IGNORECASE
+    )
+
+    # 4. Remove datas por extenso no início (ex: "17 de novembro de 2026")
+    t = re.sub(
+        r'^\s*\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*[•·|\-–—:]?\s*',
+        '',
+        t,
+        flags=re.IGNORECASE
+    )
+
+    # 5. Remove assinaturas de autoria curtas no começo (ex: "Por g1, Brasília — ")
+    t = re.sub(
+        r'^\s*Por\s+(?:g1|Redação|Estadão|InfoMoney|Money\s*Times|Suno|Reuters|Bloomberg| AFP|BBC)[^.!\n]{0,40}[—–\-|:]\s*',
+        '',
+        t,
+        flags=re.IGNORECASE
+    )
+
+    # 6. Remove legendas de galeria do G1 (ex: "1 de 3 Nome da foto — Foto: Reprodução")
+    t = re.sub(r'\b\d+\s+de\s+\d+\s+[^.!\n]*?[—–-]\s*Foto:\s*[^.!\n]*', ' ', t, flags=re.IGNORECASE)
+
+    return " ".join(t.split()).strip()
+
+
 def limpar_html(txt):
     if not txt:
         return ""
-    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
+    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form|figcaption)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
     txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = html.unescape(txt)
+    txt = limpar_rastros_data_e_autoria(txt)
     return " ".join(txt.split()).strip()
 
 
 def paragrafo_parece_codigo_ou_lixo(txt):
-    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas ou avisos de paywall."""
-    if not txt or len(txt) < 45:
+    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas, datas ou avisos de paywall."""
+    if not txt or len(txt) < 48:
         return True
     sinais_codigo = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
         "sameAs", "http://", "https://", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
         "cssSelector", "gostaria de receber", "últimas notícias", "assine a", "exclusivo para assinantes",
-        "leia também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
+        "leia também", "veja também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
         "publicidade", "todos os direitos reservados", "the post", "apareceu primeiro",
-        "podcasts", "weekend"
+        "podcasts", "weekend", "atualizado ", "minutos atrás", "horas atrás", "segundos atrás",
+        "canal do g1 no whatsapp", "siga o canal", "receba as notícias"
     )
     t_low = txt.lower()
     for s in sinais_codigo:
         if s in t_low:
             return True
+
+    # Bloqueia parágrafos que são apenas carimbo de data/hora ou autoria
+    if re.search(r'\b\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}[h:]\d{0,2}\b', t_low):
+        return True
+    if re.match(r'^por\s+[a-záéíóúâêîôûãõç0-9\s,/]+$', t_low) and len(t_low) < 90:
+        return True
+
     if txt.count('"') >= 6 or txt.count('[') >= 2 or txt.count(']') >= 2:
         return True
     return False
@@ -285,7 +352,7 @@ def extrair_midias_do_rss(item, desc_bruta):
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
     Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
-    eliminando totalmente tags <head>, <script>, JSON-LD, menus e rodapés.
+    eliminando totalmente blocos de data/atualização do G1, <head>, <script>, menus e rodapés.
     """
     foto_og = None
     raw_html = ""
@@ -297,15 +364,22 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         pass
 
     if raw_html:
-        # Remove blocos inteiros de script, head, style, nav, footer antes de buscar <p>
+        # Remove blocos de script, head, legendas, time e metadados antes de buscar <p>
         html_sem_scripts = re.sub(
-            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
+            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button|figcaption|time)\b[^>]*>.*?</\1>',
             ' ',
             raw_html,
             flags=re.DOTALL | re.IGNORECASE
         )
 
-        # Usa <p(?:\s[^>]*)?> para nunca confundir <p> com <path>, <picture> ou <param>
+        # Remove parágrafos específicos de data/autoria/legenda do G1 e outros portais pela classe CSS
+        html_sem_scripts = re.sub(
+            r'<p[^>]+class=["\'][^"\']*(?:publication-data|byline|author|date|timestamp|credit|caption|legenda|resumo)[^"\']*["\'][^>]*>.*?</p>',
+            ' ',
+            html_sem_scripts,
+            flags=re.DOTALL | re.IGNORECASE
+        )
+
         paragrafos = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
         blocos_limpos = []
 
@@ -321,6 +395,8 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
                 continue
 
             txt = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', txt, flags=re.IGNORECASE)
+            txt = limpar_rastros_data_e_autoria(txt)
+
             if not paragrafo_parece_codigo_ou_lixo(txt):
                 blocos_limpos.append(txt)
 
@@ -332,8 +408,8 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
 
     # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
-    t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
+    t_desc = limpar_rastros_data_e_autoria(t_desc)
     if paragrafo_parece_codigo_ou_lixo(t_desc):
         return "", foto_og
     return t_desc, foto_og
@@ -349,6 +425,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
     t = limpar_caudas_wordpress(texto_bruto)
     t = limpar_html(t)
+    t = limpar_rastros_data_e_autoria(t)
 
     if paragrafo_parece_codigo_ou_lixo(t):
         return ""
@@ -367,7 +444,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     tamanho_acumulado = 0
 
     for f in frases:
-        f = f.strip()
+        f = limpar_rastros_data_e_autoria(f.strip())
         if not f or paragrafo_parece_codigo_ou_lixo(f):
             continue
         if len(f) > 620:
@@ -460,7 +537,7 @@ def categorizar_materia(titulo, texto):
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
-    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
+    Prioriza o G1 na fila de checagem e captura as notícias novas dos últimos minutos,
     exigindo texto jornalístico limpo, foto de capa e adicionando o CTA camuflado no final.
     """
     links_historico, titulos_historico = carregar_historico()
@@ -469,6 +546,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     candidatos = []
 
     for url_feed in FEEDS:
+        eh_g1 = 1 if "g1.globo.com" in url_feed else 0
         try:
             conteudo = http_get(url_feed, timeout=10)
             root = ET.fromstring(conteudo)
@@ -499,6 +577,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                     continue
 
                 candidatos.append({
+                    "eh_g1": eh_g1,
                     "dt_pub": dt_pub,
                     "item": item,
                     "link": link,
@@ -508,7 +587,8 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
+    # Prioriza matérias do G1 dentro da janela atual e ordena das mais recentes para as mais antigas
+    candidatos.sort(key=lambda x: (x["eh_g1"], x["dt_pub"]), reverse=True)
 
     noticias = []
     for cand in candidatos:
