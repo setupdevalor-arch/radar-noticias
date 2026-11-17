@@ -23,7 +23,7 @@ _PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
-MAX_NOTICIAS_POR_VEZ = 5  # Se saírem 1, 2, 3, 4 ou 5 notícias novas no ciclo de 5 min, posta todas elas sem pular!
+MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
 MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -31,7 +31,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto (Varredura 24/7)
+# Feeds de Notícias Abertos (Sem Paywall): Negócios, Economia, Política, Geopolítica, M&A e Cripto
 FEEDS = [
     # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
@@ -44,15 +44,13 @@ FEEDS = [
     # 2. Negócios, M&A e Empresas
     "https://braziljournal.com/feed",
     "https://exame.com/feed/",
-    # 3. Política & Decisões Fiscais
+    # 3. Política & Decisões de Brasília
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
     "https://www.cnnbrasil.com.br/politica/feed/",
-    "https://feeds.folha.uol.com.br/poder/rss091.xml",
     # 4. Geopolítica & Mercado Internacional
     "https://g1.globo.com/rss/g1/mundo/",
     "https://www.cnnbrasil.com.br/internacional/feed/",
-    "https://feeds.folha.uol.com.br/mundo/rss091.xml",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
@@ -83,6 +81,14 @@ STOPWORDS_DEDUP = {
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
+
+
+def contem_termo(texto, lista_termos):
+    """Verifica palavras inteiras com limite de palavra (evita que 'eth' bata em 'ethics' ou 'fed' em 'federal')."""
+    for termo in lista_termos:
+        if re.search(r'\b' + re.escape(termo) + r'\b', texto, flags=re.IGNORECASE):
+            return True
+    return False
 
 
 def http_get(url, timeout=10):
@@ -172,9 +178,31 @@ def limpar_caudas_wordpress(texto):
 def limpar_html(txt):
     if not txt:
         return ""
-    txt = re.sub(r'<[^>]+>', '', txt)
+    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
+    txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = html.unescape(txt)
     return " ".join(txt.split()).strip()
+
+
+def paragrafo_parece_codigo_ou_lixo(txt):
+    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas ou avisos de paywall."""
+    if not txt or len(txt) < 45:
+        return True
+    sinais_codigo = (
+        "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
+        "sameAs", "http://", "https://", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
+        "cssSelector", "gostaria de receber", "últimas notícias", "assine a", "exclusivo para assinantes",
+        "leia também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
+        "publicidade", "todos os direitos reservados", "the post", "apareceu primeiro",
+        "podcasts", "weekend"
+    )
+    t_low = txt.lower()
+    for s in sinais_codigo:
+        if s in t_low:
+            return True
+    if txt.count('"') >= 6 or txt.count('[') >= 2 or txt.count(']') >= 2:
+        return True
+    return False
 
 
 def eh_mesma_noticia(novo_titulo, titulos_anteriores):
@@ -220,7 +248,6 @@ def extrair_midias_do_rss(item, desc_bruta):
     video_url = None
     audio_url = None
 
-    # 1. Enclosure
     enc = item.find("enclosure")
     if enc is not None and "url" in enc.attrib:
         url = enc.attrib["url"]
@@ -232,7 +259,6 @@ def extrair_midias_do_rss(item, desc_bruta):
         elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
             foto_url = url
 
-    # 2. Tags Media RSS
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
         m = item.find(tag)
         if m is not None and "url" in m.attrib:
@@ -245,7 +271,6 @@ def extrair_midias_do_rss(item, desc_bruta):
             elif not foto_url and ("image" in tipo or url.startswith("http")):
                 foto_url = url
 
-    # 3. Imagem no corpo HTML da descrição
     if not foto_url and desc_bruta:
         busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
         if busca and busca.group(1).startswith("http"):
@@ -256,8 +281,8 @@ def extrair_midias_do_rss(item, desc_bruta):
 
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
-    Visita a matéria para obter a foto de capa (og:image) e parágrafos limpos,
-    removendo menus de navegação, breadcrumbs, datas e links residuais.
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
+    eliminando totalmente tags <head>, <script>, JSON-LD, menus e rodapés.
     """
     foto_og = None
     raw_html = ""
@@ -268,82 +293,82 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     except Exception:
         pass
 
-    # Extração de parágrafos reais do artigo
     if raw_html:
-        paragrafos = re.findall(r'<p[^>]*>(.*?)</p>', raw_html, flags=re.DOTALL | re.IGNORECASE)
+        # Remove blocos inteiros de script, head, style, nav, footer antes de buscar <p>
+        html_sem_scripts = re.sub(
+            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
+            ' ',
+            raw_html,
+            flags=re.DOTALL | re.IGNORECASE
+        )
+
+        # Usa <p(?:\s[^>]*)?> para nunca confundir <p> com <path>, <picture> ou <param>
+        paragrafos = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
         blocos_limpos = []
 
         for p in paragrafos:
             txt = limpar_html(p)
-            if len(txt) < 40:
+            if paragrafo_parece_codigo_ou_lixo(txt):
                 continue
 
-            # Remove menus de navegação, cabeçalhos com datas e ruídos
             if re.search(r'\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}', txt, re.IGNORECASE):
                 continue
-            if any(b in txt.lower() for b in (
-                "podcasts", "weekend", "newsletter", "inscreva-se", "leia mais", "leia também",
-                "compartilhe", "foto:", "crédito:", "publicidade", "assinante", "todos os direitos reservados",
-                "the post", "apareceu primeiro"
-            )):
-                continue
 
-            # Remove se o parágrafo repete o título com categorias grudadas
             if titulo and titulo[:30].lower() in txt.lower():
                 continue
 
-            # Remove palavras residuais de menu grudadas no início
             txt = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', txt, flags=re.IGNORECASE)
+            if not paragrafo_parece_codigo_ou_lixo(txt):
+                blocos_limpos.append(txt)
 
-            blocos_limpos.append(txt)
             if sum(len(b) for b in blocos_limpos) >= 800:
                 break
 
         if blocos_limpos:
             return " ".join(blocos_limpos), foto_og
 
-    # Fallback se não conseguir abrir o site: usa a descrição do RSS limpa
+    # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
+    if paragrafo_parece_codigo_ou_lixo(t_desc):
+        return "", foto_og
     return t_desc, foto_og
 
 
 def formatar_resumo_500_600(texto_bruto, titulo):
     """
     Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
-    Organizado em parágrafos agradáveis, terminando sempre com pontuação final.
+    Nunca ultrapassa o limite de legenda de foto do Telegram.
     """
     if not texto_bruto:
         return ""
 
     t = limpar_caudas_wordpress(texto_bruto)
-    t = re.sub(r'<figure[^>]*>.*?</figure>', '', t, flags=re.DOTALL | re.IGNORECASE)
-    t = re.sub(r'<img[^>]*>', '', t, flags=re.IGNORECASE)
-    t = re.sub(r'<script[^>]*>.*?</script>', '', t, flags=re.DOTALL | re.IGNORECASE)
     t = limpar_html(t)
 
-    # Remove legendas residuais de imagem no início
+    if paragrafo_parece_codigo_ou_lixo(t):
+        return ""
+
     t = re.sub(r'^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])', '', t, flags=re.IGNORECASE)
     t = re.sub(r'^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)', '', t, flags=re.IGNORECASE)
 
-    # Remove repetição do título no início do texto
     if titulo and t.lower().startswith(titulo[:25].lower()):
         t = t[len(titulo):].strip()
         t = re.sub(r'^[:\-–—\s]+', '', t)
 
-    # Remove caudas caça-cliques
     t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
 
-    # Seleção de frases completas visando a média de 500 a 600 caracteres
     frases = re.split(r'(?<=[.!?])\s+', t)
     frases_selecionadas = []
     tamanho_acumulado = 0
 
     for f in frases:
         f = f.strip()
-        if not f:
+        if not f or paragrafo_parece_codigo_ou_lixo(f):
             continue
+        if len(f) > 650:
+            f = f[:600].rsplit(" ", 1)[0].rstrip(",;:-") + "."
         if tamanho_acumulado + len(f) <= 650:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
@@ -354,10 +379,9 @@ def formatar_resumo_500_600(texto_bruto, titulo):
         else:
             break
 
-    if not frases_selecionadas and frases:
-        frases_selecionadas.append(frases[0])
+    if not frases_selecionadas:
+        return ""
 
-    # Organiza em parágrafos para leitura fluida
     if len(frases_selecionadas) >= 3:
         p1 = " ".join(frases_selecionadas[:2])
         p2 = " ".join(frases_selecionadas[2:])
@@ -368,42 +392,73 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     if resultado and resultado[-1] not in ".!?":
         resultado += "."
 
+    if len(resultado) > 700:
+        resultado = resultado[:680].rsplit(".", 1)[0] + "."
+
     return resultado
 
 
 def categorizar_materia(titulo, texto):
-    """Categoriza com base nos 9 pilares estratégicos de mercado com alta precisão."""
-    t_busca = (titulo + " " + texto).lower()
+    """
+    Categoriza com base nos 9 pilares estratégicos usando palavras inteiras (\b)
+    e dando prioridade ao título da matéria.
+    """
+    for escopo in (titulo, titulo + " " + texto):
+        if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
+            return "🚨 <b>RADAR URGENTE</b>"
+        if contem_termo(escopo, ("dividendo", "dividendos", "provento", "proventos", "jcp", "juros sobre capital", "data com", "bonificação")):
+            return "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
+        if contem_termo(escopo, (
+            "lula", "congresso", "stf", "senado", "senador", "câmara", "camara", "deputado", "deputados",
+            "motta", "lira", "haddad", "planalto", "reforma tributária", "arcabouço", "orçamento",
+            "eleição", "eleições", "candidatura", "partido", "pl", "pt", "governador", "prefeito", "pec"
+        )):
+            return "🏛️ <b>POLÍTICA &amp; PODER</b>"
+        if contem_termo(escopo, (
+            "eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio",
+            "israel", "irã", "otan", "taiwan", "bce", "união europeia", "geopolítica", "casa branca", "tarifas"
+        )):
+            return "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
+        if contem_termo(escopo, (
+            "energia", "leilão de energia", "leilões de energia", "eletricidade", "setor elétrico",
+            "petróleo", "brent", "wti", "opep", "minério", "dalian", "commodities", "commodity",
+            "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina"
+        )):
+            return "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
+        if contem_termo(escopo, (
+            "fusão", "aquisição", "m&a", "incorporação", "ipo", "oferta pública",
+            "reestruturação", "privatização", "joint venture", "concessão", "recuperação judicial"
+        )):
+            return "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
+        if contem_termo(escopo, (
+            "inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores",
+            "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc"
+        )):
+            return "🤖 <b>TECNOLOGIA &amp; IA</b>"
+        if contem_termo(escopo, (
+            "bitcoin", "btc", "ethereum", "cripto", "criptomoeda", "criptomoedas",
+            "criptoativos", "solana", "drex", "blockchain", "tokenização"
+        )):
+            return "🪙 <b>CRIPTOATIVOS</b>"
+        if contem_termo(escopo, (
+            "dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed",
+            "juros", "pib", "câmbio", "boletim focus", "tesouro direto"
+        )):
+            return "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
+        if contem_termo(escopo, (
+            "lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale",
+            "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500"
+        )):
+            return "📊 <b>MERCADO &amp; AÇÕES</b>"
 
-    if any(p in t_busca for p in ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
-        return "🚨 <b>RADAR URGENTE</b>"
-    elif any(p in t_busca for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com", "bonificação em ações")):
-        return "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
-    elif any(p in t_busca for p in ("energia", "leilão de energia", "leilões de energia", "eletricidade", "setor elétrico", "petróleo", "brent", "wti", "opep", "minério de ferro", "dalian", "commodities", "commodity", "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina")):
-        return "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
-    elif any(p in t_busca for p in ("fusão", "aquisição", "compra fatia", "m&a", "incorporação", "ipo", "oferta pública", "reestruturação", "privatização", "joint venture", "concessão")):
-        return "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
-    elif any(p in t_busca for p in ("inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores", "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc")):
-        return "🤖 <b>TECNOLOGIA &amp; IA</b>"
-    elif any(p in t_busca for p in ("bitcoin", "btc", "ethereum", "eth", "cripto", "criptomoeda", "solana", "drex", "blockchain", "tokenização")):
-        return "🪙 <b>CRIPTOATIVOS</b>"
-    elif any(p in t_busca for p in ("lula", "congresso", "stf", "senado", "câmara dos deputados", "haddad", "ministério da fazenda", "reforma tributária", "arcabouço fiscal", "palácio do planalto", "orçamento da união")):
-        return "🏛️ <b>POLÍTICA &amp; PODER</b>"
-    elif any(p in t_busca for p in ("eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio", "israel", "otan", "taiwan", "bce", "europa", "geopolítica")):
-        return "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
-    elif any(p in t_busca for p in ("dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed", "juros", "pib", "câmbio", "focus")):
-        return "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
-    elif any(p in t_busca for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale", "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500")):
-        return "📊 <b>MERCADO &amp; AÇÕES</b>"
-    else:
-        return "⚡️ <b>RADAR DE MERCADO</b>"
+    return "⚡️ <b>RADAR DE MERCADO</b>"
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
     Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
-    sem pular nenhuma e sem nunca postar notícia antiga.
+    exigindo texto jornalístico limpo e foto de capa.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -429,7 +484,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if len(title) < 25:
                     continue
 
-                # REGRA DE TEMPO REAL: Só aceita notícias que acabaram de sair (últimos 25 minutos)
                 dt_pub = extrair_data_publicacao(item)
                 if not dt_pub:
                     continue
@@ -438,7 +492,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
                     continue
 
-                # Filtro Anti-Propaganda
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
@@ -452,7 +505,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    # Ordena das mais recentes primeiro para selecionar o lote novo
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias = []
@@ -462,23 +514,21 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         desc_bruta = cand["desc_bruta"]
         item = cand["item"]
 
-        # Anti-Repetição Semântica
         if eh_mesma_noticia(title, titulos_rodada):
             continue
 
-        # Detecta mídias do RSS
         foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
-
-        # Busca corpo limpo do artigo e imagem da página (og:image)
         texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
         foto = foto or foto_og
 
-        # REGRA CRUCIAL: Só envia se TIVER IMAGEM, VÍDEO OU ÁUDIO (nunca envia texto pelado)
         if not foto and not video and not audio:
             continue
 
-        # Formata resumo rico de 500 a 600 caracteres
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
+        # Exige que a matéria tenha um resumo jornalístico real (mínimo 120 caracteres limpos)
+        if not resumo_formatado or len(resumo_formatado) < 120:
+            continue
+
         categoria = categorizar_materia(title, resumo_formatado)
 
         t_limpo = title.strip()
@@ -487,9 +537,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
-        post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>"
-        if resumo_formatado and len(resumo_formatado) > 25:
-            post += f"\n\n{html.escape(resumo_formatado)}"
+        post = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>\n\n{html.escape(resumo_formatado)}"
 
         noticias.append({
             "link": link,
@@ -504,14 +552,12 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if len(noticias) >= limite:
             break
 
-    # Inverte o lote do ciclo para publicar na ordem cronológica exata em que saíram
     noticias.reverse()
     return noticias, links_historico, titulos_historico
 
 
 def enviar_post(token, chat_id, item):
-    """Envia com áudio, vídeo, foto ou texto nativo."""
-    # 1. Áudio (Podcast / Resumo em voz)
+    """Envia com áudio, vídeo ou foto de capa em alta definição."""
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
         payload_aud = {"chat_id": chat_id, "audio": item["audio"], "caption": item["texto"], "parse_mode": "HTML"}
@@ -519,7 +565,6 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-    # 2. Vídeo
     if item.get("video"):
         url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
         payload_vid = {"chat_id": chat_id, "video": item["video"], "caption": item["texto"], "parse_mode": "HTML"}
@@ -527,7 +572,6 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-    # 3. Foto de capa em alta definição
     if item.get("imagem"):
         url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
         payload_photo = {"chat_id": chat_id, "photo": item["imagem"], "caption": item["texto"], "parse_mode": "HTML"}
@@ -535,11 +579,7 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-    # 4. Fallback em texto (só se tudo falhar)
-    url_msg = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload_msg = {"chat_id": chat_id, "text": item["texto"], "parse_mode": "HTML", "disable_web_page_preview": False}
-    status, _ = http_post_json(url_msg, payload_msg, timeout=20)
-    return status == 200
+    return False
 
 
 if __name__ == "__main__":
@@ -564,4 +604,4 @@ if __name__ == "__main__":
             logging.info(f"Notícia enviada com imagem: {noticia['titulo']}")
             time.sleep(3)
         else:
-            logging.error("Falha ao enviar post para o Telegram.")
+            logging.error("Falha ao enviar post com mídia para o Telegram.")
