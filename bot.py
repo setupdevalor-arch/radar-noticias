@@ -27,8 +27,17 @@ MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min,
 MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
-# CTA com link camuflado no final de cada notícia
-CTA_GRUPO = '💬 <a href="https://t.me/OPapodeInvestidor">Troque ideia sobre o mercado e compartilhe sua visão com outros investidores</a>'
+# Botão nativo do Telegram que aparece embaixo de cada matéria
+BOTAO_GRUPO = {
+    "inline_keyboard": [
+        [
+            {
+                "text": "💬 Debater notícia no Grupo",
+                "url": "https://t.me/OPapodeInvestidor"
+            }
+        ]
+    ]
+}
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -88,7 +97,7 @@ STOPWORDS_DEDUP = {
 
 
 def contem_termo(texto, lista_termos):
-    """Verifica palavras inteiras com limite de palavra (evita que 'eth' bata em 'ethics' ou 'fed' em 'federal')."""
+    """Verifica palavras inteiras com limite de palavra."""
     for termo in lista_termos:
         if re.search(r'\b' + re.escape(termo) + r'\b', texto, flags=re.IGNORECASE):
             return True
@@ -224,7 +233,7 @@ def limpar_rastros_data_e_autoria(texto):
 
     # 5. Remove assinaturas de autoria curtas no começo (ex: "Por g1, Brasília — ")
     t = re.sub(
-        r'^\s*Por\s+(?:g1|Redação|Estadão|InfoMoney|Money\s*Times|Suno|Reuters|Bloomberg| AFP|BBC)[^.!\n]{0,40}[—–\-|:]\s*',
+        r'^\s*Por\s+(?:g1|Redação|Estadão|InfoMoney|Money\s*Times|Suno|Reuters|Bloomberg|AFP|BBC)[^.!\n]{0,40}[—–\-|:]\s*',
         '',
         t,
         flags=re.IGNORECASE
@@ -264,7 +273,6 @@ def paragrafo_parece_codigo_ou_lixo(txt):
         if s in t_low:
             return True
 
-    # Bloqueia parágrafos que são apenas carimbo de data/hora ou autoria
     if re.search(r'\b\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}[h:]\d{0,2}\b', t_low):
         return True
     if re.match(r'^por\s+[a-záéíóúâêîôûãõç0-9\s,/]+$', t_low) and len(t_low) < 90:
@@ -364,7 +372,6 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         pass
 
     if raw_html:
-        # Remove blocos de script, head, legendas, time e metadados antes de buscar <p>
         html_sem_scripts = re.sub(
             r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button|figcaption|time)\b[^>]*>.*?</\1>',
             ' ',
@@ -372,7 +379,6 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
             flags=re.DOTALL | re.IGNORECASE
         )
 
-        # Remove parágrafos específicos de data/autoria/legenda do G1 e outros portais pela classe CSS
         html_sem_scripts = re.sub(
             r'<p[^>]+class=["\'][^"\']*(?:publication-data|byline|author|date|timestamp|credit|caption|legenda|resumo)[^"\']*["\'][^>]*>.*?</p>',
             ' ',
@@ -406,7 +412,6 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         if blocos_limpos:
             return " ".join(blocos_limpos), foto_og
 
-    # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
     t_desc = limpar_rastros_data_e_autoria(t_desc)
@@ -538,7 +543,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
     Prioriza o G1 na fila de checagem e captura as notícias novas dos últimos minutos,
-    exigindo texto jornalístico limpo, foto de capa e adicionando o CTA camuflado no final.
+    exigindo texto jornalístico limpo e foto de capa.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -587,7 +592,6 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    # Prioriza matérias do G1 dentro da janela atual e ordena das mais recentes para as mais antigas
     candidatos.sort(key=lambda x: (x["eh_g1"], x["dt_pub"]), reverse=True)
 
     noticias = []
@@ -619,11 +623,11 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
+        # Texto limpo sem link no final (a chamada agora vai no botão BOTAO_GRUPO)
         post = (
             f"{categoria}\n\n"
             f"<b>{html.escape(t_limpo)}</b>\n\n"
-            f"{html.escape(resumo_formatado)}\n\n"
-            f"{CTA_GRUPO}"
+            f"{html.escape(resumo_formatado)}"
         )
 
         noticias.append({
@@ -644,24 +648,42 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """Envia com áudio, vídeo ou foto de capa em alta definição."""
+    """Envia com áudio, vídeo ou foto de capa em alta definição + botão para o grupo."""
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
-        payload_aud = {"chat_id": chat_id, "audio": item["audio"], "caption": item["texto"], "parse_mode": "HTML"}
+        payload_aud = {
+            "chat_id": chat_id,
+            "audio": item["audio"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": BOTAO_GRUPO
+        }
         status, _ = http_post_json(url_aud, payload_aud, timeout=25)
         if status == 200:
             return True
 
     if item.get("video"):
         url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
-        payload_vid = {"chat_id": chat_id, "video": item["video"], "caption": item["texto"], "parse_mode": "HTML"}
+        payload_vid = {
+            "chat_id": chat_id,
+            "video": item["video"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": BOTAO_GRUPO
+        }
         status, _ = http_post_json(url_vid, payload_vid, timeout=30)
         if status == 200:
             return True
 
     if item.get("imagem"):
         url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
-        payload_photo = {"chat_id": chat_id, "photo": item["imagem"], "caption": item["texto"], "parse_mode": "HTML"}
+        payload_photo = {
+            "chat_id": chat_id,
+            "photo": item["imagem"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": BOTAO_GRUPO
+        }
         status, _ = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
             return True
@@ -688,7 +710,7 @@ if __name__ == "__main__":
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada com imagem: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem e botão: {noticia['titulo']}")
             time.sleep(3)
         else:
             logging.error("Falha ao enviar post com mídia para o Telegram.")
