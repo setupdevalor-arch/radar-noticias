@@ -1,14 +1,24 @@
 name: Radar Notícias em Tempo Real
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'bot.py'
+      - '.github/workflows/bot.yml'
   schedule:
-    # Dispara a cada 5 minutos automaticamente
     - cron: '*/5 * * * *'
   workflow_dispatch:
+
+concurrency:
+  group: radar-continuo
+  cancel-in-progress: false
 
 jobs:
   enviar-noticias:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     permissions:
       contents: write
 
@@ -21,13 +31,26 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Executar Robô de Notícias
+      - name: Rodar Robô a cada 5 minutos sem pegar fila
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python bot.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Salvar Histórico de Notícias Enviadas
-        continue-on-error: true
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Atualizar histórico de notícias enviadas [skip ci]"
-          file_pattern: "historico_enviados.json"
+          for i in $(seq 1 18); do
+            echo "=== Disparo $i (a cada 5 min) ==="
+            git pull --rebase origin main || true
+            python bot.py || true
+
+            if [ -n "$(git status --porcelain historico_enviados.json)" ]; then
+              git add historico_enviados.json
+              git commit -m "Atualiza histórico [skip ci]" || true
+              git pull --rebase origin main || true
+              git push origin main || true
+            fi
+
+            echo "Aguardando 5 minutos para a próxima notícia..."
+            sleep 300
+          done
