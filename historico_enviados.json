@@ -1,12 +1,20 @@
-[
-  "https://g1.globo.com/mt/mato-grosso/noticia/2026/11/17/rota-dos-graos-governo-de-mt-cancela-concessao-de-r-10-bilhoes-para-5-rodovias.ghtml",
-  "https://g1.globo.com/pi/piaui/noticia/2026/11/17/incendio-atinge-casa-em-teresina.ghtml",
-  "https://g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml",
-  "https://g1.globo.com/pi/piaui/noticia/2026/11/17/motociclista-morre-acidente-carro-parnaiba.ghtml",
-  "https://g1.globo.com/tecnologia/noticia/2026/11/17/meta-lanca-app-de-compra-e-venda-de-produtos-usados-no-brasil-para-concorrer-com-enjoei.ghtml",
-  "https://www.infomoney.com.br/mercados/o-que-esperar-para-o-dolar-nos-proximos-dias-apos-moeda-passar-os-r-580/",
-  "https://www.infomoney.com.br/consumo/black-friday-xp-e-rico-turbinam-beneficios-em-cartoes-investimentos-e-seguro-veja/",
-  "https://www.infomoney.com.br/mercados/home-depot-tem-lucro-liquido-de-us-37-bilhoes-e-nomeia-novo-ceo/",
-  "https://www.infomoney.com.br/mercados/ibovespa-sobe-mas-investidor-segue-cauteloso-a-espera-de-definicoes-do-governo-lula/",
-  "https://www.infomoney.com.br/mercados/membro-do-fed-preve-varias-altas-dos-juros-antes-da-primavera-para-conter-inflacao/"
-]
+{
+  "links": [
+    "https://g1.globo.com/mt/mato-grosso/noticia/2026/11/17/rota-dos-graos-governo-de-mt-cancela-concessao-de-r-10-bilhoes-para-5-rodovias.ghtml",
+    "https://g1.globo.com/pi/piaui/noticia/2026/11/17/incendio-atinge-casa-em-teresina.ghtml",
+    "https://g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml",
+    "https://g1.globo.com/pi/piaui/noticia/2026/11/17/motociclista-morre-acidente-carro-parnaiba.ghtml",
+    "https://g1.globo.com/tecnologia/noticia/2026/11/17/meta-lanca-app-de-compra-e-venda-de-produtos-usados-no-brasil-para-concorrer-com-enjoei.ghtml",
+    "https://www.infomoney.com.br/mercados/o-que-esperar-para-o-dolar-nos-proximos-dias-apos-moeda-passar-os-r-580/",
+    "https://www.infomoney.com.br/consumo/black-friday-xp-e-rico-turbinam-beneficios-em-cartoes-investimentos-e-seguro-veja/",
+    "https://www.infomoney.com.br/mercados/home-depot-tem-lucro-liquido-de-us-37-bilhoes-e-nomeia-novo-ceo/",
+    "https://www.infomoney.com.br/mercados/ibovespa-sobe-mas-investidor-segue-cauteloso-a-espera-de-definicoes-do-governo-lula/",
+    "https://www.infomoney.com.br/mercados/membro-do-fed-preve-varias-altas-dos-juros-antes-da-primavera-para-conter-inflacao/",
+    "https://www.infomoney.com.br/politica/senado-abre-licitacao-de-r-34-milhoes-para-trocar-carpete-do-plenario/",
+    "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-17112026/"
+  ],
+  "titulos": [
+    "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
+    "Ibovespa Hoje Ao Vivo: Bolsa sobe e retoma os 171 mil pontos"
+  ]
+}
