@@ -727,4 +727,95 @@ async def processar_feed(
                 "item": item,
                 "link": link,
                 "title": title,
-                "
+                "desc_bruta": desc_bruta,
+            })
+    except Exception as e:
+        logger.warning(f"Feed indisponível ({url_feed}): {e}")
+
+    return itens
+
+
+async def executar_ciclo_unico(token: str, chat_id: str, cliente_gemini: Any) -> int:
+    links_historico, titulos_historico = carregar_historico()
+    set_links = set(links_historico)
+    titulos_rodada = list(titulos_historico)
+    agora_utc = datetime.now(timezone.utc)
+    sem = asyncio.Semaphore(MAX_CONCORRENCIA_HTTP)
+
+    resultados = await asyncio.gather(
+        *(processar_feed(url, set_links, agora_utc, sem) for url in FEEDS)
+    )
+    candidatos = [item for sublista in resultados for item in sublista]
+    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
+
+    logger.info(f"Varredura concluída: {len(candidatos)} notícias recentes encontradas nos feeds.")
+
+    selecionadas = []
+    for cand in candidatos:
+        title = cand["title"]
+        link = cand["link"]
+        desc_bruta = cand["desc_bruta"]
+        item_rss = cand["item"]
+
+        if link in set_links or eh_mesma_noticia(title, titulos_rodada):
+            continue
+
+        foto_rss, video_rss = extrair_midias_rss(item_rss, desc_bruta)
+        async with sem:
+            texto_artigo, foto_og, _ = await asyncio.to_thread(
+                _sync_extrair_artigo_completo, link, desc_bruta, title
+            )
+
+        foto_final = foto_rss or foto_og
+        sintese = await asyncio.to_thread(_sync_gerar_sintese, cliente_gemini, title, texto_artigo)
+        categoria = categorizar_materia(title, f"{texto_artigo[:400]} {sintese}")
+
+        legenda_midia = montar_post_html(categoria, title, sintese, LIMITE_LEGENDA_TELEGRAM)
+        link_invisivel = f'<a href="{html.escape(link)}">&#8205;</a>'
+        texto_mensagem = link_invisivel + montar_post_html(categoria, title, sintese, LIMITE_TEXTO_TELEGRAM - 150)
+
+        selecionadas.append({
+            "link": link,
+            "titulo": title,
+            "legenda_midia": legenda_midia,
+            "texto_mensagem": texto_mensagem,
+            "imagem": foto_final,
+            "video": video_rss,
+        })
+        titulos_rodada.append(title)
+        set_links.add(link)
+
+        if len(selecionadas) >= MAX_NOTICIAS_POR_VEZ:
+            break
+
+    if not selecionadas:
+        logger.info("Nenhuma notícia inédita para postar neste ciclo.")
+        return 0
+
+    selecionadas.reverse()
+    enviadas = 0
+    for noticia in selecionadas:
+        if await publicar_noticia_telegram(token, chat_id, noticia):
+            links_historico.append(noticia["link"])
+            titulos_historico.append(noticia["titulo"])
+            salvar_historico(links_historico, titulos_historico)
+            enviadas += 1
+            logger.info(f"Postada com sucesso: {noticia['titulo']}")
+            await asyncio.sleep(3)
+
+    return enviadas
+
+
+async def main() -> None:
+    token, chat_id, cliente_gemini = obter_credenciais()
+
+    for ciclo in range(1, CICLOS_INTERNOS + 1):
+        logger.info(f"=== Iniciando ciclo {ciclo}/{CICLOS_INTERNOS} ===")
+        await executar_ciclo_unico(token, chat_id, cliente_gemini)
+        if ciclo < CICLOS_INTERNOS:
+            logger.info(f"Aguardando {INTERVALO_SEGUNDOS}s para o próximo ciclo de 5 minutos...")
+            await asyncio.sleep(INTERVALO_SEGUNDOS)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
