@@ -20,15 +20,18 @@ CHAT_ID_FIXO = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 600
-MAX_NOTICIAS_POR_VEZ = 2  # 2 notícias por rodada a cada 13 minutos
+MAX_NOTICIAS_POR_VEZ = 1  # 1 notícia por vez a cada 5 minutos
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Economia, Mercado, Política e Geopolítica
+# Feeds de Notícias: Negócios, Economia, Política, Geopolítica, M&A e Cripto
 FEEDS = [
-    # 1. Economia & Mercado Financeiro
+    # 1. Negócios, M&A e Empresas
+    "https://braziljournal.com/feed",
+    "https://exame.com/feed/",
+    # 2. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.suno.com.br/noticias/feed/",
@@ -36,17 +39,17 @@ FEEDS = [
     "https://www.seudinheiro.com/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://g1.globo.com/rss/g1/economia/",
-    # 2. Política & Decisões Fiscais
+    # 3. Política & Decisões Fiscais
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
     "https://www.cnnbrasil.com.br/politica/feed/",
     "https://feeds.folha.uol.com.br/poder/rss091.xml",
-    # 3. Geopolítica & Mercado Internacional
+    # 4. Geopolítica & Mercado Internacional
     "https://g1.globo.com/rss/g1/mundo/",
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.folha.uol.com.br/mundo/rss091.xml",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
-    # 4. Criptoativos
+    # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss"
 ]
@@ -73,7 +76,7 @@ STOPWORDS_DEDUP = {
     "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
     "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
-    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias"
+    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
 
 
@@ -147,7 +150,7 @@ def limpar_html(txt):
 
 
 def eh_mesma_noticia(novo_titulo, titulos_anteriores):
-    """Evita postar notícias iguais de jornais diferentes sobre o mesmo fato."""
+    """Evita postar notícias repetidas de jornais diferentes sobre o mesmo fato."""
     tokens_novo = {
         p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', novo_titulo.lower())
         if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -164,7 +167,6 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
             continue
         inter = tokens_novo & tokens_antigo
         ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
-        # Se coincidir em 2 ou mais termos essenciais e proporção >= 35%, é o mesmo assunto
         if len(inter) >= 2 and ratio >= 0.35:
             return True
     return False
@@ -188,7 +190,7 @@ def extrair_midias(item, desc_bruta):
         elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
             foto_url = url
 
-    # 2. Tags do padrão Media RSS
+    # 2. Tags Media RSS
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
         m = item.find(tag)
         if m is not None and "url" in m.attrib:
@@ -201,7 +203,7 @@ def extrair_midias(item, desc_bruta):
             elif not foto_url and ("image" in tipo or url.startswith("http")):
                 foto_url = url
 
-    # 3. Busca imagem no corpo HTML da descrição
+    # 3. Imagem no corpo HTML da descrição
     if not foto_url and desc_bruta:
         busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
         if busca and busca.group(1).startswith("http"):
@@ -212,7 +214,7 @@ def extrair_midias(item, desc_bruta):
 
 def obter_texto_completo_artigo(url, desc_bruta):
     """
-    Garante que a matéria tenha texto suficiente para um resumo rico de 500 a 600 caracteres.
+    Garante texto suficiente para um resumo rico de 500 a 600 caracteres.
     Se o RSS for curto, busca os primeiros parágrafos diretamente da página da notícia.
     """
     t_limpo = limpar_html(desc_bruta)
@@ -243,7 +245,7 @@ def obter_texto_completo_artigo(url, desc_bruta):
 def formatar_resumo_500_600(texto_bruto, titulo):
     """
     Produz resumo com início, meio e fim completos, na média de 500 a 600 caracteres.
-    Organizado em parágrafos agradáveis, terminando sempre com pontuação final completa.
+    Organizado em parágrafos agradáveis, terminando sempre com pontuação final.
     """
     if not texto_bruto:
         return ""
@@ -288,7 +290,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
     if not frases_selecionadas and frases:
         frases_selecionadas.append(frases[0])
 
-    # Organiza em parágrafos para leitura fluida no Telegram
+    # Organiza em parágrafos para leitura fluida
     if len(frases_selecionadas) >= 3:
         p1 = " ".join(frases_selecionadas[:2])
         p2 = " ".join(frases_selecionadas[2:])
@@ -303,28 +305,36 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
 
 def formatar_post_completo(titulo, desc_bruta, url):
-    """Categoriza o tema (Economia, Mercado, Política, Geopolítica) e monta a mensagem."""
+    """Categoriza com base nos 9 pilares estratégicos do portal financeiro."""
     t = titulo.strip()
     if " - " in t:
         t, _ = t.rsplit(" - ", 1)
 
-    t_lower = t.lower()
+    t_busca = (t + " " + desc_bruta).lower()
 
-    # Identificação temática
-    if any(p in t_lower for p in ("lula", "governo", "congresso", "stf", "senado", "câmara", "ministro", "haddad", "fazenda", "reforma", "arcabouço", "planalto")):
-        categoria = "🏛️ <b>POLÍTICA &amp; PODER</b>"
-    elif any(p in t_lower for p in ("eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio", "israel", "otan", "taiwan", "bce", "europa", "geopolítica")):
-        categoria = "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
-    elif any(p in t_lower for p in ("dividendo", "provento", "jcp", "data com")):
+    # Identificação por relevância temática
+    if any(p in t_busca for p in ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
+        categoria = "🚨 <b>RADAR URGENTE</b>"
+    elif any(p in t_busca for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com", "bonificação em ações", "rendimento")):
         categoria = "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
-    elif any(p in t_lower for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale", "itaú", "bradesco", "b3", "bolsa")):
-        categoria = "📊 <b>MERCADO &amp; AÇÕES</b>"
-    elif any(p in t_lower for p in ("dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed", "juros", "pib", "câmbio")):
-        categoria = "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
-    elif any(p in t_lower for p in ("bitcoin", "btc", "ethereum", "cripto", "solana")):
+    elif any(p in t_busca for p in ("petróleo", "brent", "wti", "opep", "minério de ferro", "dalian", "commodities", "commodity", "soja", "milho", "safra", "ouro", "gás natural")):
+        categoria = "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
+    elif any(p in t_busca for p in ("fusão", "aquisição", "compra fatia", "m&a", "incorporação", "ipo", "oferta pública", "reestruturação", "privatização", "joint venture", "concessão")):
+        categoria = "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
+    elif any(p in t_busca for p in ("inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores", "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc")):
+        categoria = "🤖 <b>TECNOLOGIA &amp; IA</b>"
+    elif any(p in t_busca for p in ("bitcoin", "btc", "ethereum", "eth", "cripto", "criptomoeda", "solana", "drex", "blockchain", "tokenização")):
         categoria = "🪙 <b>CRIPTOATIVOS</b>"
+    elif any(p in t_busca for p in ("lula", "governo", "congresso", "stf", "senado", "câmara", "ministro", "haddad", "fazenda", "reforma tributária", "arcabouço", "planalto", "orçamento")):
+        categoria = "🏛️ <b>POLÍTICA &amp; PODER</b>"
+    elif any(p in t_busca for p in ("eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio", "israel", "otan", "taiwan", "bce", "europa", "geopolítica")):
+        categoria = "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
+    elif any(p in t_busca for p in ("dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed", "juros", "pib", "câmbio", "focus")):
+        categoria = "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
+    elif any(p in t_busca for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale", "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500")):
+        categoria = "📊 <b>MERCADO &amp; AÇÕES</b>"
     else:
-        categoria = "⚡️ <b>RADAR EM TEMPO REAL</b>"
+        categoria = "⚡️ <b>RADAR DE MERCADO</b>"
 
     if t and t[-1] not in ".!?":
         t += "."
@@ -367,7 +377,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
-                # Anti-Repetição Semântica (evita o mesmo fato tanto do histórico quanto da rodada atual)
+                # Anti-Repetição Semântica
                 if eh_mesma_noticia(title, titulos_rodada):
                     continue
 
@@ -445,6 +455,6 @@ if __name__ == "__main__":
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
             logging.info(f"Notícia enviada: {noticia['titulo']}")
-            time.sleep(3)  # Pausa de 3 segundos entre os 2 posts
+            time.sleep(3)
         else:
             logging.error("Falha ao enviar post para o Telegram.")
