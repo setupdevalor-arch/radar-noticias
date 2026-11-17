@@ -3,7 +3,6 @@ import sys
 import json
 import html
 import time
-import uuid
 import logging
 import re
 import base64
@@ -113,39 +112,6 @@ def http_post_json(url, payload, timeout=25):
         return e.code, corpo
     except Exception as e:
         return 0, str(e)
-
-
-def enviar_video_multipart(token, chat_id, video_bytes, legenda, timeout=45):
-    """Faz upload direto do arquivo de vídeo (.mp4) para o Telegram caso o portal bloqueie link direto."""
-    url = f"https://api.telegram.org/bot{token}/sendVideo"
-    boundary = f"----WebKitFormBoundary{uuid.uuid4().hex}"
-    partes = []
-
-    campos = {
-        "chat_id": str(chat_id),
-        "caption": legenda,
-        "parse_mode": "HTML",
-        "supports_streaming": "true"
-    }
-    for nome, valor in campos.items():
-        partes.append(f"--{boundary}\r\n".encode("utf-8"))
-        partes.append(f'Content-Disposition: form-data; name="{nome}"\r\n\r\n'.encode("utf-8"))
-        partes.append(f"{valor}\r\n".encode("utf-8"))
-
-    partes.append(f"--{boundary}\r\n".encode("utf-8"))
-    partes.append(b'Content-Disposition: form-data; name="video"; filename="noticia.mp4"\r\n')
-    partes.append(b"Content-Type: video/mp4\r\n\r\n")
-    partes.append(video_bytes)
-    partes.append(f"\r\n--{boundary}--\r\n".encode("utf-8"))
-
-    corpo = b"".join(partes)
-    headers = {**HEADERS, "Content-Type": f"multipart/form-data; boundary={boundary}"}
-    req = urllib.request.Request(url, data=corpo, headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.status == 200
-    except Exception:
-        return False
 
 
 def carregar_historico():
@@ -265,35 +231,6 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
     return False
 
 
-def extrair_video_da_pagina(raw_html):
-    """
-    Detecta se a página da notícia possui um arquivo de vídeo real (.mp4 / .mov)
-    para enviar o vídeo em movimento em vez de apenas um frame estático.
-    """
-    if not raw_html:
-        return None
-    padroes = [
-        r'<meta[^>]+property=["\']og:video:secure_url["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video:secure_url["\']',
-        r'<meta[^>]+property=["\']og:video:url["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video:url["\']',
-        r'<meta[^>]+property=["\']og:video["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video["\']',
-        r'<meta[^>]+name=["\']twitter:player:stream["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<source[^>]+src=["\'](https?://[^"\']+\.(?:mp4|mov)[^"\']*)["\']',
-        r'<video[^>]+src=["\'](https?://[^"\']+\.(?:mp4|mov)[^"\']*)["\']',
-        r'"contentUrl"\s*:\s*"(https?://[^"\s]+\.(?:mp4|mov)[^"\s]*)"',
-        r'"videoUrl"\s*:\s*"(https?://[^"\s]+\.(?:mp4|mov)[^"\s]*)"'
-    ]
-    for padrao in padroes:
-        m = re.search(padrao, raw_html, re.IGNORECASE)
-        if m:
-            url = m.group(1).strip().replace("\\/", "/")
-            if url.startswith("http") and (".mp4" in url.lower() or ".mov" in url.lower()):
-                return url
-    return None
-
-
 def extrair_og_image_da_pagina(raw_html):
     """Busca a foto oficial de capa (OpenGraph / Twitter Card) na página do artigo."""
     for padrao in [
@@ -314,60 +251,47 @@ def extrair_midias_do_rss(item, desc_bruta):
     video_url = None
     audio_url = None
 
-    # 1. Verifica todas as tags <enclosure>
-    for enc in item.findall("enclosure"):
-        url = enc.attrib.get("url", "").strip()
+    enc = item.find("enclosure")
+    if enc is not None and "url" in enc.attrib:
+        url = enc.attrib["url"]
         tipo = enc.attrib.get("type", "").lower()
-        if not url:
-            continue
-        if "video" in tipo or any(ext in url.lower() for ext in (".mp4", ".mov")):
-            video_url = video_url or url
-        elif "audio" in tipo or any(ext in url.lower() for ext in (".mp3", ".m4a", ".ogg", ".wav")):
-            audio_url = audio_url or url
-        elif "image" in tipo or any(ext in url.lower() for ext in (".jpg", ".jpeg", ".png", ".webp")):
-            foto_url = foto_url or url
+        if "video" in tipo or url.endswith((".mp4", ".mov")):
+            video_url = url
+        elif "audio" in tipo or url.endswith((".mp3", ".m4a", ".ogg", ".wav")):
+            audio_url = url
+        elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
+            foto_url = url
 
-    # 2. Verifica todas as tags Media RSS (<media:content>, <media:thumbnail>)
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
-        for m in item.findall(tag):
-            url = m.attrib.get("url", "").strip()
+        m = item.find(tag)
+        if m is not None and "url" in m.attrib:
+            url = m.attrib["url"]
             tipo = m.attrib.get("type", "").lower()
-            medium = m.attrib.get("medium", "").lower()
-            if not url:
-                continue
-            if "video" in tipo or medium == "video" or ".mp4" in url.lower() or ".mov" in url.lower():
+            if "video" in tipo or url.endswith(".mp4"):
                 video_url = video_url or url
-            elif "audio" in tipo or medium == "audio" or ".mp3" in url.lower():
+            elif "audio" in tipo or url.endswith(".mp3"):
                 audio_url = audio_url or url
-            elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
+            elif not foto_url and ("image" in tipo or url.startswith("http")):
                 foto_url = url
 
-    # 3. Procura vídeo e imagem dentro do HTML do RSS
-    if desc_bruta:
-        if not video_url:
-            v_match = re.search(r'(?:src|href)=["\'](https?://[^"\']+\.(?:mp4|mov)[^"\']*)["\']', desc_bruta, re.IGNORECASE)
-            if v_match:
-                video_url = v_match.group(1)
-        if not foto_url:
-            busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-            if busca and busca.group(1).startswith("http"):
-                foto_url = busca.group(1)
+    if not foto_url and desc_bruta:
+        busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca and busca.group(1).startswith("http"):
+            foto_url = busca.group(1)
 
     return foto_url, video_url, audio_url
 
 
-def obter_conteudo_e_midias_artigo(url, desc_bruta, titulo):
+def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     """
-    Visita a matéria para obter vídeo real (se houver), foto de capa (og:image) e parágrafos limpos,
+    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
     eliminando totalmente tags <head>, <script>, JSON-LD, menus e rodapés.
     """
     foto_og = None
-    video_pg = None
     raw_html = ""
 
     try:
         raw_html = http_get(url, timeout=6).decode("utf-8", errors="replace")
-        video_pg = extrair_video_da_pagina(raw_html)
         foto_og = extrair_og_image_da_pagina(raw_html)
     except Exception:
         pass
@@ -404,21 +328,21 @@ def obter_conteudo_e_midias_artigo(url, desc_bruta, titulo):
                 break
 
         if blocos_limpos:
-            return " ".join(blocos_limpos), foto_og, video_pg
+            return " ".join(blocos_limpos), foto_og
 
     # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
     if paragrafo_parece_codigo_ou_lixo(t_desc):
-        return "", foto_og, video_pg
-    return t_desc, foto_og, video_pg
+        return "", foto_og
+    return t_desc, foto_og
 
 
 def formatar_resumo_500_600(texto_bruto, titulo):
     """
     Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
-    Nunca ultrapassa o limite de legenda de mídia do Telegram.
+    Nunca ultrapassa o limite de legenda de foto do Telegram.
     """
     if not texto_bruto:
         return ""
@@ -537,7 +461,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
     Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
-    priorizando vídeo real (.mp4) sobre foto estática, e adicionando o CTA camuflado no final.
+    exigindo texto jornalístico limpo, foto de capa e adicionando o CTA camuflado no final.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -597,8 +521,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
             continue
 
         foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
-        texto_artigo, foto_og, video_pg = obter_conteudo_e_midias_artigo(link, desc_bruta, title)
-        video = video or video_pg
+        texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
         foto = foto or foto_og
 
         if not foto and not video and not audio:
@@ -641,35 +564,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """
-    Prioridade 1: VÍDEO REAL (envia como vídeo reproduzível no Telegram, nunca apenas frame estático).
-    Prioridade 2: ÁUDIO (podcast/resumo).
-    Prioridade 3: FOTO DE CAPA (apenas quando a matéria não possuir vídeo).
-    """
-    # 1. Prioridade Máxima: Vídeo Real
-    if item.get("video"):
-        url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
-        payload_vid = {
-            "chat_id": chat_id,
-            "video": item["video"],
-            "caption": item["texto"],
-            "parse_mode": "HTML",
-            "supports_streaming": True
-        }
-        status, _ = http_post_json(url_vid, payload_vid, timeout=30)
-        if status == 200:
-            return True
-
-        # Se o servidor do jornal bloquear download direto pelo Telegram, baixa o .mp4 e faz upload nativo
-        try:
-            video_bytes = http_get(item["video"], timeout=25)
-            if video_bytes and len(video_bytes) <= 48 * 1024 * 1024:
-                if enviar_video_multipart(token, chat_id, video_bytes, item["texto"]):
-                    return True
-        except Exception as e:
-            logging.warning(f"Aviso ao baixar vídeo para upload direto: {e}")
-
-    # 2. Áudio
+    """Envia com áudio, vídeo ou foto de capa em alta definição."""
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
         payload_aud = {"chat_id": chat_id, "audio": item["audio"], "caption": item["texto"], "parse_mode": "HTML"}
@@ -677,7 +572,13 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
-    # 3. Foto de capa em alta definição (quando a notícia não tem vídeo)
+    if item.get("video"):
+        url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
+        payload_vid = {"chat_id": chat_id, "video": item["video"], "caption": item["texto"], "parse_mode": "HTML"}
+        status, _ = http_post_json(url_vid, payload_vid, timeout=30)
+        if status == 200:
+            return True
+
     if item.get("imagem"):
         url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
         payload_photo = {"chat_id": chat_id, "photo": item["imagem"], "caption": item["texto"], "parse_mode": "HTML"}
@@ -707,7 +608,7 @@ if __name__ == "__main__":
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem: {noticia['titulo']}")
             time.sleep(3)
         else:
             logging.error("Falha ao enviar post com mídia para o Telegram.")
