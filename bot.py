@@ -19,7 +19,8 @@ TOKEN_FIXO = "9025960857:AAHRpjo7tDiU2C8O-2zdoM6aKk9eLQks7js"
 CHAT_ID_FIXO = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
-MAX_HISTORICO = 400
+MAX_HISTORICO = 500
+MAX_NOTICIAS_POR_VEZ = 2  # Envia exatamente 2 notícias separadas a cada 5 minutos
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -164,7 +165,10 @@ def extrair_midias(item, desc_bruta):
 
 
 def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
-    """Limpa ruídos, remove créditos e seleciona frases completas com início, meio e fim."""
+    """
+    Limpa ruídos, remove créditos e seleciona frases completas com início, meio e fim.
+    Resumo ligeiramente mais completo (~650 chars), organizado em parágrafos limpos.
+    """
     if not desc_bruta:
         return ""
 
@@ -194,6 +198,7 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
     t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
 
     # 7. SELEÇÃO DE FRASES COMPLETAS (Início, Meio e Fim)
+    # Limite estendido para ~650 caracteres: resumo completo, claro e bem desenvolvido
     frases = re.split(r'(?<=[.!?])\s+', t)
     frases_selecionadas = []
     tamanho_acumulado = 0
@@ -202,7 +207,7 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
         f = f.strip()
         if not f:
             continue
-        if tamanho_acumulado + len(f) <= 450:
+        if tamanho_acumulado + len(f) <= 650:
             frases_selecionadas.append(f)
             tamanho_acumulado += len(f)
         else:
@@ -211,7 +216,14 @@ def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
     if not frases_selecionadas and frases:
         frases_selecionadas.append(frases[0])
 
-    resultado = " ".join(frases_selecionadas).strip()
+    # Se houver 3 ou mais frases, organiza em 2 parágrafos para leitura fluida
+    if len(frases_selecionadas) >= 3:
+        p1 = " ".join(frases_selecionadas[:2])
+        p2 = " ".join(frases_selecionadas[2:])
+        resultado = f"{p1}\n\n{p2}".strip()
+    else:
+        resultado = " ".join(frases_selecionadas).strip()
+
     if resultado and resultado[-1] not in ".!?":
         resultado += "."
 
@@ -254,8 +266,11 @@ def formatar_post_mercado(titulo, desc_bruta):
     return post
 
 
-def carregar_proxima_noticia():
+def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
+    """Carrega até 2 notícias inéditas e reais de mercado."""
     historico = carregar_historico()
+    noticias = []
+    titulos_vistos = set()
 
     for url_feed in FEEDS_MERCADO:
         try:
@@ -280,20 +295,28 @@ def carregar_proxima_noticia():
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
+                assinatura = "".join(c for c in title.lower() if c.isalnum())[:35]
+                if assinatura in titulos_vistos:
+                    continue
+                titulos_vistos.add(assinatura)
+
                 foto, video, audio = extrair_midias(item, desc_bruta)
                 texto = formatar_post_mercado(title, desc_bruta)
 
-                return {
+                noticias.append({
                     "link": link,
                     "texto": texto,
                     "imagem": foto,
                     "video": video,
                     "audio": audio
-                }, historico
+                })
+
+                if len(noticias) >= limite:
+                    return noticias, historico
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    return None, historico
+    return noticias, historico
 
 
 def enviar_post(token, chat_id, item):
@@ -336,16 +359,18 @@ if __name__ == "__main__":
     env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
     chat_id = env_chat if env_chat else CHAT_ID_FIXO
 
-    noticia, historico = carregar_proxima_noticia()
-    if not noticia:
+    noticias, historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
+    if not noticias:
         logging.info("Nenhuma novidade do mercado no momento.")
         sys.exit(0)
 
-    sucesso = enviar_post(token, chat_id, noticia)
-    if sucesso:
-        historico.append(noticia["link"])
-        salvar_historico(historico)
-        logging.info(f"Notícia enviada com sucesso: {noticia['link']}")
-    else:
-        logging.error("Falha ao enviar notícia para o Telegram.")
-        sys.exit(1)
+    logging.info(f"Encontradas {len(noticias)} notícias para envio.")
+    for noticia in noticias:
+        sucesso = enviar_post(token, chat_id, noticia)
+        if sucesso:
+            historico.append(noticia["link"])
+            salvar_historico(historico)
+            logging.info(f"Notícia enviada com sucesso: {noticia['link']}")
+            time.sleep(3)  # Pausa elegante de 3 segundos entre os 2 posts
+        else:
+            logging.error("Falha ao enviar notícia para o Telegram.")
