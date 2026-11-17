@@ -20,13 +20,12 @@ CHAT_ID_FIXO = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 400
-MAX_NOTICIAS_POR_VEZ = 1  # 1 notícia por vez a cada 5 minutos
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds 100% voltados para Mercado Financeiro, Ações, Macro e Cripto
+# Feeds 100% focados em Mercado Financeiro, Ações, Macro e Cripto
 FEEDS_MERCADO = [
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
@@ -39,7 +38,7 @@ FEEDS_MERCADO = [
     "https://br.cointelegraph.com/rss"
 ]
 
-# Bloqueio de FIIs, fofocas e matérias de consumo/varejo não financeiro
+# Bloqueio estrito de FIIs e ruídos não financeiros
 BLOQUEADOS = [
     "fundo imobiliário", "fundos imobiliários", "fii ", "fiis", "fiagro", "ifix",
     "por cota", "cotistas", "rendimento por cota", "horóscopo", "signo", "loteria",
@@ -93,16 +92,8 @@ def salvar_historico(historico):
         logging.error(f"Erro ao salvar histórico: {e}")
 
 
-def limpar_html(txt):
-    if not txt:
-        return ""
-    txt = re.sub(r'<[^>]+>', '', txt)
-    txt = html.unescape(txt)
-    return " ".join(txt.split()).strip()
-
-
 def extrair_midias(item, desc_bruta):
-    """Detecta imagem, vídeo ou áudio (podcast/resumo) anexados à notícia."""
+    """Detecta imagem, vídeo ou áudio (podcast/resumo falado) no XML da notícia."""
     foto_url = None
     video_url = None
     audio_url = None
@@ -119,7 +110,7 @@ def extrair_midias(item, desc_bruta):
         elif "image" in tipo or url.endswith((".jpg", ".jpeg", ".png", ".webp")):
             foto_url = url
 
-    # 2. Tags do padrão Media RSS
+    # 2. Tags Media RSS
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
         m = item.find(tag)
         if m is not None and "url" in m.attrib:
@@ -141,23 +132,80 @@ def extrair_midias(item, desc_bruta):
     return foto_url, video_url, audio_url
 
 
-def formatar_post_mercado(titulo, descricao):
-    """Formata a notícia no padrão executivo de Breaking News de Mercado."""
+def limpar_e_resumir_com_inicio_meio_fim(desc_bruta, titulo):
+    """
+    Limpa ruídos e cria um resumo COMPLETO com início, meio e fim.
+    NUNCA corta frases pela metade nem deixa reticências soltas.
+    """
+    if not desc_bruta:
+        return ""
+
+    # 1. Remove tags de imagem, figure e scripts inteiras com atributos
+    t = re.sub(r'<figure[^>]*>.*?</figure>', '', desc_bruta, flags=re.DOTALL | re.IGNORECASE)
+    t = re.sub(r'<img[^>]*>', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'<script[^>]*>.*?</script>', '', t, flags=re.DOTALL | re.IGNORECASE)
+
+    # 2. Limpa tags HTML residuais
+    t = re.sub(r'<[^>]+>', '', t)
+    t = html.unescape(t)
+    t = re.sub(r'\s+', ' ', t).strip()
+
+    # 3. Remove legendas residuais de imagem no início (ex: "Notas de Dólar x Real BCC", "Foto: Reuters")
+    t = re.sub(r'^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)', '', t, flags=re.IGNORECASE)
+
+    # 4. Remove repetição do título no início do parágrafo
+    if titulo and t.lower().startswith(titulo[:25].lower()):
+        t = t[len(titulo):].strip()
+        t = re.sub(r'^[:\-–—\s]+', '', t)
+
+    # 5. Remove caudas caça-cliques (ex: "; veja mais", "; saiba mais")
+    t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
+
+    # 6. SELEÇÃO DE FRASES COMPLETAS (Início, Meio e Fim)
+    frases = re.split(r'(?<=[.!?])\s+', t)
+    frases_selecionadas = []
+    tamanho_acumulado = 0
+
+    for f in frases:
+        f = f.strip()
+        if not f:
+            continue
+        # Mantém até 2 a 3 frases completas que caibam perfeitamente na legenda
+        if tamanho_acumulado + len(f) <= 450:
+            frases_selecionadas.append(f)
+            tamanho_acumulado += len(f)
+        else:
+            break
+
+    # Se a 1ª frase já for longa, garante pelo menos ela 100% completa
+    if not frases_selecionadas and frases:
+        frases_selecionadas.append(frases[0])
+
+    resultado = " ".join(frases_selecionadas).strip()
+    if resultado and resultado[-1] not in ".!?":
+        resultado += "."
+
+    return resultado
+
+
+def formatar_post_mercado(titulo, desc_bruta):
+    """Monta a postagem executiva para o canal de investimentos."""
     t = titulo.strip()
     if " - " in t:
         t, _ = t.rsplit(" - ", 1)
 
     t_lower = t.lower()
 
-    # Ícone e categoria contextual do mercado
+    # Categoria e Ícone de Mercado
     if any(p in t_lower for p in ("dividendo", "provento", "jcp", "juros sobre capital", "data com")):
         icone = "💰 <b>DIVIDENDOS</b>"
     elif any(p in t_lower for p in ("lucro", "balanço", "prejuízo", "receita", "ebitda", "trimestre")):
-        icone = "📊 <b>RESULTADOS</b>"
-    elif any(p in t_lower for p in ("dólar", "selic", "copom", "ipca", "inflação", "fed", "fiscal", "pib")):
+        icone = "📊 <b>RESULTADOS CORPORATIVOS</b>"
+    elif any(p in t_lower for p in ("dólar", "selic", "copom", "ipca", "inflação", "fed", "fiscal", "pib", "câmbio")):
         icone = "💵 <b>MACRO & CÂMBIO</b>"
-    elif any(p in t_lower for p in ("petrobras", "petr4", "vale", "vale3", "banco do brasil", "bbas3", "itaú", "itub4")):
-        icone = "🏛️ <b>EMPRESAS & B3</b>"
+    elif any(p in t_lower for p in ("petrobras", "petr4", "vale", "vale3", "banco do brasil", "bbas3", "itaú", "itub4", "b3")):
+        icone = "🏛️ <b>AÇÕES & B3</b>"
     elif any(p in t_lower for p in ("bitcoin", "btc", "ethereum", "cripto", "solana")):
         icone = "🪙 <b>CRIPTOATIVOS</b>"
     elif any(p in t_lower for p in ("eua", "wall street", "s&p", "nasdaq", "china", "petróleo", "brent")):
@@ -168,19 +216,11 @@ def formatar_post_mercado(titulo, descricao):
     if t and t[-1] not in ".!?":
         t += "."
 
-    d = limpar_html(descricao)
-    if d:
-        if d.lower().startswith(t[:20].lower()):
-            d = d[len(t):].strip()
-        d = re.sub(r'\s*[;:]\s*(veja|leia mais|saiba mais|confira|entenda).*$', '', d, flags=re.IGNORECASE).strip()
-        if d and d[-1] not in ".!?":
-            d += "."
+    resumo_completo = limpar_e_resumir_com_inicio_meio_fim(desc_bruta, t)
 
     post = f"{icone}\n\n<b>{html.escape(t)}</b>"
-    if d and len(d) > 25 and d.lower() != t.lower():
-        if len(d) > 550:
-            d = d[:547] + "..."
-        post += f"\n\n{html.escape(d)}"
+    if resumo_completo and len(resumo_completo) > 25 and resumo_completo.lower() != t.lower():
+        post += f"\n\n{html.escape(resumo_completo)}"
 
     return post
 
@@ -210,7 +250,6 @@ def carregar_proxima_noticia():
                 foto, video, audio = extrair_midias(item, desc_bruta)
                 texto = formatar_post_mercado(title, desc_bruta)
 
-                # Retorna a primeira matéria inédita encontrada
                 return {
                     "link": link,
                     "texto": texto,
@@ -225,39 +264,35 @@ def carregar_proxima_noticia():
 
 
 def enviar_post(token, chat_id, item):
-    """Envia áudio, vídeo, foto ou texto nativo para o Telegram."""
-    # 1. Se tiver resumo em Áudio (Podcast / Resumo falado)
+    """Envia com áudio, vídeo, foto ou texto nativo."""
+    # 1. Áudio (Podcast / Resumo em voz)
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
         payload_aud = {"chat_id": chat_id, "audio": item["audio"], "caption": item["texto"], "parse_mode": "HTML"}
-        status, resp = http_post_json(url_aud, payload_aud, timeout=25)
-        logging.info(f"Envio de áudio para {chat_id} -> HTTP {status}")
+        status, _ = http_post_json(url_aud, payload_aud, timeout=25)
         if status == 200:
             return True
 
-    # 2. Se tiver Vídeo
+    # 2. Vídeo
     if item.get("video"):
         url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
         payload_vid = {"chat_id": chat_id, "video": item["video"], "caption": item["texto"], "parse_mode": "HTML"}
-        status, resp = http_post_json(url_vid, payload_vid, timeout=30)
-        logging.info(f"Envio de vídeo para {chat_id} -> HTTP {status}")
+        status, _ = http_post_json(url_vid, payload_vid, timeout=30)
         if status == 200:
             return True
 
-    # 3. Se tiver Imagem (Foto de capa em alta definição)
+    # 3. Foto de capa em alta definição
     if item.get("imagem"):
         url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
         payload_photo = {"chat_id": chat_id, "photo": item["imagem"], "caption": item["texto"], "parse_mode": "HTML"}
-        status, resp = http_post_json(url_photo, payload_photo, timeout=20)
-        logging.info(f"Envio de foto para {chat_id} -> HTTP {status}")
+        status, _ = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
             return True
 
-    # 4. Fallback Texto
+    # 4. Fallback em texto
     url_msg = f"https://api.telegram.org/bot{token}/sendMessage"
     payload_msg = {"chat_id": chat_id, "text": item["texto"], "parse_mode": "HTML", "disable_web_page_preview": False}
-    status, resp = http_post_json(url_msg, payload_msg, timeout=20)
-    logging.info(f"Envio de texto para {chat_id} -> HTTP {status}")
+    status, _ = http_post_json(url_msg, payload_msg, timeout=20)
     return status == 200
 
 
