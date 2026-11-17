@@ -9,39 +9,57 @@ import re
 import shutil
 import sys
 import tempfile
+import urllib.error
+import urllib.parse
+import urllib.request
 import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
-import requests
-import trafilatura
-import yt_dlp
-from google import genai
-from google.genai import types
+# Importações opcionais resilientes (não quebram o script caso ausentes localmente)
+try:
+    import trafilatura
+except ImportError:
+    trafilatura = None
+
+try:
+    import yt_dlp
+except ImportError:
+    yt_dlp = None
+
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    genai = None
+    types = None
 
 # ==============================================================================
-# CONFIGURAÇÃO DE LOGGING ESTRUTURADO
+# CONFIGURAÇÃO DE LOGGING DETALHADO
 # ==============================================================================
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(funcName)s | %(message)s",
+    format="%(asctime)s | %(levelname)-8s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("RadarMercadoBot")
 
 # ==============================================================================
-# CONFIGURAÇÕES E CONSTANTES DE PRODUÇÃO (SERVERLESS / GITHUB ACTIONS)
+# PARÂMETROS DE OPERAÇÃO (CICLOS DE 5 MINUTOS)
 # ==============================================================================
 HISTORICO_ARQUIVO = os.getenv("HISTORICO_ARQUIVO", "historico_enviados.json")
 MAX_HISTORICO = 1000
-MAX_NOTICIAS_POR_VEZ = int(os.getenv("MAX_NOTICIAS_POR_VEZ", "4"))
-# 90 minutos absorve o atraso (jitter) do cron gratuito do GitHub Actions
-MAX_IDADE_MINUTOS = int(os.getenv("MAX_IDADE_MINUTOS", "90"))
+MAX_NOTICIAS_POR_VEZ = int(os.getenv("MAX_NOTICIAS_POR_VEZ", "5"))
+# 180 min garante que atrasos de cache no RSS dos portais não descartem notícias novas
+MAX_IDADE_MINUTOS = int(os.getenv("MAX_IDADE_MINUTOS", "180"))
+CICLOS_INTERNOS = int(os.getenv("CICLOS_INTERNOS", "1"))
+INTERVALO_SEGUNDOS = int(os.getenv("INTERVALO_SEGUNDOS", "300"))
+
 LIMITE_LEGENDA_TELEGRAM = 1024
 LIMITE_TEXTO_TELEGRAM = 4096
-MAX_VIDEO_BYTES = 45 * 1024 * 1024  # 45 MB (abaixo do limite de 50 MB da Bot API)
-MAX_CONCORRENCIA_HTTP = 6
+MAX_VIDEO_BYTES = 45 * 1024 * 1024
+MAX_CONCORRENCIA_HTTP = 8
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -69,7 +87,6 @@ HEADERS = {
 }
 
 FEEDS = [
-    # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.moneytimes.com.br/feed/",
@@ -77,18 +94,14 @@ FEEDS = [
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://g1.globo.com/rss/g1/economia/",
-    # 2. Negócios, M&A e Empresas
     "https://braziljournal.com/feed",
     "https://exame.com/feed/",
-    # 3. Política & Decisões de Brasília
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
     "https://www.cnnbrasil.com.br/politica/feed/",
-    # 4. Geopolítica & Mercado Internacional
     "https://g1.globo.com/rss/g1/mundo/",
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
-    # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://br.cointelegraph.com/rss",
 ]
@@ -119,34 +132,104 @@ STOPWORDS_DEDUP = {
 
 
 # ==============================================================================
-# VALIDAÇÃO DE CREDENCIAIS E CLIENTE GEMINI
+# CREDENCIAIS E REDE NATIVA (SEM DEPENDÊNCIA FORÇADA)
 # ==============================================================================
-def obter_credenciais() -> Tuple[str, str, Optional[genai.Client]]:
-    """Valida secrets obrigatórios do ambiente e inicializa o cliente Gemini."""
+def obter_credenciais() -> Tuple[str, str, Any]:
     token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
     chat_id = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
     gemini_key = (os.getenv("GEMINI_API_KEY") or "").strip()
 
     if not token or not chat_id:
         logger.critical(
-            "Credenciais ausentes: defina TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID nos Secrets."
+            "ERRO FATAL: TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não configurados! "
+            "Cadastre-os em Settings -> Secrets and variables -> Actions no GitHub."
         )
         sys.exit(1)
 
     cliente_gemini = None
-    if gemini_key:
+    if gemini_key and genai is not None:
         try:
             cliente_gemini = genai.Client(api_key=gemini_key)
         except Exception as e:
-            logger.error(f"Erro ao inicializar cliente Gemini: {e}")
-    else:
-        logger.warning("GEMINI_API_KEY ausente. O bot usará o resumo de contingência local.")
+            logger.warning(f"Falha ao iniciar cliente Gemini ({e}). Usando resumo rápido local.")
 
     return token, chat_id, cliente_gemini
 
 
+def normalizar_url_midia(url: Optional[str]) -> Optional[str]:
+    if not url or not isinstance(url, str):
+        return None
+    url = html.unescape(url.strip())
+    if not url.startswith(("http://", "https://")):
+        return None
+    partes = urllib.parse.urlsplit(url)
+    caminho = urllib.parse.quote(urllib.parse.unquote(partes.path), safe="/:@&+$,;=-_.~")
+    return urllib.parse.urlunsplit((partes.scheme, partes.netloc, caminho, partes.query, partes.fragment))
+
+
+def _sync_http_get(url: str, timeout: int = 10) -> bytes:
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read(10 * 1024 * 1024)
+
+
+def _sync_http_post_json(url: str, payload: Dict[str, Any], timeout: int = 25) -> Tuple[int, str]:
+    dados = json.dumps(payload).encode("utf-8")
+    headers = {**HEADERS, "Content-Type": "application/json; charset=utf-8"}
+    req = urllib.request.Request(url, data=dados, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.status, resp.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        corpo = e.read().decode("utf-8", errors="replace") if e.fp else str(e)
+        return e.code, corpo
+    except Exception as e:
+        return 0, str(e)
+
+
+def _sync_http_post_multipart(
+    url: str,
+    fields: Dict[str, str],
+    file_field: str,
+    file_bytes: bytes,
+    filename: str = "media.jpg",
+    content_type: str = "image/jpeg",
+    timeout: int = 60,
+) -> Tuple[int, str]:
+    boundary = f"----BotBoundary{uuid.uuid4().hex}"
+    body = bytearray()
+
+    for name, value in fields.items():
+        body.extend(f"--{boundary}\r\n".encode("utf-8"))
+        body.extend(f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode("utf-8"))
+        body.extend(f"{value}\r\n".encode("utf-8"))
+
+    body.extend(f"--{boundary}\r\n".encode("utf-8"))
+    body.extend(
+        f'Content-Disposition: form-data; name="{file_field}"; filename="{filename}"\r\n'.encode("utf-8")
+    )
+    body.extend(f"Content-Type: {content_type}\r\n\r\n".encode("utf-8"))
+    body.extend(file_bytes)
+    body.extend(f"\r\n--{boundary}--\r\n".encode("utf-8"))
+
+    headers = {
+        **HEADERS,
+        "Content-Type": f"multipart/form-data; boundary={boundary}",
+        "Content-Length": str(len(body)),
+    }
+    req = urllib.request.Request(url, data=bytes(body), headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.status, resp.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        corpo = e.read().decode("utf-8", errors="replace") if e.fp else str(e)
+        return e.code, corpo
+    except Exception as e:
+        return 0, str(e)
+
+
 # ==============================================================================
-# PERSISTÊNCIA ATÔMICA DE HISTÓRICO
+# HISTÓRICO E FILTROS
 # ==============================================================================
 def carregar_historico() -> Tuple[List[str], List[str]]:
     if os.path.exists(HISTORICO_ARQUIVO):
@@ -158,12 +241,11 @@ def carregar_historico() -> Tuple[List[str], List[str]]:
                 if isinstance(dados, list):
                     return dados, []
         except Exception as e:
-            logger.error(f"Erro ao ler histórico '{HISTORICO_ARQUIVO}': {e}")
+            logger.error(f"Erro ao ler histórico: {e}")
     return [], []
 
 
 def salvar_historico(links: List[str], titulos: List[str]) -> None:
-    """Gravação atômica para garantir integridade antes do git commit no runner."""
     dados = {
         "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
         "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:],
@@ -176,12 +258,9 @@ def salvar_historico(links: List[str], titulos: List[str]) -> None:
             caminho_tmp = tmp.name
         os.replace(caminho_tmp, HISTORICO_ARQUIVO)
     except Exception as e:
-        logger.error(f"Erro ao salvar histórico atomicamente: {e}")
+        logger.error(f"Erro ao salvar histórico: {e}")
 
 
-# ==============================================================================
-# FILTROS, CATEGORIZAÇÃO E DEDUPLICAÇÃO
-# ==============================================================================
 def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
     return {
         "inline_keyboard": [
@@ -192,8 +271,7 @@ def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
 
 def contem_termo(texto: str, lista_termos: Tuple[str, ...]) -> bool:
     for termo in lista_termos:
-        padrao = r"(?<!\w)" + re.escape(termo) + r"(?!\w)"
-        if re.search(padrao, texto, flags=re.IGNORECASE):
+        if re.search(r"(?<!\w)" + re.escape(termo) + r"(?!\w)", texto, flags=re.IGNORECASE):
             return True
     return False
 
@@ -220,8 +298,7 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
         if not tokens_antigo:
             continue
         inter = tokens_novo & tokens_antigo
-        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
-        if len(inter) >= 2 and ratio >= 0.35:
+        if len(inter) >= 2 and (len(inter) / min(len(tokens_novo), len(tokens_antigo))) >= 0.38:
             return True
     return False
 
@@ -253,6 +330,22 @@ def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
             except Exception:
                 pass
     return None
+
+
+def limpar_html_basico(txt: str) -> str:
+    if not txt:
+        return ""
+    txt = re.sub(
+        r"<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>",
+        " ",
+        txt,
+        flags=re.DOTALL | re.IGNORECASE,
+    )
+    txt = re.sub(r"<[^>]+>", " ", txt)
+    txt = html.unescape(txt)
+    txt = re.sub(r"The post .*? appeared first on .*$", "", txt, flags=re.IGNORECASE)
+    txt = re.sub(r"O post .*? apareceu primeiro em .*$", "", txt, flags=re.IGNORECASE)
+    return " ".join(txt.split()).strip()
 
 
 def categorizar_materia(titulo: str, texto: str) -> str:
@@ -308,107 +401,158 @@ def categorizar_materia(titulo: str, texto: str) -> str:
 
 
 # ==============================================================================
-# 1. SCRAPING COM TRAFILATURA E SÍNTESE COM GEMINI FLASH
+# EXTRAÇÃO HÍBRIDA (TRAFILATURA + FALLBACK RSS) E SÍNTESE
 # ==============================================================================
-def _sync_extrair_artigo_trafilatura(url: str, desc_fallback: str) -> Tuple[str, str]:
+def extrair_og_image(raw_html: str) -> Optional[str]:
+    for padrao in (
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+    ):
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m:
+            url = normalizar_url_midia(m.group(1))
+            if url:
+                return url
+    return None
+
+
+def extrair_midias_rss(item: ET.Element, desc_bruta: str) -> Tuple[Optional[str], Optional[str]]:
+    foto_url = None
+    video_url = None
+
+    for tag in ("enclosure", "{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
+        el = item.find(tag)
+        if el is not None and "url" in el.attrib:
+            u = normalizar_url_midia(el.attrib["url"])
+            tipo = el.attrib.get("type", "").lower()
+            if u:
+                if "video" in tipo or u.lower().endswith((".mp4", ".mov", ".m3u8")):
+                    video_url = video_url or u
+                elif not foto_url and ("image" in tipo or u.startswith("http")):
+                    foto_url = u
+
+    if not foto_url and desc_bruta:
+        busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca:
+            foto_url = normalizar_url_midia(busca.group(1))
+
+    return foto_url, video_url
+
+
+def _sync_extrair_artigo_completo(
+    url: str, desc_bruta: str, titulo: str
+) -> Tuple[str, Optional[str], str]:
     """
-    Baixa a página completa e extrai o texto jornalístico limpo usando Trafilatura.
-    Retorna (texto_limpo, html_bruto).
+    Tenta extrair o artigo via Trafilatura ou parser de parágrafos.
+    Se o portal bloquear o IP do GitHub (HTTP 403), usa a descrição do RSS sem descartar a notícia.
     """
     html_bruto = ""
     texto_extraido = ""
+    foto_og = None
+
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=12)
-        resp.raise_for_status()
-        html_bruto = resp.text
-        texto_extraido = trafilatura.extract(
-            html_bruto,
-            include_comments=False,
-            include_tables=True,
-            no_fallback=False,
-            favor_precision=True,
-        ) or ""
+        html_bytes = _sync_http_get(url, timeout=8)
+        html_bruto = html_bytes.decode("utf-8", errors="replace")
+        foto_og = extrair_og_image(html_bruto)
+
+        if trafilatura is not None:
+            texto_extraido = trafilatura.extract(
+                html_bruto,
+                include_comments=False,
+                include_tables=True,
+                favor_precision=True,
+            ) or ""
+
+        if not texto_extraido or len(texto_extraido) < 120:
+            html_limpo = re.sub(
+                r"<(head|script|style|svg|nav|footer|header|aside|form|noscript)\b[^>]*>.*?</\1>",
+                " ",
+                html_bruto,
+                flags=re.DOTALL | re.IGNORECASE,
+            )
+            paragrafos = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", html_limpo, flags=re.DOTALL | re.IGNORECASE)
+            blocos = []
+            for p in paragrafos:
+                t = limpar_html_basico(p)
+                if len(t) >= 45 and "cookie" not in t.lower() and "assinante" not in t.lower():
+                    blocos.append(t)
+                if sum(len(b) for b in blocos) >= 1200:
+                    break
+            texto_extraido = " ".join(blocos)
     except Exception as e:
-        logger.debug(f"Falha ao baixar/extrair com Trafilatura ({url}): {e}")
+        logger.debug(f"Portal bloqueou raspagem direta ({url}): {e}")
 
-    if not texto_extraido or len(texto_extraido.strip()) < 150:
-        # Fallback para descrição do RSS limpa
-        texto_extraido = trafilatura.extract(desc_fallback) or re.sub(r"<[^>]+>", " ", desc_fallback)
-        texto_extraido = html.unescape(" ".join(texto_extraido.split()))
+    if not texto_extraido or len(texto_extraido.strip()) < 60:
+        texto_extraido = limpar_html_basico(desc_bruta)
 
-    return texto_extraido.strip(), html_bruto
+    if not texto_extraido or len(texto_extraido.strip()) < 30:
+        texto_extraido = titulo
+
+    return texto_extraido.strip(), foto_og, html_bruto
 
 
-def resumo_contingencia_local(texto_bruto: str, titulo: str) -> str:
-    """Fallback determinístico caso a API gratuita do Gemini atinja limite de taxa."""
-    if not texto_bruto:
-        return ""
-    frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", texto_bruto) if len(f.strip()) > 35]
+def formatar_resumo_local(texto_bruto: str, titulo: str) -> str:
+    t = limpar_html_basico(texto_bruto)
+    if not t or len(t) < 40:
+        return f"{titulo}."
+
+    frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t) if len(f.strip()) > 25]
     selecionadas = []
     acumulado = 0
     for f in frases:
         if titulo and f.lower().startswith(titulo[:25].lower()):
             continue
-        if acumulado + len(f) <= 600:
+        if acumulado + len(f) <= 580:
             selecionadas.append(f)
             acumulado += len(f)
         else:
             break
+
     if not selecionadas:
-        return texto_bruto[:550].rsplit(" ", 1)[0] + "."
+        res = t[:550].rsplit(" ", 1)[0].rstrip(",;:-") + "."
+        return res
+
     if len(selecionadas) >= 3:
         return f"{selecionadas[0]}\n\n{' '.join(selecionadas[1:-1])}\n\n{selecionadas[-1]}"
     return "\n\n".join(selecionadas)
 
 
-def _sync_gerar_sintese_gemini(
-    cliente_gemini: Optional[genai.Client], titulo: str, texto_artigo: str
-) -> str:
-    """
-    Chama o Gemini Flash (Free Tier) para redigir o resumo em 3 blocos:
-    Começo (Fato), Meio (Contexto/Números) e Fim (Impacto no Mercado).
-    """
-    if not cliente_gemini:
-        return resumo_contingencia_local(texto_artigo, titulo)
+def _sync_gerar_sintese(cliente_gemini: Any, titulo: str, texto_artigo: str) -> str:
+    if not cliente_gemini or types is None or len(texto_artigo) < 120:
+        return formatar_resumo_local(texto_artigo, titulo)
 
     prompt = (
-        "Você é um editor-chefe de mercado financeiro. Redija uma síntese jornalística "
-        "densa, direta e analítica em português do Brasil com base na notícia abaixo.\n\n"
-        "REGRAS OBRIGATÓRIAS:\n"
-        "1. Estruture o texto exatamente em 3 parágrafos curtos separados por uma linha em branco:\n"
-        "   - Parágrafo 1 (Começo - O Fato): O acontecimento central de forma direta e objetiva.\n"
-        "   - Parágrafo 2 (Meio - Contexto e Números): Valores, percentuais, indicadores e contexto factual.\n"
-        "   - Parágrafo 3 (Fim - Impacto no Mercado): A leitura de impacto prático para investidores, ativos, juros ou câmbio.\n"
-        "2. NÃO escreva rótulos como 'Começo:', 'Fato:', 'Meio:' ou 'Impacto:'. Escreva apenas o texto corrido dos 3 parágrafos.\n"
-        "3. NÃO repita o título da notícia.\n"
-        "4. NÃO use formatação Markdown (proibido usar asteriscos ** ou #).\n"
-        "5. O texto total (somando os 3 parágrafos) DEVE ter entre 420 e 620 caracteres.\n\n"
+        "Você é um editor de mercado financeiro. Redija uma síntese jornalística "
+        "em português do Brasil com base na notícia abaixo.\n"
+        "REGRAS:\n"
+        "1. Escreva exatamente 3 parágrafos curtos separados por linha em branco:\n"
+        "   - Parágrafo 1: O fato principal de forma direta.\n"
+        "   - Parágrafo 2: Contexto e números divulgados.\n"
+        "   - Parágrafo 3: Impacto prático para o mercado e investidores.\n"
+        "2. NÃO escreva rótulos como 'Fato:', 'Meio:' ou 'Impacto:'.\n"
+        "3. NÃO repita o título e NÃO use asteriscos (**).\n"
+        "4. O texto total deve ter entre 400 e 600 caracteres.\n\n"
         f"TÍTULO: {titulo}\n"
-        f"CONTEÚDO DA MATÉRIA:\n{texto_artigo[:7000]}"
+        f"MATÉRIA:\n{texto_artigo[:6000]}"
     )
 
     try:
-        resposta = cliente_gemini.models.generate_content(
+        resp = cliente_gemini.models.generate_content(
             model=GEMINI_MODEL,
             contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.2,
-                max_output_tokens=450,
-            ),
+            config=types.GenerateContentConfig(temperature=0.2, max_output_tokens=400),
         )
-        texto_gerado = (resposta.text or "").strip()
-        # Remove eventuais marcações Markdown caso o modelo insira
-        texto_gerado = re.sub(r"[*_#`]+", "", texto_gerado).strip()
-        if len(texto_gerado) >= 150:
-            return texto_gerado
+        gerado = re.sub(r"[*_#`]+", "", (resp.text or "")).strip()
+        if len(gerado) >= 100:
+            return gerado
     except Exception as e:
-        logger.warning(f"Aviso na API Gemini (usando fallback local): {e}")
+        logger.warning(f"Fallback para resumo local (Gemini indisponível): {e}")
 
-    return resumo_contingencia_local(texto_artigo, titulo)
+    return formatar_resumo_local(texto_artigo, titulo)
 
 
 def montar_post_html(categoria: str, titulo: str, sintese: str, limite_chars: int) -> str:
-    """Formata o post em HTML escapado garantindo que nunca estoure o limite do Telegram."""
     t_limpo = html.unescape(titulo).strip()
     if " - " in t_limpo:
         t_limpo, _ = t_limpo.rsplit(" - ", 1)
@@ -420,6 +564,9 @@ def montar_post_html(categoria: str, titulo: str, sintese: str, limite_chars: in
     cabecalho = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>\n\n"
     corpo = html.escape(html.unescape(sintese.strip()))
 
+    if corpo.lower() == html.escape(t_limpo).lower():
+        return cabecalho.strip()
+
     orcamento = limite_chars - len(cabecalho) - 5
     if len(corpo) > orcamento:
         corpo = corpo[:orcamento].rsplit(" ", 1)[0].rstrip(",;:-") + "."
@@ -428,215 +575,123 @@ def montar_post_html(categoria: str, titulo: str, sintese: str, limite_chars: in
 
 
 # ==============================================================================
-# 2. EXTRAÇÃO E DOWNLOAD DE VÍDEO COM YT-DLP
+# DOWNLOAD DE VÍDEO (YT-DLP) E PUBLICAÇÃO MULTIMÍDIA
 # ==============================================================================
-def detectar_url_video_candidata(
-    item_rss: ET.Element, html_artigo: str, url_artigo: str
-) -> Optional[str]:
-    """
-    Identifica se a matéria possui vídeo no RSS ou players embutidos no HTML
-    (YouTube, Globoplay, Dailymotion, Vimeo, JWPlayer ou tag <video>).
-    """
-    # 1. Verifica tags de mídia no próprio XML do RSS
-    for tag in ("enclosure", "{http://search.yahoo.com/mrss/}content"):
-        el = item_rss.find(tag)
-        if el is not None and "url" in el.attrib:
-            u = el.attrib["url"].strip()
-            tipo = el.attrib.get("type", "").lower()
-            if "video" in tipo or u.lower().endswith((".mp4", ".mov", ".m3u8")):
-                return u
-
-    if not html_artigo:
-        return None
-
-    # 2. Procura iframes de vídeo (YouTube, Vimeo, Dailymotion, Players de notícia)
-    padroes_embed = (
-        r'<iframe[^>]+src=["\'](https?://(?:www\.)?(?:youtube\.com/embed/[^"\'?]+|youtu\.be/[^"\'?]+|player\.vimeo\.com/video/\d+|www\.dailymotion\.com/embed/video/[^"\'?]+))["\']',
-        r'<video[^>]+src=["\'](https?://[^"\']+\.(?:mp4|m3u8)[^"\']*)["\']',
-        r'<source[^>]+src=["\'](https?://[^"\']+\.(?:mp4|m3u8)[^"\']*)["\']',
-        r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\'](https?://[^"\']+)["\']',
-    )
-    for padrao in padroes_embed:
-        m = re.search(padrao, html_artigo, flags=re.IGNORECASE)
-        if m:
-            return html.unescape(m.group(1).strip())
-
-    # 3. Se a página for de portal com suporte nativo no yt-dlp e contiver indício de player
-    if any(marcador in html_artigo.lower() for marcador in ("video-player", "wp-video", "data-video-id", "vjs-tech")):
-        return url_artigo
-
-    return None
-
-
 def _sync_baixar_video_ytdlp(url_video: str, pasta_temp: str) -> Optional[str]:
-    """
-    Baixa o vídeo temporariamente no runner via yt-dlp garantindo formato MP4
-    e tamanho máximo de 45 MB compatível com o Telegram.
-    """
-    template_saida = os.path.join(pasta_temp, f"video_{uuid.uuid4().hex[:8]}.%(ext)s")
+    if yt_dlp is None:
+        return None
+    template_saida = os.path.join(pasta_temp, f"vid_{uuid.uuid4().hex[:8]}.%(ext)s")
     ydl_opts = {
         "format": "best[ext=mp4][filesize<45M]/best[ext=mp4]/best[filesize<45M]",
         "outtmpl": template_saida,
         "max_filesize": MAX_VIDEO_BYTES,
         "noplaylist": True,
-        "playlist_items": "1",
         "quiet": True,
         "no_warnings": True,
-        "socket_timeout": 15,
-        "retries": 2,
-        "merge_output_format": "mp4",
+        "socket_timeout": 12,
+        "retries": 1,
         "http_headers": HEADERS,
     }
-
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.extract_info(url_video, download=True)
-
-        for nome_arq in os.listdir(pasta_temp):
-            caminho_completo = os.path.join(pasta_temp, nome_arq)
-            if os.path.isfile(caminho_completo):
-                tamanho = os.path.getsize(caminho_completo)
-                if 10_000 < tamanho <= MAX_VIDEO_BYTES:
-                    return caminho_completo
-                logger.warning(f"Vídeo descartado por tamanho fora do limite ({tamanho} bytes).")
-    except Exception as e:
-        logger.info(f"yt-dlp não obteve vídeo válido de {url_video}: {e}")
-
+        for arq in os.listdir(pasta_temp):
+            caminho = os.path.join(pasta_temp, arq)
+            if os.path.isfile(caminho) and 10_000 < os.path.getsize(caminho) <= MAX_VIDEO_BYTES:
+                return caminho
+    except Exception:
+        pass
     return None
 
 
-# ==============================================================================
-# 3. ENVIO PARA O TELEGRAM (SEND_VIDEO COM FALLBACK PARA SEND_MESSAGE)
-# ==============================================================================
-def _sync_enviar_video_telegram(
-    token: str, chat_id: str, caminho_video: str, legenda_html: str, reply_markup: Dict[str, Any]
-) -> Tuple[int, str]:
-    """Faz upload multipart do arquivo MP4 local via endpoint sendVideo."""
-    url = f"https://api.telegram.org/bot{token}/sendVideo"
-    data = {
-        "chat_id": chat_id,
-        "caption": legenda_html,
-        "parse_mode": "HTML",
-        "supports_streaming": "true",
-        "reply_markup": json.dumps(reply_markup),
-    }
-    try:
-        with open(caminho_video, "rb") as arquivo_binario:
-            files = {"video": (os.path.basename(caminho_video), arquivo_binario, "video/mp4")}
-            resp = requests.post(url, data=data, files=files, timeout=90)
-            return resp.status_code, resp.text
-    except Exception as e:
-        return 0, str(e)
-
-
-def _sync_enviar_mensagem_telegram(
-    token: str, chat_id: str, texto_html: str, reply_markup: Dict[str, Any]
-) -> Tuple[int, str]:
-    """Envia post via sendMessage com preview nativo ativado."""
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": texto_html,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": False,
-        "reply_markup": reply_markup,
-    }
-    try:
-        resp = requests.post(url, json=payload, timeout=25)
-        return resp.status_code, resp.text
-    except Exception as e:
-        return 0, str(e)
-
-
-async def publicar_noticia_telegram(
-    token: str, chat_id: str, noticia: Dict[str, Any]
-) -> bool:
-    """
-    Orquestra o download temporário do vídeo, envio via sendVideo, limpeza
-    obrigatória do arquivo local e fallback automático para sendMessage.
-    """
+async def publicar_noticia_telegram(token: str, chat_id: str, noticia: Dict[str, Any]) -> bool:
     botao = gerar_botao_grupo_aleatorio()
-    url_video = noticia.get("video_candidato")
+    base_api = f"https://api.telegram.org/bot{token}"
     pasta_temp = tempfile.mkdtemp(prefix="radar_vid_")
 
     try:
-        if url_video:
-            logger.info(f"Tentando baixar vídeo com yt-dlp: {url_video}")
-            caminho_video = await asyncio.to_thread(_sync_baixar_video_ytdlp, url_video, pasta_temp)
-
-            if caminho_video and os.path.exists(caminho_video):
-                for tentativa in range(1, 3):
-                    status, resp = await asyncio.to_thread(
-                        _sync_enviar_video_telegram,
-                        token,
-                        chat_id,
-                        caminho_video,
-                        noticia["legenda_video"],
-                        botao,
-                    )
-                    if status == 200:
-                        logger.info("Vídeo enviado nativamente via sendVideo.")
-                        return True
-                    if status == 429:
-                        espera = 10
-                        try:
-                            espera = int(json.loads(resp).get("parameters", {}).get("retry_after", 10)) + 1
-                        except Exception:
-                            pass
-                        logger.warning(f"Flood control no sendVideo. Aguardando {espera}s...")
-                        await asyncio.sleep(espera)
-                    else:
-                        logger.warning(f"Falha no sendVideo (HTTP {status}): {resp}")
-                        break
+        # 1. Tenta enviar Vídeo Nativo se existir
+        if noticia.get("video"):
+            caminho_vid = await asyncio.to_thread(_sync_baixar_video_ytdlp, noticia["video"], pasta_temp)
+            if caminho_vid and os.path.exists(caminho_vid):
+                with open(caminho_vid, "rb") as f:
+                    vid_bytes = f.read()
+                fields = {
+                    "chat_id": chat_id,
+                    "caption": noticia["legenda_midia"],
+                    "parse_mode": "HTML",
+                    "supports_streaming": "true",
+                    "reply_markup": json.dumps(botao),
+                }
+                st, _ = await asyncio.to_thread(
+                    _sync_http_post_multipart,
+                    f"{base_api}/sendVideo",
+                    fields,
+                    "video",
+                    vid_bytes,
+                    "video.mp4",
+                    "video/mp4",
+                )
+                if st == 200:
+                    return True
     finally:
-        # Limpeza obrigatória do diretório e arquivos temporários de vídeo pós-envio
         shutil.rmtree(pasta_temp, ignore_errors=True)
 
-    # Fallback para sendMessage caso não exista vídeo na página ou o download falhe
-    for tentativa in range(1, 4):
-        status, resp = await asyncio.to_thread(
-            _sync_enviar_mensagem_telegram,
-            token,
-            chat_id,
-            noticia["texto_mensagem"],
-            botao,
-        )
-        if status == 200:
-            logger.info("Notícia publicada via sendMessage (fallback sem vídeo).")
+    # 2. Tenta enviar Foto de Capa (por URL ou upload binário)
+    if noticia.get("imagem"):
+        payload_foto = {
+            "chat_id": chat_id,
+            "photo": noticia["imagem"],
+            "caption": noticia["legenda_midia"],
+            "parse_mode": "HTML",
+            "reply_markup": botao,
+        }
+        st, _ = await asyncio.to_thread(_sync_http_post_json, f"{base_api}/sendPhoto", payload_foto)
+        if st == 200:
             return True
-        if status == 429:
-            espera = 8
-            try:
-                espera = int(json.loads(resp).get("parameters", {}).get("retry_after", 8)) + 1
-            except Exception:
-                pass
-            logger.warning(f"Flood control no sendMessage. Aguardando {espera}s...")
-            await asyncio.sleep(espera)
-        elif status in (0, 500, 502, 503, 504):
-            await asyncio.sleep(2 ** tentativa)
-        else:
-            logger.error(f"Erro definitivo no sendMessage (HTTP {status}): {resp}")
-            return False
 
+        try:
+            img_bytes = await asyncio.to_thread(_sync_http_get, noticia["imagem"], 10)
+            fields = {
+                "chat_id": chat_id,
+                "caption": noticia["legenda_midia"],
+                "parse_mode": "HTML",
+                "reply_markup": json.dumps(botao),
+            }
+            st_up, _ = await asyncio.to_thread(
+                _sync_http_post_multipart, f"{base_api}/sendPhoto", fields, "photo", img_bytes
+            )
+            if st_up == 200:
+                return True
+        except Exception:
+            pass
+
+    # 3. Fallback garantido para Mensagem de Texto com Preview
+    payload_txt = {
+        "chat_id": chat_id,
+        "text": noticia["texto_mensagem"],
+        "parse_mode": "HTML",
+        "disable_web_page_preview": False,
+        "reply_markup": botao,
+    }
+    st_txt, resp_txt = await asyncio.to_thread(_sync_http_post_json, f"{base_api}/sendMessage", payload_txt)
+    if st_txt == 200:
+        return True
+
+    logger.error(f"Erro da API do Telegram (HTTP {st_txt}): {resp_txt}")
     return False
 
 
 # ==============================================================================
-# VARREDURA CONCORRENTE DOS FEEDS E PIPELINE PRINCIPAL
+# VARREDURA DOS FEEDS E EXECUÇÃO DO CICLO
 # ==============================================================================
-def _sync_buscar_feed(url_feed: str) -> bytes:
-    resp = requests.get(url_feed, headers=HEADERS, timeout=10)
-    resp.raise_for_status()
-    return resp.content
-
-
 async def processar_feed(
     url_feed: str, links_historico: set, agora_utc: datetime, sem: asyncio.Semaphore
 ) -> List[Dict[str, Any]]:
-    itens_validos = []
+    itens = []
     try:
         async with sem:
-            conteudo = await asyncio.to_thread(_sync_buscar_feed, url_feed)
+            conteudo = await asyncio.to_thread(_sync_http_get, url_feed, 10)
         root = ET.fromstring(conteudo)
 
         for item in root.findall(".//item"):
@@ -653,134 +708,23 @@ async def processar_feed(
                 else (content_el.text if content_el is not None and content_el.text else "")
             )
 
-            if not link or not title or link in links_historico:
-                continue
-            if len(title) < 25:
+            if not link or not title or link in links_historico or len(title) < 20:
                 continue
 
             dt_pub = extrair_data_publicacao(item)
             if not dt_pub:
                 continue
 
-            idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
-            if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
+            idade_min = (agora_utc - dt_pub).total_seconds() / 60.0
+            if idade_min > MAX_IDADE_MINUTOS or idade_min < -15.0:
                 continue
 
             if eh_propaganda_ou_lixo(title, desc_bruta):
                 continue
 
-            itens_validos.append({
+            itens.append({
                 "dt_pub": dt_pub,
                 "item": item,
                 "link": link,
                 "title": title,
-                "desc_bruta": desc_bruta,
-            })
-    except Exception as e:
-        logger.warning(f"Aviso ao ler feed {url_feed}: {e}")
-
-    return itens_validos
-
-
-async def coletar_e_preparar_noticias(
-    cliente_gemini: Optional[genai.Client], limite: int = MAX_NOTICIAS_POR_VEZ
-) -> Tuple[List[Dict[str, Any]], List[str], List[str]]:
-    links_historico, titulos_historico = carregar_historico()
-    set_links = set(links_historico)
-    titulos_rodada = list(titulos_historico)
-    agora_utc = datetime.now(timezone.utc)
-    sem = asyncio.Semaphore(MAX_CONCORRENCIA_HTTP)
-
-    resultados_feeds = await asyncio.gather(
-        *(processar_feed(url, set_links, agora_utc, sem) for url in FEEDS)
-    )
-
-    candidatos = [item for sublista in resultados_feeds for item in sublista]
-    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
-
-    noticias_prontas = []
-    for cand in candidatos:
-        title = cand["title"]
-        link = cand["link"]
-        desc_bruta = cand["desc_bruta"]
-        item_rss = cand["item"]
-
-        if link in set_links or eh_mesma_noticia(title, titulos_rodada):
-            continue
-
-        # 1. Extração completa com Trafilatura
-        async with sem:
-            texto_artigo, html_bruto = await asyncio.to_thread(
-                _sync_extrair_artigo_trafilatura, link, desc_bruta
-            )
-
-        if not texto_artigo or len(texto_artigo) < 140:
-            continue
-
-        # 2. Síntese com Gemini Flash (Começo: Fato, Meio: Números, Fim: Impacto)
-        sintese = await asyncio.to_thread(
-            _sync_gerar_sintese_gemini, cliente_gemini, title, texto_artigo
-        )
-        if not sintese or len(sintese) < 120:
-            continue
-
-        categoria = categorizar_materia(title, f"{texto_artigo[:500]} {sintese}")
-        legenda_video = montar_post_html(categoria, title, sintese, LIMITE_LEGENDA_TELEGRAM)
-        # No fallback sendMessage, adicionamos link invisível no início para forçar o card de preview da página
-        link_preview = f'<a href="{html.escape(link)}">&#8205;</a>'
-        texto_mensagem = link_preview + montar_post_html(categoria, title, sintese, LIMITE_TEXTO_TELEGRAM - 150)
-
-        video_candidato = detectar_url_video_candidata(item_rss, html_bruto, link)
-
-        noticias_prontas.append({
-            "link": link,
-            "titulo": title,
-            "legenda_video": legenda_video,
-            "texto_mensagem": texto_mensagem,
-            "video_candidato": video_candidato,
-        })
-
-        titulos_rodada.append(title)
-        set_links.add(link)
-
-        # Pausa curta para respeitar o limite de 15 RPM do Gemini Free Tier
-        if cliente_gemini:
-            await asyncio.sleep(4)
-
-        if len(noticias_prontas) >= limite:
-            break
-
-    noticias_prontas.reverse()
-    return noticias_prontas, links_historico, titulos_historico
-
-
-async def main() -> None:
-    token, chat_id, cliente_gemini = obter_credenciais()
-
-    noticias, links_historico, titulos_historico = await coletar_e_preparar_noticias(
-        cliente_gemini=cliente_gemini, limite=MAX_NOTICIAS_POR_VEZ
-    )
-
-    if not noticias:
-        logger.info("Nenhuma notícia inédita encontrada neste ciclo.")
-        return
-
-    logger.info(f"Iniciando envio de {len(noticias)} notícias sintetizadas.")
-    for idx, noticia in enumerate(noticias, start=1):
-        sucesso = await publicar_noticia_telegram(token, chat_id, noticia)
-        if sucesso:
-            links_historico.append(noticia["link"])
-            titulos_historico.append(noticia["titulo"])
-            salvar_historico(links_historico, titulos_historico)
-            logger.info(f"[{idx}/{len(noticias)}] Publicada com sucesso: {noticia['titulo']}")
-            if idx < len(noticias):
-                await asyncio.sleep(3)
-        else:
-            logger.error(f"Falha ao publicar notícia: {noticia['titulo']}")
-
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        logger.info("Execução encerrada manualmente.")
+                "
