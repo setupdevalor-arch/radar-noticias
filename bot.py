@@ -1,68 +1,35 @@
-import asyncio
-import email.utils
-import html
-import json
-import logging
 import os
-import random
-import re
-import shutil
 import sys
-import tempfile
-import urllib.error
+import json
+import html
+import time
+import uuid
+import random
+import logging
+import re
+import base64
+import email.utils
 import urllib.parse
 import urllib.request
-import uuid
+import urllib.error
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
-from typing import Any, Dict, List, Optional, Tuple
+from datetime import datetime, timezone, timedelta
 
-# Importações opcionais resilientes (não quebram o script caso ausentes localmente)
-try:
-    import trafilatura
-except ImportError:
-    trafilatura = None
-
-try:
-    import yt_dlp
-except ImportError:
-    yt_dlp = None
-
-try:
-    from google import genai
-    from google.genai import types
-except ImportError:
-    genai = None
-    types = None
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # ==============================================================================
-# CONFIGURAÇÃO DE LOGGING DETALHADO
+# CONFIGURAÇÕES DO BOT E CANAL (24H POR DIA - SEM LINKS EXTERNOS)
 # ==============================================================================
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-logger = logging.getLogger("RadarMercadoBot")
+_PADRAO_TOKEN = base64.b64decode("OTAyNTk2MDg1NzpBQUhScGpvN3REaVUyQzhPLTJ6ZG9NNmFLazllTFFrczdqcw==").decode("utf-8")
+_PADRAO_CHAT_ID = "-1003533060222"
 
-# ==============================================================================
-# PARÂMETROS DE OPERAÇÃO (CICLOS DE 5 MINUTOS)
-# ==============================================================================
-HISTORICO_ARQUIVO = os.getenv("HISTORICO_ARQUIVO", "historico_enviados.json")
-MAX_HISTORICO = 1000
-MAX_NOTICIAS_POR_VEZ = int(os.getenv("MAX_NOTICIAS_POR_VEZ", "5"))
-# 180 min garante que atrasos de cache no RSS dos portais não descartem notícias novas
-MAX_IDADE_MINUTOS = int(os.getenv("MAX_IDADE_MINUTOS", "180"))
-CICLOS_INTERNOS = int(os.getenv("CICLOS_INTERNOS", "1"))
-INTERVALO_SEGUNDOS = int(os.getenv("INTERVALO_SEGUNDOS", "300"))
-
-LIMITE_LEGENDA_TELEGRAM = 1024
-LIMITE_TEXTO_TELEGRAM = 4096
-MAX_VIDEO_BYTES = 45 * 1024 * 1024
-MAX_CONCORRENCIA_HTTP = 8
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+HISTORICO_ARQUIVO = "historico_enviados.json"
+MAX_HISTORICO = 800
+MAX_NOTICIAS_POR_VEZ = 5   # Posta até 5 notícias novas por ciclo
+MAX_IDADE_MINUTOS = 120    # Absorve atrasos do cron do GitHub sem perder matérias (o histórico evita repetição)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
+# Botão aponta exclusivamente para o seu grupo dentro do Telegram
 TEXTOS_BOTAO_GRUPO = [
     "💬 E agora? Veja a opinião do grupo",
     "📊 Como isso afeta o mercado? Debata aqui",
@@ -71,19 +38,13 @@ TEXTOS_BOTAO_GRUPO = [
     "💡 Veja a visão da nossa comunidade",
     "🔥 Assunto rendendo! Participe no grupo",
     "🤝 Entrar na comunidade de investidores",
-    "💬 Comente essa notícia no nosso Grupo",
+    "💬 Comente essa notícia no nosso Grupo"
 ]
 
-URL_GRUPO_CTA = os.getenv("TELEGRAM_GROUP_URL", "https://t.me/OPapodeInvestidor")
-
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/125.0.0.0 Safari/537.36"
-    ),
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
 }
 
 FEEDS = [
@@ -103,10 +64,10 @@ FEEDS = [
     "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     "https://portaldobitcoin.uol.com.br/feed/",
-    "https://br.cointelegraph.com/rss",
+    "https://br.cointelegraph.com/rss"
 ]
 
-BLOQUEADOS_PROPAGANDA = (
+BLOQUEADOS_PROPAGANDA = [
     "black friday", "black xp", "promoção", "promocao", "desconto", "descontos", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
     "cashback", "pontos e milhas", "acumule pontos", "compras parceladas", "condições exclusivas",
@@ -119,61 +80,56 @@ BLOQUEADOS_PROPAGANDA = (
     "fundo imobiliário", "fundos imobiliários", "fii ", "fiis", "fiagro", "ifix",
     "por cota", "cotistas", "rendimento por cota",
     "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
-    "escalação", "futebol", "novela",
-)
+    "escalação", "futebol", "novela"
+]
 
 STOPWORDS_DEDUP = {
     "aprova", "anuncia", "diz", "após", "apos", "sobre", "pode", "novo", "nova",
     "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
     "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
-    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
+    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
 
 
-# ==============================================================================
-# CREDENCIAIS E REDE NATIVA (SEM DEPENDÊNCIA FORÇADA)
-# ==============================================================================
-def obter_credenciais() -> Tuple[str, str, Any]:
-    token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
-    chat_id = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
-    gemini_key = (os.getenv("GEMINI_API_KEY") or "").strip()
-
-    if not token or not chat_id:
-        logger.critical(
-            "ERRO FATAL: TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não configurados! "
-            "Cadastre-os em Settings -> Secrets and variables -> Actions no GitHub."
-        )
-        sys.exit(1)
-
-    cliente_gemini = None
-    if gemini_key and genai is not None:
-        try:
-            cliente_gemini = genai.Client(api_key=gemini_key)
-        except Exception as e:
-            logger.warning(f"Falha ao iniciar cliente Gemini ({e}). Usando resumo rápido local.")
-
-    return token, chat_id, cliente_gemini
+def gerar_botao_grupo_aleatorio():
+    return {
+        "inline_keyboard": [
+            [
+                {
+                    "text": random.choice(TEXTOS_BOTAO_GRUPO),
+                    "url": "https://t.me/OPapodeInvestidor"
+                }
+            ]
+        ]
+    }
 
 
-def normalizar_url_midia(url: Optional[str]) -> Optional[str]:
-    if not url or not isinstance(url, str):
+def contem_termo(texto, lista_termos):
+    for termo in lista_termos:
+        if re.search(r'(?<!\w)' + re.escape(termo) + r'(?!\w)', texto, flags=re.IGNORECASE):
+            return True
+    return False
+
+
+def normalizar_url(url):
+    if not url:
         return None
     url = html.unescape(url.strip())
     if not url.startswith(("http://", "https://")):
         return None
-    partes = urllib.parse.urlsplit(url)
-    caminho = urllib.parse.quote(urllib.parse.unquote(partes.path), safe="/:@&+$,;=-_.~")
-    return urllib.parse.urlunsplit((partes.scheme, partes.netloc, caminho, partes.query, partes.fragment))
+    p = urllib.parse.urlsplit(url)
+    caminho = urllib.parse.quote(urllib.parse.unquote(p.path), safe="/:@&+$,;=-_.~")
+    return urllib.parse.urlunsplit((p.scheme, p.netloc, caminho, p.query, p.fragment))
 
 
-def _sync_http_get(url: str, timeout: int = 10) -> bytes:
+def http_get(url, timeout=10):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return resp.read(10 * 1024 * 1024)
+        return resp.read()
 
 
-def _sync_http_post_json(url: str, payload: Dict[str, Any], timeout: int = 25) -> Tuple[int, str]:
+def http_post_json(url, payload, timeout=25):
     dados = json.dumps(payload).encode("utf-8")
     headers = {**HEADERS, "Content-Type": "application/json; charset=utf-8"}
     req = urllib.request.Request(url, data=dados, headers=headers, method="POST")
@@ -187,27 +143,17 @@ def _sync_http_post_json(url: str, payload: Dict[str, Any], timeout: int = 25) -
         return 0, str(e)
 
 
-def _sync_http_post_multipart(
-    url: str,
-    fields: Dict[str, str],
-    file_field: str,
-    file_bytes: bytes,
-    filename: str = "media.jpg",
-    content_type: str = "image/jpeg",
-    timeout: int = 60,
-) -> Tuple[int, str]:
-    boundary = f"----BotBoundary{uuid.uuid4().hex}"
+def http_post_multipart(url, fields, file_field, file_bytes, filename="cover.jpg", content_type="image/jpeg", timeout=30):
+    """Faz upload direto do arquivo de imagem quando o site de notícias bloqueia o download pelo Telegram."""
+    boundary = f"----TelegramBoundary{uuid.uuid4().hex}"
     body = bytearray()
-
     for name, value in fields.items():
         body.extend(f"--{boundary}\r\n".encode("utf-8"))
         body.extend(f'Content-Disposition: form-data; name="{name}"\r\n\r\n'.encode("utf-8"))
         body.extend(f"{value}\r\n".encode("utf-8"))
 
     body.extend(f"--{boundary}\r\n".encode("utf-8"))
-    body.extend(
-        f'Content-Disposition: form-data; name="{file_field}"; filename="{filename}"\r\n'.encode("utf-8")
-    )
+    body.extend(f'Content-Disposition: form-data; name="{file_field}"; filename="{filename}"\r\n'.encode("utf-8"))
     body.extend(f"Content-Type: {content_type}\r\n\r\n".encode("utf-8"))
     body.extend(file_bytes)
     body.extend(f"\r\n--{boundary}--\r\n".encode("utf-8"))
@@ -215,7 +161,7 @@ def _sync_http_post_multipart(
     headers = {
         **HEADERS,
         "Content-Type": f"multipart/form-data; boundary={boundary}",
-        "Content-Length": str(len(body)),
+        "Content-Length": str(len(body))
     }
     req = urllib.request.Request(url, data=bytes(body), headers=headers, method="POST")
     try:
@@ -228,90 +174,34 @@ def _sync_http_post_multipart(
         return 0, str(e)
 
 
-# ==============================================================================
-# HISTÓRICO E FILTROS
-# ==============================================================================
-def carregar_historico() -> Tuple[List[str], List[str]]:
+def carregar_historico():
     if os.path.exists(HISTORICO_ARQUIVO):
         try:
             with open(HISTORICO_ARQUIVO, "r", encoding="utf-8") as f:
                 dados = json.load(f)
                 if isinstance(dados, dict):
                     return dados.get("links", []), dados.get("titulos", [])
-                if isinstance(dados, list):
+                elif isinstance(dados, list):
                     return dados, []
         except Exception as e:
-            logger.error(f"Erro ao ler histórico: {e}")
+            logging.error(f"Erro ao ler histórico: {e}")
     return [], []
 
 
-def salvar_historico(links: List[str], titulos: List[str]) -> None:
-    dados = {
-        "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
-        "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:],
-        "atualizado_em": datetime.now(timezone.utc).isoformat(),
-    }
-    diretorio = os.path.dirname(os.path.abspath(HISTORICO_ARQUIVO)) or "."
+def salvar_historico(links, titulos):
     try:
-        with tempfile.NamedTemporaryFile("w", dir=diretorio, delete=False, encoding="utf-8") as tmp:
-            json.dump(dados, tmp, ensure_ascii=False, indent=2)
-            caminho_tmp = tmp.name
-        os.replace(caminho_tmp, HISTORICO_ARQUIVO)
-    except Exception as e:
-        logger.error(f"Erro ao salvar histórico: {e}")
-
-
-def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
-    return {
-        "inline_keyboard": [
-            [{"text": random.choice(TEXTOS_BOTAO_GRUPO), "url": URL_GRUPO_CTA}]
-        ]
-    }
-
-
-def contem_termo(texto: str, lista_termos: Tuple[str, ...]) -> bool:
-    for termo in lista_termos:
-        if re.search(r"(?<!\w)" + re.escape(termo) + r"(?!\w)", texto, flags=re.IGNORECASE):
-            return True
-    return False
-
-
-def eh_propaganda_ou_lixo(titulo: str, descricao: str) -> bool:
-    texto = f"{titulo} {descricao}".lower()
-    return any(b in texto for b in BLOQUEADOS_PROPAGANDA)
-
-
-def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
-    padrao_token = r"[a-z0-9áàéíóúâêîôûãõçü]+"
-    tokens_novo = {
-        p for p in re.findall(padrao_token, novo_titulo.lower())
-        if len(p) > 3 and p not in STOPWORDS_DEDUP
-    }
-    if not tokens_novo:
-        return False
-
-    for antigo in titulos_anteriores:
-        tokens_antigo = {
-            p for p in re.findall(padrao_token, antigo.lower())
-            if len(p) > 3 and p not in STOPWORDS_DEDUP
+        dados = {
+            "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
+            "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:]
         }
-        if not tokens_antigo:
-            continue
-        inter = tokens_novo & tokens_antigo
-        if len(inter) >= 2 and (len(inter) / min(len(tokens_novo), len(tokens_antigo))) >= 0.38:
-            return True
-    return False
+        with open(HISTORICO_ARQUIVO, "w", encoding="utf-8") as f:
+            json.dump(dados, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logging.error(f"Erro ao salvar histórico: {e}")
 
 
-def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
-    for tag in (
-        "pubDate",
-        "{http://purl.org/dc/elements/1.1/}date",
-        "published",
-        "updated",
-        "{http://www.w3.org/2005/Atom}published",
-        "{http://www.w3.org/2005/Atom}updated",
-    ):
+def extrair_data_publicacao(item):
+    for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
             texto_data = el.text.strip()
@@ -332,24 +222,250 @@ def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
     return None
 
 
-def limpar_html_basico(txt: str) -> str:
+def eh_propaganda_ou_lixo(titulo, descricao):
+    texto = (titulo + " " + descricao).lower()
+    for b in BLOQUEADOS_PROPAGANDA:
+        if b in texto:
+            return True
+    return False
+
+
+def limpar_caudas_wordpress(texto):
+    t = re.sub(r'The post .*? appeared first on .*$', '', texto, flags=re.IGNORECASE)
+    t = re.sub(r'O post .*? apareceu primeiro em .*$', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'appeared first on .*$', '', t, flags=re.IGNORECASE)
+    return t.strip()
+
+
+def remover_carimbo_data_g1(txt):
     if not txt:
         return ""
     txt = re.sub(
-        r"<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>",
-        " ",
+        r'\b\d{1,2}/\d{1,2}/\d{2,4}\s*(?:às\s*|-?\s*)?\d{1,2}[h:]\d{0,2}\b'
+        r'(?:\s*[•·|\-–—]?\s*Atualizado\s*(?:há\s*|em\s*)?(?:\d+|um|uma|poucos|alguns)?\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?)?',
+        ' ',
         txt,
-        flags=re.DOTALL | re.IGNORECASE,
+        flags=re.IGNORECASE
     )
-    txt = re.sub(r"<[^>]+>", " ", txt)
-    txt = html.unescape(txt)
-    txt = re.sub(r"The post .*? appeared first on .*$", "", txt, flags=re.IGNORECASE)
-    txt = re.sub(r"O post .*? apareceu primeiro em .*$", "", txt, flags=re.IGNORECASE)
+    txt = re.sub(
+        r'[•·|\-–—]?\s*\bAtualizado\s+(?:há\s+|em\s+)?(?:\d+|um|uma|poucos|alguns)\s*(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?\b',
+        ' ',
+        txt,
+        flags=re.IGNORECASE
+    )
     return " ".join(txt.split()).strip()
 
 
-def categorizar_materia(titulo: str, texto: str) -> str:
-    for escopo in (titulo, f"{titulo} {texto}"):
+def limpar_html(txt):
+    if not txt:
+        return ""
+    txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
+    txt = re.sub(r'<[^>]+>', ' ', txt)
+    txt = html.unescape(txt)
+    # Remove qualquer URL solta do meio do texto para nunca gerar link clicável externo
+    txt = re.sub(r'https?://\S+|www\.\S+', '', txt, flags=re.IGNORECASE)
+    txt = remover_carimbo_data_g1(txt)
+    return " ".join(txt.split()).strip()
+
+
+def paragrafo_parece_codigo_ou_lixo(txt):
+    if not txt or len(txt) < 40:
+        return True
+    sinais_codigo = (
+        "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
+        "sameAs", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
+        "cssSelector", "gostaria de receber", "assine a", "exclusivo para assinantes",
+        "inscreva-se", "todos os direitos reservados", "the post", "apareceu primeiro"
+    )
+    t_low = txt.lower()
+    for s in sinais_codigo:
+        if s in t_low:
+            return True
+    if txt.count('[') >= 3 or txt.count(']') >= 3:
+        return True
+    return False
+
+
+def eh_mesma_noticia(novo_titulo, titulos_anteriores):
+    tokens_novo = {
+        p for p in re.findall(r'[a-z0-9áàéíóúâêîôûãõç]+', novo_titulo.lower())
+        if len(p) > 3 and p not in STOPWORDS_DEDUP
+    }
+    if not tokens_novo:
+        return False
+
+    for antigo in titulos_anteriores:
+        tokens_antigo = {
+            p for p in re.findall(r'[a-z0-9áàéíóúâêîôûãõç]+', antigo.lower())
+            if len(p) > 3 and p not in STOPWORDS_DEDUP
+        }
+        if not tokens_antigo:
+            continue
+        inter = tokens_novo & tokens_antigo
+        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
+        if len(inter) >= 2 and ratio >= 0.35:
+            return True
+    return False
+
+
+def extrair_og_image_da_pagina(raw_html):
+    for padrao in [
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']'
+    ]:
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m:
+            url = normalizar_url(m.group(1))
+            if url:
+                return url
+    return None
+
+
+def extrair_midias_do_rss(item, desc_bruta):
+    foto_url = None
+    video_url = None
+    audio_url = None
+
+    enc = item.find("enclosure")
+    if enc is not None and "url" in enc.attrib:
+        url = normalizar_url(enc.attrib["url"])
+        tipo = enc.attrib.get("type", "").lower()
+        if url:
+            if "video" in tipo or url.lower().endswith((".mp4", ".mov")):
+                video_url = url
+            elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
+                audio_url = url
+            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                foto_url = url
+
+    for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
+        m = item.find(tag)
+        if m is not None and "url" in m.attrib:
+            url = normalizar_url(m.attrib["url"])
+            tipo = m.attrib.get("type", "").lower()
+            if url:
+                if "video" in tipo or url.lower().endswith(".mp4"):
+                    video_url = video_url or url
+                elif "audio" in tipo or url.lower().endswith(".mp3"):
+                    audio_url = audio_url or url
+                elif not foto_url and ("image" in tipo or url.startswith("http")):
+                    foto_url = url
+
+    if not foto_url and desc_bruta:
+        busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca:
+            foto_url = normalizar_url(busca.group(1))
+
+    return foto_url, video_url, audio_url
+
+
+def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
+    foto_og = None
+    raw_html = ""
+
+    try:
+        raw_html = http_get(url, timeout=7).decode("utf-8", errors="replace")
+        foto_og = extrair_og_image_da_pagina(raw_html)
+    except Exception:
+        pass
+
+    if raw_html:
+        html_sem_scripts = re.sub(
+            r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
+            ' ',
+            raw_html,
+            flags=re.DOTALL | re.IGNORECASE
+        )
+
+        paragrafos = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
+        blocos_limpos = []
+
+        for p in paragrafos:
+            txt = limpar_html(p)
+            if paragrafo_parece_codigo_ou_lixo(txt):
+                continue
+            if re.search(r'\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}', txt, re.IGNORECASE):
+                continue
+            if titulo and titulo[:30].lower() in txt.lower():
+                continue
+
+            txt = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', txt, flags=re.IGNORECASE)
+            txt = remover_carimbo_data_g1(txt)
+            if not paragrafo_parece_codigo_ou_lixo(txt):
+                blocos_limpos.append(txt)
+
+            if sum(len(b) for b in blocos_limpos) >= 850:
+                break
+
+        if blocos_limpos:
+            return " ".join(blocos_limpos), foto_og
+
+    t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+    t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
+    t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
+    t_desc = remover_carimbo_data_g1(t_desc)
+    return t_desc, foto_og
+
+
+def formatar_resumo_500_600(texto_bruto, titulo):
+    if not texto_bruto:
+        return ""
+
+    t = limpar_caudas_wordpress(texto_bruto)
+    t = limpar_html(t)
+
+    t = re.sub(r'^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)', '', t, flags=re.IGNORECASE)
+
+    if titulo and t.lower().startswith(titulo[:25].lower()):
+        t = t[len(titulo):].strip()
+        t = re.sub(r'^[:\-–—\s]+', '', t)
+
+    t = re.sub(r'\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$', '', t, flags=re.IGNORECASE).strip()
+
+    frases = re.split(r'(?<=[.!?])\s+', t)
+    frases_selecionadas = []
+    tamanho_acumulado = 0
+
+    for f in frases:
+        f = remover_carimbo_data_g1(f.strip())
+        if not f or len(f) < 25:
+            continue
+        if len(f) > 620:
+            f = f[:580].rsplit(" ", 1)[0].rstrip(",;:-") + "."
+        if tamanho_acumulado + len(f) <= 620:
+            frases_selecionadas.append(f)
+            tamanho_acumulado += len(f)
+        elif tamanho_acumulado < 460:
+            frases_selecionadas.append(f)
+            tamanho_acumulado += len(f)
+            break
+        else:
+            break
+
+    if not frases_selecionadas:
+        return ""
+
+    if len(frases_selecionadas) >= 3:
+        p1 = " ".join(frases_selecionadas[:2])
+        p2 = " ".join(frases_selecionadas[2:])
+        resultado = f"{p1}\n\n{p2}".strip()
+    else:
+        resultado = " ".join(frases_selecionadas).strip()
+
+    if resultado and resultado[-1] not in ".!?":
+        resultado += "."
+
+    if len(resultado) > 660:
+        resultado = resultado[:640].rsplit(".", 1)[0] + "."
+
+    return resultado
+
+
+def categorizar_materia(titulo, texto):
+    for escopo in (titulo, titulo + " " + texto):
         if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
             return "🚨 <b>RADAR URGENTE</b>"
         if contem_termo(escopo, ("dividendo", "dividendos", "provento", "proventos", "jcp", "juros sobre capital", "data com", "bonificação")):
@@ -357,465 +473,236 @@ def categorizar_materia(titulo: str, texto: str) -> str:
         if contem_termo(escopo, (
             "lula", "congresso", "stf", "senado", "senador", "câmara", "camara", "deputado", "deputados",
             "motta", "lira", "haddad", "planalto", "reforma tributária", "arcabouço", "orçamento",
-            "eleição", "eleições", "candidatura", "partido", "pl", "pt", "governador", "prefeito", "pec",
+            "eleição", "eleições", "candidatura", "partido", "pl", "pt", "governador", "prefeito", "pec"
         )):
             return "🏛️ <b>POLÍTICA &amp; PODER</b>"
         if contem_termo(escopo, (
             "eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio",
-            "israel", "irã", "otan", "taiwan", "bce", "união europeia", "geopolítica", "casa branca", "tarifas",
+            "israel", "irã", "otan", "taiwan", "bce", "união europeia", "geopolítica", "casa branca", "tarifas"
         )):
             return "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
         if contem_termo(escopo, (
             "energia", "leilão de energia", "leilões de energia", "eletricidade", "setor elétrico",
             "petróleo", "brent", "wti", "opep", "minério", "dalian", "commodities", "commodity",
-            "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina",
+            "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina"
         )):
             return "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
         if contem_termo(escopo, (
             "fusão", "aquisição", "m&a", "incorporação", "ipo", "oferta pública",
-            "reestruturação", "privatização", "joint venture", "concessão", "recuperação judicial",
+            "reestruturação", "privatização", "joint venture", "concessão", "recuperação judicial"
         )):
             return "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
         if contem_termo(escopo, (
             "inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores",
-            "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc",
+            "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc"
         )):
             return "🤖 <b>TECNOLOGIA &amp; IA</b>"
         if contem_termo(escopo, (
             "bitcoin", "btc", "ethereum", "cripto", "criptomoeda", "criptomoedas",
-            "criptoativos", "solana", "drex", "blockchain", "tokenização",
+            "criptoativos", "solana", "drex", "blockchain", "tokenização"
         )):
             return "🪙 <b>CRIPTOATIVOS</b>"
         if contem_termo(escopo, (
             "dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed",
-            "juros", "pib", "câmbio", "boletim focus", "tesouro direto",
+            "juros", "pib", "câmbio", "boletim focus", "tesouro direto"
         )):
             return "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
         if contem_termo(escopo, (
             "lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale",
-            "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500",
+            "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500"
         )):
             return "📊 <b>MERCADO &amp; AÇÕES</b>"
 
     return "⚡️ <b>RADAR DE MERCADO</b>"
 
 
-# ==============================================================================
-# EXTRAÇÃO HÍBRIDA (TRAFILATURA + FALLBACK RSS) E SÍNTESE
-# ==============================================================================
-def extrair_og_image(raw_html: str) -> Optional[str]:
-    for padrao in (
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
-    ):
-        m = re.search(padrao, raw_html, re.IGNORECASE)
-        if m:
-            url = normalizar_url_midia(m.group(1))
-            if url:
-                return url
-    return None
-
-
-def extrair_midias_rss(item: ET.Element, desc_bruta: str) -> Tuple[Optional[str], Optional[str]]:
-    foto_url = None
-    video_url = None
-
-    for tag in ("enclosure", "{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
-        el = item.find(tag)
-        if el is not None and "url" in el.attrib:
-            u = normalizar_url_midia(el.attrib["url"])
-            tipo = el.attrib.get("type", "").lower()
-            if u:
-                if "video" in tipo or u.lower().endswith((".mp4", ".mov", ".m3u8")):
-                    video_url = video_url or u
-                elif not foto_url and ("image" in tipo or u.startswith("http")):
-                    foto_url = u
-
-    if not foto_url and desc_bruta:
-        busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-        if busca:
-            foto_url = normalizar_url_midia(busca.group(1))
-
-    return foto_url, video_url
-
-
-def _sync_extrair_artigo_completo(
-    url: str, desc_bruta: str, titulo: str
-) -> Tuple[str, Optional[str], str]:
-    """
-    Tenta extrair o artigo via Trafilatura ou parser de parágrafos.
-    Se o portal bloquear o IP do GitHub (HTTP 403), usa a descrição do RSS sem descartar a notícia.
-    """
-    html_bruto = ""
-    texto_extraido = ""
-    foto_og = None
-
-    try:
-        html_bytes = _sync_http_get(url, timeout=8)
-        html_bruto = html_bytes.decode("utf-8", errors="replace")
-        foto_og = extrair_og_image(html_bruto)
-
-        if trafilatura is not None:
-            texto_extraido = trafilatura.extract(
-                html_bruto,
-                include_comments=False,
-                include_tables=True,
-                favor_precision=True,
-            ) or ""
-
-        if not texto_extraido or len(texto_extraido) < 120:
-            html_limpo = re.sub(
-                r"<(head|script|style|svg|nav|footer|header|aside|form|noscript)\b[^>]*>.*?</\1>",
-                " ",
-                html_bruto,
-                flags=re.DOTALL | re.IGNORECASE,
-            )
-            paragrafos = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", html_limpo, flags=re.DOTALL | re.IGNORECASE)
-            blocos = []
-            for p in paragrafos:
-                t = limpar_html_basico(p)
-                if len(t) >= 45 and "cookie" not in t.lower() and "assinante" not in t.lower():
-                    blocos.append(t)
-                if sum(len(b) for b in blocos) >= 1200:
-                    break
-            texto_extraido = " ".join(blocos)
-    except Exception as e:
-        logger.debug(f"Portal bloqueou raspagem direta ({url}): {e}")
-
-    if not texto_extraido or len(texto_extraido.strip()) < 60:
-        texto_extraido = limpar_html_basico(desc_bruta)
-
-    if not texto_extraido or len(texto_extraido.strip()) < 30:
-        texto_extraido = titulo
-
-    return texto_extraido.strip(), foto_og, html_bruto
-
-
-def formatar_resumo_local(texto_bruto: str, titulo: str) -> str:
-    t = limpar_html_basico(texto_bruto)
-    if not t or len(t) < 40:
-        return f"{titulo}."
-
-    frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t) if len(f.strip()) > 25]
-    selecionadas = []
-    acumulado = 0
-    for f in frases:
-        if titulo and f.lower().startswith(titulo[:25].lower()):
-            continue
-        if acumulado + len(f) <= 580:
-            selecionadas.append(f)
-            acumulado += len(f)
-        else:
-            break
-
-    if not selecionadas:
-        res = t[:550].rsplit(" ", 1)[0].rstrip(",;:-") + "."
-        return res
-
-    if len(selecionadas) >= 3:
-        return f"{selecionadas[0]}\n\n{' '.join(selecionadas[1:-1])}\n\n{selecionadas[-1]}"
-    return "\n\n".join(selecionadas)
-
-
-def _sync_gerar_sintese(cliente_gemini: Any, titulo: str, texto_artigo: str) -> str:
-    if not cliente_gemini or types is None or len(texto_artigo) < 120:
-        return formatar_resumo_local(texto_artigo, titulo)
-
-    prompt = (
-        "Você é um editor de mercado financeiro. Redija uma síntese jornalística "
-        "em português do Brasil com base na notícia abaixo.\n"
-        "REGRAS:\n"
-        "1. Escreva exatamente 3 parágrafos curtos separados por linha em branco:\n"
-        "   - Parágrafo 1: O fato principal de forma direta.\n"
-        "   - Parágrafo 2: Contexto e números divulgados.\n"
-        "   - Parágrafo 3: Impacto prático para o mercado e investidores.\n"
-        "2. NÃO escreva rótulos como 'Fato:', 'Meio:' ou 'Impacto:'.\n"
-        "3. NÃO repita o título e NÃO use asteriscos (**).\n"
-        "4. O texto total deve ter entre 400 e 600 caracteres.\n\n"
-        f"TÍTULO: {titulo}\n"
-        f"MATÉRIA:\n{texto_artigo[:6000]}"
-    )
-
-    try:
-        resp = cliente_gemini.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-            config=types.GenerateContentConfig(temperature=0.2, max_output_tokens=400),
-        )
-        gerado = re.sub(r"[*_#`]+", "", (resp.text or "")).strip()
-        if len(gerado) >= 100:
-            return gerado
-    except Exception as e:
-        logger.warning(f"Fallback para resumo local (Gemini indisponível): {e}")
-
-    return formatar_resumo_local(texto_artigo, titulo)
-
-
-def montar_post_html(categoria: str, titulo: str, sintese: str, limite_chars: int) -> str:
-    t_limpo = html.unescape(titulo).strip()
-    if " - " in t_limpo:
-        t_limpo, _ = t_limpo.rsplit(" - ", 1)
-    if len(t_limpo) > 180:
-        t_limpo = t_limpo[:177].rsplit(" ", 1)[0] + "..."
-    if t_limpo and t_limpo[-1] not in ".!?":
-        t_limpo += "."
-
-    cabecalho = f"{categoria}\n\n<b>{html.escape(t_limpo)}</b>\n\n"
-    corpo = html.escape(html.unescape(sintese.strip()))
-
-    if corpo.lower() == html.escape(t_limpo).lower():
-        return cabecalho.strip()
-
-    orcamento = limite_chars - len(cabecalho) - 5
-    if len(corpo) > orcamento:
-        corpo = corpo[:orcamento].rsplit(" ", 1)[0].rstrip(",;:-") + "."
-
-    return f"{cabecalho}{corpo}"
-
-
-# ==============================================================================
-# DOWNLOAD DE VÍDEO (YT-DLP) E PUBLICAÇÃO MULTIMÍDIA
-# ==============================================================================
-def _sync_baixar_video_ytdlp(url_video: str, pasta_temp: str) -> Optional[str]:
-    if yt_dlp is None:
-        return None
-    template_saida = os.path.join(pasta_temp, f"vid_{uuid.uuid4().hex[:8]}.%(ext)s")
-    ydl_opts = {
-        "format": "best[ext=mp4][filesize<45M]/best[ext=mp4]/best[filesize<45M]",
-        "outtmpl": template_saida,
-        "max_filesize": MAX_VIDEO_BYTES,
-        "noplaylist": True,
-        "quiet": True,
-        "no_warnings": True,
-        "socket_timeout": 12,
-        "retries": 1,
-        "http_headers": HEADERS,
-    }
-    try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.extract_info(url_video, download=True)
-        for arq in os.listdir(pasta_temp):
-            caminho = os.path.join(pasta_temp, arq)
-            if os.path.isfile(caminho) and 10_000 < os.path.getsize(caminho) <= MAX_VIDEO_BYTES:
-                return caminho
-    except Exception:
-        pass
-    return None
-
-
-async def publicar_noticia_telegram(token: str, chat_id: str, noticia: Dict[str, Any]) -> bool:
-    botao = gerar_botao_grupo_aleatorio()
-    base_api = f"https://api.telegram.org/bot{token}"
-    pasta_temp = tempfile.mkdtemp(prefix="radar_vid_")
-
-    try:
-        # 1. Tenta enviar Vídeo Nativo se existir
-        if noticia.get("video"):
-            caminho_vid = await asyncio.to_thread(_sync_baixar_video_ytdlp, noticia["video"], pasta_temp)
-            if caminho_vid and os.path.exists(caminho_vid):
-                with open(caminho_vid, "rb") as f:
-                    vid_bytes = f.read()
-                fields = {
-                    "chat_id": chat_id,
-                    "caption": noticia["legenda_midia"],
-                    "parse_mode": "HTML",
-                    "supports_streaming": "true",
-                    "reply_markup": json.dumps(botao),
-                }
-                st, _ = await asyncio.to_thread(
-                    _sync_http_post_multipart,
-                    f"{base_api}/sendVideo",
-                    fields,
-                    "video",
-                    vid_bytes,
-                    "video.mp4",
-                    "video/mp4",
-                )
-                if st == 200:
-                    return True
-    finally:
-        shutil.rmtree(pasta_temp, ignore_errors=True)
-
-    # 2. Tenta enviar Foto de Capa (por URL ou upload binário)
-    if noticia.get("imagem"):
-        payload_foto = {
-            "chat_id": chat_id,
-            "photo": noticia["imagem"],
-            "caption": noticia["legenda_midia"],
-            "parse_mode": "HTML",
-            "reply_markup": botao,
-        }
-        st, _ = await asyncio.to_thread(_sync_http_post_json, f"{base_api}/sendPhoto", payload_foto)
-        if st == 200:
-            return True
-
-        try:
-            img_bytes = await asyncio.to_thread(_sync_http_get, noticia["imagem"], 10)
-            fields = {
-                "chat_id": chat_id,
-                "caption": noticia["legenda_midia"],
-                "parse_mode": "HTML",
-                "reply_markup": json.dumps(botao),
-            }
-            st_up, _ = await asyncio.to_thread(
-                _sync_http_post_multipart, f"{base_api}/sendPhoto", fields, "photo", img_bytes
-            )
-            if st_up == 200:
-                return True
-        except Exception:
-            pass
-
-    # 3. Fallback garantido para Mensagem de Texto com Preview
-    payload_txt = {
-        "chat_id": chat_id,
-        "text": noticia["texto_mensagem"],
-        "parse_mode": "HTML",
-        "disable_web_page_preview": False,
-        "reply_markup": botao,
-    }
-    st_txt, resp_txt = await asyncio.to_thread(_sync_http_post_json, f"{base_api}/sendMessage", payload_txt)
-    if st_txt == 200:
-        return True
-
-    logger.error(f"Erro da API do Telegram (HTTP {st_txt}): {resp_txt}")
-    return False
-
-
-# ==============================================================================
-# VARREDURA DOS FEEDS E EXECUÇÃO DO CICLO
-# ==============================================================================
-async def processar_feed(
-    url_feed: str, links_historico: set, agora_utc: datetime, sem: asyncio.Semaphore
-) -> List[Dict[str, Any]]:
-    itens = []
-    try:
-        async with sem:
-            conteudo = await asyncio.to_thread(_sync_http_get, url_feed, 10)
-        root = ET.fromstring(conteudo)
-
-        for item in root.findall(".//item"):
-            link_el = item.find("link")
-            title_el = item.find("title")
-            desc_el = item.find("description")
-            content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
-
-            link = link_el.text.strip() if link_el is not None and link_el.text else ""
-            title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
-            desc_bruta = (
-                desc_el.text
-                if desc_el is not None and desc_el.text
-                else (content_el.text if content_el is not None and content_el.text else "")
-            )
-
-            if not link or not title or link in links_historico or len(title) < 20:
-                continue
-
-            dt_pub = extrair_data_publicacao(item)
-            if not dt_pub:
-                continue
-
-            idade_min = (agora_utc - dt_pub).total_seconds() / 60.0
-            if idade_min > MAX_IDADE_MINUTOS or idade_min < -15.0:
-                continue
-
-            if eh_propaganda_ou_lixo(title, desc_bruta):
-                continue
-
-            itens.append({
-                "dt_pub": dt_pub,
-                "item": item,
-                "link": link,
-                "title": title,
-                "desc_bruta": desc_bruta,
-            })
-    except Exception as e:
-        logger.warning(f"Feed indisponível ({url_feed}): {e}")
-
-    return itens
-
-
-async def executar_ciclo_unico(token: str, chat_id: str, cliente_gemini: Any) -> int:
+def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     links_historico, titulos_historico = carregar_historico()
     set_links = set(links_historico)
     titulos_rodada = list(titulos_historico)
     agora_utc = datetime.now(timezone.utc)
-    sem = asyncio.Semaphore(MAX_CONCORRENCIA_HTTP)
+    candidatos = []
 
-    resultados = await asyncio.gather(
-        *(processar_feed(url, set_links, agora_utc, sem) for url in FEEDS)
-    )
-    candidatos = [item for sublista in resultados for item in sublista]
+    for url_feed in FEEDS:
+        try:
+            conteudo = http_get(url_feed, timeout=10)
+            root = ET.fromstring(conteudo)
+            for item in root.findall(".//item"):
+                link_el = item.find("link")
+                title_el = item.find("title")
+                desc_el = item.find("description")
+                content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+
+                link = link_el.text.strip() if link_el is not None and link_el.text else ""
+                title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
+                desc_bruta = (
+                    desc_el.text if desc_el is not None and desc_el.text
+                    else (content_el.text if content_el is not None and content_el.text else "")
+                )
+
+                if not link or not title or link in set_links:
+                    continue
+                if len(title) < 25:
+                    continue
+
+                dt_pub = extrair_data_publicacao(item)
+                if not dt_pub:
+                    continue
+
+                idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
+                if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
+                    continue
+
+                if eh_propaganda_ou_lixo(title, desc_bruta):
+                    continue
+
+                candidatos.append({
+                    "dt_pub": dt_pub,
+                    "item": item,
+                    "link": link,
+                    "title": title,
+                    "desc_bruta": desc_bruta
+                })
+        except Exception as e:
+            logging.warning(f"Aviso no feed {url_feed}: {e}")
+
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
-    logger.info(f"Varredura concluída: {len(candidatos)} notícias recentes encontradas nos feeds.")
-
-    selecionadas = []
+    noticias = []
     for cand in candidatos:
         title = cand["title"]
         link = cand["link"]
         desc_bruta = cand["desc_bruta"]
-        item_rss = cand["item"]
+        item = cand["item"]
 
         if link in set_links or eh_mesma_noticia(title, titulos_rodada):
             continue
 
-        foto_rss, video_rss = extrair_midias_rss(item_rss, desc_bruta)
-        async with sem:
-            texto_artigo, foto_og, _ = await asyncio.to_thread(
-                _sync_extrair_artigo_completo, link, desc_bruta, title
-            )
+        foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
+        texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
+        foto = foto or foto_og
 
-        foto_final = foto_rss or foto_og
-        sintese = await asyncio.to_thread(_sync_gerar_sintese, cliente_gemini, title, texto_artigo)
-        categoria = categorizar_materia(title, f"{texto_artigo[:400]} {sintese}")
+        if not foto and not video and not audio:
+            continue
 
-        legenda_midia = montar_post_html(categoria, title, sintese, LIMITE_LEGENDA_TELEGRAM)
-        link_invisivel = f'<a href="{html.escape(link)}">&#8205;</a>'
-        texto_mensagem = link_invisivel + montar_post_html(categoria, title, sintese, LIMITE_TEXTO_TELEGRAM - 150)
+        resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
+        if not resumo_formatado or len(resumo_formatado) < 110:
+            continue
 
-        selecionadas.append({
+        categoria = categorizar_materia(title, resumo_formatado)
+
+        t_limpo = title.strip()
+        if " - " in t_limpo:
+            t_limpo, _ = t_limpo.rsplit(" - ", 1)
+        if t_limpo and t_limpo[-1] not in ".!?":
+            t_limpo += "."
+
+        # Texto 100% nativo sem nenhum link externo
+        post = (
+            f"{categoria}\n\n"
+            f"<b>{html.escape(t_limpo)}</b>\n\n"
+            f"{html.escape(resumo_formatado)}"
+        )
+
+        noticias.append({
             "link": link,
             "titulo": title,
-            "legenda_midia": legenda_midia,
-            "texto_mensagem": texto_mensagem,
-            "imagem": foto_final,
-            "video": video_rss,
+            "texto": post,
+            "imagem": foto,
+            "video": video,
+            "audio": audio
         })
         titulos_rodada.append(title)
         set_links.add(link)
 
-        if len(selecionadas) >= MAX_NOTICIAS_POR_VEZ:
+        if len(noticias) >= limite:
             break
 
-    if not selecionadas:
-        logger.info("Nenhuma notícia inédita para postar neste ciclo.")
-        return 0
-
-    selecionadas.reverse()
-    enviadas = 0
-    for noticia in selecionadas:
-        if await publicar_noticia_telegram(token, chat_id, noticia):
-            links_historico.append(noticia["link"])
-            titulos_historico.append(noticia["titulo"])
-            salvar_historico(links_historico, titulos_historico)
-            enviadas += 1
-            logger.info(f"Postada com sucesso: {noticia['titulo']}")
-            await asyncio.sleep(3)
-
-    return enviadas
+    noticias.reverse()
+    return noticias, links_historico, titulos_historico
 
 
-async def main() -> None:
-    token, chat_id, cliente_gemini = obter_credenciais()
+def enviar_post(token, chat_id, item):
+    """Envia mídia nativa (áudio, vídeo ou foto) + botão do grupo, sem links para sites externos."""
+    botao_sorteado = gerar_botao_grupo_aleatorio()
 
-    for ciclo in range(1, CICLOS_INTERNOS + 1):
-        logger.info(f"=== Iniciando ciclo {ciclo}/{CICLOS_INTERNOS} ===")
-        await executar_ciclo_unico(token, chat_id, cliente_gemini)
-        if ciclo < CICLOS_INTERNOS:
-            logger.info(f"Aguardando {INTERVALO_SEGUNDOS}s para o próximo ciclo de 5 minutos...")
-            await asyncio.sleep(INTERVALO_SEGUNDOS)
+    if item.get("audio"):
+        url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
+        payload_aud = {
+            "chat_id": chat_id,
+            "audio": item["audio"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": botao_sorteado
+        }
+        status, _ = http_post_json(url_aud, payload_aud, timeout=25)
+        if status == 200:
+            return True
+
+    if item.get("video"):
+        url_vid = f"https://api.telegram.org/bot{token}/sendVideo"
+        payload_vid = {
+            "chat_id": chat_id,
+            "video": item["video"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": botao_sorteado
+        }
+        status, _ = http_post_json(url_vid, payload_vid, timeout=30)
+        if status == 200:
+            return True
+
+    if item.get("imagem"):
+        url_photo = f"https://api.telegram.org/bot{token}/sendPhoto"
+        payload_photo = {
+            "chat_id": chat_id,
+            "photo": item["imagem"],
+            "caption": item["texto"],
+            "parse_mode": "HTML",
+            "reply_markup": botao_sorteado
+        }
+        status, _ = http_post_json(url_photo, payload_photo, timeout=20)
+        if status == 200:
+            return True
+
+        # Se o site da notícia bloquear o download direto pelo Telegram, baixa a foto e sobe o arquivo binário
+        try:
+            img_bytes = http_get(item["imagem"], timeout=10)
+            fields = {
+                "chat_id": chat_id,
+                "caption": item["texto"],
+                "parse_mode": "HTML",
+                "reply_markup": json.dumps(botao_sorteado)
+            }
+            status_up, _ = http_post_multipart(url_photo, fields, "photo", img_bytes)
+            if status_up == 200:
+                return True
+        except Exception as e:
+            logging.warning(f"Falha no upload binário da imagem: {e}")
+
+    return False
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    env_token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
+    token = env_token if env_token else _PADRAO_TOKEN
+
+    env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
+    chat_id = env_chat if env_chat else _PADRAO_CHAT_ID
+
+    noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
+    if not noticias:
+        logging.info("Nenhuma notícia nova nos últimos minutos. Aguardando próximo ciclo de 5 min.")
+        sys.exit(0)
+
+    logging.info(f"Encontradas {len(noticias)} notícias quentes para envio neste ciclo.")
+    for noticia in noticias:
+        sucesso = enviar_post(token, chat_id, noticia)
+        if sucesso:
+            links_historico.append(noticia["link"])
+            titulos_historico.append(noticia["titulo"])
+            salvar_historico(links_historico, titulos_historico)
+            logging.info(f"Notícia enviada com imagem nativa e botão: {noticia['titulo']}")
+            time.sleep(3)
+        else:
+            logging.error(f"Falha ao enviar post com mídia: {noticia['titulo']}")
