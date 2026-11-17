@@ -3,6 +3,7 @@ import sys
 import json
 import html
 import time
+import random
 import logging
 import re
 import base64
@@ -24,20 +25,20 @@ _PADRAO_CHAT_ID = "-1003533060222"
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
-MAX_IDADE_MINUTOS = 60    # Aceita notícias dos últimos 60 min (sem repetir nada que já está no histórico)
+MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 min (fica sem postar se não houver novidade)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
-# Botão clicável nativo do Telegram que aparece embaixo de cada matéria
-BOTAO_GRUPO = {
-    "inline_keyboard": [
-        [
-            {
-                "text": "💬 Debater notícia no Grupo",
-                "url": "https://t.me/OPapodeInvestidor"
-            }
-        ]
-    ]
-}
+# Lista de CTAs persuasivas sorteadas aleatoriamente a cada notícia postada
+TEXTOS_BOTAO_GRUPO = [
+    "💬 E agora? Veja a opinião do grupo",
+    "📊 Como isso afeta o mercado? Debata aqui",
+    "🗣️ Trocar ideia com outros investidores",
+    "📈 Oportunidade ou risco? Opine no grupo",
+    "💡 Veja a visão da nossa comunidade",
+    "🔥 Assunto rendendo! Participe no grupo",
+    "🤝 Entrar na comunidade de investidores",
+    "💬 Comente essa notícia no nosso Grupo"
+]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -94,6 +95,21 @@ STOPWORDS_DEDUP = {
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
 }
+
+
+def gerar_botao_grupo_aleatorio():
+    """Sorteia uma frase persuasiva diferente para o botão a cada postagem."""
+    texto_sorteado = random.choice(TEXTOS_BOTAO_GRUPO)
+    return {
+        "inline_keyboard": [
+            [
+                {
+                    "text": texto_sorteado,
+                    "url": "https://t.me/OPapodeInvestidor"
+                }
+            ]
+        ]
+    }
 
 
 def contem_termo(texto, lista_termos):
@@ -190,7 +206,7 @@ def limpar_caudas_wordpress(texto):
 
 def limpar_rastros_data_e_autoria(texto):
     """
-    Apaga apenas carimbos como '17/11/2026 19h26 • Atualizado 5 minutos atrás'
+    Apaga carimbos como '17/11/2026 19h26 • Atualizado 5 minutos atrás'
     sem bloquear a notícia.
     """
     if not texto:
@@ -500,7 +516,7 @@ def categorizar_materia(titulo, texto):
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
-    Captura todas as notícias inéditas dentro da janela de tempo, priorizando o G1.
+    Se não houver notícias novas nos últimos 25 minutos, fica em silêncio até o próximo ciclo.
     """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
@@ -549,7 +565,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    # Ordena das mais recentes para as mais antigas (dando preferência ao G1 em empates de horário)
+    # Ordena das mais recentes para as mais antigas (dando preferência ao G1 em empates)
     candidatos.sort(key=lambda x: (x["dt_pub"], x["eh_g1"]), reverse=True)
 
     noticias = []
@@ -605,7 +621,9 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """Envia com áudio, vídeo ou foto de capa em alta definição + botão clicável para o grupo."""
+    """Envia com áudio, vídeo ou foto de capa + botão com CTA sorteada na hora."""
+    botao_sorteado = gerar_botao_grupo_aleatorio()
+
     if item.get("audio"):
         url_aud = f"https://api.telegram.org/bot{token}/sendAudio"
         payload_aud = {
@@ -613,7 +631,7 @@ def enviar_post(token, chat_id, item):
             "audio": item["audio"],
             "caption": item["texto"],
             "parse_mode": "HTML",
-            "reply_markup": BOTAO_GRUPO
+            "reply_markup": botao_sorteado
         }
         status, resp = http_post_json(url_aud, payload_aud, timeout=25)
         if status == 200:
@@ -627,7 +645,7 @@ def enviar_post(token, chat_id, item):
             "video": item["video"],
             "caption": item["texto"],
             "parse_mode": "HTML",
-            "reply_markup": BOTAO_GRUPO
+            "reply_markup": botao_sorteado
         }
         status, resp = http_post_json(url_vid, payload_vid, timeout=30)
         if status == 200:
@@ -641,7 +659,7 @@ def enviar_post(token, chat_id, item):
             "photo": item["imagem"],
             "caption": item["texto"],
             "parse_mode": "HTML",
-            "reply_markup": BOTAO_GRUPO
+            "reply_markup": botao_sorteado
         }
         status, resp = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
@@ -670,7 +688,7 @@ if __name__ == "__main__":
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada com imagem e botão: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem e botão sorteado: {noticia['titulo']}")
             time.sleep(3)
         else:
             logging.error("Falha ao enviar post com mídia para o Telegram.")
