@@ -28,7 +28,7 @@ MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 # CTA com link camuflado no final de cada notícia
-CTA_GRUPO = '💬 <a href="https://t.me/OPapodeInvestidor">Veja o que outros investidores estão falando sobre isso na nossa comunidade</a>'
+CTA_GRUPO = '💬 <a href="https://t.me/OPapodeInvestidor">Troque ideia sobre o mercado e compartilhe sua visão com outros investidores</a>'
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
