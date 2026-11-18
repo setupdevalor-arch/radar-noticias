@@ -25,8 +25,11 @@ _PADRAO_CHAT_ID = "-1003533060222"
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
-MAX_IDADE_MINUTOS = 90    # Janela de 90 min para absorver atrasos de cache do RSS e fila do GitHub
+MAX_IDADE_MINUTOS = 90    # Janela de 90 min para absorver o cache do RSS
 TZ_BRASILIA = timezone(timedelta(hours=-3))
+
+# Imagem de contingência caso o portal bloqueie a raspagem da foto nos EUA
+IMAGEM_PADRAO_MERCADO = "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"
 
 # Lista de CTAs persuasivas sorteadas aleatoriamente no botão de cada notícia
 TEXTOS_BOTAO_GRUPO = [
@@ -44,7 +47,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# Feeds de Notícias Abertos (Sem Paywall): Negócios, Economia, Política, Geopolítica, M&A e Cripto
+# Feeds de Notícias Abertos (Atualizados sem erro 404/410)
 FEEDS = [
     # 1. Economia & Mercado Financeiro
     "https://www.infomoney.com.br/feed/",
@@ -60,14 +63,13 @@ FEEDS = [
     # 3. Política & Decisões de Brasília
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
-    "https://www.cnnbrasil.com.br/politica/feed/",
+    "https://www.cnnbrasil.com.br/feed/",
     # 4. Geopolítica & Mercado Internacional
     "https://g1.globo.com/rss/g1/mundo/",
-    "https://www.cnnbrasil.com.br/internacional/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     # 5. Criptoativos & Ativos Digitais
     "https://portaldobitcoin.uol.com.br/feed/",
-    "https://br.cointelegraph.com/rss"
+    "https://livecoins.com.br/feed/"
 ]
 
 # BLOQUEIO RIGOROSO DE PROPAGANDAS E RUÍDOS
@@ -92,7 +94,8 @@ STOPWORDS_DEDUP = {
     "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
     "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
-    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos"
+    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos", "mercado",
+    "brasil", "governo", "ações", "acoes", "dólar", "dolar", "hoje", "ano", "anos"
 }
 
 
@@ -111,7 +114,6 @@ def gerar_botao_grupo_aleatorio():
 
 
 def contem_termo(texto, lista_termos):
-    """Verifica palavras inteiras com limite de palavra (evita que 'eth' bata em 'ethics' ou 'fed' em 'federal')."""
     for termo in lista_termos:
         if re.search(r'\b' + re.escape(termo) + r'\b', texto, flags=re.IGNORECASE):
             return True
@@ -165,7 +167,6 @@ def salvar_historico(links, titulos):
 
 
 def extrair_data_publicacao(item):
-    """Extrai a data/hora exata de publicação do item RSS em UTC."""
     for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
@@ -212,28 +213,28 @@ def limpar_html(txt):
 
 
 def paragrafo_parece_codigo_ou_lixo(txt):
-    """Bloqueia qualquer trecho que contenha código JSON, JavaScript, URLs soltas ou avisos de paywall."""
-    if not txt or len(txt) < 45:
+    if not txt or len(txt) < 35:
         return True
     sinais_codigo = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
         "sameAs", "http://", "https://", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
-        "cssSelector", "gostaria de receber", "últimas notícias", "assine a", "exclusivo para assinantes",
-        "leia também", "inscreva-se", "newsletter", "compartilhe", "foto:", "crédito:",
-        "publicidade", "todos os direitos reservados", "the post", "apareceu primeiro",
-        "podcasts", "weekend"
+        "cssSelector", "gostaria de receber", "assine a", "exclusivo para assinantes",
+        "inscreva-se", "todos os direitos reservados", "the post", "apareceu primeiro"
     )
     t_low = txt.lower()
     for s in sinais_codigo:
         if s in t_low:
             return True
-    if txt.count('"') >= 6 or txt.count('[') >= 2 or txt.count(']') >= 2:
+    if txt.count('[') >= 3 or txt.count(']') >= 3:
         return True
     return False
 
 
 def eh_mesma_noticia(novo_titulo, titulos_anteriores):
-    """Evita postar notícias repetidas sobre o mesmo fato."""
+    """
+    Compara apenas com as últimas 40 notícias postadas e exige alta similaridade
+    para não bloquear notícias novas por causa de 2 palavras comuns.
+    """
     tokens_novo = {
         p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', novo_titulo.lower())
         if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -241,7 +242,7 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
     if not tokens_novo:
         return False
 
-    for antigo in titulos_anteriores:
+    for antigo in titulos_anteriores[-40:]:
         tokens_antigo = {
             p for p in re.findall(r'[a-záéíóúâêîôûãõç]+', antigo.lower())
             if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -250,13 +251,12 @@ def eh_mesma_noticia(novo_titulo, titulos_anteriores):
             continue
         inter = tokens_novo & tokens_antigo
         ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
-        if len(inter) >= 2 and ratio >= 0.35:
+        if len(inter) >= 4 and ratio >= 0.55:
             return True
     return False
 
 
 def extrair_og_image_da_pagina(raw_html):
-    """Busca a foto oficial de capa (OpenGraph / Twitter Card) na página do artigo."""
     for padrao in [
         r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
         r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
@@ -270,7 +270,6 @@ def extrair_og_image_da_pagina(raw_html):
 
 
 def extrair_midias_do_rss(item, desc_bruta):
-    """Detecta imagem, vídeo ou áudio dentro das tags do RSS."""
     foto_url = None
     video_url = None
     audio_url = None
@@ -307,10 +306,6 @@ def extrair_midias_do_rss(item, desc_bruta):
 
 
 def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
-    """
-    Visita a matéria para obter a foto de capa (og:image) e parágrafos jornalísticos limpos,
-    eliminando totalmente tags <head>, <script>, JSON-LD, menus e rodapés.
-    """
     foto_og = None
     raw_html = ""
 
@@ -352,20 +347,13 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         if blocos_limpos:
             return " ".join(blocos_limpos), foto_og
 
-    # Fallback: usa a descrição do RSS se for texto jornalístico válido
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r'^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*', '', t_desc, flags=re.IGNORECASE)
     t_desc = re.sub(r'^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+', '', t_desc, flags=re.IGNORECASE)
-    if paragrafo_parece_codigo_ou_lixo(t_desc):
-        return "", foto_og
     return t_desc, foto_og
 
 
 def formatar_resumo_500_600(texto_bruto, titulo):
-    """
-    Produz resumo com início, meio e fim completos, na média exata de 500 a 600 caracteres.
-    Nunca ultrapassa o limite de legenda de foto do Telegram.
-    """
     if not texto_bruto:
         return ""
 
@@ -387,7 +375,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
     for f in frases:
         f = f.strip()
-        if not f or paragrafo_parece_codigo_ou_lixo(f):
+        if not f or len(f) < 25:
             continue
         if len(f) > 620:
             f = f[:580].rsplit(" ", 1)[0].rstrip(",;:-") + "."
@@ -402,6 +390,8 @@ def formatar_resumo_500_600(texto_bruto, titulo):
             break
 
     if not frases_selecionadas:
+        if len(t) >= 45:
+            return t[:550].rstrip(",;:-") + ("." if t[-1] not in ".!?" else "")
         return ""
 
     if len(frases_selecionadas) >= 3:
@@ -421,10 +411,6 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
 
 def categorizar_materia(titulo, texto):
-    """
-    Categoriza com base nos 9 pilares estratégicos usando palavras inteiras (\b)
-    e dando prioridade ao título da matéria.
-    """
     for escopo in (titulo, titulo + " " + texto):
         if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
             return "🚨 <b>RADAR URGENTE</b>"
@@ -477,11 +463,6 @@ def categorizar_materia(titulo, texto):
 
 
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
-    """
-    Varredura 24h por dia, de segunda a segunda.
-    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo),
-    exigindo texto jornalístico limpo e foto de capa.
-    """
     links_historico, titulos_historico = carregar_historico()
     titulos_rodada = list(titulos_historico)
     agora_utc = datetime.now(timezone.utc)
@@ -495,15 +476,19 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
                 link_el = item.find("link")
                 title_el = item.find("title")
                 desc_el = item.find("description")
+                content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
 
                 link = link_el.text.strip() if link_el is not None and link_el.text else ""
                 title = title_el.text.strip() if title_el is not None and title_el.text else ""
-                desc_bruta = desc_el.text if desc_el is not None and desc_el.text else ""
+                desc_bruta = (
+                    desc_el.text if desc_el is not None and desc_el.text
+                    else (content_el.text if content_el is not None and content_el.text else "")
+                )
 
                 if not link or not title or link in links_historico:
                     continue
 
-                if len(title) < 25:
+                if len(title) < 20:
                     continue
 
                 dt_pub = extrair_data_publicacao(item)
@@ -538,17 +523,16 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         item = cand["item"]
 
         if eh_mesma_noticia(title, titulos_rodada):
+            logging.info(f"Ignorada (assunto já postado recentemente): {title}")
             continue
 
         foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
         texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
-        foto = foto or foto_og
-
-        if not foto and not video and not audio:
-            continue
+        foto = foto or foto_og or IMAGEM_PADRAO_MERCADO
 
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-        if not resumo_formatado or len(resumo_formatado) < 120:
+        if not resumo_formatado or len(resumo_formatado) < 55:
+            logging.info(f"Ignorada (resumo insuficiente): {title}")
             continue
 
         categoria = categorizar_materia(title, resumo_formatado)
@@ -624,7 +608,15 @@ def enviar_post(token, chat_id, item):
         status, corpo = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
             return True
-        logging.warning(f"Erro ao enviar foto da URL {item['imagem']} (HTTP {status}): {corpo}")
+
+        # Se a foto específica do jornal der erro no Telegram, envia com a foto padrão de mercado
+        if item["imagem"] != IMAGEM_PADRAO_MERCADO:
+            payload_photo["photo"] = IMAGEM_PADRAO_MERCADO
+            status_padrao, _ = http_post_json(url_photo, payload_photo, timeout=20)
+            if status_padrao == 200:
+                return True
+
+        logging.warning(f"Erro ao enviar foto (HTTP {status}): {corpo}")
 
     return False
 
