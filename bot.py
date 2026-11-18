@@ -98,8 +98,10 @@ CAMINHOS_URL_BLOQUEADOS = (
     "/policia/", "/apostas/",
 )
 
-# Termos de propaganda/lixo (sem bloquear palavras financeiras como 'oferta', 'desconto' ou 'crédito')
+# Termos de propaganda, vitrines de corretora e lixo
 BLOQUEADOS_PROPAGANDA = (
+    "renda fixa hoje", "dentro da plataforma da xp", "plataforma da xp",
+    "lcas na xp", "lcis na xp", "cdbs na xp", "taxas de cdbs",
     "black friday", "black xp", "cupom de desconto", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
     "pontos e milhas", "acumule pontos", "compras parceladas",
@@ -221,11 +223,6 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "déficit": 14,
             "superávit": 14,
             "tesouro direto": 15,
-            "renda fixa": 15,
-            "cdi": 14,
-            "cdb": 12,
-            "lci": 12,
-            "lca": 12,
             "câmbio": 12,
             "dólar": 12,
             "ibovespa": 14,
