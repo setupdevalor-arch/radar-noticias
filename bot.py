@@ -92,7 +92,6 @@ FEEDS = [
     "https://livecoins.com.br/feed/",
 ]
 
-# Caminhos de URL que nunca devem entrar em um canal de mercado financeiro
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
@@ -115,7 +114,6 @@ BLOQUEADOS_PROPAGANDA = (
     "rebaixamento", "data fifa", "libertadores", "copa do brasil", "champions league",
     "artilheiro", "goleiro", "estádio", "torcida", "série a", "série b", "35ª rodada",
     "tabela do campeonato", "eliminatórias", "seleção brasileira",
-    # Operações policiais, crimes e esquemas de apostas (bets)
     "esquema de bets", "apostas online", "apostas de quota fixa", "cassino online",
     "jogo do tigrinho", "mandados de busca", "mandado de busca", "busca e apreensão",
     "mandado de prisão", "operação cash out", "operação da pf", "equipes policiais",
@@ -161,8 +159,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "lajida": 18,
             "prejuízo": 16,
             "receita líquida": 18,
-            "receita bruta": 16,
-            "receita operacional": 16,
+            "receita": 10,
             "margem": 12,
             "margem líquida": 16,
             "margem ebitda": 16,
@@ -246,6 +243,23 @@ REGEX_YOUTUBE_ID = re.compile(
     flags=re.IGNORECASE,
 )
 
+# Pronomes e inícios órfãos que deixam o parágrafo sem sentido se o anterior foi pulado
+REGEX_INICIO_ORFAO = re.compile(
+    r"^(?:Segundo ele|Segundo ela|Para ele|Para ela|De acordo com ele|De acordo com ela|"
+    r"Ainda segundo ele|Na visão dele|Na avaliação dele|Ele acrescenta|Ela acrescenta|"
+    r"Ele afirma|Ela afirma|No mesmo intervalo|Na mesma linha|Outro ponto citado)\b",
+    flags=re.IGNORECASE,
+)
+
+# Marcadores de conclusão, impacto de mercado e desfecho para o 3º parágrafo (Fim)
+MARCADORES_DESFECHO = (
+    "com isso", "dessa forma", "diante disso", "nesse cenário", "neste cenário",
+    "no acumulado", "por fim", "como resultado", "em reação", "após o anúncio",
+    "para o mercado", "na avaliação", "a expectativa", "os papéis", "as ações",
+    "fechou em", "encerrou em", "operam em", "cotadas a", "recomendação",
+    "preço-alvo", "impacto", "perspectiva", "próximos passos", "a decisão",
+)
+
 
 @dataclass
 class AnaliseHeuristica:
@@ -284,7 +298,7 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
-    # Evita confundir "Receita Federal" com "Receita" de balanço corporativo
+    # Ignora "Receita Federal" para não confundir com "receita" (faturamento de balanço)
     titulo_low = re.sub(r"\breceita federal\b", "órgão fiscal", titulo.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão fiscal", corpo_texto.lower())
 
@@ -308,8 +322,6 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     bonus_tickers = min(len(tickers) * 15, 45)
     soma_taxonomia = sum(pontos_por_categoria.values())
 
-    # TRAVA OBRIGATÓRIA: Se a matéria não tiver NENHUM termo da taxonomia financeira
-    # nem ticker da B3, o score é ZERO (evita que notícias de esportes com '%' passem).
     if soma_taxonomia == 0 and bonus_tickers == 0:
         return AnaliseHeuristica(
             score_total=0,
@@ -568,33 +580,44 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
 
 
 # ==============================================================================
-# ESTRUTURAÇÃO: COMEÇO (LEAD), MEIO (MÉTRICAS & TICKERS) E FIM (CONCLUSÃO)
+# NARRATIVA DE 3 ATOS: COMEÇO (LEAD), MEIO (CONTEXTO & DADOS) E FIM (CONCLUSÃO)
 # ==============================================================================
-def truncar_frase_limpa(texto: str, max_chars: int) -> str:
-    """
-    Garante que o parágrafo NUNCA termine com uma frase cortada no meio
-    (ex: '...mandados de.', '...enviaram cerca de.', '...visam frear.').
-    Acumula apenas frases completas que caibam em max_chars.
-    """
+def dividir_em_frases_completas(texto: str) -> List[str]:
     texto = " ".join(texto.split()).strip()
     if not texto:
-        return ""
-    if len(texto) <= max_chars:
-        return texto if texto[-1] in ".!?" else texto + "."
+        return []
+    partes = re.split(
+        r"(?<!\bS\.A)(?<!\bCia)(?<!\bDr)(?<!\bSr)(?<!\bSra)(?<!\bInc)(?<!\bLtd)(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9\"'“‘(])",
+        texto,
+    )
+    frases: List[str] = []
+    for p in partes:
+        p = p.strip()
+        if not p or "[…]" in p or "[...]" in p:
+            continue
+        if re.search(
+            r"\b(?:de|da|do|das|dos|em|na|no|para|por|com|que|e|ou|cerca|visam|foram|está|são)\.?$",
+            p,
+            flags=re.IGNORECASE,
+        ):
+            continue
+        if p[-1] not in ".!?":
+            p += "."
+        frases.append(p)
+    return frases
 
-    frases = [
-        f.strip()
-        for f in re.split(
-            r"(?<!\bS\.A)(?<!\bCia)(?<!\bDr)(?<!\bSr)(?<!\bSra)(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9\"'“‘(])",
-            texto,
-        )
-        if f.strip()
-    ]
+
+def truncar_frase_limpa(texto: str, max_chars: int) -> str:
+    """
+    Constrói um parágrafo somente com frases 100% completas e com sentido fechado.
+    Jamais corta uma frase no meio.
+    """
+    frases = dividir_em_frases_completas(texto)
+    if not frases:
+        return ""
 
     acumulado = ""
     for f in frases:
-        if f[-1] not in ".!?":
-            f += "."
         candidato = f"{acumulado} {f}".strip() if acumulado else f
         if len(candidato) <= max_chars:
             acumulado = candidato
@@ -605,23 +628,25 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
         return acumulado
 
     primeira = frases[0]
+    if len(primeira) <= max_chars + 35:
+        return primeira
+
     trecho = primeira[:max_chars]
-    for sep in ("; ", ", ", " – ", " - "):
+    for sep in ("; ", ", mas ", ", enquanto ", ", quando ", ", o que ", ", segundo ", ", "):
         pos = trecho.rfind(sep)
-        if pos >= int(max_chars * 0.6):
-            return trecho[:pos].rstrip(",;:-–— ") + "."
+        if pos >= int(max_chars * 0.65):
+            corte = trecho[:pos].rstrip(",;:-–— ")
+            if not re.search(
+                r"\b(?:de|da|do|das|dos|em|na|no|para|por|com|que|e|ou|cerca|visam|foram|está|são)\b$",
+                corte,
+                flags=re.IGNORECASE,
+            ):
+                return corte + "."
 
-    cortado = trecho.rsplit(" ", 1)[0].rstrip(",;:-–— ")
-    cortado = re.sub(
-        r"\s+\b(?:de|da|do|das|dos|em|na|no|nas|nos|para|por|com|sem|sob|sobre|entre|até|após|contra|que|se|e|ou|mas|como|quando|onde|a|o|as|os|um|uma|cerca|mais|menos|visam|foram|são|está|estão)\b$",
-        "",
-        cortado,
-        flags=re.IGNORECASE,
-    )
-    return cortado.rstrip(",;:-–— ") + "."
+    return ""
 
 
-def pontuar_paragrafo_meio(paragrafo: str) -> Tuple[int, int]:
+def pontuar_paragrafo_meio(paragrafo: str) -> int:
     qtd_metricas = len(REGEX_METRICAS_NUMERCIAS.findall(paragrafo))
     qtd_tickers = len(REGEX_TICKER_B3.findall(paragrafo))
     p_low = paragrafo.lower()
@@ -631,68 +656,123 @@ def pontuar_paragrafo_meio(paragrafo: str) -> Tuple[int, int]:
         for termo, peso in cat["termos"].items()
         if termo in p_low
     )
-    score = (qtd_metricas * 12) + (qtd_tickers * 18) + qtd_taxonomia
-    return (score, -abs(len(paragrafo) - 220))
+    return (qtd_metricas * 12) + (qtd_tickers * 18) + qtd_taxonomia
+
+
+def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[str, str, str]]:
+    """
+    Garante que toda notícia tenha estrutura lógica completa (Começo, Meio e Fim):
+    1. COMEÇO: O fato principal (Lead).
+    2. MEIO: O desenvolvimento direto logo após o lead (com os números/motivos, sem saltos desconexos).
+    3. FIM: O desfecho real / impacto de mercado (sem apagar a conclusão e sem pegar rodapé aleatório).
+    Retorna None caso a matéria não tenha conteúdo suficiente para 3 atos coerentes.
+    """
+    blocos: List[str] = []
+    for p in paragrafos:
+        bloco = truncar_frase_limpa(p, 250)
+        if bloco and len(bloco) >= 50 and bloco not in blocos:
+            blocos.append(bloco)
+
+    # Se o site agrupou tudo em 1 ou 2 parágrafos grandes, separa pelas frases mantendo a ordem cronológica
+    if len(blocos) < 3:
+        todas_frases: List[str] = []
+        for p in paragrafos:
+            for f in dividir_em_frases_completas(p):
+                if len(f) >= 45 and f not in todas_frases:
+                    todas_frases.append(f)
+        if len(todas_frases) < 3:
+            return None
+        p_comeco = truncar_frase_limpa(todas_frases[0], 235)
+        p_meio = truncar_frase_limpa(todas_frases[1], 245)
+        p_fim = truncar_frase_limpa(" ".join(todas_frases[2:4]), 235)
+        if p_comeco and p_meio and p_fim:
+            return p_comeco, p_meio, p_fim
+        return None
+
+    # 1. COMEÇO (Lead da notícia)
+    p_comeco = truncar_frase_limpa(blocos[0], 235)
+
+    # 2. MEIO: Busca nos parágrafos imediatamente seguintes ao começo (índices 1 a 3) para manter o fio da história
+    limite_meio = min(4, len(blocos) - 1)
+    melhor_idx_meio = 1
+    melhor_score_meio = -999
+
+    for idx in range(1, limite_meio):
+        cand = blocos[idx]
+        # Se pulou o parágrafo 1 e o candidato começa com pronome órfão ("Segundo ele"), penaliza para não ficar sem nexo
+        penalidade_orfao = -60 if (idx > 1 and REGEX_INICIO_ORFAO.search(cand)) else 0
+        bonus_sequencia = 16 if idx == 1 else (8 if idx == 2 else 0)
+        score = bonus_sequencia + pontuar_paragrafo_meio(cand) + penalidade_orfao
+        if score > melhor_score_meio:
+            melhor_score_meio = score
+            melhor_idx_meio = idx
+
+    p_meio = truncar_frase_limpa(blocos[melhor_idx_meio], 245)
+
+    # 3. FIM: Busca o desfecho nos parágrafos logo após o Meio (evitando rodapés perdidos no fim da página)
+    janela_fim = blocos[melhor_idx_meio + 1 : min(melhor_idx_meio + 5, len(blocos))]
+    if not janela_fim:
+        janela_fim = [blocos[-1]]
+
+    melhor_fim = janela_fim[0]
+    melhor_score_fim = -999
+    for offset, cand in enumerate(janela_fim):
+        penalidade_orfao = -50 if (offset > 0 and REGEX_INICIO_ORFAO.search(cand)) else 0
+        c_low = cand.lower()
+        bonus_desfecho = 22 if any(m in c_low for m in MARCADORES_DESFECHO) else 0
+        bonus_dados = pontuar_paragrafo_meio(cand) // 2
+        bonus_proximidade = 12 - (offset * 3)
+        score = bonus_desfecho + bonus_dados + bonus_proximidade + penalidade_orfao
+        if score > melhor_score_fim:
+            melhor_score_fim = score
+            melhor_fim = cand
+
+    p_fim = truncar_frase_limpa(melhor_fim, 235)
+
+    if not (p_comeco and p_meio and p_fim):
+        return None
+    if len({p_comeco.lower(), p_meio.lower(), p_fim.lower()}) < 3:
+        return None
+
+    return p_comeco, p_meio, p_fim
 
 
 def montar_mensagem_investidor(
     titulo: str, paragrafos: List[str], analise: AnaliseHeuristica
-) -> str:
+) -> Optional[str]:
     t_limpo = limpar_html(titulo.strip())
     if " - " in t_limpo:
         t_limpo, _ = t_limpo.rsplit(" - ", 1)
     if t_limpo and t_limpo[-1] not in ".!?":
         t_limpo += "."
 
-    p_comeco = truncar_frase_limpa(paragrafos[0], 250)
-    p_meio = ""
-    p_fim = ""
+    narrativa = extrair_comeco_meio_fim_coerentes(paragrafos)
+    if not narrativa:
+        return None
 
-    if len(paragrafos) == 1:
-        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", paragrafos[0]) if len(f.strip()) > 25]
-        if len(frases) >= 3:
-            p_comeco = truncar_frase_limpa(frases[0], 230)
-            p_meio = truncar_frase_limpa(frases[1], 230)
-            p_fim = truncar_frase_limpa(" ".join(frases[2:]), 220)
-        elif len(frases) == 2:
-            p_comeco = truncar_frase_limpa(frases[0], 240)
-            p_fim = truncar_frase_limpa(frases[1], 240)
-    elif len(paragrafos) == 2:
-        p_fim = truncar_frase_limpa(paragrafos[1], 260)
-    else:
-        candidatos_meio = paragrafos[1:-1]
-        melhor_meio = max(candidatos_meio, key=pontuar_paragrafo_meio)
-        p_meio = truncar_frase_limpa(melhor_meio, 260)
-
-        p_fim_bruto = paragrafos[-1]
-        if p_fim_bruto == melhor_meio and len(paragrafos) > 3:
-            p_fim_bruto = paragrafos[-2]
-        p_fim = truncar_frase_limpa(p_fim_bruto, 230)
+    p_comeco, p_meio, p_fim = narrativa
 
     titulo_html = formatar_tickers_no_texto(html.escape(t_limpo))
     comeco_html = formatar_tickers_no_texto(html.escape(p_comeco))
-    meio_html = formatar_tickers_no_texto(html.escape(p_meio)) if p_meio and p_meio.lower() != p_comeco.lower() else ""
-    fim_html = formatar_tickers_no_texto(html.escape(p_fim)) if p_fim else ""
+    meio_html = formatar_tickers_no_texto(html.escape(p_meio))
+    fim_html = formatar_tickers_no_texto(html.escape(p_fim))
 
-    partes_corpo = [comeco_html]
-    if meio_html:
-        partes_corpo.append(meio_html)
-    if fim_html and fim_html.lower() not in (comeco_html.lower(), meio_html.lower()):
-        partes_corpo.append(fim_html)
+    post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
 
-    corpo_unido = "\n\n".join(partes_corpo)
-    post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_unido}"
+    # Se ultrapassar 1024 caracteres, enxuga para a 1ª frase de cada ato sem NUNCA apagar o parágrafo do Fim
+    if len(post) > TELEGRAM_CAPTION_LIMIT:
+         p_comeco_curto = truncar_frase_limpa(p_comeco, 195) or p_comeco
+        p_meio_curto = truncar_frase_limpa(p_meio, 205) or p_meio
+        p_fim_curto = truncar_frase_limpa(p_fim, 195) or p_fim
+        comeco_html = formatar_tickers_no_texto(html.escape(p_comeco_curto))
+        meio_html = formatar_tickers_no_texto(html.escape(p_meio_curto))
+        fim_html = formatar_tickers_no_texto(html.escape(p_fim_curto))
+        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
 
-    if len(post) > TELEGRAM_CAPTION_LIMIT and fim_html:
-        corpo_sem_fim = "\n\n".join([p for p in (comeco_html, meio_html) if p])
-        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_sem_fim}"
+    if len(post) > TELEGRAM_CAPTION_LIMIT:
+        return None
 
-    while len(post) > TELEGRAM_CAPTION_LIMIT and len(p_meio) > 80:
-        p_meio = truncar_frase_limpa(p_meio[:-35], len(p_meio) - 35)
-        meio_html = formatar_tickers_no_texto(html.escape(p_meio))
-        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}"
-
-    return post[:TELEGRAM_CAPTION_LIMIT]
+    return post
 
 
 # ==============================================================================
@@ -966,7 +1046,6 @@ async def carregar_proximas_noticias(
         if not paragrafos:
             continue
 
-        # Verifica novamente se o corpo completo extraído não contém termos bloqueados (ex: futebol/esportes/operações policiais)
         if eh_propaganda_ou_lixo(title, " ".join(paragrafos), link):
             continue
 
@@ -981,6 +1060,10 @@ async def carregar_proximas_noticias(
             continue
 
         post_html = montar_mensagem_investidor(title, paragrafos, analise)
+        if not post_html:
+            logger.info("Descartada por não possuir narrativa completa (Começo, Meio e Fim): %s", title)
+            continue
+
         logger.info(
             "Aprovada [Score %d | %s | Tickers: %s]: %s",
             analise.score_total,
