@@ -38,7 +38,7 @@ logger = logging.getLogger("FinanceNewsBot")
 # CONSTANTES E CONFIGURAÇÕES DE AMBIENTE (GITHUB SECRETS / ENV)
 # ==============================================================================
 HISTORICO_ARQUIVO = Path(os.environ.get("HISTORICO_ARQUIVO", "historico_enviados.json"))
-GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/OPapodeInvestidor")
+GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx")
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
