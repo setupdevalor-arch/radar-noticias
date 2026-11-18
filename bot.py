@@ -130,11 +130,11 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# TAXONOMIA FINANCEIRA OBRIGATÓRIA (PESOS E EXPRESSÕES REGULARES)
+# TAXONOMIA FINANCEIRA OBRIGATÓRIA (PESOS E CORES POR TEMA)
 # ==============================================================================
 TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
-        "label": "💰 <b>PROVENTOS &amp; DIVIDENDOS</b>",
+        "label": "🟢 <b>PROVENTOS &amp; DIVIDENDOS</b>",
         "termos": {
             "dividendos": 18,
             "dividendo": 18,
@@ -151,7 +151,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "RESULTADOS_TRIMESTRAIS": {
-        "label": "📊 <b>RESULTADOS &amp; BALANÇOS</b>",
+        "label": "🔵 <b>RESULTADOS &amp; BALANÇOS</b>",
         "termos": {
             "balanço": 15,
             "lucro líquido": 20,
@@ -170,7 +170,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "EVENTOS_CORPORATIVOS": {
-        "label": "🤝 <b>EVENTOS CORPORATIVOS &amp; M&amp;A</b>",
+        "label": "🟣 <b>EVENTOS CORPORATIVOS &amp; M&amp;A</b>",
         "termos": {
             "fato relevante": 24,
             "fusão": 18,
@@ -193,7 +193,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "MACROECONOMIA": {
-        "label": "🏛️ <b>MACROECONOMIA &amp; MERCADOS</b>",
+        "label": "🟠 <b>MACROECONOMIA &amp; MERCADOS</b>",
         "termos": {
             "copom": 20,
             "selic": 20,
@@ -336,7 +336,7 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
         cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
     else:
         categoria_dominante = "TICKERS_B3"
-        cat_label = "📈 <b>RADAR B3 &amp; AÇÕES</b>"
+        cat_label = "🔵 <b>RADAR B3 &amp; AÇÕES</b>"
 
     return AnaliseHeuristica(
         score_total=score_final,
@@ -748,7 +748,13 @@ def montar_mensagem_investidor(
     meio_html = formatar_tickers_no_texto(html.escape(p_meio))
     fim_html = formatar_tickers_no_texto(html.escape(p_fim))
 
-    post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
+    if analise.tickers:
+        pills_tickers = " ".join(f"<code>#{t}</code>" for t in analise.tickers[:3])
+        cabecalho_tema = f"<blockquote>{analise.categoria_label}  ·  {pills_tickers}</blockquote>"
+    else:
+        cabecalho_tema = f"<blockquote>{analise.categoria_label}</blockquote>"
+
+    post = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
 
     if len(post) > TELEGRAM_CAPTION_LIMIT:
         p_comeco_curto = truncar_frase_limpa(p_comeco, 195) or p_comeco
@@ -757,7 +763,7 @@ def montar_mensagem_investidor(
         comeco_html = formatar_tickers_no_texto(html.escape(p_comeco_curto))
         meio_html = formatar_tickers_no_texto(html.escape(p_meio_curto))
         fim_html = formatar_tickers_no_texto(html.escape(p_fim_curto))
-        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
+        post = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
 
     if len(post) > TELEGRAM_CAPTION_LIMIT:
         return None
