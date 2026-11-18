@@ -44,7 +44,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "28"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "26"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
@@ -57,7 +57,7 @@ TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 TEXTOS_BOTAO_GRUPO = [
     "💬 E agora? Veja a opinião do grupo",
-    "📊 Como isso afeta o mercado? Debata aqui",
+    "📊 Como isso afeta nossos investimentos? Debata aqui",
     "🗣️ Trocar ideia com outros investidores",
     "📈 Oportunidade ou risco? Opine no grupo",
     "💡 Veja a visão da nossa comunidade",
@@ -75,9 +75,10 @@ HEADERS = {
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# Feeds focados em mercado financeiro, negócios, macroeconomia e ativos listados
+# Feeds calibrados para quem trabalha, empreende e investe em Ações, FIIs e Renda Fixa
 FEEDS = [
     "https://www.infomoney.com.br/mercados/feed/",
+    "https://www.infomoney.com.br/onde-investir/feed/",
     "https://www.infomoney.com.br/economia/feed/",
     "https://www.infomoney.com.br/negocios/feed/",
     "https://www.moneytimes.com.br/feed/",
@@ -90,26 +91,24 @@ FEEDS = [
     "https://exame.com/economia/feed/",
     "https://exame.com/negocios/feed/",
     "https://portaldobitcoin.uol.com.br/feed/",
-    "https://livecoins.com.br/feed/",
 ]
 
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
-    "/carreira/", "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
+    "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
     "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
-    "/minhas-financas/", "/guias/", "/cursos/", "/consumidor/",
-    "/marketing/", "/bussola/", "/esg/", "/agro/",
+    "/cursos/", "/marketing/",
 )
 
-# Filtro rigoroso contra propagandas, vitrines de corretora, tutoriais básicos, benefícios sociais e ruído político/policial
+# Bloqueia propagandas de corretoras, cursos, fofoca, esportes, crime e benefícios assistenciais que não são de investimento/empreendedorismo
 BLOQUEADOS_PROPAGANDA = (
-    # Vitrines de corretoras e publiposts
-    "renda fixa hoje", "dentro da plataforma da xp", "plataforma da xp",
-    "lcas na xp", "lcis na xp", "cdbs na xp", "taxas de cdbs",
-    "confira as taxas de", "conteúdo patrocinado", "branded content",
-    "especial publicitário", "apresentado por", "oferecimento",
-    # Promoções, varejo, cartões e cursos
+    # Propagandas disfarçadas / Vitrines promocionais de corretoras
+    "renda fixa hoje:", "dentro da plataforma da xp", "plataforma da xp oferece",
+    "lcas na xp", "lcis na xp", "cdbs na xp", "confira as taxas de cdbs, lcis e lcas na xp",
+    "conteúdo patrocinado", "branded content", "especial publicitário",
+    "apresentado por", "oferecimento",
+    # Promoções, varejo, cartões e vendas de cursos
     "black friday", "black xp", "cupom de desconto", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
     "pontos e milhas", "acumule pontos", "compras parceladas",
@@ -119,13 +118,10 @@ BLOQUEADOS_PROPAGANDA = (
     "treinamento gratuito", "workshop", "evento online", "evento gratuito",
     "cartão black", "anuidade zero", "anuidade grátis", "encerra seu cartão",
     "cartão de criptomoedas",
-    # Finanças pessoais básicas / Benefícios sociais / INSS / Loterias (não agregam ao investidor)
-    "quanto rende", "quanto renderia", "na poupança", "rendimento da poupança",
-    "como declarar", "passo a passo para", "saiba como consultar", "veja como consultar",
-    "calendário do inss", "meu inss", "aposentadoria do inss", "benefício do inss",
+    # Assistencialismo / Loterias / Concursos (não agregam a quem empreende e investe)
+    "calendário do inss", "meu inss", "benefício do inss",
     "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
-    "saque-aniversário", "fgts", "cnh social", "ipva ", "iptu ",
-    "concurso público", "edital publicado", "vagas de emprego", "quem pode fazer mba",
+    "cnh social", "concurso público", "edital publicado", "quem pode fazer mba",
     # Entretenimento, saúde, jogos e variedades
     "horóscopo", "signo", "loteria", "mega-sena", "lotofácil", "quina",
     "bbb", "fofoca", "onde assistir", "escalação", "futebol", "novela",
@@ -135,13 +131,13 @@ BLOQUEADOS_PROPAGANDA = (
     "tabela do campeonato", "eliminatórias", "seleção brasileira",
     "gta 6", "playstation", "xbox", "canetas emagrecedoras", "cabelo cair",
     "melhores produtos de", "quadro icônico", "obra de arte",
-    # Policial, apostas e política sem impacto econômico
+    # Policial, apostas e política criminal sem impacto econômico
     "esquema de bets", "apostas online", "apostas de quota fixa", "cassino online",
     "jogo do tigrinho", "mandados de busca", "mandado de busca", "busca e apreensão",
     "mandado de prisão", "operação cash out", "operação da pf", "equipes policiais",
     "lavagem de dinheiro", "quadrilha", "assalto", "sequestro", "homicídio",
     "tráfico de drogas", "facção criminosa", "lei da dosimetria",
-    # Listas vazias / Tempo real sem conteúdo fechado
+    # Tempo real vazio
     "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
@@ -153,8 +149,9 @@ STOPWORDS_DEDUP = {
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
 }
 
-# Entidades e ativos de alto valor para o investidor (âncoras de relevância no título/lead)
+# Âncoras que definem o universo do investidor que trabalha, empreende e investe em Ações, FIIs e Renda Fixa
 ANCORAS_INVESTIDOR = (
+    # 1. Ações & Empresas da B3
     "petrobras", "vale", "itaú", "itau", "bradesco", "banco do brasil", "santander",
     "btg", "itaúsa", "itausa", "b3", "sabesp", "eletrobras", "taesa", "cemig", "copel",
     "engie", "equatorial", "cpfl", "auren", "alupar", "sanepar", "copasa", "bb seguridade",
@@ -164,47 +161,120 @@ ANCORAS_INVESTIDOR = (
     "embraer", "cyrela", "mrv", "eztec", "multiplan", "iguatemi", "allos", "totvs",
     "magazine luiza", "casas bahia", "lojas renner", "raia drogasil", "hapvida", "rede d'or",
     "fleury", "hypera", "cosan", "rumo", "ccr", "ecorodovias", "santos brasil",
+    # 2. Fundos Imobiliários (FIIs) & Fiagros
+    "fundo imobiliário", "fundos imobiliários", "fii", "fiis", "ifix", "fiagro",
+    "fii de tijolo", "fiis de tijolo", "fii de papel", "fiis de papel", "galpões logísticos",
+    "lajes corporativas", "shoppings", "vacância", "p/vp", "cap rate",
+    "mxrf11", "hglg11", "xpml11", "knri11", "kncr11", "knip11", "visc11", "brco11",
+    "btlg11", "hgru11", "trxf11", "cpts11", "irdm11", "vghf11", "knsc11", "hgbs11",
+    "vilg11", "lvbi11", "pvbi11", "hgre11", "jsre11", "bcff11", "rztr11", "knca11",
+    # 3. Renda Fixa & Tesouro Direto
+    "renda fixa", "tesouro direto", "tesouro selic", "tesouro ipca", "tesouro ipca+",
+    "tesouro prefixado", "tesouro renda+", "ntn-b", "ltn", "lft", "cdb", "cdbs",
+    "lci", "lca", "lcis", "lcas", "cri", "cra", "debênture", "debêntures",
+    "cdi", "marcação a mercado", "isento de imposto", "isenção de ir", "títulos públicos",
+    "crédito privado", "fidc",
+    # 4. Macroeconomia, Juros, Negócios & Empreendedorismo
     "ibovespa", "selic", "copom", "ipca", "igp-m", "pib", "arcabouço", "meta fiscal",
-    "tesouro", "di futuro", "curva de juros", "câmbio", "dólar", "banco central",
-    "galípolo", "haddad", "fed", "fomc", "powell", "treasury", "treasuries",
+    "di futuro", "curva de juros", "juros futuros", "câmbio", "dólar", "banco central",
+    "galípolo", "haddad", "reforma tributária", "tributação de dividendos", "imposto de renda",
+    "crédito", "inadimplência", "empreendedor", "empreendedorismo", "empresas", "pme",
+    "indústria", "varejo", "agronegócio", "fed", "fomc", "powell", "treasury", "treasuries",
     "wall street", "s&p 500", "nasdaq", "dow jones", "nvidia", "apple", "microsoft",
-    "alphabet", "amazon", "meta", "tesla", "brent", "opep", "minério de ferro",
-    "bitcoin", "ethereum", "etf", "blackrock", "cvm", "bndes",
+    "brent", "opep", "minério de ferro", "bitcoin", "etf", "cvm", "bndes", "cmn",
 )
 
 # ==============================================================================
-# TAXONOMIA FINANCEIRA OBRIGATÓRIA (PESOS E CORES POR TEMA)
+# TAXONOMIA FINANCEIRA PARA AÇÕES, FIIs, RENDA FIXA E EMPREENDEDORISMO
 # ==============================================================================
 TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
-        "label": "🟢 <b>PROVENTOS &amp; DIVIDENDOS</b>",
+        "label": "🟢 <b>DIVIDENDOS &amp; RENDIMENTOS</b>",
         "termos": {
             "dividendos": 20,
             "dividendo": 20,
             "jcp": 22,
             "juros sobre capital próprio": 22,
             "juros sobre o capital próprio": 22,
+            "rendimentos": 16,
+            "rendimento por cota": 22,
+            "por cota": 18,
             "data-com": 24,
             "data com": 22,
             "data-ex": 20,
             "proventos": 18,
-            "dividend yield": 18,
+            "dividend yield": 20,
             "payout": 16,
             "bonificação": 16,
         },
     },
-    "RESULTADOS_TRIMESTRAIS": {
-        "label": "🔵 <b>RESULTADOS &amp; BALANÇOS</b>",
+    "FUNDOS_IMOBILIARIOS": {
+        "label": "🏢 <b>FUNDOS IMOBILIÁRIOS (FIIs)</b>",
         "termos": {
-            "balanço": 16,
+            "fundo imobiliário": 22,
+            "fundos imobiliários": 22,
+            "fiis": 22,
+            "fii": 20,
+            "ifix": 22,
+            "fiagro": 18,
+            "p/vp": 22,
+            "vacância": 20,
+            "vacância física": 22,
+            "vacância financeira": 22,
+            "cap rate": 20,
+            "emissão de cotas": 20,
+            "subscrição": 18,
+            "galpão logístico": 20,
+            "galpões logísticos": 20,
+            "lajes corporativas": 20,
+            "fii de tijolo": 22,
+            "fiis de tijolo": 22,
+            "fii de papel": 22,
+            "fiis de papel": 22,
+            "cotistas": 16,
+            "valor patrimonial": 18,
+        },
+    },
+    "RENDA_FIXA": {
+        "label": "🏦 <b>RENDA FIXA &amp; TESOURO DIRETO</b>",
+        "termos": {
+            "renda fixa": 22,
+            "tesouro direto": 24,
+            "tesouro ipca+": 26,
+            "tesouro ipca": 24,
+            "tesouro selic": 24,
+            "tesouro prefixado": 24,
+            "tesouro renda+": 20,
+            "ipca+": 22,
+            "ipca +": 22,
+            "% do cdi": 22,
+            "do cdi": 16,
+            "cdi": 16,
+            "cdb": 18,
+            "cdbs": 18,
+            "lci": 20,
+            "lca": 20,
+            "cri": 18,
+            "cra": 18,
+            "debêntures": 20,
+            "debêntures incentivadas": 22,
+            "crédito privado": 20,
+            "títulos públicos": 20,
+            "marcação a mercado": 22,
+            "isento de ir": 20,
+            "isenção de imposto": 20,
+        },
+    },
+    "ACOES_BALANCOS_NEGOCIOS": {
+        "label": "🔵 <b>AÇÕES, BALANÇOS &amp; NEGÓCIOS</b>",
+        "termos": {
+            "balanço": 18,
             "lucro líquido": 22,
             "lucro": 15,
-            "lucros": 15,
             "ebitda": 22,
             "lajida": 20,
             "prejuízo": 16,
             "receita líquida": 20,
-            "margem bruta": 16,
             "margem líquida": 18,
             "margem ebitda": 18,
             "roe": 16,
@@ -212,14 +282,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "alavancagem": 15,
             "dívida líquida": 16,
             "geração de caixa": 16,
-            "inadimplência": 14,
             "guidance": 18,
-            "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
-        },
-    },
-    "EVENTOS_CORPORATIVOS": {
-        "label": "🟣 <b>CORPORATIVO &amp; M&amp;A</b>",
-        "termos": {
             "fato relevante": 26,
             "fusão": 20,
             "aquisição": 20,
@@ -227,24 +290,20 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "recompra de ações": 24,
             "programa de recompra": 22,
             "opa": 22,
-            "oferta pública": 18,
-            "emissão de debêntures": 16,
             "follow-on": 20,
             "ipo": 18,
-            "cisão": 18,
-            "incorporação": 18,
-            "grupamento": 16,
-            "desdobramento": 16,
             "recuperação judicial": 22,
             "privatização": 18,
             "concessão": 16,
             "leilão": 14,
             "preço-alvo": 18,
             "recomendação de compra": 18,
+            "carteira recomendada": 18,
+            "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
         },
     },
-    "MACROECONOMIA": {
-        "label": "🟠 <b>MACROECONOMIA &amp; MERCADOS</b>",
+    "MACRO_E_EMPREENDEDORISMO": {
+        "label": "🟠 <b>ECONOMIA, JUROS &amp; EMPREENDEDORISMO</b>",
         "termos": {
             "copom": 22,
             "selic": 22,
@@ -256,21 +315,25 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "fomc": 20,
             "ata do fed": 22,
             "ipca": 22,
+            "igp-m": 18,
             "inflação": 14,
             "pib": 16,
             "treasury": 20,
             "treasuries": 20,
             "boletim focus": 20,
-            "payroll": 20,
-            "cpi": 18,
+            "payroll": 18,
             "arcabouço fiscal": 18,
             "ajuste fiscal": 18,
             "pacote fiscal": 18,
             "corte de gastos": 16,
             "meta fiscal": 16,
-            "superávit primário": 18,
-            "déficit primário": 18,
-            "tesouro direto": 14,
+            "reforma tributária": 20,
+            "tributação": 18,
+            "imposto sobre dividendos": 22,
+            "capital de giro": 18,
+            "crédito para empresas": 18,
+            "empreendedorismo": 16,
+            "pequenas empresas": 16,
             "dólar à vista": 18,
             "dólar comercial": 16,
             "ibovespa": 18,
@@ -280,8 +343,6 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "petróleo brent": 16,
             "minério de ferro": 16,
             "bitcoin": 15,
-            "etf de bitcoin": 18,
-            "tarifas": 14,
         },
     },
 }
@@ -313,6 +374,7 @@ MARCADORES_DESFECHO = (
     "com isso", "dessa forma", "diante disso", "nesse cenário", "neste cenário",
     "no acumulado", "por fim", "como resultado", "em reação", "após o anúncio",
     "para o mercado", "na avaliação", "a expectativa", "os papéis", "as ações",
+    "as cotas", "o fundo", "os cotistas", "para o investidor",
     "fechou em", "encerrou em", "operam em", "cotadas a", "recomendação",
     "preço-alvo", "impacto", "perspectiva", "próximos passos", "a decisão",
     "no ano", "nos últimos 12 meses", "segundo analistas", "relatório",
@@ -342,7 +404,7 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
-# MOTOR HEURÍSTICO DE SCORING E FILTRAGEM RÍGIDA PARA INVESTIDORES
+# MOTOR HEURÍSTICO DE SCORING (AÇÕES, FIIs, RENDA FIXA E EMPREENDEDORISMO)
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
     encontrados = REGEX_TICKER_B3.findall(texto)
@@ -356,11 +418,10 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     """
-    Filtro Rígido de Relevância para o Investidor:
-    1. Exige que o Título ou o Lead (1º parágrafo) tenha âncora real de mercado (empresa listada, ticker B3,
-       indicador macroeconômico ou evento corporativo). Matérias genéricas que só citam 'inflação' ou 'dólar'
-       no meio do texto são barradas.
-    2. Penaliza textos opinativos rasos sem métricas quantitativas (R$, US$, %, bilhões, pontos).
+    Filtro Rígido Calibrado para o Investidor (Ações, FIIs, Renda Fixa e Negócios):
+    1. Exige que o Título ou o Lead (1º parágrafo) tenha âncora real de investimento/negócios
+       (ação, FII, título de renda fixa, indicador macroeconômico ou decisão tributária/empresarial).
+    2. Penaliza matérias vazias sem números concretos (R$, US$, %, bilhões, pontos, taxas).
     """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
@@ -398,12 +459,18 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
     tickers = extrair_tickers_b3(texto_completo)
     tickers_titulo_lead = extrair_tickers_b3(f"{titulo} {lead}")
+
+    # Se houver ticker terminado em 11 (e não for Unit de ação conhecida), reforça a categoria de FIIs
+    units_acoes = {"TAEE11", "SAPR11", "SANB11", "ALUP11", "KLBN11", "BPAC11", "ENGI11", "IGTI11"}
+    tickers_fii = [t for t in tickers if t.endswith("11") and t not in units_acoes]
+    if tickers_fii:
+        pontos_por_categoria["FUNDOS_IMOBILIARIOS"] += len(tickers_fii) * 20
+
     tem_ancora_investidor = (
         bool(tickers_titulo_lead)
         or any(re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", f"{titulo_low} {lead_low}") for a in ANCORAS_INVESTIDOR)
     )
 
-    # Trava de Ouro: Se nem o título nem o 1º parágrafo têm âncora de mercado ou termo da taxonomia, descarta!
     if not match_no_titulo_ou_lead and not tem_ancora_investidor:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
@@ -415,7 +482,6 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
-    # Exige densidade de dados: matérias sem nenhum número concreto (R$, US$, %, bi/mi) sofrem penalidade severa
     if len(metricas) >= 2:
         bonus_metricas = min(len(metricas) * 4, 24)
     elif len(metricas) == 1:
@@ -428,9 +494,12 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
     if pontos_por_categoria[categoria_dominante] > 0:
         cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
+    elif tickers_fii:
+        categoria_dominante = "FUNDOS_IMOBILIARIOS"
+        cat_label = TAXONOMIA_PESOS["FUNDOS_IMOBILIARIOS"]["label"]
     else:
-        categoria_dominante = "TICKERS_B3"
-        cat_label = "🔵 <b>RADAR B3 &amp; AÇÕES</b>"
+        categoria_dominante = "ACOES_BALANCOS_NEGOCIOS"
+        cat_label = TAXONOMIA_PESOS["ACOES_BALANCOS_NEGOCIOS"]["label"]
 
     return AnaliseHeuristica(
         score_total=score_final,
@@ -760,7 +829,7 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
     1. COMEÇO (Lead): Apresentação clara do fato principal e dos protagonistas.
     2. MEIO 1 (Dados & Causas): Números detalhados, valores em R$/US$/% e motivação.
     3. MEIO 2 (Contexto & Desdobramento): Detalhes operacionais, histórico ou visão setorial.
-    4. FIM (Conclusão & Impacto): Desfecho real, reação das ações/mercado ou próximos passos.
+    4. FIM (Conclusão & Impacto): Desfecho real, reação das ações/FIIs/mercado ou próximos passos.
     """
     todas_frases: List[str] = []
     for p in paragrafos:
