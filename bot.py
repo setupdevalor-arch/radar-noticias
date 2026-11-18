@@ -25,7 +25,7 @@ _PADRAO_CHAT_ID = "-1003533060222"
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = 5  # Se saírem até 5 notícias novas no ciclo de 5 min, posta todas sem pular
-MAX_IDADE_MINUTOS = 25    # Só aceita notícias frescas dos últimos 25 minutos (nunca posta notícia velha)
+MAX_IDADE_MINUTOS = 90    # Janela de 90 min para absorver atrasos de cache do RSS e fila do GitHub
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
 # Lista de CTAs persuasivas sorteadas aleatoriamente no botão de cada notícia
@@ -321,7 +321,6 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
         pass
 
     if raw_html:
-        # Remove blocos inteiros de script, head, style, nav, footer antes de buscar <p>
         html_sem_scripts = re.sub(
             r'<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>',
             ' ',
@@ -329,7 +328,6 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
             flags=re.DOTALL | re.IGNORECASE
         )
 
-        # Usa <p(?:\s[^>]*)?> para nunca confundir <p> com <path>, <picture> ou <param>
         paragrafos = re.findall(r'<p(?:\s[^>]*)?>(.*?)</p>', html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
         blocos_limpos = []
 
@@ -481,7 +479,7 @@ def categorizar_materia(titulo, texto):
 def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     """
     Varredura 24h por dia, de segunda a segunda.
-    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo de 5 min),
+    Captura TODAS as notícias novas que saíram nos últimos minutos (até 5 por ciclo),
     exigindo texto jornalístico limpo e foto de capa.
     """
     links_historico, titulos_historico = carregar_historico()
@@ -530,6 +528,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
+    logging.info(f"Candidatos inéditos encontrados nos últimos {MAX_IDADE_MINUTOS} min: {len(candidatos)}")
 
     noticias = []
     for cand in candidatos:
@@ -584,7 +583,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """Envia com áudio, vídeo ou foto de capa em alta definição + botão com texto randômico."""
+    """Envia com áudio, vídeo ou foto de capa em alta definição + botão com CTA sorteada."""
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
     if item.get("audio"):
@@ -622,9 +621,10 @@ def enviar_post(token, chat_id, item):
             "parse_mode": "HTML",
             "reply_markup": botao_sorteado
         }
-        status, _ = http_post_json(url_photo, payload_photo, timeout=20)
+        status, corpo = http_post_json(url_photo, payload_photo, timeout=20)
         if status == 200:
             return True
+        logging.warning(f"Erro ao enviar foto da URL {item['imagem']} (HTTP {status}): {corpo}")
 
     return False
 
