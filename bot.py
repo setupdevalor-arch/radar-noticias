@@ -1,5 +1,6 @@
 import asyncio
 import email.utils
+import hashlib
 import html
 import json
 import logging
@@ -7,6 +8,7 @@ import os
 import random
 import re
 import sys
+import tempfile
 import urllib.parse
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -14,17 +16,13 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 import httpx
+import trafilatura
+import yt_dlp
 
 try:
     import defusedxml.ElementTree as ET
 except ImportError:
     import xml.etree.ElementTree as ET
-
-try:
-    import yt_dlp
-    HAS_YTDLP = True
-except ImportError:
-    HAS_YTDLP = False
 
 # ==============================================================================
 # CONFIGURAÇÃO DE LOGGING ESTRUTURADO
@@ -37,18 +35,19 @@ logging.basicConfig(
 logger = logging.getLogger("FinanceNewsBot")
 
 # ==============================================================================
-# CONSTANTES E CONFIGURAÇÕES DE AMBIENTE
+# CONSTANTES E CONFIGURAÇÕES DE AMBIENTE (GITHUB SECRETS / ENV)
 # ==============================================================================
-HISTORICO_ARQUIVO = Path(os.getenv("HISTORICO_ARQUIVO", "historico_enviados.json"))
-GRUPO_URL = os.getenv("TELEGRAM_GROUP_URL", "https://t.me/OPapodeInvestidor")
+HISTORICO_ARQUIVO = Path(os.environ.get("HISTORICO_ARQUIVO", "historico_enviados.json"))
+GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/OPapodeInvestidor")
 
 MAX_HISTORICO = 800
-MAX_NOTICIAS_POR_VEZ = int(os.getenv("MAX_NOTICIAS_POR_VEZ", "5"))
-MAX_IDADE_MINUTOS = int(os.getenv("MAX_IDADE_MINUTOS", "120"))
+MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
+MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
 MAX_CONCURRENT_REQUESTS = 6
-MAX_IMAGE_BYTES = 5 * 1024 * 1024    # 5 MB para imagens e HTML
-MAX_VIDEO_BYTES = 25 * 1024 * 1024   # 25 MB para fallback de upload binário de vídeo
-TELEGRAM_CAPTION_LIMIT = 1024
+
+MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e imagens
+MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite oficial da Telegram Bot API para upload)
+TELEGRAM_CAPTION_LIMIT = 1024             # Limite de caracteres em legendas de mídia
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -66,7 +65,7 @@ TEXTOS_BOTAO_GRUPO = [
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
     ),
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -116,6 +115,19 @@ STOPWORDS_DEDUP = {
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
 }
 
+# Expressões regulares para detecção de relevância financeira (Meio da notícia)
+REGEX_INDICADORES_FINANCEIROS = re.compile(
+    r"("
+    r"[+-]?\d+(?:[.,]\d+)?\s*%"                                  # Percentuais (ex: +2,5%, 10.5%)
+    r"|(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?"                       # Moedas (ex: R$ 5,80, US$ 100)
+    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri)\b"  # Grandezas
+    r"|\b(?:alta|queda|subiu|caiu|recuou|avançou|disparou|desabou|"
+    r"lucro|prejuízo|ebitda|receita|dividendos|selic|ipca|pib|juros|"
+    r"inflação|dólar|ibovespa|pontos|cotação|fechou)\b"          # Termos-chave de mercado
+    r")",
+    flags=re.IGNORECASE,
+)
+
 
 @dataclass
 class NoticiaPreparada:
@@ -123,13 +135,25 @@ class NoticiaPreparada:
     titulo: str
     texto_html: str
     imagem: Optional[str] = None
-    video: Optional[str] = None
+    video_candidato_url: Optional[str] = None
     audio: Optional[str] = None
 
 
 # ==============================================================================
-# UTILITÁRIOS DE PERSISTÊNCIA E FORMATAÇÃO
+# CONTROLE DE DUPLICIDADE E PERSISTÊNCIA ATÔMICA
 # ==============================================================================
+def gerar_hash_url(url: str) -> str:
+    """Gera hash curto SHA-256 da URL normalizada (sem UTM/tracking) para controle leve."""
+    p = urllib.parse.urlsplit(url)
+    query_limpa = "&".join(
+        f"{k}={v}"
+        for k, v in urllib.parse.parse_qsl(p.query)
+        if not k.lower().startswith(("utm_", "fbclid", "gclid", "ref"))
+    )
+    url_canonica = urllib.parse.urlunsplit((p.scheme, p.netloc, p.path.rstrip("/"), query_limpa, ""))
+    return hashlib.sha256(url_canonica.encode("utf-8")).hexdigest()[:16]
+
+
 def carregar_historico() -> Tuple[List[str], List[str]]:
     if HISTORICO_ARQUIVO.exists():
         try:
@@ -156,6 +180,31 @@ def salvar_historico(links: List[str], titulos: List[str]) -> None:
         logger.error("Erro ao salvar histórico atomicamente: %s", exc)
 
 
+def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
+    tokens_novo = {
+        p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", novo_titulo.lower())
+        if len(p) > 3 and p not in STOPWORDS_DEDUP
+    }
+    if not tokens_novo:
+        return False
+
+    for antigo in titulos_anteriores:
+        tokens_antigo = {
+            p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", antigo.lower())
+            if len(p) > 3 and p not in STOPWORDS_DEDUP
+        }
+        if not tokens_antigo:
+            continue
+        inter = tokens_novo & tokens_antigo
+        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
+        if len(inter) >= 2 and ratio >= 0.35:
+            return True
+    return False
+
+
+# ==============================================================================
+# UTILITÁRIOS GERAIS E LIMPEZA DE TEXTO
+# ==============================================================================
 def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
     return {
         "inline_keyboard": [
@@ -185,11 +234,6 @@ def normalizar_url(url: Optional[str]) -> Optional[str]:
         return urllib.parse.urlunsplit((p.scheme, p.netloc, caminho, p.query, p.fragment))
     except Exception:
         return None
-
-
-def url_eh_mp4_direto(url: str) -> bool:
-    path = urllib.parse.urlsplit(url).path.lower()
-    return path.endswith((".mp4", ".mov", ".m4v"))
 
 
 def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
@@ -263,259 +307,137 @@ def limpar_html(txt: str) -> str:
     return " ".join(txt.split()).strip()
 
 
-def paragrafo_parece_codigo_ou_lixo(txt: str) -> bool:
-    if not txt or len(txt) < 40:
+def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
+    """Filtra rodapés, chamadas de assinatura, créditos de foto e linhas muito curtas."""
+    if not txt or len(txt) < 45:
         return True
-    sinais_codigo = (
+    ruidos = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
-        "sameAs", "contentUrl", "ethicsPolicy", "isAccessibleForFree",
-        "cssSelector", "gostaria de receber", "assine a", "exclusivo para assinantes",
-        "inscreva-se", "todos os direitos reservados", "the post", "apareceu primeiro",
+        "gostaria de receber", "assine a", "exclusivo para assinantes", "inscreva-se",
+        "todos os direitos reservados", "the post", "apareceu primeiro", "leia também",
+        "veja também", "confira também", "siga o", "canal no whatsapp", "receba notícias",
+        "reprodução/", "foto:", "crédito:", "imagem:", "divulgação/",
     )
     t_low = txt.lower()
-    if any(s in t_low for s in sinais_codigo):
+    if any(r in t_low for r in ruidos):
+        return True
+    if titulo and t_low.startswith(titulo[:30].lower()):
         return True
     if txt.count("[") >= 3 or txt.count("]") >= 3:
         return True
     return False
 
 
-def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
-    tokens_novo = {
-        p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", novo_titulo.lower())
-        if len(p) > 3 and p not in STOPWORDS_DEDUP
-    }
-    if not tokens_novo:
-        return False
-
-    for antigo in titulos_anteriores:
-        tokens_antigo = {
-            p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", antigo.lower())
-            if len(p) > 3 and p not in STOPWORDS_DEDUP
-        }
-        if not tokens_antigo:
-            continue
-        inter = tokens_novo & tokens_antigo
-        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
-        if len(inter) >= 2 and ratio >= 0.35:
-            return True
-    return False
-
-
 # ==============================================================================
-# EXTRAÇÃO DE MÍDIA (IMAGEM E VÍDEO) DO RSS E DO HTML DA PÁGINA
+# 1. EXTRAÇÃO COM TRAFILATURA E ESTRUTURAÇÃO ALGORÍTMICA (COMEÇO, MEIO, FIM)
 # ==============================================================================
-def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
-    padroes = (
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
-    )
-    for padrao in padroes:
-        m = re.search(padrao, raw_html, re.IGNORECASE)
-        if m:
-            url = normalizar_url(m.group(1))
-            if url:
-                return url
-    return None
-
-
-def extrair_video_da_pagina(raw_html: str) -> Optional[str]:
+def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) -> List[str]:
     """
-    Busca URLs de vídeo (.mp4 direto ou player embed) dentro do HTML do artigo:
-    1. Meta tags OpenGraph (og:video:secure_url, og:video, twitter:player:stream)
-    2. Tags HTML5 <video> e <source src="...mp4">
-    3. Schema.org VideoObject em JSON-LD ("contentUrl": "...mp4")
-    4. Iframes de YouTube (caso yt-dlp esteja ativo)
+    Usa Trafilatura para extrair o corpo limpo da notícia em parágrafos.
+    Se a página bloquear scraping ou tiver paywall rígido, faz fallback para a descrição do RSS.
     """
-    padroes_diretos = (
-        r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
-        r'<meta[^>]+name=["\']twitter:player:stream["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<source[^>]+src=["\']([^"\']+\.mp4(?:\?[^"\']*)?)["\']',
-        r'<video[^>]+src=["\']([^"\']+\.mp4(?:\?[^"\']*)?)["\']',
-        r'"contentUrl"\s*:\s*"([^"]+\.mp4(?:\?[^"]*)?)"',
-    )
-    candidato_embed: Optional[str] = None
+    paragrafos_limpos: List[str] = []
 
-    for padrao in padroes_diretos:
-        for match in re.finditer(padrao, raw_html, re.IGNORECASE):
-            raw_url = match.group(1).replace(r"\/", "/")
-            url = normalizar_url(raw_url)
-            if not url:
-                continue
-            if url_eh_mp4_direto(url):
-                return url
-            if not candidato_embed:
-                candidato_embed = url
-
-    # Se não achou .mp4 explícito, verifica iframe do YouTube para eventual extração com yt-dlp
-    if not candidato_embed and HAS_YTDLP:
-        m_yt = re.search(
-            r'<iframe[^>]+src=["\']((?:https?:)?//(?:www\.)?(?:youtube\.com/embed/|youtu\.be/)[^"\'?]+)',
+    if raw_html:
+        texto_extraido = trafilatura.extract(
             raw_html,
-            re.IGNORECASE,
+            include_comments=False,
+            include_tables=False,
+            no_fallback=False,
+            favor_precision=True,
         )
-        if m_yt:
-            candidato_embed = normalizar_url(m_yt.group(1))
+        if texto_extraido:
+            for linha in texto_extraido.splitlines():
+                p = limpar_caudas_wordpress(limpar_html(linha))
+                p = re.sub(
+                    r"^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+[:\-–—]?\s*",
+                    "",
+                    p,
+                    flags=re.IGNORECASE,
+                ).strip()
+                if not paragrafo_eh_ruido_editorial(p, titulo):
+                    paragrafos_limpos.append(p)
 
-    return candidato_embed
+    # Fallback para descrição do feed RSS se Trafilatura retornar vazio
+    if not paragrafos_limpos and desc_bruta:
+        t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t_desc) if len(f.strip()) >= 35]
+        if len(frases) >= 3:
+            paragrafos_limpos = [
+                frases[0],
+                " ".join(frases[1:-1]),
+                frases[-1],
+            ]
+        elif t_desc and len(t_desc) >= 60:
+            paragrafos_limpos = [t_desc]
 
-
-def _resolver_stream_ytdlp_sync(url: str) -> Optional[str]:
-    """Extrai a URL direta de um stream MP4 (<= 25MB) usando yt-dlp sem baixar para disco."""
-    if not HAS_YTDLP:
-        return None
-    ydl_opts = {
-        "format": "best[ext=mp4][filesize<25M]/best[ext=mp4][filesize_approx<25M]/best[ext=mp4]",
-        "quiet": True,
-        "no_warnings": True,
-        "noplaylist": True,
-        "socket_timeout": 10,
-    }
-    try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=False)
-            if info and isinstance(info, dict):
-                direct_url = info.get("url")
-                if direct_url and direct_url.startswith("http"):
-                    return direct_url
-    except Exception as exc:
-        logger.debug("yt-dlp não conseguiu extrair MP4 direto de %s: %s", url, exc)
-    return None
-
-
-async def resolver_url_video_mp4(url_video: Optional[str]) -> Optional[str]:
-    """Garante que a URL de vídeo seja um stream .mp4 válido para o sendVideo do Telegram."""
-    if not url_video:
-        return None
-    if url_eh_mp4_direto(url_video):
-        return url_video
-    if HAS_YTDLP:
-        return await asyncio.to_thread(_resolver_stream_ytdlp_sync, url_video)
-    return None
+    return paragrafos_limpos
 
 
-def extrair_midias_do_rss(
-    item: ET.Element, desc_bruta: str
-) -> Tuple[Optional[str], Optional[str], Optional[str]]:
-    foto_url: Optional[str] = None
-    video_url: Optional[str] = None
-    audio_url: Optional[str] = None
+def truncar_frase_limpa(texto: str, max_chars: int) -> str:
+    if len(texto) <= max_chars:
+        return texto if texto[-1] in ".!?" else texto + "."
+    cortado = texto[:max_chars].rsplit(" ", 1)[0].rstrip(",;:-–— ")
+    return cortado + "."
 
-    enc = item.find("enclosure")
-    if enc is not None and "url" in enc.attrib:
-        url = normalizar_url(enc.attrib["url"])
-        tipo = enc.attrib.get("type", "").lower()
-        if url:
-            if "video" in tipo or url_eh_mp4_direto(url):
-                video_url = url
-            elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
-                audio_url = url
-            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
-                foto_url = url
 
-    for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
-        for m in item.findall(tag):
-            if "url" in m.attrib:
-                url = normalizar_url(m.attrib["url"])
-                tipo = m.attrib.get("type", "").lower()
-                medium = m.attrib.get("medium", "").lower()
-                if url:
-                    if "video" in tipo or medium == "video" or url_eh_mp4_direto(url):
-                        video_url = video_url or url
-                    elif "audio" in tipo or medium == "audio" or url.lower().endswith(".mp3"):
-                        audio_url = audio_url or url
-                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
-                        foto_url = url
+def estruturar_noticia_comeco_meio_fim(paragrafos: List[str], titulo: str) -> str:
+    """
+    Estrutura a notícia de forma algorítmica e determinística (Zero IA):
+    - COMEÇO: Primeiro parágrafo substantivo (Lead jornalístico).
+    - MEIO: Parágrafo intermediário com maior densidade de indicadores financeiros (%, R$, US$, alta/queda).
+    - FIM: Último parágrafo substantivo (conclusão/desdobramento).
+    """
+    if not paragrafos:
+        return ""
 
-    if not video_url and desc_bruta:
-        busca_vid = re.search(r'<(?:video|source)[^>]+src=["\']([^"\']+\.mp4[^"\']*)["\']', desc_bruta, re.IGNORECASE)
-        if busca_vid:
-            video_url = normalizar_url(busca_vid.group(1))
+    # Caso de parágrafo único (ex: nota curta do RSS)
+    if len(paragrafos) == 1:
+        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", paragrafos[0]) if len(f.strip()) > 25]
+        if len(frases) >= 3:
+            p_comeco = truncar_frase_limpa(frases[0], 230)
+            p_meio = truncar_frase_limpa(frases[1], 230)
+            p_fim = truncar_frase_limpa(frases[-1], 220)
+            return f"{p_comeco}\n\n{p_meio}\n\n{p_fim}"
+        return truncar_frase_limpa(paragrafos[0], 620)
 
-    if not foto_url and desc_bruta:
-        busca_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-        if busca_img:
-            foto_url = normalizar_url(busca_img.group(1))
+    # Caso de 2 parágrafos
+    if len(paragrafos) == 2:
+        p_comeco = truncar_frase_limpa(paragrafos[0], 300)
+        p_fim = truncar_frase_limpa(paragrafos[1], 300)
+        return f"{p_comeco}\n\n{p_fim}"
 
-    return foto_url, video_url, audio_url
+    # Caso padrão (>= 3 parágrafos): Começo, Meio (Scoring Financeiro) e Fim
+    p_comeco = truncar_frase_limpa(paragrafos[0], 240)
+    candidatos_meio = paragrafos[1:-1]
+
+    def calcular_score_financeiro(paragrafo: str) -> Tuple[int, int]:
+        matches = REGEX_INDICADORES_FINANCEIROS.findall(paragrafo)
+        # Prioriza quantidade de indicadores financeiros e tamanho ideal (80 a 320 chars)
+        bonus_tamanho = 1 if 80 <= len(paragrafo) <= 320 else 0
+        return (len(matches) * 10 + bonus_tamanho, -abs(len(paragrafo) - 200))
+
+    melhor_meio = max(candidatos_meio, key=calcular_score_financeiro)
+    p_meio = truncar_frase_limpa(melhor_meio, 240)
+
+    # Escolhe o último parágrafo substantivo que não repita o meio
+    p_fim_bruto = paragrafos[-1]
+    if p_fim_bruto == melhor_meio and len(paragrafos) > 3:
+        p_fim_bruto = paragrafos[-2]
+    p_fim = truncar_frase_limpa(p_fim_bruto, 220)
+
+    blocos = [p_comeco]
+    if p_meio.lower() != p_comeco.lower():
+        blocos.append(p_meio)
+    if p_fim.lower() not in (p_comeco.lower(), p_meio.lower()):
+        blocos.append(p_fim)
+
+    return "\n\n".join(blocos)
 
 
 # ==============================================================================
-# PROCESSAMENTO DE TEXTO E CATEGORIZAÇÃO
+# CATEGORIZAÇÃO E FORMATAÇÃO HTML SEGURA PARA O TELEGRAM
 # ==============================================================================
-def formatar_resumo_500_600(texto_bruto: str, titulo: str) -> str:
-    if not texto_bruto:
-        return ""
-
-    t = limpar_caudas_wordpress(texto_bruto)
-    t = limpar_html(t)
-
-    t = re.sub(
-        r"^.*?(?:Foto|Crédito|Reprodução|BBC|BCC|Reuters|G1|Estadão|Folha)\s*[:\-–—]?\s*(?=[A-Z])",
-        "",
-        t,
-        flags=re.IGNORECASE,
-    )
-    t = re.sub(
-        r"^[^\.\!\?]*?(?:x\s*Real|Dólar\s*x|Foto:|Crédito:)[^\.\!\?]*?(?=[A-Z][a-z]+ [a-z]+ [a-z]+)",
-        "",
-        t,
-        flags=re.IGNORECASE,
-    )
-
-    if titulo and t.lower().startswith(titulo[:25].lower()):
-        t = t[len(titulo):].strip()
-        t = re.sub(r"^[:\-–—\s]+", "", t)
-
-    t = re.sub(
-        r"\s*[;:]\s*(veja mais|leia mais|saiba mais|confira|entenda).*$",
-        "",
-        t,
-        flags=re.IGNORECASE,
-    ).strip()
-
-    frases = re.split(r"(?<=[.!?])\s+", t)
-    frases_selecionadas = []
-    tamanho_acumulado = 0
-
-    for f in frases:
-        f = remover_carimbo_data_g1(f.strip())
-        if not f or len(f) < 25:
-            continue
-        if len(f) > 580:
-            f = f[:550].rsplit(" ", 1)[0].rstrip(",;:-") + "."
-        if tamanho_acumulado + len(f) <= 580:
-            frases_selecionadas.append(f)
-            tamanho_acumulado += len(f)
-        elif tamanho_acumulado < 420:
-            frases_selecionadas.append(f)
-            tamanho_acumulado += len(f)
-            break
-        else:
-            break
-
-    if not frases_selecionadas:
-        return ""
-
-    if len(frases_selecionadas) >= 3:
-        p1 = " ".join(frases_selecionadas[:2])
-        p2 = " ".join(frases_selecionadas[2:])
-        resultado = f"{p1}\n\n{p2}".strip()
-    else:
-        resultado = " ".join(frases_selecionadas).strip()
-
-    if resultado and resultado[-1] not in ".!?":
-        resultado += "."
-
-    if len(resultado) > 620:
-        resultado = resultado[:600].rsplit(".", 1)[0] + "."
-
-    return resultado
-
-
 def categorizar_materia(titulo: str, texto: str) -> str:
     for escopo in (titulo, f"{titulo} {texto}"):
         if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
@@ -581,6 +503,144 @@ def montar_post_html_seguro(categoria_html: str, titulo_limpo: str, resumo_texto
 
 
 # ==============================================================================
+# 2. ENGINE DE MÍDIA E VÍDEO LOCAL (YT-DLP <= 50MB + LIMPEZA TEMPORÁRIA)
+# ==============================================================================
+def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
+    padroes = (
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+    )
+    for padrao in padroes:
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m:
+            url = normalizar_url(m.group(1))
+            if url:
+                return url
+    return None
+
+
+def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
+    """Procura tags explícitas de vídeo ou embeds suportados pelo yt-dlp no HTML."""
+    padroes = (
+        r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
+        r'<meta[^>]+name=["\']twitter:player:stream["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<source[^>]+src=["\']([^"\']+\.(?:mp4|m3u8)(?:\?[^"\']*)?)["\']',
+        r'<video[^>]+src=["\']([^"\']+\.(?:mp4|m3u8)(?:\?[^"\']*)?)["\']',
+        r'"contentUrl"\s*:\s*"([^"]+\.(?:mp4|m3u8)(?:\?[^"]*)?)"',
+        r'<iframe[^>]+src=["\']((?:https?:)?//(?:www\.)?(?:youtube\.com/embed/|youtu\.be/|player\.vimeo\.com/video/|dailymotion\.com/embed/video/)[^"\'?]+)',
+    )
+    for padrao in padroes:
+        for match in re.finditer(padrao, raw_html, re.IGNORECASE):
+            raw_url = match.group(1).replace(r"\/", "/")
+            url = normalizar_url(raw_url)
+            if url:
+                return url
+    return None
+
+
+def extrair_midias_do_rss(
+    item: ET.Element, desc_bruta: str
+) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    foto_url: Optional[str] = None
+    video_url: Optional[str] = None
+    audio_url: Optional[str] = None
+
+    enc = item.find("enclosure")
+    if enc is not None and "url" in enc.attrib:
+        url = normalizar_url(enc.attrib["url"])
+        tipo = enc.attrib.get("type", "").lower()
+        if url:
+            if "video" in tipo or url.lower().endswith((".mp4", ".mov", ".m3u8")):
+                video_url = url
+            elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
+                audio_url = url
+            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                foto_url = url
+
+    for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
+        for m in item.findall(tag):
+            if "url" in m.attrib:
+                url = normalizar_url(m.attrib["url"])
+                tipo = m.attrib.get("type", "").lower()
+                medium = m.attrib.get("medium", "").lower()
+                if url:
+                    if "video" in tipo or medium == "video" or url.lower().endswith((".mp4", ".m3u8")):
+                        video_url = video_url or url
+                    elif "audio" in tipo or medium == "audio" or url.lower().endswith(".mp3"):
+                        audio_url = audio_url or url
+                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
+                        foto_url = url
+
+    if not video_url and desc_bruta:
+        busca_vid = re.search(r'<(?:video|source)[^>]+src=["\']([^"\']+\.mp4[^"\']*)["\']', desc_bruta, re.IGNORECASE)
+        if busca_vid:
+            video_url = normalizar_url(busca_vid.group(1))
+
+    if not foto_url and desc_bruta:
+        busca_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca_img:
+            foto_url = normalizar_url(busca_img.group(1))
+
+    return foto_url, video_url, audio_url
+
+
+def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -> Optional[Path]:
+    """
+    Executa o yt-dlp localmente para checar e baixar o vídeo se <= 50MB.
+    Suporta links diretos (.mp4/.m3u8), embeds ou a própria URL da notícia.
+    """
+    output_template = os.path.join(pasta_temp, "video_%(id)s.%(ext)s")
+    ydl_opts: Dict[str, Any] = {
+        "format": (
+            "best[ext=mp4][filesize<=50M]/"
+            "best[ext=mp4][filesize_approx<=50M]/"
+            "bestvideo[ext=mp4][filesize<=40M]+bestaudio[ext=m4a][filesize<=10M]/"
+            "best[ext=mp4]/best"
+        ),
+        "merge_output_format": "mp4",
+        "outtmpl": output_template,
+        "max_filesize": MAX_VIDEO_BYTES,
+        "noplaylist": True,
+        "quiet": True,
+        "no_warnings": True,
+        "socket_timeout": 15,
+        "concurrent_fragment_downloads": 4,
+        "http_headers": {**HEADERS, "Referer": referer_url},
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url_alvo, download=True)
+            if not info:
+                return None
+            if "entries" in info:
+                entries = [e for e in info["entries"] if e]
+                if not entries:
+                    return None
+                info = entries[0]
+
+            caminho_str = ydl.prepare_filename(info)
+            caminho = Path(caminho_str)
+            if not caminho.exists():
+                caminho_mp4 = caminho.with_suffix(".mp4")
+                if caminho_mp4.exists():
+                    caminho = caminho_mp4
+
+            if caminho.exists():
+                tamanho = caminho.stat().st_size
+                if 1024 < tamanho <= MAX_VIDEO_BYTES:
+                    return caminho
+                logger.warning("Vídeo descartado por tamanho inválido (%d bytes): %s", tamanho, url_alvo)
+    except Exception as exc:
+        logger.debug("yt-dlp sem vídeo válido para %s: %s", url_alvo, exc)
+
+    return None
+
+
+# ==============================================================================
 # INGESTÃO E SCRAPING ASSÍNCRONO
 # ==============================================================================
 async def buscar_feed_rss(
@@ -639,66 +699,25 @@ async def buscar_feed_rss(
 
 async def obter_conteudo_e_midias_artigo(
     client: httpx.AsyncClient, url: str, desc_bruta: str, titulo: str
-) -> Tuple[str, Optional[str], Optional[str]]:
-    """Retorna (texto_extraido, foto_og, video_extraido)."""
+) -> Tuple[List[str], Optional[str], Optional[str]]:
+    """Baixa o HTML da matéria, extrai parágrafos via Trafilatura e identifica og:image e vídeo."""
     foto_og: Optional[str] = None
     video_pag: Optional[str] = None
     raw_html = ""
 
     try:
-        resp = await client.get(url, timeout=8.0)
-        if resp.status_code == 200 and len(resp.content) <= MAX_IMAGE_BYTES:
+        resp = await client.get(url, timeout=10.0)
+        if resp.status_code == 200 and len(resp.content) <= MAX_HTML_BYTES:
             raw_html = resp.text
             foto_og = extrair_og_image_da_pagina(raw_html)
-            video_pag = extrair_video_da_pagina(raw_html)
+            video_pag = extrair_candidato_video_html(raw_html)
     except Exception as exc:
-        logger.debug("Scraping direto falhou para %s: %s", url, exc)
+        logger.debug("Download do HTML falhou para %s: %s", url, exc)
 
-    if raw_html:
-        html_sem_scripts = re.sub(
-            r"<(head|script|style|svg|nav|footer|header|aside|form|noscript|iframe|button)\b[^>]*>.*?</\1>",
-            " ",
-            raw_html,
-            flags=re.DOTALL | re.IGNORECASE,
-        )
-        paragrafos = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", html_sem_scripts, flags=re.DOTALL | re.IGNORECASE)
-        blocos_limpos: List[str] = []
-
-        for p in paragrafos:
-            txt = limpar_html(p)
-            if paragrafo_parece_codigo_ou_lixo(txt):
-                continue
-            if re.search(r"\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}", txt, re.IGNORECASE):
-                continue
-            if titulo and titulo[:30].lower() in txt.lower():
-                continue
-
-            txt = re.sub(
-                r"^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+",
-                "",
-                txt,
-                flags=re.IGNORECASE,
-            )
-            txt = remover_carimbo_data_g1(txt)
-            if not paragrafo_parece_codigo_ou_lixo(txt):
-                blocos_limpos.append(txt)
-
-            if sum(len(b) for b in blocos_limpos) >= 850:
-                break
-
-        if blocos_limpos:
-            return " ".join(blocos_limpos), foto_og, video_pag
-
-    t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
-    t_desc = re.sub(r"^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*", "", t_desc, flags=re.IGNORECASE)
-    t_desc = re.sub(
-        r"^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+",
-        "",
-        t_desc,
-        flags=re.IGNORECASE,
+    paragrafos = await asyncio.to_thread(
+        extrair_paragrafos_trafilatura, raw_html, desc_bruta, titulo
     )
-    t_desc = remover_carimbo_data_g1(t_desc)
-    return t_desc, foto_og, video_pag
+    return paragrafos, foto_og, video_pag
 
 
 async def carregar_proximas_noticias(
@@ -713,36 +732,33 @@ async def carregar_proximas_noticias(
         *(buscar_feed_rss(client, sem, url) for url in FEEDS)
     )
 
-    candidatos = [item for sublista in resultados_feeds for item in sublista if item["link"] not in set_links]
+    candidatos = [
+        item for sublista in resultados_feeds for item in sublista
+        if item["link"] not in set_links and gerar_hash_url(item["link"]) not in set_links
+    ]
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias: List[NoticiaPreparada] = []
     for cand in candidatos:
         title = cand["title"]
         link = cand["link"]
+        link_hash = gerar_hash_url(link)
         desc_bruta = cand["desc_bruta"]
         item = cand["item"]
 
-        if link in set_links or eh_mesma_noticia(title, titulos_rodada):
+        if link in set_links or link_hash in set_links or eh_mesma_noticia(title, titulos_rodada):
             continue
 
         foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
-        texto_artigo, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
+        paragrafos, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
             client, link, desc_bruta, title
         )
 
-        foto = foto_rss or foto_og
-        video_bruto = video_rss or video_pag
-        video_mp4 = await resolver_url_video_mp4(video_bruto)
-
-        if not foto and not video_mp4 and not audio_rss:
+        resumo_estruturado = estruturar_noticia_comeco_meio_fim(paragrafos, title)
+        if not resumo_estruturado or len(resumo_estruturado) < 100:
             continue
 
-        resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-        if not resumo_formatado or len(resumo_formatado) < 110:
-            continue
-
-        categoria = categorizar_materia(title, resumo_formatado)
+        categoria = categorizar_materia(title, resumo_estruturado)
 
         t_limpo = title.strip()
         if " - " in t_limpo:
@@ -750,20 +766,21 @@ async def carregar_proximas_noticias(
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
-        post_html = montar_post_html_seguro(categoria, t_limpo, resumo_formatado)
+        post_html = montar_post_html_seguro(categoria, t_limpo, resumo_estruturado)
 
         noticias.append(
             NoticiaPreparada(
                 link=link,
                 titulo=title,
                 texto_html=post_html,
-                imagem=foto,
-                video=video_mp4,
+                imagem=foto_rss or foto_og,
+                video_candidato_url=video_rss or video_pag,
                 audio=audio_rss,
             )
         )
         titulos_rodada.append(title)
         set_links.add(link)
+        set_links.add(link_hash)
 
         if len(noticias) >= limite:
             break
@@ -773,7 +790,7 @@ async def carregar_proximas_noticias(
 
 
 # ==============================================================================
-# CLIENTE TELEGRAM COM SUPORTE A VÍDEO STREAMING E UPLOAD BINÁRIO
+# CLIENTE TELEGRAM (UPLOAD DE VÍDEO TEMPORÁRIO + FALLBACK LINKPREVIEWOPTIONS)
 # ==============================================================================
 async def telegram_request(
     client: httpx.AsyncClient,
@@ -786,9 +803,9 @@ async def telegram_request(
     for tentativa in range(1, max_retries + 1):
         try:
             if files:
-                resp = await client.post(url, data=data_fields, files=files, timeout=45.0)
+                resp = await client.post(url, data=data_fields, files=files, timeout=90.0)
             else:
-                resp = await client.post(url, json=json_payload, timeout=25.0)
+                resp = await client.post(url, json=json_payload, timeout=30.0)
 
             if resp.status_code == 200:
                 return True
@@ -815,40 +832,50 @@ async def telegram_request(
     return False
 
 
-async def baixar_midia_com_limite(
-    client: httpx.AsyncClient, media_url: str, referer_url: str, max_bytes: int, timeout: float = 20.0
-) -> Optional[Tuple[bytes, str]]:
+async def tentar_enviar_video_ytdlp(
+    client: httpx.AsyncClient,
+    base_url: str,
+    chat_id: str,
+    item: NoticiaPreparada,
+    botao_sorteado: Dict[str, Any],
+) -> bool:
     """
-    Faz download em streaming da mídia enviando o Referer do artigo original
-    (evita erro 403 de anti-hotlinking) e aborta se exceder max_bytes.
+    Tenta extrair e baixar o vídeo da notícia via yt-dlp (<= 50MB),
+    faz o upload nativo via sendVideo e apaga o arquivo temporário imediatamente.
     """
-    headers_midia = {**HEADERS, "Referer": referer_url}
-    try:
-        async with client.stream("GET", media_url, headers=headers_midia, timeout=timeout) as resp:
-            if resp.status_code != 200:
-                return None
+    urls_para_testar: List[str] = []
+    if item.video_candidato_url:
+        urls_para_testar.append(item.video_candidato_url)
+    urls_para_testar.append(item.link)
 
-            content_length = resp.headers.get("Content-Length")
-            if content_length and int(content_length) > max_bytes:
-                logger.warning("Mídia excede limite de tamanho (%s bytes): %s", content_length, media_url)
-                return None
+    with tempfile.TemporaryDirectory(prefix="tg_vid_") as pasta_temp:
+        caminho_video: Optional[Path] = None
+        for url_alvo in dict.fromkeys(urls_para_testar):
+            caminho_video = await asyncio.to_thread(
+                _baixar_video_ytdlp_sync, url_alvo, item.link, pasta_temp
+            )
+            if caminho_video and caminho_video.exists():
+                break
 
-            content_type = resp.headers.get("Content-Type", "application/octet-stream")
-            chunks: List[bytes] = []
-            total = 0
-            async for chunk in resp.aiter_bytes(chunk_size=65536):
-                total += len(chunk)
-                if total > max_bytes:
-                    logger.warning("Download abortado por exceder %d bytes: %s", max_bytes, media_url)
-                    return None
-                chunks.append(chunk)
+        if not caminho_video or not caminho_video.exists():
+            return False
 
-            if total < 500:
-                return None
-            return b"".join(chunks), content_type
-    except Exception as exc:
-        logger.debug("Falha ao baixar mídia %s: %s", media_url, exc)
-        return None
+        logger.info(
+            "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
+            caminho_video.stat().st_size / (1024 * 1024),
+        )
+        data_fields = {
+            "chat_id": chat_id,
+            "caption": item.texto_html,
+            "parse_mode": "HTML",
+            "supports_streaming": "true",
+            "reply_markup": json.dumps(botao_sorteado),
+        }
+        with open(caminho_video, "rb") as f_vid:
+            files = {"video": (caminho_video.name, f_vid, "video/mp4")}
+            return await telegram_request(
+                client, f"{base_url}/sendVideo", data_fields=data_fields, files=files
+            )
 
 
 async def enviar_post(
@@ -857,87 +884,28 @@ async def enviar_post(
     base_url = f"https://api.telegram.org/bot{token}"
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
-    # 1. Tenta Áudio Nativo
-    if item.audio:
-        payload = {
-            "chat_id": chat_id,
-            "audio": item.audio,
-            "caption": item.texto_html,
-            "parse_mode": "HTML",
-            "reply_markup": botao_sorteado,
-        }
-        if await telegram_request(client, f"{base_url}/sendAudio", json_payload=payload):
-            return True
+    # 1. Tenta Engine de Vídeo via yt-dlp (download temporário <= 50MB -> sendVideo -> delete)
+    sucesso_video = await tentar_enviar_video_ytdlp(
+        client, base_url, chat_id, item, botao_sorteado
+    )
+    if sucesso_video:
+        return True
 
-    # 2. Tenta Vídeo Nativo (URL Direta -> Fallback de Upload Binário com Streaming)
-    if item.video:
-        url_video_api = f"{base_url}/sendVideo"
-        payload_vid = {
-            "chat_id": chat_id,
-            "video": item.video,
-            "caption": item.texto_html,
-            "parse_mode": "HTML",
-            "supports_streaming": True,
-            "reply_markup": botao_sorteado,
-        }
-        if await telegram_request(client, url_video_api, json_payload=payload_vid):
-            return True
+    # 2. Fallback: Se não houver vídeo válido/suportado, envia sendMessage com LinkPreviewOptions
+    url_preview = item.imagem if item.imagem else item.link
+    link_preview_options: Dict[str, Any] = {
+        "is_disabled": False,
+        "url": url_preview,
+        "prefer_large_media": True,
+        "show_above_text": True,
+    }
 
-        # Fallback Binário do Vídeo: Contorna bloqueio do crawler do Telegram pela CDN do portal
-        logger.info("Tentando download e upload binário do vídeo: %s", item.video)
-        midia_vid = await baixar_midia_com_limite(
-            client, item.video, referer_url=item.link, max_bytes=MAX_VIDEO_BYTES, timeout=25.0
-        )
-        if midia_vid:
-            vid_bytes, vid_type = midia_vid
-            if "html" not in vid_type.lower():
-                data_fields = {
-                    "chat_id": chat_id,
-                    "caption": item.texto_html,
-                    "parse_mode": "HTML",
-                    "supports_streaming": "true",
-                    "reply_markup": json.dumps(botao_sorteado),
-                }
-                files = {"video": ("video.mp4", vid_bytes, "video/mp4")}
-                if await telegram_request(client, url_video_api, data_fields=data_fields, files=files):
-                    return True
-
-    # 3. Tenta Imagem Nativa (URL Direta -> Fallback de Upload Binário)
-    if item.imagem:
-        url_photo_api = f"{base_url}/sendPhoto"
-        payload_img = {
-            "chat_id": chat_id,
-            "photo": item.imagem,
-            "caption": item.texto_html,
-            "parse_mode": "HTML",
-            "reply_markup": botao_sorteado,
-        }
-        if await telegram_request(client, url_photo_api, json_payload=payload_img):
-            return True
-
-        midia_img = await baixar_midia_com_limite(
-            client, item.imagem, referer_url=item.link, max_bytes=MAX_IMAGE_BYTES, timeout=12.0
-        )
-        if midia_img:
-            img_bytes, img_type = midia_img
-            if "html" not in img_type.lower():
-                data_fields = {
-                    "chat_id": chat_id,
-                    "caption": item.texto_html,
-                    "parse_mode": "HTML",
-                    "reply_markup": json.dumps(botao_sorteado),
-                }
-                files = {"photo": ("cover.jpg", img_bytes, img_type)}
-                if await telegram_request(client, url_photo_api, data_fields=data_fields, files=files):
-                    return True
-
-    # 4. Fallback Final: Texto puro com LinkPreviewOptions moderno (Bot API 7.0+) desativado para não vazar link externo
-    logger.info("Acionando fallback sendMessage (sem mídia) para: %s", item.titulo)
+    logger.info("Sem vídeo nativo para '%s'. Enviando via sendMessage com LinkPreviewOptions.", item.titulo)
     payload_msg = {
         "chat_id": chat_id,
         "text": item.texto_html,
         "parse_mode": "HTML",
-        "link_preview_options": {"is_disabled": True},
+        "link_preview_options": link_preview_options,
         "reply_markup": botao_sorteado,
     }
     return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_msg)
@@ -947,12 +915,12 @@ async def enviar_post(
 # ENTRYPOINT ASSÍNCRONO
 # ==============================================================================
 async def main() -> None:
-    token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
-    chat_id = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
+    token = (os.environ.get("TELEGRAM_BOT_TOKEN") or "").strip()
+    chat_id = (os.environ.get("TELEGRAM_CHAT_ID") or "").strip()
 
     if not token or not chat_id:
         logger.critical(
-            "Variáveis de ambiente obrigatórias ausentes: defina TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID."
+            "Variáveis de ambiente obrigatórias ausentes: configure TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID nos Secrets do GitHub."
         )
         sys.exit(1)
 
@@ -971,6 +939,7 @@ async def main() -> None:
             sucesso = await enviar_post(client, token, chat_id, noticia)
             if sucesso:
                 links_historico.append(noticia.link)
+                links_historico.append(gerar_hash_url(noticia.link))
                 titulos_historico.append(noticia.titulo)
                 salvar_historico(links_historico, titulos_historico)
                 logger.info("Notícia publicada com sucesso: %s", noticia.titulo)
