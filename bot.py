@@ -174,11 +174,11 @@ ANCORAS_INVESTIDOR = (
 )
 
 # ==============================================================================
-# TAXONOMIA FINANCEIRA PARA AÇÕES, FIIs, RENDA FIXA E EMPREENDEDORISMO
+# TAXONOMIA FINANCEIRA PARA PONTUAÇÃO (COM TAGS CURTAS E DIRETAS)
 # ==============================================================================
 TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
-        "label": "🟢 <b>DIVIDENDOS &amp; RENDIMENTOS</b>",
+        "label": "🟢 <b>DIVIDENDOS</b>",
         "termos": {
             "dividendos": 20,
             "dividendo": 20,
@@ -198,7 +198,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "FUNDOS_IMOBILIARIOS": {
-        "label": "🏢 <b>FUNDOS IMOBILIÁRIOS (FIIs)</b>",
+        "label": "🏢 <b>FUNDOS IMOBILIÁRIOS</b>",
         "termos": {
             "fundo imobiliário": 22,
             "fundos imobiliários": 22,
@@ -225,7 +225,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "RENDA_FIXA": {
-        "label": "🏦 <b>RENDA FIXA &amp; TESOURO DIRETO</b>",
+        "label": "🏦 <b>RENDA FIXA</b>",
         "termos": {
             "renda fixa": 22,
             "tesouro direto": 24,
@@ -255,7 +255,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
         },
     },
     "ACOES_BALANCOS_NEGOCIOS": {
-        "label": "🔵 <b>AÇÕES, BALANÇOS &amp; NEGÓCIOS</b>",
+        "label": "🔵 <b>AÇÕES &amp; NEGÓCIOS</b>",
         "termos": {
             "balanço": 18,
             "lucro líquido": 22,
@@ -291,8 +291,8 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
         },
     },
-    "MACRO_E_EMPREENDEDORISMO": {
-        "label": "🟠 <b>ECONOMIA, JUROS &amp; EMPREENDEDORISMO</b>",
+    "MACROECONOMIA": {
+        "label": "🟠 <b>ECONOMIA &amp; MERCADOS</b>",
         "termos": {
             "copom": 22,
             "selic": 22,
@@ -398,6 +398,47 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
+# SELETOR DE TAG CURTA, PRECISA E COERENTE COM O TÍTULO DA MATÉRIA
+# ==============================================================================
+def definir_tag_curta_e_precisa(
+    titulo: str, lead: str, categoria_dominante: str, tickers: List[str], tickers_fii: List[str]
+) -> str:
+    """
+    Escolhe uma tag curta (1 a 2 palavras) que casa 100% com o assunto real do título da matéria,
+    evitando tags longas ou desconexas.
+    """
+    t_low = titulo.lower()
+    foco = f"{t_low} {lead[:180].lower()}"
+
+    if any(k in t_low for k in ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data-com", "rendimentos")):
+        return "🟢 <b>DIVIDENDOS</b>"
+    if tickers_fii or any(k in t_low for k in ("fii", "fiis", "fundo imobiliário", "fundos imobiliários", "ifix", "fiagro")):
+        return "🏢 <b>FUNDOS IMOBILIÁRIOS</b>"
+    if any(k in t_low for k in ("tesouro direto", "tesouro ipca", "tesouro selic", "renda fixa", "cdb", "lci", "lca", "debênture", "cri", "cra")):
+        return "🏦 <b>RENDA FIXA</b>"
+    if any(k in t_low for k in ("ibovespa", "bolsa", "b3", "ações", "pregão")):
+        return "📊 <b>BOLSA &amp; MERCADOS</b>"
+    if any(k in t_low for k in ("dólar", "câmbio", "moeda")):
+        return "💵 <b>DÓLAR &amp; CÂMBIO</b>"
+    if any(k in t_low for k in ("balanço", "lucro", "ebitda", "prejuízo", "receita", "1t", "2t", "3t", "4t", "resultado")):
+        return "🔵 <b>BALANÇOS</b>"
+    if any(k in t_low for k in ("selic", "copom", "ipca", "inflação", "juros", "focus", "banco central", "galípolo")):
+        return "🟠 <b>JUROS &amp; INFLAÇÃO</b>"
+    if any(k in t_low for k in ("fiscal", "arcabouço", "gastos", "haddad", "fazenda", "dívida", "orçamento", "imposto", "tributária", "tributação")):
+        return "🟠 <b>CENÁRIO FISCAL</b>"
+    if any(k in t_low for k in ("fed", "fomc", "wall street", "s&p 500", "nasdaq", "eua", "treasuries", "treasury", "powell", "china")):
+        return "🌎 <b>MERCADO GLOBAL</b>"
+    if any(k in t_low for k in ("petróleo", "brent", "minério", "ouro", "opep", "commodities")):
+        return "🛢️ <b>COMMODITIES</b>"
+    if any(k in t_low for k in ("bitcoin", "btc", "cripto", "criptomoeda", "ethereum")):
+        return "₿ <b>CRIPTOMOEDAS</b>"
+    if tickers or any(k in foco for k in ("aquisição", "fusão", "fato relevante", "recompra", "follow-on", "ipo", "opa", "concessão", "leilão")):
+        return "🟣 <b>EMPRESAS &amp; NEGÓCIOS</b>"
+
+    return TAXONOMIA_PESOS.get(categoria_dominante, TAXONOMIA_PESOS["MACROECONOMIA"])["label"]
+
+
+# ==============================================================================
 # MOTOR HEURÍSTICO DE SCORING (AÇÕES, FIIs, RENDA FIXA E EMPREENDEDORISMO)
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
@@ -411,12 +452,6 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
-    """
-    Filtro Rígido Calibrado para o Investidor (Ações, FIIs, Renda Fixa e Negócios):
-    1. Exige que o Título ou o Lead (1º parágrafo) tenha âncora real de investimento/negócios
-       (ação, FII, título de renda fixa, indicador macroeconômico ou decisão tributária/empresarial).
-    2. Penaliza matérias vazias sem números concretos (R$, US$, %, bilhões, pontos, taxas).
-    """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
@@ -485,14 +520,7 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
     score_final = max(0, soma_taxonomia + bonus_tickers + bonus_ancora + bonus_metricas)
 
-    if pontos_por_categoria[categoria_dominante] > 0:
-        cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
-    elif tickers_fii:
-        categoria_dominante = "FUNDOS_IMOBILIARIOS"
-        cat_label = TAXONOMIA_PESOS["FUNDOS_IMOBILIARIOS"]["label"]
-    else:
-        categoria_dominante = "ACOES_BALANCOS_NEGOCIOS"
-        cat_label = TAXONOMIA_PESOS["ACOES_BALANCOS_NEGOCIOS"]["label"]
+    cat_label = definir_tag_curta_e_precisa(titulo, lead, categoria_dominante, tickers, tickers_fii)
 
     return AnaliseHeuristica(
         score_total=score_final,
@@ -618,12 +646,6 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
 
 
 def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool:
-    """
-    1. Checa URLs bloqueadas (/esportes/, /carros/, /casual/, etc.)
-    2. Checa temas não-financeiros (INSS, Bolsa Família, futebol, jogos) APENAS NO TÍTULO
-       (para nunca bloquear matérias sobre Ibovespa/Pacote Fiscal que citem esses programas no corpo).
-    3. Checa propagandas explícitas de corretoras/cursos no título e início do texto.
-    """
     url_low = url.lower()
     if any(caminho in url_low for caminho in CAMINHOS_URL_BLOQUEADOS):
         return True
@@ -691,6 +713,8 @@ def limpar_html(txt: str) -> str:
 def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
     if not txt or len(txt) < 45:
         return True
+    if txt.strip().endswith("?"):
+        return True
     ruidos = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
         "gostaria de receber", "assine a", "exclusivo para assinantes", "inscreva-se",
@@ -735,7 +759,11 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
 
     if not paragrafos_limpos and desc_bruta:
         t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
-        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t_desc) if len(f.strip()) >= 35]
+        frases = [
+            f.strip()
+            for f in re.split(r"(?<=[.!?])\s+", t_desc)
+            if len(f.strip()) >= 35 and not f.strip().endswith("?")
+        ]
         if len(frases) >= 3:
             paragrafos_limpos = [frases[0], " ".join(frases[1:-1]), frases[-1]]
         elif t_desc and len(t_desc) >= 60:
@@ -745,9 +773,14 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
 
 
 # ==============================================================================
-# NARRATIVA APROFUNDADA (~1300 A 1400 CARACTERES COM COMEÇO, MEIO E FIM)
+# NARRATIVA APROFUNDADA (~1300 A 1400 CARACTERES COM COMEÇO, MEIO E FIM, SEM PERGUNTAS SOLTAS)
 # ==============================================================================
 def dividir_em_frases_completas(texto: str) -> List[str]:
+    """
+    Divide o texto em frases completas e REMOVE automaticamente intertítulos em formato
+    de pergunta ('Quanto a pessoa física comprou...?', 'Qual a participação...?') para
+    que a notícia seja 100% afirmativa, limpa e nunca termine com pergunta solta!
+    """
     texto = " ".join(texto.split()).strip()
     if not texto:
         return []
@@ -760,16 +793,50 @@ def dividir_em_frases_completas(texto: str) -> List[str]:
         p = p.strip()
         if not p or "[…]" in p or "[...]" in p:
             continue
+        if p.endswith("?"):
+            continue
         if re.search(
             r"\b(?:de|da|do|das|dos|em|na|no|para|por|com|que|e|ou|cerca|visam|foram|está|são)\.?$",
             p,
             flags=re.IGNORECASE,
         ):
             continue
-        if p[-1] not in ".!?":
+        if p[-1] not in ".!":
             p += "."
         frases.append(p)
     return frases
+
+
+def frase_repete_informacao(nova_frase: str, frases_ja_escolhidas: List[str]) -> bool:
+    """
+    Impede que parágrafos seguintes repitam a mesma frase ou o mesmo número
+    já explicado no parágrafo de abertura.
+    """
+    palavras_nova = {
+        w for w in re.findall(r"[a-záéíóúâêôãõç0-9]{4,}", nova_frase.lower())
+        if w not in STOPWORDS_DEDUP
+    }
+    if not palavras_nova:
+        return True
+
+    metricas_nova = set(m.lower().strip() for m in REGEX_METRICAS_NUMERICAS.findall(nova_frase))
+
+    for f_antiga in frases_ja_escolhidas:
+        palavras_antiga = {
+            w for w in re.findall(r"[a-záéíóúâêôãõç0-9]{4,}", f_antiga.lower())
+            if w not in STOPWORDS_DEDUP
+        }
+        if not palavras_antiga:
+            continue
+        inter = palavras_nova & palavras_antiga
+        proporcao = len(inter) / min(len(palavras_nova), len(palavras_antiga))
+        if proporcao >= 0.55:
+            return True
+        metricas_antiga = set(m.lower().strip() for m in REGEX_METRICAS_NUMERICAS.findall(f_antiga))
+        if metricas_nova and (metricas_nova & metricas_antiga) and proporcao >= 0.35:
+            return True
+
+    return False
 
 
 def truncar_frase_limpa(texto: str, max_chars: int) -> str:
@@ -836,7 +903,7 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
     todas_frases: List[str] = []
     for p in paragrafos:
         for f in dividir_em_frases_completas(p):
-            if len(f) >= 38 and f not in todas_frases:
+            if len(f) >= 38 and not frase_repete_informacao(f, todas_frases):
                 todas_frases.append(f)
 
     if len(todas_frases) < 3:
