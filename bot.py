@@ -18,7 +18,13 @@ import httpx
 try:
     import defusedxml.ElementTree as ET
 except ImportError:
-    import xml.etree.ElementTree as ET  # Fallback caso defusedxml não esteja instalado
+    import xml.etree.ElementTree as ET
+
+try:
+    import yt_dlp
+    HAS_YTDLP = True
+except ImportError:
+    HAS_YTDLP = False
 
 # ==============================================================================
 # CONFIGURAÇÃO DE LOGGING ESTRUTURADO
@@ -40,7 +46,8 @@ MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.getenv("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.getenv("MAX_IDADE_MINUTOS", "120"))
 MAX_CONCURRENT_REQUESTS = 6
-MAX_IMAGE_BYTES = 5 * 1024 * 1024  # 5 MB limite de segurança
+MAX_IMAGE_BYTES = 5 * 1024 * 1024    # 5 MB para imagens e HTML
+MAX_VIDEO_BYTES = 25 * 1024 * 1024   # 25 MB para fallback de upload binário de vídeo
 TELEGRAM_CAPTION_LIMIT = 1024
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
@@ -137,7 +144,6 @@ def carregar_historico() -> Tuple[List[str], List[str]]:
 
 
 def salvar_historico(links: List[str], titulos: List[str]) -> None:
-    """Salva o histórico de forma atômica para evitar corrupção de arquivo."""
     try:
         dados = {
             "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
@@ -169,6 +175,8 @@ def normalizar_url(url: Optional[str]) -> Optional[str]:
     if not url:
         return None
     url = html.unescape(url.strip())
+    if url.startswith("//"):
+        url = "https:" + url
     if not url.startswith(("http://", "https://")):
         return None
     try:
@@ -177,6 +185,11 @@ def normalizar_url(url: Optional[str]) -> Optional[str]:
         return urllib.parse.urlunsplit((p.scheme, p.netloc, caminho, p.query, p.fragment))
     except Exception:
         return None
+
+
+def url_eh_mp4_direto(url: str) -> bool:
+    path = urllib.parse.urlsplit(url).path.lower()
+    return path.endswith((".mp4", ".mov", ".m4v"))
 
 
 def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
@@ -289,6 +302,9 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
     return False
 
 
+# ==============================================================================
+# EXTRAÇÃO DE MÍDIA (IMAGEM E VÍDEO) DO RSS E DO HTML DA PÁGINA
+# ==============================================================================
 def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     padroes = (
         r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
@@ -305,6 +321,82 @@ def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     return None
 
 
+def extrair_video_da_pagina(raw_html: str) -> Optional[str]:
+    """
+    Busca URLs de vídeo (.mp4 direto ou player embed) dentro do HTML do artigo:
+    1. Meta tags OpenGraph (og:video:secure_url, og:video, twitter:player:stream)
+    2. Tags HTML5 <video> e <source src="...mp4">
+    3. Schema.org VideoObject em JSON-LD ("contentUrl": "...mp4")
+    4. Iframes de YouTube (caso yt-dlp esteja ativo)
+    """
+    padroes_diretos = (
+        r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
+        r'<meta[^>]+name=["\']twitter:player:stream["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<source[^>]+src=["\']([^"\']+\.mp4(?:\?[^"\']*)?)["\']',
+        r'<video[^>]+src=["\']([^"\']+\.mp4(?:\?[^"\']*)?)["\']',
+        r'"contentUrl"\s*:\s*"([^"]+\.mp4(?:\?[^"]*)?)"',
+    )
+    candidato_embed: Optional[str] = None
+
+    for padrao in padroes_diretos:
+        for match in re.finditer(padrao, raw_html, re.IGNORECASE):
+            raw_url = match.group(1).replace(r"\/", "/")
+            url = normalizar_url(raw_url)
+            if not url:
+                continue
+            if url_eh_mp4_direto(url):
+                return url
+            if not candidato_embed:
+                candidato_embed = url
+
+    # Se não achou .mp4 explícito, verifica iframe do YouTube para eventual extração com yt-dlp
+    if not candidato_embed and HAS_YTDLP:
+        m_yt = re.search(
+            r'<iframe[^>]+src=["\']((?:https?:)?//(?:www\.)?(?:youtube\.com/embed/|youtu\.be/)[^"\'?]+)',
+            raw_html,
+            re.IGNORECASE,
+        )
+        if m_yt:
+            candidato_embed = normalizar_url(m_yt.group(1))
+
+    return candidato_embed
+
+
+def _resolver_stream_ytdlp_sync(url: str) -> Optional[str]:
+    """Extrai a URL direta de um stream MP4 (<= 25MB) usando yt-dlp sem baixar para disco."""
+    if not HAS_YTDLP:
+        return None
+    ydl_opts = {
+        "format": "best[ext=mp4][filesize<25M]/best[ext=mp4][filesize_approx<25M]/best[ext=mp4]",
+        "quiet": True,
+        "no_warnings": True,
+        "noplaylist": True,
+        "socket_timeout": 10,
+    }
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+            if info and isinstance(info, dict):
+                direct_url = info.get("url")
+                if direct_url and direct_url.startswith("http"):
+                    return direct_url
+    except Exception as exc:
+        logger.debug("yt-dlp não conseguiu extrair MP4 direto de %s: %s", url, exc)
+    return None
+
+
+async def resolver_url_video_mp4(url_video: Optional[str]) -> Optional[str]:
+    """Garante que a URL de vídeo seja um stream .mp4 válido para o sendVideo do Telegram."""
+    if not url_video:
+        return None
+    if url_eh_mp4_direto(url_video):
+        return url_video
+    if HAS_YTDLP:
+        return await asyncio.to_thread(_resolver_stream_ytdlp_sync, url_video)
+    return None
+
+
 def extrair_midias_do_rss(
     item: ET.Element, desc_bruta: str
 ) -> Tuple[Optional[str], Optional[str], Optional[str]]:
@@ -317,7 +409,7 @@ def extrair_midias_do_rss(
         url = normalizar_url(enc.attrib["url"])
         tipo = enc.attrib.get("type", "").lower()
         if url:
-            if "video" in tipo or url.lower().endswith((".mp4", ".mov")):
+            if "video" in tipo or url_eh_mp4_direto(url):
                 video_url = url
             elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
                 audio_url = url
@@ -325,26 +417,35 @@ def extrair_midias_do_rss(
                 foto_url = url
 
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
-        m = item.find(tag)
-        if m is not None and "url" in m.attrib:
-            url = normalizar_url(m.attrib["url"])
-            tipo = m.attrib.get("type", "").lower()
-            if url:
-                if "video" in tipo or url.lower().endswith(".mp4"):
-                    video_url = video_url or url
-                elif "audio" in tipo or url.lower().endswith(".mp3"):
-                    audio_url = audio_url or url
-                elif not foto_url and ("image" in tipo or url.startswith("http")):
-                    foto_url = url
+        for m in item.findall(tag):
+            if "url" in m.attrib:
+                url = normalizar_url(m.attrib["url"])
+                tipo = m.attrib.get("type", "").lower()
+                medium = m.attrib.get("medium", "").lower()
+                if url:
+                    if "video" in tipo or medium == "video" or url_eh_mp4_direto(url):
+                        video_url = video_url or url
+                    elif "audio" in tipo or medium == "audio" or url.lower().endswith(".mp3"):
+                        audio_url = audio_url or url
+                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
+                        foto_url = url
+
+    if not video_url and desc_bruta:
+        busca_vid = re.search(r'<(?:video|source)[^>]+src=["\']([^"\']+\.mp4[^"\']*)["\']', desc_bruta, re.IGNORECASE)
+        if busca_vid:
+            video_url = normalizar_url(busca_vid.group(1))
 
     if not foto_url and desc_bruta:
-        busca = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-        if busca:
-            foto_url = normalizar_url(busca.group(1))
+        busca_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca_img:
+            foto_url = normalizar_url(busca_img.group(1))
 
     return foto_url, video_url, audio_url
 
 
+# ==============================================================================
+# PROCESSAMENTO DE TEXTO E CATEGORIZAÇÃO
+# ==============================================================================
 def formatar_resumo_500_600(texto_bruto: str, titulo: str) -> str:
     if not texto_bruto:
         return ""
@@ -468,7 +569,6 @@ def categorizar_materia(titulo: str, texto: str) -> str:
 
 
 def montar_post_html_seguro(categoria_html: str, titulo_limpo: str, resumo_texto: str) -> str:
-    """Garante que o HTML gerado jamais ultrapasse 1024 caracteres nem quebre entidades."""
     titulo_esc = html.escape(titulo_limpo)
     resumo_atual = resumo_texto
 
@@ -477,7 +577,6 @@ def montar_post_html_seguro(categoria_html: str, titulo_limpo: str, resumo_texto
         post = f"{categoria_html}\n\n<b>{titulo_esc}</b>\n\n{resumo_esc}"
         if len(post) <= TELEGRAM_CAPTION_LIMIT or len(resumo_atual) <= 100:
             return post
-        # Reduz o texto original antes de escapar para nunca cortar '&amp;' ao meio
         resumo_atual = resumo_atual[:-40].rsplit(" ", 1)[0].rstrip(",;:-") + "."
 
 
@@ -538,10 +637,12 @@ async def buscar_feed_rss(
     return itens_validos
 
 
-async def obter_conteudo_e_imagem_artigo(
+async def obter_conteudo_e_midias_artigo(
     client: httpx.AsyncClient, url: str, desc_bruta: str, titulo: str
-) -> Tuple[str, Optional[str]]:
+) -> Tuple[str, Optional[str], Optional[str]]:
+    """Retorna (texto_extraido, foto_og, video_extraido)."""
     foto_og: Optional[str] = None
+    video_pag: Optional[str] = None
     raw_html = ""
 
     try:
@@ -549,6 +650,7 @@ async def obter_conteudo_e_imagem_artigo(
         if resp.status_code == 200 and len(resp.content) <= MAX_IMAGE_BYTES:
             raw_html = resp.text
             foto_og = extrair_og_image_da_pagina(raw_html)
+            video_pag = extrair_video_da_pagina(raw_html)
     except Exception as exc:
         logger.debug("Scraping direto falhou para %s: %s", url, exc)
 
@@ -585,7 +687,7 @@ async def obter_conteudo_e_imagem_artigo(
                 break
 
         if blocos_limpos:
-            return " ".join(blocos_limpos), foto_og
+            return " ".join(blocos_limpos), foto_og, video_pag
 
     t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
     t_desc = re.sub(r"^.*?\d{1,2}\s+de\s+[a-záéíóúâêîôûãõç]+\s+de\s+\d{4}\s*", "", t_desc, flags=re.IGNORECASE)
@@ -596,7 +698,7 @@ async def obter_conteudo_e_imagem_artigo(
         flags=re.IGNORECASE,
     )
     t_desc = remover_carimbo_data_g1(t_desc)
-    return t_desc, foto_og
+    return t_desc, foto_og, video_pag
 
 
 async def carregar_proximas_noticias(
@@ -624,11 +726,16 @@ async def carregar_proximas_noticias(
         if link in set_links or eh_mesma_noticia(title, titulos_rodada):
             continue
 
-        foto, video, audio = extrair_midias_do_rss(item, desc_bruta)
-        texto_artigo, foto_og = await obter_conteudo_e_imagem_artigo(client, link, desc_bruta, title)
-        foto = foto or foto_og
+        foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
+        texto_artigo, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
+            client, link, desc_bruta, title
+        )
 
-        if not foto and not video and not audio:
+        foto = foto_rss or foto_og
+        video_bruto = video_rss or video_pag
+        video_mp4 = await resolver_url_video_mp4(video_bruto)
+
+        if not foto and not video_mp4 and not audio_rss:
             continue
 
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
@@ -651,8 +758,8 @@ async def carregar_proximas_noticias(
                 titulo=title,
                 texto_html=post_html,
                 imagem=foto,
-                video=video,
-                audio=audio,
+                video=video_mp4,
+                audio=audio_rss,
             )
         )
         titulos_rodada.append(title)
@@ -666,7 +773,7 @@ async def carregar_proximas_noticias(
 
 
 # ==============================================================================
-# CLIENTE TELEGRAM COM RATE LIMITING (FLOOD CONTROL) E FALLBACK
+# CLIENTE TELEGRAM COM SUPORTE A VÍDEO STREAMING E UPLOAD BINÁRIO
 # ==============================================================================
 async def telegram_request(
     client: httpx.AsyncClient,
@@ -676,11 +783,10 @@ async def telegram_request(
     files: Optional[Dict[str, Any]] = None,
     max_retries: int = 3,
 ) -> bool:
-    """Executa chamada à API do Telegram respeitando HTTP 429 (retry_after)."""
     for tentativa in range(1, max_retries + 1):
         try:
             if files:
-                resp = await client.post(url, data=data_fields, files=files, timeout=30.0)
+                resp = await client.post(url, data=data_fields, files=files, timeout=45.0)
             else:
                 resp = await client.post(url, json=json_payload, timeout=25.0)
 
@@ -709,12 +815,49 @@ async def telegram_request(
     return False
 
 
+async def baixar_midia_com_limite(
+    client: httpx.AsyncClient, media_url: str, referer_url: str, max_bytes: int, timeout: float = 20.0
+) -> Optional[Tuple[bytes, str]]:
+    """
+    Faz download em streaming da mídia enviando o Referer do artigo original
+    (evita erro 403 de anti-hotlinking) e aborta se exceder max_bytes.
+    """
+    headers_midia = {**HEADERS, "Referer": referer_url}
+    try:
+        async with client.stream("GET", media_url, headers=headers_midia, timeout=timeout) as resp:
+            if resp.status_code != 200:
+                return None
+
+            content_length = resp.headers.get("Content-Length")
+            if content_length and int(content_length) > max_bytes:
+                logger.warning("Mídia excede limite de tamanho (%s bytes): %s", content_length, media_url)
+                return None
+
+            content_type = resp.headers.get("Content-Type", "application/octet-stream")
+            chunks: List[bytes] = []
+            total = 0
+            async for chunk in resp.aiter_bytes(chunk_size=65536):
+                total += len(chunk)
+                if total > max_bytes:
+                    logger.warning("Download abortado por exceder %d bytes: %s", max_bytes, media_url)
+                    return None
+                chunks.append(chunk)
+
+            if total < 500:
+                return None
+            return b"".join(chunks), content_type
+    except Exception as exc:
+        logger.debug("Falha ao baixar mídia %s: %s", media_url, exc)
+        return None
+
+
 async def enviar_post(
     client: httpx.AsyncClient, token: str, chat_id: str, item: NoticiaPreparada
 ) -> bool:
     base_url = f"https://api.telegram.org/bot{token}"
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
+    # 1. Tenta Áudio Nativo
     if item.audio:
         payload = {
             "chat_id": chat_id,
@@ -726,53 +869,75 @@ async def enviar_post(
         if await telegram_request(client, f"{base_url}/sendAudio", json_payload=payload):
             return True
 
+    # 2. Tenta Vídeo Nativo (URL Direta -> Fallback de Upload Binário com Streaming)
     if item.video:
-        payload = {
+        url_video_api = f"{base_url}/sendVideo"
+        payload_vid = {
             "chat_id": chat_id,
             "video": item.video,
             "caption": item.texto_html,
             "parse_mode": "HTML",
+            "supports_streaming": True,
             "reply_markup": botao_sorteado,
         }
-        if await telegram_request(client, f"{base_url}/sendVideo", json_payload=payload):
+        if await telegram_request(client, url_video_api, json_payload=payload_vid):
             return True
 
+        # Fallback Binário do Vídeo: Contorna bloqueio do crawler do Telegram pela CDN do portal
+        logger.info("Tentando download e upload binário do vídeo: %s", item.video)
+        midia_vid = await baixar_midia_com_limite(
+            client, item.video, referer_url=item.link, max_bytes=MAX_VIDEO_BYTES, timeout=25.0
+        )
+        if midia_vid:
+            vid_bytes, vid_type = midia_vid
+            if "html" not in vid_type.lower():
+                data_fields = {
+                    "chat_id": chat_id,
+                    "caption": item.texto_html,
+                    "parse_mode": "HTML",
+                    "supports_streaming": "true",
+                    "reply_markup": json.dumps(botao_sorteado),
+                }
+                files = {"video": ("video.mp4", vid_bytes, "video/mp4")}
+                if await telegram_request(client, url_video_api, data_fields=data_fields, files=files):
+                    return True
+
+    # 3. Tenta Imagem Nativa (URL Direta -> Fallback de Upload Binário)
     if item.imagem:
-        url_photo = f"{base_url}/sendPhoto"
-        payload = {
+        url_photo_api = f"{base_url}/sendPhoto"
+        payload_img = {
             "chat_id": chat_id,
             "photo": item.imagem,
             "caption": item.texto_html,
             "parse_mode": "HTML",
             "reply_markup": botao_sorteado,
         }
-        if await telegram_request(client, url_photo, json_payload=payload):
+        if await telegram_request(client, url_photo_api, json_payload=payload_img):
             return True
 
-        # Fallback 1: Download binário da imagem caso o servidor de origem bloqueie o user-agent do Telegram
-        try:
-            img_resp = await client.get(item.imagem, timeout=12.0)
-            if img_resp.status_code == 200 and 100 < len(img_resp.content) <= MAX_IMAGE_BYTES:
-                content_type = img_resp.headers.get("Content-Type", "image/jpeg")
+        midia_img = await baixar_midia_com_limite(
+            client, item.imagem, referer_url=item.link, max_bytes=MAX_IMAGE_BYTES, timeout=12.0
+        )
+        if midia_img:
+            img_bytes, img_type = midia_img
+            if "html" not in img_type.lower():
                 data_fields = {
                     "chat_id": chat_id,
                     "caption": item.texto_html,
                     "parse_mode": "HTML",
                     "reply_markup": json.dumps(botao_sorteado),
                 }
-                files = {"photo": ("cover.jpg", img_resp.content, content_type)}
-                if await telegram_request(client, url_photo, data_fields=data_fields, files=files):
+                files = {"photo": ("cover.jpg", img_bytes, img_type)}
+                if await telegram_request(client, url_photo_api, data_fields=data_fields, files=files):
                     return True
-        except Exception as exc:
-            logger.warning("Falha no download/upload binário da imagem (%s): %s", item.imagem, exc)
 
-    # Fallback 2: Envio como texto puro (sendMessage) para não perder notícia relevante por falha de CDN
+    # 4. Fallback Final: Texto puro com LinkPreviewOptions moderno (Bot API 7.0+) desativado para não vazar link externo
     logger.info("Acionando fallback sendMessage (sem mídia) para: %s", item.titulo)
     payload_msg = {
         "chat_id": chat_id,
         "text": item.texto_html,
         "parse_mode": "HTML",
-        "disable_web_page_preview": True,
+        "link_preview_options": {"is_disabled": True},
         "reply_markup": botao_sorteado,
     }
     return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_msg)
