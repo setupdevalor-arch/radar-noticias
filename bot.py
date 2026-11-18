@@ -44,7 +44,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "18"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "15"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
@@ -85,12 +85,11 @@ FEEDS = [
     "https://exame.com/feed/",
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
-    "https://www.cnnbrasil.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/mundo/",
-    "https://www.cnnbrasil.com.br/internacional/feed/",
+    "https://www.cnnbrasil.com.br/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     "https://portaldobitcoin.uol.com.br/feed/",
-    "https://br.cointelegraph.com/rss",
+    "https://livecoins.com.br/feed/",
 ]
 
 BLOQUEADOS_PROPAGANDA = (
@@ -557,14 +556,6 @@ def pontuar_paragrafo_meio(paragrafo: str) -> Tuple[int, int]:
 def montar_mensagem_investidor(
     titulo: str, paragrafos: List[str], analise: AnaliseHeuristica
 ) -> str:
-    """
-    Constrói o post HTML sem rodapés artificiais:
-    - Cabeçalho da Categoria
-    - Título Limpo em Negrito
-    - COMEÇO: 1º parágrafo (Lead)
-    - MEIO: Parágrafo com maior densidade de métricas financeiras / tickers
-    - FIM: Último parágrafo substantivo da notícia
-    """
     t_limpo = limpar_html(titulo.strip())
     if " - " in t_limpo:
         t_limpo, _ = t_limpo.rsplit(" - ", 1)
