@@ -44,12 +44,14 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "15"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "28"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
 MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite da Telegram Bot API)
-TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption no Telegram
+TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption em sendPhoto/sendVideo
+ALVO_MIN_CARACTERES_POST = 1150           # Mínimo ideal para matérias completas
+ALVO_MAX_CARACTERES_POST = 1520           # Teto para manter média em ~1300-1400 caracteres
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -73,20 +75,20 @@ HEADERS = {
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
+# Feeds focados em mercado financeiro, negócios, macroeconomia e ativos listados
 FEEDS = [
-    "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
+    "https://www.infomoney.com.br/economia/feed/",
+    "https://www.infomoney.com.br/negocios/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
-    "https://g1.globo.com/rss/g1/economia/",
     "https://braziljournal.com/feed",
-    "https://exame.com/feed/",
-    "https://www.infomoney.com.br/politica/feed/",
-    "https://g1.globo.com/rss/g1/politica/",
-    "https://g1.globo.com/rss/g1/mundo/",
-    "https://feeds.bbci.co.uk/portuguese/rss.xml",
+    "https://g1.globo.com/rss/g1/economia/",
+    "https://exame.com/invest/feed/",
+    "https://exame.com/economia/feed/",
+    "https://exame.com/negocios/feed/",
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://livecoins.com.br/feed/",
 ]
@@ -95,13 +97,19 @@ CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
     "/carreira/", "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
-    "/policia/", "/apostas/",
+    "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
+    "/minhas-financas/", "/guias/", "/cursos/", "/consumidor/",
+    "/marketing/", "/bussola/", "/esg/", "/agro/",
 )
 
-# Termos de propaganda, vitrines de corretora e lixo
+# Filtro rigoroso contra propagandas, vitrines de corretora, tutoriais básicos, benefícios sociais e ruído político/policial
 BLOQUEADOS_PROPAGANDA = (
+    # Vitrines de corretoras e publiposts
     "renda fixa hoje", "dentro da plataforma da xp", "plataforma da xp",
     "lcas na xp", "lcis na xp", "cdbs na xp", "taxas de cdbs",
+    "confira as taxas de", "conteúdo patrocinado", "branded content",
+    "especial publicitário", "apresentado por", "oferecimento",
+    # Promoções, varejo, cartões e cursos
     "black friday", "black xp", "cupom de desconto", "cupom",
     "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
     "pontos e milhas", "acumule pontos", "compras parceladas",
@@ -109,17 +117,32 @@ BLOQUEADOS_PROPAGANDA = (
     "curso gratuito", "inscrições abertas", "inscricoes abertas",
     "webinar", "mentoria", "baixe o e-book", "baixe o app",
     "treinamento gratuito", "workshop", "evento online", "evento gratuito",
-    "cartão black", "anuidade zero", "anuidade grátis",
-    "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
-    "escalação", "futebol", "novela", "brasileirão", "campeonato brasileiro",
-    "rebaixamento", "data fifa", "libertadores", "copa do brasil", "champions league",
-    "artilheiro", "goleiro", "estádio", "torcida", "série a", "série b", "35ª rodada",
+    "cartão black", "anuidade zero", "anuidade grátis", "encerra seu cartão",
+    "cartão de criptomoedas",
+    # Finanças pessoais básicas / Benefícios sociais / INSS / Loterias (não agregam ao investidor)
+    "quanto rende", "quanto renderia", "na poupança", "rendimento da poupança",
+    "como declarar", "passo a passo para", "saiba como consultar", "veja como consultar",
+    "calendário do inss", "meu inss", "aposentadoria do inss", "benefício do inss",
+    "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
+    "saque-aniversário", "fgts", "cnh social", "ipva ", "iptu ",
+    "concurso público", "edital publicado", "vagas de emprego", "quem pode fazer mba",
+    # Entretenimento, saúde, jogos e variedades
+    "horóscopo", "signo", "loteria", "mega-sena", "lotofácil", "quina",
+    "bbb", "fofoca", "onde assistir", "escalação", "futebol", "novela",
+    "brasileirão", "campeonato brasileiro", "rebaixamento", "data fifa",
+    "libertadores", "copa do brasil", "champions league", "artilheiro", "goleiro",
+    "estádio", "torcida", "série a", "série b", "35ª rodada",
     "tabela do campeonato", "eliminatórias", "seleção brasileira",
+    "gta 6", "playstation", "xbox", "canetas emagrecedoras", "cabelo cair",
+    "melhores produtos de", "quadro icônico", "obra de arte",
+    # Policial, apostas e política sem impacto econômico
     "esquema de bets", "apostas online", "apostas de quota fixa", "cassino online",
     "jogo do tigrinho", "mandados de busca", "mandado de busca", "busca e apreensão",
     "mandado de prisão", "operação cash out", "operação da pf", "equipes policiais",
     "lavagem de dinheiro", "quadrilha", "assalto", "sequestro", "homicídio",
-    "tráfico de drogas", "facção criminosa",
+    "tráfico de drogas", "facção criminosa", "lei da dosimetria",
+    # Listas vazias / Tempo real sem conteúdo fechado
+    "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
 STOPWORDS_DEDUP = {
@@ -130,6 +153,25 @@ STOPWORDS_DEDUP = {
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
 }
 
+# Entidades e ativos de alto valor para o investidor (âncoras de relevância no título/lead)
+ANCORAS_INVESTIDOR = (
+    "petrobras", "vale", "itaú", "itau", "bradesco", "banco do brasil", "santander",
+    "btg", "itaúsa", "itausa", "b3", "sabesp", "eletrobras", "taesa", "cemig", "copel",
+    "engie", "equatorial", "cpfl", "auren", "alupar", "sanepar", "copasa", "bb seguridade",
+    "caixa seguridade", "porto seguro", "vivo", "telefônica", "tim", "weg", "klabin",
+    "suzano", "gerdau", "csn", "usiminas", "prio", "brava", "vibra", "ultrapar", "raízen",
+    "ambev", "jbs", "marfrig", "brf", "minerva", "localiza", "movida", "azul", "gol",
+    "embraer", "cyrela", "mrv", "eztec", "multiplan", "iguatemi", "allos", "totvs",
+    "magazine luiza", "casas bahia", "lojas renner", "raia drogasil", "hapvida", "rede d'or",
+    "fleury", "hypera", "cosan", "rumo", "ccr", "ecorodovias", "santos brasil",
+    "ibovespa", "selic", "copom", "ipca", "igp-m", "pib", "arcabouço", "meta fiscal",
+    "tesouro", "di futuro", "curva de juros", "câmbio", "dólar", "banco central",
+    "galípolo", "haddad", "fed", "fomc", "powell", "treasury", "treasuries",
+    "wall street", "s&p 500", "nasdaq", "dow jones", "nvidia", "apple", "microsoft",
+    "alphabet", "amazon", "meta", "tesla", "brent", "opep", "minério de ferro",
+    "bitcoin", "ethereum", "etf", "blackrock", "cvm", "bndes",
+)
+
 # ==============================================================================
 # TAXONOMIA FINANCEIRA OBRIGATÓRIA (PESOS E CORES POR TEMA)
 # ==============================================================================
@@ -137,115 +179,120 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
         "label": "🟢 <b>PROVENTOS &amp; DIVIDENDOS</b>",
         "termos": {
-            "dividendos": 18,
-            "dividendo": 18,
-            "jcp": 20,
-            "juros sobre capital próprio": 20,
-            "juros sobre o capital próprio": 20,
-            "rendimentos": 12,
-            "data-com": 22,
-            "data com": 20,
-            "data-ex": 18,
-            "proventos": 16,
-            "dividend yield": 16,
-            "bonificação": 14,
+            "dividendos": 20,
+            "dividendo": 20,
+            "jcp": 22,
+            "juros sobre capital próprio": 22,
+            "juros sobre o capital próprio": 22,
+            "data-com": 24,
+            "data com": 22,
+            "data-ex": 20,
+            "proventos": 18,
+            "dividend yield": 18,
+            "payout": 16,
+            "bonificação": 16,
         },
     },
     "RESULTADOS_TRIMESTRAIS": {
         "label": "🔵 <b>RESULTADOS &amp; BALANÇOS</b>",
         "termos": {
-            "balanço": 15,
-            "lucro líquido": 20,
+            "balanço": 16,
+            "lucro líquido": 22,
             "lucro": 15,
             "lucros": 15,
-            "ebitda": 20,
-            "lajida": 18,
+            "ebitda": 22,
+            "lajida": 20,
             "prejuízo": 16,
-            "receita líquida": 18,
-            "receita": 10,
-            "margem": 12,
-            "margem líquida": 16,
-            "margem ebitda": 16,
-            "roe": 14,
-            "alavancagem": 14,
+            "receita líquida": 20,
+            "margem bruta": 16,
+            "margem líquida": 18,
+            "margem ebitda": 18,
+            "roe": 16,
+            "roic": 16,
+            "alavancagem": 15,
+            "dívida líquida": 16,
+            "geração de caixa": 16,
             "inadimplência": 14,
-            "guidance": 16,
-            "1t": 10, "2t": 10, "3t": 10, "4t": 10,
+            "guidance": 18,
+            "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
         },
     },
     "EVENTOS_CORPORATIVOS": {
-        "label": "🟣 <b>EVENTOS CORPORATIVOS &amp; M&amp;A</b>",
+        "label": "🟣 <b>CORPORATIVO &amp; M&amp;A</b>",
         "termos": {
-            "fato relevante": 24,
-            "fusão": 18,
-            "aquisição": 18,
-            "m&a": 18,
-            "recompra de ações": 22,
-            "programa de recompra": 20,
+            "fato relevante": 26,
+            "fusão": 20,
+            "aquisição": 20,
+            "m&a": 20,
+            "recompra de ações": 24,
+            "programa de recompra": 22,
             "opa": 22,
             "oferta pública": 18,
-            "emissão de cotas": 16,
-            "captação": 14,
-            "follow-on": 18,
-            "ipo": 16,
+            "emissão de debêntures": 16,
+            "follow-on": 20,
+            "ipo": 18,
             "cisão": 18,
-            "incorporação": 16,
+            "incorporação": 18,
             "grupamento": 16,
             "desdobramento": 16,
-            "recuperação judicial": 20,
-            "privatização": 16,
-            "concessão": 14,
+            "recuperação judicial": 22,
+            "privatização": 18,
+            "concessão": 16,
             "leilão": 14,
+            "preço-alvo": 18,
+            "recomendação de compra": 18,
         },
     },
     "MACROECONOMIA": {
         "label": "🟠 <b>MACROECONOMIA &amp; MERCADOS</b>",
         "termos": {
-            "copom": 20,
-            "selic": 20,
+            "copom": 22,
+            "selic": 22,
             "taxa de juros": 16,
+            "juros futuros": 18,
+            "curva de juros": 18,
             "banco central": 16,
-            "fed": 18,
-            "fomc": 18,
-            "ipca": 20,
+            "fed": 20,
+            "fomc": 20,
+            "ata do fed": 22,
+            "ipca": 22,
             "inflação": 14,
-            "pib": 15,
-            "treasury": 18,
-            "treasuries": 18,
-            "boletim focus": 18,
-            "payroll": 18,
-            "cpi": 16,
-            "arcabouço fiscal": 16,
+            "pib": 16,
+            "treasury": 20,
+            "treasuries": 20,
+            "boletim focus": 20,
+            "payroll": 20,
+            "cpi": 18,
+            "arcabouço fiscal": 18,
             "ajuste fiscal": 18,
             "pacote fiscal": 18,
             "corte de gastos": 16,
-            "meta fiscal": 15,
-            "déficit": 14,
-            "superávit": 14,
-            "tesouro direto": 15,
-            "câmbio": 12,
-            "dólar": 12,
-            "ibovespa": 14,
-            "b3": 14,
-            "wall street": 14,
-            "s&p 500": 14,
-            "nasdaq": 14,
-            "petróleo": 12,
-            "minério de ferro": 14,
+            "meta fiscal": 16,
+            "superávit primário": 18,
+            "déficit primário": 18,
+            "tesouro direto": 14,
+            "dólar à vista": 18,
+            "dólar comercial": 16,
+            "ibovespa": 18,
+            "wall street": 16,
+            "s&p 500": 16,
+            "nasdaq": 16,
+            "petróleo brent": 16,
+            "minério de ferro": 16,
             "bitcoin": 15,
-            "criptomoedas": 14,
-            "tarifas": 12,
+            "etf de bitcoin": 18,
+            "tarifas": 14,
         },
     },
 }
 
-REGEX_TICKER_B3 = re.compile(r"\b([A-Z]{4}(?:3|4|11))\b")
+REGEX_TICKER_B3 = re.compile(r"\b([A-Z]{4}(?:3|4|5|6|11))\b")
 
-REGEX_METRICAS_NUMERCIAS = re.compile(
+REGEX_METRICAS_NUMERICAS = re.compile(
     r"("
     r"[+-]?\d+(?:[.,]\d+)?\s*%"
     r"|(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?"
-    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri|pontos-base|bps)\b"
+    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri|pontos-base|bps|pontos)\b"
     r")",
     flags=re.IGNORECASE,
 )
@@ -268,6 +315,7 @@ MARCADORES_DESFECHO = (
     "para o mercado", "na avaliação", "a expectativa", "os papéis", "as ações",
     "fechou em", "encerrou em", "operam em", "cotadas a", "recomendação",
     "preço-alvo", "impacto", "perspectiva", "próximos passos", "a decisão",
+    "no ano", "nos últimos 12 meses", "segundo analistas", "relatório",
 )
 
 
@@ -285,6 +333,7 @@ class NoticiaPreparada:
     link: str
     titulo: str
     texto_html: str
+    caption_curta_html: str
     score: int
     dt_pub: datetime
     imagem: Optional[str] = None
@@ -293,11 +342,11 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
-# MOTOR HEURÍSTICO DE SCORING E TAXONOMIA FINANCEIRA
+# MOTOR HEURÍSTICO DE SCORING E FILTRAGEM RÍGIDA PARA INVESTIDORES
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
     encontrados = REGEX_TICKER_B3.findall(texto)
-    falsos_positivos = {"HTTP3", "HTML4", "IPV4", "UTF8", "MP4", "FIFA3", "COPA3"}
+    falsos_positivos = {"HTTP3", "HTML4", "IPV4", "UTF8", "MP4", "FIFA3", "COPA3", "G11", "BR11"}
     return [t for t in dict.fromkeys(encontrados) if t not in falsos_positivos]
 
 
@@ -306,43 +355,76 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
+    """
+    Filtro Rígido de Relevância para o Investidor:
+    1. Exige que o Título ou o Lead (1º parágrafo) tenha âncora real de mercado (empresa listada, ticker B3,
+       indicador macroeconômico ou evento corporativo). Matérias genéricas que só citam 'inflação' ou 'dólar'
+       no meio do texto são barradas.
+    2. Penaliza textos opinativos rasos sem métricas quantitativas (R$, US$, %, bilhões, pontos).
+    """
+    if not paragrafos:
+        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
+
+    lead = paragrafos[0]
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
-    titulo_low = re.sub(r"\breceita federal\b", "órgão fiscal", titulo.lower())
-    corpo_low = re.sub(r"\breceita federal\b", "órgão fiscal", corpo_texto.lower())
+
+    titulo_low = re.sub(r"\breceita federal\b", "órgão tributário", titulo.lower())
+    lead_low = re.sub(r"\breceita federal\b", "órgão tributário", lead.lower())
+    corpo_low = re.sub(r"\breceita federal\b", "órgão tributário", corpo_texto.lower())
 
     pontos_por_categoria: Dict[str, int] = {cat: 0 for cat in TAXONOMIA_PESOS}
     termos_encontrados: List[str] = []
+    match_no_titulo_ou_lead = False
 
     for cat_key, dados_cat in TAXONOMIA_PESOS.items():
         for termo, peso in dados_cat["termos"].items():
             padrao = r"(?<!\w)" + re.escape(termo) + r"(?!\w)"
             no_titulo = bool(re.search(padrao, titulo_low))
+            no_lead = bool(re.search(padrao, lead_low))
             no_corpo = bool(re.search(padrao, corpo_low))
 
             if no_titulo:
                 pontos_por_categoria[cat_key] += int(peso * 2.0)
                 termos_encontrados.append(termo)
+                match_no_titulo_ou_lead = True
+            elif no_lead:
+                pontos_por_categoria[cat_key] += int(peso * 1.3)
+                termos_encontrados.append(termo)
+                match_no_titulo_ou_lead = True
             elif no_corpo:
-                pontos_por_categoria[cat_key] += peso
+                pontos_por_categoria[cat_key] += int(peso * 0.7)
                 termos_encontrados.append(termo)
 
     tickers = extrair_tickers_b3(texto_completo)
-    bonus_tickers = min(len(tickers) * 15, 45)
+    tickers_titulo_lead = extrair_tickers_b3(f"{titulo} {lead}")
+    tem_ancora_investidor = (
+        bool(tickers_titulo_lead)
+        or any(re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", f"{titulo_low} {lead_low}") for a in ANCORAS_INVESTIDOR)
+    )
+
+    # Trava de Ouro: Se nem o título nem o 1º parágrafo têm âncora de mercado ou termo da taxonomia, descarta!
+    if not match_no_titulo_ou_lead and not tem_ancora_investidor:
+        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
+
+    bonus_tickers = min(len(tickers) * 16, 48)
+    bonus_ancora = 10 if tem_ancora_investidor else 0
     soma_taxonomia = sum(pontos_por_categoria.values())
 
     if soma_taxonomia == 0 and bonus_tickers == 0:
-        return AnaliseHeuristica(
-            score_total=0,
-            categoria_chave="DESCARTADA",
-            categoria_label="",
-        )
+        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
-    metricas = REGEX_METRICAS_NUMERCIAS.findall(texto_completo)
-    bonus_metricas = min(len(metricas) * 3, 18)
+    metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
+    # Exige densidade de dados: matérias sem nenhum número concreto (R$, US$, %, bi/mi) sofrem penalidade severa
+    if len(metricas) >= 2:
+        bonus_metricas = min(len(metricas) * 4, 24)
+    elif len(metricas) == 1:
+        bonus_metricas = 4
+    else:
+        bonus_metricas = -18
 
     categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
-    score_final = soma_taxonomia + bonus_tickers + bonus_metricas
+    score_final = max(0, soma_taxonomia + bonus_tickers + bonus_ancora + bonus_metricas)
 
     if pontos_por_categoria[categoria_dominante] > 0:
         cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
@@ -529,7 +611,10 @@ def limpar_html(txt: str) -> str:
         flags=re.IGNORECASE,
     )
     txt = remover_carimbo_data_g1(txt)
-    return " ".join(txt.split()).strip()
+    txt = " ".join(txt.split()).strip()
+    txt = re.sub(r"\s+([.,;:!?)])", r"\1", txt)
+    txt = re.sub(r"([(])\s+", r"\1", txt)
+    return txt
 
 
 def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
@@ -541,12 +626,12 @@ def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
         "todos os direitos reservados", "the post", "apareceu primeiro", "leia também",
         "veja também", "confira também", "siga o", "canal no whatsapp", "receba notícias",
         "reprodução/", "foto:", "crédito:", "imagem:", "divulgação/", "embeds_referring_euri",
-        "source_ve_path", "time_continue=", "watch?v=",
+        "source_ve_path", "time_continue=", "watch?v=", "publicidade", "patrocinado",
     )
     t_low = txt.lower()
     if any(r in t_low for r in ruidos):
         return True
-    if titulo and t_low.startswith(titulo[:30].lower()):
+    if titulo and t_low == titulo.lower().strip():
         return True
     if txt.count("[") >= 3 or txt.count("]") >= 3:
         return True
@@ -589,7 +674,7 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
 
 
 # ==============================================================================
-# NARRATIVA DE 3 ATOS: COMEÇO (LEAD), MEIO (CONTEXTO & DADOS) E FIM (CONCLUSÃO)
+# NARRATIVA APROFUNDADA (~1300 A 1400 CARACTERES COM COMEÇO, MEIO E FIM)
 # ==============================================================================
 def dividir_em_frases_completas(texto: str) -> List[str]:
     texto = " ".join(texto.split()).strip()
@@ -637,7 +722,7 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
         return acumulado
 
     primeira = frases[0]
-    if len(primeira) <= max_chars + 35:
+    if len(primeira) <= max_chars + 45:
         return primeira
 
     trecho = primeira[:max_chars]
@@ -656,7 +741,7 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
 
 
 def pontuar_paragrafo_meio(paragrafo: str) -> int:
-    qtd_metricas = len(REGEX_METRICAS_NUMERCIAS.findall(paragrafo))
+    qtd_metricas = len(REGEX_METRICAS_NUMERICAS.findall(paragrafo))
     qtd_tickers = len(REGEX_TICKER_B3.findall(paragrafo))
     p_low = paragrafo.lower()
     qtd_taxonomia = sum(
@@ -668,97 +753,112 @@ def pontuar_paragrafo_meio(paragrafo: str) -> int:
     return (qtd_metricas * 12) + (qtd_tickers * 18) + qtd_taxonomia
 
 
-def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[str, str, str]]:
+def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 340) -> Optional[List[str]]:
     """
-    Garante que toda notícia tenha estrutura lógica completa (Começo, Meio e Fim):
-    1. COMEÇO: O fato principal (Lead).
-    2. MEIO: O desenvolvimento direto logo após o lead (com os números/motivos, sem saltos desconexos).
-    3. FIM: O desfecho real / impacto de mercado (sem apagar a conclusão e sem pegar rodapé aleatório).
+    Constrói uma matéria jornalística completa (~1.250 a 1.450 caracteres no total)
+    estruturada em 4 atos coerentes (ou 3 atos longos):
+    1. COMEÇO (Lead): Apresentação clara do fato principal e dos protagonistas.
+    2. MEIO 1 (Dados & Causas): Números detalhados, valores em R$/US$/% e motivação.
+    3. MEIO 2 (Contexto & Desdobramento): Detalhes operacionais, histórico ou visão setorial.
+    4. FIM (Conclusão & Impacto): Desfecho real, reação das ações/mercado ou próximos passos.
     """
-    blocos: List[str] = []
+    todas_frases: List[str] = []
     for p in paragrafos:
-        bloco = truncar_frase_limpa(p, 250)
-        if bloco and len(bloco) >= 50 and bloco not in blocos:
-            blocos.append(bloco)
+        for f in dividir_em_frases_completas(p):
+            if len(f) >= 40 and f not in todas_frases:
+                todas_frases.append(f)
+
+    if len(todas_frases) < 3:
+        return None
+
+    blocos: List[str] = []
+    bloco_atual = ""
+    for f in todas_frases:
+        cand = f"{bloco_atual} {f}".strip() if bloco_atual else f
+        if len(cand) <= max_por_bloco:
+            bloco_atual = cand
+        else:
+            if bloco_atual and len(bloco_atual) >= 80:
+                blocos.append(bloco_atual)
+            bloco_atual = truncar_frase_limpa(f, max_por_bloco)
+    if bloco_atual and len(bloco_atual) >= 70:
+        blocos.append(bloco_atual)
 
     if len(blocos) < 3:
-        todas_frases: List[str] = []
-        for p in paragrafos:
-            for f in dividir_em_frases_completas(p):
-                if len(f) >= 45 and f not in todas_frases:
-                    todas_frases.append(f)
-        if len(todas_frases) < 3:
-            return None
-        p_comeco = truncar_frase_limpa(todas_frases[0], 235)
-        p_meio = truncar_frase_limpa(todas_frases[1], 245)
-        p_fim = truncar_frase_limpa(" ".join(todas_frases[2:4]), 235)
-        if p_comeco and p_meio and p_fim:
-            return p_comeco, p_meio, p_fim
         return None
 
-    p_comeco = truncar_frase_limpa(blocos[0], 235)
+    p_comeco = blocos[0]
 
-    limite_meio = min(4, len(blocos) - 1)
-    melhor_idx_meio = 1
-    melhor_score_meio = -999
+    if len(blocos) >= 4:
+        idx_meio1 = 1
+        if len(blocos) >= 5 and not REGEX_INICIO_ORFAO.search(blocos[2]):
+            if pontuar_paragrafo_meio(blocos[2]) > pontuar_paragrafo_meio(blocos[1]) + 25:
+                idx_meio1 = 2
+        p_meio1 = blocos[idx_meio1]
 
-    for idx in range(1, limite_meio):
-        cand = blocos[idx]
-        penalidade_orfao = -60 if (idx > 1 and REGEX_INICIO_ORFAO.search(cand)) else 0
-        bonus_sequencia = 16 if idx == 1 else (8 if idx == 2 else 0)
-        score = bonus_sequencia + pontuar_paragrafo_meio(cand) + penalidade_orfao
-        if score > melhor_score_meio:
-            melhor_score_meio = score
-            melhor_idx_meio = idx
+        restantes_meio = list(range(idx_meio1 + 1, min(idx_meio1 + 4, len(blocos) - 1)))
+        idx_meio2 = restantes_meio[0] if restantes_meio else (idx_meio1 + 1)
+        melhor_score_m2 = -999
+        for idx in restantes_meio:
+            cand = blocos[idx]
+            penalidade = -50 if REGEX_INICIO_ORFAO.search(cand) else 0
+            score = pontuar_paragrafo_meio(cand) + (12 if idx == idx_meio1 + 1 else 0) + penalidade
+            if score > melhor_score_m2:
+                melhor_score_m2 = score
+                idx_meio2 = idx
+        p_meio2 = blocos[idx_meio2]
 
-    p_meio = truncar_frase_limpa(blocos[melhor_idx_meio], 245)
+        janela_fim = blocos[idx_meio2 + 1 : min(idx_meio2 + 5, len(blocos))]
+        if not janela_fim:
+            janela_fim = [blocos[-1]]
 
-    janela_fim = blocos[melhor_idx_meio + 1 : min(melhor_idx_meio + 5, len(blocos))]
-    if not janela_fim:
-        janela_fim = [blocos[-1]]
+        melhor_fim = janela_fim[0]
+        melhor_score_fim = -999
+        for offset, cand in enumerate(janela_fim):
+            penalidade = -50 if (offset > 0 and REGEX_INICIO_ORFAO.search(cand)) else 0
+            c_low = cand.lower()
+            bonus_desfecho = 25 if any(m in c_low for m in MARCADORES_DESFECHO) else 0
+            score = bonus_desfecho + (pontuar_paragrafo_meio(cand) // 2) + (12 - offset * 3) + penalidade
+            if score > melhor_score_fim:
+                melhor_score_fim = score
+                melhor_fim = cand
+        p_fim = melhor_fim
 
-    melhor_fim = janela_fim[0]
-    melhor_score_fim = -999
-    for offset, cand in enumerate(janela_fim):
-        penalidade_orfao = -50 if (offset > 0 and REGEX_INICIO_ORFAO.search(cand)) else 0
-        c_low = cand.lower()
-        bonus_desfecho = 22 if any(m in c_low for m in MARCADORES_DESFECHO) else 0
-        bonus_dados = pontuar_paragrafo_meio(cand) // 2
-        bonus_proximidade = 12 - (offset * 3)
-        score = bonus_desfecho + bonus_dados + bonus_proximidade + penalidade_orfao
-        if score > melhor_score_fim:
-            melhor_score_fim = score
-            melhor_fim = cand
+        escolhidos = [p_comeco, p_meio1, p_meio2, p_fim]
+    else:
+        escolhidos = [blocos[0], blocos[1], blocos[2]]
 
-    p_fim = truncar_frase_limpa(melhor_fim, 235)
-
-    if not (p_comeco and p_meio and p_fim):
+    normalizados = {b.lower().strip() for b in escolhidos if b.strip()}
+    if len(normalizados) < 3:
         return None
-    if len({p_comeco.lower(), p_meio.lower(), p_fim.lower()}) < 3:
-        return None
 
-    return p_comeco, p_meio, p_fim
+    return escolhidos
+
+
+def tamanho_texto_visivel(html_str: str) -> int:
+    texto_sem_tags = re.sub(r"<[^>]+>", "", html_str)
+    return len(html.unescape(texto_sem_tags))
 
 
 def montar_mensagem_investidor(
     titulo: str, paragrafos: List[str], analise: AnaliseHeuristica
-) -> Optional[str]:
+) -> Optional[Tuple[str, str]]:
+    """
+    Retorna:
+      - post_completo: Matéria completa de ~1.300 a 1.400 caracteres (Começo, Meio aprofundado e Fim)
+      - caption_curta: Versão <= 1.024 caracteres caso a matéria contenha vídeo nativo via sendVideo
+    """
     t_limpo = limpar_html(titulo.strip())
     if " - " in t_limpo:
         t_limpo, _ = t_limpo.rsplit(" - ", 1)
     if t_limpo and t_limpo[-1] not in ".!?":
         t_limpo += "."
 
-    narrativa = extrair_comeco_meio_fim_coerentes(paragrafos)
-    if not narrativa:
+    blocos_narrativa = extrair_narrativa_aprofundada(paragrafos, max_por_bloco=345)
+    if not blocos_narrativa:
         return None
 
-    p_comeco, p_meio, p_fim = narrativa
-
     titulo_html = formatar_tickers_no_texto(html.escape(t_limpo))
-    comeco_html = formatar_tickers_no_texto(html.escape(p_comeco))
-    meio_html = formatar_tickers_no_texto(html.escape(p_meio))
-    fim_html = formatar_tickers_no_texto(html.escape(p_fim))
 
     if analise.tickers:
         pills_tickers = " ".join(f"<code>#{t}</code>" for t in analise.tickers[:3])
@@ -766,21 +866,30 @@ def montar_mensagem_investidor(
     else:
         cabecalho_tema = f"<blockquote>{analise.categoria_label}</blockquote>"
 
-    post = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
+    paragrafos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_narrativa]
+    corpo_unido = "\n\n".join(paragrafos_html)
+    post_completo = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n{corpo_unido}"
 
-    if len(post) > TELEGRAM_CAPTION_LIMIT:
-        p_comeco_curto = truncar_frase_limpa(p_comeco, 195) or p_comeco
-        p_meio_curto = truncar_frase_limpa(p_meio, 205) or p_meio
-        p_fim_curto = truncar_frase_limpa(p_fim, 195) or p_fim
-        comeco_html = formatar_tickers_no_texto(html.escape(p_comeco_curto))
-        meio_html = formatar_tickers_no_texto(html.escape(p_meio_curto))
-        fim_html = formatar_tickers_no_texto(html.escape(p_fim_curto))
-        post = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
+    if tamanho_texto_visivel(post_completo) > ALVO_MAX_CARACTERES_POST:
+        blocos_ajustados = extrair_narrativa_aprofundada(paragrafos, max_por_bloco=295)
+        if blocos_ajustados:
+            paragrafos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_ajustados]
+            post_completo = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(paragrafos_html)
 
-    if len(post) > TELEGRAM_CAPTION_LIMIT:
+    if tamanho_texto_visivel(post_completo) < 650:
         return None
 
-    return post
+    blocos_curtos = [
+        truncar_frase_limpa(blocos_narrativa[0], 210) or blocos_narrativa[0][:210],
+        truncar_frase_limpa(blocos_narrativa[1], 220) or blocos_narrativa[1][:220],
+        truncar_frase_limpa(blocos_narrativa[-1], 210) or blocos_narrativa[-1][:210],
+    ]
+    curtos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_curtos if p]
+    caption_curta = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(curtos_html)
+    if len(caption_curta) > TELEGRAM_CAPTION_LIMIT:
+        caption_curta = post_completo[:1010].rsplit(" ", 1)[0] + "."
+
+    return post_completo, caption_curta
 
 
 # ==============================================================================
@@ -1036,7 +1145,7 @@ async def carregar_proximas_noticias(
     candidatos_brutos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias_aprovadas: List[NoticiaPreparada] = []
-    for cand in candidatos_brutos[:25]:
+    for cand in candidatos_brutos[:30]:
         title = cand["title"]
         link = cand["link"]
         link_hash = gerar_hash_url(link)
@@ -1060,22 +1169,25 @@ async def carregar_proximas_noticias(
         analise = avaliar_impacto_financeiro(title, paragrafos)
         if analise.score_total < SCORE_MINIMO_CORTE:
             logger.info(
-                "Descartada por baixo impacto financeiro (Score %d < %d): %s",
+                "Descartada por filtro rígido de investidor (Score %d < %d): %s",
                 analise.score_total,
                 SCORE_MINIMO_CORTE,
                 title,
             )
             continue
 
-        post_html = montar_mensagem_investidor(title, paragrafos, analise)
-        if not post_html:
-            logger.info("Descartada por não possuir narrativa completa (Começo, Meio e Fim): %s", title)
+        montagem = montar_mensagem_investidor(title, paragrafos, analise)
+        if not montagem:
+            logger.info("Descartada por não atingir profundidade narrativa (Começo, Meio e Fim): %s", title)
             continue
 
+        post_html, caption_curta_html = montagem
+
         logger.info(
-            "Aprovada [Score %d | %s | Tickers: %s]: %s",
+            "Aprovada [Score %d | %s | %d chars | Tickers: %s]: %s",
             analise.score_total,
             analise.categoria_chave,
+            tamanho_texto_visivel(post_html),
             ",".join(analise.tickers) or "N/A",
             title,
         )
@@ -1085,6 +1197,7 @@ async def carregar_proximas_noticias(
                 link=link,
                 titulo=title,
                 texto_html=post_html,
+                caption_curta_html=caption_curta_html,
                 score=analise.score_total,
                 dt_pub=cand["dt_pub"],
                 imagem=foto_rss or foto_og,
@@ -1104,7 +1217,7 @@ async def carregar_proximas_noticias(
 
 
 # ==============================================================================
-# CLIENTE TELEGRAM (VÍDEO NATIVO -> FOTO NATIVA -> TEXTO SEM LINK PREVIEW)
+# CLIENTE TELEGRAM (SUPORTE A MATÉRIAS DE 1.300~1.400 CHARS COM IMAGEM NO TOPO)
 # ==============================================================================
 async def telegram_request(
     client: httpx.AsyncClient,
@@ -1175,9 +1288,14 @@ async def tentar_enviar_video_ytdlp(
                 "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
                 caminho_video.stat().st_size / (1024 * 1024),
             )
+            legenda_video = (
+                item.texto_html
+                if len(item.texto_html) <= TELEGRAM_CAPTION_LIMIT
+                else item.caption_curta_html
+            )
             data_fields = {
                 "chat_id": chat_id,
-                "caption": item.texto_html,
+                "caption": legenda_video,
                 "parse_mode": "HTML",
                 "supports_streaming": "true",
                 "reply_markup": json.dumps(botao_sorteado),
@@ -1204,6 +1322,26 @@ async def tentar_enviar_foto_nativa(
 ) -> bool:
     if not item.imagem:
         return False
+
+    # Se o texto tiver mais de 1.024 caracteres (padrão 1.300~1.400 chars), a API sendPhoto do Telegram
+    # rejeitaria a legenda por limite de 1024 chars. Nesse caso, usamos sendMessage com a imagem
+    # em destaque largo no topo (show_above_text + prefer_large_media sobre a URL direta da foto).
+    if len(item.texto_html) > TELEGRAM_CAPTION_LIMIT or tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT:
+        img_escapada = html.escape(item.imagem, quote=True)
+        texto_com_midia_topo = f'<a href="{img_escapada}">&#8203;</a>{item.texto_html}'
+        payload_longo = {
+            "chat_id": chat_id,
+            "text": texto_com_midia_topo,
+            "parse_mode": "HTML",
+            "link_preview_options": {
+                "is_disabled": False,
+                "url": item.imagem,
+                "prefer_large_media": True,
+                "show_above_text": True,
+            },
+            "reply_markup": botao_sorteado,
+        }
+        return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_longo)
 
     url_photo = f"{base_url}/sendPhoto"
     payload_img = {
