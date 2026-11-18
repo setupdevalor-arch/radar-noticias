@@ -25,10 +25,11 @@ _PADRAO_CHAT_ID = "-1003533060222"
 
 HISTORICO_ARQUIVO = "historico_enviados.json"
 MAX_HISTORICO = 800
-MAX_NOTICIAS_POR_VEZ = 5   # Envia até 5 notícias novas por ciclo
-MAX_IDADE_MINUTOS = 180    # Janela principal de 3h (com fallback automático se o horário estiver parado)
+MAX_NOTICIAS_POR_VEZ = 5   # Posta até 5 notícias novas por ciclo
+MAX_IDADE_MINUTOS = 120    # Absorve atrasos do cron do GitHub sem perder matérias (o histórico evita repetição)
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
+# Botão aponta exclusivamente para o seu grupo dentro do Telegram
 TEXTOS_BOTAO_GRUPO = [
     "💬 E agora? Veja a opinião do grupo",
     "📊 Como isso afeta o mercado? Debata aqui",
@@ -41,7 +42,7 @@ TEXTOS_BOTAO_GRUPO = [
 ]
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
 }
@@ -143,6 +144,7 @@ def http_post_json(url, payload, timeout=25):
 
 
 def http_post_multipart(url, fields, file_field, file_bytes, filename="cover.jpg", content_type="image/jpeg", timeout=30):
+    """Faz upload direto do arquivo de imagem quando o site de notícias bloqueia o download pelo Telegram."""
     boundary = f"----TelegramBoundary{uuid.uuid4().hex}"
     body = bytearray()
     for name, value in fields.items():
@@ -199,14 +201,7 @@ def salvar_historico(links, titulos):
 
 
 def extrair_data_publicacao(item):
-    for tag in (
-        "pubDate",
-        "{http://purl.org/dc/elements/1.1/}date",
-        "published",
-        "updated",
-        "{http://www.w3.org/2005/Atom}published",
-        "{http://www.w3.org/2005/Atom}updated"
-    ):
+    for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
             texto_data = el.text.strip()
@@ -267,13 +262,14 @@ def limpar_html(txt):
     txt = re.sub(r'<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>', ' ', txt, flags=re.DOTALL | re.IGNORECASE)
     txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = html.unescape(txt)
+    # Remove qualquer URL solta do meio do texto para nunca gerar link clicável externo
     txt = re.sub(r'https?://\S+|www\.\S+', '', txt, flags=re.IGNORECASE)
     txt = remover_carimbo_data_g1(txt)
     return " ".join(txt.split()).strip()
 
 
 def paragrafo_parece_codigo_ou_lixo(txt):
-    if not txt or len(txt) < 35:
+    if not txt or len(txt) < 40:
         return True
     sinais_codigo = (
         "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
@@ -370,7 +366,7 @@ def obter_conteudo_e_imagem_artigo(url, desc_bruta, titulo):
     raw_html = ""
 
     try:
-        raw_html = http_get(url, timeout=6).decode("utf-8", errors="replace")
+        raw_html = http_get(url, timeout=7).decode("utf-8", errors="replace")
         foto_og = extrair_og_image_da_pagina(raw_html)
     except Exception:
         pass
@@ -435,7 +431,7 @@ def formatar_resumo_500_600(texto_bruto, titulo):
 
     for f in frases:
         f = remover_carimbo_data_g1(f.strip())
-        if not f or len(f) < 20:
+        if not f or len(f) < 25:
             continue
         if len(f) > 620:
             f = f[:580].rsplit(" ", 1)[0].rstrip(",;:-") + "."
@@ -450,9 +446,6 @@ def formatar_resumo_500_600(texto_bruto, titulo):
             break
 
     if not frases_selecionadas:
-        if len(t) >= 35:
-            res = t[:550].rsplit(" ", 1)[0].rstrip(",;:-")
-            return res + ("." if res and res[-1] not in ".!?" else "")
         return ""
 
     if len(frases_selecionadas) >= 3:
@@ -528,7 +521,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
     set_links = set(links_historico)
     titulos_rodada = list(titulos_historico)
     agora_utc = datetime.now(timezone.utc)
-    todos_itens_ineditos = []
+    candidatos = []
 
     for url_feed in FEEDS:
         try:
@@ -549,21 +542,22 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
                 if not link or not title or link in set_links:
                     continue
-                if len(title) < 20:
+                if len(title) < 25:
                     continue
 
-                dt_pub = extrair_data_publicacao(item) or agora_utc
-                idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
+                dt_pub = extrair_data_publicacao(item)
+                if not dt_pub:
+                    continue
 
-                if idade_minutos < -15.0 or idade_minutos > 720:
+                idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
+                if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
                     continue
 
                 if eh_propaganda_ou_lixo(title, desc_bruta):
                     continue
 
-                todos_itens_ineditos.append({
+                candidatos.append({
                     "dt_pub": dt_pub,
-                    "idade_minutos": idade_minutos,
                     "item": item,
                     "link": link,
                     "title": title,
@@ -572,14 +566,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         except Exception as e:
             logging.warning(f"Aviso no feed {url_feed}: {e}")
 
-    # Ordena das mais recentes para as mais antigas
-    todos_itens_ineditos.sort(key=lambda x: x["dt_pub"], reverse=True)
-
-    # Prioriza notícias dentro de MAX_IDADE_MINUTOS; se não houver, usa as mais recentes inéditas do dia
-    recentes = [c for c in todos_itens_ineditos if c["idade_minutos"] <= MAX_IDADE_MINUTOS]
-    candidatos = recentes if recentes else todos_itens_ineditos
-
-    logging.info(f"Itens inéditos lidos dos feeds: {len(todos_itens_ineditos)} (Recentes: {len(recentes)})")
+    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias = []
     for cand in candidatos:
@@ -595,8 +582,11 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         texto_artigo, foto_og = obter_conteudo_e_imagem_artigo(link, desc_bruta, title)
         foto = foto or foto_og
 
+        if not foto and not video and not audio:
+            continue
+
         resumo_formatado = formatar_resumo_500_600(texto_artigo, title)
-        if not resumo_formatado or len(resumo_formatado) < 40:
+        if not resumo_formatado or len(resumo_formatado) < 110:
             continue
 
         categoria = categorizar_materia(title, resumo_formatado)
@@ -607,6 +597,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
         if t_limpo and t_limpo[-1] not in ".!?":
             t_limpo += "."
 
+        # Texto 100% nativo sem nenhum link externo
         post = (
             f"{categoria}\n\n"
             f"<b>{html.escape(t_limpo)}</b>\n\n"
@@ -632,11 +623,7 @@ def carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ):
 
 
 def enviar_post(token, chat_id, item):
-    """
-    1. Tenta enviar com Mídia (Áudio, Vídeo ou Foto via URL / Upload Binário).
-    2. Se o portal não tiver foto ou bloquear o IP do GitHub, envia como Mensagem Nativa
-       com disable_web_page_preview=True (100% dentro do Telegram, sem nenhum link externo).
-    """
+    """Envia mídia nativa (áudio, vídeo ou foto) + botão do grupo, sem links para sites externos."""
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
     if item.get("audio"):
@@ -678,6 +665,7 @@ def enviar_post(token, chat_id, item):
         if status == 200:
             return True
 
+        # Se o site da notícia bloquear o download direto pelo Telegram, baixa a foto e sobe o arquivo binário
         try:
             img_bytes = http_get(item["imagem"], timeout=10)
             fields = {
@@ -690,69 +678,31 @@ def enviar_post(token, chat_id, item):
             if status_up == 200:
                 return True
         except Exception as e:
-            logging.warning(f"Portal bloqueou download da foto ({e}). Enviando post em texto nativo.")
+            logging.warning(f"Falha no upload binário da imagem: {e}")
 
-    # Fallback garantido sem link externo (não tira o usuário do Telegram)
-    url_msg = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload_msg = {
-        "chat_id": chat_id,
-        "text": item["texto"],
-        "parse_mode": "HTML",
-        "disable_web_page_preview": True,
-        "reply_markup": botao_sorteado
-    }
-    status_msg, resp_msg = http_post_json(url_msg, payload_msg, timeout=20)
-    if status_msg == 200:
-        return True
-
-    logging.error(f"Erro na API do Telegram (HTTP {status_msg}): {resp_msg}")
     return False
 
 
-def obter_credenciais_validas():
-    """Garante que se algum Secret do GitHub estiver inválido, usa o _PADRAO_TOKEN e _PADRAO_CHAT_ID."""
-    env_token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
-    env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
-
-    token = env_token if env_token else _PADRAO_TOKEN
-    chat_id = env_chat if env_chat else _PADRAO_CHAT_ID
-
-    # Testa se o token responde na API do Telegram; se falhar, volta para _PADRAO_TOKEN
-    try:
-        req = urllib.request.Request(f"https://api.telegram.org/bot{token}/getMe", headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=8) as r:
-            if r.status != 200:
-                token = _PADRAO_TOKEN
-    except Exception:
-        logging.warning("Token do ambiente falhou na validação; usando _PADRAO_TOKEN.")
-        token = _PADRAO_TOKEN
-
-    if not str(chat_id).startswith("-100") and not str(chat_id).startswith("@"):
-        chat_id = _PADRAO_CHAT_ID
-
-    return token, chat_id
-
-
 if __name__ == "__main__":
-    token, chat_id = obter_credenciais_validas()
+    env_token = (os.getenv("TELEGRAM_BOT_TOKEN") or "").strip()
+    token = env_token if env_token else _PADRAO_TOKEN
+
+    env_chat = (os.getenv("TELEGRAM_CHAT_ID") or "").strip()
+    chat_id = env_chat if env_chat else _PADRAO_CHAT_ID
 
     noticias, links_historico, titulos_historico = carregar_proximas_noticias(limite=MAX_NOTICIAS_POR_VEZ)
     if not noticias:
-        logging.info("Nenhuma notícia inédita disponível nos feeds neste momento.")
+        logging.info("Nenhuma notícia nova nos últimos minutos. Aguardando próximo ciclo de 5 min.")
         sys.exit(0)
 
-    logging.info(f"Encontradas {len(noticias)} notícias para envio imediato.")
+    logging.info(f"Encontradas {len(noticias)} notícias quentes para envio neste ciclo.")
     for noticia in noticias:
         sucesso = enviar_post(token, chat_id, noticia)
-        if not sucesso and (token != _PADRAO_TOKEN or chat_id != _PADRAO_CHAT_ID):
-            logging.warning("Tentando reenvio com credenciais padrão (_PADRAO_TOKEN / _PADRAO_CHAT_ID)...")
-            sucesso = enviar_post(_PADRAO_TOKEN, _PADRAO_CHAT_ID, noticia)
-
         if sucesso:
             links_historico.append(noticia["link"])
             titulos_historico.append(noticia["titulo"])
             salvar_historico(links_historico, titulos_historico)
-            logging.info(f"Notícia enviada com sucesso: {noticia['titulo']}")
+            logging.info(f"Notícia enviada com imagem nativa e botão: {noticia['titulo']}")
             time.sleep(3)
         else:
-            logging.error(f"Falha ao enviar para o Telegram: {noticia['titulo']}")
+            logging.error(f"Falha ao enviar post com mídia: {noticia['titulo']}")
