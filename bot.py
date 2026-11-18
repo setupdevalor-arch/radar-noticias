@@ -243,7 +243,6 @@ REGEX_YOUTUBE_ID = re.compile(
     flags=re.IGNORECASE,
 )
 
-# Pronomes e inícios órfãos que deixam o parágrafo sem sentido se o anterior foi pulado
 REGEX_INICIO_ORFAO = re.compile(
     r"^(?:Segundo ele|Segundo ela|Para ele|Para ela|De acordo com ele|De acordo com ela|"
     r"Ainda segundo ele|Na visão dele|Na avaliação dele|Ele acrescenta|Ela acrescenta|"
@@ -251,7 +250,6 @@ REGEX_INICIO_ORFAO = re.compile(
     flags=re.IGNORECASE,
 )
 
-# Marcadores de conclusão, impacto de mercado e desfecho para o 3º parágrafo (Fim)
 MARCADORES_DESFECHO = (
     "com isso", "dessa forma", "diante disso", "nesse cenário", "neste cenário",
     "no acumulado", "por fim", "como resultado", "em reação", "após o anúncio",
@@ -298,7 +296,6 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
-    # Ignora "Receita Federal" para não confundir com "receita" (faturamento de balanço)
     titulo_low = re.sub(r"\breceita federal\b", "órgão fiscal", titulo.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão fiscal", corpo_texto.lower())
 
@@ -665,7 +662,6 @@ def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[s
     1. COMEÇO: O fato principal (Lead).
     2. MEIO: O desenvolvimento direto logo após o lead (com os números/motivos, sem saltos desconexos).
     3. FIM: O desfecho real / impacto de mercado (sem apagar a conclusão e sem pegar rodapé aleatório).
-    Retorna None caso a matéria não tenha conteúdo suficiente para 3 atos coerentes.
     """
     blocos: List[str] = []
     for p in paragrafos:
@@ -673,7 +669,6 @@ def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[s
         if bloco and len(bloco) >= 50 and bloco not in blocos:
             blocos.append(bloco)
 
-    # Se o site agrupou tudo em 1 ou 2 parágrafos grandes, separa pelas frases mantendo a ordem cronológica
     if len(blocos) < 3:
         todas_frases: List[str] = []
         for p in paragrafos:
@@ -689,17 +684,14 @@ def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[s
             return p_comeco, p_meio, p_fim
         return None
 
-    # 1. COMEÇO (Lead da notícia)
     p_comeco = truncar_frase_limpa(blocos[0], 235)
 
-    # 2. MEIO: Busca nos parágrafos imediatamente seguintes ao começo (índices 1 a 3) para manter o fio da história
     limite_meio = min(4, len(blocos) - 1)
     melhor_idx_meio = 1
     melhor_score_meio = -999
 
     for idx in range(1, limite_meio):
         cand = blocos[idx]
-        # Se pulou o parágrafo 1 e o candidato começa com pronome órfão ("Segundo ele"), penaliza para não ficar sem nexo
         penalidade_orfao = -60 if (idx > 1 and REGEX_INICIO_ORFAO.search(cand)) else 0
         bonus_sequencia = 16 if idx == 1 else (8 if idx == 2 else 0)
         score = bonus_sequencia + pontuar_paragrafo_meio(cand) + penalidade_orfao
@@ -709,7 +701,6 @@ def extrair_comeco_meio_fim_coerentes(paragrafos: List[str]) -> Optional[Tuple[s
 
     p_meio = truncar_frase_limpa(blocos[melhor_idx_meio], 245)
 
-    # 3. FIM: Busca o desfecho nos parágrafos logo após o Meio (evitando rodapés perdidos no fim da página)
     janela_fim = blocos[melhor_idx_meio + 1 : min(melhor_idx_meio + 5, len(blocos))]
     if not janela_fim:
         janela_fim = [blocos[-1]]
@@ -759,9 +750,8 @@ def montar_mensagem_investidor(
 
     post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{fim_html}"
 
-    # Se ultrapassar 1024 caracteres, enxuga para a 1ª frase de cada ato sem NUNCA apagar o parágrafo do Fim
     if len(post) > TELEGRAM_CAPTION_LIMIT:
-         p_comeco_curto = truncar_frase_limpa(p_comeco, 195) or p_comeco
+        p_comeco_curto = truncar_frase_limpa(p_comeco, 195) or p_comeco
         p_meio_curto = truncar_frase_limpa(p_meio, 205) or p_meio
         p_fim_curto = truncar_frase_limpa(p_fim, 195) or p_fim
         comeco_html = formatar_tickers_no_texto(html.escape(p_comeco_curto))
