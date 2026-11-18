@@ -48,8 +48,7 @@ SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "16"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
-MAX_VIDEO_BYTES = 49 * 1024 * 1024        # 49 MB (Margem segura abaixo dos 50 MB do Telegram)
-MAX_VIDEO_DURATION_SEC = 600              # Máximo 10 minutos de vídeo para caber em 50 MB
+MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite da Telegram Bot API)
 TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption no Telegram
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
@@ -93,6 +92,7 @@ FEEDS = [
     "https://livecoins.com.br/feed/",
 ]
 
+# Caminhos de URL que nunca devem entrar em um canal de mercado financeiro
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
@@ -234,7 +234,7 @@ REGEX_METRICAS_NUMERCIAS = re.compile(
 )
 
 REGEX_YOUTUBE_ID = re.compile(
-    r"(?:youtube(?:-nocookie)?\.com/(?:watch\?v=|embed/|shorts/|live/|v/)|youtu\.be/)([A-Za-z0-9_-]{11})",
+    r"(?:youtube\.com/(?:watch\?v=|embed/|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})",
     flags=re.IGNORECASE,
 )
 
@@ -299,6 +299,8 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     bonus_tickers = min(len(tickers) * 15, 45)
     soma_taxonomia = sum(pontos_por_categoria.values())
 
+    # TRAVA OBRIGATÓRIA: Se a matéria não tiver NENHUM termo da taxonomia financeira
+    # nem ticker da B3, o score é ZERO (evita que notícias de esportes com '%' passem).
     if soma_taxonomia == 0 and bonus_tickers == 0:
         return AnaliseHeuristica(
             score_total=0,
@@ -663,12 +665,6 @@ def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
 
 
 def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
-    """
-    Detecta vídeos embutidos nas páginas dos portais brasileiros:
-    1. Streams diretos (.mp4 / .m3u8) em meta tags, <video>, <source> ou JSON-LD
-    2. Vídeos nativos do G1 / Globoplay (data-video-id / globo.com)
-    3. Embeds do YouTube, Dailymotion ou Vimeo
-    """
     padroes_diretos = (
         r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
         r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
@@ -684,28 +680,9 @@ def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
             if url:
                 return url
 
-    # Vídeo nativo G1 / Globoplay (ID numérico de 7 a 8 dígitos em data-video-id ou videoId)
-    m_globo = re.search(
-        r'(?:data-video-id=["\']|["\']videoId["\']\s*:\s*["\']?)(\d{7,9})\b',
-        raw_html,
-        re.IGNORECASE,
-    )
-    if m_globo:
-        return f"https://globoplay.globo.com/v/{m_globo.group(1)}/"
-
-    # Embeds de YouTube (Exame, InfoMoney, CNN, MoneyTimes)
     m_yt = REGEX_YOUTUBE_ID.search(raw_html)
     if m_yt:
         return f"https://www.youtube.com/watch?v={m_yt.group(1)}"
-
-    # Embeds de Dailymotion e Vimeo
-    m_embed = re.search(
-        r'<iframe[^>]+src=["\']((?:https?:)?//(?:www\.)?(?:player\.vimeo\.com/video/\d+|dailymotion\.com/embed/video/[a-zA-Z0-9]+))',
-        raw_html,
-        re.IGNORECASE,
-    )
-    if m_embed:
-        return normalizar_url(m_embed.group(1))
 
     return None
 
@@ -761,18 +738,16 @@ def extrair_midias_do_rss(
 
 
 def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -> Optional[Path]:
-    """
-    Baixa vídeo via yt-dlp sem exigir metadado prévio de filesize (que falha em HLS/m3u8)
-    e utiliza clientes tv_embedded/android_vr para contornar bloqueio de IP no YouTube.
-    """
     url_limpa = normalizar_url(url_alvo) or url_alvo
     output_template = os.path.join(pasta_temp, "video_%(id)s.%(ext)s")
 
     ydl_opts: Dict[str, Any] = {
         "format": (
-            "best[ext=mp4][height<=720]/"
-            "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/"
-            "best[height<=720]/best"
+            "best[ext=mp4][height<=720][filesize<=48M]/"
+            "best[ext=mp4][height<=720][filesize_approx<=48M]/"
+            "bestvideo[ext=mp4][height<=720][filesize<=40M]+bestaudio[ext=m4a][filesize<=8M]/"
+            "best[ext=mp4][filesize<=48M]/"
+            "best[ext=mp4]/best"
         ),
         "merge_output_format": "mp4",
         "outtmpl": output_template,
@@ -785,15 +760,14 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
         "http_headers": {**HEADERS, "Referer": referer_url},
         "extractor_args": {
             "youtube": {
-                "player_client": ["tv_embedded", "android_vr", "mweb"],
+                "player_client": ["android", "ios", "web"],
             }
         },
     }
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            # 1. Extrai metadados rápidos primeiro para checar se há vídeo e se não é live/longo demais
-            info = ydl.extract_info(url_limpa, download=False)
+            info = ydl.extract_info(url_limpa, download=True)
             if not info:
                 return None
             if "entries" in info:
@@ -803,45 +777,23 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
                 info = entries[0]
 
             if info.get("is_live"):
-                logger.info("⏭️ Vídeo ignorado por ser transmissão ao vivo (live): %s", url_limpa)
+                logger.info("Vídeo ignorado por ser transmissão ao vivo (live): %s", url_limpa)
                 return None
 
-            duracao = info.get("duration")
-            if duracao and float(duracao) > MAX_VIDEO_DURATION_SEC:
-                logger.info(
-                    "⏭️ Vídeo ignorado por duração longa (%.0fs > %ds): %s",
-                    float(duracao),
-                    MAX_VIDEO_DURATION_SEC,
-                    url_limpa,
-                )
-                return None
+            caminho_str = ydl.prepare_filename(info)
+            caminho = Path(caminho_str)
+            if not caminho.exists():
+                caminho_mp4 = caminho.with_suffix(".mp4")
+                if caminho_mp4.exists():
+                    caminho = caminho_mp4
 
-            # 2. Inicia o download real do vídeo
-            logger.info("🎬 Baixando vídeo detectado via yt-dlp: %s", url_limpa)
-            info_dl = ydl.extract_info(url_limpa, download=True)
-            if "entries" in info_dl:
-                info_dl = [e for e in info_dl["entries"] if e][0]
-
-            # Localiza o arquivo gerado na pasta temporária
-            arquivos_gerados = list(Path(pasta_temp).glob("video_*"))
-            if not arquivos_gerados:
-                return None
-
-            caminho = arquivos_gerados[0]
-            tamanho = caminho.stat().st_size
-            if 1024 < tamanho <= MAX_VIDEO_BYTES:
-                return caminho
-
-            logger.warning(
-                "⚠️ Vídeo excedeu o limite de 50MB do Telegram (%.2f MB), descartando: %s",
-                tamanho / (1024 * 1024),
-                url_limpa,
-            )
-            os.remove(caminho)
+            if caminho.exists():
+                tamanho = caminho.stat().st_size
+                if 1024 < tamanho <= MAX_VIDEO_BYTES:
+                    return caminho
+                os.remove(caminho)
     except Exception as exc:
-        # Só loga aviso se a URL testada era explicitamente um candidato de vídeo (para não poluir em artigos só de texto)
-        if url_limpa != referer_url:
-            logger.info("ℹ️ yt-dlp não conseguiu baixar o vídeo (%s): %s", url_limpa, str(exc)[:180])
+        logger.debug("yt-dlp não baixou vídeo de %s: %s", url_limpa, exc)
 
     return None
 
@@ -964,6 +916,7 @@ async def carregar_proximas_noticias(
         if not paragrafos:
             continue
 
+        # Verifica novamente se o corpo completo extraído não contém termos bloqueados (ex: futebol/esportes)
         if eh_propaganda_ou_lixo(title, " ".join(paragrafos), link):
             continue
 
@@ -977,13 +930,12 @@ async def carregar_proximas_noticias(
             )
             continue
 
-        video_detectado = video_rss or video_pag
         post_html = montar_mensagem_investidor(title, paragrafos, analise)
         logger.info(
-            "Aprovada [Score %d | %s | Vídeo: %s]: %s",
+            "Aprovada [Score %d | %s | Tickers: %s]: %s",
             analise.score_total,
             analise.categoria_chave,
-            video_detectado if video_detectado else "Não (Somente Foto)",
+            ",".join(analise.tickers) or "N/A",
             title,
         )
 
@@ -995,7 +947,7 @@ async def carregar_proximas_noticias(
                 score=analise.score_total,
                 dt_pub=cand["dt_pub"],
                 imagem=foto_rss or foto_og,
-                video_candidato_url=video_detectado,
+                video_candidato_url=video_rss or video_pag,
                 audio=audio_rss,
             )
         )
@@ -1079,7 +1031,7 @@ async def tentar_enviar_video_ytdlp(
                 return False
 
             logger.info(
-                "✅ Vídeo baixado com sucesso (%.2f MB). Fazendo upload nativo via sendVideo...",
+                "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
                 caminho_video.stat().st_size / (1024 * 1024),
             )
             data_fields = {
