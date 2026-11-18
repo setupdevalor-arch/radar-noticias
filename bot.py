@@ -44,7 +44,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "15"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "16"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
@@ -86,11 +86,18 @@ FEEDS = [
     "https://www.infomoney.com.br/politica/feed/",
     "https://g1.globo.com/rss/g1/politica/",
     "https://g1.globo.com/rss/g1/mundo/",
-    "https://www.cnnbrasil.com.br/feed/",
+    "https://www.cnnbrasil.com.br/economia/feed/",
     "https://feeds.bbci.co.uk/portuguese/rss.xml",
     "https://portaldobitcoin.uol.com.br/feed/",
     "https://livecoins.com.br/feed/",
 ]
+
+# Caminhos de URL que nunca devem entrar em um canal de mercado financeiro
+CAMINHOS_URL_BLOQUEADOS = (
+    "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
+    "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
+    "/carreira/", "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
+)
 
 BLOQUEADOS_PROPAGANDA = (
     "black friday", "black xp", "promoção", "promocao", "desconto", "descontos", "cupom",
@@ -103,7 +110,10 @@ BLOQUEADOS_PROPAGANDA = (
     "cartão de crédito", "cartao de credito", "cartão black", "anuidade zero",
     "limite do cartão", "empréstimo pessoal", "financiamento de veículos",
     "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
-    "escalação", "futebol", "novela",
+    "escalação", "futebol", "novela", "brasileirão", "campeonato brasileiro",
+    "rebaixamento", "data fifa", "libertadores", "copa do brasil", "champions league",
+    "artilheiro", "goleiro", "estádio", "torcida", "série a", "série b", "35ª rodada",
+    "tabela do campeonato", "eliminatórias", "seleção brasileira",
 )
 
 STOPWORDS_DEDUP = {
@@ -172,14 +182,18 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "grupamento": 16,
             "desdobramento": 16,
             "recuperação judicial": 20,
+            "privatização": 16,
+            "concessão": 14,
+            "leilão": 14,
         },
     },
     "MACROECONOMIA": {
-        "label": "🏛️ <b>MACROECONOMIA &amp; JUROS</b>",
+        "label": "🏛️ <b>MACROECONOMIA &amp; MERCADOS</b>",
         "termos": {
             "copom": 20,
             "selic": 20,
             "taxa de juros": 16,
+            "banco central": 16,
             "fed": 18,
             "fomc": 18,
             "ipca": 20,
@@ -192,9 +206,18 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "cpi": 16,
             "arcabouço fiscal": 16,
             "meta fiscal": 15,
+            "tesouro direto": 15,
             "câmbio": 12,
             "dólar": 12,
-            "ibovespa": 12,
+            "ibovespa": 14,
+            "b3": 14,
+            "wall street": 14,
+            "s&p 500": 14,
+            "nasdaq": 14,
+            "petróleo": 12,
+            "minério de ferro": 14,
+            "bitcoin": 14,
+            "tarifas": 12,
         },
     },
 }
@@ -242,7 +265,7 @@ class NoticiaPreparada:
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
     encontrados = REGEX_TICKER_B3.findall(texto)
-    falsos_positivos = {"HTTP3", "HTML4", "IPV4", "UTF8", "MP4"}
+    falsos_positivos = {"HTTP3", "HTML4", "IPV4", "UTF8", "MP4", "FIFA3", "COPA3"}
     return [t for t in dict.fromkeys(encontrados) if t not in falsos_positivos]
 
 
@@ -274,21 +297,28 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
     tickers = extrair_tickers_b3(texto_completo)
     bonus_tickers = min(len(tickers) * 15, 45)
+    soma_taxonomia = sum(pontos_por_categoria.values())
+
+    # TRAVA OBRIGATÓRIA: Se a matéria não tiver NENHUM termo da taxonomia financeira
+    # nem ticker da B3, o score é ZERO (evita que notícias de esportes com '%' passem).
+    if soma_taxonomia == 0 and bonus_tickers == 0:
+        return AnaliseHeuristica(
+            score_total=0,
+            categoria_chave="DESCARTADA",
+            categoria_label="",
+        )
 
     metricas = REGEX_METRICAS_NUMERCIAS.findall(texto_completo)
-    bonus_metricas = min(len(metricas) * 4, 24)
+    bonus_metricas = min(len(metricas) * 3, 18)
 
     categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
-    soma_taxonomia = sum(pontos_por_categoria.values())
     score_final = soma_taxonomia + bonus_tickers + bonus_metricas
 
     if pontos_por_categoria[categoria_dominante] > 0:
         cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
-    elif tickers:
+    else:
         categoria_dominante = "TICKERS_B3"
         cat_label = "📈 <b>RADAR B3 &amp; AÇÕES</b>"
-    else:
-        cat_label = "⚡️ <b>RADAR DE MERCADO</b>"
 
     return AnaliseHeuristica(
         score_total=score_final,
@@ -413,7 +443,10 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
     return None
 
 
-def eh_propaganda_ou_lixo(titulo: str, descricao: str) -> bool:
+def eh_propaganda_ou_lixo(titulo: str, descricao: str, url: str = "") -> bool:
+    url_low = url.lower()
+    if any(caminho in url_low for caminho in CAMINHOS_URL_BLOQUEADOS):
+        return True
     texto = f"{titulo} {descricao}".lower()
     return any(b in texto for b in BLOQUEADOS_PROPAGANDA)
 
@@ -447,7 +480,6 @@ def remover_carimbo_data_g1(txt: str) -> str:
 
 
 def limpar_html(txt: str) -> str:
-    """Remove tags HTML e todo tipo de URL (mesmo sem http/www, como youtube.com/watch?v=...)."""
     if not txt:
         return ""
     txt = re.sub(
@@ -809,7 +841,7 @@ async def buscar_feed_rss(
         if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
             continue
 
-        if eh_propaganda_ou_lixo(title, desc_bruta):
+        if eh_propaganda_ou_lixo(title, desc_bruta, link):
             continue
 
         itens_validos.append({
@@ -882,6 +914,10 @@ async def carregar_proximas_noticias(
         )
 
         if not paragrafos:
+            continue
+
+        # Verifica novamente se o corpo completo extraído não contém termos bloqueados (ex: futebol/esportes)
+        if eh_propaganda_ou_lixo(title, " ".join(paragrafos), link):
             continue
 
         analise = avaliar_impacto_financeiro(title, paragrafos)
