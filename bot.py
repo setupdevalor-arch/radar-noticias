@@ -44,7 +44,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "16"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "15"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
@@ -108,7 +108,6 @@ BLOQUEADOS_PROPAGANDA = (
     "curso gratuito", "inscrições abertas", "inscricoes abertas", "participe do",
     "webinar", "mentoria", "baixe o e-book", "baixe o app", "abra sua conta",
     "cadastre-se", "treinamento", "workshop", "evento online", "evento gratuito",
-    "ensinará a operar", "aprenda a operar", "de forma automatizada",
     "cartão de crédito", "cartao de credito", "cartão black", "anuidade zero",
     "limite do cartão", "empréstimo pessoal", "financiamento de veículos",
     "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
@@ -121,7 +120,7 @@ BLOQUEADOS_PROPAGANDA = (
     "jogo do tigrinho", "mandados de busca", "mandado de busca", "busca e apreensão",
     "mandado de prisão", "operação cash out", "operação da pf", "equipes policiais",
     "lavagem de dinheiro", "quadrilha", "assalto", "sequestro", "homicídio",
-    "tráfico de drogas", "facção criminosa", "delegacia",
+    "tráfico de drogas", "facção criminosa",
 )
 
 STOPWORDS_DEDUP = {
@@ -164,6 +163,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "receita líquida": 18,
             "receita bruta": 16,
             "receita operacional": 16,
+            "margem": 12,
             "margem líquida": 16,
             "margem ebitda": 16,
             "roe": 14,
@@ -284,7 +284,7 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
-    # Ignora "Receita Federal" na contagem de receita corporativa de balanço
+    # Evita confundir "Receita Federal" com "Receita" de balanço corporativo
     titulo_low = re.sub(r"\breceita federal\b", "órgão fiscal", titulo.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão fiscal", corpo_texto.lower())
 
@@ -436,4 +436,777 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
         if el is not None and el.text:
             texto_data = el.text.strip()
             try:
-                dt =
+                dt = email.utils.parsedate_to_datetime(texto_data)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=TZ_BRASILIA)
+                return dt.astimezone(timezone.utc)
+            except Exception:
+                pass
+            try:
+                dt = datetime.fromisoformat(texto_data.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=TZ_BRASILIA)
+                return dt.astimezone(timezone.utc)
+            except Exception:
+                pass
+    return None
+
+
+def eh_propaganda_ou_lixo(titulo: str, descricao: str, url: str = "") -> bool:
+    url_low = url.lower()
+    if any(caminho in url_low for caminho in CAMINHOS_URL_BLOQUEADOS):
+        return True
+    texto = f"{titulo} {descricao}".lower()
+    return any(b in texto for b in BLOQUEADOS_PROPAGANDA)
+
+
+def limpar_caudas_wordpress(texto: str) -> str:
+    t = re.sub(r"The post .*? appeared first on .*$", "", texto, flags=re.IGNORECASE)
+    t = re.sub(r"O post .*? apareceu primeiro em .*$", "", t, flags=re.IGNORECASE)
+    t = re.sub(r"appeared first on .*$", "", t, flags=re.IGNORECASE)
+    return t.strip()
+
+
+def remover_carimbo_data_g1(txt: str) -> str:
+    if not txt:
+        return ""
+    txt = re.sub(
+        r"\b\d{1,2}/\d{1,2}/\d{2,4}\s*(?:às\s*|-?\s*)?\d{1,2}[h:]\d{0,2}\b"
+        r"(?:\s*[•·|\-–—]?\s*Atualizado\s*(?:há\s*|em\s*)?(?:\d+|um|uma|poucos|alguns)?\s*"
+        r"(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?)?",
+        " ",
+        txt,
+        flags=re.IGNORECASE,
+    )
+    txt = re.sub(
+        r"[•·|\-–—]?\s*\bAtualizado\s+(?:há\s+|em\s+)?(?:\d+|um|uma|poucos|alguns)\s*"
+        r"(?:minuto|hora|segundo|dia|mês|meses|ano)s?(?:\s+atrás)?\b",
+        " ",
+        txt,
+        flags=re.IGNORECASE,
+    )
+    return " ".join(txt.split()).strip()
+
+
+def limpar_html(txt: str) -> str:
+    if not txt:
+        return ""
+    txt = re.sub(
+        r"<(script|style|noscript|svg|head|nav|footer|header|aside|form)\b[^>]*>.*?</\1>",
+        " ",
+        txt,
+        flags=re.DOTALL | re.IGNORECASE,
+    )
+    txt = re.sub(r"<[^>]+>", " ", txt)
+    txt = html.unescape(txt)
+    txt = re.sub(r"https?://\S+|www\.\S+", "", txt, flags=re.IGNORECASE)
+    txt = re.sub(
+        r"\b(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+"
+        r"(?:com|br|net|org|io|gov|edu|co|be|me|tv|info)\b/\S*",
+        "",
+        txt,
+        flags=re.IGNORECASE,
+    )
+    txt = remover_carimbo_data_g1(txt)
+    return " ".join(txt.split()).strip()
+
+
+def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
+    if not txt or len(txt) < 45:
+        return True
+    ruidos = (
+        "{", "}", "@type", "@context", "schema.org", "dataLayer", "window.", "function(",
+        "gostaria de receber", "assine a", "exclusivo para assinantes", "inscreva-se",
+        "todos os direitos reservados", "the post", "apareceu primeiro", "leia também",
+        "veja também", "confira também", "siga o", "canal no whatsapp", "receba notícias",
+        "reprodução/", "foto:", "crédito:", "imagem:", "divulgação/", "embeds_referring_euri",
+        "source_ve_path", "time_continue=", "watch?v=",
+    )
+    t_low = txt.lower()
+    if any(r in t_low for r in ruidos):
+        return True
+    if titulo and t_low.startswith(titulo[:30].lower()):
+        return True
+    if txt.count("[") >= 3 or txt.count("]") >= 3:
+        return True
+    return False
+
+
+def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) -> List[str]:
+    paragrafos_limpos: List[str] = []
+
+    if raw_html:
+        texto_extraido = trafilatura.extract(
+            raw_html,
+            include_comments=False,
+            include_tables=False,
+            include_links=False,
+            no_fallback=False,
+            favor_precision=True,
+        )
+        if texto_extraido:
+            for linha in texto_extraido.splitlines():
+                p = limpar_caudas_wordpress(limpar_html(linha))
+                p = re.sub(
+                    r"^(?:Negócios|Economia|INFRA|Tecnologia|Weekend|Podcasts|Journal|Mercados|\s)+[:\-–—]?\s*",
+                    "",
+                    p,
+                    flags=re.IGNORECASE,
+                ).strip()
+                if not paragrafo_eh_ruido_editorial(p, titulo):
+                    paragrafos_limpos.append(p)
+
+    if not paragrafos_limpos and desc_bruta:
+        t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t_desc) if len(f.strip()) >= 35]
+        if len(frases) >= 3:
+            paragrafos_limpos = [frases[0], " ".join(frases[1:-1]), frases[-1]]
+        elif t_desc and len(t_desc) >= 60:
+            paragrafos_limpos = [t_desc]
+
+    return paragrafos_limpos
+
+
+# ==============================================================================
+# ESTRUTURAÇÃO: COMEÇO (LEAD), MEIO (MÉTRICAS & TICKERS) E FIM (CONCLUSÃO)
+# ==============================================================================
+def truncar_frase_limpa(texto: str, max_chars: int) -> str:
+    """
+    Garante que o parágrafo NUNCA termine com uma frase cortada no meio
+    (ex: '...mandados de.', '...enviaram cerca de.', '...visam frear.').
+    Acumula apenas frases completas que caibam em max_chars.
+    """
+    texto = " ".join(texto.split()).strip()
+    if not texto:
+        return ""
+    if len(texto) <= max_chars:
+        return texto if texto[-1] in ".!?" else texto + "."
+
+    frases = [
+        f.strip()
+        for f in re.split(
+            r"(?<!\bS\.A)(?<!\bCia)(?<!\bDr)(?<!\bSr)(?<!\bSra)(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9\"'“‘(])",
+            texto,
+        )
+        if f.strip()
+    ]
+
+    acumulado = ""
+    for f in frases:
+        if f[-1] not in ".!?":
+            f += "."
+        candidato = f"{acumulado} {f}".strip() if acumulado else f
+        if len(candidato) <= max_chars:
+            acumulado = candidato
+        else:
+            break
+
+    if acumulado:
+        return acumulado
+
+    primeira = frases[0]
+    trecho = primeira[:max_chars]
+    for sep in ("; ", ", ", " – ", " - "):
+        pos = trecho.rfind(sep)
+        if pos >= int(max_chars * 0.6):
+            return trecho[:pos].rstrip(",;:-–— ") + "."
+
+    cortado = trecho.rsplit(" ", 1)[0].rstrip(",;:-–— ")
+    cortado = re.sub(
+        r"\s+\b(?:de|da|do|das|dos|em|na|no|nas|nos|para|por|com|sem|sob|sobre|entre|até|após|contra|que|se|e|ou|mas|como|quando|onde|a|o|as|os|um|uma|cerca|mais|menos|visam|foram|são|está|estão)\b$",
+        "",
+        cortado,
+        flags=re.IGNORECASE,
+    )
+    return cortado.rstrip(",;:-–— ") + "."
+
+
+def pontuar_paragrafo_meio(paragrafo: str) -> Tuple[int, int]:
+    qtd_metricas = len(REGEX_METRICAS_NUMERCIAS.findall(paragrafo))
+    qtd_tickers = len(REGEX_TICKER_B3.findall(paragrafo))
+    p_low = paragrafo.lower()
+    qtd_taxonomia = sum(
+        peso
+        for cat in TAXONOMIA_PESOS.values()
+        for termo, peso in cat["termos"].items()
+        if termo in p_low
+    )
+    score = (qtd_metricas * 12) + (qtd_tickers * 18) + qtd_taxonomia
+    return (score, -abs(len(paragrafo) - 220))
+
+
+def montar_mensagem_investidor(
+    titulo: str, paragrafos: List[str], analise: AnaliseHeuristica
+) -> str:
+    t_limpo = limpar_html(titulo.strip())
+    if " - " in t_limpo:
+        t_limpo, _ = t_limpo.rsplit(" - ", 1)
+    if t_limpo and t_limpo[-1] not in ".!?":
+        t_limpo += "."
+
+    p_comeco = truncar_frase_limpa(paragrafos[0], 250)
+    p_meio = ""
+    p_fim = ""
+
+    if len(paragrafos) == 1:
+        frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", paragrafos[0]) if len(f.strip()) > 25]
+        if len(frases) >= 3:
+            p_comeco = truncar_frase_limpa(frases[0], 230)
+            p_meio = truncar_frase_limpa(frases[1], 230)
+            p_fim = truncar_frase_limpa(" ".join(frases[2:]), 220)
+        elif len(frases) == 2:
+            p_comeco = truncar_frase_limpa(frases[0], 240)
+            p_fim = truncar_frase_limpa(frases[1], 240)
+    elif len(paragrafos) == 2:
+        p_fim = truncar_frase_limpa(paragrafos[1], 260)
+    else:
+        candidatos_meio = paragrafos[1:-1]
+        melhor_meio = max(candidatos_meio, key=pontuar_paragrafo_meio)
+        p_meio = truncar_frase_limpa(melhor_meio, 260)
+
+        p_fim_bruto = paragrafos[-1]
+        if p_fim_bruto == melhor_meio and len(paragrafos) > 3:
+            p_fim_bruto = paragrafos[-2]
+        p_fim = truncar_frase_limpa(p_fim_bruto, 230)
+
+    titulo_html = formatar_tickers_no_texto(html.escape(t_limpo))
+    comeco_html = formatar_tickers_no_texto(html.escape(p_comeco))
+    meio_html = formatar_tickers_no_texto(html.escape(p_meio)) if p_meio and p_meio.lower() != p_comeco.lower() else ""
+    fim_html = formatar_tickers_no_texto(html.escape(p_fim)) if p_fim else ""
+
+    partes_corpo = [comeco_html]
+    if meio_html:
+        partes_corpo.append(meio_html)
+    if fim_html and fim_html.lower() not in (comeco_html.lower(), meio_html.lower()):
+        partes_corpo.append(fim_html)
+
+    corpo_unido = "\n\n".join(partes_corpo)
+    post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_unido}"
+
+    if len(post) > TELEGRAM_CAPTION_LIMIT and fim_html:
+        corpo_sem_fim = "\n\n".join([p for p in (comeco_html, meio_html) if p])
+        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_sem_fim}"
+
+    while len(post) > TELEGRAM_CAPTION_LIMIT and len(p_meio) > 80:
+        p_meio = truncar_frase_limpa(p_meio[:-35], len(p_meio) - 35)
+        meio_html = formatar_tickers_no_texto(html.escape(p_meio))
+        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}"
+
+    return post[:TELEGRAM_CAPTION_LIMIT]
+
+
+# ==============================================================================
+# ENGINE DE MÍDIA E VÍDEO LOCAL (YT-DLP <= 50MB + OS.REMOVE)
+# ==============================================================================
+def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
+    padroes = (
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+    )
+    for padrao in padroes:
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m:
+            url = normalizar_url(m.group(1))
+            if url:
+                return url
+    return None
+
+
+def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
+    padroes_diretos = (
+        r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
+        r'<meta[^>]+name=["\']twitter:player:stream["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<source[^>]+src=["\']([^"\']+\.(?:mp4|m3u8)(?:\?[^"\']*)?)["\']',
+        r'<video[^>]+src=["\']([^"\']+\.(?:mp4|m3u8)(?:\?[^"\']*)?)["\']',
+        r'"contentUrl"\s*:\s*"([^"]+\.(?:mp4|m3u8)(?:\?[^"]*)?)"',
+    )
+    for padrao in padroes_diretos:
+        for match in re.finditer(padrao, raw_html, re.IGNORECASE):
+            raw_url = match.group(1).replace(r"\/", "/")
+            url = normalizar_url(raw_url)
+            if url:
+                return url
+
+    m_yt = REGEX_YOUTUBE_ID.search(raw_html)
+    if m_yt:
+        return f"https://www.youtube.com/watch?v={m_yt.group(1)}"
+
+    return None
+
+
+def extrair_midias_do_rss(
+    item: XmlElement, desc_bruta: str
+) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    foto_url: Optional[str] = None
+    video_url: Optional[str] = None
+    audio_url: Optional[str] = None
+
+    enc = item.find("enclosure")
+    if enc is not None and "url" in enc.attrib:
+        url = normalizar_url(enc.attrib["url"])
+        tipo = enc.attrib.get("type", "").lower()
+        if url:
+            if "video" in tipo or url.lower().endswith((".mp4", ".mov", ".m3u8")):
+                video_url = url
+            elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
+                audio_url = url
+            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                foto_url = url
+
+    for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
+        for m in item.findall(tag):
+            if "url" in m.attrib:
+                url = normalizar_url(m.attrib["url"])
+                tipo = m.attrib.get("type", "").lower()
+                medium = m.attrib.get("medium", "").lower()
+                if url:
+                    if "video" in tipo or medium == "video" or url.lower().endswith((".mp4", ".m3u8")):
+                        video_url = video_url or url
+                    elif "audio" in tipo or medium == "audio" or url.lower().endswith(".mp3"):
+                        audio_url = audio_url or url
+                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
+                        foto_url = url
+
+    if not video_url and desc_bruta:
+        busca_vid = re.search(r'<(?:video|source)[^>]+src=["\']([^"\']+\.mp4[^"\']*)["\']', desc_bruta, re.IGNORECASE)
+        if busca_vid:
+            video_url = normalizar_url(busca_vid.group(1))
+        else:
+            m_yt = REGEX_YOUTUBE_ID.search(desc_bruta)
+            if m_yt:
+                video_url = f"https://www.youtube.com/watch?v={m_yt.group(1)}"
+
+    if not foto_url and desc_bruta:
+        busca_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+        if busca_img:
+            foto_url = normalizar_url(busca_img.group(1))
+
+    return foto_url, video_url, audio_url
+
+
+def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -> Optional[Path]:
+    url_limpa = normalizar_url(url_alvo) or url_alvo
+    output_template = os.path.join(pasta_temp, "video_%(id)s.%(ext)s")
+
+    ydl_opts: Dict[str, Any] = {
+        "format": (
+            "best[ext=mp4][height<=720][filesize<=48M]/"
+            "best[ext=mp4][height<=720][filesize_approx<=48M]/"
+            "bestvideo[ext=mp4][height<=720][filesize<=40M]+bestaudio[ext=m4a][filesize<=8M]/"
+            "best[ext=mp4][filesize<=48M]/"
+            "best[ext=mp4]/best"
+        ),
+        "merge_output_format": "mp4",
+        "outtmpl": output_template,
+        "max_filesize": MAX_VIDEO_BYTES,
+        "noplaylist": True,
+        "quiet": True,
+        "no_warnings": True,
+        "socket_timeout": 15,
+        "concurrent_fragment_downloads": 4,
+        "http_headers": {**HEADERS, "Referer": referer_url},
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["android", "ios", "web"],
+            }
+        },
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url_limpa, download=True)
+            if not info:
+                return None
+            if "entries" in info:
+                entries = [e for e in info["entries"] if e]
+                if not entries:
+                    return None
+                info = entries[0]
+
+            if info.get("is_live"):
+                logger.info("Vídeo ignorado por ser transmissão ao vivo (live): %s", url_limpa)
+                return None
+
+            caminho_str = ydl.prepare_filename(info)
+            caminho = Path(caminho_str)
+            if not caminho.exists():
+                caminho_mp4 = caminho.with_suffix(".mp4")
+                if caminho_mp4.exists():
+                    caminho = caminho_mp4
+
+            if caminho.exists():
+                tamanho = caminho.stat().st_size
+                if 1024 < tamanho <= MAX_VIDEO_BYTES:
+                    return caminho
+                os.remove(caminho)
+    except Exception as exc:
+        logger.debug("yt-dlp não baixou vídeo de %s: %s", url_limpa, exc)
+
+    return None
+
+
+# ==============================================================================
+# INGESTÃO, FILTRAGEM POR SCORE E SCRAPING ASSÍNCRONO
+# ==============================================================================
+async def buscar_feed_rss(
+    client: httpx.AsyncClient, sem: asyncio.Semaphore, url_feed: str
+) -> List[Dict[str, Any]]:
+    agora_utc = datetime.now(timezone.utc)
+    itens_validos: List[Dict[str, Any]] = []
+
+    async with sem:
+        try:
+            resp = await client.get(url_feed, timeout=10.0)
+            resp.raise_for_status()
+            root = ET.fromstring(resp.content)
+        except Exception as exc:
+            logger.warning("Falha ao processar feed %s: %s", url_feed, exc)
+            return []
+
+    for item in root.findall(".//item"):
+        link_el = item.find("link")
+        title_el = item.find("title")
+        desc_el = item.find("description")
+        content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+
+        link = normalizar_url(link_el.text if link_el is not None else "")
+        title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
+        desc_bruta = (
+            desc_el.text
+            if desc_el is not None and desc_el.text
+            else (content_el.text if content_el is not None and content_el.text else "")
+        )
+
+        if not link or not title or len(title) < 25:
+            continue
+
+        dt_pub = extrair_data_publicacao(item)
+        if not dt_pub:
+            continue
+
+        idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
+        if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
+            continue
+
+        if eh_propaganda_ou_lixo(title, desc_bruta, link):
+            continue
+
+        itens_validos.append({
+            "dt_pub": dt_pub,
+            "item": item,
+            "link": link,
+            "title": title,
+            "desc_bruta": desc_bruta,
+        })
+
+    return itens_validos
+
+
+async def obter_conteudo_e_midias_artigo(
+    client: httpx.AsyncClient, sem: asyncio.Semaphore, url: str, desc_bruta: str, titulo: str
+) -> Tuple[List[str], Optional[str], Optional[str]]:
+    foto_og: Optional[str] = None
+    video_pag: Optional[str] = None
+    raw_html = ""
+
+    async with sem:
+        try:
+            resp = await client.get(url, timeout=10.0)
+            if resp.status_code == 200 and len(resp.content) <= MAX_HTML_BYTES:
+                raw_html = resp.text
+                foto_og = extrair_og_image_da_pagina(raw_html)
+                video_pag = extrair_candidato_video_html(raw_html)
+        except Exception as exc:
+            logger.debug("Download do HTML falhou para %s: %s", url, exc)
+
+    paragrafos = await asyncio.to_thread(
+        extrair_paragrafos_trafilatura, raw_html, desc_bruta, titulo
+    )
+    return paragrafos, foto_og, video_pag
+
+
+async def carregar_proximas_noticias(
+    client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ
+) -> Tuple[List[NoticiaPreparada], List[str], List[str]]:
+    links_historico, titulos_historico = carregar_historico()
+    set_links: Set[str] = set(links_historico)
+    titulos_rodada: List[str] = list(titulos_historico)
+
+    sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    resultados_feeds = await asyncio.gather(
+        *(buscar_feed_rss(client, sem, url) for url in FEEDS)
+    )
+
+    candidatos_brutos = [
+        item for sublista in resultados_feeds for item in sublista
+        if item["link"] not in set_links and gerar_hash_url(item["link"]) not in set_links
+    ]
+
+    candidatos_brutos.sort(key=lambda x: x["dt_pub"], reverse=True)
+
+    noticias_aprovadas: List[NoticiaPreparada] = []
+    for cand in candidatos_brutos[:25]:
+        title = cand["title"]
+        link = cand["link"]
+        link_hash = gerar_hash_url(link)
+        desc_bruta = cand["desc_bruta"]
+        item = cand["item"]
+
+        if link in set_links or link_hash in set_links or eh_mesma_noticia(title, titulos_rodada):
+            continue
+
+        foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
+        paragrafos, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
+            client, sem, link, desc_bruta, title
+        )
+
+        if not paragrafos:
+            continue
+
+        # Verifica novamente se o corpo completo extraído não contém termos bloqueados (ex: futebol/esportes/operações policiais)
+        if eh_propaganda_ou_lixo(title, " ".join(paragrafos), link):
+            continue
+
+        analise = avaliar_impacto_financeiro(title, paragrafos)
+        if analise.score_total < SCORE_MINIMO_CORTE:
+            logger.info(
+                "Descartada por baixo impacto financeiro (Score %d < %d): %s",
+                analise.score_total,
+                SCORE_MINIMO_CORTE,
+                title,
+            )
+            continue
+
+        post_html = montar_mensagem_investidor(title, paragrafos, analise)
+        logger.info(
+            "Aprovada [Score %d | %s | Tickers: %s]: %s",
+            analise.score_total,
+            analise.categoria_chave,
+            ",".join(analise.tickers) or "N/A",
+            title,
+        )
+
+        noticias_aprovadas.append(
+            NoticiaPreparada(
+                link=link,
+                titulo=title,
+                texto_html=post_html,
+                score=analise.score_total,
+                dt_pub=cand["dt_pub"],
+                imagem=foto_rss or foto_og,
+                video_candidato_url=video_rss or video_pag,
+                audio=audio_rss,
+            )
+        )
+        titulos_rodada.append(title)
+        set_links.add(link)
+        set_links.add(link_hash)
+
+    noticias_aprovadas.sort(key=lambda n: (n.score, n.dt_pub), reverse=True)
+    selecionadas = noticias_aprovadas[:limite]
+    selecionadas.sort(key=lambda n: n.dt_pub)
+
+    return selecionadas, links_historico, titulos_historico
+
+
+# ==============================================================================
+# CLIENTE TELEGRAM (VÍDEO NATIVO -> FOTO NATIVA -> TEXTO SEM LINK PREVIEW)
+# ==============================================================================
+async def telegram_request(
+    client: httpx.AsyncClient,
+    url: str,
+    json_payload: Optional[Dict[str, Any]] = None,
+    data_fields: Optional[Dict[str, Any]] = None,
+    files: Optional[Dict[str, Any]] = None,
+    max_retries: int = 3,
+) -> bool:
+    for tentativa in range(1, max_retries + 1):
+        try:
+            if files:
+                resp = await client.post(url, data=data_fields, files=files, timeout=90.0)
+            else:
+                resp = await client.post(url, json=json_payload, timeout=30.0)
+
+            if resp.status_code == 200:
+                return True
+
+            if resp.status_code == 429:
+                body = resp.json()
+                retry_after = int(body.get("parameters", {}).get("retry_after", 5))
+                logger.warning("Rate limit (429) atingido no Telegram. Aguardando %ss...", retry_after)
+                await asyncio.sleep(retry_after + 1)
+                continue
+
+            logger.warning(
+                "Telegram retornou HTTP %s em %s: %s",
+                resp.status_code,
+                url.rsplit("/", 1)[-1],
+                resp.text[:250],
+            )
+            return False
+
+        except httpx.RequestError as exc:
+            logger.warning("Erro de rede na tentativa %d/%d para Telegram: %s", tentativa, max_retries, exc)
+            await asyncio.sleep(2 * tentativa)
+
+    return False
+
+
+async def tentar_enviar_video_ytdlp(
+    client: httpx.AsyncClient,
+    base_url: str,
+    chat_id: str,
+    item: NoticiaPreparada,
+    botao_sorteado: Dict[str, Any],
+) -> bool:
+    urls_para_testar: List[str] = []
+    if item.video_candidato_url:
+        urls_para_testar.append(item.video_candidato_url)
+    urls_para_testar.append(item.link)
+
+    with tempfile.TemporaryDirectory(prefix="tg_vid_") as pasta_temp:
+        caminho_video: Optional[Path] = None
+        try:
+            for url_alvo in dict.fromkeys(urls_para_testar):
+                caminho_video = await asyncio.to_thread(
+                    _baixar_video_ytdlp_sync, url_alvo, item.link, pasta_temp
+                )
+                if caminho_video and caminho_video.exists():
+                    break
+
+            if not caminho_video or not caminho_video.exists():
+                return False
+
+            logger.info(
+                "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
+                caminho_video.stat().st_size / (1024 * 1024),
+            )
+            data_fields = {
+                "chat_id": chat_id,
+                "caption": item.texto_html,
+                "parse_mode": "HTML",
+                "supports_streaming": "true",
+                "reply_markup": json.dumps(botao_sorteado),
+            }
+            with open(caminho_video, "rb") as f_vid:
+                files = {"video": (caminho_video.name, f_vid, "video/mp4")}
+                return await telegram_request(
+                    client, f"{base_url}/sendVideo", data_fields=data_fields, files=files
+                )
+        finally:
+            if caminho_video and caminho_video.exists():
+                try:
+                    os.remove(caminho_video)
+                except OSError:
+                    pass
+
+
+async def tentar_enviar_foto_nativa(
+    client: httpx.AsyncClient,
+    base_url: str,
+    chat_id: str,
+    item: NoticiaPreparada,
+    botao_sorteado: Dict[str, Any],
+) -> bool:
+    if not item.imagem:
+        return False
+
+    url_photo = f"{base_url}/sendPhoto"
+    payload_img = {
+        "chat_id": chat_id,
+        "photo": item.imagem,
+        "caption": item.texto_html,
+        "parse_mode": "HTML",
+        "reply_markup": botao_sorteado,
+    }
+    if await telegram_request(client, url_photo, json_payload=payload_img):
+        return True
+
+    try:
+        headers_img = {**HEADERS, "Referer": item.link}
+        resp = await client.get(item.imagem, headers=headers_img, timeout=12.0)
+        if resp.status_code == 200 and 500 < len(resp.content) <= MAX_HTML_BYTES:
+            content_type = resp.headers.get("Content-Type", "image/jpeg")
+            if "html" not in content_type.lower():
+                data_fields = {
+                    "chat_id": chat_id,
+                    "caption": item.texto_html,
+                    "parse_mode": "HTML",
+                    "reply_markup": json.dumps(botao_sorteado),
+                }
+                files = {"photo": ("cover.jpg", resp.content, content_type)}
+                return await telegram_request(client, url_photo, data_fields=data_fields, files=files)
+    except Exception as exc:
+        logger.debug("Falha no upload binário da imagem %s: %s", item.imagem, exc)
+
+    return False
+
+
+async def enviar_post(
+    client: httpx.AsyncClient, token: str, chat_id: str, item: NoticiaPreparada
+) -> bool:
+    base_url = f"https://api.telegram.org/bot{token}"
+    botao_sorteado = gerar_botao_grupo_aleatorio()
+
+    if await tentar_enviar_video_ytdlp(client, base_url, chat_id, item, botao_sorteado):
+        return True
+
+    if await tentar_enviar_foto_nativa(client, base_url, chat_id, item, botao_sorteado):
+        return True
+
+    logger.info("Enviando via sendMessage (texto limpo) para: %s", item.titulo)
+    payload_msg = {
+        "chat_id": chat_id,
+        "text": item.texto_html,
+        "parse_mode": "HTML",
+        "link_preview_options": {"is_disabled": True},
+        "reply_markup": botao_sorteado,
+    }
+    return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_msg)
+
+
+# ==============================================================================
+# ENTRYPOINT ASSÍNCRONO
+# ==============================================================================
+async def main() -> None:
+    token = (os.environ.get("TELEGRAM_BOT_TOKEN") or "").strip()
+    chat_id = (os.environ.get("TELEGRAM_CHAT_ID") or "").strip()
+
+    if not token or not chat_id:
+        logger.critical(
+            "Variáveis de ambiente obrigatórias ausentes: configure TELEGRAM_BOT_TOKEN e TELEGRAM_CHAT_ID nos Secrets do GitHub."
+        )
+        sys.exit(1)
+
+    limits = httpx.Limits(max_keepalive_connections=10, max_connections=20)
+    async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=limits) as client:
+        noticias, links_historico, titulos_historico = await carregar_proximas_noticias(
+            client, limite=MAX_NOTICIAS_POR_VEZ
+        )
+
+        if not noticias:
+            logger.info("Nenhuma notícia atingiu o score mínimo de impacto financeiro neste ciclo.")
+            return
+
+        logger.info("Encontradas %d notícias de alto impacto para publicação.", len(noticias))
+        for noticia in noticias:
+            sucesso = await enviar_post(client, token, chat_id, noticia)
+            if sucesso:
+                links_historico.append(noticia.link)
+                links_historico.append(gerar_hash_url(noticia.link))
+                titulos_historico.append(noticia.titulo)
+                salvar_historico(links_historico, titulos_historico)
+                logger.info("Notícia publicada [Score %d]: %s", noticia.score, noticia.titulo)
+                await asyncio.sleep(3.0)
+            else:
+                logger.error("Falha definitiva ao publicar notícia: %s", noticia.titulo)
+
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Execução interrompida manualmente.")
