@@ -10,7 +10,7 @@ import re
 import sys
 import tempfile
 import urllib.parse
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
@@ -33,7 +33,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-logger = logging.getLogger("FinanceNewsBot")
+logger = logging.getLogger("BotInvestidor")
 
 # ==============================================================================
 # CONSTANTES E CONFIGURAÇÕES DE AMBIENTE (GITHUB SECRETS / ENV)
@@ -44,11 +44,12 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "18"))
 MAX_CONCURRENT_REQUESTS = 6
 
-MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e imagens
-MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite oficial da Telegram Bot API para upload)
-TELEGRAM_CAPTION_LIMIT = 1024             # Limite de caracteres em legendas de mídia
+MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML
+MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite da Telegram Bot API)
+TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption no Telegram
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -102,8 +103,6 @@ BLOQUEADOS_PROPAGANDA = (
     "cadastre-se", "treinamento", "workshop", "evento online", "evento gratuito",
     "cartão de crédito", "cartao de credito", "cartão black", "anuidade zero",
     "limite do cartão", "empréstimo pessoal", "financiamento de veículos",
-    "fundo imobiliário", "fundos imobiliários", "fii ", "fiis", "fiagro", "ifix",
-    "por cota", "cotistas", "rendimento por cota",
     "horóscopo", "signo", "loteria", "mega-sena", "bbb", "fofoca", "onde assistir",
     "escalação", "futebol", "novela",
 )
@@ -116,17 +115,117 @@ STOPWORDS_DEDUP = {
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
 }
 
-REGEX_INDICADORES_FINANCEIROS = re.compile(
+# ==============================================================================
+# TAXONOMIA FINANCEIRA OBRIGATÓRIA (PESOS E EXPRESSÕES REGULARES)
+# ==============================================================================
+TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
+    "PROVENTOS": {
+        "label": "💰 <b>PROVENTOS &amp; DIVIDENDOS</b>",
+        "radar_acao": "Anúncio/calendário de proventos. Verifique data-com, data-ex e dividend yield.",
+        "termos": {
+            "dividendos": 18,
+            "dividendo": 18,
+            "jcp": 20,
+            "juros sobre capital próprio": 20,
+            "juros sobre o capital próprio": 20,
+            "rendimentos": 12,
+            "data-com": 22,
+            "data com": 20,
+            "data-ex": 18,
+            "proventos": 16,
+            "dividend yield": 16,
+            "bonificação": 14,
+        },
+    },
+    "RESULTADOS_TRIMESTRAIS": {
+        "label": "📊 <b>RESULTADOS &amp; BALANÇOS</b>",
+        "radar_acao": "Divulgação de resultados operacionais. Avalie margens, geração de caixa (EBITDA) e consenso.",
+        "termos": {
+            "balanço": 15,
+            "lucro líquido": 20,
+            "ebitda": 20,
+            "lajida": 18,
+            "prejuízo": 16,
+            "receita líquida": 18,
+            "receita": 10,
+            "margem": 12,
+            "margem líquida": 16,
+            "margem ebitda": 16,
+            "roe": 14,
+            "alavancagem": 14,
+            "guidance": 16,
+            "1t": 10, "2t": 10, "3t": 10, "4t": 10,
+        },
+    },
+    "EVENTOS_CORPORATIVOS": {
+        "label": "🤝 <b>EVENTOS CORPORATIVOS &amp; M&amp;A</b>",
+        "radar_acao": "Movimentação societária/corporativa relevante. Monitore impactos em diluição e governança.",
+        "termos": {
+            "fato relevante": 24,
+            "fusão": 18,
+            "aquisição": 18,
+            "m&a": 18,
+            "recompra de ações": 22,
+            "programa de recompra": 20,
+            "opa": 22,
+            "oferta pública": 18,
+            "follow-on": 18,
+            "ipo": 16,
+            "cisão": 18,
+            "incorporação": 16,
+            "grupamento": 16,
+            "desdobramento": 16,
+            "recuperação judicial": 20,
+        },
+    },
+    "MACROECONOMIA": {
+        "label": "🏛️ <b>MACROECONOMIA &amp; JUROS</b>",
+        "radar_acao": "Indicador macroeconômico/monetário. Acompanhe reflexos na curva de juros (DI), câmbio e bolsa.",
+        "termos": {
+            "copom": 20,
+            "selic": 20,
+            "taxa de juros": 16,
+            "fed": 18,
+            "fomc": 18,
+            "ipca": 20,
+            "inflação": 14,
+            "pib": 15,
+            "treasury": 18,
+            "treasuries": 18,
+            "boletim focus": 18,
+            "payroll": 18,
+            "cpi": 16,
+            "arcabouço fiscal": 16,
+            "meta fiscal": 15,
+            "câmbio": 12,
+            "dólar": 12,
+            "ibovespa": 12,
+        },
+    },
+}
+
+# 5. Regex estrito para Tickers B3: 4 letras maiúsculas seguidas de 3, 4 ou 11
+REGEX_TICKER_B3 = re.compile(r"\b([A-Z]{4}(?:3|4|11))\b")
+
+# Regex auxiliar para métricas quantitativas no corpo da notícia
+REGEX_METRICAS_NUMERCIAS = re.compile(
     r"("
     r"[+-]?\d+(?:[.,]\d+)?\s*%"
     r"|(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?"
-    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri)\b"
-    r"|\b(?:alta|queda|subiu|caiu|recuou|avançou|disparou|desabou|"
-    r"lucro|prejuízo|ebitda|receita|dividendos|selic|ipca|pib|juros|"
-    r"inflação|dólar|ibovespa|pontos|cotação|fechou)\b"
+    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri|pontos-base|bps)\b"
     r")",
     flags=re.IGNORECASE,
 )
+
+
+@dataclass
+class AnaliseHeuristica:
+    score_total: int
+    categoria_chave: str
+    categoria_label: str
+    radar_acao: str
+    tickers: List[str] = field(default_factory=list)
+    termos_detectados: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -134,9 +233,88 @@ class NoticiaPreparada:
     link: str
     titulo: str
     texto_html: str
+    score: int
+    dt_pub: datetime
     imagem: Optional[str] = None
     video_candidato_url: Optional[str] = None
     audio: Optional[str] = None
+
+
+# ==============================================================================
+# MOTOR HEURÍSTICO DE SCORING E TAXONOMIA FINANCEIRA
+# ==============================================================================
+def extrair_tickers_b3(texto: str) -> List[str]:
+    """Detecta tickers válidos da B3 (ex: PETR4, VALE3, TAEE11) preservando a ordem."""
+    encontrados = REGEX_TICKER_B3.findall(texto)
+    # Filtra falsos positivos de siglas comuns em maiúsculas caso ocorram com números
+    falsos_positivos = {"HTTP3", "HTML4", "IPV4", "UTF8", "MP4"}
+    return [t for t in dict.fromkeys(encontrados) if t not in falsos_positivos]
+
+
+def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
+    """Converte tickers B3 presentes no texto já escapado em negrito com hashtag (ex: <b>#PETR4</b>)."""
+    return REGEX_TICKER_B3.sub(r"<b>#\1</b>", texto_html_escapado)
+
+
+def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
+    """
+    Calcula o Score Financeiro da notícia baseado na Taxonomia Obrigatória,
+    densidade de métricas numéricas e presença de Tickers da B3.
+    Termos encontrados no título recebem peso dobrado (2.0x).
+    """
+    corpo_texto = " ".join(paragrafos)
+    texto_completo = f"{titulo} {corpo_texto}"
+    titulo_low = titulo.lower()
+    corpo_low = corpo_texto.lower()
+
+    pontos_por_categoria: Dict[str, int] = {cat: 0 for cat in TAXONOMIA_PESOS}
+    termos_encontrados: List[str] = []
+
+    for cat_key, dados_cat in TAXONOMIA_PESOS.items():
+        for termo, peso in dados_cat["termos"].items():
+            padrao = r"(?<!\w)" + re.escape(termo) + r"(?!\w)"
+            no_titulo = bool(re.search(padrao, titulo_low))
+            no_corpo = bool(re.search(padrao, corpo_low))
+
+            if no_titulo:
+                pontos_por_categoria[cat_key] += int(peso * 2.0)
+                termos_encontrados.append(termo)
+            elif no_corpo:
+                pontos_por_categoria[cat_key] += peso
+                termos_encontrados.append(termo)
+
+    # Bônus por Tickers da B3 detectados (+15 por ticker único, até +45)
+    tickers = extrair_tickers_b3(texto_completo)
+    bonus_tickers = min(len(tickers) * 15, 45)
+
+    # Bônus por densidade de métricas quantitativas (R$, US$, %, bilhões)
+    metricas = REGEX_METRICAS_NUMERCIAS.findall(texto_completo)
+    bonus_metricas = min(len(metricas) * 4, 24)
+
+    # Define a categoria dominante
+    categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
+    soma_taxonomia = sum(pontos_por_categoria.values())
+    score_final = soma_taxonomia + bonus_tickers + bonus_metricas
+
+    if pontos_por_categoria[categoria_dominante] > 0:
+        cat_label = TAXONOMIA_PESOS[categoria_dominante]["label"]
+        radar_acao = TAXONOMIA_PESOS[categoria_dominante]["radar_acao"]
+    elif tickers:
+        categoria_dominante = "TICKERS_B3"
+        cat_label = "📈 <b>RADAR B3 &amp; AÇÕES</b>"
+        radar_acao = "Movimentação direta em ativos listados na B3. Monitore volume e book de ofertas."
+    else:
+        cat_label = "⚡️ <b>RADAR DE MERCADO</b>"
+        radar_acao = "Acompanhe os desdobramentos no pregão e impactos setoriais."
+
+    return AnaliseHeuristica(
+        score_total=score_final,
+        categoria_chave=categoria_dominante,
+        categoria_label=cat_label,
+        radar_acao=radar_acao,
+        tickers=tickers,
+        termos_detectados=list(dict.fromkeys(termos_encontrados)),
+    )
 
 
 # ==============================================================================
@@ -202,7 +380,7 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
 
 
 # ==============================================================================
-# UTILITÁRIOS GERAIS E LIMPEZA DE TEXTO
+# UTILITÁRIOS DE LIMPEZA E EXTRAÇÃO DE TEXTO (TRAFILATURA)
 # ==============================================================================
 def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
     return {
@@ -210,13 +388,6 @@ def gerar_botao_grupo_aleatorio() -> Dict[str, Any]:
             [{"text": random.choice(TEXTOS_BOTAO_GRUPO), "url": GRUPO_URL}]
         ]
     }
-
-
-def contem_termo(texto: str, lista_termos: Tuple[str, ...]) -> bool:
-    for termo in lista_termos:
-        if re.search(r"(?<!\w)" + re.escape(termo) + r"(?!\w)", texto, flags=re.IGNORECASE):
-            return True
-    return False
 
 
 def normalizar_url(url: Optional[str]) -> Optional[str]:
@@ -326,9 +497,6 @@ def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
     return False
 
 
-# ==============================================================================
-# 1. EXTRAÇÃO COM TRAFILATURA E ESTRUTURAÇÃO ALGORÍTMICA (COMEÇO, MEIO, FIM)
-# ==============================================================================
 def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) -> List[str]:
     paragrafos_limpos: List[str] = []
 
@@ -356,17 +524,16 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
         t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
         frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t_desc) if len(f.strip()) >= 35]
         if len(frases) >= 3:
-            paragrafos_limpos = [
-                frases[0],
-                " ".join(frases[1:-1]),
-                frases[-1],
-            ]
+            paragrafos_limpos = [frases[0], " ".join(frases[1:-1]), frases[-1]]
         elif t_desc and len(t_desc) >= 60:
             paragrafos_limpos = [t_desc]
 
     return paragrafos_limpos
 
 
+# ==============================================================================
+# ESTRUTURAÇÃO: COMEÇO (LEAD), MEIO (MÉTRICAS & TICKERS) E FIM (RADAR DE AÇÃO)
+# ==============================================================================
 def truncar_frase_limpa(texto: str, max_chars: int) -> str:
     if len(texto) <= max_chars:
         return texto if texto[-1] in ".!?" else texto + "."
@@ -374,118 +541,93 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
     return cortado + "."
 
 
-def estruturar_noticia_comeco_meio_fim(paragrafos: List[str], titulo: str) -> str:
-    if not paragrafos:
-        return ""
+def pontuar_paragrafo_meio(paragrafo: str) -> Tuple[int, int]:
+    """Seleciona o parágrafo mais denso em métricas financeiras, cifras e tickers B3."""
+    qtd_metricas = len(REGEX_METRICAS_NUMERCIAS.findall(paragrafo))
+    qtd_tickers = len(REGEX_TICKER_B3.findall(paragrafo))
+    p_low = paragrafo.lower()
+    qtd_taxonomia = sum(
+        peso
+        for cat in TAXONOMIA_PESOS.values()
+        for termo, peso in cat["termos"].items()
+        if termo in p_low
+    )
+    score = (qtd_metricas * 12) + (qtd_tickers * 18) + qtd_taxonomia
+    return (score, -abs(len(paragrafo) - 210))
+
+
+def montar_mensagem_investidor(
+    titulo: str, paragrafos: List[str], analise: AnaliseHeuristica
+) -> str:
+    """
+    Constrói o post HTML estruturado em:
+    - Cabeçalho da Categoria + Badges de Tickers B3 (#PETR4)
+    - Título Limpo
+    - COMEÇO: Lead da notícia (1º parágrafo)
+    - MEIO: Parágrafo com maior densidade de métricas, balanços ou cotações
+    - FIM: Contexto conclusivo + Radar de Ação para o investidor
+    """
+    t_limpo = titulo.strip()
+    if " - " in t_limpo:
+        t_limpo, _ = t_limpo.rsplit(" - ", 1)
+    if t_limpo and t_limpo[-1] not in ".!?":
+        t_limpo += "."
+
+    # Começo (Lead) e Meio (Métricas/Indicadores)
+    p_comeco = truncar_frase_limpa(paragrafos[0], 220)
+    p_meio = ""
+    p_desfecho = ""
 
     if len(paragrafos) == 1:
         frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", paragrafos[0]) if len(f.strip()) > 25]
-        if len(frases) >= 3:
-            p_comeco = truncar_frase_limpa(frases[0], 230)
-            p_meio = truncar_frase_limpa(frases[1], 230)
-            p_fim = truncar_frase_limpa(frases[-1], 220)
-            return f"{p_comeco}\n\n{p_meio}\n\n{p_fim}"
-        return truncar_frase_limpa(paragrafos[0], 620)
+        if len(frases) >= 2:
+            p_comeco = truncar_frase_limpa(frases[0], 210)
+            p_meio = truncar_frase_limpa(" ".join(frases[1:]), 220)
+    elif len(paragrafos) == 2:
+        p_meio = truncar_frase_limpa(paragrafos[1], 230)
+    else:
+        candidatos_meio = paragrafos[1:]
+        melhor_meio = max(candidatos_meio, key=pontuar_paragrafo_meio)
+        p_meio = truncar_frase_limpa(melhor_meio, 230)
+        if paragrafos[-1] != melhor_meio:
+            p_desfecho = truncar_frase_limpa(paragrafos[-1], 160)
 
-    if len(paragrafos) == 2:
-        p_comeco = truncar_frase_limpa(paragrafos[0], 300)
-        p_fim = truncar_frase_limpa(paragrafos[1], 300)
-        return f"{p_comeco}\n\n{p_fim}"
+    # Fim (Radar de Ação + Tickers B3 em negrito/hashtag)
+    ativos_fmt = " ".join(f"<b>#{t}</b>" for t in analise.tickers[:5])
+    if ativos_fmt:
+        bloco_radar = f"🎯 <b>Radar do Investidor ({ativos_fmt}):</b> {html.escape(analise.radar_acao)}"
+    else:
+        bloco_radar = f"🎯 <b>Radar do Investidor:</b> {html.escape(analise.radar_acao)}"
 
-    p_comeco = truncar_frase_limpa(paragrafos[0], 240)
-    candidatos_meio = paragrafos[1:-1]
+    titulo_html = formatar_tickers_no_texto(html.escape(t_limpo))
+    comeco_html = formatar_tickers_no_texto(html.escape(p_comeco))
+    meio_html = formatar_tickers_no_texto(html.escape(p_meio)) if p_meio and p_meio.lower() != p_comeco.lower() else ""
+    desfecho_html = formatar_tickers_no_texto(html.escape(p_desfecho)) if p_desfecho else ""
 
-    def calcular_score_financeiro(paragrafo: str) -> Tuple[int, int]:
-        matches = REGEX_INDICADORES_FINANCEIROS.findall(paragrafo)
-        bonus_tamanho = 1 if 80 <= len(paragrafo) <= 320 else 0
-        return (len(matches) * 10 + bonus_tamanho, -abs(len(paragrafo) - 200))
+    partes_corpo = [comeco_html]
+    if meio_html:
+        partes_corpo.append(meio_html)
+    if desfecho_html and desfecho_html.lower() not in (comeco_html.lower(), meio_html.lower()):
+        partes_corpo.append(desfecho_html)
 
-    melhor_meio = max(candidatos_meio, key=calcular_score_financeiro)
-    p_meio = truncar_frase_limpa(melhor_meio, 240)
+    corpo_unido = "\n\n".join(partes_corpo)
+    post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_unido}\n\n{bloco_radar}"
 
-    p_fim_bruto = paragrafos[-1]
-    if p_fim_bruto == melhor_meio and len(paragrafos) > 3:
-        p_fim_bruto = paragrafos[-2]
-    p_fim = truncar_frase_limpa(p_fim_bruto, 220)
+    # Garantia estrita do limite de 1024 caracteres da legenda no Telegram
+    if len(post) > TELEGRAM_CAPTION_LIMIT and desfecho_html:
+        corpo_sem_desfecho = "\n\n".join([ p for p in (comeco_html, meio_html) if p ])
+        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{corpo_sem_desfecho}\n\n{bloco_radar}"
 
-    blocos = [p_comeco]
-    if p_meio.lower() != p_comeco.lower():
-        blocos.append(p_meio)
-    if p_fim.lower() not in (p_comeco.lower(), p_meio.lower()):
-        blocos.append(p_fim)
+    while len(post) > TELEGRAM_CAPTION_LIMIT and len(p_meio) > 80:
+        p_meio = truncar_frase_limpa(p_meio[:-35], len(p_meio) - 35)
+        meio_html = formatar_tickers_no_texto(html.escape(p_meio))
+        post = f"{analise.categoria_label}\n\n<b>{titulo_html}</b>\n\n{comeco_html}\n\n{meio_html}\n\n{bloco_radar}"
 
-    return "\n\n".join(blocos)
-
-
-# ==============================================================================
-# CATEGORIZAÇÃO E FORMATAÇÃO HTML SEGURA PARA O TELEGRAM
-# ==============================================================================
-def categorizar_materia(titulo: str, texto: str) -> str:
-    for escopo in (titulo, f"{titulo} {texto}"):
-        if contem_termo(escopo, ("urgente", "breaking", "plantão", "circuit breaker", "ataque terrorista", "guerra declarada")):
-            return "🚨 <b>RADAR URGENTE</b>"
-        if contem_termo(escopo, ("dividendo", "dividendos", "provento", "proventos", "jcp", "juros sobre capital", "data com", "bonificação")):
-            return "💰 <b>DIVIDENDOS &amp; PROVENTOS</b>"
-        if contem_termo(escopo, (
-            "lula", "congresso", "stf", "senado", "senador", "câmara", "camara", "deputado", "deputados",
-            "motta", "lira", "haddad", "planalto", "reforma tributária", "arcabouço", "orçamento",
-            "eleição", "eleições", "candidatura", "partido", "pl", "pt", "governador", "prefeito", "pec",
-        )):
-            return "🏛️ <b>POLÍTICA &amp; PODER</b>"
-        if contem_termo(escopo, (
-            "eua", "trump", "biden", "china", "guerra", "rússia", "ucrânia", "oriente médio",
-            "israel", "irã", "otan", "taiwan", "bce", "união europeia", "geopolítica", "casa branca", "tarifas",
-        )):
-            return "🌍 <b>GEOPOLÍTICA &amp; MUNDO</b>"
-        if contem_termo(escopo, (
-            "energia", "leilão de energia", "leilões de energia", "eletricidade", "setor elétrico",
-            "petróleo", "brent", "wti", "opep", "minério", "dalian", "commodities", "commodity",
-            "soja", "milho", "safra", "ouro", "gás natural", "combustível", "gasolina",
-        )):
-            return "🛢️ <b>COMMODITIES &amp; ENERGIA</b>"
-        if contem_termo(escopo, (
-            "fusão", "aquisição", "m&a", "incorporação", "ipo", "oferta pública",
-            "reestruturação", "privatização", "joint venture", "concessão", "recuperação judicial",
-        )):
-            return "🤝 <b>NEGÓCIOS &amp; EMPRESAS</b>"
-        if contem_termo(escopo, (
-            "inteligência artificial", "chatgpt", "openai", "nvidia", "semicondutores",
-            "chips", "apple", "microsoft", "google", "meta", "big tech", "tsmc",
-        )):
-            return "🤖 <b>TECNOLOGIA &amp; IA</b>"
-        if contem_termo(escopo, (
-            "bitcoin", "btc", "ethereum", "cripto", "criptomoeda", "criptomoedas",
-            "criptoativos", "solana", "drex", "blockchain", "tokenização",
-        )):
-            return "🪙 <b>CRIPTOATIVOS</b>"
-        if contem_termo(escopo, (
-            "dólar", "selic", "copom", "ipca", "inflação", "banco central", "fed",
-            "juros", "pib", "câmbio", "boletim focus", "tesouro direto",
-        )):
-            return "💵 <b>MACROECONOMIA &amp; CÂMBIO</b>"
-        if contem_termo(escopo, (
-            "lucro", "balanço", "prejuízo", "receita", "ebitda", "petrobras", "vale",
-            "itaú", "bradesco", "b3", "bolsa", "ibovespa", "ações", "nyse", "nasdaq", "s&p 500",
-        )):
-            return "📊 <b>MERCADO &amp; AÇÕES</b>"
-
-    return "⚡️ <b>RADAR DE MERCADO</b>"
-
-
-def montar_post_html_seguro(categoria_html: str, titulo_limpo: str, resumo_texto: str) -> str:
-    titulo_esc = html.escape(titulo_limpo)
-    resumo_atual = resumo_texto
-
-    while True:
-        resumo_esc = html.escape(resumo_atual)
-        post = f"{categoria_html}\n\n<b>{titulo_esc}</b>\n\n{resumo_esc}"
-        if len(post) <= TELEGRAM_CAPTION_LIMIT or len(resumo_atual) <= 100:
-            return post
-        resumo_atual = resumo_atual[:-40].rsplit(" ", 1)[0].rstrip(",;:-") + "."
+    return post[:TELEGRAM_CAPTION_LIMIT]
 
 
 # ==============================================================================
-# 2. ENGINE DE MÍDIA E VÍDEO LOCAL (YT-DLP <= 50MB + LIMPEZA TEMPORÁRIA)
+# ENGINE DE MÍDIA E VÍDEO LOCAL (YT-DLP <= 50MB + OS.REMOVE)
 # ==============================================================================
 def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     padroes = (
@@ -610,7 +752,7 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
                 tamanho = caminho.stat().st_size
                 if 1024 < tamanho <= MAX_VIDEO_BYTES:
                     return caminho
-                logger.warning("Vídeo descartado por tamanho inválido (%d bytes): %s", tamanho, url_alvo)
+                os.remove(caminho)
     except Exception as exc:
         logger.debug("yt-dlp sem vídeo válido para %s: %s", url_alvo, exc)
 
@@ -618,7 +760,7 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
 
 
 # ==============================================================================
-# INGESTÃO E SCRAPING ASSÍNCRONO
+# INGESTÃO, FILTRAGEM POR SCORE E SCRAPING ASSÍNCRONO
 # ==============================================================================
 async def buscar_feed_rss(
     client: httpx.AsyncClient, sem: asyncio.Semaphore, url_feed: str
@@ -675,20 +817,21 @@ async def buscar_feed_rss(
 
 
 async def obter_conteudo_e_midias_artigo(
-    client: httpx.AsyncClient, url: str, desc_bruta: str, titulo: str
+    client: httpx.AsyncClient, sem: asyncio.Semaphore, url: str, desc_bruta: str, titulo: str
 ) -> Tuple[List[str], Optional[str], Optional[str]]:
     foto_og: Optional[str] = None
     video_pag: Optional[str] = None
     raw_html = ""
 
-    try:
-        resp = await client.get(url, timeout=10.0)
-        if resp.status_code == 200 and len(resp.content) <= MAX_HTML_BYTES:
-            raw_html = resp.text
-            foto_og = extrair_og_image_da_pagina(raw_html)
-            video_pag = extrair_candidato_video_html(raw_html)
-    except Exception as exc:
-        logger.debug("Download do HTML falhou para %s: %s", url, exc)
+    async with sem:
+        try:
+            resp = await client.get(url, timeout=10.0)
+            if resp.status_code == 200 and len(resp.content) <= MAX_HTML_BYTES:
+                raw_html = resp.text
+                foto_og = extrair_og_image_da_pagina(raw_html)
+                video_pag = extrair_candidato_video_html(raw_html)
+        except Exception as exc:
+            logger.debug("Download do HTML falhou para %s: %s", url, exc)
 
     paragrafos = await asyncio.to_thread(
         extrair_paragrafos_trafilatura, raw_html, desc_bruta, titulo
@@ -708,14 +851,16 @@ async def carregar_proximas_noticias(
         *(buscar_feed_rss(client, sem, url) for url in FEEDS)
     )
 
-    candidatos = [
+    candidatos_brutos = [
         item for sublista in resultados_feeds for item in sublista
         if item["link"] not in set_links and gerar_hash_url(item["link"]) not in set_links
     ]
-    candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
-    noticias: List[NoticiaPreparada] = []
-    for cand in candidatos:
+    # Pré-ordena por data mais recente e avalia os 25 candidatos mais novos do ciclo
+    candidatos_brutos.sort(key=lambda x: x["dt_pub"], reverse=True)
+
+    noticias_aprovadas: List[NoticiaPreparada] = []
+    for cand in candidatos_brutos[:25]:
         title = cand["title"]
         link = cand["link"]
         link_hash = gerar_hash_url(link)
@@ -727,28 +872,38 @@ async def carregar_proximas_noticias(
 
         foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
         paragrafos, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
-            client, link, desc_bruta, title
+            client, sem, link, desc_bruta, title
         )
 
-        resumo_estruturado = estruturar_noticia_comeco_meio_fim(paragrafos, title)
-        if not resumo_estruturado or len(resumo_estruturado) < 100:
+        if not paragrafos:
             continue
 
-        categoria = categorizar_materia(title, resumo_estruturado)
+        analise = avaliar_impacto_financeiro(title, paragrafos)
+        if analise.score_total < SCORE_MINIMO_CORTE:
+            logger.info(
+                "Descartada por baixo impacto financeiro (Score %d < %d): %s",
+                analise.score_total,
+                SCORE_MINIMO_CORTE,
+                title,
+            )
+            continue
 
-        t_limpo = title.strip()
-        if " - " in t_limpo:
-            t_limpo, _ = t_limpo.rsplit(" - ", 1)
-        if t_limpo and t_limpo[-1] not in ".!?":
-            t_limpo += "."
+        post_html = montar_mensagem_investidor(title, paragrafos, analise)
+        logger.info(
+            "Aprovada [Score %d | %s | Tickers: %s]: %s",
+            analise.score_total,
+            analise.categoria_chave,
+            ",".join(analise.tickers) or "N/A",
+            title,
+        )
 
-        post_html = montar_post_html_seguro(categoria, t_limpo, resumo_estruturado)
-
-        noticias.append(
+        noticias_aprovadas.append(
             NoticiaPreparada(
                 link=link,
                 titulo=title,
                 texto_html=post_html,
+                score=analise.score_total,
+                dt_pub=cand["dt_pub"],
                 imagem=foto_rss or foto_og,
                 video_candidato_url=video_rss or video_pag,
                 audio=audio_rss,
@@ -758,15 +913,16 @@ async def carregar_proximas_noticias(
         set_links.add(link)
         set_links.add(link_hash)
 
-        if len(noticias) >= limite:
-            break
+    # Prioriza as notícias de maior Score Financeiro; envia da mais antiga para a mais recente entre o top N
+    noticias_aprovadas.sort(key=lambda n: (n.score, n.dt_pub), reverse=True)
+    selecionadas = noticias_aprovadas[:limite]
+    selecionadas.sort(key=lambda n: n.dt_pub)
 
-    noticias.reverse()
-    return noticias, links_historico, titulos_historico
+    return selecionadas, links_historico, titulos_historico
 
 
 # ==============================================================================
-# CLIENTE TELEGRAM (UPLOAD DE VÍDEO TEMPORÁRIO + FALLBACK LINKPREVIEWOPTIONS)
+# CLIENTE TELEGRAM (UPLOAD DE VÍDEO COM OS.REMOVE + FALLBACK LINKPREVIEW)
 # ==============================================================================
 async def telegram_request(
     client: httpx.AsyncClient,
@@ -822,32 +978,39 @@ async def tentar_enviar_video_ytdlp(
 
     with tempfile.TemporaryDirectory(prefix="tg_vid_") as pasta_temp:
         caminho_video: Optional[Path] = None
-        for url_alvo in dict.fromkeys(urls_para_testar):
-            caminho_video = await asyncio.to_thread(
-                _baixar_video_ytdlp_sync, url_alvo, item.link, pasta_temp
+        try:
+            for url_alvo in dict.fromkeys(urls_para_testar):
+                caminho_video = await asyncio.to_thread(
+                    _baixar_video_ytdlp_sync, url_alvo, item.link, pasta_temp
+                )
+                if caminho_video and caminho_video.exists():
+                    break
+
+            if not caminho_video or not caminho_video.exists():
+                return False
+
+            logger.info(
+                "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
+                caminho_video.stat().st_size / (1024 * 1024),
             )
+            data_fields = {
+                "chat_id": chat_id,
+                "caption": item.texto_html,
+                "parse_mode": "HTML",
+                "supports_streaming": "true",
+                "reply_markup": json.dumps(botao_sorteado),
+            }
+            with open(caminho_video, "rb") as f_vid:
+                files = {"video": (caminho_video.name, f_vid, "video/mp4")}
+                return await telegram_request(
+                    client, f"{base_url}/sendVideo", data_fields=data_fields, files=files
+                )
+        finally:
             if caminho_video and caminho_video.exists():
-                break
-
-        if not caminho_video or not caminho_video.exists():
-            return False
-
-        logger.info(
-            "Vídeo extraído via yt-dlp (%.2f MB). Enviando via sendVideo...",
-            caminho_video.stat().st_size / (1024 * 1024),
-        )
-        data_fields = {
-            "chat_id": chat_id,
-            "caption": item.texto_html,
-            "parse_mode": "HTML",
-            "supports_streaming": "true",
-            "reply_markup": json.dumps(botao_sorteado),
-        }
-        with open(caminho_video, "rb") as f_vid:
-            files = {"video": (caminho_video.name, f_vid, "video/mp4")}
-            return await telegram_request(
-                client, f"{base_url}/sendVideo", data_fields=data_fields, files=files
-            )
+                try:
+                    os.remove(caminho_video)
+                except OSError:
+                    pass
 
 
 async def enviar_post(
@@ -870,7 +1033,7 @@ async def enviar_post(
         "show_above_text": True,
     }
 
-    logger.info("Sem vídeo nativo para '%s'. Enviando via sendMessage com LinkPreviewOptions.", item.titulo)
+    logger.info("Enviando via sendMessage com LinkPreviewOptions: %s", item.titulo)
     payload_msg = {
         "chat_id": chat_id,
         "text": item.texto_html,
@@ -901,10 +1064,10 @@ async def main() -> None:
         )
 
         if not noticias:
-            logger.info("Nenhuma notícia nova qualificada neste ciclo.")
+            logger.info("Nenhuma notícia atingiu o score mínimo de impacto financeiro neste ciclo.")
             return
 
-        logger.info("Encontradas %d notícias qualificadas para envio.", len(noticias))
+        logger.info("Encontradas %d notícias de alto impacto para publicação.", len(noticias))
         for noticia in noticias:
             sucesso = await enviar_post(client, token, chat_id, noticia)
             if sucesso:
@@ -912,7 +1075,7 @@ async def main() -> None:
                 links_historico.append(gerar_hash_url(noticia.link))
                 titulos_historico.append(noticia.titulo)
                 salvar_historico(links_historico, titulos_historico)
-                logger.info("Notícia publicada com sucesso: %s", noticia.titulo)
+                logger.info("Notícia publicada [Score %d]: %s", noticia.score, noticia.titulo)
                 await asyncio.sleep(3.0)
             else:
                 logger.error("Falha definitiva ao publicar notícia: %s", noticia.titulo)
