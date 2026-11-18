@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
+from xml.etree.ElementTree import Element as XmlElement
 
 import httpx
 import trafilatura
@@ -115,15 +116,14 @@ STOPWORDS_DEDUP = {
     "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
 }
 
-# Expressões regulares para detecção de relevância financeira (Meio da notícia)
 REGEX_INDICADORES_FINANCEIROS = re.compile(
     r"("
-    r"[+-]?\d+(?:[.,]\d+)?\s*%"                                  # Percentuais (ex: +2,5%, 10.5%)
-    r"|(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?"                       # Moedas (ex: R$ 5,80, US$ 100)
-    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri)\b"  # Grandezas
+    r"[+-]?\d+(?:[.,]\d+)?\s*%"
+    r"|(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?"
+    r"|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri)\b"
     r"|\b(?:alta|queda|subiu|caiu|recuou|avançou|disparou|desabou|"
     r"lucro|prejuízo|ebitda|receita|dividendos|selic|ipca|pib|juros|"
-    r"inflação|dólar|ibovespa|pontos|cotação|fechou)\b"          # Termos-chave de mercado
+    r"inflação|dólar|ibovespa|pontos|cotação|fechou)\b"
     r")",
     flags=re.IGNORECASE,
 )
@@ -143,7 +143,6 @@ class NoticiaPreparada:
 # CONTROLE DE DUPLICIDADE E PERSISTÊNCIA ATÔMICA
 # ==============================================================================
 def gerar_hash_url(url: str) -> str:
-    """Gera hash curto SHA-256 da URL normalizada (sem UTM/tracking) para controle leve."""
     p = urllib.parse.urlsplit(url)
     query_limpa = "&".join(
         f"{k}={v}"
@@ -236,7 +235,7 @@ def normalizar_url(url: Optional[str]) -> Optional[str]:
         return None
 
 
-def extrair_data_publicacao(item: ET.Element) -> Optional[datetime]:
+def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
     for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
@@ -308,7 +307,6 @@ def limpar_html(txt: str) -> str:
 
 
 def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
-    """Filtra rodapés, chamadas de assinatura, créditos de foto e linhas muito curtas."""
     if not txt or len(txt) < 45:
         return True
     ruidos = (
@@ -332,10 +330,6 @@ def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
 # 1. EXTRAÇÃO COM TRAFILATURA E ESTRUTURAÇÃO ALGORÍTMICA (COMEÇO, MEIO, FIM)
 # ==============================================================================
 def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) -> List[str]:
-    """
-    Usa Trafilatura para extrair o corpo limpo da notícia em parágrafos.
-    Se a página bloquear scraping ou tiver paywall rígido, faz fallback para a descrição do RSS.
-    """
     paragrafos_limpos: List[str] = []
 
     if raw_html:
@@ -358,7 +352,6 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
                 if not paragrafo_eh_ruido_editorial(p, titulo):
                     paragrafos_limpos.append(p)
 
-    # Fallback para descrição do feed RSS se Trafilatura retornar vazio
     if not paragrafos_limpos and desc_bruta:
         t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
         frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", t_desc) if len(f.strip()) >= 35]
@@ -382,16 +375,9 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
 
 
 def estruturar_noticia_comeco_meio_fim(paragrafos: List[str], titulo: str) -> str:
-    """
-    Estrutura a notícia de forma algorítmica e determinística (Zero IA):
-    - COMEÇO: Primeiro parágrafo substantivo (Lead jornalístico).
-    - MEIO: Parágrafo intermediário com maior densidade de indicadores financeiros (%, R$, US$, alta/queda).
-    - FIM: Último parágrafo substantivo (conclusão/desdobramento).
-    """
     if not paragrafos:
         return ""
 
-    # Caso de parágrafo único (ex: nota curta do RSS)
     if len(paragrafos) == 1:
         frases = [f.strip() for f in re.split(r"(?<=[.!?])\s+", paragrafos[0]) if len(f.strip()) > 25]
         if len(frases) >= 3:
@@ -401,26 +387,22 @@ def estruturar_noticia_comeco_meio_fim(paragrafos: List[str], titulo: str) -> st
             return f"{p_comeco}\n\n{p_meio}\n\n{p_fim}"
         return truncar_frase_limpa(paragrafos[0], 620)
 
-    # Caso de 2 parágrafos
     if len(paragrafos) == 2:
         p_comeco = truncar_frase_limpa(paragrafos[0], 300)
         p_fim = truncar_frase_limpa(paragrafos[1], 300)
         return f"{p_comeco}\n\n{p_fim}"
 
-    # Caso padrão (>= 3 parágrafos): Começo, Meio (Scoring Financeiro) e Fim
     p_comeco = truncar_frase_limpa(paragrafos[0], 240)
     candidatos_meio = paragrafos[1:-1]
 
     def calcular_score_financeiro(paragrafo: str) -> Tuple[int, int]:
         matches = REGEX_INDICADORES_FINANCEIROS.findall(paragrafo)
-        # Prioriza quantidade de indicadores financeiros e tamanho ideal (80 a 320 chars)
         bonus_tamanho = 1 if 80 <= len(paragrafo) <= 320 else 0
         return (len(matches) * 10 + bonus_tamanho, -abs(len(paragrafo) - 200))
 
     melhor_meio = max(candidatos_meio, key=calcular_score_financeiro)
     p_meio = truncar_frase_limpa(melhor_meio, 240)
 
-    # Escolhe o último parágrafo substantivo que não repita o meio
     p_fim_bruto = paragrafos[-1]
     if p_fim_bruto == melhor_meio and len(paragrafos) > 3:
         p_fim_bruto = paragrafos[-2]
@@ -522,7 +504,6 @@ def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
 
 
 def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
-    """Procura tags explícitas de vídeo ou embeds suportados pelo yt-dlp no HTML."""
     padroes = (
         r'<meta[^>]+property=["\']og:video(?::secure_url|:url)?["\'][^>]+content=["\']([^"\']+)["\']',
         r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:video(?::secure_url|:url)?["\']',
@@ -542,7 +523,7 @@ def extrair_candidato_video_html(raw_html: str) -> Optional[str]:
 
 
 def extrair_midias_do_rss(
-    item: ET.Element, desc_bruta: str
+    item: XmlElement, desc_bruta: str
 ) -> Tuple[Optional[str], Optional[str], Optional[str]]:
     foto_url: Optional[str] = None
     video_url: Optional[str] = None
@@ -588,10 +569,6 @@ def extrair_midias_do_rss(
 
 
 def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -> Optional[Path]:
-    """
-    Executa o yt-dlp localmente para checar e baixar o vídeo se <= 50MB.
-    Suporta links diretos (.mp4/.m3u8), embeds ou a própria URL da notícia.
-    """
     output_template = os.path.join(pasta_temp, "video_%(id)s.%(ext)s")
     ydl_opts: Dict[str, Any] = {
         "format": (
@@ -700,7 +677,6 @@ async def buscar_feed_rss(
 async def obter_conteudo_e_midias_artigo(
     client: httpx.AsyncClient, url: str, desc_bruta: str, titulo: str
 ) -> Tuple[List[str], Optional[str], Optional[str]]:
-    """Baixa o HTML da matéria, extrai parágrafos via Trafilatura e identifica og:image e vídeo."""
     foto_og: Optional[str] = None
     video_pag: Optional[str] = None
     raw_html = ""
@@ -839,10 +815,6 @@ async def tentar_enviar_video_ytdlp(
     item: NoticiaPreparada,
     botao_sorteado: Dict[str, Any],
 ) -> bool:
-    """
-    Tenta extrair e baixar o vídeo da notícia via yt-dlp (<= 50MB),
-    faz o upload nativo via sendVideo e apaga o arquivo temporário imediatamente.
-    """
     urls_para_testar: List[str] = []
     if item.video_candidato_url:
         urls_para_testar.append(item.video_candidato_url)
@@ -884,14 +856,12 @@ async def enviar_post(
     base_url = f"https://api.telegram.org/bot{token}"
     botao_sorteado = gerar_botao_grupo_aleatorio()
 
-    # 1. Tenta Engine de Vídeo via yt-dlp (download temporário <= 50MB -> sendVideo -> delete)
     sucesso_video = await tentar_enviar_video_ytdlp(
         client, base_url, chat_id, item, botao_sorteado
     )
     if sucesso_video:
         return True
 
-    # 2. Fallback: Se não houver vídeo válido/suportado, envia sendMessage com LinkPreviewOptions
     url_preview = item.imagem if item.imagem else item.link
     link_preview_options: Dict[str, Any] = {
         "is_disabled": False,
