@@ -44,14 +44,13 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "26"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "24"))
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
 MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite da Telegram Bot API)
 TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption em sendPhoto/sendVideo
-ALVO_MIN_CARACTERES_POST = 1150           # Mínimo ideal para matérias completas
-ALVO_MAX_CARACTERES_POST = 1520           # Teto para manter média em ~1300-1400 caracteres
+ALVO_MAX_CARACTERES_POST = 1520           # Teto para manter matérias grandes em ~1300-1400 caracteres
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 
@@ -75,8 +74,9 @@ HEADERS = {
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# Feeds calibrados para quem trabalha, empreende e investe em Ações, FIIs e Renda Fixa
+# Todos os feeds validados (sem URLs 404 da Exame/CNN)
 FEEDS = [
+    "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.infomoney.com.br/onde-investir/feed/",
     "https://www.infomoney.com.br/economia/feed/",
@@ -88,8 +88,7 @@ FEEDS = [
     "https://braziljournal.com/feed",
     "https://g1.globo.com/rss/g1/economia/",
     "https://exame.com/invest/feed/",
-    "https://exame.com/economia/feed/",
-    "https://exame.com/negocios/feed/",
+    "https://exame.com/feed/",
     "https://portaldobitcoin.uol.com.br/feed/",
 ]
 
@@ -98,47 +97,36 @@ CAMINHOS_URL_BLOQUEADOS = (
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
     "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
     "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
-    "/cursos/", "/marketing/",
+    "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
 )
 
-# Bloqueia propagandas de corretoras, cursos, fofoca, esportes, crime e benefícios assistenciais que não são de investimento/empreendedorismo
-BLOQUEADOS_PROPAGANDA = (
-    # Propagandas disfarçadas / Vitrines promocionais de corretoras
+# 1. Termos de propaganda explícita e venda de cursos (verificados no título e início do texto)
+BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "renda fixa hoje:", "dentro da plataforma da xp", "plataforma da xp oferece",
-    "lcas na xp", "lcis na xp", "cdbs na xp", "confira as taxas de cdbs, lcis e lcas na xp",
+    "lcas na xp", "lcis na xp", "cdbs na xp", "confira as taxas de cdbs, lcis e lcas",
     "conteúdo patrocinado", "branded content", "especial publicitário",
-    "apresentado por", "oferecimento",
-    # Promoções, varejo, cartões e vendas de cursos
-    "black friday", "black xp", "cupom de desconto", "cupom",
-    "turbinam benefícios", "turbina benefícios", "benefícios em cartões", "beneficios em cartoes",
-    "pontos e milhas", "acumule pontos", "compras parceladas",
-    "compre com", "ganhe até", "sorteio",
     "curso gratuito", "inscrições abertas", "inscricoes abertas",
-    "webinar", "mentoria", "baixe o e-book", "baixe o app",
-    "treinamento gratuito", "workshop", "evento online", "evento gratuito",
-    "cartão black", "anuidade zero", "anuidade grátis", "encerra seu cartão",
-    "cartão de criptomoedas",
-    # Assistencialismo / Loterias / Concursos (não agregam a quem empreende e investe)
+    "webinar", "mentoria", "baixe o e-book", "treinamento gratuito",
+    "evento online", "evento gratuito", "cupom de desconto",
+    "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
+    "cartão de criptomoedas", "encerra seu cartão",
+)
+
+# 2. Assuntos fora do escopo do investidor (verificados APENAS NO TÍTULO para nunca bloquear
+# matérias de Pacote Fiscal/Ibovespa que citem INSS/Bolsa Família/Pé-de-Meia no meio do texto!)
+BLOQUEADOS_APENAS_NO_TITULO = (
     "calendário do inss", "meu inss", "benefício do inss",
     "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
-    "cnh social", "concurso público", "edital publicado", "quem pode fazer mba",
-    # Entretenimento, saúde, jogos e variedades
-    "horóscopo", "signo", "loteria", "mega-sena", "lotofácil", "quina",
-    "bbb", "fofoca", "onde assistir", "escalação", "futebol", "novela",
-    "brasileirão", "campeonato brasileiro", "rebaixamento", "data fifa",
-    "libertadores", "copa do brasil", "champions league", "artilheiro", "goleiro",
-    "estádio", "torcida", "série a", "série b", "35ª rodada",
-    "tabela do campeonato", "eliminatórias", "seleção brasileira",
+    "saque-aniversário", "cnh social", "concurso público", "edital publicado",
+    "quem pode fazer mba", "horóscopo", "mega-sena", "lotofácil", "loteria",
+    "fofoca", "onde assistir", "escalação", "futebol", "brasileirão",
+    "campeonato brasileiro", "data fifa", "libertadores", "copa do brasil",
+    "champions league", "eliminatórias", "seleção brasileira",
     "gta 6", "playstation", "xbox", "canetas emagrecedoras", "cabelo cair",
     "melhores produtos de", "quadro icônico", "obra de arte",
-    # Policial, apostas e política criminal sem impacto econômico
-    "esquema de bets", "apostas online", "apostas de quota fixa", "cassino online",
-    "jogo do tigrinho", "mandados de busca", "mandado de busca", "busca e apreensão",
-    "mandado de prisão", "operação cash out", "operação da pf", "equipes policiais",
-    "lavagem de dinheiro", "quadrilha", "assalto", "sequestro", "homicídio",
-    "tráfico de drogas", "facção criminosa", "lei da dosimetria",
-    # Tempo real vazio
-    "ao vivo:", "tempo real:", "minuto a minuto",
+    "jogo do tigrinho", "cassino online", "operação cash out",
+    "assalto", "sequestro", "homicídio", "tráfico de drogas", "facção criminosa",
+    "lei da dosimetria", "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
 STOPWORDS_DEDUP = {
@@ -176,6 +164,7 @@ ANCORAS_INVESTIDOR = (
     "crédito privado", "fidc",
     # 4. Macroeconomia, Juros, Negócios & Empreendedorismo
     "ibovespa", "selic", "copom", "ipca", "igp-m", "pib", "arcabouço", "meta fiscal",
+    "pacote fiscal", "incertezas fiscais", "fiscal", "juros", "inflação",
     "di futuro", "curva de juros", "juros futuros", "câmbio", "dólar", "banco central",
     "galípolo", "haddad", "reforma tributária", "tributação de dividendos", "imposto de renda",
     "crédito", "inadimplência", "empreendedor", "empreendedorismo", "empresas", "pme",
@@ -308,6 +297,7 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "copom": 22,
             "selic": 22,
             "taxa de juros": 16,
+            "juros": 14,
             "juros futuros": 18,
             "curva de juros": 18,
             "banco central": 16,
@@ -322,6 +312,8 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "treasuries": 20,
             "boletim focus": 20,
             "payroll": 18,
+            "fiscal": 16,
+            "incertezas fiscais": 18,
             "arcabouço fiscal": 18,
             "ajuste fiscal": 18,
             "pacote fiscal": 18,
@@ -334,12 +326,14 @@ TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
             "crédito para empresas": 18,
             "empreendedorismo": 16,
             "pequenas empresas": 16,
+            "dólar": 14,
             "dólar à vista": 18,
             "dólar comercial": 16,
             "ibovespa": 18,
             "wall street": 16,
             "s&p 500": 16,
             "nasdaq": 16,
+            "petróleo": 14,
             "petróleo brent": 16,
             "minério de ferro": 16,
             "bitcoin": 15,
@@ -460,7 +454,6 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     tickers = extrair_tickers_b3(texto_completo)
     tickers_titulo_lead = extrair_tickers_b3(f"{titulo} {lead}")
 
-    # Se houver ticker terminado em 11 (e não for Unit de ação conhecida), reforça a categoria de FIIs
     units_acoes = {"TAEE11", "SAPR11", "SANB11", "ALUP11", "KLBN11", "BPAC11", "ENGI11", "IGTI11"}
     tickers_fii = [t for t in tickers if t.endswith("11") and t not in units_acoes]
     if tickers_fii:
@@ -487,7 +480,7 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     elif len(metricas) == 1:
         bonus_metricas = 4
     else:
-        bonus_metricas = -18
+        bonus_metricas = -16
 
     categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
     score_final = max(0, soma_taxonomia + bonus_tickers + bonus_ancora + bonus_metricas)
@@ -624,12 +617,21 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
     return None
 
 
-def eh_propaganda_ou_lixo(titulo: str, descricao: str, url: str = "") -> bool:
+def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool:
+    """
+    1. Checa URLs bloqueadas (/esportes/, /carros/, /casual/, etc.)
+    2. Checa temas não-financeiros (INSS, Bolsa Família, futebol, jogos) APENAS NO TÍTULO
+       (para nunca bloquear matérias sobre Ibovespa/Pacote Fiscal que citem esses programas no corpo).
+    3. Checa propagandas explícitas de corretoras/cursos no título e início do texto.
+    """
     url_low = url.lower()
     if any(caminho in url_low for caminho in CAMINHOS_URL_BLOQUEADOS):
         return True
-    texto = f"{titulo} {descricao}".lower()
-    return any(b in texto for b in BLOQUEADOS_PROPAGANDA)
+    t_low = titulo.lower()
+    if any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
+        return True
+    amostra = f"{t_low} {(inicio_texto or '')[:450].lower()}"
+    return any(b in amostra for b in BLOQUEADOS_PROPAGANDA_CORRETORA)
 
 
 def limpar_caudas_wordpress(texto: str) -> str:
@@ -824,8 +826,8 @@ def pontuar_paragrafo_meio(paragrafo: str) -> int:
 
 def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 340) -> Optional[List[str]]:
     """
-    Constrói uma matéria jornalística completa (~1.250 a 1.450 caracteres no total)
-    estruturada em 4 atos coerentes (ou 3 atos longos):
+    Constrói uma matéria jornalística completa (~1.250 a 1.450 caracteres quando o artigo tem fôlego,
+    ou 3 atos sólidos em breaking news mais curtas) estruturada com Começo, Meio e Fim:
     1. COMEÇO (Lead): Apresentação clara do fato principal e dos protagonistas.
     2. MEIO 1 (Dados & Causas): Números detalhados, valores em R$/US$/% e motivação.
     3. MEIO 2 (Contexto & Desdobramento): Detalhes operacionais, histórico ou visão setorial.
@@ -834,7 +836,7 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
     todas_frases: List[str] = []
     for p in paragrafos:
         for f in dividir_em_frases_completas(p):
-            if len(f) >= 40 and f not in todas_frases:
+            if len(f) >= 38 and f not in todas_frases:
                 todas_frases.append(f)
 
     if len(todas_frases) < 3:
@@ -847,14 +849,24 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
         if len(cand) <= max_por_bloco:
             bloco_atual = cand
         else:
-            if bloco_atual and len(bloco_atual) >= 80:
+            if bloco_atual and len(bloco_atual) >= 65:
                 blocos.append(bloco_atual)
             bloco_atual = truncar_frase_limpa(f, max_por_bloco)
-    if bloco_atual and len(bloco_atual) >= 70:
+    if bloco_atual and len(bloco_atual) >= 55:
         blocos.append(bloco_atual)
 
     if len(blocos) < 3:
-        return None
+        blocos_fallback = [truncar_frase_limpa(p, max_por_bloco) for p in paragrafos if len(p) >= 45]
+        blocos_fallback = [b for b in dict.fromkeys(blocos_fallback) if b]
+        if len(blocos_fallback) >= 3:
+            blocos = blocos_fallback
+        else:
+            b1 = truncar_frase_limpa(todas_frases[0], max_por_bloco)
+            b2 = truncar_frase_limpa(todas_frases[1], max_por_bloco)
+            b3 = truncar_frase_limpa(" ".join(todas_frases[2:4]), max_por_bloco)
+            if b1 and b2 and b3:
+                return [b1, b2, b3]
+            return None
 
     p_comeco = blocos[0]
 
@@ -945,7 +957,7 @@ def montar_mensagem_investidor(
             paragrafos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_ajustados]
             post_completo = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(paragrafos_html)
 
-    if tamanho_texto_visivel(post_completo) < 650:
+    if tamanho_texto_visivel(post_completo) < 420:
         return None
 
     blocos_curtos = [
@@ -1230,9 +1242,11 @@ async def carregar_proximas_noticias(
         )
 
         if not paragrafos:
+            logger.info("Descartada (texto da página não pôde ser extraído): %s", title)
             continue
 
-        if eh_propaganda_ou_lixo(title, " ".join(paragrafos), link):
+        if eh_propaganda_ou_lixo(title, " ".join(paragrafos[:2]), link):
+            logger.info("Descartada por filtro de propaganda/tema: %s", title)
             continue
 
         analise = avaliar_impacto_financeiro(title, paragrafos)
@@ -1247,7 +1261,7 @@ async def carregar_proximas_noticias(
 
         montagem = montar_mensagem_investidor(title, paragrafos, analise)
         if not montagem:
-            logger.info("Descartada por não atingir profundidade narrativa (Começo, Meio e Fim): %s", title)
+            logger.info("Descartada por não atingir estrutura completa (Começo, Meio e Fim): %s", title)
             continue
 
         post_html, caption_curta_html = montagem
