@@ -520,7 +520,9 @@
     "https://www.moneytimes.com.br/e-tarde-demais-para-a-vale-vale3-por-que-o-btg-ainda-nao-rebaixou-a-recomendacao-para-o-papel-bdap/",
     "044d14e1284139f8",
     "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-xp-ve-recuperacao-lenta-corta-preco-alvo-e-tem-visao-neutra/",
-    "2c53e8749cfb73d9"
+    "2c53e8749cfb73d9",
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/copel-prepara-9-gw-em-hidreletricas-reversiveis-para-leiloes/",
+    "799ab316882123fc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -835,7 +837,8 @@
     "São Paulo negocia naming rights do Morumbi com o Bradesco",
     "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?",
     "É tarde demais para a Vale (VALE3)? Por que o BTG ainda não rebaixou a recomendação para o papel",
-    "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra"
+    "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
+    "Copel prepara 9 GW em hidrelétricas reversíveis para leilões"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -858,7 +861,8 @@
     "Clube e banco negam conversas; parceria atual com a Mondelez, dona do Bis, soma R$ 75 milhões em 3 anos",
     "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c",
     "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese.",
-    "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente."
+    "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente.",
+    "A Copel tem uma carteira de aproximadamente 9 GW em projetos de hidrelétricas reversíveis, dos quais 2,2 GW correspondem a uma nova casa de força na hidrelétrica de Segredo, no Paraná. A companhia aposta na realização de novos leilões de reserva de capacidade para viabilizar os empreendimentos, além de uma ampliação de 900 MW na potência da hidrelé"
   ],
   "eventos_recentes": [
     {
@@ -928,6 +932,10 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795106931.323197
+    },
+    {
+      "chave": "copel::GERAL_ATIVO",
+      "ts": 1795116821.115819
     }
   ],
   "hashes_imagens": [
@@ -935,6 +943,7 @@
     "7dba9a3eb07d1794",
     "d305573262799892",
     "59cfe842dffee3fb",
-    "22bc1b3df310f106"
+    "22bc1b3df310f106",
+    "975a3244af78df95"
   ]
 }
