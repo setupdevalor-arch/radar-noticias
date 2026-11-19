@@ -484,7 +484,11 @@
     "https://www.estadao.com.br/economia/coluna-da-broad/mercado-livre-capta-us-735-milhoes-para-dar-credito-na-amazonia/",
     "3325074f5876f011",
     "https://valor.globo.com/financas/noticia/2026/11/18/aena-capta-r-18-bilho-para-pagar-outorga-do-galeo.ghtml",
-    "9a96ba38c47daeaa"
+    "9a96ba38c47daeaa",
+    "https://www.estadao.com.br/economia/distratos-calotes-e-estoques-maiores-chacoalham-balancos-das-incorporadoras/",
+    "98c7e6da0d27b567",
+    "https://www.seudinheiro.com/2026/empresas/nem-o-itau-passou-ileso-mas-banco-do-brasil-paga-conta-bem-mais-salgada-afinal-qual-banco-consegue-atravessar-a-piora-do-credito-miql/",
+    "b5d99d8f31705db3"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -781,12 +785,29 @@
     "99 é alvo de ação por cobrar de motoristas para liberar corridas sem taxas; MPT pede R$ 100 milhões",
     "Banco do Brasil (BBAS3) informa vazamentos de dados de clientes, mas nega invasão a seus sistemas",
     "Mercado Livre capta US$ 735 milhões para dar crédito na Amazônia",
-    "Aena capta R$ 1,8 bilhão para pagar outorga do Galeão"
+    "Aena capta R$ 1,8 bilhão para pagar outorga do Galeão",
+    "Distratos, calotes e estoques maiores chacoalham balanços das incorporadoras",
+    "Nem o Itaú passou ileso, mas Banco do Brasil paga conta bem mais salgada. Afinal, qual banco consegue atravessar a piora do crédito?"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
     "O gigante de comércio eletrônico Mercado Livre captou US$ 735 milhões em um financiamento com a International Finance Corporation (IFC), o braço financeiro do Banco Mundial, e um grupo de seis bancos internacionais, que inclui o JPMorgan e o Bank of America. Os recursos serão usados para dar crédito a micro, pequenas e médias empresas na Amazônia.",
-    "Segundo a empresa, projetos privados de terceiros já previstos para o aeroporto somam cerca de R$ 1 bilhão em investimentos estimados, com potencial de geração de 3.860 empregos"
+    "Segundo a empresa, projetos privados de terceiros já previstos para o aeroporto somam cerca de R$ 1 bilhão em investimentos estimados, com potencial de geração de 3.860 empregos",
+    "Com mais idosos no Brasil, mercado imobiliário cria prédios para quem não quer envelhecer sozinho",
+    "Os balanços dos bancos no 3T26 mostram que a piora do crédito não atinge todas as instituições da mesma forma — e a qualidade do capital pode fazer toda a diferença daqui para frente"
   ],
-  "eventos_recentes": []
+  "eventos_recentes": [
+    {
+      "chave": "itau::BALANCO",
+      "ts": 1795079083.655613
+    },
+    {
+      "chave": "banco_do_brasil::BALANCO",
+      "ts": 1795079083.655613
+    },
+    {
+      "chave": "bbdc4::BALANCO",
+      "ts": 1795079083.655613
+    }
+  ]
 }
