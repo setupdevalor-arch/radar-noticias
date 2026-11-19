@@ -8,6 +8,7 @@ import os
 import re
 import sys
 import tempfile
+import unicodedata
 import urllib.parse
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
@@ -42,7 +43,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
-MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "360"))  # 6 horas (evita seca à noite/manhã)
+MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "180"))  # 3 horas (evita seca e não ressuscita matérias antigas)
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "14"))  # Filtro equilibrado: qualidade sem travar o canal
 MAX_CONCURRENT_REQUESTS = 6
 
@@ -126,16 +127,17 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "lei da dosimetria", "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
-# Palavras comuns que NÃO devem contar como repetição de notícia entre matérias diferentes
+# Apenas palavras gramaticais/genéricas (NUNCA incluir ativos/temas como ibovespa, dolar, fiis, petrobras, fed)
 STOPWORDS_DEDUP = {
-    "aprova", "anuncia", "diz", "após", "apos", "sobre", "pode", "novo", "nova",
-    "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
-    "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
-    "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
-    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos", "mercado",
-    "brasil", "ações", "ação", "fundo", "fundos", "imobiliários", "imobiliário",
-    "tesouro", "direto", "renda", "fixa", "juros", "taxa", "taxas", "dólar",
-    "ibovespa", "banco", "central", "bolsa", "investidores", "investidor", "empresas",
+    "aprova", "anuncia", "diz", "apos", "sobre", "pode", "novo", "nova", "novos", "novas",
+    "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais", "menos",
+    "para", "como", "onde", "quando", "quem", "qual", "esta", "estao", "esse", "essa",
+    "foram", "sera", "serao", "tem", "faz", "vai", "vao", "com", "por", "que", "dos", "das",
+    "uns", "uma", "seu", "sua", "seus", "suas", "pelo", "pela", "pelos", "pelas", "nos", "nas",
+    "fecham", "fecha", "fechou", "abre", "abriu", "sobe", "sobem", "cai", "caem", "recua",
+    "avanca", "alta", "queda", "dias", "dia", "hoje", "semana", "mes", "ano", "anos",
+    "pontos", "radar", "pagamento", "mercado", "brasil", "brasileiro", "brasileira",
+    "quarta", "quinta", "sexta", "segunda", "terca", "feira", "manha", "tarde", "noite",
 }
 
 # ==============================================================================
@@ -427,6 +429,7 @@ class AnaliseHeuristica:
 class NoticiaPreparada:
     link: str
     titulo: str
+    lead_limpo: str
     texto_html: str
     caption_curta_html: str
     score: int
@@ -490,8 +493,7 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     Filtro Calibrado para o Investidor de Ações (B3), FIIs, Renda Fixa e Negócios:
     - Pontua termos de Dividendos, FIIs, Renda Fixa, Balanços/Ações e Juros/Economia.
     - Verifica âncoras do universo do investidor no título e nos 3 primeiros parágrafos.
-    - Não aplica penalidade negativa quando a matéria tem poucos números regex, evitando
-      bloquear matérias relevantes em horários mais calmos.
+    - Não aplica penalidade negativa quando a matéria tem poucos números regex.
     """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
@@ -570,37 +572,72 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
 
 # ==============================================================================
-# CONTROLE DE DUPLICIDADE E PERSISTÊNCIA ATÔMICA
+# CONTROLE ANTIDUPLICIDADE TRIPLO (URL CANÔNICA + TÍTULO + LEAD DE AGÊNCIAS)
 # ==============================================================================
+def normalizar_texto_dedup(texto: str) -> str:
+    """Remove acentos, sufixos de portal (' - InfoMoney', ' | Exame') e pontuação."""
+    t = html.unescape(texto or "").strip()
+    t = re.sub(r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs).*$", "", t, flags=re.IGNORECASE)
+    t = unicodedata.normalize("NFKD", t)
+    t = "".join(ch for ch in t if not unicodedata.combining(ch))
+    return t.lower().strip()
+
+
+def extrair_tokens_dedup(texto: str) -> Set[str]:
+    norm = normalizar_texto_dedup(texto)
+    return {
+        p for p in re.findall(r"[a-z0-9]+", norm)
+        if len(p) >= 3 and p not in STOPWORDS_DEDUP and not p.isdigit()
+    }
+
+
+def extrair_numeros_relevantes(texto: str) -> Set[str]:
+    """Extrai valores/percentuais específicos (ignorando anos 2024..2030 e números de 1 dígito isolados)."""
+    nums = set()
+    for m in re.findall(r"\d+(?:[.,]\d+)?", texto or ""):
+        limpo = m.replace(".", "").replace(",", ".")
+        if limpo in {"2024", "2025", "2026", "2027", "2028", "2029", "2030"}:
+            continue
+        if len(m) >= 2 or "," in m or "." in m:
+            nums.add(m)
+    return nums
+
+
 def gerar_hash_url(url: str) -> str:
     p = urllib.parse.urlsplit(url)
+    host = p.netloc.lower().removeprefix("www.")
     query_limpa = "&".join(
         f"{k}={v}"
         for k, v in urllib.parse.parse_qsl(p.query)
         if not k.lower().startswith(("utm_", "fbclid", "gclid", "ref"))
     )
-    url_canonica = urllib.parse.urlunsplit((p.scheme, p.netloc, p.path.rstrip("/"), query_limpa, ""))
+    url_canonica = urllib.parse.urlunsplit(("https", host, p.path.rstrip("/"), query_limpa, ""))
     return hashlib.sha256(url_canonica.encode("utf-8")).hexdigest()[:16]
 
 
-def carregar_historico() -> Tuple[List[str], List[str]]:
+def carregar_historico() -> Tuple[List[str], List[str], List[str]]:
     if HISTORICO_ARQUIVO.exists():
         try:
             dados = json.loads(HISTORICO_ARQUIVO.read_text(encoding="utf-8"))
             if isinstance(dados, dict):
-                return dados.get("links", []), dados.get("titulos", [])
+                return (
+                    dados.get("links", []),
+                    dados.get("titulos", []),
+                    dados.get("leads", []),
+                )
             if isinstance(dados, list):
-                return dados, []
+                return dados, [], []
         except Exception as exc:
             logger.error("Erro ao ler arquivo de histórico: %s", exc)
-    return [], []
+    return [], [], []
 
 
-def salvar_historico(links: List[str], titulos: List[str]) -> None:
+def salvar_historico(links: List[str], titulos: List[str], leads: List[str]) -> None:
     try:
         dados = {
             "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
             "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:],
+            "leads": list(dict.fromkeys(leads))[-250:],
         }
         temp_file = HISTORICO_ARQUIVO.with_suffix(".tmp")
         temp_file.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -611,32 +648,59 @@ def salvar_historico(links: List[str], titulos: List[str]) -> None:
 
 def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
     """
-    Verifica se a mesma notícia já saiu recentemente (compara apenas com os últimos 60 títulos
-    e exige >= 4 palavras específicas em comum e >= 60% de sobreposição, evitando que
-    termos comuns como 'Fundos Imobiliários' ou 'Tesouro Direto' bloqueiem matérias diferentes).
+    Bloqueia a mesma notícia publicada em portais diferentes (ex: InfoMoney + MoneyTimes + Exame),
+    sem bloquear notícias diferentes do mesmo setor (ex: 2 matérias distintas de FIIs ou Tesouro Direto).
     """
-    tokens_novo = {
-        p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", novo_titulo.lower())
-        if len(p) > 3 and p not in STOPWORDS_DEDUP
-    }
+    norm_novo = normalizar_texto_dedup(novo_titulo)
+    tokens_novo = extrair_tokens_dedup(novo_titulo)
+    nums_novo = extrair_numeros_relevantes(novo_titulo)
     if not tokens_novo:
         return False
 
-    for antigo in titulos_anteriores[-60:]:
-        if novo_titulo.strip().lower() == antigo.strip().lower():
+    for antigo in titulos_anteriores[-100:]:
+        norm_antigo = normalizar_texto_dedup(antigo)
+        if norm_novo == norm_antigo:
             return True
-        tokens_antigo = {
-            p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", antigo.lower())
-            if len(p) > 3 and p not in STOPWORDS_DEDUP
-        }
+
+        tokens_antigo = extrair_tokens_dedup(antigo)
         if not tokens_antigo:
+            continue
+
+        inter = tokens_novo & tokens_antigo
+        menor = min(len(tokens_novo), len(tokens_antigo))
+        ratio = len(inter) / menor if menor > 0 else 0.0
+
+        # 1) Mesma história em portais diferentes (>= 3 palavras-chave em comum e >= 45% do título)
+        if len(inter) >= 3 and ratio >= 0.45:
+            return True
+
+        # 2) Mesmo valor específico no título (ex: R$ 15 bi, 145,1 mi, 5,85, 167 mil) + 2 palavras-chave
+        nums_antigo = extrair_numeros_relevantes(antigo)
+        if nums_novo and (nums_novo & nums_antigo) and len(inter) >= 2:
+            return True
+
+    return False
+
+
+def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
+    """
+    Detecta matérias sindicadas (Reuters, Estadão Conteúdo, Agência Brasil) republicadas em
+    portais diferentes com títulos diferentes (e tags diferentes), mas com o mesmo 1º parágrafo.
+    """
+    if not novo_lead or len(novo_lead) < 60:
+        return False
+    tokens_novo = extrair_tokens_dedup(novo_lead[:280])
+    if len(tokens_novo) < 5:
+        return False
+
+    for antigo in leads_anteriores[-100:]:
+        tokens_antigo = extrair_tokens_dedup(antigo[:280])
+        if len(tokens_antigo) < 5:
             continue
         inter = tokens_novo & tokens_antigo
         menor = min(len(tokens_novo), len(tokens_antigo))
         ratio = len(inter) / menor if menor > 0 else 0.0
-        if len(inter) >= 4 and ratio >= 0.60:
-            return True
-        if menor <= 3 and len(inter) >= 3 and ratio >= 0.75:
+        if len(inter) >= 5 and ratio >= 0.48:
             return True
     return False
 
@@ -882,20 +946,14 @@ def dividir_em_frases_completas(texto: str) -> List[str]:
 
 
 def frase_repete_informacao(nova_frase: str, frases_ja_escolhidas: List[str]) -> bool:
-    palavras_nova = {
-        w for w in re.findall(r"[a-záéíóúâêôãõç0-9]{4,}", nova_frase.lower())
-        if w not in STOPWORDS_DEDUP
-    }
+    palavras_nova = extrair_tokens_dedup(nova_frase)
     if not palavras_nova:
         return True
 
     metricas_nova = set(m.lower().strip() for m in REGEX_METRICAS_NUMERICAS.findall(nova_frase))
 
     for f_antiga in frases_ja_escolhidas:
-        palavras_antiga = {
-            w for w in re.findall(r"[a-záéíóúâêôãõç0-9]{4,}", f_antiga.lower())
-            if w not in STOPWORDS_DEDUP
-        }
+        palavras_antiga = extrair_tokens_dedup(f_antiga)
         if not palavras_antiga:
             continue
         inter = palavras_nova & palavras_antiga
@@ -1339,10 +1397,11 @@ async def obter_conteudo_e_midias_artigo(
 
 async def carregar_proximas_noticias(
     client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ
-) -> Tuple[List[NoticiaPreparada], List[str], List[str]]:
-    links_historico, titulos_historico = carregar_historico()
+) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str]]:
+    links_historico, titulos_historico, leads_historico = carregar_historico()
     set_links: Set[str] = set(links_historico)
     titulos_rodada: List[str] = list(titulos_historico)
+    leads_rodada: List[str] = list(leads_historico)
 
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
     resultados_feeds = await asyncio.gather(
@@ -1364,6 +1423,7 @@ async def carregar_proximas_noticias(
 
     noticias_aprovadas: List[NoticiaPreparada] = []
     qtd_dup_titulo = 0
+    qtd_dup_lead = 0
     qtd_descartadas = 0
 
     for cand in candidatos_unicos[:60]:
@@ -1388,6 +1448,12 @@ async def carregar_proximas_noticias(
         if not paragrafos:
             qtd_descartadas += 1
             logger.info("Descartada (texto da página não pôde ser extraído): %s", title)
+            continue
+
+        lead_artigo = paragrafos[0]
+        if eh_mesmo_conteudo_lead(lead_artigo, leads_rodada):
+            qtd_dup_lead += 1
+            logger.info("Descartada por duplicidade de conteúdo (mesma matéria em outro portal): %s", title)
             continue
 
         if eh_propaganda_ou_lixo(title, " ".join(paragrafos[:2]), link):
@@ -1427,6 +1493,7 @@ async def carregar_proximas_noticias(
             NoticiaPreparada(
                 link=link,
                 titulo=title,
+                lead_limpo=lead_artigo[:280],
                 texto_html=post_html,
                 caption_curta_html=caption_curta_html,
                 score=analise.score_total,
@@ -1437,13 +1504,15 @@ async def carregar_proximas_noticias(
             )
         )
         titulos_rodada.append(title)
+        leads_rodada.append(lead_artigo[:280])
         set_links.add(link)
         set_links.add(link_hash)
 
     logger.info(
-        "Resumo do ciclo: %d links novos únicos | %d pulados (título repetido) | %d descartados | %d aprovados",
+        "Resumo do ciclo: %d links novos únicos | %d pulados (título repetido) | %d pulados (mesma matéria em outro portal) | %d descartados | %d aprovados",
         len(candidatos_unicos),
         qtd_dup_titulo,
+        qtd_dup_lead,
         qtd_descartadas,
         len(noticias_aprovadas),
     )
@@ -1452,7 +1521,7 @@ async def carregar_proximas_noticias(
     selecionadas = noticias_aprovadas[:limite]
     selecionadas.sort(key=lambda n: n.dt_pub)
 
-    return selecionadas, links_historico, titulos_historico
+    return selecionadas, links_historico, titulos_historico, leads_historico
 
 
 # ==============================================================================
@@ -1648,7 +1717,7 @@ async def main() -> None:
 
     limits = httpx.Limits(max_keepalive_connections=10, max_connections=20)
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=limits) as client:
-        noticias, links_historico, titulos_historico = await carregar_proximas_noticias(
+        noticias, links_historico, titulos_historico, leads_historico = await carregar_proximas_noticias(
             client, limite=MAX_NOTICIAS_POR_VEZ
         )
 
@@ -1663,7 +1732,9 @@ async def main() -> None:
                 links_historico.append(noticia.link)
                 links_historico.append(gerar_hash_url(noticia.link))
                 titulos_historico.append(noticia.titulo)
-                salvar_historico(links_historico, titulos_historico)
+                if noticia.lead_limpo:
+                    leads_historico.append(noticia.lead_limpo)
+                salvar_historico(links_historico, titulos_historico, leads_historico)
                 logger.info("Notícia publicada [Score %d]: %s", noticia.score, noticia.titulo)
                 await asyncio.sleep(3.0)
             else:
