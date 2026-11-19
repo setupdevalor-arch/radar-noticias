@@ -41,7 +41,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "16"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "26"))
 MAX_CONCURRENT_REQUESTS = 12
 
 MAX_HTML_BYTES = 5 * 1024 * 1024
@@ -111,10 +111,12 @@ DOMINIOS_BLOQUEADOS = (
 )
 
 CAMINHOS_URL_BLOQUEADOS = (
-    "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/", "/estilo/",
-    "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/", "/curiosidades/", "/tv/",
-    "/famosos/", "/cultura/", "/politica/", "/mundo/", "/policia/", "/apostas/", "/casual/",
-    "/ciencia/", "/blog-", "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
+    "/esporte/", "/esportes/", "/sports/", "/poder-sports/", "/futebol/", "/entretenimento/",
+    "/pop/", "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/", "/curiosidades/",
+    "/tv/", "/famosos/", "/cultura/", "/politica/", "/poder-governo/", "/poder-congresso/",
+    "/poder-justica/", "/poder-eleicoes/", "/poder-midia/", "/midia/", "/comportamento/",
+    "/mundo/", "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-", "/cursos/",
+    "/marketing/", "/carros/", "/autoesporte/", "/turismo/", "/saude/", "/educacao/",
     "/future-of-money/", "/cripto/", "/criptomoedas/", "/carreira/", "/tecnologia/", "/inteligencia-artificial/",
 )
 
@@ -126,6 +128,15 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "treinamento gratuito", "evento online", "evento gratuito", "cupom de desconto",
     "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
     "cartão de criptomoedas", "encerra seu cartão", "cartão black", "anuidade grátis",
+    # Patrocínios esportivos, estádios, clubes, shows e marketing (sem relevância p/ acionista)
+    "naming rights", "patrocínio", "patrocinador", "patrocina", "estádio", "estadio",
+    "morumbi", "maracanã", "maracana", "allianz parque", "neo química", "neo quimica",
+    "camisa do", "uniforme", "torcida", "torcedores", "clube de futebol", "clube e banco",
+    "segundo o ge", "globoesporte", "flamengo", "corinthians", "palmeiras", "vasco",
+    "botafogo", "fluminense", "grêmio", "cruzeiro", "atlético-mg", "atletico-mg",
+    "santos fc", "são paulo fc", "cbf", "fifa", "conmebol", "neymar", "rock in rio",
+    "lollapalooza", "carnaval", "camarote", "masterchef", "campanha publicitária",
+    "comercial de tv", "festival de música", "pré-venda de ingressos", "venda de ingressos",
 )
 
 BLOQUEADOS_APENAS_NO_TITULO = (
@@ -284,14 +295,19 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
     "dividendos": 22, "dividendo": 22, "jcp": 24, "juros sobre capital próprio": 24,
     "juros sobre o capital próprio": 24, "proventos": 20, "data-com": 24, "data com": 22,
     "data-ex": 20, "dividend yield": 20, "payout": 18, "bonificação": 16, "balanço": 20,
-    "lucro líquido": 22, "lucro": 16, "lucra": 16, "ebitda": 22, "lajida": 20, "prejuízo": 18,
-    "receita líquida": 18, "margem": 14, "roe": 18, "inadimplência": 16, "carteira de crédito": 16,
+    "lucro líquido": 22, "lucro": 18, "lucra": 18, "ebitda": 22, "lajida": 20, "prejuízo": 18,
+    "receita líquida": 18, "margem": 14, "roe": 18, "inadimplência": 16, "carteira de crédito": 18,
     "geração de caixa": 16, "guidance": 18, "fato relevante": 24, "fusão": 18, "aquisição": 18,
     "recompra": 20, "opa": 20, "follow-on": 20, "privatização": 18, "concessão": 18, "leilão": 18,
-    "aneel": 16, "tarifa": 14, "reajuste tarifário": 18, "anatel": 16, "susep": 16, "debêntures": 16,
-    "emissão": 14, "capex": 16, "investimento": 12, "investimentos": 12, "contrato": 12, "dívida": 14,
-    "alavancagem": 14, "recuperação judicial": 18, "rating": 14, "ações": 12, "ação": 10,
-    "papéis": 10, "acionistas": 14, "b3": 12, "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
+    "aneel": 16, "tarifa": 14, "reajuste tarifário": 18, "revisão tarifária": 18, "anatel": 16,
+    "susep": 16, "cvm": 16, "banco central": 14, "bacen": 14, "debêntures": 18, "emissão": 14,
+    "capex": 18, "investimento": 12, "investimentos": 12, "contrato de concessão": 18,
+    "contrato de energia": 18, "contrato de transmissão": 18, "dívida": 14, "alavancagem": 16,
+    "recuperação judicial": 18, "rating": 16, "preço-alvo": 18, "prêmios emitidos": 18,
+    "sinistralidade": 18, "universalização": 16, "fibra óptica": 14, "fibra": 12, "5g": 14,
+    "geração de energia": 16, "transmissão de energia": 16, "distribuição de energia": 16,
+    "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16, "b3": 14,
+    "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
 }
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
@@ -479,11 +495,12 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
             termos_encontrados.append(termo)
 
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
-    if pontos_eventos == 0 and not metricas:
+    # Exige ao menos 1 evento financeiro/corporativo real (evita marketing/boatos só com R$)
+    if pontos_eventos == 0:
         return AnaliseHeuristica(0, "DESCARTADA", "")
 
     setor_principal = entidades_titulo[0][1]
-    score_final = 14 + pontos_eventos + min(len(metricas) * 3, 18)
+    score_final = 12 + pontos_eventos + min(len(metricas) * 3, 18)
     return AnaliseHeuristica(
         score_total=score_final,
         setor_chave=setor_principal,
