@@ -530,7 +530,9 @@
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/19/copel-cple3-aprova-o-pagamento-de-r-871-milhoes-em-juros-sobre-capital-proprio.ghtml",
     "fca5252fedf1b670",
     "https://www.suno.com.br/noticias/axia3-axia-energia-rating-cronograma-debentures-191126/",
-    "42b4dc719dc43c48"
+    "42b4dc719dc43c48",
+    "https://telesintese.com.br/assembleia-sobre-a-opa-da-unifique-segue-em-aberto-e-sera-retomada-no-dia-23/",
+    "e00f0c67930baf80"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -850,7 +852,8 @@
     "CAIXA Seguridade registra lucro de R$ 1,2 bilhão no terceiro trimestre",
     "NOVO11: ETF reúne Nubank, Itaú, Petrobras e Mercado Livre em uma só cota",
     "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio",
-    "AXIA3: Axia Energia divulga rating e cronograma da 15ª emissão"
+    "AXIA3: Axia Energia divulga rating e cronograma da 15ª emissão",
+    "Assembleia sobre a OPA da Unifique segue em aberto e será retomada no dia 23"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -878,7 +881,8 @@
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
     "O fundo NOVO11, ETF que a Buena Vista Capital lançou na quinta-feira (19), reúne em uma única cota ações de 35 empresas negociadas nos Estados Unidos com receita relevante no Brasil. Os maiores pesos da carteira são Nubank (6,44%), Itaú Unibanco (6,43%), Petrobras (6,26%) e Mercado Livre (6,19%), segundo o material de divulgação do fundo.",
     "Primeira parcela, de R$ 500 milhões, será paga aos investidores no próximo dia 23 de dezembro",
-    "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta."
+    "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta.",
+    "Os acionistas da Unifique voltaram a se reunir nesta quinta-feira, 19 de novembro, mas a assembleia foi novamente suspensa sem decisão a respeito de uma nova avaliação do valor da operadora. Segundo a companhia, a controladora Unitá Participações e o representante dos acionistas que pediram a reunião negociam a continuidade da oferta pública de aqu"
   ],
   "eventos_recentes": [
     {
@@ -972,6 +976,10 @@
     {
       "chave": "eletrobras::GERAL_ATIVO",
       "ts": 1795122385.485727
+    },
+    {
+      "chave": "unifique::EVENTO_CORP",
+      "ts": 1795127661.593417
     }
   ],
   "hashes_imagens": [
@@ -984,6 +992,7 @@
     "948b5fbae12a07e1",
     "74f10bc4d78d52b1",
     "c1e0b2659879c3b2",
-    "2404d220ace67c05"
+    "2404d220ace67c05",
+    "cae24a5184e5258a"
   ]
 }
