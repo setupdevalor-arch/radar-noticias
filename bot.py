@@ -43,7 +43,7 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
-MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "240"))  # 4 horas
+MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))   # Apenas notícias realmente novas (<= 1h30)
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "18"))  # Foco estrito: Ações B3, FIIs e Renda Fixa
 MAX_CONCURRENT_REQUESTS = 6
 
@@ -72,18 +72,20 @@ HEADERS_TELEGRAM_PREVIEW = {
     "Accept": "image/jpeg,image/png,*/*;q=0.5",
 }
 
-# Feeds EXCLUSIVOS de investimentos: Ações B3, FIIs e Renda Fixa (sem política geral, cripto ou variedades)
+# ==============================================================================
+# FEEDS TIER-1 (REDAÇÕES EM TEMPO REAL QUE FURAM A NOTÍCIA PRIMEIRO)
+# Removidos portais lentos que reciclam/republicam matérias de 6h atrás como se fossem novas
+# ==============================================================================
 FEEDS = [
-    "https://www.infomoney.com.br/mercados/feed/",
-    "https://www.infomoney.com.br/onde-investir/feed/",
-    "https://www.moneytimes.com.br/feed/",
-    "https://www.seudinheiro.com/feed/",
-    "https://www.suno.com.br/noticias/feed/",
-    "https://einvestidor.estadao.com.br/feed/",
-    "https://exame.com/invest/feed/",
-    "https://braziljournal.com/feed",
-    "https://valorinveste.globo.com/rss/valorinveste",
-    "https://fiis.com.br/feed/",
+    "https://www.infomoney.com.br/mercados/feed/",                  # InfoMoney Mercados (tempo real + Reuters/Bloomberg)
+    "https://www.infomoney.com.br/onde-investir/feed/",             # InfoMoney FIIs, Dividendos e Renda Fixa
+    "https://www.moneytimes.com.br/feed/",                          # Money Times (fatos relevantes CVM, dividendos e FIIs na hora)
+    "https://braziljournal.com/feed",                               # Brazil Journal (furos exclusivos B3 e M&A)
+    "https://neofeed.com.br/feed/",                                 # NeoFeed (furos rápidos de empresas listadas)
+    "https://www.bloomberglinea.com.br/arc/outboundfeeds/rss.xml",  # Bloomberg Línea Brasil (redação tempo real)
+    "https://einvestidor.estadao.com.br/feed/",                     # E-Investidor / Broadcast Estadão (tempo real)
+    "https://valorinveste.globo.com/rss/valorinveste",              # Valor Investe / Valor Econômico (aberto)
+    "https://br.investing.com/rss/news_25.rss",                     # Investing.com Brasil (Ações em tempo real)
 ]
 
 CAMINHOS_URL_BLOQUEADOS = (
@@ -145,8 +147,88 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
+# MAPA DE ENTIDADES CANÔNICAS (PARA BLOQUEAR REESCRITAS DO MESMO ATIVO + MESMO EVENTO)
+# ==============================================================================
+ENTIDADES_CANONICAS: Dict[str, Tuple[str, ...]] = {
+    "petrobras": ("petrobras", "petr4", "petr3"),
+    "vale": ("vale", "vale3"),
+    "itau": ("itau", "itaú", "itub4", "itub3"),
+    "itausa": ("itausa", "itaúsa", "itsa4", "itsa3"),
+    "bradesco": ("bradesco", "bbdc4", "bbdc3"),
+    "banco_do_brasil": ("banco do brasil", "bbas3"),
+    "santander": ("santander", "sanb11"),
+    "btg": ("btg", "btg pactual", "bpac11"),
+    "b3": ("b3sa3",),
+    "ibovespa": ("ibovespa", "bolsa brasileira"),
+    "sabesp": ("sabesp", "sbsp3"),
+    "eletrobras": ("eletrobras", "elet3", "elet6"),
+    "taesa": ("taesa", "taee11"),
+    "cemig": ("cemig", "cmig4"),
+    "copel": ("copel", "cple3", "cple6"),
+    "engie": ("engie", "egie3"),
+    "equatorial": ("equatorial", "eqtl3"),
+    "cpfl": ("cpfl", "cpfe3"),
+    "auren": ("auren", "aure3"),
+    "alupar": ("alupar", "alup11"),
+    "sanepar": ("sanepar", "sapr11", "sapr4"),
+    "copasa": ("copasa", "csmg3"),
+    "bb_seguridade": ("bb seguridade", "bbse3"),
+    "caixa_seguridade": ("caixa seguridade", "cxse3"),
+    "porto_seguro": ("porto seguro", "pssa3"),
+    "weg": ("weg", "wege3"),
+    "klabin": ("klabin", "klbn11"),
+    "suzano": ("suzano", "suzb3"),
+    "gerdau": ("gerdau", "ggbr4"),
+    "csn": ("csn", "csna3", "cmin3"),
+    "usiminas": ("usiminas", "usim5"),
+    "prio": ("prio", "prio3"),
+    "brava": ("brava energia", "brav3"),
+    "vibra": ("vibra", "vbbr3"),
+    "ultrapar": ("ultrapar", "ugpa3"),
+    "raizen": ("raizen", "raízen", "raiz4"),
+    "ambev": ("ambev", "abev3"),
+    "jbs": ("jbs", "jbss3"),
+    "marfrig": ("marfrig", "mrfg3"),
+    "brf": ("brf", "brfs3"),
+    "minerva": ("minerva", "beef3"),
+    "localiza": ("localiza", "rent3"),
+    "embraer": ("embraer", "embr3"),
+    "azul": ("azul", "azul4"),
+    "gol": ("gol", "goll4"),
+    "cyrela": ("cyrela", "cyre3"),
+    "mrv": ("mrv", "mrve3"),
+    "multiplan": ("multiplan", "mult3"),
+    "totvs": ("totvs", "tots3"),
+    "magalu": ("magazine luiza", "magalu", "mglu3"),
+    "casas_bahia": ("casas bahia", "bhia3"),
+    "renner": ("lojas renner", "lren3"),
+    "raia_drogasil": ("raia drogasil", "radl3"),
+    "hapvida": ("hapvida", "hapv3"),
+    "rede_dor": ("rede d'or", "rdor3"),
+    "cosan": ("cosan", "csan3"),
+    "rumo": ("rumo", "rail3"),
+    "motiva_ccr": ("ccr", "motiva", "ccro3"),
+    "nubank": ("nubank", "nu holdings", "roxo34"),
+    "vivo": ("vivo", "telefonica", "telefônica", "vivt3"),
+    "tim": ("tim", "tims3"),
+    "tesouro_direto": ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "tesouro renda", "ntn-b", "títulos públicos"),
+    "copom_selic": ("copom", "selic"),
+    "ifix_fiis": ("ifix", "fundos imobiliarios", "fundos imobiliários", "fiis"),
+}
+
+# Cooldown por tipo de evento (em minutos) para a trava Camada 4 (Mesmo Ativo + Mesmo Evento)
+COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
+    "PREGAO_IBOV": 300,     # 5h (permite abertura de manhã + fechamento à tarde, nunca 2 fechamentos repetidos)
+    "TAXAS_TESOURO": 360,   # 6h (evita 3 portais noticiando a mesma abertura de taxas do Tesouro Direto)
+    "PROVENTOS": 1080,      # 18h (mesmo anúncio de dividendos/JCP de uma empresa ou FII não repete no dia)
+    "BALANCO": 1440,        # 24h (mesmo balanço trimestral de uma empresa não repete em 24h)
+    "EVENTO_CORP": 1080,    # 18h (mesmo fato relevante / M&A / recompra / emissão não repete no dia)
+    "FLUXO_FIIS": 720,      # 12h (mesmo levantamento de fluxo de FIIs / IFIX)
+    "GERAL_ATIVO": 480,     # 8h
+}
+
+# ==============================================================================
 # ÂNCORAS OBRIGATÓRIAS DOS 3 PILARES: APENAS AÇÕES B3, FIIs E RENDA FIXA
-# (Matéria sem nenhuma âncora desta lista no Título ou 2 primeiros parágrafos é DESCARTADA!)
 # ==============================================================================
 ANCORAS_3_PILARES = (
     # PILAR 1: AÇÕES DA B3 & EMPRESAS LISTADAS
@@ -341,7 +423,7 @@ REGEX_INICIO_ORFAO = re.compile(
     flags=re.IGNORECASE,
 )
 
-# Remove legendas de fotos e créditos de agências infiltrados no início do texto (ex: Getty Images, NurPhoto, Reuters)
+# Remove legendas de fotos e créditos de agências infiltrados no início do texto
 REGEX_CREDITO_FOTO_PARENTESES = re.compile(
     r"[^.!?]*\([^)]*(?:Getty Images|NurPhoto|Reuters|Bloomberg|AFP|AP Photo|Shutterstock|"
     r"Freepik|Unsplash|Estadão Conteúdo|Agência Brasil|Agência Estado|Foto:|Imagem:|"
@@ -388,6 +470,7 @@ class NoticiaPreparada:
     link: str
     titulo: str
     lead_limpo: str
+    chaves_evento: List[str]
     texto_html: str
     caption_curta_html: str
     score: int
@@ -438,12 +521,6 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
-    """
-    Filtro Estrito nos 3 Pilares: Ações (B3), Fundos Imobiliários (FIIs) e Renda Fixa.
-    - Exige âncora direta dos 3 pilares no Título ou nos 2 primeiros parágrafos.
-    - Exige pontuação na taxonomia exclusiva dos 3 pilares (Dividendos, FIIs, Renda Fixa ou Ações B3).
-    - Sem penalidade negativa por ausência de números regex (evita bloquear boas matérias de análise).
-    """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
@@ -521,12 +598,74 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
 
 # ==============================================================================
-# CONTROLE ANTIDUPLICIDADE TRIPLO (URL CANÔNICA + TÍTULO + LEAD DE AGÊNCIAS)
+# DETECTOR ANTI-"NOTÍCIA DE 6H ATRÁS DISFARÇADA DE AGORA" (DATA REAL NO HTML E URL)
+# ==============================================================================
+def _parse_iso_ou_rfc_data(texto_data: str) -> Optional[datetime]:
+    if not texto_data:
+        return None
+    texto_data = texto_data.strip()
+    try:
+        dt = datetime.fromisoformat(texto_data.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=TZ_BRASILIA)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        pass
+    try:
+        dt = email.utils.parsedate_to_datetime(texto_data)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=TZ_BRASILIA)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def extrair_data_original_html(raw_html: str) -> Optional[datetime]:
+    """
+    Lê a data REAL da primeira publicação dentro do HTML (article:published_time / datePublished).
+    Impede que portais que atualizam/republicam notícias de 6 horas atrás enganem o filtro de tempo!
+    """
+    if not raw_html:
+        return None
+    padroes = (
+        r'<meta[^>]+property=["\']article:published_time["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']article:published_time["\']',
+        r'<meta[^>]+name=["\'](?:pubdate|publish-date|publishdate|datePublished)["\'][^>]+content=["\']([^"\']+)["\']',
+        r'"datePublished"\s*:\s*"([^"]+)"',
+    )
+    datas: List[datetime] = []
+    for padrao in padroes:
+        m = re.search(padrao, raw_html, re.IGNORECASE)
+        if m:
+            dt = _parse_iso_ou_rfc_data(m.group(1))
+            if dt:
+                datas.append(dt)
+    return min(datas) if datas else None
+
+
+def url_tem_data_antiga(url: str, agora_utc: datetime) -> bool:
+    """Rejeita URLs cujo caminho mostra data de ontem ou mais antiga (ex: /2026/11/17/)."""
+    m = re.search(r"/(20\d{2})/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/", url)
+    if not m:
+        return False
+    try:
+        ano, mes, dia = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        data_url = datetime(ano, mes, dia, tzinfo=TZ_BRASILIA).date()
+        hoje_brt = agora_utc.astimezone(TZ_BRASILIA).date()
+        hora_brt = agora_utc.astimezone(TZ_BRASILIA).hour
+        limite_dias = 1 if hora_brt < 2 else 0
+        return (hoje_brt - data_url).days > limite_dias
+    except ValueError:
+        return False
+
+
+# ==============================================================================
+# CONTROLE ANTIDUPLICIDADE EM 4 CAMADAS (URL + TÍTULO + LEAD + ATIVO×EVENTO)
 # ==============================================================================
 def normalizar_texto_dedup(texto: str) -> str:
     t = html.unescape(texto or "").strip()
     t = re.sub(
-        r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs).*$",
+        r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs|NeoFeed|Bloomberg|Investing).*$",
         "",
         t,
         flags=re.IGNORECASE,
@@ -555,6 +694,80 @@ def extrair_numeros_relevantes(texto: str) -> Set[str]:
     return nums
 
 
+def extrair_chaves_evento_ativo(titulo: str, lead: str, tickers: List[str]) -> List[str]:
+    """
+    Camada 4: Extrai pares 'ATIVO::EVENTO' (ex: 'petrobras::PROVENTOS', 'itau::BALANCO',
+    'ibovespa::PREGAO_IBOV', 'tesouro_direto::TAXAS_TESOURO', 'mxrf11::PROVENTOS').
+    Impede que portais diferentes publiquem a MESMA história reescrita com títulos diferentes!
+    """
+    foco_bruto = f"{titulo} {lead[:220]}"
+    foco_norm = normalizar_texto_dedup(foco_bruto)
+    titulo_norm = normalizar_texto_dedup(titulo)
+
+    # 1) Classifica o tipo de evento principal
+    if _contem_termo_exato(foco_norm, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data com", "data-com", "data ex", "data-ex", "rendimento", "rendimentos", "por cota", "bonificacao")):
+        tipo_evento = "PROVENTOS"
+    elif _contem_termo_exato(foco_norm, ("balanco", "lucro liquido", "lucra", "lucro", "ebitda", "lajida", "prejuizo", "receita liquida", "resultado trimestral", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26")):
+        tipo_evento = "BALANCO"
+    elif _contem_termo_exato(titulo_norm, ("ibovespa", "bolsa brasileira", "pregao")):
+        tipo_evento = "PREGAO_IBOV"
+    elif _contem_termo_exato(foco_norm, ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "titulos publicos", "marcacao a mercado")):
+        tipo_evento = "TAXAS_TESOURO"
+    elif _contem_termo_exato(foco_norm, ("fato relevante", "fusao", "aquisicao", "recompra", "opa", "follow-on", "emissao de cotas", "subscricao", "recuperacao judicial", "privatizacao")):
+        tipo_evento = "EVENTO_CORP"
+    elif _contem_termo_exato(foco_norm, ("ifix", "fundos imobiliarios", "fiis", "pessoa fisica", "vacancia")):
+        tipo_evento = "FLUXO_FIIS"
+    else:
+        tipo_evento = "GERAL_ATIVO"
+
+    # 2) Identifica as entidades principais no título e início do lead
+    entidades: List[str] = []
+    for ent_canon, sinonimos in ENTIDADES_CANONICAS.items():
+        if any(re.search(r"(?<!\w)" + re.escape(normalizar_texto_dedup(s)) + r"(?!\w)", foco_norm) for s in sinonimos):
+            entidades.append(ent_canon)
+
+    # Inclui tickers específicos não mapeados (principalmente FIIs como MXRF11, HGLG11, XPML11...)
+    tickers_especificos: List[str] = []
+    for tk in tickers[:3]:
+        tk_low = tk.lower()
+        ja_mapeado = any(tk_low in ENTIDADES_CANONICAS[e] for e in entidades if e in ENTIDADES_CANONICAS)
+        if not ja_mapeado and tk_low not in entidades:
+            entidades.append(tk_low)
+            tickers_especificos.append(tk_low)
+
+    # Se há FII específico (ex: MXRF11), não aplica chave genérica 'ifix_fiis' para não bloquear outros FIIs (ex: HGLG11)
+    if tickers_especificos and "ifix_fiis" in entidades:
+        entidades = [e for e in entidades if e != "ifix_fiis"]
+
+    chaves: List[str] = []
+    for ent in dict.fromkeys(entidades[:3]):
+        chaves.append(f"{ent}::{tipo_evento}")
+
+    return chaves
+
+
+def evento_ja_publicado_recentemente(
+    chaves_novas: List[str], eventos_recentes: List[Dict[str, Any]], agora_ts: float
+) -> Optional[str]:
+    if not chaves_novas or not eventos_recentes:
+        return None
+    mapa_recente: Dict[str, float] = {}
+    for ev in eventos_recentes:
+        c = ev.get("chave")
+        ts = float(ev.get("ts", 0))
+        if c and ts > mapa_recente.get(c, 0):
+            mapa_recente[c] = ts
+
+    for chave in chaves_novas:
+        if chave in mapa_recente:
+            tipo_ev = chave.split("::", 1)[-1]
+            cooldown_min = COOLDOWN_EVENTO_MINUTOS.get(tipo_ev, 480)
+            idade_min = (agora_ts - mapa_recente[chave]) / 60.0
+            if 0 <= idade_min <= cooldown_min:
+                return chave
+    return None
+
+
 def gerar_hash_url(url: str) -> str:
     p = urllib.parse.urlsplit(url)
     host = p.netloc.lower().removeprefix("www.")
@@ -567,7 +780,7 @@ def gerar_hash_url(url: str) -> str:
     return hashlib.sha256(url_canonica.encode("utf-8")).hexdigest()[:16]
 
 
-def carregar_historico() -> Tuple[List[str], List[str], List[str]]:
+def carregar_historico() -> Tuple[List[str], List[str], List[str], List[Dict[str, Any]]]:
     if HISTORICO_ARQUIVO.exists():
         try:
             dados = json.loads(HISTORICO_ARQUIVO.read_text(encoding="utf-8"))
@@ -576,20 +789,29 @@ def carregar_historico() -> Tuple[List[str], List[str], List[str]]:
                     dados.get("links", []),
                     dados.get("titulos", []),
                     dados.get("leads", []),
+                    dados.get("eventos_recentes", []),
                 )
             if isinstance(dados, list):
-                return dados, [], []
+                return dados, [], [], []
         except Exception as exc:
             logger.error("Erro ao ler arquivo de histórico: %s", exc)
-    return [], [], []
+    return [], [], [], []
 
 
-def salvar_historico(links: List[str], titulos: List[str], leads: List[str]) -> None:
+def salvar_historico(
+    links: List[str], titulos: List[str], leads: List[str], eventos_recentes: List[Dict[str, Any]]
+) -> None:
     try:
+        agora_ts = datetime.now(timezone.utc).timestamp()
+        eventos_limpos = [
+            ev for ev in eventos_recentes
+            if isinstance(ev, dict) and (agora_ts - float(ev.get("ts", 0))) <= 48 * 3600
+        ][-300:]
         dados = {
             "links": list(dict.fromkeys(links))[-MAX_HISTORICO:],
             "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:],
             "leads": list(dict.fromkeys(leads))[-250:],
+            "eventos_recentes": eventos_limpos,
         }
         temp_file = HISTORICO_ARQUIVO.with_suffix(".tmp")
         temp_file.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -605,7 +827,7 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
     if not tokens_novo:
         return False
 
-    for antigo in titulos_anteriores[-100:]:
+    for antigo in titulos_anteriores[-120:]:
         norm_antigo = normalizar_texto_dedup(antigo)
         if norm_novo == norm_antigo:
             return True
@@ -618,7 +840,7 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
         menor = min(len(tokens_novo), len(tokens_antigo))
         ratio = len(inter) / menor if menor > 0 else 0.0
 
-        if len(inter) >= 3 and ratio >= 0.45:
+        if len(inter) >= 3 and ratio >= 0.42:
             return True
 
         nums_antigo = extrair_numeros_relevantes(antigo)
@@ -631,18 +853,18 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
 def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
     if not novo_lead or len(novo_lead) < 60:
         return False
-    tokens_novo = extrair_tokens_dedup(novo_lead[:280])
+    tokens_novo = extrair_tokens_dedup(novo_lead[:350])
     if len(tokens_novo) < 5:
         return False
 
-    for antigo in leads_anteriores[-100:]:
-        tokens_antigo = extrair_tokens_dedup(antigo[:280])
+    for antigo in leads_anteriores[-120:]:
+        tokens_antigo = extrair_tokens_dedup(antigo[:350])
         if len(tokens_antigo) < 5:
             continue
         inter = tokens_novo & tokens_antigo
         menor = min(len(tokens_novo), len(tokens_antigo))
         ratio = len(inter) / menor if menor > 0 else 0.0
-        if len(inter) >= 5 and ratio >= 0.48:
+        if len(inter) >= 5 and ratio >= 0.42:
             return True
     return False
 
@@ -692,21 +914,9 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
     for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
         el = item.find(tag)
         if el is not None and el.text:
-            texto_data = el.text.strip()
-            try:
-                dt = email.utils.parsedate_to_datetime(texto_data)
-                if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=TZ_BRASILIA)
-                return dt.astimezone(timezone.utc)
-            except Exception:
-                pass
-            try:
-                dt = datetime.fromisoformat(texto_data.replace("Z", "+00:00"))
-                if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=TZ_BRASILIA)
-                return dt.astimezone(timezone.utc)
-            except Exception:
-                pass
+            dt = _parse_iso_ou_rfc_data(el.text)
+            if dt:
+                return dt
     return None
 
 
@@ -1095,7 +1305,6 @@ def montar_mensagem_investidor(
     if tamanho_texto_visivel(post_completo) < 260:
         return None
 
-    # Caption nativa <= 1024 caracteres (usada no sendPhoto/sendVideo quando o site bloqueia preview remoto)
     blocos_curtos = [
         truncar_frase_limpa(blocos_narrativa[0], 240) or blocos_narrativa[0][:240],
         truncar_frase_limpa(blocos_narrativa[min(1, len(blocos_narrativa) - 1)], 250)
@@ -1219,21 +1428,12 @@ def extrair_midias_do_rss(
 async def verificar_e_preparar_imagem(
     client: httpx.AsyncClient, sem: asyncio.Semaphore, url_imagem: Optional[str], referer_url: str
 ) -> Optional[ImagemVerificada]:
-    """
-    Garante que a imagem realmente existe, é grande (>= 8 KB) e decide o modo 100% confiável:
-    - Se o crawler do Telegram ('TelegramBot' sem Referer) consegue baixar JPEG/PNG direto ->
-      permite post longo (~1.300-1.400 chars) com preview grande no topo.
-    - Se o servidor bloqueia o crawler do Telegram ou devolve WebP -> baixa os bytes com
-      User-Agent + Referer para upload nativo via sendPhoto (100% garantido com imagem!).
-    - Se não conseguir imagem válida de jeito nenhum -> retorna None (matéria descartada).
-    """
     if not url_imagem_eh_valida_sintaticamente(url_imagem):
         return None
 
     assert url_imagem is not None
 
     async with sem:
-        # 1) Simula o crawler do Telegram (sem Referer)
         try:
             resp_tg = await client.get(url_imagem, headers=HEADERS_TELEGRAM_PREVIEW, timeout=10.0)
             ct_tg = (resp_tg.headers.get("Content-Type") or "").split(";")[0].strip().lower()
@@ -1262,7 +1462,6 @@ async def verificar_e_preparar_imagem(
         except Exception as exc:
             logger.debug("Teste TelegramBot na imagem falhou (%s): %s", url_imagem, exc)
 
-        # 2) Fallback com navegador + Referer -> força upload nativo via sendPhoto (nunca envia sem imagem!)
         try:
             headers_ref = {
                 **HEADERS,
@@ -1350,7 +1549,7 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
 
 
 # ==============================================================================
-# INGESTÃO, FILTRAGEM POR SCORE E SCRAPING ASSÍNCRONO
+# INGESTÃO, VALIDAÇÃO DE DATA REAL E SCRAPING ASSÍNCRONO
 # ==============================================================================
 async def buscar_feed_rss(
     client: httpx.AsyncClient, sem: asyncio.Semaphore, url_feed: str
@@ -1382,12 +1581,15 @@ async def buscar_feed_rss(
         if not link or not title or len(title) < 22:
             continue
 
+        if url_tem_data_antiga(link, agora_utc):
+            continue
+
         dt_pub = extrair_data_publicacao(item)
         if not dt_pub:
             continue
 
         idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
-        if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -200.0:
+        if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -15.0:
             continue
 
         if eh_propaganda_ou_lixo(title, desc_bruta, link):
@@ -1406,9 +1608,10 @@ async def buscar_feed_rss(
 
 async def obter_conteudo_e_midias_artigo(
     client: httpx.AsyncClient, sem: asyncio.Semaphore, url: str, desc_bruta: str, titulo: str
-) -> Tuple[List[str], Optional[str], Optional[str]]:
+) -> Tuple[List[str], Optional[str], Optional[str], Optional[datetime]]:
     foto_og: Optional[str] = None
     video_pag: Optional[str] = None
+    dt_original_html: Optional[datetime] = None
     raw_html = ""
 
     async with sem:
@@ -1418,22 +1621,27 @@ async def obter_conteudo_e_midias_artigo(
                 raw_html = resp.text
                 foto_og = extrair_og_image_da_pagina(raw_html)
                 video_pag = extrair_candidato_video_html(raw_html)
+                dt_original_html = extrair_data_original_html(raw_html)
         except Exception as exc:
             logger.debug("Download do HTML falhou para %s: %s", url, exc)
 
     paragrafos = await asyncio.to_thread(
         extrair_paragrafos_trafilatura, raw_html, desc_bruta, titulo
     )
-    return paragrafos, foto_og, video_pag
+    return paragrafos, foto_og, video_pag, dt_original_html
 
 
 async def carregar_proximas_noticias(
     client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ
-) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str]]:
-    links_historico, titulos_historico, leads_historico = carregar_historico()
+) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str], List[Dict[str, Any]]]:
+    agora_utc = datetime.now(timezone.utc)
+    agora_ts = agora_utc.timestamp()
+
+    links_historico, titulos_historico, leads_historico, eventos_historico = carregar_historico()
     set_links: Set[str] = set(links_historico)
     titulos_rodada: List[str] = list(titulos_historico)
     leads_rodada: List[str] = list(leads_historico)
+    eventos_rodada: List[Dict[str, Any]] = list(eventos_historico)
 
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
     resultados_feeds = await asyncio.gather(
@@ -1454,7 +1662,8 @@ async def carregar_proximas_noticias(
 
     noticias_aprovadas: List[NoticiaPreparada] = []
     qtd_dup_titulo = 0
-    qtd_dup_lead = 0
+    qtd_dup_conteudo = 0
+    qtd_antiga_republicada = 0
     qtd_sem_imagem = 0
     qtd_descartadas = 0
 
@@ -1467,15 +1676,29 @@ async def carregar_proximas_noticias(
         link_hash = gerar_hash_url(link)
         desc_bruta = cand["desc_bruta"]
         item = cand["item"]
+        dt_rss = cand["dt_pub"]
 
+        # Camada 2: Título repetido
         if eh_mesma_noticia(title, titulos_rodada):
             qtd_dup_titulo += 1
             continue
 
         foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
-        paragrafos, foto_og, video_pag = await obter_conteudo_e_midias_artigo(
+        paragrafos, foto_og, video_pag, dt_original_html = await obter_conteudo_e_midias_artigo(
             client, sem, link, desc_bruta, title
         )
+
+        # Trava Anti-"Notícia de 6h atrás republicada como se fosse agora"
+        dt_real = min(dt_rss, dt_original_html) if dt_original_html else dt_rss
+        idade_real_min = (agora_utc - dt_real).total_seconds() / 60.0
+        if idade_real_min > MAX_IDADE_MINUTOS:
+            qtd_antiga_republicada += 1
+            logger.info(
+                "Descartada (matéria antiga republicada/atualizada — original há %.0f min): %s",
+                idade_real_min,
+                title,
+            )
+            continue
 
         if not paragrafos:
             qtd_descartadas += 1
@@ -1483,8 +1706,10 @@ async def carregar_proximas_noticias(
             continue
 
         lead_artigo = paragrafos[0]
+
+        # Camada 3: Lead/conteúdo sindicado repetido
         if eh_mesmo_conteudo_lead(lead_artigo, leads_rodada):
-            qtd_dup_lead += 1
+            qtd_dup_conteudo += 1
             logger.info("Descartada por duplicidade de conteúdo (mesma matéria em outro portal): %s", title)
             continue
 
@@ -1504,13 +1729,25 @@ async def carregar_proximas_noticias(
             )
             continue
 
+        # Camada 4: Mesmo Ativo + Mesmo Evento já publicado recentemente (bloqueia reescritas!)
+        chaves_evento = extrair_chaves_evento_ativo(title, lead_artigo, analise.tickers)
+        chave_colisao = evento_ja_publicado_recentemente(chaves_evento, eventos_rodada, agora_ts)
+        if chave_colisao:
+            qtd_dup_conteudo += 1
+            logger.info(
+                "Descartada por duplicidade de assunto (%s já publicado recentemente): %s",
+                chave_colisao,
+                title,
+            )
+            continue
+
         montagem = montar_mensagem_investidor(title, paragrafos, analise)
         if not montagem:
             qtd_descartadas += 1
             logger.info("Descartada por não atingir estrutura completa (Começo, Meio e Fim): %s", title)
             continue
 
-        # Prioriza og:image (alta resolução) e tenta foto do RSS como backup
+        # Garante imagem válida (ou vídeo) — nunca publica texto seco
         img_verificada: Optional[ImagemVerificada] = None
         for cand_img in dict.fromkeys(u for u in (foto_og, foto_rss) if u):
             img_verificada = await verificar_e_preparar_imagem(client, sem, cand_img, link)
@@ -1531,12 +1768,13 @@ async def carregar_proximas_noticias(
         )
 
         logger.info(
-            "Aprovada [Score %d | %s | %s | %d chars | Tickers: %s]: %s",
+            "Aprovada [Score %d | %s | %s | %.0f min | %d chars | Eventos: %s]: %s",
             analise.score_total,
             analise.categoria_chave,
             modo_img,
+            idade_real_min,
             tamanho_texto_visivel(post_html),
-            ",".join(analise.tickers) or "N/A",
+            ",".join(chaves_evento) or "N/A",
             title,
         )
 
@@ -1544,11 +1782,12 @@ async def carregar_proximas_noticias(
             NoticiaPreparada(
                 link=link,
                 titulo=title,
-                lead_limpo=lead_artigo[:280],
+                lead_limpo=lead_artigo[:350],
+                chaves_evento=chaves_evento,
                 texto_html=post_html,
                 caption_curta_html=caption_curta_html,
                 score=analise.score_total,
-                dt_pub=cand["dt_pub"],
+                dt_pub=dt_real,
                 imagem=img_verificada.url if img_verificada else None,
                 imagem_verificada=img_verificada,
                 video_candidato_url=video_cand,
@@ -1556,15 +1795,18 @@ async def carregar_proximas_noticias(
             )
         )
         titulos_rodada.append(title)
-        leads_rodada.append(lead_artigo[:280])
+        leads_rodada.append(lead_artigo[:350])
+        for ch in chaves_evento:
+            eventos_rodada.append({"chave": ch, "ts": agora_ts})
         set_links.add(link)
         set_links.add(link_hash)
 
     logger.info(
-        "Resumo do ciclo: %d links novos | %d dup título | %d dup conteúdo | %d sem imagem | %d fora dos 3 pilares | %d aprovados",
+        "Resumo do ciclo: %d links novos | %d antigas republicadas | %d dup título | %d dup assunto/conteúdo | %d sem imagem | %d fora dos 3 pilares | %d aprovados",
         len(candidatos_unicos),
+        qtd_antiga_republicada,
         qtd_dup_titulo,
-        qtd_dup_lead,
+        qtd_dup_conteudo,
         qtd_sem_imagem,
         qtd_descartadas,
         len(noticias_aprovadas),
@@ -1574,7 +1816,7 @@ async def carregar_proximas_noticias(
     selecionadas = noticias_aprovadas[:limite]
     selecionadas.sort(key=lambda n: n.dt_pub)
 
-    return selecionadas, links_historico, titulos_historico, leads_historico
+    return selecionadas, links_historico, titulos_historico, leads_historico, eventos_historico
 
 
 # ==============================================================================
@@ -1690,7 +1932,6 @@ async def tentar_enviar_foto_garantida(
         or tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT
     )
 
-    # Caso 1: Texto longo (~1300-1400 chars) + imagem JPEG/PNG acessível pelo crawler do Telegram
     if texto_eh_longo and img.pode_usar_preview_longo:
         img_escapada = html.escape(img.url, quote=True)
         texto_com_midia_topo = f'<a href="{img_escapada}">&#8203;</a>{item.texto_html}'
@@ -1709,7 +1950,6 @@ async def tentar_enviar_foto_garantida(
         if await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_longo):
             return True
 
-    # Caso 2: Upload binário nativo via sendPhoto (100% garantido que a imagem aparece!)
     url_photo = f"{base_url}/sendPhoto"
     legenda_foto = item.texto_html if not texto_eh_longo else item.caption_curta_html
     if img.conteudo_bytes:
@@ -1746,7 +1986,6 @@ async def enviar_post(
     if await tentar_enviar_foto_garantida(client, base_url, chat_id, item, botao_sorteado):
         return True
 
-    # Nunca publica texto seco sem imagem/vídeo
     logger.warning("Publicação cancelada para evitar texto sem imagem: %s", item.titulo)
     return False
 
@@ -1766,15 +2005,16 @@ async def main() -> None:
 
     limits = httpx.Limits(max_keepalive_connections=10, max_connections=20)
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=limits) as client:
-        noticias, links_historico, titulos_historico, leads_historico = await carregar_proximas_noticias(
-            client, limite=MAX_NOTICIAS_POR_VEZ
+        noticias, links_historico, titulos_historico, leads_historico, eventos_historico = (
+            await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
         )
 
         if not noticias:
-            logger.info("Nenhuma notícia de Ações, FIIs ou Renda Fixa com imagem válida neste ciclo.")
+            logger.info("Nenhuma notícia inédita e recente (<= %d min) de Ações, FIIs ou Renda Fixa neste ciclo.", MAX_IDADE_MINUTOS)
             return
 
-        logger.info("Encontradas %d notícias (Ações, FIIs e Renda Fixa) para publicação.", len(noticias))
+        logger.info("Encontradas %d notícias inéditas (Ações, FIIs e Renda Fixa) para publicação.", len(noticias))
+        agora_ts = datetime.now(timezone.utc).timestamp()
         for noticia in noticias:
             sucesso = await enviar_post(client, token, chat_id, noticia)
             if sucesso:
@@ -1783,7 +2023,9 @@ async def main() -> None:
                 titulos_historico.append(noticia.titulo)
                 if noticia.lead_limpo:
                     leads_historico.append(noticia.lead_limpo)
-                salvar_historico(links_historico, titulos_historico, leads_historico)
+                for ch in noticia.chaves_evento:
+                    eventos_historico.append({"chave": ch, "ts": agora_ts})
+                salvar_historico(links_historico, titulos_historico, leads_historico, eventos_historico)
                 logger.info("Notícia publicada [Score %d]: %s", noticia.score, noticia.titulo)
                 await asyncio.sleep(3.0)
             else:
