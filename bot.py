@@ -48,7 +48,8 @@ MAX_HTML_BYTES = 5 * 1024 * 1024
 MIN_IMAGE_BYTES = 8 * 1024
 MAX_VIDEO_BYTES = 50 * 1024 * 1024
 TELEGRAM_CAPTION_LIMIT = 1024
-ALVO_MAX_CARACTERES_POST = 980  # Teto rígido <= 1.000 caracteres para leitura confortável no celular
+MIN_CARACTERES_POST = 450       # Rejeita textos rasos/cortados por paywall (2 frases)
+ALVO_MAX_CARACTERES_POST = 1280 # Ponto ideal no celular: 3 parágrafos completos (~900 a 1.250 chars)
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 TEXTO_BOTAO_CHAT = "💬 Participe do Chat de Investidores"
@@ -64,14 +65,14 @@ HEADERS_TELEGRAM_PREVIEW = {
 }
 
 # ==============================================================================
-# 24 MAIORES PORTAIS CONFIÁVEIS DE MERCADO FINANCEIRO E ECONOMIA DO BRASIL
+# 23 MAIORES PORTAIS CONFIÁVEIS DE MERCADO FINANCEIRO E ECONOMIA DO BRASIL
+# (Removido valor.globo.com por paywall fechado e capa padrão com logo genérico)
 # ==============================================================================
 FEEDS = [
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.infomoney.com.br/onde-investir/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://valorinveste.globo.com/rss/valorinveste",
-    "https://valor.globo.com/rss/valor",
     "https://braziljournal.com/feed",
     "https://neofeed.com.br/feed/",
     "https://www.bloomberglinea.com.br/arc/outboundfeeds/rss.xml",
@@ -92,6 +93,10 @@ FEEDS = [
     "https://rss.uol.com.br/feed/economia.xml",
     "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
 ]
+
+DOMINIOS_BLOQUEADOS = (
+    "valor.globo.com",
+)
 
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/", "/estilo/",
@@ -285,7 +290,8 @@ REGEX_METRICAS_NUMERICAS = re.compile(
 )
 REGEX_YOUTUBE_ID = re.compile(r"(?:youtube\.com/(?:watch\?v=|embed/|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})", flags=re.IGNORECASE)
 REGEX_INICIO_ORFAO = re.compile(
-    r"^(?:Segundo ele|Segundo ela|Segundo a empresa|Segundo a companhia|Segundo o banco|Segundo o executivo|"
+    r"^(?:A companhia\b|A empresa\b|O banco\b|A elétrica\b|A operadora\b|A seguradora\b|A instituição\b|"
+    r"Segundo ele|Segundo ela|Segundo a empresa|Segundo a companhia|Segundo o banco|Segundo o executivo|"
     r"Para ele|Para ela|De acordo com ele|De acordo com ela|De acordo com a empresa|De acordo com a companhia|"
     r"De acordo com o banco|Ainda segundo ele|Ainda segundo a empresa|Na visão dele|Na avaliação dele|"
     r"Ele acrescenta|Ela acrescenta|Ele afirma|Ela afirma|Além disso|No mesmo intervalo|Na mesma linha|Outro ponto citado)\b",
@@ -311,8 +317,12 @@ MARCADORES_DESFECHO = (
     "no ano", "nos últimos 12 meses", "segundo analistas", "pagamento", "acionistas",
 )
 TERMOS_URL_IMAGEM_RUIM = (
-    "/logo", "logo-", "logo_", "avatar", "gravatar", "favicon", "pixel", "spacer",
-    "placeholder", "default-image", "blank.", "1x1", ".svg", ".gif", "badge", "/author/", "/perfil/", "/ads/", "banner-app",
+    "/logo", "logo-", "logo_", "-logo.", "_logo.", "avatar", "gravatar", "favicon", "pixel", "spacer",
+    "placeholder", "default-image", "default_image", "default-og", "og-default", "og_default",
+    "og-image", "og_image", "opengraph", "social-share", "social_share", "share-default",
+    "-share.", "_share.", "capa-padrao", "capa_padrao", "sem-imagem", "sem_imagem", "fallback",
+    "marca-valor", "valor-economico", "valoreconomico", "valor_economico", "valor-share",
+    "blank.", "1x1", ".svg", ".gif", "badge", "/author/", "/perfil/", "/ads/", "banner-app",
 )
 
 
@@ -332,6 +342,7 @@ class ImagemVerificada:
     pode_usar_preview_longo: bool
     conteudo_bytes: Optional[bytes] = None
     content_type: str = "image/jpeg"
+    sha256: str = ""
 
 
 @dataclass
@@ -341,6 +352,7 @@ class NoticiaPreparada:
     lead_limpo: str
     chaves_evento: List[str]
     texto_html: str
+    caption_curta_html: str
     score: int
     dt_pub: datetime
     imagem: Optional[str] = None
@@ -582,20 +594,32 @@ def gerar_hash_url(url: str) -> str:
     return hashlib.sha256(canon.encode("utf-8")).hexdigest()[:16]
 
 
-def carregar_historico() -> Tuple[List[str], List[str], List[str], List[Dict[str, Any]]]:
+def carregar_historico() -> Tuple[List[str], List[str], List[str], List[Dict[str, Any]], List[str]]:
     if HISTORICO_ARQUIVO.exists():
         try:
             d = json.loads(HISTORICO_ARQUIVO.read_text(encoding="utf-8"))
             if isinstance(d, dict):
-                return d.get("links", []), d.get("titulos", []), d.get("leads", []), d.get("eventos_recentes", [])
+                return (
+                    d.get("links", []),
+                    d.get("titulos", []),
+                    d.get("leads", []),
+                    d.get("eventos_recentes", []),
+                    d.get("hashes_imagens", []),
+                )
             if isinstance(d, list):
-                return d, [], [], []
+                return d, [], [], [], []
         except Exception as exc:
             logger.error("Erro ao ler histórico: %s", exc)
-    return [], [], [], []
+    return [], [], [], [], []
 
 
-def salvar_historico(links: List[str], titulos: List[str], leads: List[str], eventos_recentes: List[Dict[str, Any]]) -> None:
+def salvar_historico(
+    links: List[str],
+    titulos: List[str],
+    leads: List[str],
+    eventos_recentes: List[Dict[str, Any]],
+    hashes_imagens: List[str],
+) -> None:
     try:
         agora_ts = datetime.now(timezone.utc).timestamp()
         dados = {
@@ -603,6 +627,7 @@ def salvar_historico(links: List[str], titulos: List[str], leads: List[str], eve
             "titulos": list(dict.fromkeys(titulos))[-MAX_HISTORICO:],
             "leads": list(dict.fromkeys(leads))[-250:],
             "eventos_recentes": [e for e in eventos_recentes if isinstance(e, dict) and (agora_ts - float(e.get("ts", 0))) <= 48 * 3600][-300:],
+            "hashes_imagens": list(dict.fromkeys(hashes_imagens))[-300:],
         }
         tmp = HISTORICO_ARQUIVO.with_suffix(".tmp")
         tmp.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -646,7 +671,7 @@ def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
 
 
 # ==============================================================================
-# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA ENXUTA (<= 1.000 CARACTERES)
+# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA IDEAL (450 A 1.280 CARACTERES)
 # ==============================================================================
 def gerar_botao_chat() -> Dict[str, Any]:
     return {"inline_keyboard": [[{"text": TEXTO_BOTAO_CHAT, "url": GRUPO_URL}]]}
@@ -688,7 +713,8 @@ def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
 
 
 def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool:
-    if any(c in url.lower() for c in CAMINHOS_URL_BLOQUEADOS):
+    u_low = url.lower()
+    if any(dom in u_low for dom in DOMINIOS_BLOQUEADOS) or any(c in u_low for c in CAMINHOS_URL_BLOQUEADOS):
         return True
     t_low = titulo.lower()
     if any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
@@ -838,6 +864,8 @@ def extrair_narrativa_enxuta(paragrafos: List[str], max_blocos: int = 3, max_por
                 todas.append(f)
     if len(todas) < 2:
         return None
+    if REGEX_INICIO_ORFAO.search(todas[0]) and not REGEX_INICIO_ORFAO.search(todas[1]):
+        todas[0], todas[1] = todas[1], todas[0]
 
     blocos: List[str] = []
     atual = ""
@@ -880,7 +908,7 @@ def tamanho_texto_visivel(html_str: str) -> int:
     return len(html.unescape(re.sub(r"<[^>]+>", "", html_str)))
 
 
-def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: AnaliseHeuristica) -> Optional[str]:
+def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: AnaliseHeuristica) -> Optional[Tuple[str, str]]:
     t_limpo = limpar_html(titulo.strip())
     if " - " in t_limpo:
         t_limpo, _ = t_limpo.rsplit(" - ", 1)
@@ -894,20 +922,43 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     else:
         cabecalho = f"<blockquote>{analise.categoria_label}</blockquote>"
 
-    # Garante leitura confortável no celular: SEMPRE <= 980 caracteres visíveis (máx. 1.000)
-    for max_blocos, max_bloco in ((3, 245), (3, 210), (3, 180), (2, 270), (2, 220), (2, 175), (2, 145)):
+    # Ponto ideal de leitura no celular: 3 parágrafos completos entre 450 e 1.280 caracteres visíveis
+    post_principal: Optional[str] = None
+    blocos_escolhidos: Optional[List[str]] = None
+    for max_blocos, max_bloco in ((3, 340), (3, 300), (3, 260), (2, 360), (2, 290)):
         blocos = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco)
         if not blocos:
             continue
         corpo = "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in blocos)
         candidato = f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n{corpo}"
-        if 200 <= tamanho_texto_visivel(candidato) <= ALVO_MAX_CARACTERES_POST:
-            return candidato
-    return None
+        vis = tamanho_texto_visivel(candidato)
+        if MIN_CARACTERES_POST <= vis <= ALVO_MAX_CARACTERES_POST:
+            post_principal = candidato
+            blocos_escolhidos = blocos
+            break
+
+    if not post_principal or not blocos_escolhidos:
+        return None
+
+    # Versão <= 1.004 chars (para fallback sendPhoto / sendVideo quando preview longo não for suportado)
+    if tamanho_texto_visivel(post_principal) <= TELEGRAM_CAPTION_LIMIT - 20:
+        caption_curta = post_principal
+    else:
+        caption_curta = post_principal
+        for max_blocos, max_bloco in ((3, 240), (3, 200), (2, 260), (2, 210), (2, 175)):
+            bc = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco)
+            if not bc:
+                continue
+            cand_c = f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in bc)
+            if tamanho_texto_visivel(cand_c) <= TELEGRAM_CAPTION_LIMIT - 20:
+                caption_curta = cand_c
+                break
+
+    return post_principal, caption_curta
 
 
 # ==============================================================================
-# MÍDIA GARANTIDA (IMAGEM NATIVA OU VÍDEO YT-DLP — NUNCA ENVIA TEXTO SECO)
+# MÍDIA GARANTIDA (IMAGEM REAL OU VÍDEO YT-DLP — BLOQUEIA CAPAS/LOGOS PADRÃO)
 # ==============================================================================
 def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     padroes = (
@@ -986,7 +1037,13 @@ def extrair_midias_do_rss(item: XmlElement, desc_bruta: str) -> Tuple[Optional[s
     return foto, video, audio
 
 
-async def verificar_e_preparar_imagem(client: httpx.AsyncClient, sem: asyncio.Semaphore, url_imagem: Optional[str], referer_url: str) -> Optional[ImagemVerificada]:
+async def verificar_e_preparar_imagem(
+    client: httpx.AsyncClient,
+    sem: asyncio.Semaphore,
+    url_imagem: Optional[str],
+    referer_url: str,
+    hashes_imagens_usadas: Optional[Set[str]] = None,
+) -> Optional[ImagemVerificada]:
     if not url_imagem_eh_valida_sintaticamente(url_imagem):
         return None
     assert url_imagem is not None
@@ -996,7 +1053,12 @@ async def verificar_e_preparar_imagem(client: httpx.AsyncClient, sem: asyncio.Se
                 resp = await client.get(url_imagem, headers=hdrs, timeout=12.0)
                 ct = (resp.headers.get("Content-Type") or "").split(";")[0].strip().lower()
                 if resp.status_code == 200 and MIN_IMAGE_BYTES <= len(resp.content) <= MAX_HTML_BYTES and ct in ("image/jpeg", "image/jpg", "image/png", "image/webp"):
-                    return ImagemVerificada(str(resp.url), ct in ("image/jpeg", "image/jpg", "image/png"), resp.content, ct)
+                    img_hash = hashlib.sha256(resp.content).hexdigest()[:16]
+                    if hashes_imagens_usadas is not None and img_hash in hashes_imagens_usadas:
+                        logger.info("Imagem rejeitada por ser capa/logo padrão repetido de portal (%s)", url_imagem)
+                        return None
+                    pode_preview = (hdrs is HEADERS_TELEGRAM_PREVIEW) and ct in ("image/jpeg", "image/jpg", "image/png")
+                    return ImagemVerificada(str(resp.url), pode_preview, resp.content, ct, img_hash)
             except Exception:
                 pass
     return None
@@ -1107,12 +1169,13 @@ async def obter_conteudo_e_midias_artigo(client: httpx.AsyncClient, sem: asyncio
     return paragrafos, foto_og, video_pag, dt_html
 
 
-async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str], List[Dict[str, Any]]]:
+async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str], List[Dict[str, Any]], List[str]]:
     agora_utc = datetime.now(timezone.utc)
     agora_ts = agora_utc.timestamp()
 
-    links_hist, titulos_hist, leads_hist, eventos_hist = carregar_historico()
+    links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist = carregar_historico()
     set_links: Set[str] = set(links_hist)
+    set_hashes_img: Set[str] = set(hashes_img_hist)
     titulos_rodada, leads_rodada, eventos_rodada = list(titulos_hist), list(leads_hist), list(eventos_hist)
 
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
@@ -1173,14 +1236,15 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             logger.info("Descartada por duplicidade de assunto (%s): %s", col, title)
             continue
 
-        post_html = montar_mensagem_investidor(title, paragrafos, analise)
-        if not post_html:
+        montagem = montar_mensagem_investidor(title, paragrafos, analise)
+        if not montagem:
             stats["desc"] += 1
             continue
+        post_html, caption_curta_html = montagem
 
         img_ver: Optional[ImagemVerificada] = None
         for u_img in dict.fromkeys(u for u in (foto_og, foto_rss) if u):
-            img_ver = await verificar_e_preparar_imagem(client, sem, u_img, link)
+            img_ver = await verificar_e_preparar_imagem(client, sem, u_img, link, set_hashes_img)
             if img_ver:
                 break
 
@@ -1190,17 +1254,19 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             continue
 
         logger.info("Aprovada [Score %d | %s | %.0f min | %d chars]: %s", analise.score_total, analise.setor_chave, idade_min, tamanho_texto_visivel(post_html), title)
-        aprovadas.append(NoticiaPreparada(link, title, lead[:350], chaves_ev, post_html, analise.score_total, dt_real, img_ver.url if img_ver else None, img_ver, video_cand, audio_rss))
+        aprovadas.append(NoticiaPreparada(link, title, lead[:350], chaves_ev, post_html, caption_curta_html, analise.score_total, dt_real, img_ver.url if img_ver else None, img_ver, video_cand, audio_rss))
         titulos_rodada.append(title)
         leads_rodada.append(lead[:350])
         for ch in chaves_ev:
             eventos_rodada.append({"chave": ch, "ts": agora_ts})
+        if img_ver and img_ver.sha256:
+            set_hashes_img.add(img_ver.sha256)
         set_links.update((link, gerar_hash_url(link)))
 
     logger.info("Ciclo: %d candidatos | %d antigas | %d dup título | %d dup assunto | %d sem img | %d descartadas | %d aprovadas", len(candidatos), stats["antiga"], stats["dup_t"], stats["dup_c"], stats["sem_img"], stats["desc"], len(aprovadas))
     aprovadas.sort(key=lambda n: (n.score, n.dt_pub), reverse=True)
     selecionadas = sorted(aprovadas[:limite], key=lambda n: n.dt_pub)
-    return selecionadas, links_hist, titulos_hist, leads_hist, eventos_hist
+    return selecionadas, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist
 
 
 async def telegram_request(client: httpx.AsyncClient, url: str, json_payload: Optional[Dict[str, Any]] = None, data_fields: Optional[Dict[str, Any]] = None, files: Optional[Dict[str, Any]] = None, max_retries: int = 3) -> bool:
@@ -1232,7 +1298,8 @@ async def tentar_enviar_video_ytdlp(client: httpx.AsyncClient, base_url: str, ch
                     break
             if not caminho or not caminho.exists():
                 return False
-            data = {"chat_id": chat_id, "caption": item.texto_html, "parse_mode": "HTML", "supports_streaming": "true", "reply_markup": json.dumps(botao)}
+            legenda_vid = item.texto_html if tamanho_texto_visivel(item.texto_html) <= TELEGRAM_CAPTION_LIMIT - 10 else item.caption_curta_html
+            data = {"chat_id": chat_id, "caption": legenda_vid, "parse_mode": "HTML", "supports_streaming": "true", "reply_markup": json.dumps(botao)}
             with open(caminho, "rb") as f_vid:
                 return await telegram_request(client, f"{base_url}/sendVideo", data_fields=data, files={"video": (caminho.name, f_vid, "video/mp4")})
         finally:
@@ -1247,13 +1314,30 @@ async def tentar_enviar_foto_garantida(client: httpx.AsyncClient, base_url: str,
     img = item.imagem_verificada
     if not img:
         return False
+
+    texto_eh_longo = tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT - 10
+
+    # Para textos entre ~1.000 e 1.280 chars com imagem aceita pelo TelegramBot: foto grande em cima + texto completo
+    if texto_eh_longo and img.pode_usar_preview_longo:
+        img_esc = html.escape(img.url, quote=True)
+        payload_longo = {
+            "chat_id": chat_id,
+            "text": f'<a href="{img_esc}">&#8203;</a>{item.texto_html}',
+            "parse_mode": "HTML",
+            "link_preview_options": {"is_disabled": False, "url": img.url, "prefer_large_media": True, "show_above_text": True},
+            "reply_markup": botao,
+        }
+        if await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_longo):
+            return True
+
     url_photo = f"{base_url}/sendPhoto"
+    legenda = item.caption_curta_html if texto_eh_longo else item.texto_html
     if img.conteudo_bytes:
         ext = "png" if "png" in img.content_type else ("webp" if "webp" in img.content_type else "jpg")
-        data = {"chat_id": chat_id, "caption": item.texto_html, "parse_mode": "HTML", "reply_markup": json.dumps(botao)}
+        data = {"chat_id": chat_id, "caption": legenda, "parse_mode": "HTML", "reply_markup": json.dumps(botao)}
         if await telegram_request(client, url_photo, data_fields=data, files={"photo": (f"cover.{ext}", img.conteudo_bytes, img.content_type)}):
             return True
-    return await telegram_request(client, url_photo, json_payload={"chat_id": chat_id, "photo": img.url, "caption": item.texto_html, "parse_mode": "HTML", "reply_markup": botao})
+    return await telegram_request(client, url_photo, json_payload={"chat_id": chat_id, "photo": img.url, "caption": legenda, "parse_mode": "HTML", "reply_markup": botao})
 
 
 async def enviar_post(client: httpx.AsyncClient, token: str, chat_id: str, item: NoticiaPreparada) -> bool:
@@ -1274,7 +1358,7 @@ async def main() -> None:
         sys.exit(1)
 
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=httpx.Limits(max_keepalive_connections=15, max_connections=30)) as client:
-        noticias, links_hist, titulos_hist, leads_hist, eventos_hist = await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
+        noticias, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist = await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
         if not noticias:
             logger.info("Nenhuma notícia inédita e recente (<= %d min) neste ciclo.", MAX_IDADE_MINUTOS)
             return
@@ -1288,7 +1372,9 @@ async def main() -> None:
                     leads_hist.append(noticia.lead_limpo)
                 for ch in noticia.chaves_evento:
                     eventos_hist.append({"chave": ch, "ts": agora_ts})
-                salvar_historico(links_hist, titulos_hist, leads_hist, eventos_hist)
+                if noticia.imagem_verificada and noticia.imagem_verificada.sha256:
+                    hashes_img_hist.append(noticia.imagem_verificada.sha256)
+                salvar_historico(links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist)
                 logger.info("Publicado [Score %d | %d chars]: %s", noticia.score, tamanho_texto_visivel(noticia.texto_html), noticia.titulo)
                 await asyncio.sleep(3.0)
             else:
