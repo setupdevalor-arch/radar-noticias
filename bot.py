@@ -5,7 +5,6 @@ import html
 import json
 import logging
 import os
-import random
 import re
 import sys
 import tempfile
@@ -43,8 +42,8 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
-MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "120"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "26"))
+MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "360"))  # 6 horas (evita seca à noite/manhã)
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "14"))  # Filtro equilibrado: qualidade sem travar o canal
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
@@ -66,19 +65,24 @@ HEADERS = {
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# Feeds 100% focados em Ações B3, FIIs, Renda Fixa e Economia Brasileira (sem cripto e sem links 404)
+# Feeds focados em Ações B3, FIIs, Renda Fixa, Negócios, Economia e Política Econômica (sem links 404)
 FEEDS = [
+    "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.infomoney.com.br/onde-investir/feed/",
     "https://www.infomoney.com.br/economia/feed/",
     "https://www.infomoney.com.br/negocios/feed/",
+    "https://www.infomoney.com.br/politica/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
     "https://braziljournal.com/feed",
     "https://g1.globo.com/rss/g1/economia/",
+    "https://exame.com/feed/",
     "https://exame.com/invest/feed/",
+    "https://valorinveste.globo.com/rss/valorinveste",
+    "https://fiis.com.br/feed/",
 ]
 
 CAMINHOS_URL_BLOQUEADOS = (
@@ -87,7 +91,7 @@ CAMINHOS_URL_BLOQUEADOS = (
     "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
     "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
     "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
-    "/tecnologia/", "/inteligencia-artificial/", "/future-of-money/", "/cripto/",
+    "/future-of-money/", "/cripto/",
 )
 
 # 1. Termos de propaganda explícita e venda de cursos (verificados no título e início do texto)
@@ -102,11 +106,10 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "cartão de criptomoedas", "encerra seu cartão",
 )
 
-# 2. Assuntos fora do escopo do investidor brasileiro de Ações B3, FIIs e Renda Fixa (verificados no TÍTULO)
+# 2. Assuntos fora do escopo do investidor de Ações, FIIs e Renda Fixa (verificados APENAS no TÍTULO)
 BLOQUEADOS_APENAS_NO_TITULO = (
-    # Startups de IA / Empresas estrangeiras sem relação com a B3
-    "dona do claude", "anthropic", "openai", "chatgpt", "spacex", "elon musk",
-    "neuralink", "tiktok", "bytedance", "sam altman",
+    # Startups de IA / Curiosidades tech sem relação com investidor brasileiro
+    "dona do claude", "anthropic", "chatgpt", "neuralink",
     # Assistencialismo / Concursos / Loterias
     "calendário do inss", "meu inss", "benefício do inss",
     "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
@@ -123,21 +126,31 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "lei da dosimetria", "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
+# Palavras comuns que NÃO devem contar como repetição de notícia entre matérias diferentes
 STOPWORDS_DEDUP = {
     "aprova", "anuncia", "diz", "após", "apos", "sobre", "pode", "novo", "nova",
     "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais",
     "para", "como", "onde", "quando", "quem", "qual", "está", "esta", "estão",
     "foram", "será", "pagamento", "tem", "faz", "vai", "com", "por", "que", "dos", "das",
-    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos",
+    "fecham", "fecha", "sobe", "cai", "alta", "queda", "dias", "pontos", "mercado",
+    "brasil", "ações", "ação", "fundo", "fundos", "imobiliários", "imobiliário",
+    "tesouro", "direto", "renda", "fixa", "juros", "taxa", "taxas", "dólar",
+    "ibovespa", "banco", "central", "bolsa", "investidores", "investidor", "empresas",
 }
 
 # ==============================================================================
-# ÂNCORAS OBRIGATÓRIAS DO INVESTIDOR BRASILEIRO (AÇÕES B3, FIIs E RENDA FIXA)
-# Toda notícia PRECISA conter ao menos 1 ativo/indicador deste universo no Título ou 1º Parágrafo!
+# ÂNCORAS DO INVESTIDOR (AÇÕES B3, FIIs, RENDA FIXA, NEGÓCIOS E ECONOMIA)
 # ==============================================================================
 ANCORAS_INVESTIDOR_BR = (
-    # 1. Ações da B3 & Empresas Brasileiras Listadas
-    "ibovespa", "b3", "petrobras", "vale", "itaú", "itau", "bradesco", "banco do brasil",
+    # 1. Ações da B3, Mercado Acionário & Empresas Listadas
+    "ibovespa", "b3", "bolsa", "ações", "ação", "mercado", "investidor", "investidores",
+    "investimento", "investimentos", "carteira", "dividendos", "dividendo", "proventos",
+    "jcp", "lucro", "receita", "balanço", "ebitda", "resultado", "resultados",
+    "empresa", "empresas", "companhia", "companhias", "negócios", "empreendedor",
+    "empreendedores", "setor", "varejo", "varejista", "atacado", "indústria",
+    "agronegócio", "agro", "commodities", "petróleo", "minério", "ouro", "siderurgia",
+    "elétrica", "elétricas", "energia", "saneamento", "telecom", "aviação",
+    "petrobras", "vale", "itaú", "itau", "bradesco", "banco do brasil",
     "santander", "btg", "itaúsa", "itausa", "sabesp", "eletrobras", "taesa", "cemig",
     "copel", "engie", "equatorial", "cpfl", "auren", "alupar", "neoenergia", "isa energia",
     "sanepar", "copasa", "bb seguridade", "caixa seguridade", "porto seguro", "irb",
@@ -147,177 +160,214 @@ ANCORAS_INVESTIDOR_BR = (
     "cury", "direcional", "multiplan", "iguatemi", "allos", "totvs", "magazine luiza",
     "casas bahia", "lojas renner", "c&a", "guararapes", "raia drogasil", "hapvida",
     "rede d'or", "fleury", "hypera", "cosan", "rumo", "ccr", "motiva", "ecorodovias",
-    "santos brasil", "b3sa3", "petr4", "petr3", "vale3", "itub4", "bbas3", "bbdc4",
+    "santos brasil", "nubank", "inter", "xp", "stone", "pagbank", "mercado livre",
+    "b3sa3", "petr4", "petr3", "vale3", "itub4", "bbas3", "bbdc4", "itsa4",
     "wege3", "sbsp3", "elet3", "taee11", "cmig4", "cple3", "egie3", "eqtl3", "sapr11",
     "bbse3", "cxse3", "vivt3", "tims3", "klbn11", "suzb3", "ggbr4", "prio3", "rent3",
-    # 2. Fundos Imobiliários (FIIs) & Fiagros
+    # 2. Fundos Imobiliários (FIIs), Imóveis & Fiagros
     "fundo imobiliário", "fundos imobiliários", "fii", "fiis", "ifix", "fiagro",
     "fii de tijolo", "fiis de tijolo", "fii de papel", "fiis de papel", "galpões logísticos",
-    "lajes corporativas", "vacância", "p/vp", "rendimento por cota",
+    "lajes corporativas", "vacância", "p/vp", "rendimento por cota", "cotistas",
+    "imóvel", "imóveis", "imobiliário", "imobiliários", "aluguel", "aluguéis",
+    "construtora", "construtoras", "shopping", "shoppings",
     "mxrf11", "hglg11", "xpml11", "knri11", "kncr11", "knip11", "visc11", "brco11",
     "btlg11", "hgru11", "trxf11", "cpts11", "irdm11", "vghf11", "knsc11", "hgbs11",
     "vilg11", "lvbi11", "pvbi11", "hgre11", "jsre11", "bcff11", "rztr11", "knca11",
-    # 3. Renda Fixa Brasileira & Tesouro Direto
+    # 3. Renda Fixa, Bancos, Crédito & Tesouro Direto
     "renda fixa", "tesouro direto", "tesouro selic", "tesouro ipca", "tesouro ipca+",
     "tesouro prefixado", "tesouro renda+", "ntn-b", "ltn", "lft", "cdb", "cdbs",
     "lci", "lca", "lcis", "lcas", "cri", "cra", "debênture", "debêntures",
     "cdi", "marcação a mercado", "títulos públicos", "crédito privado", "fidc",
-    # 4. Juros, Inflação, Câmbio e Fiscal no Brasil (que impactam Ações, FIIs e Renda Fixa)
-    "selic", "copom", "ipca", "igp-m", "pib", "arcabouço", "meta fiscal",
+    "banco", "bancos", "crédito", "financiamento", "inadimplência", "poupança",
+    # 4. Juros, Inflação, Câmbio, Fiscal e Macroeconomia
+    "selic", "copom", "ipca", "igp-m", "pib", "inflação", "juros", "taxa", "taxas",
+    "economia", "econômico", "econômica", "fiscal", "arcabouço", "meta fiscal",
     "pacote fiscal", "incertezas fiscais", "corte de gastos", "di futuro",
     "curva de juros", "juros futuros", "dólar", "câmbio", "banco central",
-    "boletim focus", "galípolo", "haddad", "reforma tributária", "tributação de dividendos",
-    "cvm", "bndes", "cmn", "fed", "fomc",
+    "boletim focus", "galípolo", "haddad", "fazenda", "governo", "congresso",
+    "reforma tributária", "imposto", "tributação", "orçamento", "dívida",
+    "balança comercial", "exportações", "importações", "emprego", "desemprego", "consumo",
+    "cvm", "bndes", "cmn", "fed", "fomc", "wall street", "s&p 500", "nasdaq", "dow jones",
+    "treasuries", "eua", "china",
 )
 
 # ==============================================================================
-# TAXONOMIA FINANCEIRA PARA PONTUAÇÃO (FOCO: AÇÕES B3, FIIs E RENDA FIXA)
+# TAXONOMIA FINANCEIRA PARA PONTUAÇÃO (FOCO: AÇÕES, FIIs, RENDA FIXA E ECONOMIA)
 # ==============================================================================
 TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
         "label": "🟢 <b>DIVIDENDOS</b>",
         "termos": {
-            "dividendos": 22,
-            "dividendo": 22,
-            "jcp": 24,
-            "juros sobre capital próprio": 24,
-            "juros sobre o capital próprio": 24,
-            "rendimentos": 16,
-            "rendimento por cota": 24,
-            "por cota": 18,
-            "data-com": 24,
-            "data com": 22,
-            "data-ex": 20,
-            "proventos": 20,
-            "dividend yield": 20,
-            "payout": 18,
-            "bonificação": 16,
+            "dividendos": 18,
+            "dividendo": 18,
+            "jcp": 20,
+            "juros sobre capital próprio": 20,
+            "juros sobre o capital próprio": 20,
+            "rendimentos": 14,
+            "rendimento por cota": 20,
+            "por cota": 15,
+            "data-com": 20,
+            "data com": 18,
+            "data-ex": 18,
+            "proventos": 18,
+            "dividend yield": 18,
+            "payout": 15,
+            "bonificação": 14,
         },
     },
     "FUNDOS_IMOBILIARIOS": {
         "label": "🏢 <b>FUNDOS IMOBILIÁRIOS</b>",
         "termos": {
-            "fundo imobiliário": 24,
-            "fundos imobiliários": 24,
-            "fiis": 24,
-            "fii": 22,
-            "ifix": 24,
-            "fiagro": 20,
-            "p/vp": 22,
-            "vacância": 20,
-            "vacância física": 22,
-            "vacância financeira": 22,
-            "cap rate": 20,
-            "emissão de cotas": 20,
-            "subscrição": 18,
-            "galpão logístico": 20,
-            "galpões logísticos": 20,
-            "lajes corporativas": 20,
-            "fii de tijolo": 24,
-            "fiis de tijolo": 24,
-            "fii de papel": 24,
-            "fiis de papel": 24,
-            "cotistas": 16,
-            "valor patrimonial": 18,
+            "fundo imobiliário": 20,
+            "fundos imobiliários": 20,
+            "fiis": 20,
+            "fii": 18,
+            "ifix": 20,
+            "fiagro": 18,
+            "p/vp": 18,
+            "vacância": 16,
+            "cap rate": 16,
+            "emissão de cotas": 16,
+            "subscrição": 15,
+            "galpão logístico": 16,
+            "galpões logísticos": 16,
+            "lajes corporativas": 16,
+            "fii de tijolo": 20,
+            "fiis de tijolo": 20,
+            "fii de papel": 20,
+            "fiis de papel": 20,
+            "cotistas": 14,
+            "valor patrimonial": 15,
+            "imóveis": 12,
+            "imobiliário": 12,
+            "aluguel": 12,
+            "aluguéis": 12,
         },
     },
     "RENDA_FIXA": {
         "label": "🏦 <b>RENDA FIXA</b>",
         "termos": {
-            "renda fixa": 24,
-            "tesouro direto": 26,
-            "tesouro ipca+": 28,
-            "tesouro ipca": 26,
-            "tesouro selic": 26,
-            "tesouro prefixado": 26,
-            "tesouro renda+": 22,
-            "ipca+": 24,
-            "ipca +": 24,
-            "% do cdi": 24,
-            "do cdi": 18,
-            "cdi": 18,
-            "cdb": 20,
-            "cdbs": 20,
-            "lci": 22,
-            "lca": 22,
-            "cri": 18,
-            "cra": 18,
-            "debêntures": 20,
-            "debêntures incentivadas": 24,
-            "crédito privado": 20,
-            "títulos públicos": 20,
-            "marcação a mercado": 24,
-            "isento de ir": 20,
-            "isenção de imposto": 20,
+            "renda fixa": 20,
+            "tesouro direto": 22,
+            "tesouro ipca+": 24,
+            "tesouro ipca": 22,
+            "tesouro selic": 22,
+            "tesouro prefixado": 22,
+            "tesouro renda+": 20,
+            "ipca+": 20,
+            "ipca +": 20,
+            "% do cdi": 20,
+            "do cdi": 16,
+            "cdi": 16,
+            "cdb": 18,
+            "cdbs": 18,
+            "lci": 18,
+            "lca": 18,
+            "cri": 16,
+            "cra": 16,
+            "debêntures": 18,
+            "debêntures incentivadas": 20,
+            "crédito privado": 18,
+            "títulos públicos": 18,
+            "marcação a mercado": 20,
+            "isento de ir": 16,
+            "isenção de imposto": 16,
+            "poupança": 14,
         },
     },
     "ACOES_BALANCOS_NEGOCIOS": {
         "label": "🔵 <b>AÇÕES &amp; NEGÓCIOS</b>",
         "termos": {
-            "balanço": 18,
-            "lucro líquido": 22,
-            "lucro": 15,
-            "ebitda": 22,
-            "lajida": 20,
-            "prejuízo": 16,
-            "receita líquida": 20,
-            "margem líquida": 18,
-            "margem ebitda": 18,
-            "roe": 16,
-            "roic": 16,
-            "alavancagem": 15,
-            "dívida líquida": 16,
-            "geração de caixa": 16,
-            "guidance": 18,
-            "fato relevante": 26,
-            "fusão": 18,
-            "aquisição": 18,
-            "recompra de ações": 24,
-            "programa de recompra": 22,
-            "opa": 20,
-            "follow-on": 20,
-            "recuperação judicial": 20,
-            "privatização": 18,
-            "concessão": 16,
+            "ações": 14,
+            "ação": 12,
+            "bolsa": 14,
+            "balanço": 16,
+            "lucro líquido": 20,
+            "lucro": 14,
+            "ebitda": 20,
+            "lajida": 18,
+            "prejuízo": 15,
+            "receita líquida": 18,
+            "receita": 12,
+            "margem": 12,
+            "margem líquida": 16,
+            "margem ebitda": 16,
+            "roe": 15,
+            "roic": 15,
+            "alavancagem": 14,
+            "dívida líquida": 15,
+            "geração de caixa": 15,
+            "guidance": 16,
+            "fato relevante": 22,
+            "fusão": 16,
+            "aquisição": 16,
+            "m&a": 16,
+            "recompra de ações": 20,
+            "programa de recompra": 18,
+            "opa": 18,
+            "follow-on": 18,
+            "ipo": 15,
+            "recuperação judicial": 18,
+            "privatização": 16,
+            "concessão": 14,
             "leilão": 14,
-            "preço-alvo": 18,
-            "recomendação de compra": 18,
-            "carteira recomendada": 18,
-            "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
+            "preço-alvo": 16,
+            "recomendação": 14,
+            "carteira recomendada": 16,
+            "investidores": 12,
+            "investidor": 12,
+            "investimentos": 12,
+            "mercado": 10,
+            "empresas": 10,
+            "companhia": 10,
+            "negócios": 10,
+            "varejo": 12,
+            "bancos": 12,
+            "crédito": 12,
+            "1t": 12, "2t": 12, "3t": 12, "4t": 12,
         },
     },
     "MACROECONOMIA": {
         "label": "🟠 <b>JUROS &amp; ECONOMIA</b>",
         "termos": {
-            "copom": 22,
-            "selic": 22,
+            "copom": 20,
+            "selic": 20,
             "taxa de juros": 16,
             "juros": 14,
-            "juros futuros": 20,
-            "curva de juros": 20,
-            "di futuro": 20,
+            "juros futuros": 18,
+            "curva de juros": 18,
+            "di futuro": 18,
             "banco central": 16,
-            "fed": 18,
-            "fomc": 18,
-            "ata do fed": 20,
-            "ipca": 22,
-            "igp-m": 18,
+            "fed": 16,
+            "fomc": 16,
+            "ata do fed": 18,
+            "ipca": 20,
+            "igp-m": 16,
             "inflação": 14,
-            "pib": 16,
-            "boletim focus": 22,
-            "fiscal": 16,
-            "incertezas fiscais": 18,
-            "arcabouço fiscal": 18,
-            "ajuste fiscal": 18,
-            "pacote fiscal": 18,
+            "pib": 15,
+            "economia": 12,
+            "boletim focus": 20,
+            "fiscal": 15,
+            "incertezas fiscais": 16,
+            "arcabouço fiscal": 16,
+            "ajuste fiscal": 16,
+            "pacote fiscal": 16,
             "corte de gastos": 16,
-            "meta fiscal": 16,
-            "reforma tributária": 18,
-            "imposto sobre dividendos": 24,
+            "meta fiscal": 15,
+            "reforma tributária": 16,
+            "imposto": 12,
+            "tributação": 14,
             "dólar": 14,
-            "dólar à vista": 18,
-            "dólar comercial": 16,
-            "ibovespa": 20,
+            "câmbio": 14,
+            "ibovespa": 18,
+            "b3": 15,
+            "wall street": 14,
+            "s&p 500": 14,
+            "nasdaq": 14,
+            "dow jones": 14,
+            "petróleo": 12,
+            "minério de ferro": 14,
+            "tarifas": 12,
         },
     },
 }
@@ -393,7 +443,7 @@ def definir_tag_curta_e_precisa(
     titulo: str, lead: str, categoria_dominante: str, tickers: List[str], tickers_fii: List[str]
 ) -> str:
     """
-    Escolhe uma tag curta (1 a 2 palavras) focada em Ações, FIIs, Renda Fixa, Dividendos e Juros/Bolsa.
+    Escolhe uma tag curta (1 a 2 palavras) 100% coerente com o título da matéria.
     """
     t_low = titulo.lower()
     foco = f"{t_low} {lead[:180].lower()}"
@@ -410,6 +460,8 @@ def definir_tag_curta_e_precisa(
         return "📊 <b>BOLSA &amp; AÇÕES</b>"
     if any(k in t_low for k in ("dólar", "câmbio", "moeda")):
         return "💵 <b>DÓLAR &amp; CÂMBIO</b>"
+    if any(k in t_low for k in ("wall street", "s&p 500", "nasdaq", "dow jones", "ata do fed", "fed ", "fomc", "treasuries", "eua", "china", "tarifas")):
+        return "🌎 <b>MERCADO GLOBAL</b>"
     if any(k in t_low for k in ("selic", "copom", "ipca", "inflação", "juros", "focus", "banco central", "galípolo", "di futuro", "curva de juros")):
         return "🟠 <b>JUROS &amp; INFLAÇÃO</b>"
     if any(k in t_low for k in ("fiscal", "arcabouço", "gastos", "haddad", "fazenda", "dívida", "orçamento", "imposto", "tributária", "tributação")):
@@ -421,7 +473,7 @@ def definir_tag_curta_e_precisa(
 
 
 # ==============================================================================
-# MOTOR HEURÍSTICO DE SCORING (EXCLUSIVO: AÇÕES B3, FIIs E RENDA FIXA)
+# MOTOR HEURÍSTICO DE SCORING CALIBRADO (AÇÕES B3, FIIs, RENDA FIXA E ECONOMIA)
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
     encontrados = REGEX_TICKER_B3.findall(texto)
@@ -435,38 +487,26 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     """
-    Filtro Estrito para Investidor de Ações (B3), FIIs e Renda Fixa:
-    - Exige OBRIGATORIAMENTE que o Título ou o 1º Parágrafo (Lead) contenha um ticker da B3 (XXXX3/4/11)
-      OU uma âncora do mercado brasileiro (ANCORAS_INVESTIDOR_BR: empresas da B3, FIIs/IFIX, Tesouro Direto/CDB/LCI/LCA/CDI,
-      Ibovespa, Selic, Copom, IPCA, Dólar, Fiscal).
-    - Qualquer notícia de empresa estrangeira (ex: IPO da Anthropic/Claude/SpaceX na Nasdaq) que não tenha vínculo
-      com Ações da B3, FIIs ou Renda Fixa no Brasil recebe Score 0 e é descartada imediatamente!
+    Filtro Calibrado para o Investidor de Ações (B3), FIIs, Renda Fixa e Negócios:
+    - Pontua termos de Dividendos, FIIs, Renda Fixa, Balanços/Ações e Juros/Economia.
+    - Verifica âncoras do universo do investidor no título e nos 3 primeiros parágrafos.
+    - Não aplica penalidade negativa quando a matéria tem poucos números regex, evitando
+      bloquear matérias relevantes em horários mais calmos.
     """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     lead = paragrafos[0]
+    tres_primeiros = " ".join(paragrafos[:3])
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
 
     titulo_low = re.sub(r"\breceita federal\b", "órgão tributário", titulo.lower())
     lead_low = re.sub(r"\breceita federal\b", "órgão tributário", lead.lower())
+    tres_low = re.sub(r"\breceita federal\b", "órgão tributário", tres_primeiros.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão tributário", corpo_texto.lower())
 
     tickers = extrair_tickers_b3(texto_completo)
-    tickers_titulo_lead = extrair_tickers_b3(f"{titulo} {lead}")
-
-    tem_ancora_br = (
-        bool(tickers_titulo_lead)
-        or any(
-            re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", f"{titulo_low} {lead_low}")
-            for a in ANCORAS_INVESTIDOR_BR
-        )
-    )
-
-    # TRAVA OBRIGATÓRIA: Sem âncora em Ações B3, FIIs, Renda Fixa ou Macro/Juros Brasil no título ou lead -> Descarta!
-    if not tem_ancora_br:
-        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     pontos_por_categoria: Dict[str, int] = {cat: 0 for cat in TAXONOMIA_PESOS}
     termos_encontrados: List[str] = []
@@ -479,34 +519,41 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
             no_corpo = bool(re.search(padrao, corpo_low))
 
             if no_titulo:
-                pontos_por_categoria[cat_key] += int(peso * 2.0)
+                pontos_por_categoria[cat_key] += int(peso * 1.8)
                 termos_encontrados.append(termo)
             elif no_lead:
-                pontos_por_categoria[cat_key] += int(peso * 1.3)
+                pontos_por_categoria[cat_key] += int(peso * 1.2)
                 termos_encontrados.append(termo)
             elif no_corpo:
-                pontos_por_categoria[cat_key] += int(peso * 0.7)
+                pontos_por_categoria[cat_key] += int(peso * 0.6)
                 termos_encontrados.append(termo)
 
     units_acoes = {"TAEE11", "SAPR11", "SANB11", "ALUP11", "KLBN11", "BPAC11", "ENGI11", "IGTI11"}
     tickers_fii = [t for t in tickers if t.endswith("11") and t not in units_acoes]
     if tickers_fii:
-        pontos_por_categoria["FUNDOS_IMOBILIARIOS"] += len(tickers_fii) * 22
+        pontos_por_categoria["FUNDOS_IMOBILIARIOS"] += len(tickers_fii) * 20
 
-    bonus_tickers = min(len(tickers) * 16, 48)
-    bonus_ancora = 10
     soma_taxonomia = sum(pontos_por_categoria.values())
 
-    if soma_taxonomia == 0 and bonus_tickers == 0:
+    tem_ancora_br = (
+        bool(tickers)
+        or any(
+            re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", f"{titulo_low} {tres_low}")
+            for a in ANCORAS_INVESTIDOR_BR
+        )
+    )
+
+    if not tem_ancora_br and soma_taxonomia < SCORE_MINIMO_CORTE:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
+    if soma_taxonomia == 0 and not tickers:
+        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
+
+    bonus_tickers = min(len(tickers) * 14, 42)
+    bonus_ancora = 8 if tem_ancora_br else 0
+
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
-    if len(metricas) >= 2:
-        bonus_metricas = min(len(metricas) * 4, 24)
-    elif len(metricas) == 1:
-        bonus_metricas = 4
-    else:
-        bonus_metricas = -16
+    bonus_metricas = min(len(metricas) * 3, 18)
 
     categoria_dominante = max(pontos_por_categoria, key=lambda k: pontos_por_categoria[k])
     score_final = max(0, soma_taxonomia + bonus_tickers + bonus_ancora + bonus_metricas)
@@ -563,6 +610,11 @@ def salvar_historico(links: List[str], titulos: List[str]) -> None:
 
 
 def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
+    """
+    Verifica se a mesma notícia já saiu recentemente (compara apenas com os últimos 60 títulos
+    e exige >= 4 palavras específicas em comum e >= 60% de sobreposição, evitando que
+    termos comuns como 'Fundos Imobiliários' ou 'Tesouro Direto' bloqueiem matérias diferentes).
+    """
     tokens_novo = {
         p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", novo_titulo.lower())
         if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -570,7 +622,9 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
     if not tokens_novo:
         return False
 
-    for antigo in titulos_anteriores:
+    for antigo in titulos_anteriores[-60:]:
+        if novo_titulo.strip().lower() == antigo.strip().lower():
+            return True
         tokens_antigo = {
             p for p in re.findall(r"[a-z0-9áàéíóúâêîôûãõç]+", antigo.lower())
             if len(p) > 3 and p not in STOPWORDS_DEDUP
@@ -578,8 +632,11 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
         if not tokens_antigo:
             continue
         inter = tokens_novo & tokens_antigo
-        ratio = len(inter) / min(len(tokens_novo), len(tokens_antigo))
-        if len(inter) >= 2 and ratio >= 0.35:
+        menor = min(len(tokens_novo), len(tokens_antigo))
+        ratio = len(inter) / menor if menor > 0 else 0.0
+        if len(inter) >= 4 and ratio >= 0.60:
+            return True
+        if menor <= 3 and len(inter) >= 3 and ratio >= 0.75:
             return True
     return False
 
@@ -704,7 +761,7 @@ def limpar_html(txt: str) -> str:
 
 
 def paragrafo_eh_ruido_editorial(txt: str, titulo: str) -> bool:
-    if not txt or len(txt) < 45:
+    if not txt or len(txt) < 40:
         return True
     if txt.strip().endswith("?"):
         return True
@@ -757,17 +814,31 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
                 if not paragrafo_eh_ruido_editorial(p, titulo):
                     paragrafos_limpos.append(p)
 
-    if not paragrafos_limpos and desc_bruta:
-        t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
-        frases = [
-            f.strip()
-            for f in re.split(r"(?<=[.!?])\s+", t_desc)
-            if len(f.strip()) >= 35 and not f.strip().endswith("?")
-        ]
-        if len(frases) >= 3:
-            paragrafos_limpos = [frases[0], " ".join(frases[1:-1]), frases[-1]]
-        elif t_desc and len(t_desc) >= 60:
-            paragrafos_limpos = [t_desc]
+    # Fallback enriquecido com <content:encoded> ou <description> do RSS quando o site bloqueia scraping
+    if len(paragrafos_limpos) < 2 and desc_bruta:
+        blocos_p = re.findall(r"<p\b[^>]*>(.*?)</p>", desc_bruta, flags=re.DOTALL | re.IGNORECASE)
+        if blocos_p:
+            candidatos_rss: List[str] = []
+            for b in blocos_p:
+                p = limpar_caudas_wordpress(limpar_html(b))
+                if not paragrafo_eh_ruido_editorial(p, titulo):
+                    candidatos_rss.append(p)
+            if len(candidatos_rss) > len(paragrafos_limpos):
+                paragrafos_limpos = candidatos_rss
+
+        if len(paragrafos_limpos) < 2:
+            t_desc = limpar_caudas_wordpress(limpar_html(desc_bruta))
+            frases = [
+                f.strip()
+                for f in re.split(r"(?<=[.!?])\s+", t_desc)
+                if len(f.strip()) >= 35 and not f.strip().endswith("?")
+            ]
+            if len(frases) >= 3:
+                paragrafos_limpos = [frases[0], " ".join(frases[1:-1]), frases[-1]]
+            elif len(frases) == 2:
+                paragrafos_limpos = [frases[0], frases[1]]
+            elif not paragrafos_limpos and t_desc and len(t_desc) >= 60:
+                paragrafos_limpos = [t_desc]
 
     return paragrafos_limpos
 
@@ -890,10 +961,10 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
     todas_frases: List[str] = []
     for p in paragrafos:
         for f in dividir_em_frases_completas(p):
-            if len(f) >= 38 and not frase_repete_informacao(f, todas_frases):
+            if len(f) >= 35 and not frase_repete_informacao(f, todas_frases):
                 todas_frases.append(f)
 
-    if len(todas_frases) < 3:
+    if len(todas_frases) < 2:
         return None
 
     blocos: List[str] = []
@@ -903,23 +974,30 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
         if len(cand) <= max_por_bloco:
             bloco_atual = cand
         else:
-            if bloco_atual and len(bloco_atual) >= 65:
+            if bloco_atual and len(bloco_atual) >= 55:
                 blocos.append(bloco_atual)
             bloco_atual = truncar_frase_limpa(f, max_por_bloco)
-    if bloco_atual and len(bloco_atual) >= 55:
+    if bloco_atual and len(bloco_atual) >= 45:
         blocos.append(bloco_atual)
 
     if len(blocos) < 3:
-        blocos_fallback = [truncar_frase_limpa(p, max_por_bloco) for p in paragrafos if len(p) >= 45]
+        blocos_fallback = [truncar_frase_limpa(p, max_por_bloco) for p in paragrafos if len(p) >= 40]
         blocos_fallback = [b for b in dict.fromkeys(blocos_fallback) if b]
         if len(blocos_fallback) >= 3:
             blocos = blocos_fallback
-        else:
+        elif len(todas_frases) >= 3:
             b1 = truncar_frase_limpa(todas_frases[0], max_por_bloco)
             b2 = truncar_frase_limpa(todas_frases[1], max_por_bloco)
             b3 = truncar_frase_limpa(" ".join(todas_frases[2:4]), max_por_bloco)
             if b1 and b2 and b3:
                 return [b1, b2, b3]
+        elif len(todas_frases) == 2:
+            b1 = truncar_frase_limpa(todas_frases[0], max_por_bloco)
+            b2 = truncar_frase_limpa(todas_frases[1], max_por_bloco)
+            if b1 and b2:
+                return [b1, b2]
+            return None
+        else:
             return None
 
     p_comeco = blocos[0]
@@ -960,11 +1038,13 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
         p_fim = melhor_fim
 
         escolhidos = [p_comeco, p_meio1, p_meio2, p_fim]
-    else:
+    elif len(blocos) == 3:
         escolhidos = [blocos[0], blocos[1], blocos[2]]
+    else:
+        escolhidos = blocos[:2]
 
     normalizados = {b.lower().strip() for b in escolhidos if b.strip()}
-    if len(normalizados) < 3:
+    if len(normalizados) < 2:
         return None
 
     return escolhidos
@@ -1006,14 +1086,16 @@ def montar_mensagem_investidor(
             paragrafos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_ajustados]
             post_completo = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(paragrafos_html)
 
-    if tamanho_texto_visivel(post_completo) < 420:
+    if tamanho_texto_visivel(post_completo) < 260:
         return None
 
     blocos_curtos = [
         truncar_frase_limpa(blocos_narrativa[0], 210) or blocos_narrativa[0][:210],
-        truncar_frase_limpa(blocos_narrativa[1], 220) or blocos_narrativa[1][:220],
-        truncar_frase_limpa(blocos_narrativa[-1], 210) or blocos_narrativa[-1][:210],
+        truncar_frase_limpa(blocos_narrativa[min(1, len(blocos_narrativa) - 1)], 220) or blocos_narrativa[min(1, len(blocos_narrativa) - 1)][:220],
     ]
+    if len(blocos_narrativa) >= 3:
+        blocos_curtos.append(truncar_frase_limpa(blocos_narrativa[-1], 210) or blocos_narrativa[-1][:210])
+
     curtos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_curtos if p]
     caption_curta = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(curtos_html)
     if len(caption_curta) > TELEGRAM_CAPTION_LIMIT:
@@ -1201,13 +1283,12 @@ async def buscar_feed_rss(
 
         link = normalizar_url(link_el.text if link_el is not None else "")
         title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
-        desc_bruta = (
-            desc_el.text
-            if desc_el is not None and desc_el.text
-            else (content_el.text if content_el is not None and content_el.text else "")
-        )
+        texto_desc = desc_el.text if desc_el is not None and desc_el.text else ""
+        texto_content = content_el.text if content_el is not None and content_el.text else ""
+        # Usa <content:encoded> quando for mais completo que <description> (ajuda se o site bloquear scraping)
+        desc_bruta = texto_content if len(texto_content) > len(texto_desc) else texto_desc
 
-        if not link or not title or len(title) < 25:
+        if not link or not title or len(title) < 22:
             continue
 
         dt_pub = extrair_data_publicacao(item)
@@ -1215,7 +1296,8 @@ async def buscar_feed_rss(
             continue
 
         idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
-        if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -10.0:
+        # Tolera até -200 min para feeds brasileiros que informam horário BRT com fuso +0000
+        if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -200.0:
             continue
 
         if eh_propaganda_ou_lixo(title, desc_bruta, link):
@@ -1267,22 +1349,35 @@ async def carregar_proximas_noticias(
         *(buscar_feed_rss(client, sem, url) for url in FEEDS)
     )
 
-    candidatos_brutos = [
-        item for sublista in resultados_feeds for item in sublista
-        if item["link"] not in set_links and gerar_hash_url(item["link"]) not in set_links
-    ]
+    # Deduplica URLs repetidas entre múltiplos sub-feeds (ex: InfoMoney geral + mercados + economia)
+    candidatos_unicos: List[Dict[str, Any]] = []
+    hashes_enfileirados: Set[str] = set()
+    for sublista in resultados_feeds:
+        for item in sublista:
+            link_h = gerar_hash_url(item["link"])
+            if item["link"] in set_links or link_h in set_links or link_h in hashes_enfileirados:
+                continue
+            hashes_enfileirados.add(link_h)
+            candidatos_unicos.append(item)
 
-    candidatos_brutos.sort(key=lambda x: x["dt_pub"], reverse=True)
+    candidatos_unicos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     noticias_aprovadas: List[NoticiaPreparada] = []
-    for cand in candidatos_brutos[:30]:
+    qtd_dup_titulo = 0
+    qtd_descartadas = 0
+
+    for cand in candidatos_unicos[:60]:
+        if len(noticias_aprovadas) >= limite * 2:
+            break
+
         title = cand["title"]
         link = cand["link"]
         link_hash = gerar_hash_url(link)
         desc_bruta = cand["desc_bruta"]
         item = cand["item"]
 
-        if link in set_links or link_hash in set_links or eh_mesma_noticia(title, titulos_rodada):
+        if eh_mesma_noticia(title, titulos_rodada):
+            qtd_dup_titulo += 1
             continue
 
         foto_rss, video_rss, audio_rss = extrair_midias_do_rss(item, desc_bruta)
@@ -1291,17 +1386,20 @@ async def carregar_proximas_noticias(
         )
 
         if not paragrafos:
+            qtd_descartadas += 1
             logger.info("Descartada (texto da página não pôde ser extraído): %s", title)
             continue
 
         if eh_propaganda_ou_lixo(title, " ".join(paragrafos[:2]), link):
+            qtd_descartadas += 1
             logger.info("Descartada por filtro de propaganda/tema: %s", title)
             continue
 
         analise = avaliar_impacto_financeiro(title, paragrafos)
         if analise.score_total < SCORE_MINIMO_CORTE:
+            qtd_descartadas += 1
             logger.info(
-                "Descartada por filtro rígido de investidor B3/FIIs/Renda Fixa (Score %d < %d): %s",
+                "Descartada por filtro de investidor (Score %d < %d): %s",
                 analise.score_total,
                 SCORE_MINIMO_CORTE,
                 title,
@@ -1310,6 +1408,7 @@ async def carregar_proximas_noticias(
 
         montagem = montar_mensagem_investidor(title, paragrafos, analise)
         if not montagem:
+            qtd_descartadas += 1
             logger.info("Descartada por não atingir estrutura completa (Começo, Meio e Fim): %s", title)
             continue
 
@@ -1340,6 +1439,14 @@ async def carregar_proximas_noticias(
         titulos_rodada.append(title)
         set_links.add(link)
         set_links.add(link_hash)
+
+    logger.info(
+        "Resumo do ciclo: %d links novos únicos | %d pulados (título repetido) | %d descartados | %d aprovados",
+        len(candidatos_unicos),
+        qtd_dup_titulo,
+        qtd_descartadas,
+        len(noticias_aprovadas),
+    )
 
     noticias_aprovadas.sort(key=lambda n: (n.score, n.dt_pub), reverse=True)
     selecionadas = noticias_aprovadas[:limite]
