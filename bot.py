@@ -43,11 +43,12 @@ GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
-MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "180"))  # 3 horas (evita seca e não ressuscita matérias antigas)
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "14"))  # Filtro equilibrado: qualidade sem travar o canal
+MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "240"))  # 4 horas
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "18"))  # Foco estrito: Ações B3, FIIs e Renda Fixa
 MAX_CONCURRENT_REQUESTS = 6
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
+MIN_IMAGE_BYTES = 8 * 1024                # 8 KB mínimos (rejeita pixels 1x1, ícones e logos minúsculos)
 MAX_VIDEO_BYTES = 50 * 1024 * 1024        # 50 MB (Limite da Telegram Bot API)
 TELEGRAM_CAPTION_LIMIT = 1024             # Limite oficial de caption em sendPhoto/sendVideo
 ALVO_MAX_CARACTERES_POST = 1520           # Teto para manter matérias grandes em ~1300-1400 caracteres
@@ -66,22 +67,21 @@ HEADERS = {
     "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# Feeds focados em Ações B3, FIIs, Renda Fixa, Negócios, Economia e Política Econômica (sem links 404)
+HEADERS_TELEGRAM_PREVIEW = {
+    "User-Agent": "TelegramBot (like TwitterBot)",
+    "Accept": "image/jpeg,image/png,*/*;q=0.5",
+}
+
+# Feeds EXCLUSIVOS de investimentos: Ações B3, FIIs e Renda Fixa (sem política geral, cripto ou variedades)
 FEEDS = [
-    "https://www.infomoney.com.br/feed/",
     "https://www.infomoney.com.br/mercados/feed/",
     "https://www.infomoney.com.br/onde-investir/feed/",
-    "https://www.infomoney.com.br/economia/feed/",
-    "https://www.infomoney.com.br/negocios/feed/",
-    "https://www.infomoney.com.br/politica/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
     "https://einvestidor.estadao.com.br/feed/",
-    "https://braziljournal.com/feed",
-    "https://g1.globo.com/rss/g1/economia/",
-    "https://exame.com/feed/",
     "https://exame.com/invest/feed/",
+    "https://braziljournal.com/feed",
     "https://valorinveste.globo.com/rss/valorinveste",
     "https://fiis.com.br/feed/",
 ]
@@ -89,10 +89,11 @@ FEEDS = [
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/futebol/", "/entretenimento/", "/pop/",
     "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/",
-    "/curiosidades/", "/tv/", "/famosos/", "/cultura/",
-    "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
+    "/curiosidades/", "/tv/", "/famosos/", "/cultura/", "/politica/",
+    "/mundo/", "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-",
     "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
-    "/future-of-money/", "/cripto/",
+    "/future-of-money/", "/cripto/", "/criptomoedas/", "/carreira/",
+    "/tecnologia/", "/inteligencia-artificial/",
 )
 
 # 1. Termos de propaganda explícita e venda de cursos (verificados no título e início do texto)
@@ -104,19 +105,22 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "webinar", "mentoria", "baixe o e-book", "treinamento gratuito",
     "evento online", "evento gratuito", "cupom de desconto",
     "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
-    "cartão de criptomoedas", "encerra seu cartão",
+    "cartão de criptomoedas", "encerra seu cartão", "cartão black", "anuidade grátis",
 )
 
-# 2. Assuntos fora do escopo do investidor de Ações, FIIs e Renda Fixa (verificados APENAS no TÍTULO)
+# 2. Assuntos fora do foco estrito (Ações B3, FIIs e Renda Fixa) — verificados APENAS no TÍTULO
 BLOQUEADOS_APENAS_NO_TITULO = (
-    # Startups de IA / Curiosidades tech sem relação com investidor brasileiro
-    "dona do claude", "anthropic", "chatgpt", "neuralink",
-    # Assistencialismo / Concursos / Loterias
-    "calendário do inss", "meu inss", "benefício do inss",
+    # Startups estrangeiras / IA / Cripto / Big Techs fora da B3
+    "dona do claude", "anthropic", "openai", "chatgpt", "spacex", "elon musk",
+    "neuralink", "tiktok", "bytedance", "sam altman", "bitcoin", "ethereum",
+    "criptomoeda", "criptomoedas", "solana", "dogecoin", "binance",
+    # Política partidária / Assistencialismo / Concursos / Loterias
+    "lula", "bolsonaro", "stf", "eleições", "eleição", "pesquisa eleitoral",
+    "calendário do inss", "meu inss", "benefício do inss", "aposentadoria do inss",
     "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
-    "saque-aniversário", "cnh social", "concurso público", "edital publicado",
+    "saque-aniversário", "fgts", "cnh social", "concurso público", "edital publicado",
     "quem pode fazer mba", "horóscopo", "mega-sena", "lotofácil", "loteria",
-    # Esportes / Entretenimento / Jogos / Policial
+    # Esportes / Entretenimento / Jogos / Policial / Tempo real
     "fofoca", "onde assistir", "escalação", "futebol", "brasileirão",
     "campeonato brasileiro", "data fifa", "libertadores", "copa do brasil",
     "champions league", "eliminatórias", "seleção brasileira",
@@ -127,7 +131,7 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "lei da dosimetria", "ao vivo:", "tempo real:", "minuto a minuto",
 )
 
-# Apenas palavras gramaticais/genéricas (NUNCA incluir ativos/temas como ibovespa, dolar, fiis, petrobras, fed)
+# Apenas palavras gramaticais/genéricas (NUNCA incluir ativos/temas como ibovespa, fiis, petrobras, tesouro)
 STOPWORDS_DEDUP = {
     "aprova", "anuncia", "diz", "apos", "sobre", "pode", "novo", "nova", "novos", "novas",
     "nesta", "neste", "segundo", "veja", "confira", "contra", "entre", "mais", "menos",
@@ -141,17 +145,16 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# ÂNCORAS DO INVESTIDOR (AÇÕES B3, FIIs, RENDA FIXA, NEGÓCIOS E ECONOMIA)
+# ÂNCORAS OBRIGATÓRIAS DOS 3 PILARES: APENAS AÇÕES B3, FIIs E RENDA FIXA
+# (Matéria sem nenhuma âncora desta lista no Título ou 2 primeiros parágrafos é DESCARTADA!)
 # ==============================================================================
-ANCORAS_INVESTIDOR_BR = (
-    # 1. Ações da B3, Mercado Acionário & Empresas Listadas
-    "ibovespa", "b3", "bolsa", "ações", "ação", "mercado", "investidor", "investidores",
-    "investimento", "investimentos", "carteira", "dividendos", "dividendo", "proventos",
-    "jcp", "lucro", "receita", "balanço", "ebitda", "resultado", "resultados",
-    "empresa", "empresas", "companhia", "companhias", "negócios", "empreendedor",
-    "empreendedores", "setor", "varejo", "varejista", "atacado", "indústria",
-    "agronegócio", "agro", "commodities", "petróleo", "minério", "ouro", "siderurgia",
-    "elétrica", "elétricas", "energia", "saneamento", "telecom", "aviação",
+ANCORAS_3_PILARES = (
+    # PILAR 1: AÇÕES DA B3 & EMPRESAS LISTADAS
+    "ibovespa", "b3", "bolsa brasileira", "bolsa de valores", "ações", "ação",
+    "dividendos", "dividendo", "jcp", "juros sobre capital próprio", "proventos",
+    "data-com", "data com", "data-ex", "dividend yield", "payout", "bonificação",
+    "fato relevante", "recompra de ações", "programa de recompra", "follow-on", "opa",
+    "carteira recomendada", "preço-alvo", "balanço", "lucro líquido", "ebitda", "lajida",
     "petrobras", "vale", "itaú", "itau", "bradesco", "banco do brasil",
     "santander", "btg", "itaúsa", "itausa", "sabesp", "eletrobras", "taesa", "cemig",
     "copel", "engie", "equatorial", "cpfl", "auren", "alupar", "neoenergia", "isa energia",
@@ -162,214 +165,155 @@ ANCORAS_INVESTIDOR_BR = (
     "cury", "direcional", "multiplan", "iguatemi", "allos", "totvs", "magazine luiza",
     "casas bahia", "lojas renner", "c&a", "guararapes", "raia drogasil", "hapvida",
     "rede d'or", "fleury", "hypera", "cosan", "rumo", "ccr", "motiva", "ecorodovias",
-    "santos brasil", "nubank", "inter", "xp", "stone", "pagbank", "mercado livre",
-    "b3sa3", "petr4", "petr3", "vale3", "itub4", "bbas3", "bbdc4", "itsa4",
+    "santos brasil", "nubank", "inter", "stone", "pagbank", "mercado livre", "assai", "assaí",
+    "carrefour", "smart fit", "marcopolo", "mahle", "metal leve", "slc agrícola", "dexco",
+    "b3sa3", "petr4", "petr3", "vale3", "itub4", "bbas3", "bbdc4", "itsa4", "bpac11",
     "wege3", "sbsp3", "elet3", "taee11", "cmig4", "cple3", "egie3", "eqtl3", "sapr11",
     "bbse3", "cxse3", "vivt3", "tims3", "klbn11", "suzb3", "ggbr4", "prio3", "rent3",
-    # 2. Fundos Imobiliários (FIIs), Imóveis & Fiagros
-    "fundo imobiliário", "fundos imobiliários", "fii", "fiis", "ifix", "fiagro",
+    # PILAR 2: FUNDOS IMOBILIÁRIOS (FIIs) & FIAGROS
+    "fundo imobiliário", "fundos imobiliários", "fii", "fiis", "ifix", "fiagro", "fiagros",
     "fii de tijolo", "fiis de tijolo", "fii de papel", "fiis de papel", "galpões logísticos",
-    "lajes corporativas", "vacância", "p/vp", "rendimento por cota", "cotistas",
-    "imóvel", "imóveis", "imobiliário", "imobiliários", "aluguel", "aluguéis",
-    "construtora", "construtoras", "shopping", "shoppings",
+    "galpão logístico", "lajes corporativas", "vacância", "p/vp", "rendimento por cota",
+    "cotistas", "emissão de cotas", "subscrição de cotas", "cap rate", "valor patrimonial",
     "mxrf11", "hglg11", "xpml11", "knri11", "kncr11", "knip11", "visc11", "brco11",
     "btlg11", "hgru11", "trxf11", "cpts11", "irdm11", "vghf11", "knsc11", "hgbs11",
     "vilg11", "lvbi11", "pvbi11", "hgre11", "jsre11", "bcff11", "rztr11", "knca11",
-    # 3. Renda Fixa, Bancos, Crédito & Tesouro Direto
+    "xplg11", "alzr11", "mall11", "hsml11", "rbrr11", "rbrf11", "vgir11", "ggrc11",
+    # PILAR 3: RENDA FIXA & TESOURO DIRETO (+ JUROS QUE PRECIFICAM RENDA FIXA)
     "renda fixa", "tesouro direto", "tesouro selic", "tesouro ipca", "tesouro ipca+",
-    "tesouro prefixado", "tesouro renda+", "ntn-b", "ltn", "lft", "cdb", "cdbs",
-    "lci", "lca", "lcis", "lcas", "cri", "cra", "debênture", "debêntures",
-    "cdi", "marcação a mercado", "títulos públicos", "crédito privado", "fidc",
-    "banco", "bancos", "crédito", "financiamento", "inadimplência", "poupança",
-    # 4. Juros, Inflação, Câmbio, Fiscal e Macroeconomia
-    "selic", "copom", "ipca", "igp-m", "pib", "inflação", "juros", "taxa", "taxas",
-    "economia", "econômico", "econômica", "fiscal", "arcabouço", "meta fiscal",
-    "pacote fiscal", "incertezas fiscais", "corte de gastos", "di futuro",
-    "curva de juros", "juros futuros", "dólar", "câmbio", "banco central",
-    "boletim focus", "galípolo", "haddad", "fazenda", "governo", "congresso",
-    "reforma tributária", "imposto", "tributação", "orçamento", "dívida",
-    "balança comercial", "exportações", "importações", "emprego", "desemprego", "consumo",
-    "cvm", "bndes", "cmn", "fed", "fomc", "wall street", "s&p 500", "nasdaq", "dow jones",
-    "treasuries", "eua", "china",
+    "tesouro prefixado", "tesouro renda+", "tesouro educa+", "ntn-b", "ltn", "lft",
+    "cdb", "cdbs", "lci", "lca", "lcis", "lcas", "cri", "cra", "cris", "cras",
+    "debênture", "debêntures", "debêntures incentivadas", "cdi", "% do cdi",
+    "marcação a mercado", "títulos públicos", "crédito privado", "fidc", "poupança",
+    "selic", "copom", "di futuro", "curva de juros", "juros futuros",
 )
 
 # ==============================================================================
-# TAXONOMIA FINANCEIRA PARA PONTUAÇÃO (FOCO: AÇÕES, FIIs, RENDA FIXA E ECONOMIA)
+# TAXONOMIA ESTRITA NOS 3 PILARES (DIVIDENDOS, FIIs, RENDA FIXA E AÇÕES B3)
 # ==============================================================================
 TAXONOMIA_PESOS: Dict[str, Dict[str, Any]] = {
     "PROVENTOS": {
         "label": "🟢 <b>DIVIDENDOS</b>",
         "termos": {
-            "dividendos": 18,
-            "dividendo": 18,
-            "jcp": 20,
-            "juros sobre capital próprio": 20,
-            "juros sobre o capital próprio": 20,
-            "rendimentos": 14,
-            "rendimento por cota": 20,
-            "por cota": 15,
-            "data-com": 20,
-            "data com": 18,
-            "data-ex": 18,
-            "proventos": 18,
-            "dividend yield": 18,
-            "payout": 15,
-            "bonificação": 14,
+            "dividendos": 22,
+            "dividendo": 22,
+            "jcp": 24,
+            "juros sobre capital próprio": 24,
+            "juros sobre o capital próprio": 24,
+            "rendimentos": 16,
+            "rendimento por cota": 24,
+            "por cota": 18,
+            "data-com": 24,
+            "data com": 22,
+            "data-ex": 20,
+            "proventos": 20,
+            "dividend yield": 20,
+            "payout": 18,
+            "bonificação": 16,
         },
     },
     "FUNDOS_IMOBILIARIOS": {
         "label": "🏢 <b>FUNDOS IMOBILIÁRIOS</b>",
         "termos": {
-            "fundo imobiliário": 20,
-            "fundos imobiliários": 20,
-            "fiis": 20,
-            "fii": 18,
-            "ifix": 20,
-            "fiagro": 18,
-            "p/vp": 18,
-            "vacância": 16,
-            "cap rate": 16,
-            "emissão de cotas": 16,
-            "subscrição": 15,
-            "galpão logístico": 16,
-            "galpões logísticos": 16,
-            "lajes corporativas": 16,
-            "fii de tijolo": 20,
-            "fiis de tijolo": 20,
-            "fii de papel": 20,
-            "fiis de papel": 20,
-            "cotistas": 14,
-            "valor patrimonial": 15,
-            "imóveis": 12,
-            "imobiliário": 12,
-            "aluguel": 12,
-            "aluguéis": 12,
+            "fundo imobiliário": 24,
+            "fundos imobiliários": 24,
+            "fiis": 24,
+            "fii": 22,
+            "ifix": 24,
+            "fiagro": 22,
+            "fiagros": 22,
+            "p/vp": 20,
+            "vacância": 18,
+            "cap rate": 18,
+            "emissão de cotas": 20,
+            "subscrição": 16,
+            "galpão logístico": 18,
+            "galpões logísticos": 18,
+            "lajes corporativas": 18,
+            "fii de tijolo": 24,
+            "fiis de tijolo": 24,
+            "fii de papel": 24,
+            "fiis de papel": 24,
+            "cotistas": 16,
+            "valor patrimonial": 16,
         },
     },
     "RENDA_FIXA": {
         "label": "🏦 <b>RENDA FIXA</b>",
         "termos": {
-            "renda fixa": 20,
-            "tesouro direto": 22,
-            "tesouro ipca+": 24,
-            "tesouro ipca": 22,
-            "tesouro selic": 22,
-            "tesouro prefixado": 22,
-            "tesouro renda+": 20,
-            "ipca+": 20,
-            "ipca +": 20,
-            "% do cdi": 20,
-            "do cdi": 16,
-            "cdi": 16,
-            "cdb": 18,
-            "cdbs": 18,
-            "lci": 18,
-            "lca": 18,
-            "cri": 16,
-            "cra": 16,
-            "debêntures": 18,
-            "debêntures incentivadas": 20,
-            "crédito privado": 18,
-            "títulos públicos": 18,
-            "marcação a mercado": 20,
-            "isento de ir": 16,
-            "isenção de imposto": 16,
-            "poupança": 14,
+            "renda fixa": 24,
+            "tesouro direto": 26,
+            "tesouro ipca+": 28,
+            "tesouro ipca": 26,
+            "tesouro selic": 26,
+            "tesouro prefixado": 26,
+            "tesouro renda+": 24,
+            "tesouro educa+": 22,
+            "ntn-b": 22,
+            "ipca+": 24,
+            "ipca +": 24,
+            "% do cdi": 24,
+            "do cdi": 18,
+            "cdi": 18,
+            "cdb": 22,
+            "cdbs": 22,
+            "lci": 22,
+            "lca": 22,
+            "lcis": 22,
+            "lcas": 22,
+            "cri": 18,
+            "cra": 18,
+            "debêntures": 22,
+            "debênture": 20,
+            "debêntures incentivadas": 24,
+            "crédito privado": 20,
+            "títulos públicos": 22,
+            "marcação a mercado": 24,
+            "isento de ir": 18,
+            "isenção de imposto": 18,
+            "selic": 18,
+            "copom": 18,
+            "curva de juros": 18,
+            "juros futuros": 18,
+            "di futuro": 18,
         },
     },
-    "ACOES_BALANCOS_NEGOCIOS": {
-        "label": "🔵 <b>AÇÕES &amp; NEGÓCIOS</b>",
+    "ACOES_B3": {
+        "label": "📊 <b>AÇÕES B3</b>",
         "termos": {
-            "ações": 14,
-            "ação": 12,
-            "bolsa": 14,
-            "balanço": 16,
-            "lucro líquido": 20,
-            "lucro": 14,
-            "ebitda": 20,
-            "lajida": 18,
-            "prejuízo": 15,
-            "receita líquida": 18,
-            "receita": 12,
-            "margem": 12,
-            "margem líquida": 16,
-            "margem ebitda": 16,
-            "roe": 15,
-            "roic": 15,
-            "alavancagem": 14,
-            "dívida líquida": 15,
-            "geração de caixa": 15,
-            "guidance": 16,
-            "fato relevante": 22,
+            "ibovespa": 20,
+            "b3": 18,
+            "bolsa brasileira": 18,
+            "ações": 16,
+            "ação": 14,
+            "balanço": 18,
+            "lucro líquido": 22,
+            "lucro": 15,
+            "ebitda": 22,
+            "lajida": 20,
+            "prejuízo": 16,
+            "receita líquida": 20,
+            "margem líquida": 18,
+            "margem ebitda": 18,
+            "roe": 16,
+            "roic": 16,
+            "alavancagem": 15,
+            "dívida líquida": 16,
+            "geração de caixa": 16,
+            "guidance": 18,
+            "fato relevante": 24,
             "fusão": 16,
             "aquisição": 16,
-            "m&a": 16,
-            "recompra de ações": 20,
-            "programa de recompra": 18,
-            "opa": 18,
-            "follow-on": 18,
-            "ipo": 15,
+            "recompra de ações": 22,
+            "programa de recompra": 20,
+            "opa": 20,
+            "follow-on": 20,
             "recuperação judicial": 18,
             "privatização": 16,
-            "concessão": 14,
-            "leilão": 14,
-            "preço-alvo": 16,
-            "recomendação": 14,
-            "carteira recomendada": 16,
-            "investidores": 12,
-            "investidor": 12,
-            "investimentos": 12,
-            "mercado": 10,
-            "empresas": 10,
-            "companhia": 10,
-            "negócios": 10,
-            "varejo": 12,
-            "bancos": 12,
-            "crédito": 12,
-            "1t": 12, "2t": 12, "3t": 12, "4t": 12,
-        },
-    },
-    "MACROECONOMIA": {
-        "label": "🟠 <b>JUROS &amp; ECONOMIA</b>",
-        "termos": {
-            "copom": 20,
-            "selic": 20,
-            "taxa de juros": 16,
-            "juros": 14,
-            "juros futuros": 18,
-            "curva de juros": 18,
-            "di futuro": 18,
-            "banco central": 16,
-            "fed": 16,
-            "fomc": 16,
-            "ata do fed": 18,
-            "ipca": 20,
-            "igp-m": 16,
-            "inflação": 14,
-            "pib": 15,
-            "economia": 12,
-            "boletim focus": 20,
-            "fiscal": 15,
-            "incertezas fiscais": 16,
-            "arcabouço fiscal": 16,
-            "ajuste fiscal": 16,
-            "pacote fiscal": 16,
-            "corte de gastos": 16,
-            "meta fiscal": 15,
-            "reforma tributária": 16,
-            "imposto": 12,
-            "tributação": 14,
-            "dólar": 14,
-            "câmbio": 14,
-            "ibovespa": 18,
-            "b3": 15,
-            "wall street": 14,
-            "s&p 500": 14,
-            "nasdaq": 14,
-            "dow jones": 14,
-            "petróleo": 12,
-            "minério de ferro": 14,
-            "tarifas": 12,
+            "preço-alvo": 18,
+            "recomendação de compra": 18,
+            "carteira recomendada": 20,
+            "1t2": 14, "2t2": 14, "3t2": 14, "4t2": 14,
         },
     },
 }
@@ -415,6 +359,12 @@ MARCADORES_DESFECHO = (
     "no ano", "nos últimos 12 meses", "segundo analistas", "relatório",
 )
 
+TERMOS_URL_IMAGEM_RUIM = (
+    "/logo", "logo-", "logo_", "avatar", "gravatar", "favicon", "pixel", "spacer",
+    "placeholder", "default-image", "blank.", "1x1", ".svg", ".gif", "badge",
+    "/author/", "/perfil/", "/ads/", "banner-app",
+)
+
 
 @dataclass
 class AnaliseHeuristica:
@@ -423,6 +373,14 @@ class AnaliseHeuristica:
     categoria_label: str
     tickers: List[str] = field(default_factory=list)
     termos_detectados: List[str] = field(default_factory=list)
+
+
+@dataclass
+class ImagemVerificada:
+    url: str
+    pode_usar_preview_longo: bool
+    conteudo_bytes: Optional[bytes] = None
+    content_type: str = "image/jpeg"
 
 
 @dataclass
@@ -435,48 +393,39 @@ class NoticiaPreparada:
     score: int
     dt_pub: datetime
     imagem: Optional[str] = None
+    imagem_verificada: Optional[ImagemVerificada] = None
     video_candidato_url: Optional[str] = None
     audio: Optional[str] = None
 
 
 # ==============================================================================
-# SELETOR DE TAG CURTA, PRECISA E COERENTE COM O TÍTULO DA MATÉRIA
+# SELETOR DE TAG CURTA E PRECISA (APENAS AÇÕES B3, FIIs, DIVIDENDOS E RENDA FIXA)
 # ==============================================================================
+def _contem_termo_exato(texto_low: str, termos: Tuple[str, ...]) -> bool:
+    return any(re.search(r"(?<!\w)" + re.escape(k) + r"(?!\w)", texto_low) for k in termos)
+
+
 def definir_tag_curta_e_precisa(
     titulo: str, lead: str, categoria_dominante: str, tickers: List[str], tickers_fii: List[str]
 ) -> str:
-    """
-    Escolhe uma tag curta (1 a 2 palavras) 100% coerente com o título da matéria.
-    """
     t_low = titulo.lower()
-    foco = f"{t_low} {lead[:180].lower()}"
 
-    if any(k in t_low for k in ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data-com", "rendimentos")):
+    if _contem_termo_exato(t_low, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data-com", "data com", "rendimentos", "rendimento por cota")):
         return "🟢 <b>DIVIDENDOS</b>"
-    if tickers_fii or any(k in t_low for k in ("fii", "fiis", "fundo imobiliário", "fundos imobiliários", "ifix", "fiagro")):
+    if tickers_fii or _contem_termo_exato(t_low, ("fii", "fiis", "fundo imobiliário", "fundos imobiliários", "ifix", "fiagro", "fiagros")):
         return "🏢 <b>FUNDOS IMOBILIÁRIOS</b>"
-    if any(k in t_low for k in ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "renda fixa", "cdb", "lci", "lca", "debênture", "cri", "cra", "cdi")):
+    if _contem_termo_exato(t_low, ("tesouro direto", "tesouro ipca", "tesouro ipca+", "tesouro selic", "tesouro prefixado", "tesouro renda", "renda fixa", "cdb", "cdbs", "lci", "lcis", "lca", "lcas", "debênture", "debêntures", "cri", "cris", "cra", "cras", "cdi", "selic", "copom", "curva de juros", "juros futuros", "títulos públicos", "marcação a mercado")):
         return "🏦 <b>RENDA FIXA</b>"
-    if any(k in t_low for k in ("balanço", "lucro", "ebitda", "prejuízo", "receita", "1t", "2t", "3t", "4t", "resultado")):
+    if _contem_termo_exato(t_low, ("balanço", "lucro", "lucra", "ebitda", "prejuízo", "receita", "resultado", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26", "1t27", "2t27", "3t27", "4t27")):
         return "🔵 <b>BALANÇOS B3</b>"
-    if any(k in t_low for k in ("ibovespa", "bolsa", "b3", "pregão")):
+    if _contem_termo_exato(t_low, ("ibovespa", "bolsa", "b3", "pregão")):
         return "📊 <b>BOLSA &amp; AÇÕES</b>"
-    if any(k in t_low for k in ("dólar", "câmbio", "moeda")):
-        return "💵 <b>DÓLAR &amp; CÂMBIO</b>"
-    if any(k in t_low for k in ("wall street", "s&p 500", "nasdaq", "dow jones", "ata do fed", "fed ", "fomc", "treasuries", "eua", "china", "tarifas")):
-        return "🌎 <b>MERCADO GLOBAL</b>"
-    if any(k in t_low for k in ("selic", "copom", "ipca", "inflação", "juros", "focus", "banco central", "galípolo", "di futuro", "curva de juros")):
-        return "🟠 <b>JUROS &amp; INFLAÇÃO</b>"
-    if any(k in t_low for k in ("fiscal", "arcabouço", "gastos", "haddad", "fazenda", "dívida", "orçamento", "imposto", "tributária", "tributação")):
-        return "🟠 <b>CENÁRIO FISCAL</b>"
-    if tickers or any(k in foco for k in ("ação", "ações", "fato relevante", "aquisição", "fusão", "recompra", "concessão", "leilão")):
-        return "🔵 <b>AÇÕES &amp; EMPRESAS</b>"
 
-    return TAXONOMIA_PESOS.get(categoria_dominante, TAXONOMIA_PESOS["MACROECONOMIA"])["label"]
+    return TAXONOMIA_PESOS.get(categoria_dominante, TAXONOMIA_PESOS["ACOES_B3"])["label"]
 
 
 # ==============================================================================
-# MOTOR HEURÍSTICO DE SCORING CALIBRADO (AÇÕES B3, FIIs, RENDA FIXA E ECONOMIA)
+# MOTOR HEURÍSTICO ESTRITO NOS 3 PILARES: AÇÕES B3, FIIs E RENDA FIXA
 # ==============================================================================
 def extrair_tickers_b3(texto: str) -> List[str]:
     encontrados = REGEX_TICKER_B3.findall(texto)
@@ -490,25 +439,37 @@ def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     """
-    Filtro Calibrado para o Investidor de Ações (B3), FIIs, Renda Fixa e Negócios:
-    - Pontua termos de Dividendos, FIIs, Renda Fixa, Balanços/Ações e Juros/Economia.
-    - Verifica âncoras do universo do investidor no título e nos 3 primeiros parágrafos.
-    - Não aplica penalidade negativa quando a matéria tem poucos números regex.
+    Filtro Estrito nos 3 Pilares: Ações (B3), Fundos Imobiliários (FIIs) e Renda Fixa.
+    - Exige âncora direta dos 3 pilares no Título ou nos 2 primeiros parágrafos.
+    - Exige pontuação na taxonomia exclusiva dos 3 pilares (Dividendos, FIIs, Renda Fixa ou Ações B3).
+    - Sem penalidade negativa por ausência de números regex (evita bloquear boas matérias de análise).
     """
     if not paragrafos:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     lead = paragrafos[0]
-    tres_primeiros = " ".join(paragrafos[:3])
+    dois_primeiros = " ".join(paragrafos[:2])
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
 
     titulo_low = re.sub(r"\breceita federal\b", "órgão tributário", titulo.lower())
     lead_low = re.sub(r"\breceita federal\b", "órgão tributário", lead.lower())
-    tres_low = re.sub(r"\breceita federal\b", "órgão tributário", tres_primeiros.lower())
+    foco_inicial_low = re.sub(r"\breceita federal\b", "órgão tributário", f"{titulo} {dois_primeiros}".lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão tributário", corpo_texto.lower())
 
     tickers = extrair_tickers_b3(texto_completo)
+    tickers_inicio = extrair_tickers_b3(f"{titulo} {dois_primeiros}")
+
+    tem_ancora_3_pilares = (
+        bool(tickers_inicio)
+        or any(
+            re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", foco_inicial_low)
+            for a in ANCORAS_3_PILARES
+        )
+    )
+
+    if not tem_ancora_3_pilares:
+        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     pontos_por_categoria: Dict[str, int] = {cat: 0 for cat in TAXONOMIA_PESOS}
     termos_encontrados: List[str] = []
@@ -533,26 +494,14 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     units_acoes = {"TAEE11", "SAPR11", "SANB11", "ALUP11", "KLBN11", "BPAC11", "ENGI11", "IGTI11"}
     tickers_fii = [t for t in tickers if t.endswith("11") and t not in units_acoes]
     if tickers_fii:
-        pontos_por_categoria["FUNDOS_IMOBILIARIOS"] += len(tickers_fii) * 20
+        pontos_por_categoria["FUNDOS_IMOBILIARIOS"] += len(tickers_fii) * 22
 
     soma_taxonomia = sum(pontos_por_categoria.values())
-
-    tem_ancora_br = (
-        bool(tickers)
-        or any(
-            re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", f"{titulo_low} {tres_low}")
-            for a in ANCORAS_INVESTIDOR_BR
-        )
-    )
-
-    if not tem_ancora_br and soma_taxonomia < SCORE_MINIMO_CORTE:
-        return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
-
     if soma_taxonomia == 0 and not tickers:
         return AnaliseHeuristica(score_total=0, categoria_chave="DESCARTADA", categoria_label="")
 
     bonus_tickers = min(len(tickers) * 14, 42)
-    bonus_ancora = 8 if tem_ancora_br else 0
+    bonus_ancora = 8
 
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
     bonus_metricas = min(len(metricas) * 3, 18)
@@ -575,9 +524,13 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 # CONTROLE ANTIDUPLICIDADE TRIPLO (URL CANÔNICA + TÍTULO + LEAD DE AGÊNCIAS)
 # ==============================================================================
 def normalizar_texto_dedup(texto: str) -> str:
-    """Remove acentos, sufixos de portal (' - InfoMoney', ' | Exame') e pontuação."""
     t = html.unescape(texto or "").strip()
-    t = re.sub(r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs).*$", "", t, flags=re.IGNORECASE)
+    t = re.sub(
+        r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs).*$",
+        "",
+        t,
+        flags=re.IGNORECASE,
+    )
     t = unicodedata.normalize("NFKD", t)
     t = "".join(ch for ch in t if not unicodedata.combining(ch))
     return t.lower().strip()
@@ -592,7 +545,6 @@ def extrair_tokens_dedup(texto: str) -> Set[str]:
 
 
 def extrair_numeros_relevantes(texto: str) -> Set[str]:
-    """Extrai valores/percentuais específicos (ignorando anos 2024..2030 e números de 1 dígito isolados)."""
     nums = set()
     for m in re.findall(r"\d+(?:[.,]\d+)?", texto or ""):
         limpo = m.replace(".", "").replace(",", ".")
@@ -647,10 +599,6 @@ def salvar_historico(links: List[str], titulos: List[str], leads: List[str]) -> 
 
 
 def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
-    """
-    Bloqueia a mesma notícia publicada em portais diferentes (ex: InfoMoney + MoneyTimes + Exame),
-    sem bloquear notícias diferentes do mesmo setor (ex: 2 matérias distintas de FIIs ou Tesouro Direto).
-    """
     norm_novo = normalizar_texto_dedup(novo_titulo)
     tokens_novo = extrair_tokens_dedup(novo_titulo)
     nums_novo = extrair_numeros_relevantes(novo_titulo)
@@ -670,11 +618,9 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
         menor = min(len(tokens_novo), len(tokens_antigo))
         ratio = len(inter) / menor if menor > 0 else 0.0
 
-        # 1) Mesma história em portais diferentes (>= 3 palavras-chave em comum e >= 45% do título)
         if len(inter) >= 3 and ratio >= 0.45:
             return True
 
-        # 2) Mesmo valor específico no título (ex: R$ 15 bi, 145,1 mi, 5,85, 167 mil) + 2 palavras-chave
         nums_antigo = extrair_numeros_relevantes(antigo)
         if nums_novo and (nums_novo & nums_antigo) and len(inter) >= 2:
             return True
@@ -683,10 +629,6 @@ def eh_mesma_noticia(novo_titulo: str, titulos_anteriores: List[str]) -> bool:
 
 
 def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
-    """
-    Detecta matérias sindicadas (Reuters, Estadão Conteúdo, Agência Brasil) republicadas em
-    portais diferentes com títulos diferentes (e tags diferentes), mas com o mesmo 1º parágrafo.
-    """
     if not novo_lead or len(novo_lead) < 60:
         return False
     tokens_novo = extrair_tokens_dedup(novo_lead[:280])
@@ -733,6 +675,17 @@ def normalizar_url(url: Optional[str]) -> Optional[str]:
         return urllib.parse.urlunsplit((p.scheme, p.netloc, caminho, p.query, p.fragment))
     except Exception:
         return None
+
+
+def url_imagem_eh_valida_sintaticamente(url: Optional[str]) -> bool:
+    if not url:
+        return False
+    u_low = url.lower()
+    if not u_low.startswith(("http://", "https://")):
+        return False
+    if any(ruim in u_low for ruim in TERMOS_URL_IMAGEM_RUIM):
+        return False
+    return True
 
 
 def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
@@ -878,7 +831,6 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
                 if not paragrafo_eh_ruido_editorial(p, titulo):
                     paragrafos_limpos.append(p)
 
-    # Fallback enriquecido com <content:encoded> ou <description> do RSS quando o site bloqueia scraping
     if len(paragrafos_limpos) < 2 and desc_bruta:
         blocos_p = re.findall(r"<p\b[^>]*>(.*?)</p>", desc_bruta, flags=re.DOTALL | re.IGNORECASE)
         if blocos_p:
@@ -908,13 +860,9 @@ def extrair_paragrafos_trafilatura(raw_html: str, desc_bruta: str, titulo: str) 
 
 
 # ==============================================================================
-# NARRATIVA APROFUNDADA (~1300 A 1400 CARACTERES COM COMEÇO, MEIO E FIM, SEM PERGUNTAS OU LEGENDAS DE FOTO)
+# NARRATIVA APROFUNDADA (~1300 A 1400 CARACTERES COM COMEÇO, MEIO E FIM)
 # ==============================================================================
 def dividir_em_frases_completas(texto: str) -> List[str]:
-    """
-    Divide o texto em frases completas e REMOVE automaticamente intertítulos em formato
-    de pergunta ('Quanto a pessoa física comprou...?') e legendas de foto ('via Getty Images').
-    """
     texto = REGEX_CREDITO_FOTO_PARENTESES.sub(" ", texto)
     texto = " ".join(texto.split()).strip()
     if not texto:
@@ -1147,36 +1095,46 @@ def montar_mensagem_investidor(
     if tamanho_texto_visivel(post_completo) < 260:
         return None
 
+    # Caption nativa <= 1024 caracteres (usada no sendPhoto/sendVideo quando o site bloqueia preview remoto)
     blocos_curtos = [
-        truncar_frase_limpa(blocos_narrativa[0], 210) or blocos_narrativa[0][:210],
-        truncar_frase_limpa(blocos_narrativa[min(1, len(blocos_narrativa) - 1)], 220) or blocos_narrativa[min(1, len(blocos_narrativa) - 1)][:220],
+        truncar_frase_limpa(blocos_narrativa[0], 240) or blocos_narrativa[0][:240],
+        truncar_frase_limpa(blocos_narrativa[min(1, len(blocos_narrativa) - 1)], 250)
+        or blocos_narrativa[min(1, len(blocos_narrativa) - 1)][:250],
     ]
     if len(blocos_narrativa) >= 3:
-        blocos_curtos.append(truncar_frase_limpa(blocos_narrativa[-1], 210) or blocos_narrativa[-1][:210])
+        blocos_curtos.append(truncar_frase_limpa(blocos_narrativa[-1], 240) or blocos_narrativa[-1][:240])
 
     curtos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_curtos if p]
     caption_curta = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(curtos_html)
-    if len(caption_curta) > TELEGRAM_CAPTION_LIMIT:
-        caption_curta = post_completo[:1010].rsplit(" ", 1)[0] + "."
+    if tamanho_texto_visivel(caption_curta) > TELEGRAM_CAPTION_LIMIT - 10:
+        blocos_curtos = [
+            truncar_frase_limpa(blocos_narrativa[0], 200) or blocos_narrativa[0][:200],
+            truncar_frase_limpa(blocos_narrativa[-1], 200) or blocos_narrativa[-1][:200],
+        ]
+        curtos_html = [formatar_tickers_no_texto(html.escape(p)) for p in blocos_curtos if p]
+        caption_curta = f"{cabecalho_tema}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(curtos_html)
 
     return post_completo, caption_curta
 
 
 # ==============================================================================
-# ENGINE DE MÍDIA E VÍDEO LOCAL (YT-DLP <= 50MB + OS.REMOVE)
+# ENGINE DE MÍDIA E GARANTIA 100% DE IMAGEM VÁLIDA (NUNCA ENVIA TEXTO SECO)
 # ==============================================================================
 def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     padroes = (
-        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
-        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+        r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image(?::secure_url)?["\']',
+        r'<meta[^>]+name=["\']twitter:image(?::src)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image(?::src)?["\']',
+        r'"image"\s*:\s*\{\s*"@type"\s*:\s*"ImageObject"[^}]*"url"\s*:\s*"([^"]+)"',
+        r'"image"\s*:\s*\[\s*"(https?://[^"]+)"',
+        r'"image"\s*:\s*"(https?://[^"]+\.(?:jpg|jpeg|png|webp)[^"]*)"',
     )
     for padrao in padroes:
         m = re.search(padrao, raw_html, re.IGNORECASE)
         if m:
-            url = normalizar_url(m.group(1))
-            if url:
+            url = normalizar_url(m.group(1).replace(r"\/", "/"))
+            if url_imagem_eh_valida_sintaticamente(url):
                 return url
     return None
 
@@ -1220,7 +1178,7 @@ def extrair_midias_do_rss(
                 video_url = url
             elif "audio" in tipo or url.lower().endswith((".mp3", ".m4a", ".ogg", ".wav")):
                 audio_url = url
-            elif "image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+            elif ("image" in tipo or url.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))) and url_imagem_eh_valida_sintaticamente(url):
                 foto_url = url
 
     for tag in ("{http://search.yahoo.com/mrss/}content", "{http://search.yahoo.com/mrss/}thumbnail"):
@@ -1234,7 +1192,7 @@ def extrair_midias_do_rss(
                         video_url = video_url or url
                     elif "audio" in tipo or medium == "audio" or url.lower().endswith(".mp3"):
                         audio_url = audio_url or url
-                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")):
+                    elif not foto_url and ("image" in tipo or medium == "image" or url.startswith("http")) and url_imagem_eh_valida_sintaticamente(url):
                         foto_url = url
 
     if not video_url and desc_bruta:
@@ -1247,11 +1205,87 @@ def extrair_midias_do_rss(
                 video_url = f"https://www.youtube.com/watch?v={m_yt.group(1)}"
 
     if not foto_url and desc_bruta:
-        busca_img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
-        if busca_img:
-            foto_url = normalizar_url(busca_img.group(1))
+        for attr in ("src", "data-src", "data-lazy-src"):
+            busca_img = re.search(rf'<img[^>]+{attr}=["\']([^"\']+)["\']', desc_bruta, re.IGNORECASE)
+            if busca_img:
+                cand_img = normalizar_url(busca_img.group(1))
+                if url_imagem_eh_valida_sintaticamente(cand_img):
+                    foto_url = cand_img
+                    break
 
     return foto_url, video_url, audio_url
+
+
+async def verificar_e_preparar_imagem(
+    client: httpx.AsyncClient, sem: asyncio.Semaphore, url_imagem: Optional[str], referer_url: str
+) -> Optional[ImagemVerificada]:
+    """
+    Garante que a imagem realmente existe, é grande (>= 8 KB) e decide o modo 100% confiável:
+    - Se o crawler do Telegram ('TelegramBot' sem Referer) consegue baixar JPEG/PNG direto ->
+      permite post longo (~1.300-1.400 chars) com preview grande no topo.
+    - Se o servidor bloqueia o crawler do Telegram ou devolve WebP -> baixa os bytes com
+      User-Agent + Referer para upload nativo via sendPhoto (100% garantido com imagem!).
+    - Se não conseguir imagem válida de jeito nenhum -> retorna None (matéria descartada).
+    """
+    if not url_imagem_eh_valida_sintaticamente(url_imagem):
+        return None
+
+    assert url_imagem is not None
+
+    async with sem:
+        # 1) Simula o crawler do Telegram (sem Referer)
+        try:
+            resp_tg = await client.get(url_imagem, headers=HEADERS_TELEGRAM_PREVIEW, timeout=10.0)
+            ct_tg = (resp_tg.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+            if (
+                resp_tg.status_code == 200
+                and MIN_IMAGE_BYTES <= len(resp_tg.content) <= MAX_HTML_BYTES
+                and ct_tg in ("image/jpeg", "image/jpg", "image/png")
+            ):
+                return ImagemVerificada(
+                    url=str(resp_tg.url),
+                    pode_usar_preview_longo=True,
+                    conteudo_bytes=resp_tg.content,
+                    content_type=ct_tg,
+                )
+            if (
+                resp_tg.status_code == 200
+                and MIN_IMAGE_BYTES <= len(resp_tg.content) <= MAX_HTML_BYTES
+                and ct_tg == "image/webp"
+            ):
+                return ImagemVerificada(
+                    url=str(resp_tg.url),
+                    pode_usar_preview_longo=False,
+                    conteudo_bytes=resp_tg.content,
+                    content_type="image/webp",
+                )
+        except Exception as exc:
+            logger.debug("Teste TelegramBot na imagem falhou (%s): %s", url_imagem, exc)
+
+        # 2) Fallback com navegador + Referer -> força upload nativo via sendPhoto (nunca envia sem imagem!)
+        try:
+            headers_ref = {
+                **HEADERS,
+                "Referer": referer_url,
+                "Accept": "image/jpeg,image/png,image/webp,*/*;q=0.5",
+            }
+            resp_ref = await client.get(url_imagem, headers=headers_ref, timeout=12.0)
+            ct_ref = (resp_ref.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+            if (
+                resp_ref.status_code == 200
+                and MIN_IMAGE_BYTES <= len(resp_ref.content) <= MAX_HTML_BYTES
+                and ct_ref in ("image/jpeg", "image/jpg", "image/png", "image/webp")
+            ):
+                return ImagemVerificada(
+                    url=str(resp_ref.url),
+                    pode_usar_preview_longo=False,
+                    conteudo_bytes=resp_ref.content,
+                    content_type=ct_ref,
+                )
+        except Exception as exc:
+            logger.debug("Download com Referer na imagem falhou (%s): %s", url_imagem, exc)
+
+    return None
 
 
 def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -> Optional[Path]:
@@ -1343,7 +1377,6 @@ async def buscar_feed_rss(
         title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
         texto_desc = desc_el.text if desc_el is not None and desc_el.text else ""
         texto_content = content_el.text if content_el is not None and content_el.text else ""
-        # Usa <content:encoded> quando for mais completo que <description> (ajuda se o site bloquear scraping)
         desc_bruta = texto_content if len(texto_content) > len(texto_desc) else texto_desc
 
         if not link or not title or len(title) < 22:
@@ -1354,7 +1387,6 @@ async def buscar_feed_rss(
             continue
 
         idade_minutos = (agora_utc - dt_pub).total_seconds() / 60.0
-        # Tolera até -200 min para feeds brasileiros que informam horário BRT com fuso +0000
         if idade_minutos > MAX_IDADE_MINUTOS or idade_minutos < -200.0:
             continue
 
@@ -1408,7 +1440,6 @@ async def carregar_proximas_noticias(
         *(buscar_feed_rss(client, sem, url) for url in FEEDS)
     )
 
-    # Deduplica URLs repetidas entre múltiplos sub-feeds (ex: InfoMoney geral + mercados + economia)
     candidatos_unicos: List[Dict[str, Any]] = []
     hashes_enfileirados: Set[str] = set()
     for sublista in resultados_feeds:
@@ -1424,6 +1455,7 @@ async def carregar_proximas_noticias(
     noticias_aprovadas: List[NoticiaPreparada] = []
     qtd_dup_titulo = 0
     qtd_dup_lead = 0
+    qtd_sem_imagem = 0
     qtd_descartadas = 0
 
     for cand in candidatos_unicos[:60]:
@@ -1465,7 +1497,7 @@ async def carregar_proximas_noticias(
         if analise.score_total < SCORE_MINIMO_CORTE:
             qtd_descartadas += 1
             logger.info(
-                "Descartada por filtro de investidor (Score %d < %d): %s",
+                "Descartada fora dos 3 pilares Ações/FIIs/Renda Fixa (Score %d < %d): %s",
                 analise.score_total,
                 SCORE_MINIMO_CORTE,
                 title,
@@ -1478,12 +1510,31 @@ async def carregar_proximas_noticias(
             logger.info("Descartada por não atingir estrutura completa (Começo, Meio e Fim): %s", title)
             continue
 
+        # Prioriza og:image (alta resolução) e tenta foto do RSS como backup
+        img_verificada: Optional[ImagemVerificada] = None
+        for cand_img in dict.fromkeys(u for u in (foto_og, foto_rss) if u):
+            img_verificada = await verificar_e_preparar_imagem(client, sem, cand_img, link)
+            if img_verificada:
+                break
+
+        video_cand = video_rss or video_pag
+        if not img_verificada and not video_cand:
+            qtd_sem_imagem += 1
+            logger.info("Descartada (sem imagem válida para exibir no Telegram): %s", title)
+            continue
+
         post_html, caption_curta_html = montagem
+        modo_img = (
+            "Preview Longo"
+            if (img_verificada and img_verificada.pode_usar_preview_longo)
+            else ("Foto Nativa" if img_verificada else "Vídeo")
+        )
 
         logger.info(
-            "Aprovada [Score %d | %s | %d chars | Tickers: %s]: %s",
+            "Aprovada [Score %d | %s | %s | %d chars | Tickers: %s]: %s",
             analise.score_total,
             analise.categoria_chave,
+            modo_img,
             tamanho_texto_visivel(post_html),
             ",".join(analise.tickers) or "N/A",
             title,
@@ -1498,8 +1549,9 @@ async def carregar_proximas_noticias(
                 caption_curta_html=caption_curta_html,
                 score=analise.score_total,
                 dt_pub=cand["dt_pub"],
-                imagem=foto_rss or foto_og,
-                video_candidato_url=video_rss or video_pag,
+                imagem=img_verificada.url if img_verificada else None,
+                imagem_verificada=img_verificada,
+                video_candidato_url=video_cand,
                 audio=audio_rss,
             )
         )
@@ -1509,10 +1561,11 @@ async def carregar_proximas_noticias(
         set_links.add(link_hash)
 
     logger.info(
-        "Resumo do ciclo: %d links novos únicos | %d pulados (título repetido) | %d pulados (mesma matéria em outro portal) | %d descartados | %d aprovados",
+        "Resumo do ciclo: %d links novos | %d dup título | %d dup conteúdo | %d sem imagem | %d fora dos 3 pilares | %d aprovados",
         len(candidatos_unicos),
         qtd_dup_titulo,
         qtd_dup_lead,
+        qtd_sem_imagem,
         qtd_descartadas,
         len(noticias_aprovadas),
     )
@@ -1525,7 +1578,7 @@ async def carregar_proximas_noticias(
 
 
 # ==============================================================================
-# CLIENTE TELEGRAM (SUPORTE A MATÉRIAS DE 1.300~1.400 CHARS COM IMAGEM NO TOPO)
+# CLIENTE TELEGRAM (SEMPRE COM IMAGEM OU VÍDEO — ZERO POSTS SÓ DE TEXTO)
 # ==============================================================================
 async def telegram_request(
     client: httpx.AsyncClient,
@@ -1574,10 +1627,10 @@ async def tentar_enviar_video_ytdlp(
     item: NoticiaPreparada,
     botao_sorteado: Dict[str, Any],
 ) -> bool:
-    urls_para_testar: List[str] = []
-    if item.video_candidato_url:
-        urls_para_testar.append(item.video_candidato_url)
-    urls_para_testar.append(item.link)
+    if not item.video_candidato_url:
+        return False
+
+    urls_para_testar = [item.video_candidato_url, item.link]
 
     with tempfile.TemporaryDirectory(prefix="tg_vid_") as pasta_temp:
         caminho_video: Optional[Path] = None
@@ -1598,7 +1651,7 @@ async def tentar_enviar_video_ytdlp(
             )
             legenda_video = (
                 item.texto_html
-                if len(item.texto_html) <= TELEGRAM_CAPTION_LIMIT
+                if tamanho_texto_visivel(item.texto_html) <= TELEGRAM_CAPTION_LIMIT
                 else item.caption_curta_html
             )
             data_fields = {
@@ -1621,18 +1674,25 @@ async def tentar_enviar_video_ytdlp(
                     pass
 
 
-async def tentar_enviar_foto_nativa(
+async def tentar_enviar_foto_garantida(
     client: httpx.AsyncClient,
     base_url: str,
     chat_id: str,
     item: NoticiaPreparada,
     botao_sorteado: Dict[str, Any],
 ) -> bool:
-    if not item.imagem:
+    img = item.imagem_verificada
+    if not img:
         return False
 
-    if len(item.texto_html) > TELEGRAM_CAPTION_LIMIT or tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT:
-        img_escapada = html.escape(item.imagem, quote=True)
+    texto_eh_longo = (
+        len(item.texto_html) > TELEGRAM_CAPTION_LIMIT
+        or tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT
+    )
+
+    # Caso 1: Texto longo (~1300-1400 chars) + imagem JPEG/PNG acessível pelo crawler do Telegram
+    if texto_eh_longo and img.pode_usar_preview_longo:
+        img_escapada = html.escape(img.url, quote=True)
         texto_com_midia_topo = f'<a href="{img_escapada}">&#8203;</a>{item.texto_html}'
         payload_longo = {
             "chat_id": chat_id,
@@ -1640,43 +1700,38 @@ async def tentar_enviar_foto_nativa(
             "parse_mode": "HTML",
             "link_preview_options": {
                 "is_disabled": False,
-                "url": item.imagem,
+                "url": img.url,
                 "prefer_large_media": True,
                 "show_above_text": True,
             },
             "reply_markup": botao_sorteado,
         }
-        return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_longo)
+        if await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_longo):
+            return True
 
+    # Caso 2: Upload binário nativo via sendPhoto (100% garantido que a imagem aparece!)
     url_photo = f"{base_url}/sendPhoto"
+    legenda_foto = item.texto_html if not texto_eh_longo else item.caption_curta_html
+    if img.conteudo_bytes:
+        ext = "png" if "png" in img.content_type else ("webp" if "webp" in img.content_type else "jpg")
+        data_fields = {
+            "chat_id": chat_id,
+            "caption": legenda_foto,
+            "parse_mode": "HTML",
+            "reply_markup": json.dumps(botao_sorteado),
+        }
+        files = {"photo": (f"cover.{ext}", img.conteudo_bytes, img.content_type)}
+        if await telegram_request(client, url_photo, data_fields=data_fields, files=files):
+            return True
+
     payload_img = {
         "chat_id": chat_id,
-        "photo": item.imagem,
-        "caption": item.texto_html,
+        "photo": img.url,
+        "caption": legenda_foto,
         "parse_mode": "HTML",
         "reply_markup": botao_sorteado,
     }
-    if await telegram_request(client, url_photo, json_payload=payload_img):
-        return True
-
-    try:
-        headers_img = {**HEADERS, "Referer": item.link}
-        resp = await client.get(item.imagem, headers=headers_img, timeout=12.0)
-        if resp.status_code == 200 and 500 < len(resp.content) <= MAX_HTML_BYTES:
-            content_type = resp.headers.get("Content-Type", "image/jpeg")
-            if "html" not in content_type.lower():
-                data_fields = {
-                    "chat_id": chat_id,
-                    "caption": item.texto_html,
-                    "parse_mode": "HTML",
-                    "reply_markup": json.dumps(botao_sorteado),
-                }
-                files = {"photo": ("cover.jpg", resp.content, content_type)}
-                return await telegram_request(client, url_photo, data_fields=data_fields, files=files)
-    except Exception as exc:
-        logger.debug("Falha no upload binário da imagem %s: %s", item.imagem, exc)
-
-    return False
+    return await telegram_request(client, url_photo, json_payload=payload_img)
 
 
 async def enviar_post(
@@ -1688,18 +1743,12 @@ async def enviar_post(
     if await tentar_enviar_video_ytdlp(client, base_url, chat_id, item, botao_sorteado):
         return True
 
-    if await tentar_enviar_foto_nativa(client, base_url, chat_id, item, botao_sorteado):
+    if await tentar_enviar_foto_garantida(client, base_url, chat_id, item, botao_sorteado):
         return True
 
-    logger.info("Enviando via sendMessage (texto limpo) para: %s", item.titulo)
-    payload_msg = {
-        "chat_id": chat_id,
-        "text": item.texto_html,
-        "parse_mode": "HTML",
-        "link_preview_options": {"is_disabled": True},
-        "reply_markup": botao_sorteado,
-    }
-    return await telegram_request(client, f"{base_url}/sendMessage", json_payload=payload_msg)
+    # Nunca publica texto seco sem imagem/vídeo
+    logger.warning("Publicação cancelada para evitar texto sem imagem: %s", item.titulo)
+    return False
 
 
 # ==============================================================================
@@ -1722,10 +1771,10 @@ async def main() -> None:
         )
 
         if not noticias:
-            logger.info("Nenhuma notícia atingiu o score mínimo de impacto financeiro neste ciclo.")
+            logger.info("Nenhuma notícia de Ações, FIIs ou Renda Fixa com imagem válida neste ciclo.")
             return
 
-        logger.info("Encontradas %d notícias de alto impacto para publicação.", len(noticias))
+        logger.info("Encontradas %d notícias (Ações, FIIs e Renda Fixa) para publicação.", len(noticias))
         for noticia in noticias:
             sucesso = await enviar_post(client, token, chat_id, noticia)
             if sucesso:
@@ -1738,7 +1787,7 @@ async def main() -> None:
                 logger.info("Notícia publicada [Score %d]: %s", noticia.score, noticia.titulo)
                 await asyncio.sleep(3.0)
             else:
-                logger.error("Falha definitiva ao publicar notícia: %s", noticia.titulo)
+                logger.error("Falha ao publicar notícia com mídia: %s", noticia.titulo)
 
 
 if __name__ == "__main__":
