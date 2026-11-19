@@ -480,7 +480,11 @@
     "https://g1.globo.com/trabalho-e-carreira/noticia/2026/11/18/99-acao-mpt-taxa-zero.ghtml",
     "302cf26e2746f4f8",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/18/banco-do-brasil-bbas3-informa-vazamentos-de-dados-de-clientes-mas-nega-invasao-a-seus-sistemas.ghtml",
-    "1f7752fe647df4cd"
+    "1f7752fe647df4cd",
+    "https://www.estadao.com.br/economia/coluna-da-broad/mercado-livre-capta-us-735-milhoes-para-dar-credito-na-amazonia/",
+    "3325074f5876f011",
+    "https://valor.globo.com/financas/noticia/2026/11/18/aena-capta-r-18-bilho-para-pagar-outorga-do-galeo.ghtml",
+    "9a96ba38c47daeaa"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -775,9 +779,14 @@
     "Seus dados estão seguros? Banco do Brasil confirma vazamento de informações de clientes; veja o que foi exposto",
     "Eles criaram o “Pix para gringos” e movimentaram R$ 1 milhão em 30 dias",
     "99 é alvo de ação por cobrar de motoristas para liberar corridas sem taxas; MPT pede R$ 100 milhões",
-    "Banco do Brasil (BBAS3) informa vazamentos de dados de clientes, mas nega invasão a seus sistemas"
+    "Banco do Brasil (BBAS3) informa vazamentos de dados de clientes, mas nega invasão a seus sistemas",
+    "Mercado Livre capta US$ 735 milhões para dar crédito na Amazônia",
+    "Aena capta R$ 1,8 bilhão para pagar outorga do Galeão"
   ],
   "leads": [
-    "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta"
-  ]
+    "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
+    "O gigante de comércio eletrônico Mercado Livre captou US$ 735 milhões em um financiamento com a International Finance Corporation (IFC), o braço financeiro do Banco Mundial, e um grupo de seis bancos internacionais, que inclui o JPMorgan e o Bank of America. Os recursos serão usados para dar crédito a micro, pequenas e médias empresas na Amazônia.",
+    "Segundo a empresa, projetos privados de terceiros já previstos para o aeroporto somam cerca de R$ 1 bilhão em investimentos estimados, com potencial de geração de 3.860 empregos"
+  ],
+  "eventos_recentes": []
 }
