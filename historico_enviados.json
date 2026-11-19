@@ -512,7 +512,11 @@
     "https://valor.globo.com/empresas/noticia/2026/11/19/copel-ve-oportunidade-para-crescer-em-geracao.ghtml",
     "81e381eb6bb59a03",
     "https://www.moneytimes.com.br/a-bolsa-caiu-mas-o-risco-ficou-btg-rebaixa-brasil-para-neutro-e-tira-itau-xp-e-assai-da-carteira-miql/",
-    "109258b9cda483b7"
+    "109258b9cda483b7",
+    "https://www.poder360.com.br/poder-sportsmkt/sao-paulo-negocia-naming-rights-do-morumbi-com-o-bradesco/",
+    "265c25f0db7459d1",
+    "https://www.infomoney.com.br/mercados/bb-seguridade-bbse3-cai-11-em-novembro-apos-balanco-acao-pode-recuar-mais/",
+    "17b3ca3f3943db79"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -823,7 +827,9 @@
     "Copel (CPLE3) prevê R$ 21,1 bilhões em investimentos entre 2027 e 2030, com foco na distribuição de energia",
     "O que faz a diferença: investidores repercutem ajuste fiscal, estreia da Anthopic e encontro Xi-Trump-Putin",
     "Copel vê oportunidade para crescer em geração",
-    "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira"
+    "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
+    "São Paulo negocia naming rights do Morumbi com o Bradesco",
+    "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -842,7 +848,9 @@
     "A Copel (CPLE3) planeja investimentos de R$ 21,1 bilhões para o período de 2027 a 2030, com quase 70% desse montante voltado ao negócio de distribuição de energia elétrica, anunciou a companhia nesta quinta-feira (19).",
     "Ibovespa tenta recuperação depois de cair mais de 1% com adiamento da votação de destaques do ajuste fiscal; dólar começa o dia na faixa de R$ 5,86",
     "A companhia foi a maior vencedora do último leilão que contratou disponibilidade de eletricidade, considerando hidrelétricas",
-    "A bolsa brasileira está perdendo espaço nas carteiras dos grandes bancos de investimento. Depois de Morgan Stanley e Goldman Sachs reduzirem suas recomendações para as ações do país, foi a vez do BTG Pactual colocar o Brasil em posição neutra em sua carteira para a América Latina."
+    "A bolsa brasileira está perdendo espaço nas carteiras dos grandes bancos de investimento. Depois de Morgan Stanley e Goldman Sachs reduzirem suas recomendações para as ações do país, foi a vez do BTG Pactual colocar o Brasil em posição neutra em sua carteira para a América Latina.",
+    "Clube e banco negam conversas; parceria atual com a Mondelez, dona do Bis, soma R$ 75 milhões em 3 anos",
+    "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c"
   ],
   "eventos_recentes": [
     {
@@ -896,9 +904,19 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795090628.101129
+    },
+    {
+      "chave": "bradesco::GERAL_ATIVO",
+      "ts": 1795092709.264999
+    },
+    {
+      "chave": "bb_seguridade::BALANCO",
+      "ts": 1795092709.264999
     }
   ],
   "hashes_imagens": [
-    "614f989cdb0ee76d"
+    "614f989cdb0ee76d",
+    "7dba9a3eb07d1794",
+    "d305573262799892"
   ]
 }
