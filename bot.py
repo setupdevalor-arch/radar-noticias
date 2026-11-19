@@ -74,7 +74,7 @@ HEADERS_TELEGRAM_PREVIEW = {
 
 # ==============================================================================
 # MAIORES E MAIS CONFIÁVEIS PORTAIS DE MERCADO FINANCEIRO E INVESTIMENTOS DO BRASIL (24 FEEDS)
-# Graças à trava de data original no HTML (<= 90 min) e à antiduplicidade em 4 camadas,
+# Graças à trava de data original no HTML/Broadcast+ (<= 90 min) e à antiduplicidade em 4 camadas,
 # monitoramos todos os grandes portais para capturar cada furo no 1º segundo sem repetir!
 # ==============================================================================
 FEEDS = [
@@ -149,6 +149,11 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "jogo do tigrinho", "cassino online", "operação cash out",
     "assalto", "sequestro", "homicídio", "tráfico de drogas", "facção criminosa",
     "lei da dosimetria", "ao vivo:", "tempo real:", "minuto a minuto",
+    # Boletins / Resumos genéricos de portais (para não misturar boletim com notícia individual no Radar)
+    "morning call", "giro de mercado", "giro dos mercados", "radar do mercado",
+    "radar corporativo", "resumo do dia", "resumo do mercado", "destaques do dia",
+    "destaques corporativos", "o que movimenta", "para ficar de olho",
+    "tudo o que você precisa saber", "acompanhe os destaques", "agenda do dia",
 )
 
 # Apenas palavras gramaticais/genéricas (NUNCA incluir ativos/temas como ibovespa, fiis, petrobras, tesouro)
@@ -265,7 +270,7 @@ ANCORAS_3_PILARES = (
     "cury", "direcional", "multiplan", "iguatemi", "allos", "totvs", "magazine luiza",
     "casas bahia", "lojas renner", "c&a", "guararapes", "raia drogasil", "hapvida",
     "rede d'or", "fleury", "hypera", "cosan", "rumo", "ccr", "motiva", "ecorodovias",
-    "santos brasil", "nubank", "inter", "stone", "pagbank", "mercado livre", "assai", "assaí",
+    "santos brasil", "assai", "assaí",
     "carrefour", "smart fit", "marcopolo", "mahle", "metal leve", "slc agrícola", "dexco",
     "b3sa3", "petr4", "petr3", "vale3", "itub4", "bbas3", "bbdc4", "itsa4", "bpac11",
     "wege3", "sbsp3", "elet3", "taee11", "cmig4", "cple3", "egie3", "eqtl3", "sapr11",
@@ -435,9 +440,24 @@ REGEX_YOUTUBE_ID = re.compile(
 )
 
 REGEX_INICIO_ORFAO = re.compile(
-    r"^(?:Segundo ele|Segundo ela|Para ele|Para ela|De acordo com ele|De acordo com ela|"
-    r"Ainda segundo ele|Na visão dele|Na avaliação dele|Ele acrescenta|Ela acrescenta|"
-    r"Ele afirma|Ela afirma|No mesmo intervalo|Na mesma linha|Outro ponto citado)\b",
+    r"^(?:Segundo ele|Segundo ela|Segundo a empresa|Segundo a companhia|Segundo o banco|"
+    r"Segundo o executivo|Para ele|Para ela|De acordo com ele|De acordo com ela|"
+    r"De acordo com a empresa|De acordo com a companhia|De acordo com o banco|"
+    r"Ainda segundo ele|Ainda segundo a empresa|Na visão dele|Na avaliação dele|"
+    r"Ele acrescenta|Ela acrescenta|Ele afirma|Ela afirma|Além disso|"
+    r"No mesmo intervalo|Na mesma linha|Outro ponto citado)\b",
+    flags=re.IGNORECASE,
+)
+
+# Captura data original escondida no texto do Estadão/Broadcast+ (ex: "publicada na Broadcast+ no dia 18/11/2026, às 11:09")
+REGEX_DATA_TEXTO_BROADCAST = re.compile(
+    r"(?:publicad[ao]\s+(?:na|no|em)\s+Broadcast\+?|originalmente\s+publicad[ao])\s*"
+    r"(?:no\s+dia\s+|em\s+)?(\d{1,2})/(\d{1,2})/(20\d{2})\s*,?\s*(?:às\s*)?(\d{1,2})[h:](\d{2})",
+    flags=re.IGNORECASE,
+)
+
+REGEX_FRASE_BROADCAST_RODAPE = re.compile(
+    r"Esta\s+(?:notícia|matéria|reportagem)\s+foi\s+publicada\s+(?:na|no)\s+Broadcast\+?\b[^.!?]*[.!?]?\s*",
     flags=re.IGNORECASE,
 )
 
@@ -616,7 +636,7 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
 
 # ==============================================================================
-# DETECTOR ANTI-"NOTÍCIA DE 6H ATRÁS DISFARÇADA DE AGORA" (DATA REAL NO HTML E URL)
+# DETECTOR ANTI-"NOTÍCIA DE 6H ATRÁS DISFARÇADA DE AGORA" (HTML + BROADCAST+ + URL)
 # ==============================================================================
 def _parse_iso_ou_rfc_data(texto_data: str) -> Optional[datetime]:
     if not texto_data:
@@ -640,8 +660,9 @@ def _parse_iso_ou_rfc_data(texto_data: str) -> Optional[datetime]:
 
 def extrair_data_original_html(raw_html: str) -> Optional[datetime]:
     """
-    Lê a data REAL da primeira publicação dentro do HTML (article:published_time / datePublished).
-    Impede que portais que atualizam/republicam notícias de 6 horas atrás enganem o filtro de tempo!
+    Lê a data REAL da primeira publicação dentro do HTML (article:published_time / datePublished)
+    e carimbos do Estadão/Broadcast+ ('publicada na Broadcast+ no dia DD/MM/YYYY, às HH:MM').
+    Impede que portais que republicam notícias horas depois enganem o filtro de tempo!
     """
     if not raw_html:
         return None
@@ -658,6 +679,16 @@ def extrair_data_original_html(raw_html: str) -> Optional[datetime]:
             dt = _parse_iso_ou_rfc_data(m.group(1))
             if dt:
                 datas.append(dt)
+
+    m_bc = REGEX_DATA_TEXTO_BROADCAST.search(raw_html)
+    if m_bc:
+        try:
+            dia, mes, ano, hora, minuto = (int(x) for x in m_bc.groups())
+            dt_bc = datetime(ano, mes, dia, hora, minuto, tzinfo=TZ_BRASILIA).astimezone(timezone.utc)
+            datas.append(dt_bc)
+        except ValueError:
+            pass
+
     return min(datas) if datas else None
 
 
@@ -746,7 +777,6 @@ def extrair_chaves_evento_ativo(titulo: str, lead: str, tickers: List[str]) -> L
         if any(re.search(r"(?<!\w)" + re.escape(normalizar_texto_dedup(s)) + r"(?!\w)", foco_norm) for s in sinonimos):
             entidades.append(ent_canon)
 
-    # Inclui tickers específicos não mapeados (principalmente FIIs como MXRF11, HGLG11, XPML11...)
     tickers_especificos: List[str] = []
     for tk in tickers[:3]:
         tk_low = tk.lower()
@@ -755,7 +785,6 @@ def extrair_chaves_evento_ativo(titulo: str, lead: str, tickers: List[str]) -> L
             entidades.append(tk_low)
             tickers_especificos.append(tk_low)
 
-    # Se há FII específico (ex: MXRF11), não aplica chave genérica 'ifix_fiis' para não bloquear outros FIIs (ex: HGLG11)
     if tickers_especificos and "ifix_fiis" in entidades:
         entidades = [e for e in entidades if e != "ifix_fiis"]
 
@@ -1006,6 +1035,7 @@ def limpar_html(txt: str) -> str:
         flags=re.IGNORECASE,
     )
     txt = REGEX_CREDITO_FOTO_PARENTESES.sub(" ", txt)
+    txt = REGEX_FRASE_BROADCAST_RODAPE.sub(" ", txt)
     txt = remover_carimbo_data_g1(txt)
     txt = " ".join(txt.split()).strip()
     txt = re.sub(r"\s+([.,;:!?)])", r"\1", txt)
@@ -1126,6 +1156,11 @@ def dividir_em_frases_completas(texto: str) -> List[str]:
             continue
         if p[-1] not in ".!":
             p += "."
+        # Corrige aspa de fechamento órfã quando a abertura ficou em outra frase (ex: '...anos”, afirma...')
+        if "”" in p and "“" not in p:
+            p = "“" + p
+        elif p.count('"') % 2 == 1 and not p.startswith('"'):
+            p = '"' + p
         frases.append(p)
     return frases
 
@@ -1242,6 +1277,10 @@ def extrair_narrativa_aprofundada(paragrafos: List[str], max_por_bloco: int = 34
             return None
         else:
             return None
+
+    # Se o 1º bloco veio de linha-fina órfã ("Segundo a empresa..."), promove o 2º bloco como abertura natural
+    if len(blocos) >= 2 and REGEX_INICIO_ORFAO.search(blocos[0]) and not REGEX_INICIO_ORFAO.search(blocos[1]):
+        blocos[0], blocos[1] = blocos[1], blocos[0]
 
     p_comeco = blocos[0]
 
@@ -1729,7 +1768,7 @@ async def carregar_proximas_noticias(
             client, sem, link, desc_bruta, title
         )
 
-        # Trava Anti-"Notícia de 6h atrás republicada como se fosse agora"
+        # Trava Anti-"Notícia de 6h/12h atrás republicada como se fosse agora" (HTML + Broadcast+)
         dt_real = min(dt_rss, dt_original_html) if dt_original_html else dt_rss
         idade_real_min = (agora_utc - dt_real).total_seconds() / 60.0
         if idade_real_min > MAX_IDADE_MINUTOS:
