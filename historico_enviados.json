@@ -502,7 +502,11 @@
     "https://valor.globo.com/impresso/noticia/2026/11/19/dolar-volta-a-subir-e-alcanca-r-586-juro-futuro-tem-alta.ghtml",
     "62d855fe3563769e",
     "https://www.moneytimes.com.br/dividendo-a-vista-fundo-imobiliario-reduz-vacancia-do-portfolio-e-preve-impacto-por-cota-ifix-recua-igdl/",
-    "978b8bb597bf7bff"
+    "978b8bb597bf7bff",
+    "https://www.moneytimes.com.br/priner-prnr3-cancela-aumento-de-capital-privado-apos-subscricoes-nao-atingirem-valor-minimo-miql/",
+    "c152fdbc15e21347",
+    "https://www.moneytimes.com.br/copel-cple3-preve-r-211-bilhoes-em-investimentos-entre-2027-e-2030-com-foco-na-distribuicao-de-energia-mlem/",
+    "8e11382d51f2034f"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -808,7 +812,9 @@
     "Avanços contra o racismo nas universidades ainda convivem com barreiras aos alunos e professores negros",
     "Fim da isenção de crime patrimonial vale para ação em curso",
     "Dólar volta a subir e alcança R$ 5,86; juro futuro tem alta",
-    "Dividendo à vista? Fundo imobiliário reduz vacância do portfólio e prevê impacto por cota; IFIX recua"
+    "Dividendo à vista? Fundo imobiliário reduz vacância do portfólio e prevê impacto por cota; IFIX recua",
+    "Priner (PRNR3) cancela aumento de capital privado após demanda não atingir valor mínimo",
+    "Copel (CPLE3) prevê R$ 21,1 bilhões em investimentos entre 2027 e 2030, com foco na distribuição de energia"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -822,7 +828,9 @@
     "Se parcela da população negra com ensino superior mais que quintuplicou neste século, preconceitos e assédio ainda persistem na academia",
     "Supremo decide aplicar imediatamente decisão que evita violência financeira com base na lei Maria da Penha",
     "Valorização global da moeda americana e expectativa de juros mais altos nos EUA ampliam a pressão sobre os ativos brasileiros, em meio a preocupações fiscais e inflacionárias",
-    "O fundo imobiliário Rio Negro (RNGO11) anunciou, por meio de fato relevante, que alugou o terceiro andar da Torre Padauiri para a CSI Latina Arrendamento Mercantil S.A. O espaço possui 1,35 mil metros quadrados (m²)."
+    "O fundo imobiliário Rio Negro (RNGO11) anunciou, por meio de fato relevante, que alugou o terceiro andar da Torre Padauiri para a CSI Latina Arrendamento Mercantil S.A. O espaço possui 1,35 mil metros quadrados (m²).",
+    "A Priner (PRNR3) informou nesta terça-feira (18) que não conseguiu levantar os recursos que pretendia com um aumento de capital privado e decidiu cancelar a operação de até R$ 220 milhões aprovada em outubro.",
+    "A Copel (CPLE3) planeja investimentos de R$ 21,1 bilhões para o período de 2027 a 2030, com quase 70% desse montante voltado ao negócio de distribuição de energia elétrica, anunciou a companhia nesta quinta-feira (19)."
   ],
   "eventos_recentes": [
     {
@@ -852,6 +860,14 @@
     {
       "chave": "btci11::PROVENTOS",
       "ts": 1795085658.443099
+    },
+    {
+      "chave": "prnr3::GERAL_ATIVO",
+      "ts": 1795087990.863689
+    },
+    {
+      "chave": "copel::GERAL_ATIVO",
+      "ts": 1795087990.863689
     }
   ]
 }
