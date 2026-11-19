@@ -522,7 +522,9 @@
     "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-xp-ve-recuperacao-lenta-corta-preco-alvo-e-tem-visao-neutra/",
     "2c53e8749cfb73d9",
     "https://megawhat.uol.com.br/economia-e-politica/empresas/copel-prepara-9-gw-em-hidreletricas-reversiveis-para-leiloes/",
-    "799ab316882123fc"
+    "799ab316882123fc",
+    "https://www.sonhoseguro.com.br/2026/11/caixa-seguridade-registra-lucro-de-r-12-bilhao-no-terceiro-trimestre/",
+    "d094cb6e879035a0"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -838,7 +840,8 @@
     "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?",
     "É tarde demais para a Vale (VALE3)? Por que o BTG ainda não rebaixou a recomendação para o papel",
     "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
-    "Copel prepara 9 GW em hidrelétricas reversíveis para leilões"
+    "Copel prepara 9 GW em hidrelétricas reversíveis para leilões",
+    "CAIXA Seguridade registra lucro de R$ 1,2 bilhão no terceiro trimestre"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -862,7 +865,8 @@
     "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c",
     "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese.",
     "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente.",
-    "A Copel tem uma carteira de aproximadamente 9 GW em projetos de hidrelétricas reversíveis, dos quais 2,2 GW correspondem a uma nova casa de força na hidrelétrica de Segredo, no Paraná. A companhia aposta na realização de novos leilões de reserva de capacidade para viabilizar os empreendimentos, além de uma ampliação de 900 MW na potência da hidrelé"
+    "A Copel tem uma carteira de aproximadamente 9 GW em projetos de hidrelétricas reversíveis, dos quais 2,2 GW correspondem a uma nova casa de força na hidrelétrica de Segredo, no Paraná. A companhia aposta na realização de novos leilões de reserva de capacidade para viabilizar os empreendimentos, além de uma ampliação de 900 MW na potência da hidrelé",
+    "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com"
   ],
   "eventos_recentes": [
     {
@@ -936,6 +940,10 @@
     {
       "chave": "copel::GERAL_ATIVO",
       "ts": 1795116821.115819
+    },
+    {
+      "chave": "caixa_seguridade::PROVENTOS",
+      "ts": 1795118387.721214
     }
   ],
   "hashes_imagens": [
@@ -944,6 +952,7 @@
     "d305573262799892",
     "59cfe842dffee3fb",
     "22bc1b3df310f106",
-    "975a3244af78df95"
+    "975a3244af78df95",
+    "948b5fbae12a07e1"
   ]
 }
