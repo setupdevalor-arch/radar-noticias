@@ -490,7 +490,17 @@
     "https://www.seudinheiro.com/2026/empresas/nem-o-itau-passou-ileso-mas-banco-do-brasil-paga-conta-bem-mais-salgada-afinal-qual-banco-consegue-atravessar-a-piora-do-credito-miql/",
     "b5d99d8f31705db3",
     "https://www.moneytimes.com.br/ibovespa-opera-amanha-funcionamento-da-bolsa-de-bancos-servicos-feriado-da-consciencia-negra-mlem/",
-    "1150b1262970ba3d"
+    "1150b1262970ba3d",
+    "https://valor.globo.com/empresas/noticia/2026/11/19/o-jogo-gta-vi-soma-us-165-bi-em-vendas-e-atrai-acoes-de-marketing.ghtml",
+    "a382037926562fe6",
+    "https://valor.globo.com/financas/noticia/2026/11/19/ata-do-fed-pressiona-treasuries-e-acoes-em-ny.ghtml",
+    "591c2fb28d5d9c90",
+    "https://valor.globo.com/eu-e/noticia/2026/11/19/avancos-contra-o-racismo-nas-universidades-ainda-convivem-com-barreiras-aos-alunos-e-professores-negros.ghtml",
+    "6e6ba0254d8031e9",
+    "https://valor.globo.com/brasil/noticia/2026/11/19/fim-da-isencao-de-crime-patrimonial-vale-para-acao-em-curso.ghtml",
+    "a45bc4cc7b7e4d11",
+    "https://valor.globo.com/impresso/noticia/2026/11/19/dolar-volta-a-subir-e-alcanca-r-586-juro-futuro-tem-alta.ghtml",
+    "62d855fe3563769e"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -790,7 +800,12 @@
     "Aena capta R$ 1,8 bilhão para pagar outorga do Galeão",
     "Distratos, calotes e estoques maiores chacoalham balanços das incorporadoras",
     "Nem o Itaú passou ileso, mas Banco do Brasil paga conta bem mais salgada. Afinal, qual banco consegue atravessar a piora do crédito?",
-    "Bolsa opera amanhã (20)? Veja o funcionamento da B3, bancos e outros serviços no feriado"
+    "Bolsa opera amanhã (20)? Veja o funcionamento da B3, bancos e outros serviços no feriado",
+    "O jogo GTA VI soma US$ 1,65 bi em vendas e atrai ações de marketing",
+    "Ata do Fed pressiona Treasuries e ações em NY",
+    "Avanços contra o racismo nas universidades ainda convivem com barreiras aos alunos e professores negros",
+    "Fim da isenção de crime patrimonial vale para ação em curso",
+    "Dólar volta a subir e alcança R$ 5,86; juro futuro tem alta"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -798,7 +813,12 @@
     "Segundo a empresa, projetos privados de terceiros já previstos para o aeroporto somam cerca de R$ 1 bilhão em investimentos estimados, com potencial de geração de 3.860 empregos",
     "Com mais idosos no Brasil, mercado imobiliário cria prédios para quem não quer envelhecer sozinho",
     "Os balanços dos bancos no 3T26 mostram que a piora do crédito não atinge todas as instituições da mesma forma — e a qualidade do capital pode fazer toda a diferença daqui para frente",
-    "O feriado nacional da Consciência Negra, nesta sexta-feira (20), altera o funcionamento de bancos, Bolsa de Valores (B3), Correios, INSS e outros serviços em todo o Brasil. Enquanto algumas atividades serão suspensas, outras, como o Pix, operam normalmente."
+    "O feriado nacional da Consciência Negra, nesta sexta-feira (20), altera o funcionamento de bancos, Bolsa de Valores (B3), Correios, INSS e outros serviços em todo o Brasil. Enquanto algumas atividades serão suspensas, outras, como o Pix, operam normalmente.",
+    "Mesmo antes do lançamento oficial, as vendas do game da Rockstar somam desde junho US$ 1,65 bilhão, com 17 milhões de cópias comercializadas",
+    "Ata da última reunião de política monetária do Fed mostrou que os dirigentes esperam novos apertos nos próximos meses",
+    "Se parcela da população negra com ensino superior mais que quintuplicou neste século, preconceitos e assédio ainda persistem na academia",
+    "Supremo decide aplicar imediatamente decisão que evita violência financeira com base na lei Maria da Penha",
+    "Valorização global da moeda americana e expectativa de juros mais altos nos EUA ampliam a pressão sobre os ativos brasileiros, em meio a preocupações fiscais e inflacionárias"
   ],
   "eventos_recentes": [
     {
@@ -812,6 +832,10 @@
     {
       "chave": "bbdc4::BALANCO",
       "ts": 1795079083.655613
+    },
+    {
+      "chave": "vale::GERAL_ATIVO",
+      "ts": 1795085314.498808
     }
   ]
 }
