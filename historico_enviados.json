@@ -516,7 +516,9 @@
     "https://www.poder360.com.br/poder-sportsmkt/sao-paulo-negocia-naming-rights-do-morumbi-com-o-bradesco/",
     "265c25f0db7459d1",
     "https://www.infomoney.com.br/mercados/bb-seguridade-bbse3-cai-11-em-novembro-apos-balanco-acao-pode-recuar-mais/",
-    "17b3ca3f3943db79"
+    "17b3ca3f3943db79",
+    "https://www.moneytimes.com.br/e-tarde-demais-para-a-vale-vale3-por-que-o-btg-ainda-nao-rebaixou-a-recomendacao-para-o-papel-bdap/",
+    "044d14e1284139f8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -829,7 +831,8 @@
     "Copel vê oportunidade para crescer em geração",
     "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
     "São Paulo negocia naming rights do Morumbi com o Bradesco",
-    "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?"
+    "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?",
+    "É tarde demais para a Vale (VALE3)? Por que o BTG ainda não rebaixou a recomendação para o papel"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -850,7 +853,8 @@
     "A companhia foi a maior vencedora do último leilão que contratou disponibilidade de eletricidade, considerando hidrelétricas",
     "A bolsa brasileira está perdendo espaço nas carteiras dos grandes bancos de investimento. Depois de Morgan Stanley e Goldman Sachs reduzirem suas recomendações para as ações do país, foi a vez do BTG Pactual colocar o Brasil em posição neutra em sua carteira para a América Latina.",
     "Clube e banco negam conversas; parceria atual com a Mondelez, dona do Bis, soma R$ 75 milhões em 3 anos",
-    "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c"
+    "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c",
+    "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese."
   ],
   "eventos_recentes": [
     {
@@ -912,11 +916,16 @@
     {
       "chave": "bb_seguridade::BALANCO",
       "ts": 1795092709.264999
+    },
+    {
+      "chave": "btg_pactual::GERAL_ATIVO",
+      "ts": 1795097354.981352
     }
   ],
   "hashes_imagens": [
     "614f989cdb0ee76d",
     "7dba9a3eb07d1794",
-    "d305573262799892"
+    "d305573262799892",
+    "59cfe842dffee3fb"
   ]
 }
