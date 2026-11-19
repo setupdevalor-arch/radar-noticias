@@ -45,7 +45,7 @@ MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))   # Apenas notícias realmente novas (<= 1h30)
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "18"))  # Foco estrito: Ações B3, FIIs e Renda Fixa
-MAX_CONCURRENT_REQUESTS = 6
+MAX_CONCURRENT_REQUESTS = 10
 
 MAX_HTML_BYTES = 5 * 1024 * 1024          # 5 MB para páginas HTML e fotos
 MIN_IMAGE_BYTES = 8 * 1024                # 8 KB mínimos (rejeita pixels 1x1, ícones e logos minúsculos)
@@ -73,19 +73,37 @@ HEADERS_TELEGRAM_PREVIEW = {
 }
 
 # ==============================================================================
-# FEEDS TIER-1 (REDAÇÕES EM TEMPO REAL QUE FURAM A NOTÍCIA PRIMEIRO)
-# Removidos portais lentos que reciclam/republicam matérias de 6h atrás como se fossem novas
+# MAIORES E MAIS CONFIÁVEIS PORTAIS DE MERCADO FINANCEIRO E INVESTIMENTOS DO BRASIL (24 FEEDS)
+# Graças à trava de data original no HTML (<= 90 min) e à antiduplicidade em 4 camadas,
+# monitoramos todos os grandes portais para capturar cada furo no 1º segundo sem repetir!
 # ==============================================================================
 FEEDS = [
-    "https://www.infomoney.com.br/mercados/feed/",                  # InfoMoney Mercados (tempo real + Reuters/Bloomberg)
-    "https://www.infomoney.com.br/onde-investir/feed/",             # InfoMoney FIIs, Dividendos e Renda Fixa
-    "https://www.moneytimes.com.br/feed/",                          # Money Times (fatos relevantes CVM, dividendos e FIIs na hora)
-    "https://braziljournal.com/feed",                               # Brazil Journal (furos exclusivos B3 e M&A)
-    "https://neofeed.com.br/feed/",                                 # NeoFeed (furos rápidos de empresas listadas)
-    "https://www.bloomberglinea.com.br/arc/outboundfeeds/rss.xml",  # Bloomberg Línea Brasil (redação tempo real)
-    "https://einvestidor.estadao.com.br/feed/",                     # E-Investidor / Broadcast Estadão (tempo real)
-    "https://valorinveste.globo.com/rss/valorinveste",              # Valor Investe / Valor Econômico (aberto)
-    "https://br.investing.com/rss/news_25.rss",                     # Investing.com Brasil (Ações em tempo real)
+    # 1. Redações especializadas em Bolsa, Ações, FIIs e Renda Fixa (Tempo Real)
+    "https://www.infomoney.com.br/mercados/feed/",                                  # InfoMoney Mercados
+    "https://www.infomoney.com.br/onde-investir/feed/",                             # InfoMoney Onde Investir (FIIs, Dividendos, Renda Fixa)
+    "https://www.moneytimes.com.br/feed/",                                          # Money Times (CVM, Fatos Relevantes, FIIs)
+    "https://valorinveste.globo.com/rss/valorinveste",                              # Valor Investe (Grupo Globo / Valor)
+    "https://valor.globo.com/rss/valor",                                            # Valor Econômico
+    "https://braziljournal.com/feed",                                               # Brazil Journal (Furos B3 e M&A)
+    "https://neofeed.com.br/feed/",                                                 # NeoFeed (Empresas listadas e Mercado)
+    "https://www.bloomberglinea.com.br/arc/outboundfeeds/rss.xml",                  # Bloomberg Línea Brasil
+    "https://einvestidor.estadao.com.br/feed/",                                     # E-Investidor (Estadão / Broadcast)
+    "https://br.investing.com/rss/news_25.rss",                                     # Investing.com Brasil (Ações em Tempo Real)
+    "https://br.investing.com/rss/news_14.rss",                                     # Investing.com Brasil (Economia & Juros)
+    "https://exame.com/invest/feed/",                                               # Exame Invest
+    "https://www.seudinheiro.com/feed/",                                            # Seu Dinheiro
+    "https://www.suno.com.br/noticias/feed/",                                       # Suno Notícias
+    "https://borainvestir.b3.com.br/feed/",                                         # Bora Investir (Portal Oficial da B3)
+    "https://fiis.com.br/feed/",                                                    # FIIs.com.br (Especializado em Fundos Imobiliários)
+    "https://forbes.com.br/forbes-money/feed/",                                     # Forbes Brasil (Forbes Money)
+    "https://istoedinheiro.com.br/feed/",                                           # IstoÉ Dinheiro
+    # 2. Grandes jornais & agências nacionais (filtrados estritamente p/ Ações B3, FIIs e Renda Fixa)
+    "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/economia/",    # Estadão Economia
+    "https://feeds.folha.uol.com.br/mercado/rss091.xml",                            # Folha de S.Paulo Mercado
+    "https://www.cnnbrasil.com.br/economia/feed/",                                  # CNN Brasil Economia & Mercado
+    "https://g1.globo.com/rss/g1/economia/",                                        # G1 Economia
+    "https://rss.uol.com.br/feed/economia.xml",                                     # UOL Economia
+    "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",                       # Agência Brasil (EBC) Economia
 ]
 
 CAMINHOS_URL_BLOQUEADOS = (
@@ -665,7 +683,9 @@ def url_tem_data_antiga(url: str, agora_utc: datetime) -> bool:
 def normalizar_texto_dedup(texto: str) -> str:
     t = html.unescape(texto or "").strip()
     t = re.sub(
-        r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|E-Investidor|Brazil Journal|FIIs|NeoFeed|Bloomberg|Investing).*$",
+        r"\s+(?:-|–|—|\|)\s+(?:InfoMoney|Money Times|Seu Dinheiro|Suno|Exame|G1|Valor Investe|"
+        r"Valor Econômico|Valor|E-Investidor|Estadão|Folha|CNN Brasil|UOL|Forbes|IstoÉ Dinheiro|"
+        r"Bora Investir|Agência Brasil|Brazil Journal|FIIs|NeoFeed|Bloomberg|Investing).*$",
         "",
         t,
         flags=re.IGNORECASE,
@@ -911,7 +931,14 @@ def url_imagem_eh_valida_sintaticamente(url: Optional[str]) -> bool:
 
 
 def extrair_data_publicacao(item: XmlElement) -> Optional[datetime]:
-    for tag in ("pubDate", "{http://purl.org/dc/elements/1.1/}date", "published", "updated"):
+    for tag in (
+        "pubDate",
+        "{http://purl.org/dc/elements/1.1/}date",
+        "published",
+        "{http://www.w3.org/2005/Atom}published",
+        "updated",
+        "{http://www.w3.org/2005/Atom}updated",
+    ):
         el = item.find(tag)
         if el is not None and el.text:
             dt = _parse_iso_ou_rfc_data(el.text)
@@ -1563,16 +1590,30 @@ async def buscar_feed_rss(
             resp.raise_for_status()
             root = ET.fromstring(resp.content)
         except Exception as exc:
-            logger.warning("Falha ao processar feed %s: %s", url_feed, exc)
+            logger.warning("Feed indisponível no momento (%s): %s", url_feed, str(exc)[:120])
             return []
 
-    for item in root.findall(".//item"):
-        link_el = item.find("link")
-        title_el = item.find("title")
-        desc_el = item.find("description")
-        content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+    itens_xml = root.findall(".//item")
+    eh_atom = False
+    if not itens_xml:
+        itens_xml = root.findall(".//{http://www.w3.org/2005/Atom}entry") or root.findall(".//entry")
+        eh_atom = bool(itens_xml)
 
-        link = normalizar_url(link_el.text if link_el is not None else "")
+    for item in itens_xml:
+        if eh_atom:
+            link_el = item.find("{http://www.w3.org/2005/Atom}link") or item.find("link")
+            raw_link = link_el.attrib.get("href", "") if link_el is not None else ""
+            title_el = item.find("{http://www.w3.org/2005/Atom}title") or item.find("title")
+            desc_el = item.find("{http://www.w3.org/2005/Atom}summary") or item.find("summary")
+            content_el = item.find("{http://www.w3.org/2005/Atom}content") or item.find("content")
+        else:
+            link_el = item.find("link")
+            raw_link = link_el.text if link_el is not None and link_el.text else ""
+            title_el = item.find("title")
+            desc_el = item.find("description")
+            content_el = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+
+        link = normalizar_url(raw_link)
         title = html.unescape(title_el.text.strip()) if title_el is not None and title_el.text else ""
         texto_desc = desc_el.text if desc_el is not None and desc_el.text else ""
         texto_content = content_el.text if content_el is not None and content_el.text else ""
@@ -1667,7 +1708,7 @@ async def carregar_proximas_noticias(
     qtd_sem_imagem = 0
     qtd_descartadas = 0
 
-    for cand in candidatos_unicos[:60]:
+    for cand in candidatos_unicos[:75]:
         if len(noticias_aprovadas) >= limite * 2:
             break
 
@@ -2003,7 +2044,7 @@ async def main() -> None:
         )
         sys.exit(1)
 
-    limits = httpx.Limits(max_keepalive_connections=10, max_connections=20)
+    limits = httpx.Limits(max_keepalive_connections=15, max_connections=30)
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=limits) as client:
         noticias, links_historico, titulos_historico, leads_historico, eventos_historico = (
             await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
