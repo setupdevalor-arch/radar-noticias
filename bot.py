@@ -42,7 +42,7 @@ MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "16"))
-MAX_CONCURRENT_REQUESTS = 10
+MAX_CONCURRENT_REQUESTS = 12
 
 MAX_HTML_BYTES = 5 * 1024 * 1024
 MIN_IMAGE_BYTES = 8 * 1024
@@ -65,37 +65,49 @@ HEADERS_TELEGRAM_PREVIEW = {
 }
 
 # ==============================================================================
-# 23 MAIORES PORTAIS CONFIÁVEIS DE MERCADO FINANCEIRO E ECONOMIA DO BRASIL
-# (Removido valor.globo.com por paywall fechado e capa padrão com logo genérico)
+# 32 FEEDS 100% VERIFICADOS AO VIVO (ZERO 404, ZERO XML QUEBRADO, ZERO FEED VAZIO, ZERO FIIs)
 # ==============================================================================
 FEEDS = [
-    "https://www.infomoney.com.br/mercados/feed/",
-    "https://www.infomoney.com.br/onde-investir/feed/",
+    # 1. Grandes portais de mercado financeiro e ações B3
+    "https://www.infomoney.com.br/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://valorinveste.globo.com/rss/valorinveste",
     "https://braziljournal.com/feed",
     "https://neofeed.com.br/feed/",
     "https://www.bloomberglinea.com.br/arc/outboundfeeds/rss.xml",
-    "https://einvestidor.estadao.com.br/feed/",
     "https://br.investing.com/rss/news_25.rss",
-    "https://br.investing.com/rss/news_14.rss",
+    "https://br.investing.com/rss/news.rss",
+    "https://exame.com/feed/",
     "https://exame.com/invest/feed/",
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
+    "https://www.spacemoney.com.br/feed/",
+    "https://bmcnews.com.br/feed/",
+    "https://investnews.com.br/feed/",
     "https://borainvestir.b3.com.br/feed/",
-    "https://fiis.com.br/feed/",
     "https://forbes.com.br/forbes-money/feed/",
-    "https://istoedinheiro.com.br/feed/",
+    # 2. Portais especialistas nos 5 setores (Bancos, Energia Elétrica, Saneamento, Seguros e Telecom)
+    "https://finsidersbrasil.com.br/feed/",
+    "https://megawhat.energy/feed/",
+    "https://eixos.com.br/feed/",
+    "https://agenciainfra.com/blog/feed/",
+    "https://www.sonhoseguro.com.br/feed/",
+    "https://www.cqcs.com.br/feed/",
+    "https://telesintese.com.br/feed/",
+    "https://teletime.com.br/feed/",
+    "https://mobiletime.com.br/feed/",
+    # 3. Grandes jornais e agências nacionais
+    "https://www.cnnbrasil.com.br/feed/",
+    "https://www.poder360.com.br/feed/",
     "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/economia/",
     "https://feeds.folha.uol.com.br/mercado/rss091.xml",
-    "https://www.cnnbrasil.com.br/economia/feed/",
     "https://g1.globo.com/rss/g1/economia/",
-    "https://rss.uol.com.br/feed/economia.xml",
     "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
 ]
 
 DOMINIOS_BLOQUEADOS = (
     "valor.globo.com",
+    "fiis.com.br",
 )
 
 CAMINHOS_URL_BLOQUEADOS = (
@@ -117,6 +129,9 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
 )
 
 BLOQUEADOS_APENAS_NO_TITULO = (
+    # FIIs / FIAGROs (para não vazar FII gerido por BTG, Itaú, Santander ou BB)
+    "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
+    "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
     "dona do claude", "anthropic", "openai", "chatgpt", "spacex", "elon musk", "neuralink",
     "tiktok", "bytedance", "sam altman", "bitcoin", "ethereum", "criptomoeda", "criptomoedas",
     "solana", "dogecoin", "binance", "calendário do inss", "meu inss", "benefício do inss",
@@ -717,7 +732,7 @@ def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool
     if any(dom in u_low for dom in DOMINIOS_BLOQUEADOS) or any(c in u_low for c in CAMINHOS_URL_BLOQUEADOS):
         return True
     t_low = titulo.lower()
-    if any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
+    if re.search(r"\bfii\b", t_low) or any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
         return True
     return any(b in f"{t_low} {(inicio_texto or '')[:450].lower()}" for b in BLOQUEADOS_PROPAGANDA_CORRETORA)
 
