@@ -9,7 +9,9 @@ on:
       - 'requirements.txt'
       - '.github/workflows/bot.yml'
   schedule:
-    - cron: '*/5 * * * *'
+    # O loop interno já executa a cada 5 min por ~90 min;
+    # agendar a cada 30 min garante continuidade sem poluir a fila do GitHub Actions:
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -19,7 +21,7 @@ concurrency:
 jobs:
   enviar-noticias:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 105
     permissions:
       contents: write
 
@@ -33,6 +35,11 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
+      - name: Priorizar rede IPv4 para Telegram e APIs
+        run: |
+          sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 || true
+          sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1 || true
+
       - name: Instalar dependências (httpx, trafilatura, yt-dlp)
         run: |
           python -m pip install --upgrade pip
@@ -45,22 +52,21 @@ jobs:
           TELEGRAM_GROUP_ID: ${{ secrets.TELEGRAM_GROUP_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED: "1"
+          TZ: "America/Sao_Paulo"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           for i in $(seq 1 18); do
-            echo "=== Disparo $i de 18 (Ciclo de 5 min) ==="
-            git pull --rebase origin main || true
+            echo "=== [$(date '+%d/%m/%Y %H:%M:%S BRT')] Disparo $i de 18 (Ciclo de 5 min) ==="
+            git pull --rebase --autostash origin main || (git rebase --abort 2>/dev/null || true)
 
-            # Executa o bot registrando falhas críticas caso ocorram
             python bot.py || echo "Aviso: O ciclo $i retornou erro."
 
-            # Salva e envia o histórico atualizado caso novas notícias tenham saído
             if [ -n "$(git status --porcelain historico_enviados.json)" ]; then
               git add historico_enviados.json
               git commit -m "Atualiza histórico [skip ci]" || true
-              git pull --rebase -X theirs origin main || true
+              git pull --rebase -X theirs origin main || (git rebase --abort 2>/dev/null || true)
               git push origin main || true
             fi
 
