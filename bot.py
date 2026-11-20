@@ -117,7 +117,7 @@ CAMINHOS_URL_BLOQUEADOS = (
     "/poder-justica/", "/poder-eleicoes/", "/poder-midia/", "/midia/", "/comportamento/",
     "/mundo/", "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-", "/cursos/",
     "/marketing/", "/carros/", "/autoesporte/", "/turismo/", "/saude/", "/educacao/",
-    "/future-of-money/", "/cripto/", "/criptomoedas/", "/carreira/", "/tecnologia/", "/inteligencia-artificial/",
+    "/future-of-money/", "/cripto/", "/criptomoedas/", "/carreira/", "/inteligencia-artificial/",
 )
 
 BLOQUEADOS_PROPAGANDA_CORRETORA = (
@@ -128,10 +128,14 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "treinamento gratuito", "evento online", "evento gratuito", "cupom de desconto",
     "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
     "cartão de criptomoedas", "encerra seu cartão", "cartão black", "anuidade grátis",
+    # FIIs / FIAGROs (bloqueia tanto no título quanto no corpo)
+    "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
+    "investimento imobiliário", "investimento imobiliario",
+    "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
     # Patrocínios esportivos, estádios, clubes, shows e marketing (sem relevância p/ acionista)
     "naming rights", "patrocínio", "patrocinador", "patrocina", "estádio", "estadio",
     "morumbi", "maracanã", "maracana", "allianz parque", "neo química", "neo quimica",
-    "camisa do", "uniforme", "torcida", "torcedores", "clube de futebol", "clube e banco",
+    "camisa do", "uniforme do", "uniforme da", "torcida", "torcedores", "clube de futebol", "clube e banco",
     "segundo o ge", "globoesporte", "flamengo", "corinthians", "palmeiras", "vasco",
     "botafogo", "fluminense", "grêmio", "cruzeiro", "atlético-mg", "atletico-mg",
     "santos fc", "são paulo fc", "cbf", "fifa", "conmebol", "neymar", "rock in rio",
@@ -174,92 +178,81 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# TODAS AS EMPRESAS DA B3 NOS 5 SETORES PERENES
-# (Bancos, Energia Elétrica, Saneamento, Seguros e Telecomunicações)
+# LISTA FECHADA DE EMPRESAS MONITORADAS NA B3 (57 EMPRESAS / 97 TICKERS EXATOS)
 # ==============================================================================
 SETOR_LABELS: Dict[str, str] = {
     "BANCOS": "🏦 <b>BANCOS</b>",
     "ENERGIA": "⚡ <b>ENERGIA ELÉTRICA</b>",
     "SANEAMENTO": "💧 <b>SANEAMENTO</b>",
+    "AMBIENTAL": "♻️ <b>GESTÃO AMBIENTAL</b>",
     "SEGUROS": "🛡️ <b>SEGUROS</b>",
     "TELECOM": "📡 <b>TELECOM</b>",
+    "TECNOLOGIA": "💻 <b>TECNOLOGIA</b>",
 }
 
 EMPRESAS_ALVO_B3: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] = (
-    # 1. BANCOS
+    # 1. BANCOS (17 empresas — 31 tickers)
     ("itau", "BANCOS", ("itaú unibanco", "itau unibanco", "itaú", "itau"), ("ITUB4", "ITUB3")),
     ("itausa", "BANCOS", ("itaúsa", "itausa"), ("ITSA4", "ITSA3")),
     ("banco_do_brasil", "BANCOS", ("banco do brasil",), ("BBAS3",)),
     ("bradesco", "BANCOS", ("bradesco",), ("BBDC4", "BBDC3")),
     ("santander", "BANCOS", ("santander brasil", "santander"), ("SANB11", "SANB3", "SANB4")),
     ("btg_pactual", "BANCOS", ("btg pactual", "btg"), ("BPAC11", "BPAC3", "BPAC5")),
-    ("abc_brasil", "BANCOS", ("banco abc brasil", "banco abc", "abc brasil"), ("ABCB4",)),
     ("banrisul", "BANCOS", ("banrisul",), ("BRSR6", "BRSR3", "BRSR5")),
+    ("abc_brasil", "BANCOS", ("banco abc brasil", "banco abc", "abc brasil"), ("ABCB4",)),
     ("banco_bmg", "BANCOS", ("banco bmg",), ("BMGB4",)),
-    ("banco_pan", "BANCOS", ("banco pan",), ("BPAN4",)),
     ("banco_pine", "BANCOS", ("banco pine",), ("PINE4", "PINE3")),
-    ("banco_inter", "BANCOS", ("banco inter", "inter & co", "inter&co"), ("INBR32",)),
-    ("nubank", "BANCOS", ("nubank", "nu holdings"), ("ROXO34",)),
-    ("br_partners", "BANCOS", ("br partners",), ("BRBI11",)),
-    ("banestes", "BANCOS", ("banestes",), ("BEES3", "BEES4")),
+    ("banco_mercantil", "BANCOS", ("banco mercantil", "mercantil do brasil"), ("BMEB4", "BMEB3")),
     ("banco_nordeste", "BANCOS", ("banco do nordeste",), ("BNBR3",)),
     ("banco_amazonia", "BANCOS", ("banco da amazônia", "banco da amazonia"), ("BAZA3",)),
-    ("banese", "BANCOS", ("banese",), ("BGIP4", "BGIP3")),
-    ("banco_mercantil", "BANCOS", ("banco mercantil", "mercantil do brasil"), ("BMEB4", "BMEB3", "BMIN4", "BMIN3")),
+    ("banestes", "BANCOS", ("banestes",), ("BEES3", "BEES4")),
     ("brb", "BANCOS", ("banco de brasília", "banco de brasilia", "banco brb"), ("BSLI3", "BSLI4")),
-    ("banco_alfa", "BANCOS", ("banco alfa", "financeira alfa"), ("BRIV4", "BRIV3")),
-    # 2. ENERGIA ELÉTRICA
-    ("eletrobras", "ENERGIA", ("eletrobras", "furnas", "chesf", "eletronorte", "axia energia"), ("ELET3", "ELET6", "ELET5")),
-    ("taesa", "ENERGIA", ("taesa",), ("TAEE11", "TAEE3", "TAEE4")),
-    ("isa_energia", "ENERGIA", ("isa energia", "isa cteep", "cteep", "transmissão paulista", "transmissao paulista"), ("ISAE4", "ISAE3", "TRPL4", "TRPL3")),
+    ("banese", "BANCOS", ("banese",), ("BGIP4", "BGIP3")),
+    ("br_partners", "BANCOS", ("br partners",), ("BRBI11",)),
+    # 2. ENERGIA ELÉTRICA (24 empresas — 47 tickers)
+    ("eletrobras", "ENERGIA", ("axia energia", "eletrobras", "furnas", "chesf", "eletronorte"), ("AXIA3", "ELET3", "ELET6")),
     ("engie", "ENERGIA", ("engie brasil", "engie"), ("EGIE3",)),
-    ("cpfl", "ENERGIA", ("cpfl energia", "cpfl"), ("CPFE3",)),
-    ("cemig", "ENERGIA", ("cemig",), ("CMIG4", "CMIG3")),
-    ("copel", "ENERGIA", ("copel",), ("CPLE3", "CPLE6", "CPLE11")),
-    ("equatorial", "ENERGIA", ("equatorial energia", "equatorial"), ("EQTL3", "EQPA3")),
-    ("energisa", "ENERGIA", ("energisa",), ("ENGI11", "ENGI3", "ENGI4", "ENMT3", "ENMT4")),
+    ("taesa", "ENERGIA", ("taesa",), ("TAEE11", "TAEE3", "TAEE4")),
+    ("isa_energia", "ENERGIA", ("isa energia", "isa cteep", "cteep", "transmissão paulista", "transmissao paulista"), ("ISAE4", "ISAE3")),
     ("alupar", "ENERGIA", ("alupar",), ("ALUP11", "ALUP3", "ALUP4")),
-    ("auren", "ENERGIA", ("auren energia", "auren", "aes brasil"), ("AURE3",)),
+    ("cemig", "ENERGIA", ("cemig",), ("CMIG4", "CMIG3")),
+    ("copel", "ENERGIA", ("copel",), ("CPLE3", "CPLE6")),
+    ("cpfl", "ENERGIA", ("cpfl energia", "cpfl"), ("CPFE3",)),
+    ("equatorial", "ENERGIA", ("equatorial energia", "equatorial"), ("EQTL3",)),
+    ("energisa", "ENERGIA", ("energisa",), ("ENGI11", "ENGI3", "ENGI4")),
     ("neoenergia", "ENERGIA", ("neoenergia",), ("NEOE3",)),
-    ("eneva", "ENERGIA", ("eneva",), ("ENEV3",)),
     ("serena", "ENERGIA", ("serena energia", "omega energia"), ("SRNA3",)),
+    ("auren", "ENERGIA", ("auren energia", "auren", "aes brasil"), ("AURE3",)),
+    ("eneva", "ENERGIA", ("eneva",), ("ENEV3",)),
     ("light", "ENERGIA", ("light energia", "light s.a", "distribuidora light", "concessionária light", "grupo light"), ("LIGT3",)),
+    ("coelba", "ENERGIA", ("coelba", "neoenergia coelba"), ("CEEB3", "CEEB5")),
+    ("celpe", "ENERGIA", ("celpe", "neoenergia pernambuco", "companhia energética de pernambuco", "companhia energetica de pernambuco"), ("CEPE5", "CEPE3", "CEPE6")),
+    ("cosern", "ENERGIA", ("cosern", "neoenergia cosern"), ("CSRN3", "CSRN5", "CSRN6")),
     ("celesc", "ENERGIA", ("celesc",), ("CLSC4", "CLSC3")),
-    ("coelba", "ENERGIA", ("coelba",), ("CEEB3", "CEEB5")),
-    ("cosern", "ENERGIA", ("cosern",), ("CSRN3", "CSRN5", "CSRN6")),
-    ("coelce", "ENERGIA", ("coelce", "enel ceará", "enel ceara"), ("COCE5", "COCE3")),
-    ("ceb", "ENERGIA", ("ceb geração", "ceb distribuicao", "companhia energética de brasília"), ("CEBR3", "CEBR5", "CEBR6")),
-    ("ceee", "ENERGIA", ("ceee-g", "ceee-t", "ceee geração"), ("EEEL3", "EEEL4")),
-    ("elektro", "ENERGIA", ("elektro",), ("EKTR4", "EKTR3")),
+    ("elektro", "ENERGIA", ("elektro", "neoenergia elektro"), ("EKTR4", "EKTR3")),
     ("emae", "ENERGIA", ("emae",), ("EMAE4", "EMAE3")),
-    ("renova", "ENERGIA", ("renova energia",), ("RNEW3", "RNEW4", "RNEW11")),
-    ("afluente_t", "ENERGIA", ("afluente t",), ("AFLT3",)),
+    ("ceb", "ENERGIA", ("ceb geração", "ceb distribuicao", "ceb distribuição", "companhia energética de brasília", "companhia energetica de brasilia"), ("CEBR3", "CEBR5", "CEBR6")),
     ("rede_energia", "ENERGIA", ("rede energia",), ("REDE3",)),
-    ("ampla_energia", "ENERGIA", ("ampla energia",), ("CBEE3",)),
-    ("eletropar", "ENERGIA", ("eletropar",), ("LIPR3",)),
-    ("paranapanema_energia", "ENERGIA", ("rio paranapanema energia", "ctg brasil"), ("GEPA4", "GEPA3")),
-    # 3. SANEAMENTO
+    ("renova", "ENERGIA", ("renova energia",), ("RNEW3", "RNEW4", "RNEW11")),
+    # 3. SANEAMENTO E GESTÃO AMBIENTAL (4 empresas — 6 tickers)
     ("sabesp", "SANEAMENTO", ("sabesp",), ("SBSP3",)),
     ("sanepar", "SANEAMENTO", ("sanepar",), ("SAPR11", "SAPR4", "SAPR3")),
     ("copasa", "SANEAMENTO", ("copasa",), ("CSMG3",)),
-    ("casan", "SANEAMENTO", ("casan",), ("CASN3", "CASN4")),
-    ("orizon", "SANEAMENTO", ("orizon",), ("ORVR3",)),
-    # 4. SEGUROS
+    ("ambipar", "AMBIENTAL", ("ambipar",), ("AMBP3",)),
+    # 4. SEGUROS (4 empresas — 4 tickers)
     ("bb_seguridade", "SEGUROS", ("bb seguridade",), ("BBSE3",)),
     ("caixa_seguridade", "SEGUROS", ("caixa seguridade",), ("CXSE3",)),
     ("porto_seguro", "SEGUROS", ("porto seguro", "porto s.a", "porto bank", "porto saúde", "porto saude"), ("PSSA3",)),
     ("irb", "SEGUROS", ("irb brasil", "irb(re)", "irb re", "irb"), ("IRBR3",)),
-    ("wiz", "SEGUROS", ("wiz co", "wiz soluções", "wiz solucoes"), ("WIZC3", "WIZS3")),
-    ("odontoprev", "SEGUROS", ("odontoprev",), ("ODPV3",)),
-    ("qualicorp", "SEGUROS", ("qualicorp",), ("QUAL3",)),
-    # 5. TELECOMUNICAÇÕES
-    ("vivo", "TELECOM", ("telefônica brasil", "telefonica brasil", "telefônica", "telefonica", "operadora vivo", "vivo fibra", "vivo empresas"), ("VIVT3",)),
+    # 5. TELECOMUNICAÇÕES E TECNOLOGIA (8 empresas — 9 tickers)
+    ("vivo", "TELECOM", ("telefônica brasil", "telefonica brasil", "operadora vivo", "vivo fibra", "vivo empresas"), ("VIVT3",)),
     ("tim", "TELECOM", ("tim brasil", "tim s.a", "operadora tim"), ("TIMS3",)),
-    ("oi", "TELECOM", ("oi s.a", "operadora oi", "grupo oi", "nova oi"), ("OIBR3", "OIBR4")),
-    ("desktop", "TELECOM", ("desktop s.a", "operadora desktop", "desktop internet"), ("DESK3",)),
+    ("brisanet", "TELECOM", ("brisanet",), ("BRST3",)),
     ("unifique", "TELECOM", ("unifique",), ("FIQE3",)),
-    ("brisanet", "TELECOM", ("brisanet",), ("BRIT3",)),
+    ("desktop", "TELECOM", ("desktop s.a", "operadora desktop", "desktop internet"), ("DESK3",)),
     ("telebras", "TELECOM", ("telebras", "telebrás"), ("TELB4", "TELB3")),
+    ("allied", "TECNOLOGIA", ("allied tecnologia", "allied s.a", "allied brasil"), ("ALLD3",)),
+    ("intelbras", "TECNOLOGIA", ("intelbras",), ("INTB3",)),
 )
 
 TICKER_PARA_EMPRESA: Dict[str, Tuple[str, str]] = {
@@ -267,28 +260,28 @@ TICKER_PARA_EMPRESA: Dict[str, Tuple[str, str]] = {
 }
 
 REGEX_BB_BANCO = re.compile(r"\bBB\b(?!\s*(?:Seguridade|Investimentos|BI|-BI|Asset|DTVM|Consórcios|Previdência))")
-REGEX_VIVO_OPERADORA = re.compile(r"(?<!\bao\s)(?<!\bAo\s)(?<!\bem\s)(?<!\bser\s)(?<!\bestar\s)(?<!\bestá\s)(?<!\bsegue\s)(?<!\bmais\s)\bVivo\b")
+REGEX_VIVO_OPERADORA = re.compile(
+    r"(?<!\bao\s)(?<!\bAo\s)(?<!\bem\s)(?<!\bser\s)(?<!\bestar\s)(?<!\bestá\s)(?<!\bsegue\s)(?<!\bmais\s)\bVivo\b"
+    r"|(?<!conversa\s)(?<!ligação\s)(?<!ligacao\s)(?<!chamada\s)(?<!linha\s)(?<!rede\s)(?<!central\s)(?<!entrevista\s)\bTelef[ôo]nica\b"
+)
 REGEX_TIM_OPERADORA = re.compile(r"\bTIM\b(?!\s+(?:Cook|Berners|Burton|Maia|Hortons|Robbins|Walz|Kaine))")
 REGEX_LIGHT_ENERGIA = re.compile(r"\bLight\b(?=.*(?:energia|distribuidor|concess|aneel|tarifa|dívida|recuperação|ações|lucro|balanço|rio))", flags=re.IGNORECASE)
+REGEX_ALLIED_TECH = re.compile(r"\bAllied\b(?=.*(?:lucro|lucra|balanço|ebitda|receita|dividendo|jcp|proventos|ações|b3|cvm|varejo|eletrônicos|smartphones|distribuição|dívida|trimestre|1t2|2t2|3t2|4t2))", flags=re.IGNORECASE)
 
 # Evita publicar matérias de outras empresas/macro só porque um banco assinou o relatório
 REGEX_RELATORIO_DE_BANCO = re.compile(
     r"\b(?:itaú\s+bba|itau\s+bba|bradesco\s+bbi|bb\s+investimentos|bb-bi|btg\s+pactual\s+digital)\b"
     r"|\b(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|banco\s+do\s+brasil)\s+"
-    r"(?:recomenda|eleva|corta|rebaixa|reduz\s+preço|aumenta\s+preço|vê\s+|projeta\s+|revisa\s+|prevê\s+|"
-    r"aposta\s+em|escolhe\s+|indica\s+|lista\s+|aponta\s+|inclui\s+|retira\s+|remove\s+|tira\s+|"
+    r"(?:recomenda|rebaixa|eleva\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis|a\s+ação|as\s+ações)|"
+    r"corta\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis)|"
+    r"reduz\s+preço|aumenta\s+preço|revisa\s+(?:recomendação|preço|carteira|projeção|estimativa)|"
+    r"(?:vê|projeta|prevê)\s+(?:potencial|upside|oportunidade\s+em|selic|dólar|ibovespa|pib|inflação|ipca|"
+    r"(?:alta|queda)\s+(?:de\s+[\d.,]+%?\s+)?(?:para|em|das\s+ações|nos\s+papéis|do\s+dólar|da\s+selic|do\s+ibovespa))|"
+    r"aposta\s+em|escolhe\s+|indica\s+|lista\s+|inclui\s+|retira\s+|remove\s+|tira\s+|"
     r"mantém\s+(?:compra|venda|neutro|recomendação)|inicia\s+cobertura|atualiza\s+carteira|"
     r"diz\s+que\s+(?:a\s+selic|o\s+dólar|o\s+ibovespa|o\s+pib|a\s+inflação))\b"
     r"|\b(?:segundo|para|na\s+visão\s+do|em\s+relatório\s+do|carteira\s+(?:do|da))\s+(?:o\s+)?(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|bb)\b",
     flags=re.IGNORECASE,
-)
-
-TERMOS_BANCO_PROTAGONISTA = (
-    "dividendo", "dividendos", "jcp", "proventos", "lucro", "lucra", "balanço", "ebitda",
-    "prejuízo", "roe", "carteira de crédito", "inadimplência", "receita", "resultado",
-    "fato relevante", "recompra", "aquisição", "compra banco", "vende", "fusão", "debêntures",
-    "emissão", "rating", "agências", "clientes", "ceo", "presidente", "conselho",
-    "ações do", "ações da", "papéis do", "papéis da", "capta", "captou",
 )
 
 PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
@@ -296,18 +289,19 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
     "juros sobre o capital próprio": 24, "proventos": 20, "data-com": 24, "data com": 22,
     "data-ex": 20, "dividend yield": 20, "payout": 18, "bonificação": 16, "balanço": 20,
     "lucro líquido": 22, "lucro": 18, "lucra": 18, "ebitda": 22, "lajida": 20, "prejuízo": 18,
-    "receita líquida": 18, "margem": 14, "roe": 18, "inadimplência": 16, "carteira de crédito": 18,
-    "geração de caixa": 16, "guidance": 18, "fato relevante": 24, "fusão": 18, "aquisição": 18,
-    "recompra": 20, "opa": 20, "follow-on": 20, "privatização": 18, "concessão": 18, "leilão": 18,
-    "aneel": 16, "tarifa": 14, "reajuste tarifário": 18, "revisão tarifária": 18, "anatel": 16,
-    "susep": 16, "cvm": 16, "banco central": 14, "bacen": 14, "debêntures": 18, "emissão": 14,
-    "capex": 18, "investimento": 12, "investimentos": 12, "contrato de concessão": 18,
-    "contrato de energia": 18, "contrato de transmissão": 18, "dívida": 14, "alavancagem": 16,
-    "recuperação judicial": 18, "rating": 16, "preço-alvo": 18, "prêmios emitidos": 18,
-    "sinistralidade": 18, "universalização": 16, "fibra óptica": 14, "fibra": 12, "5g": 14,
-    "geração de energia": 16, "transmissão de energia": 16, "distribuição de energia": 16,
-    "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16, "b3": 14,
-    "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
+    "receita líquida": 18, "receita bruta": 14, "vendas": 12, "margem": 14, "roe": 18,
+    "inadimplência": 16, "carteira de crédito": 18, "geração de caixa": 16, "guidance": 18,
+    "fato relevante": 24, "fusão": 18, "aquisição": 18, "recompra": 20, "opa": 20, "follow-on": 20,
+    "privatização": 18, "concessão": 18, "leilão": 18, "aneel": 16, "tarifa": 14,
+    "reajuste tarifário": 18, "revisão tarifária": 18, "anatel": 16, "susep": 16, "cvm": 16,
+    "banco central": 14, "bacen": 14, "debêntures": 18, "emissão": 14, "capex": 18,
+    "investimento": 12, "investimentos": 12, "contrato de concessão": 18, "contrato de energia": 18,
+    "contrato de transmissão": 18, "dívida": 14, "alavancagem": 16, "recuperação judicial": 18,
+    "rating": 16, "preço-alvo": 18, "prêmios emitidos": 18, "sinistralidade": 18,
+    "universalização": 16, "resíduos": 14, "gestão ambiental": 14, "fibra óptica": 14, "fibra": 12,
+    "5g": 14, "segurança eletrônica": 14, "geração de energia": 16, "transmissão de energia": 16,
+    "distribuição de energia": 16, "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16,
+    "b3": 14, "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
 }
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
@@ -433,6 +427,7 @@ def detectar_empresas_alvo_no_texto(texto_original: str) -> List[Tuple[str, str,
         ("vivo", "TELECOM", "VIVT3", REGEX_VIVO_OPERADORA),
         ("tim", "TELECOM", "TIMS3", REGEX_TIM_OPERADORA),
         ("light", "ENERGIA", "LIGT3", REGEX_LIGHT_ENERGIA),
+        ("allied", "TECNOLOGIA", "ALLD3", REGEX_ALLIED_TECH),
     ):
         if ent_id not in vistos and rx.search(texto_original):
             vistos.add(ent_id)
@@ -446,10 +441,7 @@ def extrair_protagonistas_titulo(titulo: str) -> List[Tuple[str, str, str]]:
     if not entidades:
         return []
     if REGEX_RELATORIO_DE_BANCO.search(titulo):
-        t_low = titulo.lower()
-        eh_casa = bool(re.search(r"\b(?:itaú\s+bba|itau\s+bba|bradesco\s+bbi|bb\s+investimentos|bb-bi)\b", t_low))
-        if eh_casa or not _contem_termo_exato(t_low, TERMOS_BANCO_PROTAGONISTA):
-            return detectar_empresas_alvo_no_texto(REGEX_RELATORIO_DE_BANCO.sub(" ", titulo))
+        return detectar_empresas_alvo_no_texto(REGEX_RELATORIO_DE_BANCO.sub(" ", titulo))
     return entidades
 
 
@@ -703,7 +695,7 @@ def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
 
 
 # ==============================================================================
-# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA IDEAL (450 A 1.280 CARACTERES)
+# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA ENXUTA (<= 1.000 CARACTERES)
 # ==============================================================================
 def gerar_botao_chat() -> Dict[str, Any]:
     return {"inline_keyboard": [[{"text": TEXTO_BOTAO_CHAT, "url": GRUPO_URL}]]}
@@ -749,9 +741,10 @@ def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool
     if any(dom in u_low for dom in DOMINIOS_BLOQUEADOS) or any(c in u_low for c in CAMINHOS_URL_BLOQUEADOS):
         return True
     t_low = titulo.lower()
-    if re.search(r"\bfii\b", t_low) or any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
+    amostra = f"{t_low} {(inicio_texto or '')[:450].lower()}"
+    if re.search(r"\bfii\b", amostra) or any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
         return True
-    return any(b in f"{t_low} {(inicio_texto or '')[:450].lower()}" for b in BLOQUEADOS_PROPAGANDA_CORRETORA)
+    return any(b in amostra for b in BLOQUEADOS_PROPAGANDA_CORRETORA)
 
 
 def limpar_caudas_wordpress(texto: str) -> str:
@@ -972,7 +965,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     if not post_principal or not blocos_escolhidos:
         return None
 
-    # Versão <= 1.004 chars (para fallback sendPhoto / sendVideo quando preview longo não for suportado)
+    # Versão <= 995 chars (para fallback sendPhoto / sendVideo quando preview longo não for suportado)
     if tamanho_texto_visivel(post_principal) <= TELEGRAM_CAPTION_LIMIT - 20:
         caption_curta = post_principal
     else:
@@ -990,7 +983,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
 
 
 # ==============================================================================
-# MÍDIA GARANTIDA (IMAGEM REAL OU VÍDEO YT-DLP — BLOQUEIA CAPAS/LOGOS PADRÃO)
+# MÍDIA GARANTIDA (IMAGEM NATIVA OU VÍDEO YT-DLP — NUNCA ENVIA TEXTO SECO)
 # ==============================================================================
 def extrair_og_image_da_pagina(raw_html: str) -> Optional[str]:
     padroes = (
