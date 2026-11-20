@@ -6,6 +6,7 @@ import json
 import logging
 import os
 import re
+import socket
 import sys
 import tempfile
 import unicodedata
@@ -15,6 +16,20 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 from xml.etree.ElementTree import Element as XmlElement
+
+# ==============================================================================
+# BLINDAGEM DE REDE IPv4-FIRST (EVITA [Errno 101] Network is unreachable NO GITHUB ACTIONS)
+# ==============================================================================
+_ORIG_GETADDRINFO = socket.getaddrinfo
+
+
+def _getaddrinfo_ipv4_first(host: Any, port: Any, family: int = 0, type: int = 0, proto: int = 0, flags: int = 0) -> Any:
+    res = _ORIG_GETADDRINFO(host, port, family, type, proto, flags)
+    ipv4 = [r for r in res if r[0] == socket.AF_INET]
+    return ipv4 if ipv4 else res
+
+
+socket.getaddrinfo = _getaddrinfo_ipv4_first  # type: ignore[assignment]
 
 import httpx
 import trafilatura
@@ -37,18 +52,28 @@ logger = logging.getLogger("BotInvestidor")
 # ==============================================================================
 HISTORICO_ARQUIVO = Path(os.environ.get("HISTORICO_ARQUIVO", "historico_enviados.json"))
 GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx")
-GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or "").strip()
+GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or "").strip().strip('"').strip("'")
+GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 GEMINI_MODELS: Tuple[str, ...] = tuple(
     dict.fromkeys(
         m.strip()
         for m in (
-            os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
+            os.environ.get("GEMINI_MODEL", ""),
+            "gemini-3.8-flash",
+            "gemini-3.7-flash",
+            "gemini-3.6-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-3.1-flash-lite",
+            "gemini-flash-latest",
             "gemini-2.5-flash",
-            "gemini-2.5-flash-lite",
-            "gemini-2.0-flash",
         )
         if m and m.strip()
     )
+)
+_CACHE_MODELOS_GEMINI: Dict[str, Tuple[str, ...]] = {}
+_MODELOS_GEMINI_EXCLUSAO = (
+    "embedding", "imagen", "veo", "tts", "audio", "live", "robotics",
+    "computer-use", "deep-research", "aqa", "gemma", "learnlm", "vision",
 )
 
 MAX_HISTORICO = 800
@@ -76,6 +101,11 @@ HEADERS = {
 HEADERS_TELEGRAM_PREVIEW = {
     "User-Agent": "TelegramBot (like TwitterBot)",
     "Accept": "image/jpeg,image/png,*/*;q=0.5",
+}
+HEADERS_API_JSON = {
+    "User-Agent": "RadarNoticiasBot/2.0",
+    "Accept": "application/json",
+    "Connection": "close",
 }
 
 # ==============================================================================
@@ -1093,6 +1123,86 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
     return post_principal, caption_curta
 
 
+def _pontuar_modelo_gemini(nome: str) -> int:
+    n = (nome or "").lower().strip()
+    if not n.startswith("gemini-") or any(x in n for x in _MODELOS_GEMINI_EXCLUSAO):
+        return -1
+    m_ver = re.search(r"gemini-(\d+)(?:\.(\d+))?", n)
+    major = int(m_ver.group(1)) if m_ver else 0
+    minor = int(m_ver.group(2) or 0) if m_ver else 0
+    ver_score = major * 100 + minor * 10
+    if "flash-lite" in n:
+        tipo_score = 45
+    elif "flash" in n:
+        tipo_score = 55
+    elif "pro" in n:
+        tipo_score = 20
+    else:
+        tipo_score = 10
+    penalidade_preview = -8 if ("preview" in n or "exp" in n) else 0
+    penalidade_latest = -4 if "latest" in n else 0
+    return ver_score + tipo_score + penalidade_preview + penalidade_latest
+
+
+def _extrair_erro_curto_gemini(texto: str) -> str:
+    try:
+        msg = json.loads(texto).get("error", {}).get("message", "")
+        if msg:
+            return " ".join(str(msg).split())[:140]
+    except Exception:
+        pass
+    return " ".join(str(texto or "").split())[:140]
+
+
+async def obter_modelos_gemini_ativos(client: httpx.AsyncClient, api_key: str) -> Tuple[str, ...]:
+    """Consulta GET /v1beta/models para descobrir automaticamente os modelos ativos na conta,
+    evitando HTTP 404 quando o Google aposenta gerações antigas (2.0 / 2.5).
+    """
+    if not api_key:
+        return GEMINI_MODELS
+    if api_key in _CACHE_MODELOS_GEMINI:
+        return _CACHE_MODELOS_GEMINI[api_key]
+
+    descobertos: List[str] = []
+    try:
+        resp = await client.get(
+            f"{GEMINI_API_BASE}?pageSize=100",
+            headers={**HEADERS_API_JSON, "x-goog-api-key": api_key},
+            timeout=15.0,
+        )
+        if resp.status_code == 200:
+            modelos_api = resp.json().get("models", [])
+            ranqueados: List[Tuple[int, str]] = []
+            for m in modelos_api:
+                if not isinstance(m, dict):
+                    continue
+                metodos = m.get("supportedGenerationMethods") or []
+                if "generateContent" not in metodos:
+                    continue
+                nome = str(m.get("name") or "").replace("models/", "").strip()
+                sc = _pontuar_modelo_gemini(nome)
+                if sc > 0:
+                    ranqueados.append((sc, nome))
+            ranqueados.sort(key=lambda x: x[0], reverse=True)
+            descobertos = [nome for _, nome in ranqueados[:6]]
+            if descobertos:
+                logger.info("Modelos Gemini ativos descobertos na API: %s", ", ".join(descobertos))
+        elif resp.status_code in (401, 403):
+            logger.error("Chave GEMINI_API_KEY rejeitada ao listar modelos (HTTP %s).", resp.status_code)
+            _CACHE_MODELOS_GEMINI[api_key] = ()
+            return ()
+    except Exception as exc:
+        logger.warning("Aviso ao listar modelos Gemini (usando fallback local): %s", str(exc)[:100])
+
+    modelo_env = (os.environ.get("GEMINI_MODEL") or "").strip()
+    if descobertos:
+        lista = tuple(dict.fromkeys([m for m in (modelo_env, *descobertos) if m]))
+    else:
+        lista = GEMINI_MODELS
+    _CACHE_MODELOS_GEMINI[api_key] = lista
+    return lista
+
+
 async def refinar_materia_com_gemini(
     client: httpx.AsyncClient,
     sem: asyncio.Semaphore,
@@ -1107,13 +1217,17 @@ async def refinar_materia_com_gemini(
       - ("REJEITADA", None) -> IA confirmou que é irrelevante/falso positivo/paywall raso
       - ("FALLBACK", None)  -> Sem chave, erro de rede ou cota esgotada (usa redator local)
     """
-    api_key = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip()
+    api_key = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip().strip('"').strip("'")
     if not api_key:
         return "FALLBACK", None
 
     texto_base = "\n\n".join(paragrafos)[:6000]
     if len(texto_base) < MIN_TEXTO_BRUTO_PARA_IA:
         return "REJEITADA", None
+
+    modelos_ativos = await obter_modelos_gemini_ativos(client, api_key)
+    if not modelos_ativos:
+        return "FALLBACK", None
 
     tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "N/A"
     prompt = (
@@ -1146,38 +1260,44 @@ async def refinar_materia_com_gemini(
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 1200,
+            "maxOutputTokens": 1800,
             "responseMimeType": "application/json",
         },
     }
 
     dados_ia: Optional[Dict[str, Any]] = None
+    modelo_usado = ""
     async with sem:
-        for modelo in GEMINI_MODELS:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
-            payload = json.loads(json.dumps(payload_base))
-            if "2.5" in modelo:
-                payload["generationConfig"]["thinkingConfig"] = {"thinkingBudget": 0}
+        for modelo in modelos_ativos:
+            url = f"{GEMINI_API_BASE}/{modelo}:generateContent"
             try:
                 resp = await client.post(
                     url,
-                    headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
-                    json=payload,
+                    headers={**HEADERS_API_JSON, "Content-Type": "application/json", "x-goog-api-key": api_key},
+                    json=payload_base,
                     timeout=25.0,
                 )
                 if resp.status_code == 200:
                     body = resp.json()
                     partes = body.get("candidates", [{}])[0].get("content", {}).get("parts", [])
-                    texto_resp = "".join(p.get("text", "") for p in partes if isinstance(p, dict))
+                    texto_resp = "".join(
+                        p.get("text", "") for p in partes if isinstance(p, dict) and not p.get("thought")
+                    )
+                    if not texto_resp:
+                        texto_resp = "".join(p.get("text", "") for p in partes if isinstance(p, dict))
                     dados_ia = _extrair_json_gemini(texto_resp)
                     if dados_ia is not None:
+                        modelo_usado = modelo
                         break
-                    logger.warning("Gemini (%s) retornou resposta não-JSON; tentando fallback.", modelo)
+                    logger.warning("Gemini (%s) retornou resposta não-JSON; tentando próximo modelo.", modelo)
+                elif resp.status_code in (401, 403):
+                    logger.error("Chave GEMINI_API_KEY rejeitada (HTTP %s): %s", resp.status_code, _extrair_erro_curto_gemini(resp.text))
+                    break
                 elif resp.status_code in (400, 404, 429, 500, 503):
-                    logger.warning("Gemini (%s) HTTP %s; tentando próximo modelo.", modelo, resp.status_code)
+                    logger.warning("Gemini (%s) indisponível (HTTP %s: %s); tentando próximo modelo.", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
                     continue
                 else:
-                    logger.warning("Gemini (%s) HTTP %s: %s", modelo, resp.status_code, resp.text[:160])
+                    logger.warning("Gemini (%s) HTTP %s: %s", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
                     break
             except Exception as exc:
                 logger.warning("Erro ao consultar Gemini (%s): %s", modelo, str(exc)[:100])
@@ -1187,7 +1307,7 @@ async def refinar_materia_com_gemini(
         return "FALLBACK", None
 
     if dados_ia.get("aprovada") is False:
-        logger.info("Descartada pelo Gemini (%s): %s", str(dados_ia.get("motivo_rejeicao", "irrelevante"))[:90], titulo)
+        logger.info("Descartada pelo Gemini (%s | %s): %s", modelo_usado or "ia", str(dados_ia.get("motivo_rejeicao", "irrelevante"))[:90], titulo)
         return "REJEITADA", None
 
     parags_ia = dados_ia.get("paragrafos")
@@ -1545,7 +1665,11 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
 async def telegram_request(client: httpx.AsyncClient, url: str, json_payload: Optional[Dict[str, Any]] = None, data_fields: Optional[Dict[str, Any]] = None, files: Optional[Dict[str, Any]] = None, max_retries: int = 3) -> bool:
     for tentativa in range(1, max_retries + 1):
         try:
-            resp = await (client.post(url, data=data_fields, files=files, timeout=90.0) if files else client.post(url, json=json_payload, timeout=30.0))
+            resp = await (
+                client.post(url, headers=HEADERS_API_JSON, data=data_fields, files=files, timeout=90.0)
+                if files
+                else client.post(url, headers=HEADERS_API_JSON, json=json_payload, timeout=30.0)
+            )
             if resp.status_code == 200:
                 return True
             if resp.status_code == 429:
@@ -1631,6 +1755,13 @@ async def main() -> None:
         sys.exit(1)
 
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=httpx.Limits(max_keepalive_connections=15, max_connections=30)) as client:
+        chave_gemini = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip().strip('"').strip("'")
+        if chave_gemini:
+            modelos_ativos = await obter_modelos_gemini_ativos(client, chave_gemini)
+            logger.info("Curadoria editorial Gemini ATIVA (modelos: %s).", ", ".join(modelos_ativos) if modelos_ativos else "nenhum")
+        else:
+            logger.info("GEMINI_API_KEY ausente — usando redator editorial local.")
+
         noticias, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist = await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
         if not noticias:
             logger.info("Nenhuma notícia inédita e recente (<= %d min) neste ciclo.", MAX_IDADE_MINUTOS)
