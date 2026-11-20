@@ -532,7 +532,9 @@
     "https://www.suno.com.br/noticias/axia3-axia-energia-rating-cronograma-debentures-191126/",
     "42b4dc719dc43c48",
     "https://telesintese.com.br/assembleia-sobre-a-opa-da-unifique-segue-em-aberto-e-sera-retomada-no-dia-23/",
-    "e00f0c67930baf80"
+    "e00f0c67930baf80",
+    "https://www.poder360.com.br/poder-infra/copel-mira-leilao-de-2027-para-transformar-hidreletricas-em-baterias/",
+    "cda04205004403b2"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -853,7 +855,8 @@
     "NOVO11: ETF reúne Nubank, Itaú, Petrobras e Mercado Livre em uma só cota",
     "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio",
     "AXIA3: Axia Energia divulga rating e cronograma da 15ª emissão",
-    "Assembleia sobre a OPA da Unifique segue em aberto e será retomada no dia 23"
+    "Assembleia sobre a OPA da Unifique segue em aberto e será retomada no dia 23",
+    "Copel mira leilão de 2027 para transformar hidrelétricas em baterias"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -882,7 +885,8 @@
     "O fundo NOVO11, ETF que a Buena Vista Capital lançou na quinta-feira (19), reúne em uma única cota ações de 35 empresas negociadas nos Estados Unidos com receita relevante no Brasil. Os maiores pesos da carteira são Nubank (6,44%), Itaú Unibanco (6,43%), Petrobras (6,26%) e Mercado Livre (6,19%), segundo o material de divulgação do fundo.",
     "Primeira parcela, de R$ 500 milhões, será paga aos investidores no próximo dia 23 de dezembro",
     "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta.",
-    "Os acionistas da Unifique voltaram a se reunir nesta quinta-feira, 19 de novembro, mas a assembleia foi novamente suspensa sem decisão a respeito de uma nova avaliação do valor da operadora. Segundo a companhia, a controladora Unitá Participações e o representante dos acionistas que pediram a reunião negociam a continuidade da oferta pública de aqu"
+    "Os acionistas da Unifique voltaram a se reunir nesta quinta-feira, 19 de novembro, mas a assembleia foi novamente suspensa sem decisão a respeito de uma nova avaliação do valor da operadora. Segundo a companhia, a controladora Unitá Participações e o representante dos acionistas que pediram a reunião negociam a continuidade da oferta pública de aqu",
+    "Projetos em estudo somam 9,1 GW de potência; companhia defende disputa com baterias químicas nos mesmos certames"
   ],
   "eventos_recentes": [
     {
@@ -980,6 +984,10 @@
     {
       "chave": "unifique::EVENTO_CORP",
       "ts": 1795127661.593417
+    },
+    {
+      "chave": "copel::EVENTO_CORP",
+      "ts": 1795165374.299402
     }
   ],
   "hashes_imagens": [
@@ -993,6 +1001,7 @@
     "74f10bc4d78d52b1",
     "c1e0b2659879c3b2",
     "2404d220ace67c05",
-    "cae24a5184e5258a"
+    "cae24a5184e5258a",
+    "a143566310ffe643"
   ]
 }
