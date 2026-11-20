@@ -37,6 +37,19 @@ logger = logging.getLogger("BotInvestidor")
 # ==============================================================================
 HISTORICO_ARQUIVO = Path(os.environ.get("HISTORICO_ARQUIVO", "historico_enviados.json"))
 GRUPO_URL = os.environ.get("TELEGRAM_GROUP_URL", "https://t.me/+dxKqjeavEWYzMzYx")
+GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or "").strip()
+GEMINI_MODELS: Tuple[str, ...] = tuple(
+    dict.fromkeys(
+        m.strip()
+        for m in (
+            os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite",
+            "gemini-2.0-flash",
+        )
+        if m and m.strip()
+    )
+)
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
@@ -48,6 +61,7 @@ MAX_HTML_BYTES = 5 * 1024 * 1024
 MIN_IMAGE_BYTES = 8 * 1024
 MAX_VIDEO_BYTES = 50 * 1024 * 1024
 TELEGRAM_CAPTION_LIMIT = 1024
+MIN_TEXTO_BRUTO_PARA_IA = 280   # Evita chamar IA em trechos rasos de paywall
 MIN_CARACTERES_POST = 450       # Rejeita textos rasos/cortados por paywall (2 frases)
 ALVO_MAX_CARACTERES_POST = 1280 # Ponto ideal no celular: 3 parágrafos completos (~900 a 1.250 chars)
 
@@ -218,18 +232,18 @@ EMPRESAS_ALVO_B3: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] 
     ("cemig", "ENERGIA", ("cemig",), ("CMIG4", "CMIG3")),
     ("copel", "ENERGIA", ("copel",), ("CPLE3", "CPLE6")),
     ("cpfl", "ENERGIA", ("cpfl energia", "cpfl"), ("CPFE3",)),
-    ("equatorial", "ENERGIA", ("equatorial energia", "equatorial"), ("EQTL3",)),
+    ("equatorial", "ENERGIA", ("equatorial energia",), ("EQTL3",)),
     ("energisa", "ENERGIA", ("energisa",), ("ENGI11", "ENGI3", "ENGI4")),
+    ("coelba", "ENERGIA", ("coelba", "neoenergia coelba"), ("CEEB3", "CEEB5")),
+    ("celpe", "ENERGIA", ("celpe", "neoenergia pernambuco", "companhia energética de pernambuco", "companhia energetica de pernambuco"), ("CEPE5", "CEPE3", "CEPE6")),
+    ("cosern", "ENERGIA", ("cosern", "neoenergia cosern"), ("CSRN3", "CSRN5", "CSRN6")),
+    ("elektro", "ENERGIA", ("elektro", "neoenergia elektro"), ("EKTR4", "EKTR3")),
     ("neoenergia", "ENERGIA", ("neoenergia",), ("NEOE3",)),
     ("serena", "ENERGIA", ("serena energia", "omega energia"), ("SRNA3",)),
     ("auren", "ENERGIA", ("auren energia", "auren", "aes brasil"), ("AURE3",)),
     ("eneva", "ENERGIA", ("eneva",), ("ENEV3",)),
     ("light", "ENERGIA", ("light energia", "light s.a", "distribuidora light", "concessionária light", "grupo light"), ("LIGT3",)),
-    ("coelba", "ENERGIA", ("coelba", "neoenergia coelba"), ("CEEB3", "CEEB5")),
-    ("celpe", "ENERGIA", ("celpe", "neoenergia pernambuco", "companhia energética de pernambuco", "companhia energetica de pernambuco"), ("CEPE5", "CEPE3", "CEPE6")),
-    ("cosern", "ENERGIA", ("cosern", "neoenergia cosern"), ("CSRN3", "CSRN5", "CSRN6")),
     ("celesc", "ENERGIA", ("celesc",), ("CLSC4", "CLSC3")),
-    ("elektro", "ENERGIA", ("elektro", "neoenergia elektro"), ("EKTR4", "EKTR3")),
     ("emae", "ENERGIA", ("emae",), ("EMAE4", "EMAE3")),
     ("ceb", "ENERGIA", ("ceb geração", "ceb distribuicao", "ceb distribuição", "companhia energética de brasília", "companhia energetica de brasilia"), ("CEBR3", "CEBR5", "CEBR6")),
     ("rede_energia", "ENERGIA", ("rede energia",), ("REDE3",)),
@@ -242,8 +256,8 @@ EMPRESAS_ALVO_B3: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] 
     # 4. SEGUROS (4 empresas — 4 tickers)
     ("bb_seguridade", "SEGUROS", ("bb seguridade",), ("BBSE3",)),
     ("caixa_seguridade", "SEGUROS", ("caixa seguridade",), ("CXSE3",)),
-    ("porto_seguro", "SEGUROS", ("porto seguro", "porto s.a", "porto bank", "porto saúde", "porto saude"), ("PSSA3",)),
-    ("irb", "SEGUROS", ("irb brasil", "irb(re)", "irb re", "irb"), ("IRBR3",)),
+    ("porto_seguro", "SEGUROS", ("porto s.a", "porto bank", "porto saúde", "porto saude", "seguradora porto"), ("PSSA3",)),
+    ("irb", "SEGUROS", ("irb brasil", "irb(re)", "irb re"), ("IRBR3",)),
     # 5. TELECOMUNICAÇÕES E TECNOLOGIA (8 empresas — 9 tickers)
     ("vivo", "TELECOM", ("telefônica brasil", "telefonica brasil", "operadora vivo", "vivo fibra", "vivo empresas"), ("VIVT3",)),
     ("tim", "TELECOM", ("tim brasil", "tim s.a", "operadora tim"), ("TIMS3",)),
@@ -260,8 +274,11 @@ TICKER_PARA_EMPRESA: Dict[str, Tuple[str, str]] = {
 }
 
 REGEX_BB_BANCO = re.compile(r"\bBB\b(?!\s*(?:Seguridade|Investimentos|BI|-BI|Asset|DTVM|Consórcios|Previdência))")
+REGEX_PORTO_SEGURO = re.compile(r"(?<!\bcomo\s)(?<!\bum\s)(?<!\bo\s)(?<!\bde\s)(?<!\bem\s)(?<!\bComo\s)(?<!\bUm\s)\bPorto Seguro\b")
+REGEX_EQUATORIAL = re.compile(r"(?<!Guiné\s)(?<!Guinea\s)(?<!clima\s)(?<!região\s)(?<!floresta\s)(?<!zona\s)(?<!linha\s)\bEquatorial\b")
+REGEX_IRB = re.compile(r"\bIRB\b")
 REGEX_VIVO_OPERADORA = re.compile(
-    r"(?<!\bao\s)(?<!\bAo\s)(?<!\bem\s)(?<!\bser\s)(?<!\bestar\s)(?<!\bestá\s)(?<!\bsegue\s)(?<!\bmais\s)\bVivo\b"
+    r"(?<!\bao\s)(?<!\bAo\s)(?<!\bem\s)(?<!\bser\s)(?<!\bestar\s)(?<!\bestá\s)(?<!\bsegue\s)(?<!\bmais\s)\bVivo\b(?!\s+ou\s+morto)"
     r"|(?<!conversa\s)(?<!ligação\s)(?<!ligacao\s)(?<!chamada\s)(?<!linha\s)(?<!rede\s)(?<!central\s)(?<!entrevista\s)\bTelef[ôo]nica\b"
 )
 REGEX_TIM_OPERADORA = re.compile(r"\bTIM\b(?!\s+(?:Cook|Berners|Burton|Maia|Hortons|Robbins|Walz|Kaine))")
@@ -418,12 +435,17 @@ def detectar_empresas_alvo_no_texto(texto_original: str) -> List[Tuple[str, str,
             encontradas.append((ent_id, setor, tk))
 
     for ent_id, setor, termos, tickers in EMPRESAS_ALVO_B3:
+        if ent_id == "neoenergia" and (vistos & {"coelba", "celpe", "cosern", "elektro"}):
+            continue
         if ent_id not in vistos and _contem_termo_exato(t_low, termos):
             vistos.add(ent_id)
             encontradas.append((ent_id, setor, tickers[0]))
 
     for ent_id, setor, tk, rx in (
         ("banco_do_brasil", "BANCOS", "BBAS3", REGEX_BB_BANCO),
+        ("porto_seguro", "SEGUROS", "PSSA3", REGEX_PORTO_SEGURO),
+        ("equatorial", "ENERGIA", "EQTL3", REGEX_EQUATORIAL),
+        ("irb", "SEGUROS", "IRBR3", REGEX_IRB),
         ("vivo", "TELECOM", "VIVT3", REGEX_VIVO_OPERADORA),
         ("tim", "TELECOM", "TIMS3", REGEX_TIM_OPERADORA),
         ("light", "ENERGIA", "LIGT3", REGEX_LIGHT_ENERGIA),
@@ -881,10 +903,13 @@ def pontuar_paragrafo_meio(p: str) -> int:
     return len(REGEX_METRICAS_NUMERICAS.findall(p)) * 12 + len(extrair_tickers_alvo(p)) * 18 + sum(w for t, w in PESOS_EVENTOS_FINANCEIROS.items() if t in p.lower())
 
 
-def extrair_narrativa_enxuta(paragrafos: List[str], max_blocos: int = 3, max_por_bloco: int = 245) -> Optional[List[str]]:
+def extrair_narrativa_enxuta(paragrafos: List[str], max_blocos: int = 3, max_por_bloco: int = 245, titulo: str = "") -> Optional[List[str]]:
     todas: List[str] = []
+    tit_norm = normalizar_texto_dedup(titulo).rstrip(".!?") if titulo else ""
     for p in paragrafos:
         for f in dividir_em_frases_completas(p):
+            if tit_norm and normalizar_texto_dedup(f).rstrip(".!?") == tit_norm:
+                continue
             if len(f) >= 35 and not frase_repete_informacao(f, todas):
                 todas.append(f)
     if len(todas) < 2:
@@ -951,7 +976,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     post_principal: Optional[str] = None
     blocos_escolhidos: Optional[List[str]] = None
     for max_blocos, max_bloco in ((3, 340), (3, 300), (3, 260), (2, 360), (2, 290)):
-        blocos = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco)
+        blocos = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco, titulo=t_limpo)
         if not blocos:
             continue
         corpo = "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in blocos)
@@ -971,7 +996,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     else:
         caption_curta = post_principal
         for max_blocos, max_bloco in ((3, 240), (3, 200), (2, 260), (2, 210), (2, 175)):
-            bc = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco)
+            bc = extrair_narrativa_enxuta(paragrafos, max_blocos=max_blocos, max_por_bloco=max_bloco, titulo=t_limpo)
             if not bc:
                 continue
             cand_c = f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in bc)
@@ -980,6 +1005,223 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
                 break
 
     return post_principal, caption_curta
+
+
+# ==============================================================================
+# CURADORIA EDITORIAL COM GEMINI (DECIFRA A MATÉRIA COM COMEÇO, MEIO E FIM)
+# ==============================================================================
+def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
+    if not texto_bruto:
+        return None
+    s = texto_bruto.strip()
+    m_fenced = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", s, flags=re.DOTALL | re.IGNORECASE)
+    if m_fenced:
+        s = m_fenced.group(1)
+    else:
+        ini, fim = s.find("{"), s.rfind("}")
+        if ini != -1 and fim > ini:
+            s = s[ini : fim + 1]
+    try:
+        dados = json.loads(s)
+        return dados if isinstance(dados, dict) else None
+    except Exception:
+        return None
+
+
+def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str]) -> Tuple[Optional[str], Optional[str]]:
+    t_limpo = limpar_html(titulo_final.strip())
+    if t_limpo and t_limpo[-1] not in ".!?":
+        t_limpo += "."
+    titulo_html = formatar_tickers_no_texto(html.escape(t_limpo))
+
+    blocos_limpos: List[str] = []
+    tit_norm = normalizar_texto_dedup(t_limpo).rstrip(".!?")
+    for b in blocos[:3]:
+        b_limpo = limpar_html(str(b)).strip()
+        if not b_limpo or normalizar_texto_dedup(b_limpo).rstrip(".!?") == tit_norm:
+            continue
+        if b_limpo[-1] not in ".!?":
+            b_limpo += "."
+        blocos_limpos.append(b_limpo)
+
+    if len(blocos_limpos) < 2:
+        return None, None
+
+    def render(lista_p: List[str]) -> str:
+        corpo = "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in lista_p)
+        return f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n{corpo}"
+
+    post_principal = render(blocos_limpos)
+    vis = tamanho_texto_visivel(post_principal)
+    if vis > ALVO_MAX_CARACTERES_POST:
+        ajustados = list(blocos_limpos)
+        for limite_bloco in (330, 290, 250):
+            cand_blocos = [truncar_frase_limpa(p, limite_bloco) or p for p in ajustados]
+            cand_html = render(cand_blocos)
+            if tamanho_texto_visivel(cand_html) <= ALVO_MAX_CARACTERES_POST:
+                post_principal = cand_html
+                blocos_limpos = cand_blocos
+                vis = tamanho_texto_visivel(post_principal)
+                break
+        if vis > ALVO_MAX_CARACTERES_POST and len(blocos_limpos) == 3:
+            cand2 = render([blocos_limpos[0], blocos_limpos[-1]])
+            if MIN_CARACTERES_POST <= tamanho_texto_visivel(cand2) <= ALVO_MAX_CARACTERES_POST:
+                post_principal = cand2
+                blocos_limpos = [blocos_limpos[0], blocos_limpos[-1]]
+                vis = tamanho_texto_visivel(post_principal)
+
+    if not (MIN_CARACTERES_POST <= vis <= ALVO_MAX_CARACTERES_POST):
+        return None, None
+
+    if vis <= TELEGRAM_CAPTION_LIMIT - 20:
+        caption_curta = post_principal
+    else:
+        caption_curta = post_principal
+        for limite_c in (240, 200, 170):
+            bc = [truncar_frase_limpa(p, limite_c) for p in blocos_limpos]
+            bc = [p for p in bc if p]
+            if len(bc) >= 2:
+                cand_c = render(bc)
+                if tamanho_texto_visivel(cand_c) <= TELEGRAM_CAPTION_LIMIT - 20:
+                    caption_curta = cand_c
+                    break
+        if tamanho_texto_visivel(caption_curta) > TELEGRAM_CAPTION_LIMIT - 20 and len(blocos_limpos) >= 2:
+            cand2 = render([truncar_frase_limpa(blocos_limpos[0], 340) or blocos_limpos[0], truncar_frase_limpa(blocos_limpos[-1], 320) or blocos_limpos[-1]])
+            if tamanho_texto_visivel(cand2) <= TELEGRAM_CAPTION_LIMIT - 20:
+                caption_curta = cand2
+
+    return post_principal, caption_curta
+
+
+async def refinar_materia_com_gemini(
+    client: httpx.AsyncClient,
+    sem: asyncio.Semaphore,
+    titulo: str,
+    paragrafos: List[str],
+    analise: AnaliseHeuristica,
+) -> Tuple[str, Optional[Tuple[str, str]]]:
+    """Usa o Gemini para validar se a matéria é realmente relevante para a empresa
+    e reescrevê-la em português claro com Começo, Meio e Fim (3 parágrafos).
+    Retorna:
+      - ("APROVADA", (post_html, caption_curta_html))
+      - ("REJEITADA", None) -> IA confirmou que é irrelevante/falso positivo/paywall raso
+      - ("FALLBACK", None)  -> Sem chave, erro de rede ou cota esgotada (usa redator local)
+    """
+    api_key = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip()
+    if not api_key:
+        return "FALLBACK", None
+
+    texto_base = "\n\n".join(paragrafos)[:6000]
+    if len(texto_base) < MIN_TEXTO_BRUTO_PARA_IA:
+        return "REJEITADA", None
+
+    tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "N/A"
+    prompt = (
+        "Você é um editor financeiro sênior escrevendo posts curtos e didáticos para um canal de investidores de ações da B3 no Telegram.\n\n"
+        f"EMPRESA/TICKER DETECTADO: {tickers_str} (Setor: {analise.setor_chave})\n"
+        f"TÍTULO ORIGINAL: {titulo}\n"
+        f"TEXTO DA MATÉRIA:\n{texto_base}\n\n"
+        "TAREFA 1 — VALIDAÇÃO RIGOROSA:\n"
+        "Rejeite (aprovada=false) se:\n"
+        "- A empresa/ticker detectado NÃO for a protagonista real da matéria (ex.: apenas citada de passagem, relatório de banco falando sobre outra empresa fora da lista, trocadilho como 'porto seguro' falando de ouro/dólar, ou notícia macro genérica).\n"
+        "- For sobre FII/FIAGRO, patrocínio esportivo, futebol, estádio, propaganda ou campanha de marketing sem impacto financeiro relevante para o acionista.\n"
+        "- O texto estiver raso/cortado por paywall sem informações concretas suficientes para montar começo, meio e fim.\n\n"
+        "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO E FIM (se aprovada=true):\n"
+        "Reescreva em português claro, objetivo e jornalístico, decifrando termos técnicos sem perder precisão:\n"
+        "- titulo: manchete direta e clara (1 frase, sem clickbait, sem nome de portal).\n"
+        "- paragrafos: EXATAMENTE 3 parágrafos curtos e completos, somando entre 650 e 1050 caracteres no total:\n"
+        "  1) COMEÇO (O Fato): o que aconteceu de concreto com a empresa, citando o nome dela e os principais números/valores.\n"
+        "  2) MEIO (Contexto e Decifração): por que isso aconteceu, comparação com períodos anteriores, datas-chave (data-com, pagamento) ou explicação simples do impacto operacional/financeiro.\n"
+        "  3) FIM (Desfecho para o Acionista): reação das ações, próximos passos ou efeito prático para quem investe no papel.\n"
+        "- tag_evento: escolha exatamente uma opção entre 'DIVIDENDOS' (proventos/JCP/data-com/recompra), 'BALANCOS' (lucro/EBITDA/resultado trimestral) ou 'SETOR' (demais fatos corporativos).\n\n"
+        "REGRAS INVIOLÁVEIS:\n"
+        "- NUNCA invente números, datas ou fatos que não estejam no texto original.\n"
+        "- NUNCA faça recomendação de compra ou venda.\n"
+        "- NUNCA use markdown (*, **, #), emojis no texto dos parágrafos ou siglas de carteiras/estratégias.\n"
+        "- NUNCA repita o título dentro do 1º parágrafo.\n"
+        "- Responda APENAS com um objeto JSON válido com as chaves: aprovada (boolean), motivo_rejeicao (string), titulo (string), paragrafos (array de 3 strings), tag_evento (string)."
+    )
+
+    payload_base: Dict[str, Any] = {
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 1200,
+            "responseMimeType": "application/json",
+        },
+    }
+
+    dados_ia: Optional[Dict[str, Any]] = None
+    async with sem:
+        for modelo in GEMINI_MODELS:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
+            payload = json.loads(json.dumps(payload_base))
+            if "2.5" in modelo:
+                payload["generationConfig"]["thinkingConfig"] = {"thinkingBudget": 0}
+            try:
+                resp = await client.post(
+                    url,
+                    headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
+                    json=payload,
+                    timeout=25.0,
+                )
+                if resp.status_code == 200:
+                    body = resp.json()
+                    partes = body.get("candidates", [{}])[0].get("content", {}).get("parts", [])
+                    texto_resp = "".join(p.get("text", "") for p in partes if isinstance(p, dict))
+                    dados_ia = _extrair_json_gemini(texto_resp)
+                    if dados_ia is not None:
+                        break
+                    logger.warning("Gemini (%s) retornou resposta não-JSON; tentando fallback.", modelo)
+                elif resp.status_code in (400, 404, 429, 500, 503):
+                    logger.warning("Gemini (%s) HTTP %s; tentando próximo modelo.", modelo, resp.status_code)
+                    continue
+                else:
+                    logger.warning("Gemini (%s) HTTP %s: %s", modelo, resp.status_code, resp.text[:160])
+                    break
+            except Exception as exc:
+                logger.warning("Erro ao consultar Gemini (%s): %s", modelo, str(exc)[:100])
+                continue
+
+    if dados_ia is None:
+        return "FALLBACK", None
+
+    if dados_ia.get("aprovada") is False:
+        logger.info("Descartada pelo Gemini (%s): %s", str(dados_ia.get("motivo_rejeicao", "irrelevante"))[:90], titulo)
+        return "REJEITADA", None
+
+    parags_ia = dados_ia.get("paragrafos")
+    titulo_ia = str(dados_ia.get("titulo") or titulo).strip()
+    if not isinstance(parags_ia, list) or len(parags_ia) < 2:
+        return "FALLBACK", None
+
+    texto_verif = f"{titulo_ia} {' '.join(str(p) for p in parags_ia)}".lower()
+    if re.search(r"\b" + "".join(("b", "e", "s", "s", "t")) + r"\b", texto_verif):
+        return "FALLBACK", None
+
+    # Remove eventual markdown residual (* ou **) que a IA possa emitir
+    titulo_ia = re.sub(r"[*_`]+", "", titulo_ia).strip()
+    parags_limpos = [re.sub(r"[*_`]+", "", str(p)).strip() for p in parags_ia]
+
+    tag_ia = str(dados_ia.get("tag_evento") or "").strip().upper()
+    if tag_ia == "DIVIDENDOS":
+        cat_label = "🟢 <b>DIVIDENDOS</b>"
+    elif tag_ia == "BALANCOS":
+        cat_label = "🔵 <b>BALANÇOS</b>"
+    else:
+        cat_label = analise.categoria_label
+
+    if analise.tickers:
+        pills = " ".join(f"<code>#{t}</code>" for t in analise.tickers[:3])
+        cabecalho = f"<blockquote>{cat_label}  ·  {pills}</blockquote>"
+    else:
+        cabecalho = f"<blockquote>{cat_label}</blockquote>"
+
+    post_html, cap_curta = _montar_html_de_blocos(cabecalho, titulo_ia, parags_limpos)
+    if not post_html or not cap_curta:
+        return "FALLBACK", None
+
+    return "APROVADA", (post_html, cap_curta)
 
 
 # ==============================================================================
@@ -1261,12 +1503,7 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             logger.info("Descartada por duplicidade de assunto (%s): %s", col, title)
             continue
 
-        montagem = montar_mensagem_investidor(title, paragrafos, analise)
-        if not montagem:
-            stats["desc"] += 1
-            continue
-        post_html, caption_curta_html = montagem
-
+        # Valida mídia ANTES de acionar o Gemini (economiza cota e evita processar matéria sem foto/vídeo)
         img_ver: Optional[ImagemVerificada] = None
         for u_img in dict.fromkeys(u for u in (foto_og, foto_rss) if u):
             img_ver = await verificar_e_preparar_imagem(client, sem, u_img, link, set_hashes_img)
@@ -1278,7 +1515,18 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             stats["sem_img"] += 1
             continue
 
-        logger.info("Aprovada [Score %d | %s | %.0f min | %d chars]: %s", analise.score_total, analise.setor_chave, idade_min, tamanho_texto_visivel(post_html), title)
+        status_ia, montagem = await refinar_materia_com_gemini(client, sem, title, paragrafos, analise)
+        if status_ia == "REJEITADA":
+            stats["desc"] += 1
+            continue
+        if status_ia == "FALLBACK" or not montagem:
+            montagem = montar_mensagem_investidor(title, paragrafos, analise)
+        if not montagem:
+            stats["desc"] += 1
+            continue
+        post_html, caption_curta_html = montagem
+
+        logger.info("Aprovada [Score %d | %s | %s | %.0f min | %d chars]: %s", analise.score_total, analise.setor_chave, "Gemini" if status_ia == "APROVADA" else "Local", idade_min, tamanho_texto_visivel(post_html), title)
         aprovadas.append(NoticiaPreparada(link, title, lead[:350], chaves_ev, post_html, caption_curta_html, analise.score_total, dt_real, img_ver.url if img_ver else None, img_ver, video_cand, audio_rss))
         titulos_rodada.append(title)
         leads_rodada.append(lead[:350])
