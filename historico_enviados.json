@@ -544,7 +544,9 @@
     "https://www.poder360.com.br/poder-economia/btg-desistiu-de-comprar-master-por-falta-de-garantias-diz-esteves/",
     "5013aa3c9e8bf0b0",
     "https://www.seudinheiro.com/2026/bolsa-dolar/ouro-nao-protege-ninguem-cai-a-minima-em-um-ano-e-falha-como-porto-seguro-ccgg/",
-    "7221c3a6da33b89a"
+    "7221c3a6da33b89a",
+    "https://www.spacemoney.com.br/tecnologia/vivo-5g-plus-2-gbps/",
+    "b98a7d5419a7da43"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -871,7 +873,8 @@
     "CEO do Bradesco afirma que é hora de ‘prudência’ nos bancos brasileiros",
     "Celesc restabelece 90% da luz em 48h após temporais em SC",
     "BTG desistiu de comprar Master por falta de garantias, diz Esteves",
-    "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro"
+    "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
+    "Vivo comercializa 5G+ com picos de até 2 Gbps"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -906,7 +909,8 @@
     "Marcelo Noronha, presidente-executivo do Banco Bradesco (BBDC4), não tem dúvidas sobre o que o banco que dirige deve fazer neste momento desafiador para a economia brasileira.",
     "O deputado estadual Dr. Vicente Caropreso usou o plenário da Assembleia Legislativa de Santa Catarina para destacar a atuação da Celesc na reconquista do fornecimento de energia após os temporais e tornados que castigaram o Meio-Oeste e o Oeste catarinense no início de novembro. No pronunciamento, o parlamentar elogiou o trabalho das equipes da com",
     "Banqueiro afirmou à PF que alertou o Banco Central sobre dúvidas quanto à qualidade dos ativos da instituição em 2024",
-    "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro"
+    "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
+    "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa"
   ],
   "eventos_recentes": [
     {
@@ -1028,6 +1032,10 @@
     {
       "chave": "porto_seguro::GERAL_ATIVO",
       "ts": 1795203941.105008
+    },
+    {
+      "chave": "vivo::GERAL_ATIVO",
+      "ts": 1795211587.109325
     }
   ],
   "hashes_imagens": [
@@ -1047,6 +1055,7 @@
     "c21d12425264b803",
     "b41bcfbb3d13ccbb",
     "0fa24b702cc5146d",
-    "ccddaaa4f7ccc4cf"
+    "ccddaaa4f7ccc4cf",
+    "5b953562eee71037"
   ]
 }
