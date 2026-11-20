@@ -534,7 +534,9 @@
     "https://telesintese.com.br/assembleia-sobre-a-opa-da-unifique-segue-em-aberto-e-sera-retomada-no-dia-23/",
     "e00f0c67930baf80",
     "https://www.poder360.com.br/poder-infra/copel-mira-leilao-de-2027-para-transformar-hidreletricas-em-baterias/",
-    "cda04205004403b2"
+    "cda04205004403b2",
+    "https://www.moneytimes.com.br/dividendos-a-vista-porto-seguro-pssa3-confirma-pagamento-de-r-567-milhoes-veja-valor-por-acao-igdl/",
+    "dbf032198d5c2bfc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -856,7 +858,8 @@
     "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio",
     "AXIA3: Axia Energia divulga rating e cronograma da 15ª emissão",
     "Assembleia sobre a OPA da Unifique segue em aberto e será retomada no dia 23",
-    "Copel mira leilão de 2027 para transformar hidrelétricas em baterias"
+    "Copel mira leilão de 2027 para transformar hidrelétricas em baterias",
+    "Dividendos à vista: Porto Seguro (PSSA3) confirma pagamento de R$ 567 milhões; veja valor por ação"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -886,7 +889,8 @@
     "Primeira parcela, de R$ 500 milhões, será paga aos investidores no próximo dia 23 de dezembro",
     "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta.",
     "Os acionistas da Unifique voltaram a se reunir nesta quinta-feira, 19 de novembro, mas a assembleia foi novamente suspensa sem decisão a respeito de uma nova avaliação do valor da operadora. Segundo a companhia, a controladora Unitá Participações e o representante dos acionistas que pediram a reunião negociam a continuidade da oferta pública de aqu",
-    "Projetos em estudo somam 9,1 GW de potência; companhia defende disputa com baterias químicas nos mesmos certames"
+    "Projetos em estudo somam 9,1 GW de potência; companhia defende disputa com baterias químicas nos mesmos certames",
+    "A Porto Seguro (PSSA3) definiu o dia 27 de novembro de 2026 para realizar o pagamento dos dividendos adicionais aprovados em março deste ano, no montante total de R$ 567,4 milhões."
   ],
   "eventos_recentes": [
     {
@@ -988,6 +992,10 @@
     {
       "chave": "copel::EVENTO_CORP",
       "ts": 1795165374.299402
+    },
+    {
+      "chave": "porto_seguro::PROVENTOS",
+      "ts": 1795180123.149426
     }
   ],
   "hashes_imagens": [
@@ -1002,6 +1010,7 @@
     "c1e0b2659879c3b2",
     "2404d220ace67c05",
     "cae24a5184e5258a",
-    "a143566310ffe643"
+    "a143566310ffe643",
+    "5aff1a543d8870cc"
   ]
 }
