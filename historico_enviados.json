@@ -540,7 +540,9 @@
     "https://www.infomoney.com.br/mercados/ceo-do-bradesco-afirma-que-e-hora-de-prudencia-nos-bancos-brasileiros/",
     "9c4a33de5f98fa1d",
     "https://www.spacemoney.com.br/noticias/celesc-energia-48h-temporais/",
-    "b5e758d231a5b23d"
+    "b5e758d231a5b23d",
+    "https://www.poder360.com.br/poder-economia/btg-desistiu-de-comprar-master-por-falta-de-garantias-diz-esteves/",
+    "5013aa3c9e8bf0b0"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -865,7 +867,8 @@
     "Copel mira leilão de 2027 para transformar hidrelétricas em baterias",
     "Dividendos à vista: Porto Seguro (PSSA3) confirma pagamento de R$ 567 milhões; veja valor por ação",
     "CEO do Bradesco afirma que é hora de ‘prudência’ nos bancos brasileiros",
-    "Celesc restabelece 90% da luz em 48h após temporais em SC"
+    "Celesc restabelece 90% da luz em 48h após temporais em SC",
+    "BTG desistiu de comprar Master por falta de garantias, diz Esteves"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -898,7 +901,8 @@
     "Projetos em estudo somam 9,1 GW de potência; companhia defende disputa com baterias químicas nos mesmos certames",
     "A Porto Seguro (PSSA3) definiu o dia 27 de novembro de 2026 para realizar o pagamento dos dividendos adicionais aprovados em março deste ano, no montante total de R$ 567,4 milhões.",
     "Marcelo Noronha, presidente-executivo do Banco Bradesco (BBDC4), não tem dúvidas sobre o que o banco que dirige deve fazer neste momento desafiador para a economia brasileira.",
-    "O deputado estadual Dr. Vicente Caropreso usou o plenário da Assembleia Legislativa de Santa Catarina para destacar a atuação da Celesc na reconquista do fornecimento de energia após os temporais e tornados que castigaram o Meio-Oeste e o Oeste catarinense no início de novembro. No pronunciamento, o parlamentar elogiou o trabalho das equipes da com"
+    "O deputado estadual Dr. Vicente Caropreso usou o plenário da Assembleia Legislativa de Santa Catarina para destacar a atuação da Celesc na reconquista do fornecimento de energia após os temporais e tornados que castigaram o Meio-Oeste e o Oeste catarinense no início de novembro. No pronunciamento, o parlamentar elogiou o trabalho das equipes da com",
+    "Banqueiro afirmou à PF que alertou o Banco Central sobre dúvidas quanto à qualidade dos ativos da instituição em 2024"
   ],
   "eventos_recentes": [
     {
@@ -1012,6 +1016,10 @@
     {
       "chave": "celesc::GERAL_ATIVO",
       "ts": 1795191181.501209
+    },
+    {
+      "chave": "btg_pactual::GERAL_ATIVO",
+      "ts": 1795199448.913444
     }
   ],
   "hashes_imagens": [
@@ -1029,6 +1037,7 @@
     "a143566310ffe643",
     "5aff1a543d8870cc",
     "c21d12425264b803",
-    "b41bcfbb3d13ccbb"
+    "b41bcfbb3d13ccbb",
+    "0fa24b702cc5146d"
   ]
 }
