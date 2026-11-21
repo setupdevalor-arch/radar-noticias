@@ -60,12 +60,15 @@ GEMINI_MODELS: Tuple[str, ...] = tuple(
         for m in (
             os.environ.get("GEMINI_MODEL", ""),
             "gemini-3.5-flash-lite",
+            "gemini-3.5-flash-lite-preview",
             "gemini-3.1-flash-lite",
+            "gemini-3.1-flash-lite-preview",
+            "gemini-2.5-flash-lite",
             "gemini-flash-lite-latest",
             "gemini-3.6-flash",
+            "gemini-3-flash",
+            "gemini-2.5-flash",
             "gemini-flash-latest",
-            "gemini-3.7-flash",
-            "gemini-3.8-flash",
         )
         if m and m.strip()
     )
@@ -77,7 +80,8 @@ _MODELOS_DEGRADADOS_SESSAO: Dict[str, Set[str]] = {}
 _MODELOS_GEMINI_EXCLUSAO = (
     "embedding", "imagen", "veo", "tts", "audio", "live", "robotics",
     "computer-use", "deep-research", "aqa", "gemma", "learnlm", "vision",
-    "image", "customtools", "thinking-exp",
+    "image", "customtools", "thinking-exp", "omni", "transcribe", "translate",
+    "nano-banana",
 )
 REGEX_SIGLA_BLOQUEADA = re.compile(r"\b" + "".join(("b", "e", "s", "s", "t")) + r"\b", flags=re.IGNORECASE)
 
@@ -1327,8 +1331,8 @@ def resetar_estado_sessao_gemini() -> None:
 
 
 def _pontuar_modelo_gemini(nome: str) -> int:
-    """Prioriza exclusivamente modelos gratuitos da família Flash-Lite e Flash,
-    ignorando modelos pagos/pesados (Pro, Ultra, Argon, Carbon, Hydrogen, Image, TTS).
+    """Prioriza exclusivamente modelos gratuitos da família Flash-Lite (500 RPD) e Flash,
+    ignorando modelos pagos/0-cota (Pro, Ultra, Argon, Carbon, Hydrogen, 2.0, Image, TTS).
     """
     n = (nome or "").lower().strip()
     if not n.startswith("gemini-") or "flash" not in n or any(x in n for x in _MODELOS_GEMINI_EXCLUSAO):
@@ -1336,9 +1340,11 @@ def _pontuar_modelo_gemini(nome: str) -> int:
     m_ver = re.search(r"gemini-(\d+)(?:\.(\d+))?", n)
     major = int(m_ver.group(1)) if m_ver else 0
     minor = int(m_ver.group(2) or 0) if m_ver else 0
+    if m_ver and (major, minor) < (2, 5):
+        return -1
     ver_score = major * 100 + minor * 10
     base_familia = 2000 if "flash-lite" in n else 1000
-    penalidade_preview = -150 if ("preview" in n or "exp" in n) else 0
+    penalidade_preview = -15 if ("preview" in n or "exp" in n) else 0
     penalidade_latest = -20 if "latest" in n else 0
     return base_familia + ver_score + penalidade_preview + penalidade_latest
 
