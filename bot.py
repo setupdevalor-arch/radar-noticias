@@ -225,13 +225,32 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# COBERTURA COMPLETA: AÇÕES B3 + FIIs/IFIX + RENDA FIXA + JUROS & MACRO
+# COBERTURA COMPLETA: AÇÕES B3 + BDRs/ETFs + FIIs/IFIX + RENDA FIXA + JUROS & MACRO
 # ==============================================================================
 PILAR_LABELS: Dict[str, str] = {
     "ACOES": "📊 <b>AÇÕES B3</b>",
+    "BDR": "🌎 <b>BDR &amp; EXTERIOR</b>",
     "FIIS": "🏢 <b>FIIs</b>",
     "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
     "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
+}
+
+MAPA_INVESTIMENTOS_AFETADOS: Dict[str, str] = {
+    "acoes": "Ações",
+    "acao": "Ações",
+    "acoes b3": "Ações",
+    "bdr": "BDRs",
+    "bdrs": "BDRs",
+    "bdrs e exterior": "BDRs",
+    "etf": "Renda Variável",
+    "etfs": "Renda Variável",
+    "fii": "FIIs",
+    "fiis": "FIIs",
+    "fiagro": "FIIs",
+    "fundos imobiliarios": "FIIs",
+    "renda fixa": "Renda Fixa",
+    "tesouro direto": "Renda Fixa",
+    "renda variavel": "Renda Variável",
 }
 
 EMPRESAS_B3_MAPA: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] = (
@@ -382,6 +401,40 @@ EMPRESAS_B3_MAPA: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] 
     ("snag11", "FIIS", ("suno agro",), ("SNAG11",)),
     ("knca11", "FIIS", ("kinea crédito agro",), ("KNCA11",)),
     ("vgia11", "FIIS", ("valora cra",), ("VGIA11",)),
+    # Principais BDRs e ETFs negociados na B3
+    ("apple", "BDR", ("apple",), ("AAPL34",)),
+    ("microsoft", "BDR", ("microsoft",), ("MSFT34",)),
+    ("nvidia", "BDR", ("nvidia",), ("NVDC34",)),
+    ("alphabet", "BDR", ("alphabet",), ("GOGL34",)),
+    ("amazon", "BDR", ("amazon",), ("AMZO34",)),
+    ("meta_platforms", "BDR", ("meta platforms",), ("M1TA34",)),
+    ("tesla", "BDR", ("tesla",), ("TSLA34",)),
+    ("berkshire", "BDR", ("berkshire hathaway", "warren buffett"), ("BERK34",)),
+    ("amd", "BDR", ("advanced micro devices",), ("A1MD34",)),
+    ("intel", "BDR", ("intel corp", "intel corporation"), ("ITLC34",)),
+    ("broadcom", "BDR", ("broadcom",), ("AVGO34",)),
+    ("oracle", "BDR", ("oracle",), ("ORCL34",)),
+    ("tsmc", "BDR", ("tsmc", "taiwan semiconductor"), ("TSMC34",)),
+    ("netflix", "BDR", ("netflix",), ("NFLX34",)),
+    ("disney", "BDR", ("walt disney", "disney"), ("DISB34",)),
+    ("coca_cola", "BDR", ("coca-cola", "the coca-cola"), ("COCA34",)),
+    ("jpmorgan", "BDR", ("jpmorgan", "jp morgan"), ("JPMC34",)),
+    ("bank_of_america", "BDR", ("bank of america",), ("BOAC34",)),
+    ("goldman_sachs", "BDR", ("goldman sachs",), ("GSGI34",)),
+    ("visa", "BDR", ("visa inc",), ("VISA34",)),
+    ("mastercard", "BDR", ("mastercard",), ("MSCD34",)),
+    ("walmart", "BDR", ("walmart",), ("WALM34",)),
+    ("mcdonalds", "BDR", ("mcdonald's", "mcdonalds"), ("MCDC34",)),
+    ("exxon", "BDR", ("exxonmobil", "exxon mobil"), ("EXXO34",)),
+    ("chevron", "BDR", ("chevron",), ("CHVX34",)),
+    ("alibaba", "BDR", ("alibaba",), ("BABA34",)),
+    ("eli_lilly", "BDR", ("eli lilly",), ("LILY34",)),
+    ("novo_nordisk", "BDR", ("novo nordisk",), ("N1VO34",)),
+    ("ivvb11", "BDR", ("ivvb11",), ("IVVB11",)),
+    ("nasd11", "BDR", ("nasd11",), ("NASD11",)),
+    ("bova11", "ACOES", ("bova11",), ("BOVA11",)),
+    ("smal11", "ACOES", ("smal11",), ("SMAL11",)),
+    ("divo11", "ACOES", ("divo11",), ("DIVO11",)),
 )
 
 TICKER_PARA_EMPRESA: Dict[str, Tuple[str, str]] = {
@@ -395,6 +448,11 @@ FALSOS_TICKERS: Set[str] = {
     "IFRS11", "NOTA11", "TOP11",
 }
 
+TERMOS_BDR = (
+    "bdr", "bdrs", "s&p 500", "nasdaq", "dow jones", "wall street", "nyse",
+    "bolsas de nova york", "bolsas dos eua", "bolsas americanas", "etf", "etfs",
+    "ações americanas", "big techs", "dividendos em dólar",
+)
 TERMOS_FIIS = (
     "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
     "fii", "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
@@ -432,20 +490,22 @@ REGEX_VIVO_OPERADORA = re.compile(
 REGEX_TIM_OPERADORA = re.compile(r"\bTIM\b(?!\s+(?:Cook|Berners|Burton|Maia|Hortons|Robbins|Walz|Kaine))")
 REGEX_LIGHT_ENERGIA = re.compile(r"\bLight\b(?=.*(?:energia|distribuidor|concess|aneel|tarifa|dívida|recuperação|ações|lucro|balanço|rio))", flags=re.IGNORECASE)
 REGEX_ALLIED_TECH = re.compile(r"\bAllied\b(?=.*(?:lucro|lucra|balanço|ebitda|receita|dividendo|jcp|proventos|ações|b3|cvm|varejo|eletrônicos|smartphones|distribuição|dívida|trimestre|1t2|2t2|3t2|4t2))", flags=re.IGNORECASE)
+REGEX_GOOGLE_FIN = re.compile(r"\bGoogle\b(?=.*(?:ações|ação|bdr|gogl34|lucro|lucra|balanço|receita|ebitda|dividendo|recompra|wall street|nasdaq|antitruste|trimestre|bilhões|mercado))", flags=re.IGNORECASE)
+REGEX_AMD_FIN = re.compile(r"\bAMD\b(?=.*(?:ações|ação|bdr|a1md34|lucro|lucra|balanço|receita|ebitda|wall street|nasdaq|chips|semicondutores|trimestre|bilhões|guidance))", flags=re.IGNORECASE)
 
 # Evita rotular uma matéria de outra empresa/macro com o ticker do banco que assinou o relatório
 REGEX_RELATORIO_DE_BANCO = re.compile(
     r"\b(?:itaú\s+bba|itau\s+bba|bradesco\s+bbi|bb\s+investimentos|bb-bi|btg\s+pactual\s+digital|xp\s+investimentos|genial\s+investimentos)\b"
-    r"|\b(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|banco\s+do\s+brasil)\s+"
+    r"|\b(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|banco\s+do\s+brasil|jpmorgan|jp\s+morgan|bank\s+of\s+america|goldman\s+sachs)\s+"
     r"(?:recomenda|rebaixa|eleva\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis|a\s+ação|as\s+ações)|"
     r"corta\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis)|"
     r"reduz\s+preço|aumenta\s+preço|revisa\s+(?:recomendação|preço|carteira|projeção|estimativa)|"
-    r"(?:vê|projeta|prevê)\s+(?:potencial|upside|oportunidade\s+em|selic|dólar|ibovespa|pib|inflação|ipca|"
+    r"(?:vê|projeta|prevê)\s+(?:potencial|upside|oportunidade\s+em|selic|dólar|ibovespa|pib|inflação|ipca|s&p\s*500|"
     r"(?:alta|queda)\s+(?:de\s+[\d.,]+%?\s+)?(?:para|em|das\s+ações|nos\s+papéis|do\s+dólar|da\s+selic|do\s+ibovespa))|"
     r"aposta\s+em|escolhe\s+|indica\s+|lista\s+|inclui\s+|retira\s+|remove\s+|tira\s+|"
     r"mantém\s+(?:compra|venda|neutro|recomendação)|inicia\s+cobertura|atualiza\s+carteira|"
     r"diz\s+que\s+(?:a\s+selic|o\s+dólar|o\s+ibovespa|o\s+pib|a\s+inflação))\b"
-    r"|\b(?:segundo|para|na\s+visão\s+do|em\s+relatório\s+do|carteira\s+(?:do|da))\s+(?:o\s+)?(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|bb)\b",
+    r"|\b(?:segundo|para|na\s+visão\s+do|em\s+relatório\s+do|carteira\s+(?:do|da))\s+(?:o\s+)?(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|bb|jpmorgan|jp\s+morgan|bank\s+of\s+america|goldman\s+sachs)\b",
     flags=re.IGNORECASE,
 )
 
@@ -464,6 +524,10 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
     "dívida": 14, "alavancagem": 16, "recuperação judicial": 18, "rating": 16,
     "preço-alvo": 18, "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16, "b3": 14,
     "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
+    # BDRs, ETFs & Renda Variável Global
+    "bdr": 22, "bdrs": 22, "etf": 20, "etfs": 20, "s&p 500": 20, "nasdaq": 20, "dow jones": 18,
+    "wall street": 18, "big techs": 18, "bolsas americanas": 18, "bolsas de nova york": 18,
+    "small caps": 18, "renda variável": 18, "desdobramento": 20, "split": 18,
     # FIIs & FIAGROs
     "fundo imobiliário": 22, "fundos imobiliários": 22, "fii": 20, "fiis": 20, "ifix": 22,
     "fiagro": 22, "rendimento por cota": 24, "por cota": 18, "cotistas": 16, "vacância": 20,
@@ -482,10 +546,10 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
     "PROVENTOS": 1080, "BALANCO": 1440, "EVENTO_CORP": 1080, "GERAL_ATIVO": 480,
-    "MACRO_EVENTO": 240, "RF_EVENTO": 300, "FIIS_GERAL": 360,
+    "MACRO_EVENTO": 240, "RF_EVENTO": 300, "FIIS_GERAL": 360, "BDR_GERAL": 300,
 }
 
-REGEX_TICKER_B3 = re.compile(r"\b([A-Z]{4}(?:3|4|5|6|11|32|34))\b")
+REGEX_TICKER_B3 = re.compile(r"\b((?:[A-Z]{4}|[A-Z]\d[A-Z]{2})(?:3|4|5|6|11|31|32|33|34|35|39))\b")
 REGEX_METRICAS_NUMERICAS = re.compile(
     r"([+-]?\d+(?:[.,]\d+)?\s*%|\b(?:R\$|US\$|€|£)\s*\d+(?:[.,]\d+)?|\b\d+(?:[.,]\d+)?\s*(?:milhões|bilhões|trilhões|mil|bi|tri|pontos-base|bps|pontos)\b)",
     flags=re.IGNORECASE,
@@ -564,7 +628,7 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
-# DETECÇÃO AMPLA (AÇÕES B3 + FIIs/IFIX + RENDA FIXA + JUROS & MACRO)
+# DETECÇÃO AMPLA (AÇÕES B3 + BDRs/ETFs + FIIs/IFIX + RENDA FIXA + JUROS & MACRO)
 # ==============================================================================
 def _contem_termo_exato(texto_low: str, termos: Tuple[str, ...]) -> bool:
     return any(re.search(r"(?<!\w)" + re.escape(k) + r"(?!\w)", texto_low) for k in termos)
@@ -575,7 +639,7 @@ def extrair_tickers_validos(texto: str) -> List[str]:
         return []
     t_low = texto.lower()
     tem_contexto_fin = any(
-        k in t_low for k in ("ação", "ações", "papel", "papéis", "fii", "fiagro", "cota", "dividendo", "jcp", "lucro", "balanço", "ebitda", "b3", "cvm", "provento", "emissão")
+        k in t_low for k in ("ação", "ações", "papel", "papéis", "bdr", "bdrs", "etf", "etfs", "fii", "fiagro", "cota", "dividendo", "jcp", "lucro", "balanço", "ebitda", "b3", "cvm", "provento", "emissão", "wall street", "nasdaq")
     )
     res: List[str] = []
     for t in dict.fromkeys(REGEX_TICKER_B3.findall(texto)):
@@ -605,7 +669,12 @@ def detectar_ativos_b3_no_texto(texto_original: str) -> List[Tuple[str, str, str
             ent_id, pilar = TICKER_PARA_EMPRESA[tk]
         else:
             ent_id = tk.lower()
-            pilar = "FIIS" if (tk.endswith("11") and _contem_termo_exato(t_low, TERMOS_FIIS)) else "ACOES"
+            if tk.endswith(("31", "32", "33", "34", "35", "39")):
+                pilar = "BDR"
+            elif tk.endswith("11") and _contem_termo_exato(t_low, TERMOS_FIIS):
+                pilar = "FIIS"
+            else:
+                pilar = "ACOES"
         if ent_id not in vistos:
             vistos.add(ent_id)
             encontradas.append((ent_id, pilar, tk))
@@ -627,6 +696,8 @@ def detectar_ativos_b3_no_texto(texto_original: str) -> List[Tuple[str, str, str
         ("tim", "ACOES", "TIMS3", REGEX_TIM_OPERADORA),
         ("light", "ACOES", "LIGT3", REGEX_LIGHT_ENERGIA),
         ("allied", "ACOES", "ALLD3", REGEX_ALLIED_TECH),
+        ("alphabet", "BDR", "GOGL34", REGEX_GOOGLE_FIN),
+        ("amd", "BDR", "A1MD34", REGEX_AMD_FIN),
     ):
         if ent_id not in vistos and rx.search(texto_original):
             vistos.add(ent_id)
@@ -647,6 +718,8 @@ def extrair_protagonistas_titulo(titulo: str) -> List[Tuple[str, str, str]]:
 def _detectar_tema_em_texto(txt_low: str) -> Tuple[Optional[str], Optional[str]]:
     if _contem_termo_exato(txt_low, TERMOS_FIIS):
         return "fiis_geral", "FIIS"
+    if _contem_termo_exato(txt_low, TERMOS_BDR):
+        return "bdr_exterior", "BDR"
     if _contem_termo_exato(txt_low, ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "ntn-b", "títulos públicos", "título público")):
         return "rf_tesouro", "RENDA_FIXA"
     if _contem_termo_exato(txt_low, ("cdb", "cdbs", "lci", "lcis", "lca", "lcas", "cri", "cra", "debênture", "debêntures", "fgc", "renda fixa", "cdi", "di futuro", "curva de juros", "juros futuros", "isenção de ir")):
@@ -659,7 +732,7 @@ def _detectar_tema_em_texto(txt_low: str) -> Tuple[Optional[str], Optional[str]]
         return "macro_fiscal", "MACRO"
     if _contem_termo_exato(txt_low, ("federal reserve", "juros dos eua", "treasuries", "treasury", "payroll")):
         return "macro_fed", "MACRO"
-    if _contem_termo_exato(txt_low, ("dólar", "câmbio", "ibovespa", "pib do brasil", "crescimento do pib")):
+    if _contem_termo_exato(txt_low, ("dólar", "câmbio", "ibovespa", "pib do brasil", "crescimento do pib", "renda variável", "small caps")):
         return "macro_mercado", "MACRO"
     return None, None
 
@@ -688,6 +761,8 @@ def definir_tag_curta_mercado(titulo: str, pilar_principal: str) -> str:
         return "🔵 <b>BALANÇOS</b>"
     if pilar_principal == "FIIS" or _contem_termo_exato(t_low, TERMOS_FIIS):
         return "🏢 <b>FIIs</b>"
+    if pilar_principal == "BDR" or _contem_termo_exato(t_low, TERMOS_BDR):
+        return "🌎 <b>BDR &amp; EXTERIOR</b>"
     return PILAR_LABELS.get(pilar_principal, "📊 <b>AÇÕES B3</b>")
 
 
@@ -838,6 +913,8 @@ def extrair_chaves_evento_ativo(titulo: str, lead: str, entidades: List[str]) ->
             chaves.append(f"{ent}::RF_EVENTO")
         elif ent == "fiis_geral":
             chaves.append("fiis_geral::FIIS_GERAL")
+        elif ent == "bdr_exterior":
+            chaves.append("bdr_exterior::BDR_GERAL")
         elif _contem_termo_exato(foco, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data com", "data-com", "data ex", "data-ex", "bonificacao", "rendimento por cota")):
             chaves.append(f"{ent}::PROVENTOS")
         elif _contem_termo_exato(foco, ("balanco", "lucro liquido", "lucra", "lucro", "ebitda", "lajida", "prejuizo", "receita liquida", "resultado trimestral", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26")):
@@ -1238,7 +1315,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
 
 
 # ==============================================================================
-# CURADORIA EDITORIAL COM GEMINI (RENDA VARIÁVEL + RENDA FIXA + COMEÇO/MEIO/FIM)
+# CURADORIA EDITORIAL COM GEMINI (RENDA VARIÁVEL + BDR + FIIs + RENDA FIXA + IMPACTO HONESTO)
 # ==============================================================================
 def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
     if not texto_bruto:
@@ -1258,7 +1335,57 @@ def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
         return None
 
 
-def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str]) -> Tuple[Optional[str], Optional[str]]:
+def _normalizar_investimentos_afetados(lista_raw: Any, pilar_fallback: str = "") -> List[str]:
+    validos: List[str] = []
+    if isinstance(lista_raw, list):
+        for item in lista_raw:
+            if not isinstance(item, str):
+                continue
+            chave = "".join(
+                c for c in unicodedata.normalize("NFKD", item.strip().lower()) if not unicodedata.combining(c)
+            )
+            chave = re.sub(r"[^a-z0-9\s]", " ", chave)
+            chave = " ".join(chave.split())
+            mapped = MAPA_INVESTIMENTOS_AFETADOS.get(chave)
+            if mapped and mapped not in validos:
+                validos.append(mapped)
+    if not validos:
+        mapa_pilar = {
+            "ACOES": ["Ações"],
+            "BDR": ["BDRs"],
+            "FIIS": ["FIIs"],
+            "RENDA_FIXA": ["Renda Fixa"],
+            "MACRO": ["Renda Fixa", "Renda Variável"],
+        }
+        validos = list(mapa_pilar.get(pilar_fallback, ["Renda Variável"]))
+    return validos[:3]
+
+
+def _formatar_lista_investimentos_pt(classes: List[str]) -> str:
+    if not classes:
+        return ""
+    if len(classes) == 1:
+        return classes[0]
+    if len(classes) == 2:
+        return f"{classes[0]} e {classes[1]}"
+    return f"{', '.join(classes[:-1])} e {classes[-1]}"
+
+
+def _limpar_prefixo_impacto(texto: str) -> str:
+    return re.sub(
+        r"^(?:📌\s*)?(?:no\s+radar\s+do\s+investidor|impacto\s+para\s+o\s+investidor|por\s+que\s+importa|para\s+o\s+investidor)\s*(?:\([^)]*\))?\s*[:\-–—]\s*",
+        "",
+        texto,
+        flags=re.IGNORECASE,
+    ).strip()
+
+
+def _montar_html_de_blocos(
+    cabecalho: str,
+    titulo_final: str,
+    blocos: List[str],
+    prefixo_final_html: str = "",
+) -> Tuple[Optional[str], Optional[str]]:
     t_limpo = limpar_html(titulo_final.strip())
     if t_limpo and t_limpo[-1] not in ".!?":
         t_limpo += "."
@@ -1266,8 +1393,10 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
 
     blocos_limpos: List[str] = []
     tit_norm = normalizar_texto_dedup(t_limpo).rstrip(".!?")
-    for b in blocos[:3]:
+    for idx, b in enumerate(blocos[:3]):
         b_limpo = limpar_html(str(b)).strip()
+        if idx == len(blocos[:3]) - 1 and prefixo_final_html:
+            b_limpo = _limpar_prefixo_impacto(b_limpo)
         if not b_limpo or normalizar_texto_dedup(b_limpo).rstrip(".!?") == tit_norm:
             continue
         if b_limpo[-1] not in ".!?":
@@ -1278,14 +1407,20 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
         return None, None
 
     def render(lista_p: List[str]) -> str:
-        corpo = "\n\n".join(formatar_tickers_no_texto(html.escape(p)) for p in lista_p)
-        return f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n{corpo}"
+        partes_html: List[str] = []
+        for idx, p in enumerate(lista_p):
+            p_html = formatar_tickers_no_texto(html.escape(p))
+            if prefixo_final_html and idx == len(lista_p) - 1:
+                partes_html.append(f"{prefixo_final_html}{p_html}")
+            else:
+                partes_html.append(p_html)
+        return f"{cabecalho}\n\n<b>{titulo_html}</b>\n\n" + "\n\n".join(partes_html)
 
     post_principal = render(blocos_limpos)
     vis = tamanho_texto_visivel(post_principal)
     if vis > ALVO_MAX_CARACTERES_POST:
         ajustados = list(blocos_limpos)
-        for limite_bloco in (330, 290, 250):
+        for limite_bloco in (310, 270, 235):
             cand_blocos = [truncar_frase_limpa(p, limite_bloco) or p for p in ajustados]
             cand_html = render(cand_blocos)
             if tamanho_texto_visivel(cand_html) <= ALVO_MAX_CARACTERES_POST:
@@ -1307,7 +1442,7 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
         caption_curta = post_principal
     else:
         caption_curta = post_principal
-        for limite_c in (240, 200, 170):
+        for limite_c in (230, 195, 165):
             bc = [truncar_frase_limpa(p, limite_c) for p in blocos_limpos]
             bc = [p for p in bc if p]
             if len(bc) >= 2:
@@ -1316,7 +1451,7 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
                     caption_curta = cand_c
                     break
         if tamanho_texto_visivel(caption_curta) > TELEGRAM_CAPTION_LIMIT - 20 and len(blocos_limpos) >= 2:
-            cand2 = render([truncar_frase_limpa(blocos_limpos[0], 340) or blocos_limpos[0], truncar_frase_limpa(blocos_limpos[-1], 320) or blocos_limpos[-1]])
+            cand2 = render([truncar_frase_limpa(blocos_limpos[0], 330) or blocos_limpos[0], truncar_frase_limpa(blocos_limpos[-1], 290) or blocos_limpos[-1]])
             if tamanho_texto_visivel(cand2) <= TELEGRAM_CAPTION_LIMIT - 20:
                 caption_curta = cand2
 
@@ -1451,8 +1586,8 @@ async def refinar_materia_com_gemini(
     analise: AnaliseHeuristica,
 ) -> Tuple[str, Optional[Tuple[str, str]]]:
     """Usa o Gemini (somente família Flash-Lite/Flash gratuita) para validar se a matéria é relevante
-    para investidores de Renda Variável (Ações B3 / FIIs) ou Renda Fixa / Macro, e reescrevê-la com
-    Começo, Meio e Fim (3 parágrafos).
+    para investidores de Ações B3, BDRs, FIIs, Renda Fixa ou Renda Variável no geral, e reescrevê-la
+    com Começo, Meio e Fim + pincelada final honesta de impacto por classe de investimento.
     Retorna:
       - ("APROVADA", (post_html, caption_curta_html))
       - ("REJEITADA", None) -> IA confirmou que é irrelevante/ruído/paywall raso
@@ -1473,36 +1608,42 @@ async def refinar_materia_com_gemini(
 
     tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "Nenhum (Renda Fixa / Macro / Setorial)"
     prompt = (
-        "Você é um editor financeiro sênior escrevendo posts curtos, claros e didáticos para um canal de "
-        "investidores brasileiros no Telegram focado em Renda Variável (Ações da B3 e FIIs/FIAGRO) e "
-        "Renda Fixa (Tesouro Direto, CDB, LCI/LCA, Debêntures, Selic/Copom, IPCA, Curva de Juros e Fiscal).\n\n"
+        "Você é um editor financeiro sênior escrevendo posts curtos, claros, didáticos e 100% honestos para um canal de "
+        "investidores brasileiros no Telegram. Nosso público investe em:\n"
+        "- Ações da B3 (e Renda Variável no geral)\n"
+        "- BDRs e ETFs (exposição a empresas estrangeiras/EUA)\n"
+        "- FIIs e FIAGROs\n"
+        "- Renda Fixa no geral (Tesouro Direto, CDB, LCI/LCA, CRI/CRA, Debêntures, Selic/CDI, IPCA e Curva de Juros)\n\n"
         f"PILAR DETECTADO: {analise.pilar_chave}\n"
         f"TICKER(S) DETECTADO(S): {tickers_str}\n"
         f"TÍTULO ORIGINAL: {titulo}\n"
         f"TEXTO DA MATÉRIA:\n{texto_base}\n\n"
-        "TAREFA 1 — VALIDAÇÃO RIGOROSA:\n"
-        "APROVE (aprovada=true) somente matérias de real relevância para quem investe em Ações B3, FIIs ou Renda Fixa:\n"
-        "- Ações B3: dividendos, JCP, data-com, recompra, balanços/resultados, fusões/aquisições, fatos relevantes, leilões, dívida, guidance ou explicação real de forte alta/queda.\n"
-        "- FIIs/FIAGRO: dividendos por cota, emissões, vacância, compra/venda de imóveis, IFIX, inadimplência de CRIs/CRAs.\n"
-        "- Renda Fixa & Macro: Selic/Copom, IPCA/inflação, Focus, taxas do Tesouro Direto e DI futuro, CDB/LCI/LCA/debêntures, FGC, tributação de investimentos, fiscal, juros nos EUA (Fed/Treasuries) ou câmbio com impacto prático no mercado.\n"
+        "TAREFA 1 — FILTRO RIGOROSO DE RELEVÂNCIA (HONESTIDADE TOTAL):\n"
+        "APROVE (aprovada=true) somente se a notícia for REALMENTE útil e concreta para investidores de pelo menos uma dessas classes:\n"
+        "- Ações B3 / Renda Variável: dividendos, JCP, data-com, recompra, balanços/resultados, fusões/aquisições, fatos relevantes, leilões, dívida, guidance ou explicação real de forte alta/queda.\n"
+        "- BDRs / Exterior: resultados, dividendos, splits ou fatos relevantes de grandes empresas negociadas via BDR na B3 (ex.: Apple, Nvidia, Microsoft, Amazon, Alphabet, Meta, Tesla, Berkshire, grandes bancos EUA), S&P 500, Nasdaq ou ETFs.\n"
+        "- FIIs / FIAGROs: dividendos por cota, emissões, vacância, compra/venda de imóveis, IFIX, crédito imobiliário/agro.\n"
+        "- Renda Fixa & Macro: Selic/Copom, IPCA/inflação, Focus, taxas do Tesouro Direto e DI futuro, CDB/LCI/LCA/debêntures, FGC, tributação de investimentos, fiscal, juros nos EUA (Fed/Treasuries) ou câmbio com efeito prático na carteira.\n"
         "REJEITE (aprovada=false) se:\n"
-        "- For criptomoeda, esportes/futebol/patrocínio, política partidária sem efeito econômico concreto, polícia/crime, fofoca/entretenimento, benefícios sociais (INSS/Bolsa Família), clickbait sem dado concreto ou propaganda de corretora/curso.\n"
-        "- O texto estiver raso/cortado por paywall sem informações concretas suficientes para montar começo, meio e fim.\n\n"
-        "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO E FIM (se aprovada=true):\n"
-        "Reescreva em português claro, objetivo e jornalístico, decifrando termos técnicos (JCP, data-com, NTN-B, IPCA+, P/VP, curva DI, Selic) sem perder precisão:\n"
+        "- For criptomoeda, esportes/futebol/patrocínio, política partidária sem efeito financeiro concreto, polícia/crime, fofoca/entretenimento, lançamentos de produtos/séries sem impacto financeiro real, benefícios sociais (INSS/Bolsa Família), clickbait sem dado concreto ou propaganda de corretora/curso.\n"
+        "- O texto estiver raso/cortado por paywall sem informações suficientes para montar começo, meio e fim.\n"
+        "- Não houver relação REAL e honesta com nenhum dos investimentos do público (NUNCA invente ou force uma ligação para tentar aprovar).\n\n"
+        "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO, FIM E PINCELADA FINAL HONESTA (se aprovada=true):\n"
+        "Escreva em português claro, objetivo e jornalístico, somando entre 620 e 940 caracteres no total dos 3 blocos:\n"
         "- titulo: manchete direta e clara (1 frase, sem clickbait, sem nome de portal).\n"
-        "- paragrafos: EXATAMENTE 3 parágrafos curtos e completos, somando entre 650 e 1050 caracteres no total:\n"
-        "  1) COMEÇO (O Fato): o que aconteceu de concreto, citando o ativo/tema e os principais números, taxas ou valores.\n"
-        "  2) MEIO (Contexto e Decifração): por que isso aconteceu, comparação com períodos anteriores, datas-chave ou tradução clara do termo técnico.\n"
-        "  3) FIM (Desfecho para o Investidor): impacto prático ou próximos passos para quem investe em ações, FIIs ou renda fixa.\n"
-        "- tag_evento: escolha EXATAMENTE uma opção entre: 'DIVIDENDOS', 'BALANCOS', 'FIIS', 'RENDA_FIXA', 'MACRO', 'ACOES'.\n"
-        "- tickers: array com até 3 tickers oficiais da B3/FIIs que sejam realmente protagonistas da matéria (ex.: ['PETR4'], ['MXRF11']); retorne [] se for matéria de Renda Fixa, juros, macro ou setorial sem empresa específica.\n\n"
-        "REGRAS INVIOLÁVEIS:\n"
-        "- NUNCA invente números, taxas, datas ou fatos que não estejam no texto original.\n"
+        "- comeco (COMEÇO — O Fato, ~220 a 320 chars): o que aconteceu de concreto, citando o ativo/órgão/tema e os números, taxas ou valores exatos da matéria.\n"
+        "- meio (MEIO — Contexto e Decifração, ~220 a 320 chars): por que isso aconteceu, comparação com períodos anteriores, datas-chave ou explicação didática de termos técnicos da matéria (ex.: JCP, data-com, NTN-B, P/VP, curva DI, BDR, vacância).\n"
+        "- fim_impacto (FIM — Pincelada honesta para o investidor, ~180 a 280 chars): explique de forma objetiva e SEM EXAGERAR por que essa notícia importa na prática e como ela se conecta aos investimentos afetados. NÃO comece com 'No radar do investidor:' (o rótulo já é adicionado automaticamente).\n"
+        "- investimentos_afetados: array com 1 a 3 classes REALMENTE afetadas, escolhendo SOMENTE entre estes valores exatos: ['Ações', 'BDRs', 'FIIs', 'Renda Fixa', 'Renda Variável']. Cite apenas as classes que têm ligação real e direta (não liste todas sem motivo).\n"
+        "- tag_evento: escolha EXATAMENTE uma opção entre: 'DIVIDENDOS', 'BALANCOS', 'ACOES', 'BDR', 'FIIS', 'RENDA_FIXA', 'MACRO'.\n"
+        "- tickers: array com até 3 tickers oficiais da B3 (ações, BDRs, FIIs ou ETFs, ex.: ['PETR4'], ['NVDC34'], ['MXRF11']) que sejam realmente protagonistas; retorne [] se for matéria de Renda Fixa, juros, macro ou setorial sem ativo específico.\n\n"
+        "REGRAS INVIOLÁVEIS (ZERO MENTIRA):\n"
+        "- NUNCA invente números, percentuais, taxas, datas ou fatos que não estejam no texto original.\n"
+        "- NUNCA prometa ou garanta que um ativo vai subir ou cair; use linguagem fiel e responsável ('tende a', 'pode pressionar', 'reforça o fluxo de caixa', 'eleva a remuneração de títulos pós-fixados').\n"
         "- NUNCA faça recomendação de compra ou venda.\n"
-        "- NUNCA use markdown (*, **, #), emojis no texto dos parágrafos ou siglas de carteiras/estratégias.\n"
-        "- NUNCA repita o título dentro do 1º parágrafo.\n"
-        "- Responda APENAS com um objeto JSON válido com as chaves: aprovada (boolean), motivo_rejeicao (string), titulo (string), paragrafos (array de 3 strings), tag_evento (string), tickers (array de strings)."
+        "- NUNCA use markdown (*, **, #), emojis no texto ou siglas de carteiras/estratégias.\n"
+        "- NUNCA repita o título dentro do bloco 'comeco'.\n"
+        "- Responda APENAS com um objeto JSON válido contendo as chaves: aprovada (boolean), motivo_rejeicao (string), titulo (string), comeco (string), meio (string), fim_impacto (string), investimentos_afetados (array de strings), tag_evento (string), tickers (array de strings)."
     )
 
     payload_base: Dict[str, Any] = {
@@ -1568,7 +1709,14 @@ async def refinar_materia_com_gemini(
         logger.info("Descartada pelo Gemini (%s | %s): %s", modelo_usado or "ia", str(dados_ia.get("motivo_rejeicao", "irrelevante"))[:90], titulo)
         return "REJEITADA", None
 
-    parags_ia = dados_ia.get("paragrafos")
+    comeco_ia = str(dados_ia.get("comeco") or "").strip()
+    meio_ia = str(dados_ia.get("meio") or "").strip()
+    fim_ia = str(dados_ia.get("fim_impacto") or "").strip()
+    if comeco_ia and meio_ia and fim_ia:
+        parags_ia: Any = [comeco_ia, meio_ia, fim_ia]
+    else:
+        parags_ia = dados_ia.get("paragrafos")
+
     titulo_ia = str(dados_ia.get("titulo") or titulo).strip()
     if not isinstance(parags_ia, list) or len(parags_ia) < 2:
         return "FALLBACK", None
@@ -1584,10 +1732,11 @@ async def refinar_materia_com_gemini(
     mapa_tags = {
         "DIVIDENDOS": "🟢 <b>DIVIDENDOS</b>",
         "BALANCOS": "🔵 <b>BALANÇOS</b>",
+        "ACOES": "📊 <b>AÇÕES B3</b>",
+        "BDR": "🌎 <b>BDR &amp; EXTERIOR</b>",
         "FIIS": "🏢 <b>FIIs</b>",
         "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
         "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
-        "ACOES": "📊 <b>AÇÕES B3</b>",
     }
     cat_label = mapa_tags.get(tag_ia, analise.categoria_label)
 
@@ -1603,7 +1752,7 @@ async def refinar_materia_com_gemini(
             t for t in dict.fromkeys(tks_ia)
             if REGEX_TICKER_B3.fullmatch(t) and t not in FALSOS_TICKERS
         ][:3]
-        if not tickers_finais and tag_ia in ("DIVIDENDOS", "BALANCOS", "FIIS", "ACOES"):
+        if not tickers_finais and tag_ia in ("DIVIDENDOS", "BALANCOS", "FIIS", "ACOES", "BDR"):
             tickers_finais = analise.tickers[:3]
     else:
         tickers_finais = analise.tickers[:3]
@@ -1614,7 +1763,15 @@ async def refinar_materia_com_gemini(
     else:
         cabecalho = f"<blockquote>{cat_label}</blockquote>"
 
-    post_html, cap_curta = _montar_html_de_blocos(cabecalho, titulo_ia, parags_limpos)
+    classes_afetadas = _normalizar_investimentos_afetados(dados_ia.get("investimentos_afetados"), analise.pilar_chave)
+    classes_fmt = _formatar_lista_investimentos_pt(classes_afetadas)
+    prefixo_final = (
+        f"📌 <b>No radar do investidor ({html.escape(classes_fmt)}):</b> "
+        if classes_fmt
+        else "📌 <b>No radar do investidor:</b> "
+    )
+
+    post_html, cap_curta = _montar_html_de_blocos(cabecalho, titulo_ia, parags_limpos, prefixo_final_html=prefixo_final)
     if not post_html or not cap_curta:
         return "FALLBACK", None
 
