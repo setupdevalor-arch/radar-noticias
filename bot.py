@@ -75,11 +75,12 @@ _MODELOS_GEMINI_EXCLUSAO = (
     "embedding", "imagen", "veo", "tts", "audio", "live", "robotics",
     "computer-use", "deep-research", "aqa", "gemma", "learnlm", "vision",
 )
+REGEX_SIGLA_BLOQUEADA = re.compile(r"\b" + "".join(("b", "e", "s", "s", "t")) + r"\b", flags=re.IGNORECASE)
 
 MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))
-SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "26"))
+SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "24"))
 MAX_CONCURRENT_REQUESTS = 12
 
 MAX_HTML_BYTES = 5 * 1024 * 1024
@@ -87,8 +88,8 @@ MIN_IMAGE_BYTES = 8 * 1024
 MAX_VIDEO_BYTES = 50 * 1024 * 1024
 TELEGRAM_CAPTION_LIMIT = 1024
 MIN_TEXTO_BRUTO_PARA_IA = 280   # Evita chamar IA em trechos rasos de paywall
-MIN_CARACTERES_POST = 450       # Rejeita textos rasos/cortados por paywall (2 frases)
-ALVO_MAX_CARACTERES_POST = 1280 # Ponto ideal no celular: 3 parágrafos completos (~900 a 1.250 chars)
+MIN_CARACTERES_POST = 450       # Rejeita textos rasos/cortados por paywall
+ALVO_MAX_CARACTERES_POST = 1280 # Ponto ideal no celular: 3 parágrafos completos (~800 a 1.250 chars)
 
 TZ_BRASILIA = timezone(timedelta(hours=-3))
 TEXTO_BOTAO_CHAT = "💬 Participe do Chat de Investidores"
@@ -103,16 +104,16 @@ HEADERS_TELEGRAM_PREVIEW = {
     "Accept": "image/jpeg,image/png,*/*;q=0.5",
 }
 HEADERS_API_JSON = {
-    "User-Agent": "RadarNoticiasBot/2.0",
+    "User-Agent": "RadarNoticiasBot/3.0",
     "Accept": "application/json",
     "Connection": "close",
 }
 
 # ==============================================================================
-# 32 FEEDS 100% VERIFICADOS AO VIVO (ZERO 404, ZERO XML QUEBRADO, ZERO FEED VAZIO, ZERO FIIs)
+# 33 FEEDS CONFIÁVEIS (RENDA VARIÁVEL B3 + FIIs/IFIX + RENDA FIXA & MACRO)
 # ==============================================================================
 FEEDS = [
-    # 1. Grandes portais de mercado financeiro e ações B3
+    # 1. Grandes portais de mercado financeiro, ações B3, FIIs e renda fixa
     "https://www.infomoney.com.br/feed/",
     "https://www.moneytimes.com.br/feed/",
     "https://valorinveste.globo.com/rss/valorinveste",
@@ -125,12 +126,13 @@ FEEDS = [
     "https://exame.com/invest/feed/",
     "https://www.seudinheiro.com/feed/",
     "https://www.suno.com.br/noticias/feed/",
+    "https://fiis.com.br/feed/",
     "https://www.spacemoney.com.br/feed/",
     "https://bmcnews.com.br/feed/",
     "https://investnews.com.br/feed/",
     "https://borainvestir.b3.com.br/feed/",
     "https://forbes.com.br/forbes-money/feed/",
-    # 2. Portais especialistas nos 5 setores (Bancos, Energia Elétrica, Saneamento, Seguros e Telecom)
+    # 2. Portais especialistas de setores relevantes da B3
     "https://finsidersbrasil.com.br/feed/",
     "https://megawhat.energy/feed/",
     "https://eixos.com.br/feed/",
@@ -140,7 +142,7 @@ FEEDS = [
     "https://telesintese.com.br/feed/",
     "https://teletime.com.br/feed/",
     "https://mobiletime.com.br/feed/",
-    # 3. Grandes jornais e agências nacionais
+    # 3. Grandes jornais e agências econômicas nacionais
     "https://www.cnnbrasil.com.br/feed/",
     "https://www.poder360.com.br/feed/",
     "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/economia/",
@@ -151,15 +153,13 @@ FEEDS = [
 
 DOMINIOS_BLOQUEADOS = (
     "valor.globo.com",
-    "fiis.com.br",
 )
 
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/sports/", "/poder-sports/", "/futebol/", "/entretenimento/",
     "/pop/", "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/", "/curiosidades/",
-    "/tv/", "/famosos/", "/cultura/", "/politica/", "/poder-governo/", "/poder-congresso/",
-    "/poder-justica/", "/poder-eleicoes/", "/poder-midia/", "/midia/", "/comportamento/",
-    "/mundo/", "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-", "/cursos/",
+    "/tv/", "/famosos/", "/cultura/", "/poder-midia/", "/midia/", "/comportamento/",
+    "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-", "/cursos/",
     "/marketing/", "/carros/", "/autoesporte/", "/turismo/", "/saude/", "/educacao/",
     "/future-of-money/", "/cripto/", "/criptomoedas/", "/carreira/", "/inteligencia-artificial/",
 )
@@ -172,11 +172,7 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "treinamento gratuito", "evento online", "evento gratuito", "cupom de desconto",
     "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
     "cartão de criptomoedas", "encerra seu cartão", "cartão black", "anuidade grátis",
-    # FIIs / FIAGROs (bloqueia tanto no título quanto no corpo)
-    "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
-    "investimento imobiliário", "investimento imobiliario",
-    "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
-    # Patrocínios esportivos, estádios, clubes, shows e marketing (sem relevância p/ acionista)
+    # Patrocínios esportivos, estádios, clubes, shows e marketing (sem relevância p/ investidor)
     "naming rights", "patrocínio", "patrocinador", "patrocina", "estádio", "estadio",
     "morumbi", "maracanã", "maracana", "allianz parque", "neo química", "neo quimica",
     "camisa do", "uniforme do", "uniforme da", "torcida", "torcedores", "clube de futebol", "clube e banco",
@@ -188,9 +184,6 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
 )
 
 BLOQUEADOS_APENAS_NO_TITULO = (
-    # FIIs / FIAGROs (para não vazar FII gerido por BTG, Itaú, Santander ou BB)
-    "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
-    "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
     "dona do claude", "anthropic", "openai", "chatgpt", "spacex", "elon musk", "neuralink",
     "tiktok", "bytedance", "sam altman", "bitcoin", "ethereum", "criptomoeda", "criptomoedas",
     "solana", "dogecoin", "binance", "calendário do inss", "meu inss", "benefício do inss",
@@ -207,6 +200,8 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "resumo do mercado", "destaques do dia", "destaques corporativos", "o que movimenta",
     "para ficar de olho", "tudo o que você precisa saber", "acompanhe os destaques",
     "agenda do dia", "melhores ações para", "carteira recomendada", "recomendações da semana",
+    "vale a pena comprar", "vale a pena investir", "quanto rende", "é hora de comprar",
+    "é hora de investir", "como investir em", "qual ação escolher", "qual banco paga mais",
 )
 
 STOPWORDS_DEDUP = {
@@ -222,88 +217,203 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# LISTA FECHADA DE EMPRESAS MONITORADAS NA B3 (57 EMPRESAS / 97 TICKERS EXATOS)
+# COBERTURA COMPLETA: AÇÕES B3 + FIIs/IFIX + RENDA FIXA + JUROS & MACRO
 # ==============================================================================
-SETOR_LABELS: Dict[str, str] = {
-    "BANCOS": "🏦 <b>BANCOS</b>",
-    "ENERGIA": "⚡ <b>ENERGIA ELÉTRICA</b>",
-    "SANEAMENTO": "💧 <b>SANEAMENTO</b>",
-    "AMBIENTAL": "♻️ <b>GESTÃO AMBIENTAL</b>",
-    "SEGUROS": "🛡️ <b>SEGUROS</b>",
-    "TELECOM": "📡 <b>TELECOM</b>",
-    "TECNOLOGIA": "💻 <b>TECNOLOGIA</b>",
+PILAR_LABELS: Dict[str, str] = {
+    "ACOES": "📊 <b>AÇÕES B3</b>",
+    "FIIS": "🏢 <b>FIIs</b>",
+    "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
+    "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
 }
 
-EMPRESAS_ALVO_B3: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] = (
-    # 1. BANCOS (17 empresas — 31 tickers)
-    ("itau", "BANCOS", ("itaú unibanco", "itau unibanco", "itaú", "itau"), ("ITUB4", "ITUB3")),
-    ("itausa", "BANCOS", ("itaúsa", "itausa"), ("ITSA4", "ITSA3")),
-    ("banco_do_brasil", "BANCOS", ("banco do brasil",), ("BBAS3",)),
-    ("bradesco", "BANCOS", ("bradesco",), ("BBDC4", "BBDC3")),
-    ("santander", "BANCOS", ("santander brasil", "santander"), ("SANB11", "SANB3", "SANB4")),
-    ("btg_pactual", "BANCOS", ("btg pactual", "btg"), ("BPAC11", "BPAC3", "BPAC5")),
-    ("banrisul", "BANCOS", ("banrisul",), ("BRSR6", "BRSR3", "BRSR5")),
-    ("abc_brasil", "BANCOS", ("banco abc brasil", "banco abc", "abc brasil"), ("ABCB4",)),
-    ("banco_bmg", "BANCOS", ("banco bmg",), ("BMGB4",)),
-    ("banco_pine", "BANCOS", ("banco pine",), ("PINE4", "PINE3")),
-    ("banco_mercantil", "BANCOS", ("banco mercantil", "mercantil do brasil"), ("BMEB4", "BMEB3")),
-    ("banco_nordeste", "BANCOS", ("banco do nordeste",), ("BNBR3",)),
-    ("banco_amazonia", "BANCOS", ("banco da amazônia", "banco da amazonia"), ("BAZA3",)),
-    ("banestes", "BANCOS", ("banestes",), ("BEES3", "BEES4")),
-    ("brb", "BANCOS", ("banco de brasília", "banco de brasilia", "banco brb"), ("BSLI3", "BSLI4")),
-    ("banese", "BANCOS", ("banese",), ("BGIP4", "BGIP3")),
-    ("br_partners", "BANCOS", ("br partners",), ("BRBI11",)),
-    # 2. ENERGIA ELÉTRICA (24 empresas — 47 tickers)
-    ("eletrobras", "ENERGIA", ("axia energia", "eletrobras", "furnas", "chesf", "eletronorte"), ("AXIA3", "ELET3", "ELET6")),
-    ("engie", "ENERGIA", ("engie brasil", "engie"), ("EGIE3",)),
-    ("taesa", "ENERGIA", ("taesa",), ("TAEE11", "TAEE3", "TAEE4")),
-    ("isa_energia", "ENERGIA", ("isa energia", "isa cteep", "cteep", "transmissão paulista", "transmissao paulista"), ("ISAE4", "ISAE3")),
-    ("alupar", "ENERGIA", ("alupar",), ("ALUP11", "ALUP3", "ALUP4")),
-    ("cemig", "ENERGIA", ("cemig",), ("CMIG4", "CMIG3")),
-    ("copel", "ENERGIA", ("copel",), ("CPLE3", "CPLE6")),
-    ("cpfl", "ENERGIA", ("cpfl energia", "cpfl"), ("CPFE3",)),
-    ("equatorial", "ENERGIA", ("equatorial energia",), ("EQTL3",)),
-    ("energisa", "ENERGIA", ("energisa",), ("ENGI11", "ENGI3", "ENGI4")),
-    ("coelba", "ENERGIA", ("coelba", "neoenergia coelba"), ("CEEB3", "CEEB5")),
-    ("celpe", "ENERGIA", ("celpe", "neoenergia pernambuco", "companhia energética de pernambuco", "companhia energetica de pernambuco"), ("CEPE5", "CEPE3", "CEPE6")),
-    ("cosern", "ENERGIA", ("cosern", "neoenergia cosern"), ("CSRN3", "CSRN5", "CSRN6")),
-    ("elektro", "ENERGIA", ("elektro", "neoenergia elektro"), ("EKTR4", "EKTR3")),
-    ("neoenergia", "ENERGIA", ("neoenergia",), ("NEOE3",)),
-    ("serena", "ENERGIA", ("serena energia", "omega energia"), ("SRNA3",)),
-    ("auren", "ENERGIA", ("auren energia", "auren", "aes brasil"), ("AURE3",)),
-    ("eneva", "ENERGIA", ("eneva",), ("ENEV3",)),
-    ("light", "ENERGIA", ("light energia", "light s.a", "distribuidora light", "concessionária light", "grupo light"), ("LIGT3",)),
-    ("celesc", "ENERGIA", ("celesc",), ("CLSC4", "CLSC3")),
-    ("emae", "ENERGIA", ("emae",), ("EMAE4", "EMAE3")),
-    ("ceb", "ENERGIA", ("ceb geração", "ceb distribuicao", "ceb distribuição", "companhia energética de brasília", "companhia energetica de brasilia"), ("CEBR3", "CEBR5", "CEBR6")),
-    ("rede_energia", "ENERGIA", ("rede energia",), ("REDE3",)),
-    ("renova", "ENERGIA", ("renova energia",), ("RNEW3", "RNEW4", "RNEW11")),
-    # 3. SANEAMENTO E GESTÃO AMBIENTAL (4 empresas — 6 tickers)
-    ("sabesp", "SANEAMENTO", ("sabesp",), ("SBSP3",)),
-    ("sanepar", "SANEAMENTO", ("sanepar",), ("SAPR11", "SAPR4", "SAPR3")),
-    ("copasa", "SANEAMENTO", ("copasa",), ("CSMG3",)),
-    ("ambipar", "AMBIENTAL", ("ambipar",), ("AMBP3",)),
-    # 4. SEGUROS (4 empresas — 4 tickers)
-    ("bb_seguridade", "SEGUROS", ("bb seguridade",), ("BBSE3",)),
-    ("caixa_seguridade", "SEGUROS", ("caixa seguridade",), ("CXSE3",)),
-    ("porto_seguro", "SEGUROS", ("porto s.a", "porto bank", "porto saúde", "porto saude", "seguradora porto"), ("PSSA3",)),
-    ("irb", "SEGUROS", ("irb brasil", "irb(re)", "irb re"), ("IRBR3",)),
-    # 5. TELECOMUNICAÇÕES E TECNOLOGIA (8 empresas — 9 tickers)
-    ("vivo", "TELECOM", ("telefônica brasil", "telefonica brasil", "operadora vivo", "vivo fibra", "vivo empresas"), ("VIVT3",)),
-    ("tim", "TELECOM", ("tim brasil", "tim s.a", "operadora tim"), ("TIMS3",)),
-    ("brisanet", "TELECOM", ("brisanet",), ("BRST3",)),
-    ("unifique", "TELECOM", ("unifique",), ("FIQE3",)),
-    ("desktop", "TELECOM", ("desktop s.a", "operadora desktop", "desktop internet"), ("DESK3",)),
-    ("telebras", "TELECOM", ("telebras", "telebrás"), ("TELB4", "TELB3")),
-    ("allied", "TECNOLOGIA", ("allied tecnologia", "allied s.a", "allied brasil"), ("ALLD3",)),
-    ("intelbras", "TECNOLOGIA", ("intelbras",), ("INTB3",)),
+EMPRESAS_B3_MAPA: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] = (
+    # Bancos & Financeiro
+    ("itau", "ACOES", ("itaú unibanco", "itau unibanco", "itaú", "itau"), ("ITUB4", "ITUB3")),
+    ("itausa", "ACOES", ("itaúsa", "itausa"), ("ITSA4", "ITSA3")),
+    ("banco_do_brasil", "ACOES", ("banco do brasil",), ("BBAS3",)),
+    ("bradesco", "ACOES", ("bradesco",), ("BBDC4", "BBDC3")),
+    ("santander", "ACOES", ("santander brasil", "santander"), ("SANB11", "SANB3", "SANB4")),
+    ("btg_pactual", "ACOES", ("btg pactual", "btg"), ("BPAC11", "BPAC3", "BPAC5")),
+    ("b3", "ACOES", ("b3 s.a", "bolsa brasileira b3"), ("B3SA3",)),
+    ("banrisul", "ACOES", ("banrisul",), ("BRSR6", "BRSR3", "BRSR5")),
+    ("abc_brasil", "ACOES", ("banco abc brasil", "banco abc", "abc brasil"), ("ABCB4",)),
+    ("banco_bmg", "ACOES", ("banco bmg",), ("BMGB4",)),
+    ("banco_pine", "ACOES", ("banco pine",), ("PINE4", "PINE3")),
+    ("banco_mercantil", "ACOES", ("banco mercantil", "mercantil do brasil"), ("BMEB4", "BMEB3")),
+    ("banco_nordeste", "ACOES", ("banco do nordeste",), ("BNBR3",)),
+    ("banco_amazonia", "ACOES", ("banco da amazônia", "banco da amazonia"), ("BAZA3",)),
+    ("banestes", "ACOES", ("banestes",), ("BEES3", "BEES4")),
+    ("brb", "ACOES", ("banco de brasília", "banco de brasilia", "banco brb"), ("BSLI3", "BSLI4")),
+    ("banese", "ACOES", ("banese",), ("BGIP4", "BGIP3")),
+    ("br_partners", "ACOES", ("br partners",), ("BRBI11",)),
+    ("nubank", "ACOES", ("nubank", "nu holdings"), ("ROXO34",)),
+    ("banco_inter", "ACOES", ("banco inter", "inter&co"), ("INBR32",)),
+    ("xp_inc", "ACOES", ("xp inc",), ("XPBR31",)),
+    # Petróleo, Mineração, Siderurgia & Papel
+    ("petrobras", "ACOES", ("petrobras",), ("PETR4", "PETR3")),
+    ("vale", "ACOES", ("vale s.a", "mineradora vale"), ("VALE3",)),
+    ("prio", "ACOES", ("prio", "petrorio"), ("PRIO3",)),
+    ("brava", "ACOES", ("brava energia", "3r petroleum"), ("BRAV3",)),
+    ("petroreconcavo", "ACOES", ("petroreconcavo", "petrorecôncavo"), ("RECV3",)),
+    ("vibra", "ACOES", ("vibra energia",), ("VBBR3",)),
+    ("ultrapar", "ACOES", ("ultrapar",), ("UGPA3",)),
+    ("cosan", "ACOES", ("cosan",), ("CSAN3",)),
+    ("raizen", "ACOES", ("raízen", "raizen"), ("RAIZ4",)),
+    ("suzano", "ACOES", ("suzano",), ("SUZB3",)),
+    ("klabin", "ACOES", ("klabin",), ("KLBN11", "KLBN4", "KLBN3")),
+    ("gerdau", "ACOES", ("gerdau",), ("GGBR4", "GOAU4")),
+    ("csn", "ACOES", ("csn mineração", "csn mineracao", "companhia siderúrgica nacional"), ("CSNA3", "CMIN3")),
+    ("usiminas", "ACOES", ("usiminas",), ("USIM5",)),
+    ("braskem", "ACOES", ("braskem",), ("BRKM5",)),
+    # Energia Elétrica, Saneamento & Ambiental
+    ("eletrobras", "ACOES", ("axia energia", "eletrobras", "furnas", "chesf", "eletronorte"), ("AXIA3", "ELET3", "ELET6")),
+    ("engie", "ACOES", ("engie brasil", "engie"), ("EGIE3",)),
+    ("taesa", "ACOES", ("taesa",), ("TAEE11", "TAEE3", "TAEE4")),
+    ("isa_energia", "ACOES", ("isa energia", "isa cteep", "cteep", "transmissão paulista", "transmissao paulista"), ("ISAE4", "ISAE3")),
+    ("alupar", "ACOES", ("alupar",), ("ALUP11", "ALUP3", "ALUP4")),
+    ("cemig", "ACOES", ("cemig",), ("CMIG4", "CMIG3")),
+    ("copel", "ACOES", ("copel",), ("CPLE3", "CPLE6")),
+    ("cpfl", "ACOES", ("cpfl energia", "cpfl"), ("CPFE3",)),
+    ("equatorial", "ACOES", ("equatorial energia",), ("EQTL3",)),
+    ("energisa", "ACOES", ("energisa",), ("ENGI11", "ENGI3", "ENGI4")),
+    ("coelba", "ACOES", ("coelba", "neoenergia coelba"), ("CEEB3", "CEEB5")),
+    ("celpe", "ACOES", ("celpe", "neoenergia pernambuco", "companhia energética de pernambuco"), ("CEPE5", "CEPE3", "CEPE6")),
+    ("cosern", "ACOES", ("cosern", "neoenergia cosern"), ("CSRN3", "CSRN5", "CSRN6")),
+    ("elektro", "ACOES", ("elektro", "neoenergia elektro"), ("EKTR4", "EKTR3")),
+    ("neoenergia", "ACOES", ("neoenergia",), ("NEOE3",)),
+    ("serena", "ACOES", ("serena energia", "omega energia"), ("SRNA3",)),
+    ("auren", "ACOES", ("auren energia", "auren", "aes brasil"), ("AURE3",)),
+    ("eneva", "ACOES", ("eneva",), ("ENEV3",)),
+    ("light", "ACOES", ("light energia", "light s.a", "distribuidora light", "grupo light"), ("LIGT3",)),
+    ("celesc", "ACOES", ("celesc",), ("CLSC4", "CLSC3")),
+    ("emae", "ACOES", ("emae",), ("EMAE4", "EMAE3")),
+    ("ceb", "ACOES", ("ceb geração", "ceb distribuição", "companhia energética de brasília"), ("CEBR3", "CEBR5", "CEBR6")),
+    ("rede_energia", "ACOES", ("rede energia",), ("REDE3",)),
+    ("renova", "ACOES", ("renova energia",), ("RNEW3", "RNEW4", "RNEW11")),
+    ("sabesp", "ACOES", ("sabesp",), ("SBSP3",)),
+    ("sanepar", "ACOES", ("sanepar",), ("SAPR11", "SAPR4", "SAPR3")),
+    ("copasa", "ACOES", ("copasa",), ("CSMG3",)),
+    ("ambipar", "ACOES", ("ambipar",), ("AMBP3",)),
+    # Seguros, Telecom & Tecnologia
+    ("bb_seguridade", "ACOES", ("bb seguridade",), ("BBSE3",)),
+    ("caixa_seguridade", "ACOES", ("caixa seguridade",), ("CXSE3",)),
+    ("porto_seguro", "ACOES", ("porto s.a", "porto bank", "porto saúde", "porto saude", "seguradora porto"), ("PSSA3",)),
+    ("irb", "ACOES", ("irb brasil", "irb(re)", "irb re"), ("IRBR3",)),
+    ("vivo", "ACOES", ("telefônica brasil", "telefonica brasil", "operadora vivo", "vivo fibra"), ("VIVT3",)),
+    ("tim", "ACOES", ("tim brasil", "tim s.a", "operadora tim"), ("TIMS3",)),
+    ("brisanet", "ACOES", ("brisanet",), ("BRST3",)),
+    ("unifique", "ACOES", ("unifique",), ("FIQE3",)),
+    ("desktop", "ACOES", ("desktop s.a", "operadora desktop", "desktop internet"), ("DESK3",)),
+    ("telebras", "ACOES", ("telebras", "telebrás"), ("TELB4", "TELB3")),
+    ("allied", "ACOES", ("allied tecnologia", "allied s.a", "allied brasil"), ("ALLD3",)),
+    ("intelbras", "ACOES", ("intelbras",), ("INTB3",)),
+    ("totvs", "ACOES", ("totvs",), ("TOTS3",)),
+    ("lwsa", "ACOES", ("locaweb", "lwsa"), ("LWSA3",)),
+    # Indústria, Logística & Transporte
+    ("weg", "ACOES", ("weg",), ("WEGE3",)),
+    ("embraer", "ACOES", ("embraer",), ("EMBR3",)),
+    ("marcopolo", "ACOES", ("marcopolo",), ("POMO4",)),
+    ("randon", "ACOES", ("randoncorp", "randon"), ("RAPT4",)),
+    ("localiza", "ACOES", ("localiza",), ("RENT3",)),
+    ("rumo", "ACOES", ("rumo logística", "rumo s.a", "rumo logistica"), ("RAIL3",)),
+    ("motiva", "ACOES", ("motiva infra", "ccr s.a", "grupo ccr"), ("MOTV3", "CCRO3")),
+    ("santos_brasil", "ACOES", ("santos brasil",), ("STBP3",)),
+    ("azul", "ACOES", ("azul linhas aéreas", "azul s.a"), ("AZUL4",)),
+    ("gol", "ACOES", ("gol linhas aéreas",), ("GOLL4",)),
+    # Consumo, Alimentos, Varejo, Saúde & Construção
+    ("ambev", "ACOES", ("ambev",), ("ABEV3",)),
+    ("jbs", "ACOES", ("jbs",), ("JBSS3",)),
+    ("marfrig", "ACOES", ("marfrig",), ("MRFG3",)),
+    ("brf", "ACOES", ("brf",), ("BRFS3",)),
+    ("minerva", "ACOES", ("minerva foods",), ("BEEF3",)),
+    ("slc_agricola", "ACOES", ("slc agrícola", "slc agricola"), ("SLCE3",)),
+    ("magazine_luiza", "ACOES", ("magazine luiza", "magalu"), ("MGLU3",)),
+    ("lojas_renner", "ACOES", ("lojas renner",), ("LREN3",)),
+    ("assai", "ACOES", ("assaí atacadista", "assai atacadista", "assaí"), ("ASAI3",)),
+    ("carrefour_br", "ACOES", ("carrefour brasil", "atacadão"), ("CRFB3",)),
+    ("mercado_livre", "ACOES", ("mercado livre",), ("MELI34",)),
+    ("natura", "ACOES", ("natura&co", "natura &co"), ("NTCO3",)),
+    ("raia_drogasil", "ACOES", ("raia drogasil", "rd saúde", "rd saude"), ("RADL3",)),
+    ("rede_dor", "ACOES", ("rede d'or", "rede dor"), ("RDOR3",)),
+    ("hapvida", "ACOES", ("hapvida",), ("HAPV3",)),
+    ("fleury", "ACOES", ("grupo fleury", "fleury"), ("FLRY3",)),
+    ("hypera", "ACOES", ("hypera pharma", "hypera"), ("HYPE3",)),
+    ("cyrela", "ACOES", ("cyrela",), ("CYRE3",)),
+    ("mrv", "ACOES", ("mrv&co", "mrv engenharia"), ("MRVE3",)),
+    ("eztec", "ACOES", ("eztec",), ("EZTC3",)),
+    ("direcional", "ACOES", ("direcional engenharia", "direcional"), ("DIRR3",)),
+    ("cury", "ACOES", ("cury construtora",), ("CURY3",)),
+    ("multiplan", "ACOES", ("multiplan",), ("MULT3",)),
+    ("allos", "ACOES", ("allos",), ("ALOS3",)),
+    ("iguatemi", "ACOES", ("iguatemi",), ("IGTI11",)),
+    # Principais FIIs e FIAGROs (IFIX)
+    ("mxrf11", "FIIS", ("maxi renda",), ("MXRF11",)),
+    ("hglg11", "FIIS", ("pátria logística", "cshg logística"), ("HGLG11",)),
+    ("xpml11", "FIIS", ("xp malls",), ("XPML11",)),
+    ("knri11", "FIIS", ("kinea renda imobiliária",), ("KNRI11",)),
+    ("kncr11", "FIIS", ("kinea rendimentos imobiliários",), ("KNCR11",)),
+    ("knip11", "FIIS", ("kinea índices de preços",), ("KNIP11",)),
+    ("knsc11", "FIIS", ("kinea securities",), ("KNSC11",)),
+    ("visc11", "FIIS", ("vinci shopping centers",), ("VISC11",)),
+    ("btlg11", "FIIS", ("btg pactual logística",), ("BTLG11",)),
+    ("hgru11", "FIIS", ("pátria renda urbana", "cshg renda urbana"), ("HGRU11",)),
+    ("trxf11", "FIIS", ("trx real estate",), ("TRXF11",)),
+    ("cpts11", "FIIS", ("capitânia securities",), ("CPTS11",)),
+    ("irdm11", "FIIS", ("iridium recebíveis",), ("IRDM11",)),
+    ("vghf11", "FIIS", ("valora hedge fund",), ("VGHF11",)),
+    ("hgbs11", "FIIS", ("hedge brasil shopping",), ("HGBS11",)),
+    ("vilg11", "FIIS", ("vinci logística",), ("VILG11",)),
+    ("lvbi11", "FIIS", ("vbi logístico",), ("LVBI11",)),
+    ("pvbi11", "FIIS", ("vbi prime properties",), ("PVBI11",)),
+    ("hgre11", "FIIS", ("pátria escritórios", "cshg real estate"), ("HGRE11",)),
+    ("xplg11", "FIIS", ("xp log",), ("XPLG11",)),
+    ("alzr11", "FIIS", ("alianza trust renda imobiliária",), ("ALZR11",)),
+    ("brco11", "FIIS", ("bresco logística",), ("BRCO11",)),
+    ("gare11", "FIIS", ("guardian real estate",), ("GARE11",)),
+    ("rztr11", "FIIS", ("riza terrax",), ("RZTR11",)),
+    ("snag11", "FIIS", ("suno agro",), ("SNAG11",)),
+    ("knca11", "FIIS", ("kinea crédito agro",), ("KNCA11",)),
+    ("vgia11", "FIIS", ("valora cra",), ("VGIA11",)),
 )
 
 TICKER_PARA_EMPRESA: Dict[str, Tuple[str, str]] = {
-    tk: (ent_id, setor) for ent_id, setor, _, tickers in EMPRESAS_ALVO_B3 for tk in tickers
+    tk: (ent_id, pilar) for ent_id, pilar, _, tickers in EMPRESAS_B3_MAPA for tk in tickers
 }
 
+FALSOS_TICKERS: Set[str] = {
+    "HTML5", "HTTP3", "HTTP4", "WIFI6", "IPV6", "FASE3", "FASE4", "TIPO3", "TIPO4",
+    "LOTE3", "LOTE4", "AREA3", "AREA4", "ZONA3", "ZONA4", "ITEM3", "ITEM4", "PART3",
+    "CASE3", "LIVE3", "DATA4", "INFO4", "TEST3", "REAL3", "META4", "SALA4", "ETAP4",
+    "IFRS11", "NOTA11", "TOP11",
+}
+
+TERMOS_FIIS = (
+    "fundo imobiliário", "fundos imobiliários", "fundo imobiliario", "fundos imobiliarios",
+    "fii", "fiis", "ifix", "fiagro", "fiagros", "rendimento por cota", "por cota", "cotistas",
+    "galpões logísticos", "lajes corporativas", "vacância", "p/vp", "emissão de cotas",
+)
+TERMOS_RENDA_FIXA = (
+    "tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "tesouro renda+",
+    "tesouro educa+", "ntn-b", "renda fixa", "cdb", "cdbs", "lci", "lcis", "lca", "lcas",
+    "cri", "cris", "cra", "cras", "debênture", "debêntures", "debênture incentivada",
+    "debêntures incentivadas", "cdi", "di futuro", "curva de juros", "juros futuros",
+    "títulos públicos", "titulo publico", "título público", "fgc", "fundo garantidor",
+    "isenção de ir", "tributação de lci", "tributação de lca", "juro real", "taxa real",
+)
+TERMOS_MACRO_JUROS = (
+    "selic", "copom", "ata do copom", "ipca", "ipca-15", "igp-m", "inflação", "boletim focus",
+    "relatório focus", "banco central", "galípolo", "galipolo", "taxa básica de juros",
+    "taxa de juros", "arcabouço fiscal", "meta fiscal", "dívida pública", "déficit fiscal",
+    "superávit primário", "déficit primário", "pacote fiscal", "corte de gastos",
+    "ministério da fazenda", "haddad", "orçamento público", "orçamento federal",
+    "reforma tributária", "ibovespa", "federal reserve", "juros dos eua", "treasuries",
+    "treasury", "payroll", "pib do brasil", "crescimento do pib", "dólar", "câmbio",
+)
+
 REGEX_BB_BANCO = re.compile(r"\bBB\b(?!\s*(?:Seguridade|Investimentos|BI|-BI|Asset|DTVM|Consórcios|Previdência))")
+REGEX_VALE_MINERADORA = re.compile(
+    r"(?<!\bdo\s)(?<!\bno\s)(?<!\bao\s)\bVale\b(?!\s+(?:do\s+|da\s+|a\s+pena|lembrar|destacar|ressaltar|dizer|notar|alimenta|refei|transporte|presente|cultura|gás|gas|combust|reforçar|salientar))"
+)
 REGEX_PORTO_SEGURO = re.compile(r"(?<!\bcomo\s)(?<!\bum\s)(?<!\bo\s)(?<!\bde\s)(?<!\bem\s)(?<!\bComo\s)(?<!\bUm\s)\bPorto Seguro\b")
 REGEX_EQUATORIAL = re.compile(r"(?<!Guiné\s)(?<!Guinea\s)(?<!clima\s)(?<!região\s)(?<!floresta\s)(?<!zona\s)(?<!linha\s)\bEquatorial\b")
 REGEX_IRB = re.compile(r"\bIRB\b")
@@ -315,9 +425,9 @@ REGEX_TIM_OPERADORA = re.compile(r"\bTIM\b(?!\s+(?:Cook|Berners|Burton|Maia|Hort
 REGEX_LIGHT_ENERGIA = re.compile(r"\bLight\b(?=.*(?:energia|distribuidor|concess|aneel|tarifa|dívida|recuperação|ações|lucro|balanço|rio))", flags=re.IGNORECASE)
 REGEX_ALLIED_TECH = re.compile(r"\bAllied\b(?=.*(?:lucro|lucra|balanço|ebitda|receita|dividendo|jcp|proventos|ações|b3|cvm|varejo|eletrônicos|smartphones|distribuição|dívida|trimestre|1t2|2t2|3t2|4t2))", flags=re.IGNORECASE)
 
-# Evita publicar matérias de outras empresas/macro só porque um banco assinou o relatório
+# Evita rotular uma matéria de outra empresa/macro com o ticker do banco que assinou o relatório
 REGEX_RELATORIO_DE_BANCO = re.compile(
-    r"\b(?:itaú\s+bba|itau\s+bba|bradesco\s+bbi|bb\s+investimentos|bb-bi|btg\s+pactual\s+digital)\b"
+    r"\b(?:itaú\s+bba|itau\s+bba|bradesco\s+bbi|bb\s+investimentos|bb-bi|btg\s+pactual\s+digital|xp\s+investimentos|genial\s+investimentos)\b"
     r"|\b(?:btg(?:\s+pactual)?|itaú|itau|bradesco|santander|banco\s+do\s+brasil)\s+"
     r"(?:recomenda|rebaixa|eleva\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis|a\s+ação|as\s+ações)|"
     r"corta\s+(?:recomendação|preço-alvo|preço|target|nota|rating|projeção|estimativa|peso|ações|papéis)|"
@@ -332,27 +442,39 @@ REGEX_RELATORIO_DE_BANCO = re.compile(
 )
 
 PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
+    # Proventos & Ações
     "dividendos": 22, "dividendo": 22, "jcp": 24, "juros sobre capital próprio": 24,
     "juros sobre o capital próprio": 24, "proventos": 20, "data-com": 24, "data com": 22,
     "data-ex": 20, "dividend yield": 20, "payout": 18, "bonificação": 16, "balanço": 20,
     "lucro líquido": 22, "lucro": 18, "lucra": 18, "ebitda": 22, "lajida": 20, "prejuízo": 18,
-    "receita líquida": 18, "receita bruta": 14, "vendas": 12, "margem": 14, "roe": 18,
+    "receita líquida": 18, "receita bruta": 14, "margem": 14, "roe": 18,
     "inadimplência": 16, "carteira de crédito": 18, "geração de caixa": 16, "guidance": 18,
     "fato relevante": 24, "fusão": 18, "aquisição": 18, "recompra": 20, "opa": 20, "follow-on": 20,
     "privatização": 18, "concessão": 18, "leilão": 18, "aneel": 16, "tarifa": 14,
     "reajuste tarifário": 18, "revisão tarifária": 18, "anatel": 16, "susep": 16, "cvm": 16,
-    "banco central": 14, "bacen": 14, "debêntures": 18, "emissão": 14, "capex": 18,
-    "investimento": 12, "investimentos": 12, "contrato de concessão": 18, "contrato de energia": 18,
-    "contrato de transmissão": 18, "dívida": 14, "alavancagem": 16, "recuperação judicial": 18,
-    "rating": 16, "preço-alvo": 18, "prêmios emitidos": 18, "sinistralidade": 18,
-    "universalização": 16, "resíduos": 14, "gestão ambiental": 14, "fibra óptica": 14, "fibra": 12,
-    "5g": 14, "segurança eletrônica": 14, "geração de energia": 16, "transmissão de energia": 16,
-    "distribuição de energia": 16, "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16,
-    "b3": 14, "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
+    "capex": 18, "investimento": 14, "investimentos": 14, "expansão": 16,
+    "dívida": 14, "alavancagem": 16, "recuperação judicial": 18, "rating": 16,
+    "preço-alvo": 18, "ações": 14, "ação": 12, "papéis": 12, "acionistas": 16, "b3": 14,
+    "1t2": 16, "2t2": 16, "3t2": 16, "4t2": 16,
+    # FIIs & FIAGROs
+    "fundo imobiliário": 22, "fundos imobiliários": 22, "fii": 20, "fiis": 20, "ifix": 22,
+    "fiagro": 22, "rendimento por cota": 24, "por cota": 18, "cotistas": 16, "vacância": 20,
+    "emissão de cotas": 22, "p/vp": 16, "galpões logísticos": 16, "lajes corporativas": 16,
+    # Renda Fixa & Juros / Macro
+    "tesouro direto": 24, "tesouro ipca": 24, "tesouro selic": 22, "tesouro prefixado": 22,
+    "ntn-b": 22, "renda fixa": 20, "cdb": 18, "lci": 20, "lca": 20, "cri": 18, "cra": 18,
+    "debêntures": 22, "debênture": 20, "cdi": 18, "di futuro": 22, "curva de juros": 22,
+    "juros futuros": 22, "títulos públicos": 22, "fgc": 22, "isenção de ir": 22, "juro real": 20,
+    "selic": 24, "copom": 26, "ata do copom": 24, "ipca": 24, "ipca-15": 22, "igp-m": 18,
+    "inflação": 18, "boletim focus": 22, "banco central": 18, "taxa básica de juros": 22,
+    "taxa de juros": 20, "arcabouço fiscal": 20, "meta fiscal": 20, "dívida pública": 18,
+    "corte de gastos": 20, "reforma tributária": 18, "federal reserve": 20, "treasuries": 18,
+    "payroll": 18, "ibovespa": 16, "dólar": 14, "câmbio": 14,
 }
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
     "PROVENTOS": 1080, "BALANCO": 1440, "EVENTO_CORP": 1080, "GERAL_ATIVO": 480,
+    "MACRO_EVENTO": 240, "RF_EVENTO": 300, "FIIS_GERAL": 360,
 }
 
 REGEX_TICKER_B3 = re.compile(r"\b([A-Z]{4}(?:3|4|5|6|11|32|34))\b")
@@ -362,7 +484,7 @@ REGEX_METRICAS_NUMERICAS = re.compile(
 )
 REGEX_YOUTUBE_ID = re.compile(r"(?:youtube\.com/(?:watch\?v=|embed/|shorts/|live/)|youtu\.be/)([A-Za-z0-9_-]{11})", flags=re.IGNORECASE)
 REGEX_INICIO_ORFAO = re.compile(
-    r"^(?:A companhia\b|A empresa\b|O banco\b|A elétrica\b|A operadora\b|A seguradora\b|A instituição\b|"
+    r"^(?:A companhia\b|A empresa\b|O banco\b|A elétrica\b|A operadora\b|A seguradora\b|A instituição\b|O fundo\b|"
     r"Segundo ele|Segundo ela|Segundo a empresa|Segundo a companhia|Segundo o banco|Segundo o executivo|"
     r"Para ele|Para ela|De acordo com ele|De acordo com ela|De acordo com a empresa|De acordo com a companhia|"
     r"De acordo com o banco|Ainda segundo ele|Ainda segundo a empresa|Na visão dele|Na avaliação dele|"
@@ -386,7 +508,7 @@ MARCADORES_DESFECHO = (
     "por fim", "como resultado", "em reação", "após o anúncio", "para o mercado", "na avaliação",
     "a expectativa", "os papéis", "as ações", "para o investidor", "fechou em", "encerrou em",
     "operam em", "cotadas a", "impacto", "perspectiva", "próximos passos", "a decisão",
-    "no ano", "nos últimos 12 meses", "segundo analistas", "pagamento", "acionistas",
+    "no ano", "nos últimos 12 meses", "segundo analistas", "pagamento", "acionistas", "cotistas",
 )
 TERMOS_URL_IMAGEM_RUIM = (
     "/logo", "logo-", "logo_", "-logo.", "_logo.", "avatar", "gravatar", "favicon", "pixel", "spacer",
@@ -401,7 +523,7 @@ TERMOS_URL_IMAGEM_RUIM = (
 @dataclass
 class AnaliseHeuristica:
     score_total: int
-    setor_chave: str
+    pilar_chave: str
     categoria_label: str
     entidades: List[str] = field(default_factory=list)
     tickers: List[str] = field(default_factory=list)
@@ -434,95 +556,161 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
-# DETECÇÃO DAS EMPRESAS DOS 5 SETORES + TAG LIMPA POR SETOR/EVENTO
+# DETECÇÃO AMPLA (AÇÕES B3 + FIIs/IFIX + RENDA FIXA + JUROS & MACRO)
 # ==============================================================================
 def _contem_termo_exato(texto_low: str, termos: Tuple[str, ...]) -> bool:
     return any(re.search(r"(?<!\w)" + re.escape(k) + r"(?!\w)", texto_low) for k in termos)
 
 
-def extrair_tickers_alvo(texto: str) -> List[str]:
-    return [t for t in dict.fromkeys(REGEX_TICKER_B3.findall(texto)) if t in TICKER_PARA_EMPRESA]
+def extrair_tickers_validos(texto: str) -> List[str]:
+    if not texto:
+        return []
+    t_low = texto.lower()
+    tem_contexto_fin = any(
+        k in t_low for k in ("ação", "ações", "papel", "papéis", "fii", "fiagro", "cota", "dividendo", "jcp", "lucro", "balanço", "ebitda", "b3", "cvm", "provento", "emissão")
+    )
+    res: List[str] = []
+    for t in dict.fromkeys(REGEX_TICKER_B3.findall(texto)):
+        if t in FALSOS_TICKERS:
+            continue
+        if t in TICKER_PARA_EMPRESA or tem_contexto_fin or f"({t})" in texto:
+            res.append(t)
+    return res
 
 
 def formatar_tickers_no_texto(texto_html_escapado: str) -> str:
     return REGEX_TICKER_B3.sub(
-        lambda m: f"<b>#{m.group(1)}</b>" if m.group(1) in TICKER_PARA_EMPRESA else m.group(0),
+        lambda m: f"<b>#{m.group(1)}</b>" if (m.group(1) not in FALSOS_TICKERS and (m.group(1) in TICKER_PARA_EMPRESA or f"({m.group(1)})" in texto_html_escapado)) else m.group(0),
         texto_html_escapado,
     )
 
 
-def detectar_empresas_alvo_no_texto(texto_original: str) -> List[Tuple[str, str, str]]:
+def detectar_ativos_b3_no_texto(texto_original: str) -> List[Tuple[str, str, str]]:
     if not texto_original:
         return []
     t_low = texto_original.lower()
     encontradas: List[Tuple[str, str, str]] = []
     vistos: Set[str] = set()
 
-    for tk in extrair_tickers_alvo(texto_original):
-        ent_id, setor = TICKER_PARA_EMPRESA[tk]
+    for tk in extrair_tickers_validos(texto_original):
+        if tk in TICKER_PARA_EMPRESA:
+            ent_id, pilar = TICKER_PARA_EMPRESA[tk]
+        else:
+            ent_id = tk.lower()
+            pilar = "FIIS" if (tk.endswith("11") and _contem_termo_exato(t_low, TERMOS_FIIS)) else "ACOES"
         if ent_id not in vistos:
             vistos.add(ent_id)
-            encontradas.append((ent_id, setor, tk))
+            encontradas.append((ent_id, pilar, tk))
 
-    for ent_id, setor, termos, tickers in EMPRESAS_ALVO_B3:
+    for ent_id, pilar, termos, tickers in EMPRESAS_B3_MAPA:
         if ent_id == "neoenergia" and (vistos & {"coelba", "celpe", "cosern", "elektro"}):
             continue
         if ent_id not in vistos and _contem_termo_exato(t_low, termos):
             vistos.add(ent_id)
-            encontradas.append((ent_id, setor, tickers[0]))
+            encontradas.append((ent_id, pilar, tickers[0]))
 
-    for ent_id, setor, tk, rx in (
-        ("banco_do_brasil", "BANCOS", "BBAS3", REGEX_BB_BANCO),
-        ("porto_seguro", "SEGUROS", "PSSA3", REGEX_PORTO_SEGURO),
-        ("equatorial", "ENERGIA", "EQTL3", REGEX_EQUATORIAL),
-        ("irb", "SEGUROS", "IRBR3", REGEX_IRB),
-        ("vivo", "TELECOM", "VIVT3", REGEX_VIVO_OPERADORA),
-        ("tim", "TELECOM", "TIMS3", REGEX_TIM_OPERADORA),
-        ("light", "ENERGIA", "LIGT3", REGEX_LIGHT_ENERGIA),
-        ("allied", "TECNOLOGIA", "ALLD3", REGEX_ALLIED_TECH),
+    for ent_id, pilar, tk, rx in (
+        ("banco_do_brasil", "ACOES", "BBAS3", REGEX_BB_BANCO),
+        ("vale", "ACOES", "VALE3", REGEX_VALE_MINERADORA),
+        ("porto_seguro", "ACOES", "PSSA3", REGEX_PORTO_SEGURO),
+        ("equatorial", "ACOES", "EQTL3", REGEX_EQUATORIAL),
+        ("irb", "ACOES", "IRBR3", REGEX_IRB),
+        ("vivo", "ACOES", "VIVT3", REGEX_VIVO_OPERADORA),
+        ("tim", "ACOES", "TIMS3", REGEX_TIM_OPERADORA),
+        ("light", "ACOES", "LIGT3", REGEX_LIGHT_ENERGIA),
+        ("allied", "ACOES", "ALLD3", REGEX_ALLIED_TECH),
     ):
         if ent_id not in vistos and rx.search(texto_original):
             vistos.add(ent_id)
-            encontradas.append((ent_id, setor, tk))
+            encontradas.append((ent_id, pilar, tk))
 
     return encontradas
 
 
 def extrair_protagonistas_titulo(titulo: str) -> List[Tuple[str, str, str]]:
-    entidades = detectar_empresas_alvo_no_texto(titulo)
+    entidades = detectar_ativos_b3_no_texto(titulo)
     if not entidades:
         return []
     if REGEX_RELATORIO_DE_BANCO.search(titulo):
-        return detectar_empresas_alvo_no_texto(REGEX_RELATORIO_DE_BANCO.sub(" ", titulo))
+        return detectar_ativos_b3_no_texto(REGEX_RELATORIO_DE_BANCO.sub(" ", titulo))
     return entidades
 
 
-def definir_tag_curta_por_setor(titulo: str, setor_principal: str) -> str:
+def _detectar_tema_em_texto(txt_low: str) -> Tuple[Optional[str], Optional[str]]:
+    if _contem_termo_exato(txt_low, TERMOS_FIIS):
+        return "fiis_geral", "FIIS"
+    if _contem_termo_exato(txt_low, ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "ntn-b", "títulos públicos", "título público")):
+        return "rf_tesouro", "RENDA_FIXA"
+    if _contem_termo_exato(txt_low, ("cdb", "cdbs", "lci", "lcis", "lca", "lcas", "cri", "cra", "debênture", "debêntures", "fgc", "renda fixa", "cdi", "di futuro", "curva de juros", "juros futuros", "isenção de ir")):
+        return "rf_credito_juros", "RENDA_FIXA"
+    if _contem_termo_exato(txt_low, ("copom", "selic", "ata do copom", "taxa básica de juros", "taxa de juros", "galípolo", "galipolo", "banco central")):
+        return "macro_selic", "MACRO"
+    if _contem_termo_exato(txt_low, ("ipca", "ipca-15", "igp-m", "inflação", "boletim focus", "relatório focus")):
+        return "macro_inflacao", "MACRO"
+    if _contem_termo_exato(txt_low, ("arcabouço fiscal", "meta fiscal", "dívida pública", "déficit fiscal", "superávit primário", "pacote fiscal", "corte de gastos", "reforma tributária", "ministério da fazenda", "haddad")):
+        return "macro_fiscal", "MACRO"
+    if _contem_termo_exato(txt_low, ("federal reserve", "juros dos eua", "treasuries", "treasury", "payroll")):
+        return "macro_fed", "MACRO"
+    if _contem_termo_exato(txt_low, ("dólar", "câmbio", "ibovespa", "pib do brasil", "crescimento do pib")):
+        return "macro_mercado", "MACRO"
+    return None, None
+
+
+def detectar_tema_macro_ou_rf(titulo: str, trecho: str = "") -> Tuple[Optional[str], Optional[str]]:
+    tema, pilar = _detectar_tema_em_texto((titulo or "").lower())
+    if tema:
+        return tema, pilar
+    return _detectar_tema_em_texto(f"{titulo} {(trecho or '')[:260]}".lower())
+
+
+def titulo_eh_relevante_mercado(titulo: str, desc_bruta: str = "") -> bool:
+    if extrair_protagonistas_titulo(titulo):
+        return True
+    tema_id, _ = detectar_tema_macro_ou_rf(titulo, limpar_html(desc_bruta)[:260])
+    return bool(tema_id)
+
+
+def definir_tag_curta_mercado(titulo: str, pilar_principal: str) -> str:
     t_low = titulo.lower()
-    if _contem_termo_exato(t_low, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data-com", "data com", "bonificação")):
+    if pilar_principal == "RENDA_FIXA" or _contem_termo_exato(t_low, TERMOS_RENDA_FIXA):
+        return "🏛️ <b>RENDA FIXA</b>"
+    if _contem_termo_exato(t_low, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data-com", "data com", "bonificação", "rendimento por cota")):
         return "🟢 <b>DIVIDENDOS</b>"
     if _contem_termo_exato(t_low, ("balanço", "lucro", "lucra", "ebitda", "prejuízo", "receita líquida", "resultado trimestral", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26", "1t27", "2t27", "3t27", "4t27")):
         return "🔵 <b>BALANÇOS</b>"
-    return SETOR_LABELS.get(setor_principal, "📊 <b>AÇÕES B3</b>")
+    if pilar_principal == "FIIS" or _contem_termo_exato(t_low, TERMOS_FIIS):
+        return "🏢 <b>FIIs</b>"
+    return PILAR_LABELS.get(pilar_principal, "📊 <b>AÇÕES B3</b>")
 
 
 def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
     if not paragrafos:
         return AnaliseHeuristica(0, "DESCARTADA", "")
-    entidades_titulo = extrair_protagonistas_titulo(titulo)
-    if not entidades_titulo:
-        return AnaliseHeuristica(0, "DESCARTADA", "")
 
     lead = paragrafos[0]
     corpo_texto = " ".join(paragrafos)
     texto_completo = f"{titulo} {corpo_texto}"
+
+    entidades_titulo = extrair_protagonistas_titulo(titulo)
+    tema_id, pilar_tema = detectar_tema_macro_ou_rf(titulo, lead)
+
+    if not entidades_titulo and not tema_id:
+        return AnaliseHeuristica(0, "DESCARTADA", "")
+
     titulo_low = re.sub(r"\breceita federal\b", "órgão tributário", titulo.lower())
     lead_low = re.sub(r"\breceita federal\b", "órgão tributário", lead.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão tributário", corpo_texto.lower())
 
-    ids_protag = [e[0] for e in entidades_titulo]
-    tickers_exp = [tk for tk in extrair_tickers_alvo(texto_completo) if TICKER_PARA_EMPRESA[tk][0] in ids_protag]
-    tickers_finais = list(dict.fromkeys(tickers_exp + [tk for _, _, tk in entidades_titulo]))
+    if entidades_titulo:
+        ids_protag = [e[0] for e in entidades_titulo]
+        pilar_principal = entidades_titulo[0][1]
+        tickers_exp = [tk for tk in extrair_tickers_validos(texto_completo) if tk in TICKER_PARA_EMPRESA and TICKER_PARA_EMPRESA[tk][0] in ids_protag]
+        tickers_finais = list(dict.fromkeys(tickers_exp + [tk for _, _, tk in entidades_titulo]))
+    else:
+        assert tema_id is not None and pilar_tema is not None
+        ids_protag = [tema_id]
+        pilar_principal = pilar_tema
+        tickers_finais = []
 
     pontos_eventos = 0
     termos_encontrados: List[str] = []
@@ -539,16 +727,14 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
             termos_encontrados.append(termo)
 
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
-    # Exige ao menos 1 evento financeiro/corporativo real (evita marketing/boatos só com R$)
     if pontos_eventos == 0:
         return AnaliseHeuristica(0, "DESCARTADA", "")
 
-    setor_principal = entidades_titulo[0][1]
     score_final = 12 + pontos_eventos + min(len(metricas) * 3, 18)
     return AnaliseHeuristica(
         score_total=score_final,
-        setor_chave=setor_principal,
-        categoria_label=definir_tag_curta_por_setor(titulo, setor_principal),
+        pilar_chave=pilar_principal,
+        categoria_label=definir_tag_curta_mercado(titulo, pilar_principal),
         entidades=ids_protag[:3],
         tickers=tickers_finais[:3],
         termos_detectados=list(dict.fromkeys(termos_encontrados)),
@@ -636,15 +822,23 @@ def extrair_numeros_relevantes(texto: str) -> Set[str]:
 
 def extrair_chaves_evento_ativo(titulo: str, lead: str, entidades: List[str]) -> List[str]:
     foco = normalizar_texto_dedup(f"{titulo} {lead[:220]}")
-    if _contem_termo_exato(foco, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data com", "data-com", "data ex", "data-ex", "bonificacao")):
-        ev = "PROVENTOS"
-    elif _contem_termo_exato(foco, ("balanco", "lucro liquido", "lucra", "lucro", "ebitda", "lajida", "prejuizo", "receita liquida", "resultado trimestral", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26")):
-        ev = "BALANCO"
-    elif _contem_termo_exato(foco, ("fato relevante", "fusao", "aquisicao", "recompra", "opa", "follow-on", "privatizacao", "leilao", "concessao", "recuperacao judicial", "debenture", "debentures")):
-        ev = "EVENTO_CORP"
-    else:
-        ev = "GERAL_ATIVO"
-    return [f"{ent}::{ev}" for ent in dict.fromkeys(entidades[:3])]
+    chaves: List[str] = []
+    for ent in dict.fromkeys(entidades[:3]):
+        if ent.startswith("macro_"):
+            chaves.append(f"{ent}::MACRO_EVENTO")
+        elif ent.startswith("rf_"):
+            chaves.append(f"{ent}::RF_EVENTO")
+        elif ent == "fiis_geral":
+            chaves.append("fiis_geral::FIIS_GERAL")
+        elif _contem_termo_exato(foco, ("dividendo", "dividendos", "jcp", "juros sobre capital", "proventos", "data com", "data-com", "data ex", "data-ex", "bonificacao", "rendimento por cota")):
+            chaves.append(f"{ent}::PROVENTOS")
+        elif _contem_termo_exato(foco, ("balanco", "lucro liquido", "lucra", "lucro", "ebitda", "lajida", "prejuizo", "receita liquida", "resultado trimestral", "1t25", "2t25", "3t25", "4t25", "1t26", "2t26", "3t26", "4t26")):
+            chaves.append(f"{ent}::BALANCO")
+        elif _contem_termo_exato(foco, ("fato relevante", "fusao", "aquisicao", "recompra", "opa", "follow-on", "privatizacao", "leilao", "concessao", "recuperacao judicial", "debenture", "debentures", "emissao de cotas")):
+            chaves.append(f"{ent}::EVENTO_CORP")
+        else:
+            chaves.append(f"{ent}::GERAL_ATIVO")
+    return chaves
 
 
 def evento_ja_publicado_recentemente(chaves_novas: List[str], eventos_recentes: List[Dict[str, Any]], agora_ts: float) -> Optional[str]:
@@ -747,7 +941,7 @@ def eh_mesmo_conteudo_lead(novo_lead: str, leads_anteriores: List[str]) -> bool:
 
 
 # ==============================================================================
-# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA ENXUTA (<= 1.000 CARACTERES)
+# LIMPEZA EDITORIAL, TRAFILATURA E NARRATIVA ENXUTA
 # ==============================================================================
 def gerar_botao_chat() -> Dict[str, Any]:
     return {"inline_keyboard": [[{"text": TEXTO_BOTAO_CHAT, "url": GRUPO_URL}]]}
@@ -794,7 +988,7 @@ def eh_propaganda_ou_lixo(titulo: str, inicio_texto: str, url: str = "") -> bool
         return True
     t_low = titulo.lower()
     amostra = f"{t_low} {(inicio_texto or '')[:450].lower()}"
-    if re.search(r"\bfii\b", amostra) or any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
+    if any(b in t_low for b in BLOQUEADOS_APENAS_NO_TITULO):
         return True
     return any(b in amostra for b in BLOQUEADOS_PROPAGANDA_CORRETORA)
 
@@ -930,7 +1124,7 @@ def truncar_frase_limpa(texto: str, max_chars: int) -> str:
 
 
 def pontuar_paragrafo_meio(p: str) -> int:
-    return len(REGEX_METRICAS_NUMERICAS.findall(p)) * 12 + len(extrair_tickers_alvo(p)) * 18 + sum(w for t, w in PESOS_EVENTOS_FINANCEIROS.items() if t in p.lower())
+    return len(REGEX_METRICAS_NUMERICAS.findall(p)) * 12 + len(extrair_tickers_validos(p)) * 18 + sum(w for t, w in PESOS_EVENTOS_FINANCEIROS.items() if t in p.lower())
 
 
 def extrair_narrativa_enxuta(paragrafos: List[str], max_blocos: int = 3, max_por_bloco: int = 245, titulo: str = "") -> Optional[List[str]]:
@@ -1002,7 +1196,6 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     else:
         cabecalho = f"<blockquote>{analise.categoria_label}</blockquote>"
 
-    # Ponto ideal de leitura no celular: 3 parágrafos completos entre 450 e 1.280 caracteres visíveis
     post_principal: Optional[str] = None
     blocos_escolhidos: Optional[List[str]] = None
     for max_blocos, max_bloco in ((3, 340), (3, 300), (3, 260), (2, 360), (2, 290)):
@@ -1020,7 +1213,6 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
     if not post_principal or not blocos_escolhidos:
         return None
 
-    # Versão <= 995 chars (para fallback sendPhoto / sendVideo quando preview longo não for suportado)
     if tamanho_texto_visivel(post_principal) <= TELEGRAM_CAPTION_LIMIT - 20:
         caption_curta = post_principal
     else:
@@ -1038,7 +1230,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
 
 
 # ==============================================================================
-# CURADORIA EDITORIAL COM GEMINI (DECIFRA A MATÉRIA COM COMEÇO, MEIO E FIM)
+# CURADORIA EDITORIAL COM GEMINI (RENDA VARIÁVEL + RENDA FIXA + COMEÇO/MEIO/FIM)
 # ==============================================================================
 def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
     if not texto_bruto:
@@ -1156,7 +1348,7 @@ def _extrair_erro_curto_gemini(texto: str) -> str:
 
 async def obter_modelos_gemini_ativos(client: httpx.AsyncClient, api_key: str) -> Tuple[str, ...]:
     """Consulta GET /v1beta/models para descobrir automaticamente os modelos ativos na conta,
-    evitando HTTP 404 quando o Google aposenta gerações antigas (2.0 / 2.5).
+    evitando HTTP 404 quando o Google aposenta gerações antigas.
     """
     if not api_key:
         return GEMINI_MODELS
@@ -1210,11 +1402,11 @@ async def refinar_materia_com_gemini(
     paragrafos: List[str],
     analise: AnaliseHeuristica,
 ) -> Tuple[str, Optional[Tuple[str, str]]]:
-    """Usa o Gemini para validar se a matéria é realmente relevante para a empresa
-    e reescrevê-la em português claro com Começo, Meio e Fim (3 parágrafos).
+    """Usa o Gemini para validar se a matéria é relevante para investidores de Renda Variável
+    (Ações B3 / FIIs) ou Renda Fixa / Macro, e reescrevê-la com Começo, Meio e Fim (3 parágrafos).
     Retorna:
       - ("APROVADA", (post_html, caption_curta_html))
-      - ("REJEITADA", None) -> IA confirmou que é irrelevante/falso positivo/paywall raso
+      - ("REJEITADA", None) -> IA confirmou que é irrelevante/ruído/paywall raso
       - ("FALLBACK", None)  -> Sem chave, erro de rede ou cota esgotada (usa redator local)
     """
     api_key = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip().strip('"').strip("'")
@@ -1229,31 +1421,38 @@ async def refinar_materia_com_gemini(
     if not modelos_ativos:
         return "FALLBACK", None
 
-    tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "N/A"
+    tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "Nenhum (Renda Fixa / Macro / Setorial)"
     prompt = (
-        "Você é um editor financeiro sênior escrevendo posts curtos e didáticos para um canal de investidores de ações da B3 no Telegram.\n\n"
-        f"EMPRESA/TICKER DETECTADO: {tickers_str} (Setor: {analise.setor_chave})\n"
+        "Você é um editor financeiro sênior escrevendo posts curtos, claros e didáticos para um canal de "
+        "investidores brasileiros no Telegram focado em Renda Variável (Ações da B3 e FIIs/FIAGRO) e "
+        "Renda Fixa (Tesouro Direto, CDB, LCI/LCA, Debêntures, Selic/Copom, IPCA, Curva de Juros e Fiscal).\n\n"
+        f"PILAR DETECTADO: {analise.pilar_chave}\n"
+        f"TICKER(S) DETECTADO(S): {tickers_str}\n"
         f"TÍTULO ORIGINAL: {titulo}\n"
         f"TEXTO DA MATÉRIA:\n{texto_base}\n\n"
         "TAREFA 1 — VALIDAÇÃO RIGOROSA:\n"
-        "Rejeite (aprovada=false) se:\n"
-        "- A empresa/ticker detectado NÃO for a protagonista real da matéria (ex.: apenas citada de passagem, relatório de banco falando sobre outra empresa fora da lista, trocadilho como 'porto seguro' falando de ouro/dólar, ou notícia macro genérica).\n"
-        "- For sobre FII/FIAGRO, patrocínio esportivo, futebol, estádio, propaganda ou campanha de marketing sem impacto financeiro relevante para o acionista.\n"
+        "APROVE (aprovada=true) somente matérias de real relevância para quem investe em Ações B3, FIIs ou Renda Fixa:\n"
+        "- Ações B3: dividendos, JCP, data-com, recompra, balanços/resultados, fusões/aquisições, fatos relevantes, leilões, dívida, guidance ou explicação real de forte alta/queda.\n"
+        "- FIIs/FIAGRO: dividendos por cota, emissões, vacância, compra/venda de imóveis, IFIX, inadimplência de CRIs/CRAs.\n"
+        "- Renda Fixa & Macro: Selic/Copom, IPCA/inflação, Focus, taxas do Tesouro Direto e DI futuro, CDB/LCI/LCA/debêntures, FGC, tributação de investimentos, fiscal, juros nos EUA (Fed/Treasuries) ou câmbio com impacto prático no mercado.\n"
+        "REJEITE (aprovada=false) se:\n"
+        "- For criptomoeda, esportes/futebol/patrocínio, política partidária sem efeito econômico concreto, polícia/crime, fofoca/entretenimento, benefícios sociais (INSS/Bolsa Família), clickbait sem dado concreto ou propaganda de corretora/curso.\n"
         "- O texto estiver raso/cortado por paywall sem informações concretas suficientes para montar começo, meio e fim.\n\n"
         "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO E FIM (se aprovada=true):\n"
-        "Reescreva em português claro, objetivo e jornalístico, decifrando termos técnicos sem perder precisão:\n"
+        "Reescreva em português claro, objetivo e jornalístico, decifrando termos técnicos (JCP, data-com, NTN-B, IPCA+, P/VP, curva DI, Selic) sem perder precisão:\n"
         "- titulo: manchete direta e clara (1 frase, sem clickbait, sem nome de portal).\n"
         "- paragrafos: EXATAMENTE 3 parágrafos curtos e completos, somando entre 650 e 1050 caracteres no total:\n"
-        "  1) COMEÇO (O Fato): o que aconteceu de concreto com a empresa, citando o nome dela e os principais números/valores.\n"
-        "  2) MEIO (Contexto e Decifração): por que isso aconteceu, comparação com períodos anteriores, datas-chave (data-com, pagamento) ou explicação simples do impacto operacional/financeiro.\n"
-        "  3) FIM (Desfecho para o Acionista): reação das ações, próximos passos ou efeito prático para quem investe no papel.\n"
-        "- tag_evento: escolha exatamente uma opção entre 'DIVIDENDOS' (proventos/JCP/data-com/recompra), 'BALANCOS' (lucro/EBITDA/resultado trimestral) ou 'SETOR' (demais fatos corporativos).\n\n"
+        "  1) COMEÇO (O Fato): o que aconteceu de concreto, citando o ativo/tema e os principais números, taxas ou valores.\n"
+        "  2) MEIO (Contexto e Decifração): por que isso aconteceu, comparação com períodos anteriores, datas-chave ou tradução clara do termo técnico.\n"
+        "  3) FIM (Desfecho para o Investidor): impacto prático ou próximos passos para quem investe em ações, FIIs ou renda fixa.\n"
+        "- tag_evento: escolha EXATAMENTE uma opção entre: 'DIVIDENDOS', 'BALANCOS', 'FIIS', 'RENDA_FIXA', 'MACRO', 'ACOES'.\n"
+        "- tickers: array com até 3 tickers oficiais da B3/FIIs que sejam realmente protagonistas da matéria (ex.: ['PETR4'], ['MXRF11']); retorne [] se for matéria de Renda Fixa, juros, macro ou setorial sem empresa específica.\n\n"
         "REGRAS INVIOLÁVEIS:\n"
-        "- NUNCA invente números, datas ou fatos que não estejam no texto original.\n"
+        "- NUNCA invente números, taxas, datas ou fatos que não estejam no texto original.\n"
         "- NUNCA faça recomendação de compra ou venda.\n"
         "- NUNCA use markdown (*, **, #), emojis no texto dos parágrafos ou siglas de carteiras/estratégias.\n"
         "- NUNCA repita o título dentro do 1º parágrafo.\n"
-        "- Responda APENAS com um objeto JSON válido com as chaves: aprovada (boolean), motivo_rejeicao (string), titulo (string), paragrafos (array de 3 strings), tag_evento (string)."
+        "- Responda APENAS com um objeto JSON válido com as chaves: aprovada (boolean), motivo_rejeicao (string), titulo (string), paragrafos (array de 3 strings), tag_evento (string), tickers (array de strings)."
     )
 
     payload_base: Dict[str, Any] = {
@@ -1316,23 +1515,42 @@ async def refinar_materia_com_gemini(
         return "FALLBACK", None
 
     texto_verif = f"{titulo_ia} {' '.join(str(p) for p in parags_ia)}".lower()
-    if re.search(r"\b" + "".join(("b", "e", "s", "s", "t")) + r"\b", texto_verif):
+    if REGEX_SIGLA_BLOQUEADA.search(texto_verif):
         return "FALLBACK", None
 
-    # Remove eventual markdown residual (* ou **) que a IA possa emitir
     titulo_ia = re.sub(r"[*_`]+", "", titulo_ia).strip()
     parags_limpos = [re.sub(r"[*_`]+", "", str(p)).strip() for p in parags_ia]
 
     tag_ia = str(dados_ia.get("tag_evento") or "").strip().upper()
-    if tag_ia == "DIVIDENDOS":
-        cat_label = "🟢 <b>DIVIDENDOS</b>"
-    elif tag_ia == "BALANCOS":
-        cat_label = "🔵 <b>BALANÇOS</b>"
-    else:
-        cat_label = analise.categoria_label
+    mapa_tags = {
+        "DIVIDENDOS": "🟢 <b>DIVIDENDOS</b>",
+        "BALANCOS": "🔵 <b>BALANÇOS</b>",
+        "FIIS": "🏢 <b>FIIs</b>",
+        "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
+        "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
+        "ACOES": "📊 <b>AÇÕES B3</b>",
+    }
+    cat_label = mapa_tags.get(tag_ia, analise.categoria_label)
 
-    if analise.tickers:
-        pills = " ".join(f"<code>#{t}</code>" for t in analise.tickers[:3])
+    if tag_ia in ("RENDA_FIXA", "MACRO"):
+        tickers_finais: List[str] = []
+    elif isinstance(dados_ia.get("tickers"), list):
+        tks_ia = [
+            str(t).strip().upper().lstrip("#")
+            for t in dados_ia["tickers"]
+            if isinstance(t, str)
+        ]
+        tickers_finais = [
+            t for t in dict.fromkeys(tks_ia)
+            if REGEX_TICKER_B3.fullmatch(t) and t not in FALSOS_TICKERS
+        ][:3]
+        if not tickers_finais and tag_ia in ("DIVIDENDOS", "BALANCOS", "FIIS", "ACOES"):
+            tickers_finais = analise.tickers[:3]
+    else:
+        tickers_finais = analise.tickers[:3]
+
+    if tickers_finais:
+        pills = " ".join(f"<code>#{t}</code>" for t in tickers_finais)
         cabecalho = f"<blockquote>{cat_label}  ·  {pills}</blockquote>"
     else:
         cabecalho = f"<blockquote>{cat_label}</blockquote>"
@@ -1533,7 +1751,7 @@ async def buscar_feed_rss(client: httpx.AsyncClient, sem: asyncio.Semaphore, url
         idade_min = (agora_utc - dt_pub).total_seconds() / 60.0
         if idade_min > MAX_IDADE_MINUTOS or idade_min < -15.0 or eh_propaganda_ou_lixo(title, desc_bruta, link):
             continue
-        if not extrair_protagonistas_titulo(title):
+        if not titulo_eh_relevante_mercado(title, desc_bruta):
             continue
 
         itens_validos.append({"dt_pub": dt_pub, "item": item, "link": link, "title": title, "desc_bruta": desc_bruta})
@@ -1581,7 +1799,7 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
     aprovadas: List[NoticiaPreparada] = []
     stats = {"antiga": 0, "dup_t": 0, "dup_c": 0, "sem_img": 0, "desc": 0}
 
-    for cand in candidatos[:75]:
+    for cand in candidatos[:80]:
         if len(aprovadas) >= limite * 2:
             break
         title, link, desc_bruta, item, dt_rss = cand["title"], cand["link"], cand["desc_bruta"], cand["item"], cand["dt_pub"]
@@ -1646,7 +1864,7 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             continue
         post_html, caption_curta_html = montagem
 
-        logger.info("Aprovada [Score %d | %s | %s | %.0f min | %d chars]: %s", analise.score_total, analise.setor_chave, "Gemini" if status_ia == "APROVADA" else "Local", idade_min, tamanho_texto_visivel(post_html), title)
+        logger.info("Aprovada [Score %d | %s | %s | %.0f min | %d chars]: %s", analise.score_total, analise.pilar_chave, "Gemini" if status_ia == "APROVADA" else "Local", idade_min, tamanho_texto_visivel(post_html), title)
         aprovadas.append(NoticiaPreparada(link, title, lead[:350], chaves_ev, post_html, caption_curta_html, analise.score_total, dt_real, img_ver.url if img_ver else None, img_ver, video_cand, audio_rss))
         titulos_rodada.append(title)
         leads_rodada.append(lead[:350])
@@ -1714,7 +1932,6 @@ async def tentar_enviar_foto_garantida(client: httpx.AsyncClient, base_url: str,
 
     texto_eh_longo = tamanho_texto_visivel(item.texto_html) > TELEGRAM_CAPTION_LIMIT - 10
 
-    # Para textos entre ~1.000 e 1.280 chars com imagem aceita pelo TelegramBot: foto grande em cima + texto completo
     if texto_eh_longo and img.pode_usar_preview_longo:
         img_esc = html.escape(img.url, quote=True)
         payload_longo = {
