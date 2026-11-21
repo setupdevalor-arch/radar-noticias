@@ -552,7 +552,9 @@
     "https://www.poder360.com.br/poder-infra/telebras-estima-iniciar-operacao-de-data-center-de-ia-em-1-ano/",
     "7fb3863d66729cb5",
     "https://www.poder360.com.br/poder-energia/copel-nao-ampliara-parque-eolico-ate-resolucao-do-curtailment-diz-ceo/",
-    "412d8c8e30572771"
+    "412d8c8e30572771",
+    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-equipe-economica-discute-com-lula-nomes-para-substituir-tarciana-diz-jornal/",
+    "4875e647638c5fad"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -883,7 +885,8 @@
     "Vivo comercializa 5G+ com picos de até 2 Gbps",
     "Telebras mira autonomia financeira e projeta fim de aportes do governo",
     "Telebras estima iniciar operação de data center de IA em 1 ano",
-    "Copel não ampliará parque eólico até resolução do curtailment, diz CEO"
+    "Copel não ampliará parque eólico até resolução do curtailment, diz CEO",
+    "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -922,41 +925,10 @@
     "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa",
     "Estatal de telecomunicações acumula prejuízo de R$ 90,7 milhões em 2026, apesar de ter recebido R$ 169,9 milhões em subvenções orçamentárias",
     "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
-    "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte"
+    "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
+    "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi"
   ],
   "eventos_recentes": [
-    {
-      "chave": "prnr3::GERAL_ATIVO",
-      "ts": 1795087990.863689
-    },
-    {
-      "chave": "copel::GERAL_ATIVO",
-      "ts": 1795087990.863689
-    },
-    {
-      "chave": "ibovespa::GERAL_ATIVO",
-      "ts": 1795088328.372677
-    },
-    {
-      "chave": "bbas3::GERAL_ATIVO",
-      "ts": 1795088328.372677
-    },
-    {
-      "chave": "copel::EVENTO_CORP",
-      "ts": 1795090016.724596
-    },
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795090628.101129
-    },
-    {
-      "chave": "bradesco::GERAL_ATIVO",
-      "ts": 1795092709.264999
-    },
-    {
-      "chave": "bb_seguridade::BALANCO",
-      "ts": 1795092709.264999
-    },
     {
       "chave": "btg_pactual::GERAL_ATIVO",
       "ts": 1795097354.981352
@@ -1032,6 +1004,10 @@
     {
       "chave": "copel::GERAL_ATIVO",
       "ts": 1795258978.870899
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795267014.016658
     }
   ],
   "hashes_imagens": [
@@ -1055,6 +1031,7 @@
     "5b953562eee71037",
     "d8c9a8fd058bd61c",
     "3c87f22032701c73",
-    "55eab09340469fc7"
+    "55eab09340469fc7",
+    "958b6ba8d05214b3"
   ]
 }
