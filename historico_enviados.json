@@ -550,7 +550,9 @@
     "https://www.poder360.com.br/poder-economia/telebras-mira-autonomia-financeira-e-projeta-fim-de-aportes-do-governo/",
     "c06cc3c7d2cefed0",
     "https://www.poder360.com.br/poder-infra/telebras-estima-iniciar-operacao-de-data-center-de-ia-em-1-ano/",
-    "7fb3863d66729cb5"
+    "7fb3863d66729cb5",
+    "https://www.poder360.com.br/poder-energia/copel-nao-ampliara-parque-eolico-ate-resolucao-do-curtailment-diz-ceo/",
+    "412d8c8e30572771"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -880,7 +882,8 @@
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "Vivo comercializa 5G+ com picos de até 2 Gbps",
     "Telebras mira autonomia financeira e projeta fim de aportes do governo",
-    "Telebras estima iniciar operação de data center de IA em 1 ano"
+    "Telebras estima iniciar operação de data center de IA em 1 ano",
+    "Copel não ampliará parque eólico até resolução do curtailment, diz CEO"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -918,25 +921,10 @@
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa",
     "Estatal de telecomunicações acumula prejuízo de R$ 90,7 milhões em 2026, apesar de ter recebido R$ 169,9 milhões em subvenções orçamentárias",
-    "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento"
+    "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
+    "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte"
   ],
   "eventos_recentes": [
-    {
-      "chave": "vale::GERAL_ATIVO",
-      "ts": 1795085314.498808
-    },
-    {
-      "chave": "rngo11::PROVENTOS",
-      "ts": 1795085658.443099
-    },
-    {
-      "chave": "pvbi11::PROVENTOS",
-      "ts": 1795085658.443099
-    },
-    {
-      "chave": "btci11::PROVENTOS",
-      "ts": 1795085658.443099
-    },
     {
       "chave": "prnr3::GERAL_ATIVO",
       "ts": 1795087990.863689
@@ -1040,6 +1028,10 @@
     {
       "chave": "telebras::EVENTO_CORP",
       "ts": 1795251907.310128
+    },
+    {
+      "chave": "copel::GERAL_ATIVO",
+      "ts": 1795258978.870899
     }
   ],
   "hashes_imagens": [
@@ -1062,6 +1054,7 @@
     "ccddaaa4f7ccc4cf",
     "5b953562eee71037",
     "d8c9a8fd058bd61c",
-    "3c87f22032701c73"
+    "3c87f22032701c73",
+    "55eab09340469fc7"
   ]
 }
