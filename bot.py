@@ -59,21 +59,25 @@ GEMINI_MODELS: Tuple[str, ...] = tuple(
         m.strip()
         for m in (
             os.environ.get("GEMINI_MODEL", ""),
-            "gemini-3.8-flash",
-            "gemini-3.7-flash",
-            "gemini-3.6-flash",
             "gemini-3.5-flash-lite",
             "gemini-3.1-flash-lite",
+            "gemini-flash-lite-latest",
+            "gemini-3.6-flash",
             "gemini-flash-latest",
-            "gemini-2.5-flash",
+            "gemini-3.7-flash",
+            "gemini-3.8-flash",
         )
         if m and m.strip()
     )
 )
 _CACHE_MODELOS_GEMINI: Dict[str, Tuple[str, ...]] = {}
+_MODELO_VENCEDOR_GEMINI: Dict[str, str] = {}
+_MODELOS_BLOQUEADOS_SESSAO: Dict[str, Set[str]] = {}
+_MODELOS_DEGRADADOS_SESSAO: Dict[str, Set[str]] = {}
 _MODELOS_GEMINI_EXCLUSAO = (
     "embedding", "imagen", "veo", "tts", "audio", "live", "robotics",
     "computer-use", "deep-research", "aqa", "gemma", "learnlm", "vision",
+    "image", "customtools", "thinking-exp",
 )
 REGEX_SIGLA_BLOQUEADA = re.compile(r"\b" + "".join(("b", "e", "s", "s", "t")) + r"\b", flags=re.IGNORECASE)
 
@@ -1315,25 +1319,63 @@ def _montar_html_de_blocos(cabecalho: str, titulo_final: str, blocos: List[str])
     return post_principal, caption_curta
 
 
+def resetar_estado_sessao_gemini() -> None:
+    _CACHE_MODELOS_GEMINI.clear()
+    _MODELO_VENCEDOR_GEMINI.clear()
+    _MODELOS_BLOQUEADOS_SESSAO.clear()
+    _MODELOS_DEGRADADOS_SESSAO.clear()
+
+
 def _pontuar_modelo_gemini(nome: str) -> int:
+    """Prioriza exclusivamente modelos gratuitos da família Flash-Lite e Flash,
+    ignorando modelos pagos/pesados (Pro, Ultra, Argon, Carbon, Hydrogen, Image, TTS).
+    """
     n = (nome or "").lower().strip()
-    if not n.startswith("gemini-") or any(x in n for x in _MODELOS_GEMINI_EXCLUSAO):
+    if not n.startswith("gemini-") or "flash" not in n or any(x in n for x in _MODELOS_GEMINI_EXCLUSAO):
         return -1
     m_ver = re.search(r"gemini-(\d+)(?:\.(\d+))?", n)
     major = int(m_ver.group(1)) if m_ver else 0
     minor = int(m_ver.group(2) or 0) if m_ver else 0
     ver_score = major * 100 + minor * 10
-    if "flash-lite" in n:
-        tipo_score = 45
-    elif "flash" in n:
-        tipo_score = 55
-    elif "pro" in n:
-        tipo_score = 20
-    else:
-        tipo_score = 10
-    penalidade_preview = -8 if ("preview" in n or "exp" in n) else 0
-    penalidade_latest = -4 if "latest" in n else 0
-    return ver_score + tipo_score + penalidade_preview + penalidade_latest
+    base_familia = 2000 if "flash-lite" in n else 1000
+    penalidade_preview = -150 if ("preview" in n or "exp" in n) else 0
+    penalidade_latest = -20 if "latest" in n else 0
+    return base_familia + ver_score + penalidade_preview + penalidade_latest
+
+
+def _ordenar_modelos_sessao(api_key: str, modelos_ativos: Tuple[str, ...]) -> Tuple[str, ...]:
+    bloqueados = _MODELOS_BLOQUEADOS_SESSAO.get(api_key, set())
+    degradados = _MODELOS_DEGRADADOS_SESSAO.get(api_key, set())
+    vencedor = _MODELO_VENCEDOR_GEMINI.get(api_key)
+
+    ordenados: List[str] = []
+    if vencedor and vencedor in modelos_ativos and vencedor not in bloqueados and vencedor not in degradados:
+        ordenados.append(vencedor)
+    for m in modelos_ativos:
+        if m not in bloqueados and m not in degradados and m not in ordenados:
+            ordenados.append(m)
+    for m in modelos_ativos:
+        if m not in bloqueados and m in degradados and m not in ordenados:
+            ordenados.append(m)
+    return tuple(ordenados)
+
+
+def _registrar_sucesso_modelo_gemini(api_key: str, modelo: str) -> None:
+    _MODELO_VENCEDOR_GEMINI[api_key] = modelo
+    if api_key in _MODELOS_DEGRADADOS_SESSAO:
+        _MODELOS_DEGRADADOS_SESSAO[api_key].discard(modelo)
+
+
+def _registrar_bloqueio_modelo_gemini(api_key: str, modelo: str) -> None:
+    _MODELOS_BLOQUEADOS_SESSAO.setdefault(api_key, set()).add(modelo)
+    if _MODELO_VENCEDOR_GEMINI.get(api_key) == modelo:
+        _MODELO_VENCEDOR_GEMINI.pop(api_key, None)
+
+
+def _registrar_degradacao_modelo_gemini(api_key: str, modelo: str) -> None:
+    _MODELOS_DEGRADADOS_SESSAO.setdefault(api_key, set()).add(modelo)
+    if _MODELO_VENCEDOR_GEMINI.get(api_key) == modelo:
+        _MODELO_VENCEDOR_GEMINI.pop(api_key, None)
 
 
 def _extrair_erro_curto_gemini(texto: str) -> str:
@@ -1347,8 +1389,8 @@ def _extrair_erro_curto_gemini(texto: str) -> str:
 
 
 async def obter_modelos_gemini_ativos(client: httpx.AsyncClient, api_key: str) -> Tuple[str, ...]:
-    """Consulta GET /v1beta/models para descobrir automaticamente os modelos ativos na conta,
-    evitando HTTP 404 quando o Google aposenta gerações antigas.
+    """Consulta GET /v1beta/models para descobrir automaticamente os modelos gratuitos
+    Flash-Lite e Flash ativos na conta, evitando modelos pagos (HTTP 429) e aposentados (HTTP 404).
     """
     if not api_key:
         return GEMINI_MODELS
@@ -1376,9 +1418,9 @@ async def obter_modelos_gemini_ativos(client: httpx.AsyncClient, api_key: str) -
                 if sc > 0:
                     ranqueados.append((sc, nome))
             ranqueados.sort(key=lambda x: x[0], reverse=True)
-            descobertos = [nome for _, nome in ranqueados[:6]]
+            descobertos = [nome for _, nome in ranqueados[:10]]
             if descobertos:
-                logger.info("Modelos Gemini ativos descobertos na API: %s", ", ".join(descobertos))
+                logger.info("Modelos Gemini gratuitos (Flash/Lite) descobertos na API: %s", ", ".join(descobertos))
         elif resp.status_code in (401, 403):
             logger.error("Chave GEMINI_API_KEY rejeitada ao listar modelos (HTTP %s).", resp.status_code)
             _CACHE_MODELOS_GEMINI[api_key] = ()
@@ -1402,8 +1444,9 @@ async def refinar_materia_com_gemini(
     paragrafos: List[str],
     analise: AnaliseHeuristica,
 ) -> Tuple[str, Optional[Tuple[str, str]]]:
-    """Usa o Gemini para validar se a matéria é relevante para investidores de Renda Variável
-    (Ações B3 / FIIs) ou Renda Fixa / Macro, e reescrevê-la com Começo, Meio e Fim (3 parágrafos).
+    """Usa o Gemini (somente família Flash-Lite/Flash gratuita) para validar se a matéria é relevante
+    para investidores de Renda Variável (Ações B3 / FIIs) ou Renda Fixa / Macro, e reescrevê-la com
+    Começo, Meio e Fim (3 parágrafos).
     Retorna:
       - ("APROVADA", (post_html, caption_curta_html))
       - ("REJEITADA", None) -> IA confirmou que é irrelevante/ruído/paywall raso
@@ -1418,7 +1461,8 @@ async def refinar_materia_com_gemini(
         return "REJEITADA", None
 
     modelos_ativos = await obter_modelos_gemini_ativos(client, api_key)
-    if not modelos_ativos:
+    modelos_sessao = _ordenar_modelos_sessao(api_key, modelos_ativos) if modelos_ativos else ()
+    if not modelos_sessao:
         return "FALLBACK", None
 
     tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "Nenhum (Renda Fixa / Macro / Setorial)"
@@ -1459,7 +1503,7 @@ async def refinar_materia_com_gemini(
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 1800,
+            "maxOutputTokens": 3000,
             "responseMimeType": "application/json",
         },
     }
@@ -1467,39 +1511,48 @@ async def refinar_materia_com_gemini(
     dados_ia: Optional[Dict[str, Any]] = None
     modelo_usado = ""
     async with sem:
-        for modelo in modelos_ativos:
+        for modelo in modelos_sessao:
             url = f"{GEMINI_API_BASE}/{modelo}:generateContent"
             try:
                 resp = await client.post(
                     url,
                     headers={**HEADERS_API_JSON, "Content-Type": "application/json", "x-goog-api-key": api_key},
                     json=payload_base,
-                    timeout=25.0,
+                    timeout=20.0,
                 )
                 if resp.status_code == 200:
                     body = resp.json()
-                    partes = body.get("candidates", [{}])[0].get("content", {}).get("parts", [])
+                    cand0 = (body.get("candidates") or [{}])[0]
+                    finish_reason = cand0.get("finishReason", "UNKNOWN")
+                    partes = cand0.get("content", {}).get("parts", [])
                     texto_resp = "".join(
                         p.get("text", "") for p in partes if isinstance(p, dict) and not p.get("thought")
                     )
                     if not texto_resp:
                         texto_resp = "".join(p.get("text", "") for p in partes if isinstance(p, dict))
                     dados_ia = _extrair_json_gemini(texto_resp)
-                    if dados_ia is not None:
+                    if dados_ia is not None and "aprovada" in dados_ia:
+                        _registrar_sucesso_modelo_gemini(api_key, modelo)
                         modelo_usado = modelo
                         break
-                    logger.warning("Gemini (%s) retornou resposta não-JSON; tentando próximo modelo.", modelo)
+                    logger.warning("Gemini (%s | finishReason=%s) retornou JSON incompleto; tentando próximo modelo.", modelo, finish_reason)
                 elif resp.status_code in (401, 403):
                     logger.error("Chave GEMINI_API_KEY rejeitada (HTTP %s): %s", resp.status_code, _extrair_erro_curto_gemini(resp.text))
                     break
-                elif resp.status_code in (400, 404, 429, 500, 503):
-                    logger.warning("Gemini (%s) indisponível (HTTP %s: %s); tentando próximo modelo.", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
+                elif resp.status_code in (404, 429):
+                    _registrar_bloqueio_modelo_gemini(api_key, modelo)
+                    logger.warning("Gemini (%s) bloqueado nesta execução (HTTP %s: %s); pulando modelo.", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
+                    continue
+                elif resp.status_code in (400, 500, 503):
+                    _registrar_degradacao_modelo_gemini(api_key, modelo)
+                    logger.warning("Gemini (%s) instável/sobrecarregado (HTTP %s: %s); tentando próximo modelo.", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
                     continue
                 else:
                     logger.warning("Gemini (%s) HTTP %s: %s", modelo, resp.status_code, _extrair_erro_curto_gemini(resp.text))
                     break
             except Exception as exc:
-                logger.warning("Erro ao consultar Gemini (%s): %s", modelo, str(exc)[:100])
+                _registrar_degradacao_modelo_gemini(api_key, modelo)
+                logger.warning("Erro/timeout ao consultar Gemini (%s): %s", modelo, str(exc)[:100])
                 continue
 
     if dados_ia is None:
