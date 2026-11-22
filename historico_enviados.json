@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/mundo/noticia/2026/11/17/aliado-de-eisenkot-e-eleito-presidente-do-parlamento-de-israel.ghtml",
-    "https://braziljournal.com/opiniao-lula-herdeiro-de-si-mesmo",
     "https://g1.globo.com/politica/noticia/2026/11/17/fachin-diz-que-stf-pode-julgar-ainda-neste-ano-acoes-contra-lei-da-dosimetria-se-moraes-liberar-caso.ghtml",
     "https://g1.globo.com/mundo/noticia/2026/11/17/reino-unido-entrega-oficial-do-exercito-dos-eua-em-investigacao-de-espionagem.ghtml",
     "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/11/18/comparecimento-brasileiros-exterior-eleicoes-2026.ghtml",
@@ -799,7 +797,9 @@
     "a384413dd75b7a91",
     "7e9a91de7deeb5a1",
     "https://www.infomoney.com.br/mercados/investidores-hesitam-em-comprar-na-baixa-com-nasdaq-100-perto-de-bear-market/",
-    "f3fa74b5ffd2bfdb"
+    "f3fa74b5ffd2bfdb",
+    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/22/novo-plano-da-petrobras-ronda-os-us-115-bilhes-com-dividendos-no-radar.ghtml",
+    "da32242a40fcc42b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1203,7 +1203,8 @@
     "Reforma tributária é positiva para nanoempreendedores, diz associação",
     "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
     "Dólar digital chega a R$ 6,15 em negociação neste domingo",
-    "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market"
+    "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
+    "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1315,7 +1316,8 @@
     "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria",
     "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento.",
     "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado",
-    "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte."
+    "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
+    "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç"
   ],
   "eventos_recentes": [
     {
@@ -1437,6 +1439,10 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795389106.461729
+    },
+    {
+      "chave": "petrobras::PROVENTOS",
+      "ts": 1795389422.515095
     }
   ],
   "hashes_imagens": [
@@ -1533,6 +1539,7 @@
     "359441399e0c461f",
     "22d1431f6258a4a1",
     "816720a10b88ec66",
-    "6f2a3b230b07876f"
+    "6f2a3b230b07876f",
+    "fffaeacee035085c"
   ]
 }
