@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.seudinheiro.com/2026/carreiras/56-dos-profissionais-acreditam-que-podem-precisar-mudar-de-carreira-nos-proximos-anos-aponta-hp-cbcb/",
-    "https://www.suno.com.br/noticias/dolar-hoje-alta-cotacao-analistas/",
-    "https://g1.globo.com/mundo/noticia/2026/11/17/eua-fazem-teste-nacional-em-servico-de-emergencia-mensagem-foi-exibida-em-radios-e-tvs.ghtml",
     "https://www.moneytimes.com.br/wall-street-fecha-em-queda-com-expectativa-de-alta-dos-juros-nos-eua-e-pressao-tech-davs/",
     "https://www.infomoney.com.br/business/global/ia-ajuda-a-achar-falha-critica-no-java-plataforma-de-software-vital-para-a-internet/",
     "https://www.moneytimes.com.br/banco-do-brasil-bbas3-nega-emprestimos-a-fazendas-fantasmas-e-cpfs-inexistentes/",
@@ -799,7 +796,10 @@
     "5f3f1254e1bc8a7c",
     "b5ded902d76df847",
     "https://www.poder360.com.br/poder-economia/custo-brasil-afasta-empresas-estrangeiras-do-mercado-brasileiro/",
-    "4c0743ffcdf9eaf6"
+    "4c0743ffcdf9eaf6",
+    "e5254ef773558649",
+    "https://www.poder360.com.br/poder-economia/reforma-tributaria-e-positiva-para-nanoempreendedores-diz-associacao/",
+    "41f37b0da7f6771f"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1199,7 +1199,8 @@
     "O melhor programa social é o emprego",
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
     "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
-    "Custo Brasil afasta empresas estrangeiras do mercado brasileiro"
+    "Custo Brasil afasta empresas estrangeiras do mercado brasileiro",
+    "Reforma tributária é positiva para nanoempreendedores, diz associação"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1307,7 +1308,8 @@
     "O governo enfrenta um quadro desafiador nesta semana decisiva para a economia em 2027. A Câmara votará o pacote de medidas fiscais para tentar reduzir o gasto público em até R$ 60 bilhões no ano que vem. O mercado reagiu negativamente, pois considerou o número insuficiente, e o dólar está ao redor de R$ 6. Do outro lado, parte da base do governo re",
     "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
     "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque",
-    "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas"
+    "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas",
+    "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria"
   ],
   "eventos_recentes": [
     {
@@ -1421,6 +1423,10 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795379057.542445
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795382215.782289
     }
   ],
   "hashes_imagens": [
@@ -1513,6 +1519,7 @@
     "3842dc24f99bb1ef",
     "1a839460f43add0f",
     "dfc79f6384682669",
-    "626ff11222c25349"
+    "626ff11222c25349",
+    "359441399e0c461f"
   ]
 }
