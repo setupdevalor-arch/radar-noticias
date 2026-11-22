@@ -604,7 +604,9 @@
     "e10735a917ef81c2",
     "https://www.estadao.com.br/economia/coluna-da-broad/bv-recebe-aval-da-cvm-e-da-novo-passo-para-abertura-de-capital-na-b3/",
     "68868e7ecf1d98ce",
-    "521c7512261342e1"
+    "521c7512261342e1",
+    "https://www.estadao.com.br/economia/fim-de-beneficio-fiscal-nos-estados-faz-empresas-repensarem-localizacao-de-fabricas-e-galpoes/",
+    "0282e096a4d04a6a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -948,7 +950,8 @@
     "Itaú Investe em Startup Uruguaia de IA Que Processa 2 Milhões de Pagamentos por Dia",
     "Fintech ‘copia’ modelo do Minha Casa, Minha vida para crédito imobiliário",
     "Bancões trocam Brasil por México nas carteiras para 2027",
-    "BV recebe aval da CVM e dá novo passo para abertura de capital na B3"
+    "BV recebe aval da CVM e dá novo passo para abertura de capital na B3",
+    "Fim de benefício fiscal nos Estados faz empresas repensarem localização de fábricas e galpões"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1000,7 +1003,8 @@
     "O Itaú Ventures, braço de corporate venture capital do Itaú Unibanco, investiu na Akua, empresa de infraestrutura de pagamentos baseada em inteligência artificial cofundada pelo uruguaio Juan José Behrend. O acordo também prevê a avaliação da tecnologia da startup para o negócio de meios de pagamento do banco, tendo o Uruguai como primeiro mercado.",
     "A fintech Makasí, que atua com crédito imobiliário, está lançando uma nova linha de financiamento que reproduz um modelo utilizado há cerca de 30 anos pela Caixa Econômica Federal e que ficou popular no programa Minha Casa, Minha Vida (MCMV). Trata-se do crédito associativo. Nesta modalidade, o banco ou a fintech concede crédito para o comprador do",
     "Grandes instituições financeiras revisaram nas últimas semanas suas alocações para a América Latina e para os mercados emergentes com vistas a 2027, e o Brasil deixou de ocupar a posição de destaque nesse conjunto, conforme apurou o InfoMoney. O espaço perdido pelo país vem sendo ocupado pelo México, que passou a figurar entre os destinos predileto",
-    "O BV, que tem o grupo Votorantim e o Banco do Brasil como donos, deu um passo importante para fazer uma abertura de capital na B3. O banco acaba de receber aval da Comissão de Valores Mobiliários (CVM) para ser uma empresa de capital aberto, na categoria A, que permite lançamento de ações na B3."
+    "O BV, que tem o grupo Votorantim e o Banco do Brasil como donos, deu um passo importante para fazer uma abertura de capital na B3. O banco acaba de receber aval da Comissão de Valores Mobiliários (CVM) para ser uma empresa de capital aberto, na categoria A, que permite lançamento de ações na B3.",
+    "Reforma tributária: brasileiro se assusta com alíquota de 28%, mas já paga imposto maior"
   ],
   "eventos_recentes": [
     {
@@ -1058,6 +1062,10 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795334959.228506
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795338076.132255
     }
   ],
   "hashes_imagens": [
@@ -1094,6 +1102,7 @@
     "0fdb4288838ec9f0",
     "080825ac0b53eed5",
     "7d797ee5ffc86c29",
-    "45db7a359ec7c489"
+    "45db7a359ec7c489",
+    "ca9837bc4dee1423"
   ]
 }
