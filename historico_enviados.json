@@ -755,7 +755,9 @@
     "0b67977751aa6189",
     "d9e34f2a2268d754",
     "ccf9a861a86692e0",
-    "69ef765deac257fc"
+    "69ef765deac257fc",
+    "https://www.poder360.com.br/poder-brasil/sabesp-conclui-manutencao-mas-5-regioes-ainda-tem-abastecimento-afetado/",
+    "dc56711a126aa030"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1135,7 +1137,8 @@
     "Chile tem maior tombo do PIB desde 2020, e BC vê recuperação mais lenta",
     "Fertilizantes: importação de 85% expõe risco ao agro",
     "Espiões, chips e a Nvidia: a campanha secreta da China para driblar os EUA",
-    "Ataques no Báltico ameaçam rota-chave do petróleo e dos grãos da Rússia"
+    "Ataques no Báltico ameaçam rota-chave do petróleo e dos grãos da Rússia",
+    "Sabesp conclui manutenção, mas 5 regiões ainda têm abastecimento afetado"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1223,7 +1226,8 @@
     "A recuperação econômica do Chile pode demorar mais, porque ainda não há sinais claros de retomada dos investimentos, afirmou a presidente do banco central do país, Rosanna Costa, em entrevista ao jornal El Mercurio publicada neste domingo.",
     "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
     "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país.",
-    "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico."
+    "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico.",
+    "Abastecimento ainda está em recuperação em áreas de São Paulo, Francisco Morato e Guarulhos após intervenção no Sistema Cantareira"
   ],
   "eventos_recentes": [
     {
@@ -1313,6 +1317,10 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795362992.952661
+    },
+    {
+      "chave": "sabesp::GERAL_ATIVO",
+      "ts": 1795364632.698499
     }
   ],
   "hashes_imagens": [
@@ -1385,6 +1393,7 @@
     "2b63c60e4c8071f8",
     "6087205fab1edb01",
     "ae9ad758422bad1b",
-    "b8429e74134ffe09"
+    "b8429e74134ffe09",
+    "866659c03b874ec1"
   ]
 }
