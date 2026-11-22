@@ -1,6 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mundo/erros-em-atualizacoes-estao-por-tras-de-falhas-tecnologicas-diz-inteligencia-dos-eua/",
     "https://g1.globo.com/economia/noticia/2026/11/17/o-que-e-o-ajuste-fiscal-que-o-mercado-cobra-de-lula-entenda-por-que-ele-desagrada-muita-gente-e-divide-economistas.ghtml",
     "https://exame.com/inteligencia-artificial/vera-rubin-nvidia-balanco-data-centers/",
     "https://g1.globo.com/mundo/noticia/2026/11/17/eua-atacam-ilha-do-ira.ghtml",
@@ -799,7 +798,8 @@
     "3eb49c9d05eb4326",
     "https://www.infomoney.com.br/business/cientista-chefe-da-openai-defende-limites-para-o-desenvolvimento-de-ia-no-setor/",
     "cb517825710644a7",
-    "7e5ddad23a734594"
+    "7e5ddad23a734594",
+    "d21c01ffff4c43c4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1314,10 +1314,6 @@
     "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento."
   ],
   "eventos_recentes": [
-    {
-      "chave": "vivo::GERAL_ATIVO",
-      "ts": 1795211587.109325
-    },
     {
       "chave": "telebras::BALANCO",
       "ts": 1795251907.310128
