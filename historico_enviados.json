@@ -735,7 +735,9 @@
     "https://www.spacemoney.com.br/economia/social-security-2027-reajuste-beneficios-impostos/",
     "af9ab49f8f5048a2",
     "https://www.moneytimes.com.br/negociacoes-climaticas-da-cop31-fracassam-com-ue-e-outros-paises-rejeitando-acordo-gaep/",
-    "40bcc14ad0f86e13"
+    "40bcc14ad0f86e13",
+    "https://www.moneytimes.com.br/inflacao-no-brasil-e-nos-eua-movimentam-a-semana-veja-a-agenda-de-indicadores/",
+    "2a866be6d99f0a1a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1109,7 +1111,8 @@
     "OAB-SP estima perda de R$ 200 bilhões por ano com pejotização",
     "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
     "Social Security sobe 3,6% em 2027, mas impostos aumentam",
-    "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo"
+    "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo",
+    "Inflação no Brasil e nos EUA movimentam a semana; veja a agenda de indicadores"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1191,7 +1194,8 @@
     "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência",
     "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
     "Segundo a CNBC, os benefícios do Social Security, a previdência pública dos Estados Unidos, serão reajustados em 3,6% em 2027, mas uma série de mudanças nas regras tributárias e nos prêmios do Medicare pode reduzir o ganho líquido de aposentados e trabalhadores. O aumento, o maior desde 2023, deve elevar o benefício médio em cerca de US$ 75 por mês",
-    "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global."
+    "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global.",
+    "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais."
   ],
   "eventos_recentes": [
     {
@@ -1269,6 +1273,10 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795359420.472958
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795359762.565058
     }
   ],
   "hashes_imagens": [
@@ -1335,6 +1343,7 @@
     "a8d29669558af7ea",
     "875a43c45d05e775",
     "cb413ebaf44e67e5",
-    "0fbafc97a568b241"
+    "0fbafc97a568b241",
+    "8c5fc04993f7fc80"
   ]
 }
