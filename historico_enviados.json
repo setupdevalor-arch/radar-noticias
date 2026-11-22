@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/business/global/ia-ajuda-a-achar-falha-critica-no-java-plataforma-de-software-vital-para-a-internet/",
-    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-nega-emprestimos-a-fazendas-fantasmas-e-cpfs-inexistentes/",
     "https://g1.globo.com/politica/noticia/2026/11/17/senado-aprova-mp-que-libera-r-135-bilhoes-em-credito-a-exportadores-afetados-por-tarifas-e-guerras.ghtml",
     "https://www.infomoney.com.br/mundo/erros-em-atualizacoes-estao-por-tras-de-falhas-tecnologicas-diz-inteligencia-dos-eua/",
     "https://g1.globo.com/economia/noticia/2026/11/17/o-que-e-o-ajuste-fiscal-que-o-mercado-cobra-de-lula-entenda-por-que-ele-desagrada-muita-gente-e-divide-economistas.ghtml",
@@ -799,7 +797,9 @@
     "e5254ef773558649",
     "https://www.poder360.com.br/poder-economia/reforma-tributaria-e-positiva-para-nanoempreendedores-diz-associacao/",
     "41f37b0da7f6771f",
-    "3eb49c9d05eb4326"
+    "3eb49c9d05eb4326",
+    "https://www.infomoney.com.br/business/cientista-chefe-da-openai-defende-limites-para-o-desenvolvimento-de-ia-no-setor/",
+    "cb517825710644a7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1200,7 +1200,8 @@
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
     "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
     "Custo Brasil afasta empresas estrangeiras do mercado brasileiro",
-    "Reforma tributária é positiva para nanoempreendedores, diz associação"
+    "Reforma tributária é positiva para nanoempreendedores, diz associação",
+    "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1309,7 +1310,8 @@
     "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
     "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque",
     "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas",
-    "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria"
+    "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria",
+    "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento."
   ],
   "eventos_recentes": [
     {
@@ -1520,6 +1522,7 @@
     "1a839460f43add0f",
     "dfc79f6384682669",
     "626ff11222c25349",
-    "359441399e0c461f"
+    "359441399e0c461f",
+    "22d1431f6258a4a1"
   ]
 }
