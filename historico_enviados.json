@@ -747,7 +747,12 @@
     "https://www.spacemoney.com.br/agronegocio/fertilizantes-importacao-agro/",
     "fbbda2654b9a2ca2",
     "https://www.infomoney.com.br/business/global/espioes-chips-e-a-nvidia-a-campanha-secreta-da-china-para-driblar-os-eua/",
-    "82ee7a745a371054"
+    "82ee7a745a371054",
+    "300dc1882ef48d34",
+    "aee31d451473db43",
+    "073811cb9d95f0cb",
+    "https://www.infomoney.com.br/mundo/ataques-no-baltico-ameacam-rota-chave-do-petroleo-e-dos-graos-da-russia/",
+    "0b67977751aa6189"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1126,7 +1131,8 @@
     "Trump e Xi tentam reaproximação, mas ações sobre tecnologia ainda os divide",
     "Chile tem maior tombo do PIB desde 2020, e BC vê recuperação mais lenta",
     "Fertilizantes: importação de 85% expõe risco ao agro",
-    "Espiões, chips e a Nvidia: a campanha secreta da China para driblar os EUA"
+    "Espiões, chips e a Nvidia: a campanha secreta da China para driblar os EUA",
+    "Ataques no Báltico ameaçam rota-chave do petróleo e dos grãos da Rússia"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1213,13 +1219,10 @@
     "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou.",
     "A recuperação econômica do Chile pode demorar mais, porque ainda não há sinais claros de retomada dos investimentos, afirmou a presidente do banco central do país, Rosanna Costa, em entrevista ao jornal El Mercurio publicada neste domingo.",
     "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
-    "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país."
+    "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país.",
+    "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bradesco::GERAL_ATIVO",
-      "ts": 1795189327.900057
-    },
     {
       "chave": "celesc::GERAL_ATIVO",
       "ts": 1795191181.501209
@@ -1307,6 +1310,10 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795362030.917012
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795362992.952661
     }
   ],
   "hashes_imagens": [
@@ -1378,6 +1385,7 @@
     "b6243796bf7cd45c",
     "2b63c60e4c8071f8",
     "6087205fab1edb01",
-    "ae9ad758422bad1b"
+    "ae9ad758422bad1b",
+    "b8429e74134ffe09"
   ]
 }
