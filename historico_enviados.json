@@ -640,7 +640,13 @@
     "3245b6d74f8b3d91",
     "52e592f4be27da20",
     "https://investnews.com.br/negocios/queda-acoes-ia-china/",
-    "80391bcf76f18246"
+    "80391bcf76f18246",
+    "0008b5c6902a1cb6",
+    "9352e1ec9961fb73",
+    "https://www.moneytimes.com.br/minuta-final-da-cop31-na-turquia-omite-mencoes-a-combustiveis-fosseis-gaep/",
+    "2de32319e6c62816",
+    "https://www.poder360.com.br/poder-brasil/brasil-supera-meta-e-recebe-75-milhoes-de-turistas-estrangeiros/",
+    "34cac3636d71c726"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -994,7 +1000,9 @@
     "Investidores globais querem aumentar aplicações na China",
     "Bahrein intercepta ataques do Irã após bombardeio atingir unidade industrial",
     "Agro de SP tem superavit de US$ 17,6 bilhões até outubro de 2026",
-    "Aposta em IA azeda e ações de tecnologia da China perdem US$ 1,7 trilhão"
+    "Aposta em IA azeda e ações de tecnologia da China perdem US$ 1,7 trilhão",
+    "Minuta final da COP31 omite menções a combustíveis fósseis",
+    "Brasil supera meta e recebe 7,5 milhões de turistas estrangeiros"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1056,7 +1064,9 @@
     "Avaliações atrativas, resiliência do yuan e capacidade das empresas de transformar inovação em lucros atraem interesse",
     "As defesas aéreas do Bahrein interceptaram e destruíram novos ataques aéreos lançados pelo Irã sobre o país no fim da tarde deste sábado, informou o assessor de mídia do rei em comunicado. O Ministério do Interior bareinita emitiu um alerta de risco na rede social X orientando cidadãos e residentes a manterem a calma, buscarem abrigo no local segur",
     "Exportações do setor somaram US$ 22,59 bilhões no período; açúcar e carnes estão entre produtos mais exportados",
-    "O recuo da euforia global com a IA atingiu a China em cheio. Os preços elevados das ações e a dependência do apoio do governo deixaram os papéis vulneráveis assim que surgiram os primeiros sinais de fraqueza."
+    "O recuo da euforia global com a IA atingiu a China em cheio. Os preços elevados das ações e a dependência do apoio do governo deixaram os papéis vulneráveis assim que surgiram os primeiros sinais de fraqueza.",
+    "A proposta mais recente, e possivelmente definitiva, da cúpula do clima das Nações Unidas (COP31), realizada em Antalya, não inclui as palavras “combustíveis fósseis” ou apelos específicos para a redução do uso de carvão, petróleo e gás. O texto, apresentado pelo ministro do Meio Ambiente da Turquia, Murat Kurum, foi divulgado na madrugada deste do",
+    "País atingiu objetivo de 2026 em outubro; gastos de visitantes internacionais somaram R$ 45,6 bilhões até setembro"
   ],
   "eventos_recentes": [
     {
@@ -1118,6 +1128,10 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795345419.246661
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795348267.985351
     }
   ],
   "hashes_imagens": [
@@ -1164,6 +1178,8 @@
     "818cd9271396305b",
     "8e48fd00a4467f3d",
     "75e75a690be6f254",
-    "a808188c38393f83"
+    "a808188c38393f83",
+    "f7384e4b1f8e9eec",
+    "f01873e05f005dc2"
   ]
 }
