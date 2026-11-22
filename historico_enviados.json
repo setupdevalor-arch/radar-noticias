@@ -724,7 +724,18 @@
     "8c3644a63b0d5fd3",
     "0f5aa48c77400cd0",
     "7049d5722634030a",
-    "ed1c65d914a97a36"
+    "ed1c65d914a97a36",
+    "4b51df9b798ca461",
+    "ba717fc480be2e61",
+    "f7b71c82c8d0b763",
+    "2ac7034e71a1129c",
+    "727110759b9a6a02",
+    "https://www.seudinheiro.com/2026/empresas/vale-a-pena-encarar-a-crise-do-banco-do-brasil-bbas3-por-uma-alta-de-apenas-5-xp-diz-o-que-fazer-com-as-acoes-agora-miql/",
+    "665f12fff204a189",
+    "https://www.spacemoney.com.br/economia/social-security-2027-reajuste-beneficios-impostos/",
+    "af9ab49f8f5048a2",
+    "https://www.moneytimes.com.br/negociacoes-climaticas-da-cop31-fracassam-com-ue-e-outros-paises-rejeitando-acordo-gaep/",
+    "40bcc14ad0f86e13"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1095,7 +1106,10 @@
     "Bolsas chinesas flexibilizam regras para impulsionar mercado de ações",
     "Ataques no Golfo e abertura do Irã a acordo",
     "Ameaça quântica ao Bitcoin esbarra em custódia e pontes",
-    "OAB-SP estima perda de R$ 200 bilhões por ano com pejotização"
+    "OAB-SP estima perda de R$ 200 bilhões por ano com pejotização",
+    "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
+    "Social Security sobe 3,6% em 2027, mas impostos aumentam",
+    "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1174,7 +1188,10 @@
     "As três principais bolsas de valores da China anunciaram planos para auxiliar os preços das ações em dificuldades com um conjunto de medidas, como a flexibilização dos requisitos para financiamento com margem.",
     "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
     "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó",
-    "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência"
+    "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência",
+    "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
+    "Segundo a CNBC, os benefícios do Social Security, a previdência pública dos Estados Unidos, serão reajustados em 3,6% em 2027, mas uma série de mudanças nas regras tributárias e nos prêmios do Medicare pode reduzir o ganho líquido de aposentados e trabalhadores. O aumento, o maior desde 2023, deve elevar o benefício médio em cerca de US$ 75 por mês",
+    "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global."
   ],
   "eventos_recentes": [
     {
@@ -1248,6 +1265,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795357302.55217
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795359420.472958
     }
   ],
   "hashes_imagens": [
@@ -1311,6 +1332,9 @@
     "6c786961567f60af",
     "8c133001ba7dcdeb",
     "f5e350ed021b622e",
-    "a8d29669558af7ea"
+    "a8d29669558af7ea",
+    "875a43c45d05e775",
+    "cb413ebaf44e67e5",
+    "0fbafc97a568b241"
   ]
 }
