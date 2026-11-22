@@ -554,7 +554,13 @@
     "https://www.poder360.com.br/poder-energia/copel-nao-ampliara-parque-eolico-ate-resolucao-do-curtailment-diz-ceo/",
     "412d8c8e30572771",
     "https://www.moneytimes.com.br/banco-do-brasil-bbas3-equipe-economica-discute-com-lula-nomes-para-substituir-tarciana-diz-jornal/",
-    "4875e647638c5fad"
+    "4875e647638c5fad",
+    "259a56cad443e1b6",
+    "b06a1d80f2069648",
+    "13473ad6a003a039",
+    "3a2461519c978df0",
+    "https://www.spacemoney.com.br/agronegocio/boi-gordo-recorde-futuro-dezembro/",
+    "e139762fdb18cac7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -886,7 +892,8 @@
     "Telebras mira autonomia financeira e projeta fim de aportes do governo",
     "Telebras estima iniciar operação de data center de IA em 1 ano",
     "Copel não ampliará parque eólico até resolução do curtailment, diz CEO",
-    "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal"
+    "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
+    "Boi gordo renova recorde e futuro aponta dezembro mais alto"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -926,45 +933,10 @@
     "Estatal de telecomunicações acumula prejuízo de R$ 90,7 milhões em 2026, apesar de ter recebido R$ 169,9 milhões em subvenções orçamentárias",
     "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
     "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
-    "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi"
+    "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
+    "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es"
   ],
   "eventos_recentes": [
-    {
-      "chave": "btg_pactual::GERAL_ATIVO",
-      "ts": 1795097354.981352
-    },
-    {
-      "chave": "banco_do_brasil::GERAL_ATIVO",
-      "ts": 1795106931.323197
-    },
-    {
-      "chave": "copel::GERAL_ATIVO",
-      "ts": 1795116821.115819
-    },
-    {
-      "chave": "caixa_seguridade::PROVENTOS",
-      "ts": 1795118387.721214
-    },
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795119926.141256
-    },
-    {
-      "chave": "nubank::GERAL_ATIVO",
-      "ts": 1795119926.141256
-    },
-    {
-      "chave": "copel::PROVENTOS",
-      "ts": 1795122073.704394
-    },
-    {
-      "chave": "eletrobras::GERAL_ATIVO",
-      "ts": 1795122385.485727
-    },
-    {
-      "chave": "unifique::EVENTO_CORP",
-      "ts": 1795127661.593417
-    },
     {
       "chave": "copel::EVENTO_CORP",
       "ts": 1795165374.299402
@@ -1032,6 +1004,7 @@
     "d8c9a8fd058bd61c",
     "3c87f22032701c73",
     "55eab09340469fc7",
-    "958b6ba8d05214b3"
+    "958b6ba8d05214b3",
+    "39eb31d8859b7e0e"
   ]
 }
