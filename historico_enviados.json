@@ -784,7 +784,12 @@
     "e749e25aea442e5c",
     "https://www.spacemoney.com.br/tecnologia/brasil-data-centers-investimentos-ia/",
     "0039ff4b978dc079",
-    "36c24fe521473f4d"
+    "36c24fe521473f4d",
+    "5fa549cd34e84d87",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/assim-como-a-spacex-anthropic-adota-modelo-incomum-de-ipo/",
+    "d779bbcbf6f306fb",
+    "https://www.spacemoney.com.br/economia/mercado-chance-alta-fed-dezembro/",
+    "bae222a15d4d6b5b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1170,7 +1175,9 @@
     "PF abre licitação de R$ 207,5 milhões para 225 blindados",
     "Clayton alerta para novos apagões tecnológicos nos EUA",
     "Mercado vê 100% de chance de alta dos juros nos EUA. Por que isso seria péssimo",
-    "Brasil amplia espaço em data centers com foco em IA"
+    "Brasil amplia espaço em data centers com foco em IA",
+    "Assim como a SpaceX, Anthropic adota modelo incomum de IPO",
+    "Mercado vê chance total de alta do Fed em dezembro"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1264,7 +1271,9 @@
     "A Polícia Federal abriu licitação de R$ 207,5 milhões para comprar 225 veículos blindados. O processo inclui três carros destinados à segurança do presidente Luiz Inácio Lula da Silva, com estimativa de R$ 3,8 milhões por unidade.",
     "O diretor de Inteligência Nacional dos EUA, Jay Clayton, alertou que os americanos devem se preparar para novas interrupções após uma série de apagões tecnológicos que afetaram viagens aéreas e sistemas como o Microsoft Outlook, segundo a CNBC.",
     "Choques de oferta, como o encarecimento de insumos, têm pesado mais nas decisões dos bancos centrais de subir os juros do que o superaquecimento da economia, segundo David Rosenberg, fundador da consultoria Rosenberg Research. Em nota a clientes nesta semana, ele escreveu que, nessas condições, o aperto monetário raramente acaba bem para a economia",
-    "O Brasil quer ganhar espaço no mercado internacional de data centers, setor pressionado pela expansão da inteligência artificial e pela necessidade de capacidade para processar dados. Entre os atrativos estão oferta de energia renovável, avanço do mercado digital e posição geográfica útil para conexões internacionais."
+    "O Brasil quer ganhar espaço no mercado internacional de data centers, setor pressionado pela expansão da inteligência artificial e pela necessidade de capacidade para processar dados. Entre os atrativos estão oferta de energia renovável, avanço do mercado digital e posição geográfica útil para conexões internacionais.",
+    "Pela segunda vez neste ano, banqueiros e advogados de Wall Street receberam um pagamento astronômico após uma IPO (oferta pública inicial) recorde. E, pela segunda vez neste ano, alguns deles reclamaram em particular sobre como o processo foi repleto de complicações e diferente de tudo que já haviam vivenciado.",
+    "O InvestNews informa que o mercado vê probabilidade total de o Federal Reserve subir os juros na reunião que se encerra em 9 de dezembro. A ferramenta FedWatch, da CME, indica 94% de chance de alta de 0,25 ponto percentual e 6% de 0,50 ponto. Dirigentes que se pronunciaram defendem um novo aperto, enquanto o presidente Kevin Warsh evita sinalizar o"
   ],
   "eventos_recentes": [
     {
@@ -1358,6 +1367,14 @@
     {
       "chave": "sabesp::GERAL_ATIVO",
       "ts": 1795364632.698499
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795370809.043468
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795370809.043468
     }
   ],
   "hashes_imagens": [
@@ -1436,6 +1453,8 @@
     "9b07ee72568f7974",
     "7b4c4fd6c0f6867b",
     "1c5b07872e14ed5d",
-    "e7f7daf3f70376ae"
+    "e7f7daf3f70376ae",
+    "f26b50cc4387f901",
+    "c72d5fa39ef4c160"
   ]
 }
