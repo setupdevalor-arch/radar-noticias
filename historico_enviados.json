@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/ibovespa-recupera-folego-e-encerra-sessao-no-azul-em-meio-a-alta-do-petroleo-davs/",
-    "https://g1.globo.com/mundo/noticia/2026/11/17/eua-suspendem-instalacao-de-roteadores-que-levaram-a-paralisacao-de-voos-no-pais.ghtml",
     "https://www.seudinheiro.com/2026/carreiras/56-dos-profissionais-acreditam-que-podem-precisar-mudar-de-carreira-nos-proximos-anos-aponta-hp-cbcb/",
     "https://www.suno.com.br/noticias/dolar-hoje-alta-cotacao-analistas/",
     "https://g1.globo.com/mundo/noticia/2026/11/17/eua-fazem-teste-nacional-em-servico-de-emergencia-mensagem-foi-exibida-em-radios-e-tvs.ghtml",
@@ -799,7 +797,9 @@
     "6af71a4c77cddfe1",
     "https://www.estadao.com.br/economia/negocios/petrobras-divulga-plano-de-negocios-expectativa-investimentos/",
     "5f3f1254e1bc8a7c",
-    "b5ded902d76df847"
+    "b5ded902d76df847",
+    "https://www.poder360.com.br/poder-economia/custo-brasil-afasta-empresas-estrangeiras-do-mercado-brasileiro/",
+    "4c0743ffcdf9eaf6"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1198,7 +1198,8 @@
     "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%",
     "O melhor programa social é o emprego",
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
-    "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa"
+    "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
+    "Custo Brasil afasta empresas estrangeiras do mercado brasileiro"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1305,7 +1306,8 @@
     "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas.",
     "O governo enfrenta um quadro desafiador nesta semana decisiva para a economia em 2027. A Câmara votará o pacote de medidas fiscais para tentar reduzir o gasto público em até R$ 60 bilhões no ano que vem. O mercado reagiu negativamente, pois considerou o número insuficiente, e o dólar está ao redor de R$ 6. Do outro lado, parte da base do governo re",
     "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
-    "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque"
+    "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque",
+    "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas"
   ],
   "eventos_recentes": [
     {
@@ -1510,6 +1512,7 @@
     "3882357cfe45c3f7",
     "3842dc24f99bb1ef",
     "1a839460f43add0f",
-    "dfc79f6384682669"
+    "dfc79f6384682669",
+    "626ff11222c25349"
   ]
 }
