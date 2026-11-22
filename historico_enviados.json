@@ -745,7 +745,9 @@
     "https://www.infomoney.com.br/economia/chile-tem-maior-tombo-do-pib-desde-2020-e-bc-ve-recuperacao-mais-lenta/",
     "84efc0bcdbcb5942",
     "https://www.spacemoney.com.br/agronegocio/fertilizantes-importacao-agro/",
-    "fbbda2654b9a2ca2"
+    "fbbda2654b9a2ca2",
+    "https://www.infomoney.com.br/business/global/espioes-chips-e-a-nvidia-a-campanha-secreta-da-china-para-driblar-os-eua/",
+    "82ee7a745a371054"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1123,7 +1125,8 @@
     "Inflação no Brasil e nos EUA movimentam a semana; veja a agenda de indicadores",
     "Trump e Xi tentam reaproximação, mas ações sobre tecnologia ainda os divide",
     "Chile tem maior tombo do PIB desde 2020, e BC vê recuperação mais lenta",
-    "Fertilizantes: importação de 85% expõe risco ao agro"
+    "Fertilizantes: importação de 85% expõe risco ao agro",
+    "Espiões, chips e a Nvidia: a campanha secreta da China para driblar os EUA"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1209,7 +1212,8 @@
     "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais.",
     "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou.",
     "A recuperação econômica do Chile pode demorar mais, porque ainda não há sinais claros de retomada dos investimentos, afirmou a presidente do banco central do país, Rosanna Costa, em entrevista ao jornal El Mercurio publicada neste domingo.",
-    "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir"
+    "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
+    "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país."
   ],
   "eventos_recentes": [
     {
@@ -1299,6 +1303,10 @@
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795361702.727815
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795362030.917012
     }
   ],
   "hashes_imagens": [
@@ -1369,6 +1377,7 @@
     "8c5fc04993f7fc80",
     "b6243796bf7cd45c",
     "2b63c60e4c8071f8",
-    "6087205fab1edb01"
+    "6087205fab1edb01",
+    "ae9ad758422bad1b"
   ]
 }
