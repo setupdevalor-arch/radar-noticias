@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/politica/noticia/2026/11/17/fachin-diz-que-stf-pode-julgar-ainda-neste-ano-acoes-contra-lei-da-dosimetria-se-moraes-liberar-caso.ghtml",
-    "https://g1.globo.com/mundo/noticia/2026/11/17/reino-unido-entrega-oficial-do-exercito-dos-eua-em-investigacao-de-espionagem.ghtml",
-    "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/11/18/comparecimento-brasileiros-exterior-eleicoes-2026.ghtml",
     "https://g1.globo.com/politica/noticia/2026/11/18/stf-nepotismo-entenda.ghtml",
     "https://g1.globo.com/politica/noticia/2026/11/18/secretarios-defendem-ministro-da-seguranca-com-experiencia-na-linha-de-frente.ghtml",
     "https://g1.globo.com/politica/noticia/2026/11/18/fachin-recebe-nesta-quarta-relatorio-da-pf-sobre-ministros-no-caso-master-e-deve-avaliar-modelo-para-definir-proximos-passos.ghtml",
@@ -799,7 +796,10 @@
     "https://www.infomoney.com.br/mercados/investidores-hesitam-em-comprar-na-baixa-com-nasdaq-100-perto-de-bear-market/",
     "f3fa74b5ffd2bfdb",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/22/novo-plano-da-petrobras-ronda-os-us-115-bilhes-com-dividendos-no-radar.ghtml",
-    "da32242a40fcc42b"
+    "da32242a40fcc42b",
+    "4ee1d8de930a4667",
+    "https://valorinveste.globo.com/produtos/investimento-no-exterior/noticia/2026/11/22/bolsas-chinesas-anunciam-medidas-para-apoiar-os-mercados-acionrios.ghtml",
+    "ea6a43efcc1e76ef"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1204,7 +1204,8 @@
     "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
     "Dólar digital chega a R$ 6,15 em negociação neste domingo",
     "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
-    "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar"
+    "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
+    "Bolsas chinesas anunciam medidas para apoiar os mercados acionários"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1317,7 +1318,8 @@
     "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento.",
     "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado",
     "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
-    "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç"
+    "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
+    "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas"
   ],
   "eventos_recentes": [
     {
@@ -1540,6 +1542,7 @@
     "22d1431f6258a4a1",
     "816720a10b88ec66",
     "6f2a3b230b07876f",
-    "fffaeacee035085c"
+    "fffaeacee035085c",
+    "a2217dfa90d49148"
   ]
 }
