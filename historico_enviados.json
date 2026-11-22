@@ -574,7 +574,9 @@
     "e1f62778ca70b1f6",
     "aa5b3eaf579b32ac",
     "774a2d231a454fee",
-    "a7e35972fbeb5f7e"
+    "a7e35972fbeb5f7e",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/goldman-sachs-brasil-precisa-de-ajuste-nas-contas-publicas-de-r-400-bi/",
+    "ea278b6afa5b50e2"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -908,7 +910,8 @@
     "Copel não ampliará parque eólico até resolução do curtailment, diz CEO",
     "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
     "Boi gordo renova recorde e futuro aponta dezembro mais alto",
-    "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data"
+    "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data",
+    "Goldman Sachs: Brasil precisa de ajuste nas contas públicas de R$ 400 bi"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -950,7 +953,8 @@
     "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
     "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
     "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
-    "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425."
+    "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425.",
+    "O Brasil enfrenta um cenário macroeconômico desafiador para 2027, com crescimento modesto e inflação persistentemente elevada. É o que aponta Alberto Ramos, economista-chefe para América Latina do Goldman Sachs, em entrevista ao CNN Money, ao detalhar as projeções do banco."
   ],
   "eventos_recentes": [
     {
@@ -1000,6 +1004,10 @@
     {
       "chave": "itausa::PROVENTOS",
       "ts": 1795309463.50717
+    },
+    {
+      "chave": "goldman_sachs::GERAL_ATIVO",
+      "ts": 1795321992.496245
     }
   ],
   "hashes_imagens": [
@@ -1026,6 +1034,7 @@
     "55eab09340469fc7",
     "958b6ba8d05214b3",
     "39eb31d8859b7e0e",
-    "65e2dd55df39f2ec"
+    "65e2dd55df39f2ec",
+    "069b40560ee278b3"
   ]
 }
