@@ -688,7 +688,9 @@
     "https://www.spacemoney.com.br/investimentos/acoes/cnbc-amazon-nasdaq-opcoes/",
     "8d957d71f5773df4",
     "79c2472bd2e74e92",
-    "659f012d6ae9697b"
+    "659f012d6ae9697b",
+    "f167c233cad3a3df",
+    "8bc6ac485c928125"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1129,10 +1131,6 @@
     "Em reportagem publicada neste domingo (22), a CNBC relata que, após o fechamento de sexta-feira, o autor consultou a ferramenta Claude sobre o que fazer com a queda do mercado. A orientação recebida foi evitar vendas por pânico e buscar oportunidades, com a Amazon citada como uma ação a ser observada."
   ],
   "eventos_recentes": [
-    {
-      "chave": "porto_seguro::PROVENTOS",
-      "ts": 1795180123.149426
-    },
     {
       "chave": "bradesco::GERAL_ATIVO",
       "ts": 1795189327.900057
