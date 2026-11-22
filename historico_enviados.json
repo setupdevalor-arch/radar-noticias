@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/pi/piaui/noticia/2026/11/17/motociclista-morre-acidente-carro-parnaiba.ghtml",
-    "https://g1.globo.com/tecnologia/noticia/2026/11/17/meta-lanca-app-de-compra-e-venda-de-produtos-usados-no-brasil-para-concorrer-com-enjoei.ghtml",
-    "https://www.infomoney.com.br/mercados/o-que-esperar-para-o-dolar-nos-proximos-dias-apos-moeda-passar-os-r-580/",
     "https://www.infomoney.com.br/consumo/black-friday-xp-e-rico-turbinam-beneficios-em-cartoes-investimentos-e-seguro-veja/",
     "https://www.infomoney.com.br/mercados/home-depot-tem-lucro-liquido-de-us-37-bilhoes-e-nomeia-novo-ceo/",
     "https://www.infomoney.com.br/mercados/ibovespa-sobe-mas-investidor-segue-cauteloso-a-espera-de-definicoes-do-governo-lula/",
@@ -799,7 +796,10 @@
     "20f6c04db3c1b548",
     "8b15999a1ab7f089",
     "59b0d03a2b7b2f4a",
-    "538a67fae634d5e8"
+    "538a67fae634d5e8",
+    "1264d92c0eddce76",
+    "https://www.cnnbrasil.com.br/agro/producao-de-cafe-da-4/",
+    "7beeff3588d5172c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1189,7 +1189,8 @@
     "Assim como a SpaceX, Anthropic adota modelo incomum de IPO",
     "Mercado vê chance total de alta do Fed em dezembro",
     "Dólar, ouro e até o real entram no jogo: onde o UBS vê oportunidades para ganhar dinheiro — e se proteger — em 2027",
-    "The Economist: O que está causando os recentes apagões nos Estados Unidos?"
+    "The Economist: O que está causando os recentes apagões nos Estados Unidos?",
+    "Produção de café da Colômbia deve se recuperar na nova safra, afirma USDA"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1287,7 +1288,8 @@
     "Pela segunda vez neste ano, banqueiros e advogados de Wall Street receberam um pagamento astronômico após uma IPO (oferta pública inicial) recorde. E, pela segunda vez neste ano, alguns deles reclamaram em particular sobre como o processo foi repleto de complicações e diferente de tudo que já haviam vivenciado.",
     "O InvestNews informa que o mercado vê probabilidade total de o Federal Reserve subir os juros na reunião que se encerra em 9 de dezembro. A ferramenta FedWatch, da CME, indica 94% de chance de alta de 0,25 ponto percentual e 6% de 0,50 ponto. Dirigentes que se pronunciaram defendem um novo aperto, enquanto o presidente Kevin Warsh evita sinalizar o",
     "Banco trabalha com cenários bastante diferentes para a economia global e destaca renda fixa, commodities, moedas e investimentos alternativos na estratégia de diversificação",
-    "Binance sofre ataque hacker histórico de US$ 6,3 bilhões e suspende saques temporariamente"
+    "Binance sofre ataque hacker histórico de US$ 6,3 bilhões e suspende saques temporariamente",
+    "A produção de café da Colômbia deve se recuperar na safra 2026/27, que teve início em outubro, com uma previsão de aumento de 5,9%, para 13,4 milhões de sacas de 60 kg, de acordo com um relatório do USDA (Departamento de Agricultura dos Estados Unidos)."
   ],
   "eventos_recentes": [
     {
@@ -1475,6 +1477,7 @@
     "f26b50cc4387f901",
     "c72d5fa39ef4c160",
     "ec852cca70d10c48",
-    "102447c255e458aa"
+    "102447c255e458aa",
+    "70f36f2a13c6a2c6"
   ]
 }
