@@ -791,7 +791,10 @@
     "https://www.spacemoney.com.br/economia/mercado-chance-alta-fed-dezembro/",
     "bae222a15d4d6b5b",
     "4f92615b09cc95c6",
-    "bc04c88ba91d920a"
+    "bc04c88ba91d920a",
+    "4465ce4c3976a858",
+    "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-ouro-e-ate-o-real-entram-no-jogo-onde-o-ubs-ve-oportunidades-para-ganhar-dinheiro-e-se-proteger-em-2027-miql/",
+    "e20f85e612abe4da"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1179,7 +1182,8 @@
     "Mercado vê 100% de chance de alta dos juros nos EUA. Por que isso seria péssimo",
     "Brasil amplia espaço em data centers com foco em IA",
     "Assim como a SpaceX, Anthropic adota modelo incomum de IPO",
-    "Mercado vê chance total de alta do Fed em dezembro"
+    "Mercado vê chance total de alta do Fed em dezembro",
+    "Dólar, ouro e até o real entram no jogo: onde o UBS vê oportunidades para ganhar dinheiro — e se proteger — em 2027"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1275,7 +1279,8 @@
     "Choques de oferta, como o encarecimento de insumos, têm pesado mais nas decisões dos bancos centrais de subir os juros do que o superaquecimento da economia, segundo David Rosenberg, fundador da consultoria Rosenberg Research. Em nota a clientes nesta semana, ele escreveu que, nessas condições, o aperto monetário raramente acaba bem para a economia",
     "O Brasil quer ganhar espaço no mercado internacional de data centers, setor pressionado pela expansão da inteligência artificial e pela necessidade de capacidade para processar dados. Entre os atrativos estão oferta de energia renovável, avanço do mercado digital e posição geográfica útil para conexões internacionais.",
     "Pela segunda vez neste ano, banqueiros e advogados de Wall Street receberam um pagamento astronômico após uma IPO (oferta pública inicial) recorde. E, pela segunda vez neste ano, alguns deles reclamaram em particular sobre como o processo foi repleto de complicações e diferente de tudo que já haviam vivenciado.",
-    "O InvestNews informa que o mercado vê probabilidade total de o Federal Reserve subir os juros na reunião que se encerra em 9 de dezembro. A ferramenta FedWatch, da CME, indica 94% de chance de alta de 0,25 ponto percentual e 6% de 0,50 ponto. Dirigentes que se pronunciaram defendem um novo aperto, enquanto o presidente Kevin Warsh evita sinalizar o"
+    "O InvestNews informa que o mercado vê probabilidade total de o Federal Reserve subir os juros na reunião que se encerra em 9 de dezembro. A ferramenta FedWatch, da CME, indica 94% de chance de alta de 0,25 ponto percentual e 6% de 0,50 ponto. Dirigentes que se pronunciaram defendem um novo aperto, enquanto o presidente Kevin Warsh evita sinalizar o",
+    "Banco trabalha com cenários bastante diferentes para a economia global e destaca renda fixa, commodities, moedas e investimentos alternativos na estratégia de diversificação"
   ],
   "eventos_recentes": [
     {
@@ -1377,6 +1382,10 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795370809.043468
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795371452.86429
     }
   ],
   "hashes_imagens": [
@@ -1457,6 +1466,7 @@
     "1c5b07872e14ed5d",
     "e7f7daf3f70376ae",
     "f26b50cc4387f901",
-    "c72d5fa39ef4c160"
+    "c72d5fa39ef4c160",
+    "ec852cca70d10c48"
   ]
 }
