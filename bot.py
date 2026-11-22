@@ -90,7 +90,7 @@ MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "24"))
 SCORE_MINIMO_CORTE_IA = int(os.environ.get("SCORE_MINIMO_CORTE_IA", "12"))
-MAX_CHAMADAS_GEMINI_POR_CICLO = int(os.environ.get("MAX_CHAMADAS_GEMINI_POR_CICLO", "20"))
+MAX_CHAMADAS_GEMINI_POR_CICLO = int(os.environ.get("MAX_CHAMADAS_GEMINI_POR_CICLO", "14"))
 MAX_CONCURRENT_REQUESTS = 12
 
 MAX_HTML_BYTES = 5 * 1024 * 1024
@@ -173,8 +173,9 @@ DOMINIOS_BLOQUEADOS = (
 
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/sports/", "/poder-sports/", "/futebol/", "/entretenimento/",
-    "/pop/", "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/", "/curiosidades/",
-    "/tv/", "/famosos/", "/cultura/", "/poder-midia/", "/midia/",
+    "/cultura-e-entretenimento/", "/celebridades/", "/lifestyle/", "/variedades/", "/cinema/",
+    "/musica/", "/games/", "/pop/", "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/",
+    "/loterias/", "/curiosidades/", "/tv/", "/famosos/", "/cultura/", "/poder-midia/", "/midia/",
     "/policia/", "/apostas/", "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
 )
 
@@ -2130,10 +2131,11 @@ async def carregar_proximas_noticias(
     aprovadas: List[NoticiaPreparada] = []
     chamadas_ia = 0
     corte_atual = SCORE_MINIMO_CORTE_IA if modo_ia_ativo else SCORE_MINIMO_CORTE
+    meta_aprovadas = limite if modo_ia_ativo else limite * 2
     stats = {"antiga": 0, "dup_t": 0, "dup_c": 0, "sem_img": 0, "desc": 0, "rej_ia": 0}
 
     for cand in candidatos[:80]:
-        if len(aprovadas) >= limite * 2:
+        if len(aprovadas) >= meta_aprovadas:
             break
         title, link, desc_bruta, item, dt_rss = cand["title"], cand["link"], cand["desc_bruta"], cand["item"], cand["dt_pub"]
 
