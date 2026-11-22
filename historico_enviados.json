@@ -680,7 +680,13 @@
     "1fc221e0679fd43e",
     "04606bce3524715b",
     "98e4919887bf7973",
-    "e118973d18a19603"
+    "e118973d18a19603",
+    "b5ddb837201f54ac",
+    "548444a40f29a13c",
+    "https://www.spacemoney.com.br/investimentos/acoes/proventos/dividendos/wall-street-tres-acoes-dividendos/",
+    "87cc2c06138d7893",
+    "https://www.spacemoney.com.br/investimentos/acoes/cnbc-amazon-nasdaq-opcoes/",
+    "8d957d71f5773df4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1043,7 +1049,9 @@
     "Otan lança rede Starlift para satélites com 11 países",
     "Projeto define regras para provedores de internet no Brasil",
     "Por que a cúpula do clima da ONU pode terminar sem acordo neste ano",
-    "Por que o cobre, queridinho da era da IA, despencou 9% em uma semana"
+    "Por que o cobre, queridinho da era da IA, despencou 9% em uma semana",
+    "Analistas de Wall Street elegem 3 ações de dividendos",
+    "CNBC destaca Amazon em meio à queda do Nasdaq"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1114,7 +1122,9 @@
     "O Reino Unido e mais dez nações formalizaram neste sábado (22), em Bruxelas, a Starlift, iniciativa coordenada pela Otan para montar uma malha adaptável de transporte orbital de satélites, com fornecedores comerciais e infraestrutura espalhada entre aliados. De acordo com a Estadão Conteúdo, o objetivo é assegurar lançamentos rápidos, seguros e eco",
     "Substitutivo restringe a exigência a provedores estrangeiros com ao menos 10 milhões de usuários ou receita anual de R$ 100 milhões no Brasil",
     "As negociações internacionais sobre o clima perdiam força neste domingo, abrindo caminho para que a cúpula termine sem um acordo amplo. Alguns países europeus alertaram que a proposta em discussão adotaria falsas soluções contra o aquecimento global e enfraqueceria o combate a ele.",
-    "Quando a indústria do cobre se reuniu em Xangai na semana passada, Grace Li ficou impressionada com o pessimismo esmagador sobre a demanda. Ela concordava com esse diagnóstico. Depois das conversas de segunda-feira, quase pegou o celular ali mesmo para montar uma posição vendida."
+    "Quando a indústria do cobre se reuniu em Xangai na semana passada, Grace Li ficou impressionada com o pessimismo esmagador sobre a demanda. Ela concordava com esse diagnóstico. Depois das conversas de segunda-feira, quase pegou o celular ali mesmo para montar uma posição vendida.",
+    "Analistas considerados de ponta em Wall Street apontam três ações de dividendos com potencial de retorno forte, segundo reportagem da CNBC. A seleção usa ranking da plataforma TipRanks, que avalia os profissionais pelo desempenho passado, e reúne Devon Energy, Energy Transfer e ConocoPhillips.",
+    "Em reportagem publicada neste domingo (22), a CNBC relata que, após o fechamento de sexta-feira, o autor consultou a ferramenta Claude sobre o que fazer com a queda do mercado. A orientação recebida foi evitar vendas por pânico e buscar oportunidades, com a Amazon citada como uma ação a ser observada."
   ],
   "eventos_recentes": [
     {
@@ -1180,6 +1190,14 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795348267.985351
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795352140.861495
+    },
+    {
+      "chave": "amazon::GERAL_ATIVO",
+      "ts": 1795352140.861495
     }
   ],
   "hashes_imagens": [
@@ -1235,6 +1253,8 @@
     "2c0e8b1d4a57fc2d",
     "f43ee95dd533ee67",
     "dd156e57506cc969",
-    "5854bd163864cf99"
+    "5854bd163864cf99",
+    "5ac94973d630a0ef",
+    "04933c206798a6a4"
   ]
 }
