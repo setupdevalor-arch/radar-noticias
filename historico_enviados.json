@@ -579,7 +579,10 @@
     "ea278b6afa5b50e2",
     "https://www.cnnbrasil.com.br/economia/money/tecnologia/por-que-eua-nao-querem-que-empresas-construam-data-centers-em-outros-paises/",
     "b3b966f3fd44aca9",
-    "2dcb23d9da1c9cc7"
+    "2dcb23d9da1c9cc7",
+    "c1fca862eb13d58b",
+    "https://www.spacemoney.com.br/tecnologia/vulnerabilidade-java-oracle/",
+    "d758fef54c99d272"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -915,7 +918,8 @@
     "Boi gordo renova recorde e futuro aponta dezembro mais alto",
     "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data",
     "Goldman Sachs: Brasil precisa de ajuste nas contas públicas de R$ 400 bi",
-    "Por que EUA não querem que empresas construam data centers em outros países"
+    "Por que EUA não querem que empresas construam data centers em outros países",
+    "Brecha no Java acende alerta para bancos e governos"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -959,7 +963,8 @@
     "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
     "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425.",
     "O Brasil enfrenta um cenário macroeconômico desafiador para 2027, com crescimento modesto e inflação persistentemente elevada. É o que aponta Alberto Ramos, economista-chefe para América Latina do Goldman Sachs, em entrevista ao CNN Money, ao detalhar as projeções do banco.",
-    "A mais recente investida do presidente dos Estados Unidos, Donald Trump, sobre a indústria da tecnologia marca um novo episódio de sua política econômica protecionista, segundo especialistas ouvidos pelo CNN Money."
+    "A mais recente investida do presidente dos Estados Unidos, Donald Trump, sobre a indústria da tecnologia marca um novo episódio de sua política econômica protecionista, segundo especialistas ouvidos pelo CNN Money.",
+    "Uma empresa de cibersegurança chamada Calif localizou, com apoio de inteligência artificial, uma vulnerabilidade crítica nas funções de memória do Java, segundo o g1. A falha foi batizada de Java4Shell e permitiria que um invasor executasse comandos remotos no sistema. A Oracle, que controla o Java, publicou uma correção de segurança na terça-feira"
   ],
   "eventos_recentes": [
     {
@@ -1041,6 +1046,7 @@
     "39eb31d8859b7e0e",
     "65e2dd55df39f2ec",
     "069b40560ee278b3",
-    "6f1adc601a8de8b9"
+    "6f1adc601a8de8b9",
+    "c21b4642ffb14d4e"
   ]
 }
