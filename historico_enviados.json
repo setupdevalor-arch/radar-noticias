@@ -738,7 +738,9 @@
     "40bcc14ad0f86e13",
     "https://www.moneytimes.com.br/inflacao-no-brasil-e-nos-eua-movimentam-a-semana-veja-a-agenda-de-indicadores/",
     "2a866be6d99f0a1a",
-    "e11e25563270626f"
+    "e11e25563270626f",
+    "https://www.cnnbrasil.com.br/economia/trump-e-xi-tentam-reaproximacao-mas-acoes-sobre-tecnologia-ainda-os-divide/",
+    "2f12aa6e1016ae0b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1113,7 +1115,8 @@
     "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
     "Social Security sobe 3,6% em 2027, mas impostos aumentam",
     "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo",
-    "Inflação no Brasil e nos EUA movimentam a semana; veja a agenda de indicadores"
+    "Inflação no Brasil e nos EUA movimentam a semana; veja a agenda de indicadores",
+    "Trump e Xi tentam reaproximação, mas ações sobre tecnologia ainda os divide"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1196,7 +1199,8 @@
     "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
     "Segundo a CNBC, os benefícios do Social Security, a previdência pública dos Estados Unidos, serão reajustados em 3,6% em 2027, mas uma série de mudanças nas regras tributárias e nos prêmios do Medicare pode reduzir o ganho líquido de aposentados e trabalhadores. O aumento, o maior desde 2023, deve elevar o benefício médio em cerca de US$ 75 por mês",
     "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global.",
-    "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais."
+    "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais.",
+    "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou."
   ],
   "eventos_recentes": [
     {
@@ -1278,6 +1282,10 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795359762.565058
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795360728.044644
     }
   ],
   "hashes_imagens": [
@@ -1345,6 +1353,7 @@
     "875a43c45d05e775",
     "cb413ebaf44e67e5",
     "0fbafc97a568b241",
-    "8c5fc04993f7fc80"
+    "8c5fc04993f7fc80",
+    "b6243796bf7cd45c"
   ]
 }
