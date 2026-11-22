@@ -560,7 +560,9 @@
     "13473ad6a003a039",
     "3a2461519c978df0",
     "https://www.spacemoney.com.br/agronegocio/boi-gordo-recorde-futuro-dezembro/",
-    "e139762fdb18cac7"
+    "e139762fdb18cac7",
+    "https://www.suno.com.br/noticias/itausa-itsa4-holding-dividendos-19-11-26/",
+    "9cc887bf3449d7b0"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -893,7 +895,8 @@
     "Telebras estima iniciar operação de data center de IA em 1 ano",
     "Copel não ampliará parque eólico até resolução do curtailment, diz CEO",
     "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
-    "Boi gordo renova recorde e futuro aponta dezembro mais alto"
+    "Boi gordo renova recorde e futuro aponta dezembro mais alto",
+    "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -934,7 +937,8 @@
     "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
     "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
     "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
-    "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es"
+    "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
+    "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425."
   ],
   "eventos_recentes": [
     {
@@ -980,6 +984,10 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795267014.016658
+    },
+    {
+      "chave": "itausa::PROVENTOS",
+      "ts": 1795309463.50717
     }
   ],
   "hashes_imagens": [
@@ -1005,6 +1013,7 @@
     "3c87f22032701c73",
     "55eab09340469fc7",
     "958b6ba8d05214b3",
-    "39eb31d8859b7e0e"
+    "39eb31d8859b7e0e",
+    "65e2dd55df39f2ec"
   ]
 }
