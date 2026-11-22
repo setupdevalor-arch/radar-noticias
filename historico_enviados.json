@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/politica/noticia/2026/11/17/lula-se-reune-com-ministro-do-trabalho-para-ajustes-no-decreto-que-regulamentara-fim-da-escala-6x1.ghtml",
-    "https://g1.globo.com/economia/noticia/2026/11/17/creditos-tributarios-empresas-ajuste-fiscal.ghtml",
-    "https://www.suno.com.br/noticias/ibovespa-hoje-bancos-dolar-fiscal/",
-    "https://www.infomoney.com.br/mercados/nvidia-apresenta-projecao-otimista-em-seu-primeiro-balanco-desde-a-saida-de-huang/",
-    "https://www.infomoney.com.br/economia/aneel-forma-maioria-para-recomendar-caducidade-da-concessao-da-enel-sao-paulo/",
-    "https://g1.globo.com/politica/noticia/2026/11/17/em-meio-a-duvidas-dos-partidos-camara-dos-deputados-adia-projeto-que-regulamenta-big-techs.ghtml",
-    "https://www.bbc.com/portuguese/articles/c50mdvd0v0xko?at_medium=RSS&at_campaign=rss",
-    "https://www.infomoney.com.br/mercados/nasdaq-pregao-volatil-com-resultados-da-nvidia-em-foco/",
     "https://www.moneytimes.com.br/em-meio-a-polemicas-nvidia-nvda-nao-trai-confianca-de-investidores-e-supera-expectativas-veja-numeros-do-resultado/",
     "https://www.moneytimes.com.br/ibovespa-recupera-folego-e-encerra-sessao-no-azul-em-meio-a-alta-do-petroleo-davs/",
     "https://g1.globo.com/mundo/noticia/2026/11/17/eua-suspendem-instalacao-de-roteadores-que-levaram-a-paralisacao-de-voos-no-pais.ghtml",
@@ -799,7 +791,15 @@
     "4cf60a3dc2c9274c",
     "61945d3a79931369",
     "4d3ebeb213366c2b",
-    "92dd2e158f8b914d"
+    "92dd2e158f8b914d",
+    "c041c445decea07b",
+    "38c9deb9f5604f45",
+    "https://www.estadao.com.br/economia/henrique-meirelles/melhor-programa-social-emprego/",
+    "37d7c57af037ec5f",
+    "https://www.estadao.com.br/economia/antonio-penteado-mendonca/75-anos-da-cnseg/",
+    "6af71a4c77cddfe1",
+    "https://www.estadao.com.br/economia/negocios/petrobras-divulga-plano-de-negocios-expectativa-investimentos/",
+    "5f3f1254e1bc8a7c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1195,7 +1195,10 @@
     "Juros do cartão a 10%: a proposta de Trump que une rivais e assusta bancos",
     "Conferência do clima na Turquia termina sem documento final",
     "Etanol de milho deve usar 27 mi de toneladas em 2026",
-    "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%"
+    "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%",
+    "O melhor programa social é o emprego",
+    "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
+    "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1299,7 +1302,10 @@
     "O presidente dos Estados Unidos, Donald Trump, afirmou no sábado que pretende colaborar com o novo Congresso de maioria democrata para estabelecer um teto de 10% para as taxas de juros de cartões de crédito. A medida busca cumprir uma promessa de campanha de 2024 que encontrou resistência tanto da indústria financeira quanto de seus próprios aliado",
     "Conforme a Agência Brasil, a 31ª edição da conferência do clima da ONU terminou na manhã deste domingo (22), em Antália, na Turquia, sem documento final.",
     "As usinas de etanol de milho devem destinar cerca de 27 milhões de toneladas do cereal à produção do biocombustível em 2026, segundo estimativa do Rabobank. O avanço dessas plantas altera a comercialização do grão no Brasil, mexe com preços regionais e afeta a receita de quem cultiva.",
-    "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas."
+    "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas.",
+    "O governo enfrenta um quadro desafiador nesta semana decisiva para a economia em 2027. A Câmara votará o pacote de medidas fiscais para tentar reduzir o gasto público em até R$ 60 bilhões no ano que vem. O mercado reagiu negativamente, pois considerou o número insuficiente, e o dólar está ao redor de R$ 6. Do outro lado, parte da base do governo re",
+    "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
+    "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque"
   ],
   "eventos_recentes": [
     {
@@ -1409,6 +1415,10 @@
     {
       "chave": "banco_do_brasil::BALANCO",
       "ts": 1795377167.890251
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795379057.542445
     }
   ],
   "hashes_imagens": [
@@ -1497,6 +1507,9 @@
     "76899cc7a5780733",
     "afa582d4cdede1f7",
     "50f516e2c1f350c5",
-    "3882357cfe45c3f7"
+    "3882357cfe45c3f7",
+    "3842dc24f99bb1ef",
+    "1a839460f43add0f",
+    "dfc79f6384682669"
   ]
 }
