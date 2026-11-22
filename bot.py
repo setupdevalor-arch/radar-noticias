@@ -196,7 +196,10 @@ BLOQUEADOS_APENAS_NO_TITULO = (
     "tiktok", "bytedance", "sam altman", "bitcoin", "ethereum", "criptomoeda", "criptomoedas",
     "solana", "dogecoin", "binance", "calendário do inss", "meu inss", "benefício do inss",
     "aposentadoria do inss", "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia",
-    "auxílio gás", "saque-aniversário", "cnh social", "concurso público", "edital publicado",
+    "auxílio gás", "saque-aniversário", "cnh social", "bpc/loas", "cadúnico", "cadunico",
+    "auxílio-doença", "seguro-desemprego", "lote residual", "serasa limpa nome", "feirão limpa nome",
+    "desenrola brasil", "leilão da receita", "apreende", "contrabando", "medalha de ouro",
+    "olimpíadas", "olimpiadas", "concurso público", "edital publicado",
     "quem pode fazer mba", "horóscopo", "mega-sena", "lotofácil", "loteria", "fofoca",
     "onde assistir", "escalação", "futebol", "brasileirão", "campeonato brasileiro", "data fifa",
     "libertadores", "copa do brasil", "champions league", "eliminatórias", "seleção brasileira",
@@ -225,14 +228,14 @@ STOPWORDS_DEDUP = {
 }
 
 # ==============================================================================
-# COBERTURA COMPLETA: AÇÕES B3 + BDRs/ETFs + FIIs/IFIX + RENDA FIXA + JUROS & MACRO
+# COBERTURA COMPLETA: RENDA VARIÁVEL (AÇÕES B3 + BDRs + FIIs) + RENDA FIXA + ECONOMIA
 # ==============================================================================
 PILAR_LABELS: Dict[str, str] = {
     "ACOES": "📊 <b>AÇÕES B3</b>",
     "BDR": "🌎 <b>BDR &amp; EXTERIOR</b>",
     "FIIS": "🏢 <b>FIIs</b>",
     "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
-    "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
+    "MACRO": "🌐 <b>ECONOMIA &amp; MACRO</b>",
 }
 
 MAPA_INVESTIMENTOS_AFETADOS: Dict[str, str] = {
@@ -251,6 +254,10 @@ MAPA_INVESTIMENTOS_AFETADOS: Dict[str, str] = {
     "renda fixa": "Renda Fixa",
     "tesouro direto": "Renda Fixa",
     "renda variavel": "Renda Variável",
+    "economia": "Economia",
+    "economia geral": "Economia",
+    "macro": "Economia",
+    "macroeconomia": "Economia",
 }
 
 EMPRESAS_B3_MAPA: Tuple[Tuple[str, str, Tuple[str, ...], Tuple[str, ...]], ...] = (
@@ -471,9 +478,17 @@ TERMOS_MACRO_JUROS = (
     "relatório focus", "banco central", "galípolo", "galipolo", "taxa básica de juros",
     "taxa de juros", "arcabouço fiscal", "meta fiscal", "dívida pública", "déficit fiscal",
     "superávit primário", "déficit primário", "pacote fiscal", "corte de gastos",
+    "arrecadação federal", "contas públicas", "gastos públicos", "imposto de renda", "iof",
     "ministério da fazenda", "haddad", "orçamento público", "orçamento federal",
-    "reforma tributária", "ibovespa", "federal reserve", "juros dos eua", "treasuries",
-    "treasury", "payroll", "pib do brasil", "crescimento do pib", "dólar", "câmbio",
+    "reforma tributária", "ibovespa", "federal reserve", "fomc", "juros dos eua", "treasuries",
+    "treasury", "payroll", "cpi", "pce", "inflação nos eua", "economia dos eua",
+    "economia americana", "economia chinesa", "economia da china", "banco central europeu",
+    "guerra comercial", "tarifas comerciais", "tarifas de importação", "tarifaço", "recessão",
+    "pib", "pib do brasil", "crescimento do pib", "ibc-br", "atividade econômica",
+    "produção industrial", "vendas no varejo", "setor de serviços", "caged", "empregos formais",
+    "taxa de desemprego", "pnad", "pmi", "balança comercial", "exportações", "importações",
+    "conta corrente", "fluxo estrangeiro", "investimento estrangeiro", "petróleo", "brent",
+    "opep", "minério de ferro", "commodities", "dólar", "câmbio", "poupança",
 )
 
 REGEX_BB_BANCO = re.compile(r"\bBB\b(?!\s*(?:Seguridade|Investimentos|BI|-BI|Asset|DTVM|Consórcios|Previdência))")
@@ -532,16 +547,26 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
     "fundo imobiliário": 22, "fundos imobiliários": 22, "fii": 20, "fiis": 20, "ifix": 22,
     "fiagro": 22, "rendimento por cota": 24, "por cota": 18, "cotistas": 16, "vacância": 20,
     "emissão de cotas": 22, "p/vp": 16, "galpões logísticos": 16, "lajes corporativas": 16,
-    # Renda Fixa & Juros / Macro
+    # Renda Fixa, Juros & Economia Geral
     "tesouro direto": 24, "tesouro ipca": 24, "tesouro selic": 22, "tesouro prefixado": 22,
     "ntn-b": 22, "renda fixa": 20, "cdb": 18, "lci": 20, "lca": 20, "cri": 18, "cra": 18,
     "debêntures": 22, "debênture": 20, "cdi": 18, "di futuro": 22, "curva de juros": 22,
     "juros futuros": 22, "títulos públicos": 22, "fgc": 22, "isenção de ir": 22, "juro real": 20,
-    "selic": 24, "copom": 26, "ata do copom": 24, "ipca": 24, "ipca-15": 22, "igp-m": 18,
-    "inflação": 18, "boletim focus": 22, "banco central": 18, "taxa básica de juros": 22,
+    "poupança": 16, "selic": 24, "copom": 26, "ata do copom": 24, "ipca": 24, "ipca-15": 22,
+    "igp-m": 18, "inflação": 18, "boletim focus": 22, "banco central": 18, "taxa básica de juros": 22,
     "taxa de juros": 20, "arcabouço fiscal": 20, "meta fiscal": 20, "dívida pública": 18,
-    "corte de gastos": 20, "reforma tributária": 18, "federal reserve": 20, "treasuries": 18,
-    "payroll": 18, "ibovespa": 16, "dólar": 14, "câmbio": 14,
+    "arrecadação federal": 18, "contas públicas": 18, "gastos públicos": 18, "imposto de renda": 18,
+    "iof": 18, "corte de gastos": 20, "reforma tributária": 18, "federal reserve": 20, "fomc": 20,
+    "treasuries": 18, "payroll": 18, "cpi": 20, "pce": 20, "inflação nos eua": 20,
+    "economia dos eua": 18, "economia americana": 18, "economia chinesa": 18, "economia da china": 18,
+    "banco central europeu": 18, "guerra comercial": 18, "tarifas comerciais": 18,
+    "tarifas de importação": 18, "tarifaço": 18, "recessão": 18,
+    "pib": 20, "ibc-br": 22, "atividade econômica": 18, "produção industrial": 18,
+    "vendas no varejo": 18, "setor de serviços": 16, "caged": 20, "empregos formais": 18,
+    "taxa de desemprego": 18, "pnad": 18, "pmi": 18, "balança comercial": 18,
+    "exportações": 14, "importações": 14, "conta corrente": 18, "fluxo estrangeiro": 20,
+    "investimento estrangeiro": 18, "petróleo": 16, "brent": 18, "opep": 18,
+    "minério de ferro": 20, "commodities": 16, "ibovespa": 16, "dólar": 14, "câmbio": 14,
 }
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
@@ -628,7 +653,7 @@ class NoticiaPreparada:
 
 
 # ==============================================================================
-# DETECÇÃO AMPLA (AÇÕES B3 + BDRs/ETFs + FIIs/IFIX + RENDA FIXA + JUROS & MACRO)
+# DETECÇÃO AMPLA (AÇÕES B3 + BDRs/ETFs + FIIs/IFIX + RENDA FIXA + ECONOMIA)
 # ==============================================================================
 def _contem_termo_exato(texto_low: str, termos: Tuple[str, ...]) -> bool:
     return any(re.search(r"(?<!\w)" + re.escape(k) + r"(?!\w)", texto_low) for k in termos)
@@ -722,17 +747,21 @@ def _detectar_tema_em_texto(txt_low: str) -> Tuple[Optional[str], Optional[str]]
         return "bdr_exterior", "BDR"
     if _contem_termo_exato(txt_low, ("tesouro direto", "tesouro ipca", "tesouro selic", "tesouro prefixado", "ntn-b", "títulos públicos", "título público")):
         return "rf_tesouro", "RENDA_FIXA"
-    if _contem_termo_exato(txt_low, ("cdb", "cdbs", "lci", "lcis", "lca", "lcas", "cri", "cra", "debênture", "debêntures", "fgc", "renda fixa", "cdi", "di futuro", "curva de juros", "juros futuros", "isenção de ir")):
+    if _contem_termo_exato(txt_low, ("cdb", "cdbs", "lci", "lcis", "lca", "lcas", "cri", "cra", "debênture", "debêntures", "fgc", "renda fixa", "cdi", "di futuro", "curva de juros", "juros futuros", "isenção de ir", "poupança")):
         return "rf_credito_juros", "RENDA_FIXA"
     if _contem_termo_exato(txt_low, ("copom", "selic", "ata do copom", "taxa básica de juros", "taxa de juros", "galípolo", "galipolo", "banco central")):
         return "macro_selic", "MACRO"
     if _contem_termo_exato(txt_low, ("ipca", "ipca-15", "igp-m", "inflação", "boletim focus", "relatório focus")):
         return "macro_inflacao", "MACRO"
-    if _contem_termo_exato(txt_low, ("arcabouço fiscal", "meta fiscal", "dívida pública", "déficit fiscal", "superávit primário", "pacote fiscal", "corte de gastos", "reforma tributária", "ministério da fazenda", "haddad")):
+    if _contem_termo_exato(txt_low, ("arcabouço fiscal", "meta fiscal", "dívida pública", "déficit fiscal", "superávit primário", "pacote fiscal", "corte de gastos", "reforma tributária", "arrecadação federal", "contas públicas", "gastos públicos", "imposto de renda", "iof", "ministério da fazenda", "haddad")):
         return "macro_fiscal", "MACRO"
-    if _contem_termo_exato(txt_low, ("federal reserve", "juros dos eua", "treasuries", "treasury", "payroll")):
-        return "macro_fed", "MACRO"
-    if _contem_termo_exato(txt_low, ("dólar", "câmbio", "ibovespa", "pib do brasil", "crescimento do pib", "renda variável", "small caps")):
+    if _contem_termo_exato(txt_low, ("pib", "pib do brasil", "crescimento do pib", "ibc-br", "atividade econômica", "produção industrial", "vendas no varejo", "setor de serviços", "caged", "empregos formais", "taxa de desemprego", "pnad", "pmi", "balança comercial", "conta corrente", "fluxo estrangeiro", "investimento estrangeiro")):
+        return "macro_atividade", "MACRO"
+    if _contem_termo_exato(txt_low, ("federal reserve", "fomc", "juros dos eua", "treasuries", "treasury", "payroll", "cpi", "pce", "inflação nos eua", "economia dos eua", "economia americana", "economia chinesa", "economia da china", "banco central europeu", "guerra comercial", "tarifas comerciais", "tarifas de importação", "tarifaço", "recessão")):
+        return "macro_global", "MACRO"
+    if _contem_termo_exato(txt_low, ("petróleo", "brent", "opep", "minério de ferro", "commodities")):
+        return "macro_commodities", "MACRO"
+    if _contem_termo_exato(txt_low, ("dólar", "câmbio", "ibovespa", "renda variável", "small caps")):
         return "macro_mercado", "MACRO"
     return None, None
 
@@ -1315,7 +1344,7 @@ def montar_mensagem_investidor(titulo: str, paragrafos: List[str], analise: Anal
 
 
 # ==============================================================================
-# CURADORIA EDITORIAL COM GEMINI (RENDA VARIÁVEL + BDR + FIIs + RENDA FIXA + IMPACTO HONESTO)
+# CURADORIA EDITORIAL COM GEMINI (RENDA FIXA + RENDA VARIÁVEL + ECONOMIA + IMPACTO HONESTO)
 # ==============================================================================
 def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
     if not texto_bruto:
@@ -1355,7 +1384,7 @@ def _normalizar_investimentos_afetados(lista_raw: Any, pilar_fallback: str = "")
             "BDR": ["BDRs"],
             "FIIS": ["FIIs"],
             "RENDA_FIXA": ["Renda Fixa"],
-            "MACRO": ["Renda Fixa", "Renda Variável"],
+            "MACRO": ["Economia", "Renda Fixa", "Renda Variável"],
         }
         validos = list(mapa_pilar.get(pilar_fallback, ["Renda Variável"]))
     return validos[:3]
@@ -1585,9 +1614,9 @@ async def refinar_materia_com_gemini(
     paragrafos: List[str],
     analise: AnaliseHeuristica,
 ) -> Tuple[str, Optional[Tuple[str, str]]]:
-    """Usa o Gemini (somente família Flash-Lite/Flash gratuita) para validar se a matéria é relevante
-    para investidores de Ações B3, BDRs, FIIs, Renda Fixa ou Renda Variável no geral, e reescrevê-la
-    com Começo, Meio e Fim + pincelada final honesta de impacto por classe de investimento.
+    """Usa o Gemini (somente família Flash-Lite/Flash gratuita) para validar se a matéria agrega
+    valor real a investidores de Renda Fixa, Renda Variável (Ações B3, BDRs, FIIs) e Economia,
+    reescrevendo com Começo, Meio e Fim + pincelada final honesta de impacto.
     Retorna:
       - ("APROVADA", (post_html, caption_curta_html))
       - ("REJEITADA", None) -> IA confirmou que é irrelevante/ruído/paywall raso
@@ -1606,40 +1635,39 @@ async def refinar_materia_com_gemini(
     if not modelos_sessao:
         return "FALLBACK", None
 
-    tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "Nenhum (Renda Fixa / Macro / Setorial)"
+    tickers_str = ", ".join(analise.tickers[:3]) if analise.tickers else "Nenhum (Renda Fixa / Economia / Macro)"
     prompt = (
         "Você é um editor financeiro sênior escrevendo posts curtos, claros, didáticos e 100% honestos para um canal de "
-        "investidores brasileiros no Telegram. Nosso público investe em:\n"
-        "- Ações da B3 (e Renda Variável no geral)\n"
-        "- BDRs e ETFs (exposição a empresas estrangeiras/EUA)\n"
-        "- FIIs e FIAGROs\n"
-        "- Renda Fixa no geral (Tesouro Direto, CDB, LCI/LCA, CRI/CRA, Debêntures, Selic/CDI, IPCA e Curva de Juros)\n\n"
+        "investidores brasileiros no Telegram. Os seguidores do canal são investidores de:\n"
+        "- Renda Fixa no geral (Tesouro Direto, CDB, LCI/LCA, CRI/CRA, Debêntures, Selic/CDI, IPCA e Curva de Juros)\n"
+        "- Renda Variável no geral (Ações da B3, BDRs/ETFs, FIIs e FIAGROs)\n"
+        "- Economia no geral (indicadores econômicos, inflação, juros, fiscal, PIB, emprego, câmbio, commodities e economia global que ajudam o investidor a entender o cenário)\n\n"
         f"PILAR DETECTADO: {analise.pilar_chave}\n"
         f"TICKER(S) DETECTADO(S): {tickers_str}\n"
         f"TÍTULO ORIGINAL: {titulo}\n"
         f"TEXTO DA MATÉRIA:\n{texto_base}\n\n"
-        "TAREFA 1 — FILTRO RIGOROSO DE RELEVÂNCIA (HONESTIDADE TOTAL):\n"
-        "APROVE (aprovada=true) somente se a notícia for REALMENTE útil e concreta para investidores de pelo menos uma dessas classes:\n"
-        "- Ações B3 / Renda Variável: dividendos, JCP, data-com, recompra, balanços/resultados, fusões/aquisições, fatos relevantes, leilões, dívida, guidance ou explicação real de forte alta/queda.\n"
-        "- BDRs / Exterior: resultados, dividendos, splits ou fatos relevantes de grandes empresas negociadas via BDR na B3 (ex.: Apple, Nvidia, Microsoft, Amazon, Alphabet, Meta, Tesla, Berkshire, grandes bancos EUA), S&P 500, Nasdaq ou ETFs.\n"
-        "- FIIs / FIAGROs: dividendos por cota, emissões, vacância, compra/venda de imóveis, IFIX, crédito imobiliário/agro.\n"
-        "- Renda Fixa & Macro: Selic/Copom, IPCA/inflação, Focus, taxas do Tesouro Direto e DI futuro, CDB/LCI/LCA/debêntures, FGC, tributação de investimentos, fiscal, juros nos EUA (Fed/Treasuries) ou câmbio com efeito prático na carteira.\n"
-        "REJEITE (aprovada=false) se:\n"
-        "- For criptomoeda, esportes/futebol/patrocínio, política partidária sem efeito financeiro concreto, polícia/crime, fofoca/entretenimento, lançamentos de produtos/séries sem impacto financeiro real, benefícios sociais (INSS/Bolsa Família), clickbait sem dado concreto ou propaganda de corretora/curso.\n"
-        "- O texto estiver raso/cortado por paywall sem informações suficientes para montar começo, meio e fim.\n"
-        "- Não houver relação REAL e honesta com nenhum dos investimentos do público (NUNCA invente ou force uma ligação para tentar aprovar).\n\n"
+        "TAREFA 1 — TESTE DE VALOR REAL PARA OS SEGUIDORES (CURADORIA EXIGENTE):\n"
+        "PERGUNTA DECISIVA: Depois de ler o post em 20 segundos, um investidor de renda fixa/variável que gosta de economia vai sentir que a notícia REALMENTE agregou conhecimento útil sobre mercado ou economia?\n"
+        "APROVE (aprovada=true) somente se a resposta for SIM e houver fato concreto relevante:\n"
+        "- Renda Variável (Ações B3 / BDRs / ETFs / FIIs): dividendos, JCP, data-com, recompra, balanços/resultados, fusões/aquisições, fatos relevantes, leilões, dívida, guidance, vacância/emissões de FIIs, resultados de grandes BDRs (Apple, Nvidia, Microsoft, Amazon, Alphabet, Meta, Tesla, Berkshire, bancos EUA), Ibovespa, IFIX, S&P 500 ou explicação real de forte alta/queda.\n"
+        "- Renda Fixa: Selic/Copom, taxas do Tesouro Direto e curva DI, CDB/LCI/LCA/CRI/CRA/debêntures, FGC, poupança, tributação/isenção de IR em investimentos.\n"
+        "- Economia no geral que agrega: IPCA/inflação, Boletim Focus, PIB, IBC-Br, Caged/desemprego, produção industrial, varejo, balança comercial, arrecadação/contas públicas/arcabouço fiscal, dólar/câmbio, petróleo/minério de ferro, Fed/juros dos EUA, CPI/PCE, economia chinesa/europeia e tarifas comerciais com impacto real na economia.\n"
+        "REJEITE (aprovada=false) sem dó se:\n"
+        "- For ruído político partidário/declaração vaga de político sem medida econômica concreta, criptomoeda, esportes/futebol/patrocínio, polícia/crime, fofoca/entretenimento, lançamento de produto/série sem relevância financeira, assistencialismo puro (INSS, Bolsa Família, CadÚnico, Serasa limpa nome), clickbait vazio sem dado concreto ou propaganda de corretora/curso.\n"
+        "- For uma nota rasa/irrelevante ou cortada por paywall que não entregue começo, meio e fim reais.\n"
+        "- Não agregar valor genuíno ao investidor (NUNCA invente nem force importância para tentar aprovar).\n\n"
         "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO, FIM E PINCELADA FINAL HONESTA (se aprovada=true):\n"
         "Escreva em português claro, objetivo e jornalístico, somando entre 620 e 940 caracteres no total dos 3 blocos:\n"
         "- titulo: manchete direta e clara (1 frase, sem clickbait, sem nome de portal).\n"
-        "- comeco (COMEÇO — O Fato, ~220 a 320 chars): o que aconteceu de concreto, citando o ativo/órgão/tema e os números, taxas ou valores exatos da matéria.\n"
-        "- meio (MEIO — Contexto e Decifração, ~220 a 320 chars): por que isso aconteceu, comparação com períodos anteriores, datas-chave ou explicação didática de termos técnicos da matéria (ex.: JCP, data-com, NTN-B, P/VP, curva DI, BDR, vacância).\n"
-        "- fim_impacto (FIM — Pincelada honesta para o investidor, ~180 a 280 chars): explique de forma objetiva e SEM EXAGERAR por que essa notícia importa na prática e como ela se conecta aos investimentos afetados. NÃO comece com 'No radar do investidor:' (o rótulo já é adicionado automaticamente).\n"
-        "- investimentos_afetados: array com 1 a 3 classes REALMENTE afetadas, escolhendo SOMENTE entre estes valores exatos: ['Ações', 'BDRs', 'FIIs', 'Renda Fixa', 'Renda Variável']. Cite apenas as classes que têm ligação real e direta (não liste todas sem motivo).\n"
+        "- comeco (COMEÇO — O Fato, ~220 a 320 chars): o que aconteceu de concreto, citando o ativo/órgão/indicador e os números, taxas ou datas exatas da matéria.\n"
+        "- meio (MEIO — Contexto e Decifração, ~220 a 320 chars): por que isso aconteceu, comparação com períodos anteriores, datas-chave ou explicação didática de termos técnicos da matéria (ex.: JCP, data-com, NTN-B, P/VP, curva DI, IBC-Br, CPI, BDR, vacância).\n"
+        "- fim_impacto (FIM — Pincelada honesta para o investidor, ~180 a 280 chars): explique de forma objetiva e SEM EXAGERAR por que essa notícia importa na prática e como ela se conecta à economia e/ou aos investimentos afetados. NÃO comece com 'No radar do investidor:' (o rótulo já é adicionado automaticamente).\n"
+        "- investimentos_afetados: array com 1 a 3 itens REALMENTE afetados, escolhendo SOMENTE entre estes valores exatos: ['Ações', 'BDRs', 'FIIs', 'Renda Fixa', 'Renda Variável', 'Economia']. Cite apenas os que têm ligação real e direta.\n"
         "- tag_evento: escolha EXATAMENTE uma opção entre: 'DIVIDENDOS', 'BALANCOS', 'ACOES', 'BDR', 'FIIS', 'RENDA_FIXA', 'MACRO'.\n"
-        "- tickers: array com até 3 tickers oficiais da B3 (ações, BDRs, FIIs ou ETFs, ex.: ['PETR4'], ['NVDC34'], ['MXRF11']) que sejam realmente protagonistas; retorne [] se for matéria de Renda Fixa, juros, macro ou setorial sem ativo específico.\n\n"
+        "- tickers: array com até 3 tickers oficiais da B3 (ações, BDRs, FIIs ou ETFs, ex.: ['PETR4'], ['NVDC34'], ['MXRF11']) que sejam realmente protagonistas; retorne [] se for matéria de Renda Fixa, economia geral, juros, macro ou setorial sem ativo específico.\n\n"
         "REGRAS INVIOLÁVEIS (ZERO MENTIRA):\n"
         "- NUNCA invente números, percentuais, taxas, datas ou fatos que não estejam no texto original.\n"
-        "- NUNCA prometa ou garanta que um ativo vai subir ou cair; use linguagem fiel e responsável ('tende a', 'pode pressionar', 'reforça o fluxo de caixa', 'eleva a remuneração de títulos pós-fixados').\n"
+        "- NUNCA prometa ou garanta que um ativo vai subir ou cair; use linguagem fiel e responsável ('tende a', 'pode pressionar', 'reforça o fluxo de caixa', 'eleva a remuneração de títulos pós-fixados', 'ajuda a calibrar as expectativas de juros').\n"
         "- NUNCA faça recomendação de compra ou venda.\n"
         "- NUNCA use markdown (*, **, #), emojis no texto ou siglas de carteiras/estratégias.\n"
         "- NUNCA repita o título dentro do bloco 'comeco'.\n"
@@ -1736,7 +1764,7 @@ async def refinar_materia_com_gemini(
         "BDR": "🌎 <b>BDR &amp; EXTERIOR</b>",
         "FIIS": "🏢 <b>FIIs</b>",
         "RENDA_FIXA": "🏛️ <b>RENDA FIXA</b>",
-        "MACRO": "🏦 <b>JUROS &amp; MACRO</b>",
+        "MACRO": "🌐 <b>ECONOMIA &amp; MACRO</b>",
     }
     cat_label = mapa_tags.get(tag_ia, analise.categoria_label)
 
