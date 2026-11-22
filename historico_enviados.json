@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/pi/piaui/noticia/2026/11/17/incendio-atinge-casa-em-teresina.ghtml",
-    "https://g1.globo.com/economia/noticia/2026/11/17/ate-onde-o-dolar-pode-subir-por-que-o-real-e-a-moeda-que-mais-perdeu-valor-desde-a-reeleicao-de-lula.ghtml",
     "https://g1.globo.com/pi/piaui/noticia/2026/11/17/motociclista-morre-acidente-carro-parnaiba.ghtml",
     "https://g1.globo.com/tecnologia/noticia/2026/11/17/meta-lanca-app-de-compra-e-venda-de-produtos-usados-no-brasil-para-concorrer-com-enjoei.ghtml",
     "https://www.infomoney.com.br/mercados/o-que-esperar-para-o-dolar-nos-proximos-dias-apos-moeda-passar-os-r-580/",
@@ -799,7 +797,9 @@
     "0748f763d58af596",
     "e9ca1f4fe41f1748",
     "20f6c04db3c1b548",
-    "8b15999a1ab7f089"
+    "8b15999a1ab7f089",
+    "59b0d03a2b7b2f4a",
+    "538a67fae634d5e8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1290,10 +1290,6 @@
     "Binance sofre ataque hacker histórico de US$ 6,3 bilhões e suspende saques temporariamente"
   ],
   "eventos_recentes": [
-    {
-      "chave": "btg_pactual::GERAL_ATIVO",
-      "ts": 1795199448.913444
-    },
     {
       "chave": "porto_seguro::GERAL_ATIVO",
       "ts": 1795203941.105008
