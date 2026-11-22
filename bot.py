@@ -89,6 +89,8 @@ MAX_HISTORICO = 800
 MAX_NOTICIAS_POR_VEZ = int(os.environ.get("MAX_NOTICIAS_POR_VEZ", "5"))
 MAX_IDADE_MINUTOS = int(os.environ.get("MAX_IDADE_MINUTOS", "90"))
 SCORE_MINIMO_CORTE = int(os.environ.get("SCORE_MINIMO_CORTE", "24"))
+SCORE_MINIMO_CORTE_IA = int(os.environ.get("SCORE_MINIMO_CORTE_IA", "12"))
+MAX_CHAMADAS_GEMINI_POR_CICLO = int(os.environ.get("MAX_CHAMADAS_GEMINI_POR_CICLO", "20"))
 MAX_CONCURRENT_REQUESTS = 12
 
 MAX_HTML_BYTES = 5 * 1024 * 1024
@@ -159,6 +161,12 @@ FEEDS = [
     "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
 ]
 
+FEEDS_GERAL_NAO_DEDICADOS = (
+    "https://exame.com/feed/",
+    "https://www.cnnbrasil.com.br/feed/",
+    "https://www.poder360.com.br/feed/",
+)
+
 DOMINIOS_BLOQUEADOS = (
     "valor.globo.com",
 )
@@ -166,10 +174,8 @@ DOMINIOS_BLOQUEADOS = (
 CAMINHOS_URL_BLOQUEADOS = (
     "/esporte/", "/esportes/", "/sports/", "/poder-sports/", "/futebol/", "/entretenimento/",
     "/pop/", "/estilo/", "/viagem/", "/gastronomia/", "/astrologia/", "/loterias/", "/curiosidades/",
-    "/tv/", "/famosos/", "/cultura/", "/poder-midia/", "/midia/", "/comportamento/",
-    "/policia/", "/apostas/", "/casual/", "/ciencia/", "/blog-", "/cursos/",
-    "/marketing/", "/carros/", "/autoesporte/", "/turismo/", "/saude/", "/educacao/",
-    "/carreira/", "/inteligencia-artificial/",
+    "/tv/", "/famosos/", "/cultura/", "/poder-midia/", "/midia/",
+    "/policia/", "/apostas/", "/cursos/", "/marketing/", "/carros/", "/autoesporte/", "/turismo/",
 )
 
 BLOQUEADOS_PROPAGANDA_CORRETORA = (
@@ -181,9 +187,9 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
     "turbinam benefícios", "turbina benefícios", "pontos e milhas", "acumule pontos",
     "cartão de criptomoedas", "encerra seu cartão", "cartão black", "anuidade grátis",
     # Patrocínios esportivos, estádios, clubes, shows e marketing (sem relevância p/ investidor)
-    "naming rights", "patrocínio", "patrocinador", "patrocina", "estádio", "estadio",
-    "morumbi", "maracanã", "maracana", "allianz parque", "neo química", "neo quimica",
-    "camisa do", "uniforme do", "uniforme da", "torcida", "torcedores", "clube de futebol", "clube e banco",
+    "naming rights", "estádio", "estadio", "morumbi", "maracanã", "maracana",
+    "allianz parque", "neo química", "neo quimica", "camisa do", "uniforme do",
+    "uniforme da", "torcida", "torcedores", "clube de futebol", "clube e banco",
     "segundo o ge", "globoesporte", "flamengo", "corinthians", "palmeiras", "vasco",
     "botafogo", "fluminense", "grêmio", "cruzeiro", "atlético-mg", "atletico-mg",
     "santos fc", "são paulo fc", "cbf", "fifa", "conmebol", "neymar", "rock in rio",
@@ -192,28 +198,26 @@ BLOQUEADOS_PROPAGANDA_CORRETORA = (
 )
 
 BLOQUEADOS_APENAS_NO_TITULO = (
-    "dona do claude", "anthropic", "openai", "chatgpt", "spacex", "elon musk", "neuralink",
-    "tiktok", "bytedance", "sam altman", "dogecoin", "memecoin", "memecoins", "shiba inu",
-    "pepecoin", "floki", "airdrop", "golpe cripto", "pirâmide financeira", "piramide financeira",
-    "esquema ponzi", "calendário do inss", "meu inss", "benefício do inss",
-    "aposentadoria do inss", "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia",
-    "auxílio gás", "saque-aniversário", "cnh social", "bpc/loas", "cadúnico", "cadunico",
-    "auxílio-doença", "seguro-desemprego", "lote residual", "serasa limpa nome", "feirão limpa nome",
-    "desenrola brasil", "leilão da receita", "apreende", "contrabando", "medalha de ouro",
-    "olimpíadas", "olimpiadas", "concurso público", "edital publicado",
-    "quem pode fazer mba", "horóscopo", "mega-sena", "lotofácil", "loteria", "fofoca",
-    "onde assistir", "escalação", "futebol", "brasileirão", "campeonato brasileiro", "data fifa",
-    "libertadores", "copa do brasil", "champions league", "eliminatórias", "seleção brasileira",
-    "gta 6", "playstation", "xbox", "canetas emagrecedoras", "cabelo cair", "melhores produtos de",
-    "quadro icônico", "obra de arte", "jogo do tigrinho", "cassino online", "operação cash out",
-    "assalto", "sequestro", "homicídio", "tráfico de drogas", "facção criminosa", "lei da dosimetria",
-    "ao vivo:", "tempo real:", "minuto a minuto", "morning call", "giro de mercado",
-    "giro dos mercados", "radar do mercado", "radar corporativo", "resumo do dia",
-    "resumo do mercado", "destaques do dia", "destaques corporativos", "o que movimenta",
-    "para ficar de olho", "tudo o que você precisa saber", "acompanhe os destaques",
-    "agenda do dia", "melhores ações para", "carteira recomendada", "recomendações da semana",
-    "vale a pena comprar", "vale a pena investir", "quanto rende", "é hora de comprar",
-    "é hora de investir", "como investir em", "qual ação escolher", "qual banco paga mais",
+    "dogecoin", "memecoin", "memecoins", "shiba inu", "pepecoin", "floki", "airdrop",
+    "golpe cripto", "pirâmide financeira", "piramide financeira", "esquema ponzi",
+    "calendário do inss", "meu inss", "benefício do inss", "aposentadoria do inss",
+    "pis/pasep", "abono salarial", "bolsa família", "pé-de-meia", "auxílio gás",
+    "saque-aniversário", "cnh social", "bpc/loas", "cadúnico", "cadunico",
+    "auxílio-doença", "seguro-desemprego", "lote residual", "serasa limpa nome",
+    "feirão limpa nome", "desenrola brasil", "leilão da receita", "apreende",
+    "contrabando", "medalha de ouro", "olimpíadas", "olimpiadas", "concurso público",
+    "edital publicado", "horóscopo", "mega-sena", "lotofácil", "loteria", "fofoca",
+    "onde assistir", "escalação", "futebol", "brasileirão", "campeonato brasileiro",
+    "data fifa", "libertadores", "copa do brasil", "champions league", "eliminatórias",
+    "seleção brasileira", "gta 6", "playstation", "xbox", "jogo do tigrinho",
+    "cassino online", "assalto", "sequestro", "homicídio", "tráfico de drogas",
+    "facção criminosa", "ao vivo:", "tempo real:", "minuto a minuto", "morning call",
+    "giro de mercado", "giro dos mercados", "radar do mercado", "radar corporativo",
+    "resumo do dia", "resumo do mercado", "destaques do dia", "destaques corporativos",
+    "o que movimenta", "para ficar de olho", "tudo o que você precisa saber",
+    "acompanhe os destaques", "agenda do dia", "vale a pena comprar",
+    "vale a pena investir", "quanto rende", "é hora de comprar", "é hora de investir",
+    "como investir em", "qual ação escolher", "qual banco paga mais",
 )
 
 STOPWORDS_DEDUP = {
@@ -611,8 +615,26 @@ PESOS_EVENTOS_FINANCEIROS: Dict[str, int] = {
     "taxa de desemprego": 18, "pnad": 18, "pmi": 18, "balança comercial": 18,
     "exportações": 14, "importações": 14, "conta corrente": 18, "fluxo estrangeiro": 20,
     "investimento estrangeiro": 18, "petróleo": 16, "brent": 18, "opep": 18,
-    "minério de ferro": 20, "commodities": 16, "ibovespa": 16, "dólar": 14, "câmbio": 14,
+    "minério de ferro": 20, "commodities": 16, "ouro": 18, "prata": 16, "cobre": 16,
+    "soja": 16, "milho": 14, "agronegócio": 16, "safra": 14, "previdência privada": 20,
+    "pgbl": 20, "vgbl": 20, "open finance": 16, "ipo": 20, "ibovespa": 16, "dólar": 14, "câmbio": 14,
 }
+
+TERMOS_TRIAGEM_IA = (
+    "economia", "econômico", "economica", "mercado", "mercados", "bolsa", "bolsas",
+    "banco", "bancos", "fintech", "empresa", "empresas", "companhia", "holding",
+    "investidor", "investidores", "investimento", "investimentos", "carteira",
+    "juros", "juro", "inflação", "inflacao", "dólar", "dolar", "euro", "câmbio", "cambio",
+    "imposto", "impostos", "tributo", "tributos", "tributação", "fiscal", "orçamento",
+    "bilhão", "bilhões", "bilhao", "bilhoes", "trilhão", "trilhões", "milhão", "milhões",
+    "lucro", "receita", "prejuízo", "balanço", "dividendo", "ação", "ações", "ipo", "m&a",
+    "fusão", "aquisição", "venda", "compra", "contrato", "leilão", "concessão", "tarifa",
+    "tarifas", "sanção", "sanções", "petróleo", "ouro", "prata", "cobre", "soja", "safra",
+    "agronegócio", "energia", "elétrica", "minério", "commodities", "exportação", "importação",
+    "crédito", "financiamento", "previdência", "pgbl", "vgbl", "pix", "open finance",
+    "cripto", "bitcoin", "ethereum", "fundo", "fundos", "derivativos", "futuro", "futuros",
+    "fed", "copom", "selic", "ipca", "pib", "fmi", "opep", "b3", "cvm", "bc", "fazenda",
+)
 
 COOLDOWN_EVENTO_MINUTOS: Dict[str, int] = {
     "PROVENTOS": 1080, "BALANCO": 1440, "EVENTO_CORP": 1080, "GERAL_ATIVO": 480,
@@ -827,11 +849,27 @@ def detectar_tema_macro_ou_rf(titulo: str, trecho: str = "") -> Tuple[Optional[s
     return _detectar_tema_em_texto(f"{titulo} {(trecho or '')[:260]}".lower())
 
 
+def feed_eh_dedicado_mercado(url_feed: str) -> bool:
+    return url_feed not in FEEDS_GERAL_NAO_DEDICADOS
+
+
 def titulo_eh_relevante_mercado(titulo: str, desc_bruta: str = "") -> bool:
     if extrair_protagonistas_titulo(titulo):
         return True
     tema_id, _ = detectar_tema_macro_ou_rf(titulo, limpar_html(desc_bruta)[:260])
     return bool(tema_id)
+
+
+def titulo_passa_triagem_ia(titulo: str, desc_bruta: str = "", url_feed: str = "") -> bool:
+    """Triagem leve para o modo IA: em portais financeiros dedicados deixa a IA decidir;
+    em portais generalistas exige apenas um sinal amplo de economia/negócios/mercado.
+    """
+    if url_feed and feed_eh_dedicado_mercado(url_feed):
+        return True
+    if titulo_eh_relevante_mercado(titulo, desc_bruta):
+        return True
+    amostra = f"{titulo} {limpar_html(desc_bruta)[:260]}".lower()
+    return _contem_termo_exato(amostra, TERMOS_TRIAGEM_IA)
 
 
 def definir_tag_curta_mercado(titulo: str, pilar_principal: str) -> str:
@@ -855,7 +893,11 @@ def definir_tag_curta_mercado(titulo: str, pilar_principal: str) -> str:
     return PILAR_LABELS.get(pilar_principal, "📊 <b>AÇÕES B3</b>")
 
 
-def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeuristica:
+def avaliar_impacto_financeiro(
+    titulo: str,
+    paragrafos: List[str],
+    modo_ia_ativo: bool = False,
+) -> AnaliseHeuristica:
     if not paragrafos:
         return AnaliseHeuristica(0, "DESCARTADA", "")
 
@@ -866,9 +908,6 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
     entidades_titulo = extrair_protagonistas_titulo(titulo)
     tema_id, pilar_tema = detectar_tema_macro_ou_rf(titulo, lead)
 
-    if not entidades_titulo and not tema_id:
-        return AnaliseHeuristica(0, "DESCARTADA", "")
-
     titulo_low = re.sub(r"\breceita federal\b", "órgão tributário", titulo.lower())
     lead_low = re.sub(r"\breceita federal\b", "órgão tributário", lead.lower())
     corpo_low = re.sub(r"\breceita federal\b", "órgão tributário", corpo_texto.lower())
@@ -878,11 +917,16 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
         pilar_principal = entidades_titulo[0][1]
         tickers_exp = [tk for tk in extrair_tickers_validos(texto_completo) if tk in TICKER_PARA_EMPRESA and TICKER_PARA_EMPRESA[tk][0] in ids_protag]
         tickers_finais = list(dict.fromkeys(tickers_exp + [tk for _, _, tk in entidades_titulo]))
-    else:
-        assert tema_id is not None and pilar_tema is not None
+    elif tema_id and pilar_tema:
         ids_protag = [tema_id]
         pilar_principal = pilar_tema
         tickers_finais = []
+    elif modo_ia_ativo and len(corpo_texto) >= MIN_TEXTO_BRUTO_PARA_IA:
+        ids_protag = []
+        pilar_principal = "MACRO"
+        tickers_finais = extrair_tickers_validos(texto_completo)[:3]
+    else:
+        return AnaliseHeuristica(0, "DESCARTADA", "")
 
     pontos_eventos = 0
     termos_encontrados: List[str] = []
@@ -900,9 +944,12 @@ def avaliar_impacto_financeiro(titulo: str, paragrafos: List[str]) -> AnaliseHeu
 
     metricas = REGEX_METRICAS_NUMERICAS.findall(texto_completo)
     if pontos_eventos == 0:
-        return AnaliseHeuristica(0, "DESCARTADA", "")
+        if not (modo_ia_ativo and len(corpo_texto) >= MIN_TEXTO_BRUTO_PARA_IA):
+            return AnaliseHeuristica(0, "DESCARTADA", "")
+        score_final = SCORE_MINIMO_CORTE_IA + min(len(metricas) * 2, 8)
+    else:
+        score_final = 12 + pontos_eventos + min(len(metricas) * 3, 18)
 
-    score_final = 12 + pontos_eventos + min(len(metricas) * 3, 18)
     return AnaliseHeuristica(
         score_total=score_final,
         pilar_chave=pilar_principal,
@@ -1978,7 +2025,12 @@ def _baixar_video_ytdlp_sync(url_alvo: str, referer_url: str, pasta_temp: str) -
 # ==============================================================================
 # INGESTÃO ASSÍNCRONA, FILTRAGEM E ENVIO AO TELEGRAM
 # ==============================================================================
-async def buscar_feed_rss(client: httpx.AsyncClient, sem: asyncio.Semaphore, url_feed: str) -> List[Dict[str, Any]]:
+async def buscar_feed_rss(
+    client: httpx.AsyncClient,
+    sem: asyncio.Semaphore,
+    url_feed: str,
+    modo_ia_ativo: bool = False,
+) -> List[Dict[str, Any]]:
     agora_utc = datetime.now(timezone.utc)
     itens_validos: List[Dict[str, Any]] = []
     async with sem:
@@ -2022,7 +2074,10 @@ async def buscar_feed_rss(client: httpx.AsyncClient, sem: asyncio.Semaphore, url
         idade_min = (agora_utc - dt_pub).total_seconds() / 60.0
         if idade_min > MAX_IDADE_MINUTOS or idade_min < -15.0 or eh_propaganda_ou_lixo(title, desc_bruta, link):
             continue
-        if not titulo_eh_relevante_mercado(title, desc_bruta):
+        if modo_ia_ativo:
+            if not titulo_passa_triagem_ia(title, desc_bruta, url_feed):
+                continue
+        elif not titulo_eh_relevante_mercado(title, desc_bruta):
             continue
 
         itens_validos.append({"dt_pub": dt_pub, "item": item, "link": link, "title": title, "desc_bruta": desc_bruta})
@@ -2045,7 +2100,11 @@ async def obter_conteudo_e_midias_artigo(client: httpx.AsyncClient, sem: asyncio
     return paragrafos, foto_og, video_pag, dt_html
 
 
-async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MAX_NOTICIAS_POR_VEZ) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str], List[Dict[str, Any]], List[str]]:
+async def carregar_proximas_noticias(
+    client: httpx.AsyncClient,
+    limite: int = MAX_NOTICIAS_POR_VEZ,
+    modo_ia_ativo: bool = False,
+) -> Tuple[List[NoticiaPreparada], List[str], List[str], List[str], List[Dict[str, Any]], List[str], List[str]]:
     agora_utc = datetime.now(timezone.utc)
     agora_ts = agora_utc.timestamp()
 
@@ -2053,9 +2112,10 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
     set_links: Set[str] = set(links_hist)
     set_hashes_img: Set[str] = set(hashes_img_hist)
     titulos_rodada, leads_rodada, eventos_rodada = list(titulos_hist), list(leads_hist), list(eventos_hist)
+    links_rejeitados_ia: List[str] = []
 
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
-    resultados = await asyncio.gather(*(buscar_feed_rss(client, sem, u) for u in FEEDS))
+    resultados = await asyncio.gather(*(buscar_feed_rss(client, sem, u, modo_ia_ativo=modo_ia_ativo) for u in FEEDS))
 
     candidatos: List[Dict[str, Any]] = []
     hashes: Set[str] = set()
@@ -2068,7 +2128,9 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
     candidatos.sort(key=lambda x: x["dt_pub"], reverse=True)
 
     aprovadas: List[NoticiaPreparada] = []
-    stats = {"antiga": 0, "dup_t": 0, "dup_c": 0, "sem_img": 0, "desc": 0}
+    chamadas_ia = 0
+    corte_atual = SCORE_MINIMO_CORTE_IA if modo_ia_ativo else SCORE_MINIMO_CORTE
+    stats = {"antiga": 0, "dup_t": 0, "dup_c": 0, "sem_img": 0, "desc": 0, "rej_ia": 0}
 
     for cand in candidatos[:80]:
         if len(aprovadas) >= limite * 2:
@@ -2101,13 +2163,13 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             stats["desc"] += 1
             continue
 
-        analise = avaliar_impacto_financeiro(title, paragrafos)
-        if analise.score_total < SCORE_MINIMO_CORTE:
+        analise = avaliar_impacto_financeiro(title, paragrafos, modo_ia_ativo=modo_ia_ativo)
+        if analise.score_total < corte_atual:
             stats["desc"] += 1
             continue
 
         chaves_ev = extrair_chaves_evento_ativo(title, lead, analise.entidades)
-        if (col := evento_ja_publicado_recentemente(chaves_ev, eventos_rodada, agora_ts)):
+        if chaves_ev and (col := evento_ja_publicado_recentemente(chaves_ev, eventos_rodada, agora_ts)):
             stats["dup_c"] += 1
             logger.info("Descartada por duplicidade de assunto (%s): %s", col, title)
             continue
@@ -2124,11 +2186,22 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             stats["sem_img"] += 1
             continue
 
-        status_ia, montagem = await refinar_materia_com_gemini(client, sem, title, paragrafos, analise)
+        status_ia = "FALLBACK"
+        montagem: Optional[Tuple[str, str]] = None
+        if modo_ia_ativo and chamadas_ia < MAX_CHAMADAS_GEMINI_POR_CICLO:
+            chamadas_ia += 1
+            status_ia, montagem = await refinar_materia_com_gemini(client, sem, title, paragrafos, analise)
         if status_ia == "REJEITADA":
-            stats["desc"] += 1
+            stats["rej_ia"] += 1
+            lh_rej = gerar_hash_url(link)
+            links_rejeitados_ia.append(lh_rej)
+            set_links.add(lh_rej)
             continue
         if status_ia == "FALLBACK" or not montagem:
+            # No fallback sem IA, só publica se passar no filtro local rígido (>= SCORE_MINIMO_CORTE)
+            if analise.score_total < SCORE_MINIMO_CORTE or not analise.entidades:
+                stats["desc"] += 1
+                continue
             montagem = montar_mensagem_investidor(title, paragrafos, analise)
         if not montagem:
             stats["desc"] += 1
@@ -2145,10 +2218,10 @@ async def carregar_proximas_noticias(client: httpx.AsyncClient, limite: int = MA
             set_hashes_img.add(img_ver.sha256)
         set_links.update((link, gerar_hash_url(link)))
 
-    logger.info("Ciclo: %d candidatos | %d antigas | %d dup título | %d dup assunto | %d sem img | %d descartadas | %d aprovadas", len(candidatos), stats["antiga"], stats["dup_t"], stats["dup_c"], stats["sem_img"], stats["desc"], len(aprovadas))
+    logger.info("Ciclo: %d candidatos | %d antigas | %d dup título | %d dup assunto | %d sem img | %d rej IA | %d descartadas | %d aprovadas", len(candidatos), stats["antiga"], stats["dup_t"], stats["dup_c"], stats["sem_img"], stats["rej_ia"], stats["desc"], len(aprovadas))
     aprovadas.sort(key=lambda n: (n.score, n.dt_pub), reverse=True)
     selecionadas = sorted(aprovadas[:limite], key=lambda n: n.dt_pub)
-    return selecionadas, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist
+    return selecionadas, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist, links_rejeitados_ia
 
 
 async def telegram_request(client: httpx.AsyncClient, url: str, json_payload: Optional[Dict[str, Any]] = None, data_fields: Optional[Dict[str, Any]] = None, files: Optional[Dict[str, Any]] = None, max_retries: int = 3) -> bool:
@@ -2244,13 +2317,20 @@ async def main() -> None:
 
     async with httpx.AsyncClient(headers=HEADERS, follow_redirects=True, limits=httpx.Limits(max_keepalive_connections=15, max_connections=30)) as client:
         chave_gemini = (os.environ.get("GEMINI_API_KEY") or GEMINI_API_KEY or "").strip().strip('"').strip("'")
+        modo_ia_ativo = False
         if chave_gemini:
             modelos_ativos = await obter_modelos_gemini_ativos(client, chave_gemini)
-            logger.info("Curadoria editorial Gemini ATIVA (modelos: %s).", ", ".join(modelos_ativos) if modelos_ativos else "nenhum")
+            modo_ia_ativo = bool(modelos_ativos)
+            logger.info("Curadoria editorial Gemini ATIVA (modelos: %s | filtro leve liberado para IA).", ", ".join(modelos_ativos) if modelos_ativos else "nenhum")
         else:
             logger.info("GEMINI_API_KEY ausente — usando redator editorial local.")
 
-        noticias, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist = await carregar_proximas_noticias(client, limite=MAX_NOTICIAS_POR_VEZ)
+        noticias, links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist, links_rejeitados_ia = await carregar_proximas_noticias(
+            client, limite=MAX_NOTICIAS_POR_VEZ, modo_ia_ativo=modo_ia_ativo
+        )
+        if links_rejeitados_ia:
+            links_hist.extend(links_rejeitados_ia)
+            salvar_historico(links_hist, titulos_hist, leads_hist, eventos_hist, hashes_img_hist)
         if not noticias:
             logger.info("Nenhuma notícia inédita e recente (<= %d min) neste ciclo.", MAX_IDADE_MINUTOS)
             return
