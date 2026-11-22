@@ -713,7 +713,10 @@
     "780162c3922caf33",
     "https://www.spacemoney.com.br/economia/exterior/ataques-golfo-ira-acordo-eua/",
     "18c57ef84176ee2b",
-    "6b24c36c3ca66826"
+    "6b24c36c3ca66826",
+    "c0bb6934f29d2a02",
+    "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/ameaca-quantica-bitcoin-custodia-pontes/",
+    "dd9b50aaea53ca68"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1082,7 +1085,8 @@
     "Evolução da IA pode ampliar riscos à cibersegurança, diz especialista",
     "Angra 3 é essencial para futuro nuclear, diz ativista e escritora",
     "Bolsas chinesas flexibilizam regras para impulsionar mercado de ações",
-    "Ataques no Golfo e abertura do Irã a acordo"
+    "Ataques no Golfo e abertura do Irã a acordo",
+    "Ameaça quântica ao Bitcoin esbarra em custódia e pontes"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1159,7 +1163,8 @@
     "Agentes autônomos podem acessar sistemas e dados sensíveis sem autorização, diz pesquisador português",
     "A energia nuclear ganhou novo impulso no cenário global, em meio a debates sobre segurança, custos e o destino dos rejeitos radioativos. Governos e grandes empresas de tecnologia estão ampliando suas apostas nessa fonte energética para garantir o abastecimento e reduzir as emissões que contribuem para o aquecimento do planeta.",
     "As três principais bolsas de valores da China anunciaram planos para auxiliar os preços das ações em dificuldades com um conjunto de medidas, como a flexibilização dos requisitos para financiamento com margem.",
-    "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC."
+    "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
+    "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó"
   ],
   "eventos_recentes": [
     {
@@ -1229,6 +1234,10 @@
     {
       "chave": "amazon::GERAL_ATIVO",
       "ts": 1795352140.861495
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795357302.55217
     }
   ],
   "hashes_imagens": [
@@ -1290,6 +1299,7 @@
     "3cbf38f86c0c6df6",
     "7f779d8af595a075",
     "6c786961567f60af",
-    "8c133001ba7dcdeb"
+    "8c133001ba7dcdeb",
+    "f5e350ed021b622e"
   ]
 }
