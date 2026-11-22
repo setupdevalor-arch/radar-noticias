@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/mundo/noticia/2026/11/17/eua-atacam-ilha-do-ira.ghtml",
-    "https://exame.com/esporte/messi-em-2030-scaloni-da-pistas-sobre-futuro-do-craque-na-selecao-argentina/",
-    "https://g1.globo.com/politica/ao-vivo/senado-pacote-medidas-fiscais.ghtml",
     "https://g1.globo.com/mundo/noticia/2026/11/17/trump-serie-falhas-tecnologias-estados-unidos.ghtml",
     "https://g1.globo.com/politica/noticia/2026/11/17/caso-dark-horse-pgr-diz-ao-stf-que-apoia-prorrogar-inquerito-por-90-dias.ghtml",
     "https://www.infomoney.com.br/consumo/quina-hoje-concurso-7170-confira-o-resultado-sorteado-nesta-terca-17/",
@@ -799,7 +796,10 @@
     "7e5ddad23a734594",
     "d21c01ffff4c43c4",
     "5f53af6f48072b76",
-    "a48ed42d91b916c9"
+    "a48ed42d91b916c9",
+    "487f737ed3c09e1c",
+    "https://www.poder360.com.br/poder-economia/dolar-digital-chega-a-r-615-em-negociacao-neste-domingo/",
+    "55616bbb144767a9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1201,7 +1201,8 @@
     "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
     "Custo Brasil afasta empresas estrangeiras do mercado brasileiro",
     "Reforma tributária é positiva para nanoempreendedores, diz associação",
-    "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor"
+    "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
+    "Dólar digital chega a R$ 6,15 em negociação neste domingo"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1311,7 +1312,8 @@
     "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque",
     "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas",
     "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria",
-    "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento."
+    "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento.",
+    "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado"
   ],
   "eventos_recentes": [
     {
@@ -1425,6 +1427,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795382215.782289
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795386314.565215
     }
   ],
   "hashes_imagens": [
@@ -1519,6 +1525,7 @@
     "dfc79f6384682669",
     "626ff11222c25349",
     "359441399e0c461f",
-    "22d1431f6258a4a1"
+    "22d1431f6258a4a1",
+    "816720a10b88ec66"
   ]
 }
