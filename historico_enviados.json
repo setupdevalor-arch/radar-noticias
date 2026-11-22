@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/carreira/justica-dos-eua-derruba-limite-de-permanencia-de-estudantes-imposto-por-trump/",
-    "https://www.infomoney.com.br/politica/senado-aprova-mp-do-brasil-soberano-3-para-empresas-afetadas-por-tarifaco/",
-    "https://g1.globo.com/mundo/noticia/2026/11/17/vladimir-putin-chega-a-china-para-reuniao-trilateral-com-xi-jiping-e-trump.ghtml",
-    "https://www.moneytimes.com.br/dolar-a-vista-fecha-perto-da-estabilidade-apos-ultrapassar-os-r-580-hoje-davs/",
-    "https://redir.folha.com.br/redir/online/poder/rss091/*https://www1.folha.uol.com.br/colunas/painel/2026/11/deputado-do-pl-lanca-candidatura-a-presidencia-da-camara-em-oposicao-a-motta.shtml",
-    "https://www.moneytimes.com.br/alcolumbre-decide-adiar-votacao-do-projeto-fiscal-para-quarta-feira-em-busca-de-entendimento-sobre-destaques/",
     "https://g1.globo.com/trabalho-e-carreira/noticia/2026/11/17/stj-cobranca-taxa-uber-motoristas.ghtml",
     "https://www.seudinheiro.com/2026/internacional/beatles-inteligencia-artificial-e-a-divida-dos-eua-o-alerta-de-um-ex-fed-jcav/",
     "https://g1.globo.com/mundo/noticia/2026/11/17/protestos-ira-monarquia.ghtml",
@@ -799,7 +793,13 @@
     "https://www.spacemoney.com.br/economia/exterior/cop31-termina-sem-acordo-climatico-em-antalia/",
     "5aab6f4c1e484a3f",
     "4fab167e318e45d4",
-    "fc96e24ce1372f97"
+    "fc96e24ce1372f97",
+    "9f9702a0ec896fe1",
+    "8a5c41432f2a74a5",
+    "https://www.spacemoney.com.br/agronegocio/etanol-de-milho-27-mi-toneladas-2026/",
+    "915c726c7de523e7",
+    "https://www.spacemoney.com.br/economia/banco-do-brasil-lucro-cai-42/",
+    "4058ddaa87ab506a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1193,7 +1193,9 @@
     "Produção de café da Colômbia deve se recuperar na nova safra, afirma USDA",
     "Ataque a navio comercial na Líbia leva guerra dos drones ao Mediterrâneo",
     "Juros do cartão a 10%: a proposta de Trump que une rivais e assusta bancos",
-    "Conferência do clima na Turquia termina sem documento final"
+    "Conferência do clima na Turquia termina sem documento final",
+    "Etanol de milho deve usar 27 mi de toneladas em 2026",
+    "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1295,13 +1297,11 @@
     "A produção de café da Colômbia deve se recuperar na safra 2026/27, que teve início em outubro, com uma previsão de aumento de 5,9%, para 13,4 milhões de sacas de 60 kg, de acordo com um relatório do USDA (Departamento de Agricultura dos Estados Unidos).",
     "Uma explosão a bordo de um navio russo atracado na base naval de Benghazi, no leste da Líbia, foi causada por um suposto ataque com drone, informou neste domingo o governo sediado no leste do país, com base em uma investigação preliminar.",
     "O presidente dos Estados Unidos, Donald Trump, afirmou no sábado que pretende colaborar com o novo Congresso de maioria democrata para estabelecer um teto de 10% para as taxas de juros de cartões de crédito. A medida busca cumprir uma promessa de campanha de 2024 que encontrou resistência tanto da indústria financeira quanto de seus próprios aliado",
-    "Conforme a Agência Brasil, a 31ª edição da conferência do clima da ONU terminou na manhã deste domingo (22), em Antália, na Turquia, sem documento final."
+    "Conforme a Agência Brasil, a 31ª edição da conferência do clima da ONU terminou na manhã deste domingo (22), em Antália, na Turquia, sem documento final.",
+    "As usinas de etanol de milho devem destinar cerca de 27 milhões de toneladas do cereal à produção do biocombustível em 2026, segundo estimativa do Rabobank. O avanço dessas plantas altera a comercialização do grão no Brasil, mexe com preços regionais e afeta a receita de quem cultiva.",
+    "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "porto_seguro::GERAL_ATIVO",
-      "ts": 1795203941.105008
-    },
     {
       "chave": "vivo::GERAL_ATIVO",
       "ts": 1795211587.109325
@@ -1405,6 +1405,10 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795375296.069925
+    },
+    {
+      "chave": "banco_do_brasil::BALANCO",
+      "ts": 1795377167.890251
     }
   ],
   "hashes_imagens": [
@@ -1491,6 +1495,8 @@
     "70f36f2a13c6a2c6",
     "663717983500b29d",
     "76899cc7a5780733",
-    "afa582d4cdede1f7"
+    "afa582d4cdede1f7",
+    "50f516e2c1f350c5",
+    "3882357cfe45c3f7"
   ]
 }
