@@ -1431,12 +1431,18 @@ def _extrair_json_gemini(texto_bruto: str) -> Optional[Dict[str, Any]]:
 
 
 def _limpar_prefixo_impacto(texto: str) -> str:
-    return re.sub(
-        r"^(?:📌\s*)?(?:no\s+radar\s+do\s+investidor|impacto\s+para\s+o\s+investidor|por\s+que\s+importa|para\s+o\s+investidor|impacto)\s*(?:\([^)]*\))?\s*[:\-–—]\s*",
+    limpo = re.sub(
+        r"^(?:📌\s*)?(?:no\s+radar\s+do\s+investidor|impacto\s+para\s+o\s+investidor|"
+        r"por\s+que\s+(?:isso\s+|a\s+not[íi]cia\s+)?importa|para\s+o\s+investidor|"
+        r"em\s+resumo|em\s+s[íi]ntese|resumo|conclus[ãa]o|impacto|o\s+que\s+isso\s+significa)"
+        r"\s*(?:\([^)]*\))?\s*[:\-–—,]\s*",
         "",
         texto,
         flags=re.IGNORECASE,
     ).strip()
+    if limpo and limpo[0].islower():
+        limpo = limpo[0].upper() + limpo[1:]
+    return limpo
 
 
 def _montar_html_de_blocos(
@@ -1682,12 +1688,12 @@ async def refinar_materia_com_gemini(
         "- For fofoca política, declaração partidária vazia sem medida econômica ou reação real de mercado, pauta policial/criminal, esportes/futebol/patrocínio, entretenimento/lançamento de série ou produto sem relevância financeira, assistencialismo puro (INSS, Bolsa Família, CadÚnico, Serasa limpa nome), clickbait vazio ou propaganda de corretora/curso.\n"
         "- For nota rasa ou cortada por paywall sem dados para começo, meio e fim.\n"
         "- Não tiver impacto real no bolso ou nos investimentos (NUNCA invente ou force conexão para aprovar).\n\n"
-        "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO, FIM E PINCELADA FINAL HONESTA (se aprovada=true):\n"
-        "Escreva em português claro, objetivo, jornalístico e 100% NEUTRO politicamente (zero partidarismo ou torcida ideológica — foco estrito no efeito financeiro/econômico), somando entre 620 e 940 caracteres nos 3 blocos:\n"
+        "TAREFA 2 — REDAÇÃO COM COMEÇO, MEIO, FIM E CONTINUAÇÃO NATURAL APÓS A MATÉRIA (se aprovada=true):\n"
+        "Escreva em português claro, objetivo, jornalístico e 100% NEUTRO politicamente (zero partidarismo ou torcida ideológica — foco estrito no efeito financeiro/econômico), somando entre 640 e 960 caracteres nos 3 blocos:\n"
         "- titulo: manchete direta e clara (1 frase, sem clickbait, sem nome de portal).\n"
-        "- comeco (COMEÇO — O Fato, ~220 a 320 chars): o que aconteceu de concreto, citando o ativo/órgão/país/indicador e os números, alíquotas, taxas ou datas exatas da matéria.\n"
-        "- meio (MEIO — Contexto e Decifração, ~220 a 320 chars): por que isso aconteceu, o que está em jogo ou explicação didática de termos técnicos da matéria (ex.: JCP, data-com, NTN-B, P/VP, curva DI, risco fiscal, crédito privado, ETF cripto, vencimento de opções, CPI, tarifas).\n"
-        "- fim_impacto (FIM — Fechamento natural para o investidor, ~180 a 280 chars): finalize o texto de forma fluida, direta, objetiva e SEM EXAGERAR, explicando naturalmente por que essa notícia importa e quais investimentos (ex.: renda fixa, crédito privado, fundos, FIIs, ações, BDRs, criptoativos ou derivativos) sentem o efeito. Escreva como um parágrafo normal e contínuo, SEM rótulos, SEM prefixos (NÃO comece com 'No radar do investidor:', 'Impacto:', 'Por que importa:') e SEM rotular perfis.\n"
+        "- comeco (Parágrafo 1 — Abertura da matéria, ~220 a 320 chars): conte o fato concreto, citando o ativo/órgão/país/indicador e os números, alíquotas, taxas ou datas exatas da matéria.\n"
+        "- meio (Parágrafo 2 — Desenvolvimento e desfecho da matéria, ~240 a 340 chars): traga o contexto, o motivo, o desfecho dos fatos noticiados e explique rapidamente qualquer termo técnico (ex.: JCP, data-com, NTN-B, P/VP, curva DI, risco fiscal, crédito privado, ETF cripto, vencimento de opções, CPI, tarifas).\n"
+        "- fim_impacto (Parágrafo 3 — Continuação natural após a matéria, ~170 a 260 chars): logo após fechar os fatos, escreva apenas uma continuação curta e fluida do texto sintetizando o efeito prático no bolso e citando de forma natural quais investimentos (renda fixa, crédito privado, fundos, FIIs, ações, BDRs, criptoativos ou derivativos) sentem o impacto. Deve parecer o último parágrafo natural da própria matéria: NUNCA diga que é um resumo, NUNCA mencione 'por que importa', 'em resumo', 'resumo:', 'impacto:', 'no radar do investidor:' ou 'perfil conservador/moderado/arrojado'.\n"
         "- tag_evento: escolha EXATAMENTE uma opção entre: 'DIVIDENDOS', 'BALANCOS', 'ACOES', 'BDR', 'FIIS', 'RENDA_FIXA', 'FUNDOS', 'CRIPTO', 'DERIVATIVOS', 'MACRO', 'GEOPOLITICA'.\n"
         "- tickers: array com até 3 tickers oficiais da B3 (ações, BDRs, FIIs ou ETFs como ['PETR4'], ['NVDC34'], ['MXRF11'], ['HASH11']) que sejam realmente protagonistas; retorne [] se for Renda Fixa, fundos abertos, cripto global sem ETF da B3, derivativos gerais, economia, política econômica ou geopolítica.\n\n"
         "REGRAS INVIOLÁVEIS (ZERO MENTIRA E ZERO PARTIDARISMO):\n"
