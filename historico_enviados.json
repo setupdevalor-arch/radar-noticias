@@ -623,7 +623,14 @@
     "c45ba5f04c3fa0bd",
     "https://www.poder360.com.br/poder-economia/por-que-a-america-latina-precisa-de-conexoes-globais-para-inovar/",
     "83dc62e37461f7db",
-    "2350b70d52df2654"
+    "2350b70d52df2654",
+    "039ce8e2d46598fb",
+    "a2f1c746560427dd",
+    "02a3cfa58def870c",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/fiis-ainda-valem-a-pena-conheca-as-vantagens-e-os-riscos-antes-de-investir/",
+    "4e653d1740395eba",
+    "https://www.cnnbrasil.com.br/agro/industria-de-etanol-acirra-disputa-pelo-milho-no-mercado-interno/",
+    "c98b5a69dba80242"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -971,7 +978,9 @@
     "Fim de benefício fiscal nos Estados faz empresas repensarem localização de fábricas e galpões",
     "Novo teto do MEI: economia pode chegar a R$ 9,5 mil",
     "GTA VI expõe desafio: tecnologia avançada leva a videogames mais caros",
-    "Por que a América Latina precisa de conexões globais para inovar?"
+    "Por que a América Latina precisa de conexões globais para inovar?",
+    "FIIs ainda valem a pena? Conheça as vantagens e os riscos antes de investir",
+    "Indústria de etanol acirra disputa pelo milho no mercado interno"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1027,7 +1036,9 @@
     "Reforma tributária: brasileiro se assusta com alíquota de 28%, mas já paga imposto maior",
     "A Lei Complementar nº 238, sancionada em 21 de outubro, redesenha o regime do Microempreendedor Individual ao elevar o limite anual de faturamento dos atuais R$ 81 mil para R$ 110 mil em 2027 e para R$ 140 mil a partir de 2028. Segundo estudo da Contabilizei detalhado pelo InfoMoney, a permanência no enquadramento simplificado pode representar uma ",
     "Depois de 13 anos de espera, milhões de jogadores finalmente puderam explorar as ruas de Vice City em GTA VI. Mas, para muitos, a estreia do jogo também trouxe um lembrete incômodo: acompanhar os avanços da indústria dos games está ficando cada vez mais caro.",
-    "Estudo em 16 países mostra que parcerias internacionais impulsionam o desenvolvimento de tecnologias verdes na região"
+    "Estudo em 16 países mostra que parcerias internacionais impulsionam o desenvolvimento de tecnologias verdes na região",
+    "Os Fundos de Investimento Imobiliário (FIIs) continuam sendo uma alternativa para quem deseja participar do mercado imobiliário e buscar rendimentos periódicos sem precisar comprar um imóvel. Por meio deles, investidores aplicam recursos em conjunto em empreendimentos, como shoppings, galpões logísticos, hospitais e edifícios comerciais, ou em títu",
+    "A expansão da indústria de etanol de milho está provocando uma mudança estrutural no mercado brasileiro do grão, com impactos sobre a formação de preços, a comercialização e a rentabilidade dos produtores."
   ],
   "eventos_recentes": [
     {
@@ -1085,6 +1096,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795338076.132255
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795345419.246661
     }
   ],
   "hashes_imagens": [
@@ -1125,6 +1140,8 @@
     "ca9837bc4dee1423",
     "91bc3eae976af62f",
     "11b244fbe09bcdbd",
-    "350f6b95bd901450"
+    "350f6b95bd901450",
+    "30392c677a647f79",
+    "fd9f8a0239cfe0e7"
   ]
 }
