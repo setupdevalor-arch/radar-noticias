@@ -606,7 +606,8 @@
     "68868e7ecf1d98ce",
     "521c7512261342e1",
     "https://www.estadao.com.br/economia/fim-de-beneficio-fiscal-nos-estados-faz-empresas-repensarem-localizacao-de-fabricas-e-galpoes/",
-    "0282e096a4d04a6a"
+    "0282e096a4d04a6a",
+    "3103becdf2ce4474"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1007,10 +1008,6 @@
     "Reforma tributária: brasileiro se assusta com alíquota de 28%, mas já paga imposto maior"
   ],
   "eventos_recentes": [
-    {
-      "chave": "copel::EVENTO_CORP",
-      "ts": 1795165374.299402
-    },
     {
       "chave": "porto_seguro::PROVENTOS",
       "ts": 1795180123.149426
