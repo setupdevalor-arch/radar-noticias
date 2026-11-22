@@ -593,7 +593,10 @@
     "https://www.infomoney.com.br/mercados/mexico-ganha-espaco-entre-emergentes-enquanto-brasil-perde-preferencia-dos-bancoes/",
     "862fb69f40789138",
     "https://www.infomoney.com.br/business/global/eua-dominam-infraestrutura-de-ia-mas-isso-tem-ajudado-os-modelos-chineses/",
-    "9aec20efb89717d6"
+    "9aec20efb89717d6",
+    "ff6f06552e5d801a",
+    "https://forbes.com.br/forbes-money/2026/11/itau-ventures-investe-na-akua-paytech-com-desenvolvimento-em-montevideu/",
+    "6e2e3d9e4f78760a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -933,7 +936,8 @@
     "Brecha no Java acende alerta para bancos e governos",
     "Ovelhas sob painéis solares ganham espaço nos EUA",
     "Enquanto Brasil perde preferência dos bancões, México ganha espaço entre emergentes",
-    "EUA dominam infraestrutura de IA, mas isso tem ajudado os modelos chineses"
+    "EUA dominam infraestrutura de IA, mas isso tem ajudado os modelos chineses",
+    "Itaú Investe em Startup Uruguaia de IA Que Processa 2 Milhões de Pagamentos por Dia"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -981,7 +985,8 @@
     "Uma empresa de cibersegurança chamada Calif localizou, com apoio de inteligência artificial, uma vulnerabilidade crítica nas funções de memória do Java, segundo o g1. A falha foi batizada de Java4Shell e permitiria que um invasor executasse comandos remotos no sistema. A Oracle, que controla o Java, publicou uma correção de segurança na terça-feira",
     "Uma prática que mistura pecuária e geração fotovoltaica vem ganhando espaço nos Estados Unidos, segundo o g1. Cerca de uma em cada dez fazendas solares no país já permite que ovelhas pastem sob os painéis, modelo que faz parte da chamada agrivoltaica, quando a produção de alimentos ou a criação de animais divide a área com equipamentos de energia r",
     "O Brasil vem perdendo espaço nas carteiras de América Latina e mercados emergentes de grandes bancos e gestoras globais, enquanto o México se consolida como um dos destinos preferidos dos investidores para 2027. Nas últimas semanas, uma série de instituições reduziu sua exposição às ações brasileiras, citando perspectivas mais fracas para o crescim",
-    "A saga da Nvidia e da Megaspeed chamou atenção para uma importante lacuna nos controles de exportação dos EUA: empresas chinesas acessam remotamente chips de IA localizados fora da China. Na segunda-feira, em grande parte como resposta ao escândalo, o Departamento de Comércio dos EUA publicou uma regra para fechar essa brecha."
+    "A saga da Nvidia e da Megaspeed chamou atenção para uma importante lacuna nos controles de exportação dos EUA: empresas chinesas acessam remotamente chips de IA localizados fora da China. Na segunda-feira, em grande parte como resposta ao escândalo, o Departamento de Comércio dos EUA publicou uma regra para fechar essa brecha.",
+    "O Itaú Ventures, braço de corporate venture capital do Itaú Unibanco, investiu na Akua, empresa de infraestrutura de pagamentos baseada em inteligência artificial cofundada pelo uruguaio Juan José Behrend. O acordo também prevê a avaliação da tecnologia da startup para o negócio de meios de pagamento do banco, tendo o Uruguai como primeiro mercado."
   ],
   "eventos_recentes": [
     {
@@ -1035,6 +1040,10 @@
     {
       "chave": "goldman_sachs::GERAL_ATIVO",
       "ts": 1795321992.496245
+    },
+    {
+      "chave": "itau::GERAL_ATIVO",
+      "ts": 1795334959.228506
     }
   ],
   "hashes_imagens": [
@@ -1067,6 +1076,7 @@
     "c21b4642ffb14d4e",
     "aad66a937d99a723",
     "3063c577ca9e14e6",
-    "9e561741920dddfd"
+    "9e561741920dddfd",
+    "0fdb4288838ec9f0"
   ]
 }
