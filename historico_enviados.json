@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/esportes/brasileirao/brasileirao-de-volta-veja-como-esta-a-briga-contra-o-rebaixamento/",
-    "5b02a463cfd4d25b",
-    "https://www.seudinheiro.com/2026/lifestyle/la-vuelta-btg-competicao-de-ciclismo-de-estrada-de-120-km-chega-ao-litoral-paulista-sama/",
-    "8e907f6f2edbb3fe",
-    "https://portaldobitcoin.uol.com.br/mercado-bitcoin-anuncia-retomada-da-negociacao-de-criptomoedas-apos-ataque-hacker-veja-as-datas/",
-    "14ed7de24118dc9d",
-    "https://exame.com/blog-saint-paul/wacc-formula-como-calcular-exemplo-com-selic-e-premio-de-risco/",
     "d27192859c298b40",
     "https://exame.com/blog-saint-paul/ebitda-o-que-e-como-calcular-e-quando-nao-usar/",
     "42501484dd95ae70",
@@ -799,7 +792,14 @@
     "abc66fb4f69c8071",
     "936dd7ab89e4f4f6",
     "https://braziljournal.com/opiniao-ainda-da-para-apostar-tudo-no-cdi",
-    "eaa05441506bf8fa"
+    "eaa05441506bf8fa",
+    "05a0bd245f9faaea",
+    "https://www.infomoney.com.br/mundo/empresas-europeias-alertam-ue-contra-cortes-que-afetem-competitividade/",
+    "e3777713bb7c0e03",
+    "https://www.infomoney.com.br/mercados/mercados-day-trade-hoje-analistas-23112026/",
+    "7155085209c9cba4",
+    "https://www.infomoney.com.br/mundo/montadoras-alemas-enfrentam-tensao-crescente-com-sindicatos/",
+    "e66ed28b6a308b67"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1233,7 +1233,10 @@
     "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”",
     "El Niño leva Chile a alerta máximo de incêndios no verão",
     "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul",
-    "OPINIÃO. Ainda dá para apostar tudo no CDI?"
+    "OPINIÃO. Ainda dá para apostar tudo no CDI?",
+    "Empresas europeias alertam UE contra cortes que afetem competitividade",
+    "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
+    "Montadoras alemãs enfrentam tensão crescente com sindicatos"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1375,7 +1378,10 @@
     "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias",
     "O Chile se prepara para o verão austral com todo o território sob risco alto de incêndios florestais, segundo o mapa de alerta precoce da Corporação Nacional Florestal (Conaf). A combinação de temperaturas previstas acima de 40°C em algumas regiões, ventos quentes associados ao El Niño e grande volume de vegetação seca criou um cenário que a direto",
     "– A BHP, uma das maiores mineradoras do mundo, anunciou nesta segunda-feira que planeja dobrar sua produção de cobre na Austrália do Sul até 2040, à medida que amplia sua participação nesse metal, que deve impulsionar a eletrificação, com uma decisão final de investimento prevista para o primeiro semestre de 2027.",
-    "Parece que a história não foi exatamente assim – mas seria chato demais estragar uma boa anedota com uma correção histórica. Então, neste caso, preferimos acreditar na versão."
+    "Parece que a história não foi exatamente assim – mas seria chato demais estragar uma boa anedota com uma correção histórica. Então, neste caso, preferimos acreditar na versão.",
+    "– Empresas europeias do setor de energia verde e tecnologias limpas, bem como grupos industriais, alertaram os líderes da UE nesta segunda-feira contra os cortes propostos ao Fundo Europeu de Competitividade, afirmando que o fundo é essencial para que o bloco consiga alcançar os Estados Unidos e a China.",
+    "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
+    "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso."
   ],
   "eventos_recentes": [
     {
@@ -1557,6 +1563,10 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795427580.695889
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795428211.119736
     }
   ],
   "hashes_imagens": [
@@ -1683,6 +1693,9 @@
     "009ce1e292d690aa",
     "8c23b932bfbc3134",
     "c621edb035dcba1a",
-    "f3082e41dfecf6a8"
+    "f3082e41dfecf6a8",
+    "e4bf98f84603f2ff",
+    "b0db26a83a278535",
+    "f97f520214cc4bf0"
   ]
 }
