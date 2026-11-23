@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/business/global/disney-amplia-investimentos-em-novas-series-e-filmes-em-meio-a-turbulencia-do-setor/",
-    "https://www.infomoney.com.br/business/global/novo-jantar-de-trump-com-memecoin-pode-fracassar-130-carteiras-disputam-185-vagas/",
     "https://www.infomoney.com.br/mercados/gas-xp-atualiza-estimativas-para-eneva-e-compass-com-novos-precos-alvo-para-2027/",
     "https://www.infomoney.com.br/mercados/mercado-de-niquel-pode-chegar-a-us-8068-bi-ate-2031/",
     "https://www.moneytimes.com.br/b3-muda-metodologia-do-ibovespa-para-permitir-bdrs-a-partir-de-maio-de-2027-fets/",
@@ -799,7 +797,9 @@
     "98b83ecb515dca0c",
     "https://www.spacemoney.com.br/politica/camara-votacao-ajuste-fiscal-2027/",
     "81f5828712e4d7c7",
-    "c4276e3ca6610e3d"
+    "c4276e3ca6610e3d",
+    "https://www.spacemoney.com.br/economia/exterior/houthis-refinaria-rabigh-trump-ameaca-teera/",
+    "9283295fa37a06a9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1206,7 +1206,8 @@
     "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
     "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
     "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
-    "Deputados analisam pacote fiscal com estimativa de R$ 50 bi"
+    "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
+    "Houthis atacam refinaria saudita e Trump ameaça Teerã"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1321,7 +1322,8 @@
     "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
     "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
-    "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência."
+    "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência.",
+    "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters."
   ],
   "eventos_recentes": [
     {
@@ -1550,6 +1552,7 @@
     "6f2a3b230b07876f",
     "fffaeacee035085c",
     "a2217dfa90d49148",
-    "821f5e92da6e3bf2"
+    "821f5e92da6e3bf2",
+    "a254393777ad3e24"
   ]
 }
