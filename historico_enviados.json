@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/pop-arte/noticia/2026/11/18/mexico-suspende-leilao-de-obra-de-frida-kahlo-nos-estados-unidos.ghtml",
-    "d6f56469eb8ced9b",
-    "https://exame.com/negocios/eles-comecaram-lendo-o-orkut-hoje-faturam-r-200-milhoes-com-dados-das-redes-sociais/",
-    "fa36382edd20c172",
     "https://exame.com/mundo/eua-china-e-russia-o-que-sera-tratado-em-encontro-historico-entre-potencias/",
     "573cc725bb533c36",
     "https://exame.com/tecnologia/como-a-cielo-usa-agentes-de-ia-para-transformar-reclamacoes-de-clientes-em-produtos-em-12-dias/",
@@ -799,7 +795,11 @@
     "https://www.seudinheiro.com/2026/colunistas/a-alegria-do-clt-a-estrategia-do-totalpass-e-uma-semana-mais-curta-de-aversao-a-risco-julw/",
     "5dd0f7bdccd0b2ea",
     "https://cqcs.com.br/noticia/seguro-rural-pode-ser-a-salvacao-das-lavouras-gauchas/",
-    "8653579fda5821f9"
+    "8653579fda5821f9",
+    "dac2456265e87b96",
+    "021513a4380a93b0",
+    "https://www.infomoney.com.br/mercados/tempestade-perfeita-cambio-goldman-ve-real-atrativo-mas-recomenda-cautela-no-curto-prazo/",
+    "a5269428595b074b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1248,7 +1248,8 @@
     "RD Saúde (RADL3) lança programa de recompra de ações de até R$ 600 milhões; veja os objetivos",
     "Fundo imobiliário anuncia menor dividendo em 29 meses; veja valor e motivo do corte",
     "A alegria do CLT: a estratégia do TotalPass e uma semana mais curta de aversão a risco",
-    "Seguro rural pode ser a salvação das lavouras gaúchas"
+    "Seguro rural pode ser a salvação das lavouras gaúchas",
+    "Tempestade perfeita? Goldman vê real atrativo, mas recomenda cautela no curto prazo"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1405,7 +1406,8 @@
     "O conselho de administração da RD Saúde (RADL3) aprovou a realização de um programa de recompra de até 127,59 milhões de ações ordinárias, mostra fato relevante divulgado ao mercado nesta segunda-feira (23).",
     "O fundo imobiliário XP Malls (XPML11) anunciou que pagará o menor dividendo dos últimos 29 meses: os investidores receberão, no próximo dia 25 de novembro, R$ 0,80 por cota.",
     "CEO da SmartFit conta sobre a estratégia por trás do TotalPass; nos mercados, bolsa brasileira reabre após semana negativa e diante de feriados no exterior",
-    "As estiagens que atingiram as regiões agrícolas do Rio Grande do Sul incineraram 48,7 milhões de toneladas de grãos de 2020 até o final de 2025 (sem contar a safra colhida em 2026). Ou seja, das 227,030 milhões de toneladas de soja, milho e outras culturas projetadas pelos organismos que realizam as estimativas foram efetivamente ceifadas 178,474 m"
+    "As estiagens que atingiram as regiões agrícolas do Rio Grande do Sul incineraram 48,7 milhões de toneladas de grãos de 2020 até o final de 2025 (sem contar a safra colhida em 2026). Ou seja, das 227,030 milhões de toneladas de soja, milho e outras culturas projetadas pelos organismos que realizam as estimativas foram efetivamente ceifadas 178,474 m",
+    "O real voltou a figurar entre as moedas emergentes que mais sofreram com a recente onda de aversão a risco global, mas ainda apresenta uma combinação de valuation e retorno potencial que o mantém no radar dos investidores, segundo relatório do Kamakshya Trivedi e estrategistas do Goldman Sachs."
   ],
   "eventos_recentes": [
     {
@@ -1760,6 +1762,7 @@
     "dcc1204490ad4c52",
     "8abece8e7ff7df88",
     "f97e9d8e196eec5b",
-    "49713e6b1e8f7868"
+    "49713e6b1e8f7868",
+    "b6c6fa5035d7297a"
   ]
 }
