@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/business/banco-da-nvidia-esta-se-tornando-mais-disciplinado-e-seletivo/",
-    "https://www.bbc.com/portuguese/articles/c8y5xkwx75dxo?at_medium=RSS&at_campaign=rss",
     "https://g1.globo.com/mundo/noticia/2026/11/18/eua-ainda-nao-sabem-causa-de-falha-que-cancelou-18-mil-voos-diz-secretario-de-trump.ghtml",
     "https://www.infomoney.com.br/business/huang-prestara-esclarecimentos-ao-congresso-sobre-caso-apos-demissao-da-nvidia/",
     "https://www.infomoney.com.br/mercados/acoes-de-ia-da-china-sao-afetadas-por-sinais-de-restricoes-mais-rigorosas-ao-setor/",
@@ -799,7 +797,9 @@
     "c3adcbcaa48328cf",
     "12e08022612976c4",
     "https://www.poder360.com.br/poder-congresso/eduardo-braga-defende-mudanca-na-constituicao-para-novo-ajuste-fiscal/",
-    "55eee52d4d49325b"
+    "55eee52d4d49325b",
+    "https://www.moneytimes.com.br/precos-do-petroleo-caem-com-mercado-volatil-nesta-segunda-feira-fets/",
+    "0cec9617cc3fa9f3"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1212,7 +1212,8 @@
     "Traders descartam alta de 0,50 ponto do Fed em dezembro",
     "Futuros de NY avançam após selloff global da IA",
     "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
-    "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal"
+    "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal",
+    "Preços do petróleo caem com mercado volátil nesta segunda-feira"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1333,7 +1334,8 @@
     "Os fed funds futures deixaram de precificar uma alta de 50 pontos-base na taxa básica de juros dos EUA, para 4,5%, na reunião do Fed de dezembro, segundo o CME FedWatch. Cerca de dez dias antes, a probabilidade era de 10%.",
     "Os futuros das bolsas de Nova York subiam nesta segunda-feira (23), devolvendo parte das fortes perdas da semana anterior, quando o comércio de inteligência artificial passou por uma correção global. Os contratos do Nasdaq-100 avançavam 2,76%, os do S&P 500 ganhavam 2,03% e os do Dow Jones subiam 673 pontos, ou 1,4%.",
     "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP.",
-    "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais"
+    "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais",
+    "Os preços do petróleo caem no pregão asiático desta segunda-feira (23), mesmo com investidores incorporando um prêmio de risco decorrente da continuidade dos ataques a embarcações e refinarias no Oriente Médio, em meio aos esforços diplomáticos para pôr fim à guerra."
   ],
   "eventos_recentes": [
     {
@@ -1479,6 +1481,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795419267.909189
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795420232.892298
     }
   ],
   "hashes_imagens": [
@@ -1584,6 +1590,7 @@
     "b6cae3ac334a330b",
     "0a2be891c473e27a",
     "414b71c3060c549e",
-    "810dff1abaf81093"
+    "810dff1abaf81093",
+    "2f3a44d0176843b9"
   ]
 }
