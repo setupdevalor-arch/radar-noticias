@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://exame.com/negocios/a-wework-valia-us-47-bilhoes-e-devia-outros-47-em-aluguel-o-que-a-queda-ensina-sobre-valuation/",
-    "e605b0152c425b9c",
-    "https://www.infomoney.com.br/economia/monitor-do-pib-medido-pela-fgv-aponta-queda-de-02-no-3o-trimestre-ante-2o-trimestre/",
-    "1bdaa1733df75282",
-    "https://g1.globo.com/trabalho-e-carreira/noticia/2026/11/18/maioria-dos-trabalhadores-nao-esta-engajada-veja-motivos-e-quais-jornadas-tem-piores-indices.ghtml",
     "230d9e4768ca91e6",
     "https://livecoins.com.br/apos-punicao-dos-eua-mexc-encerra-seu-cartao-de-criptomoedas/",
     "9ee871457ad1f720",
@@ -799,7 +794,12 @@
     "https://www.infomoney.com.br/politica/alem-do-pacote-fiscal-veja-pautas-economicas-que-governo-tenta-aprovar-ate-dezembro/",
     "43a40d5d36d701aa",
     "https://valorinveste.globo.com/objetivo/organize-as-contas/noticia/2026/11/23/13o-salario-vai-cair-na-conta-veja-o-que-fazer-com-dinheiro-para-comecar-2027-no-azul.ghtml",
-    "83d39986cb6258bc"
+    "83d39986cb6258bc",
+    "a14f6ee30a864e1d",
+    "https://megawhat.uol.com.br/regulacao/leiloes-de-baterias-tem-inscricoes-prorrogadas-ate-esta-segunda/",
+    "2160cd5dd7d97290",
+    "https://www.suno.com.br/noticias/ltbx11-como-funciona-etf-renda-fixa-gss/",
+    "9ebf11ed35b0a290"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1252,7 +1252,9 @@
     "Tempestade perfeita? Goldman vê real atrativo, mas recomenda cautela no curto prazo",
     "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar",
     "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro",
-    "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul"
+    "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul",
+    "Leilões de baterias têm inscrições prorrogadas até esta segunda",
+    "Como funciona o LTBX11, ETF de renda fixa da XP?"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1413,7 +1415,9 @@
     "O real voltou a figurar entre as moedas emergentes que mais sofreram com a recente onda de aversão a risco global, mas ainda apresenta uma combinação de valuation e retorno potencial que o mantém no radar dos investidores, segundo relatório do Kamakshya Trivedi e estrategistas do Goldman Sachs.",
     "As alterações nos impostos não estão valendo ainda, mas já levantaram questionamentos e fizeram algum barulho",
     "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027.",
-    "Quitar dívidas, reservar recursos para despesas de janeiro ou investir? Especialistas explicam como definir prioridades e aproveitar melhor o benefício"
+    "Quitar dívidas, reservar recursos para despesas de janeiro ou investir? Especialistas explicam como definir prioridades e aproveitar melhor o benefício",
+    "A Agência Nacional de Energia Elétrica (Aneel) prorrogou até esta segunda-feira, 23 de novembro, às 12h, o prazo de inscrição online nos dois leilões de reserva de capacidade para contratação de sistemas de armazenamento em baterias, previstos para os dias 2 e 4 de dezembro.",
+    "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação."
   ],
   "eventos_recentes": [
     {
@@ -1631,6 +1635,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795434835.606939
+    },
+    {
+      "chave": "ltbx11::GERAL_ATIVO",
+      "ts": 1795435505.57897
     }
   ],
   "hashes_imagens": [
@@ -1776,6 +1784,8 @@
     "b6c6fa5035d7297a",
     "c3cbdfb79b0859d8",
     "bebc0a65cd096d45",
-    "f8965016d9913c99"
+    "f8965016d9913c99",
+    "6f00daf056a50911",
+    "1360a4e281138ff8"
   ]
 }
