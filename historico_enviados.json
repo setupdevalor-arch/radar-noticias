@@ -1,16 +1,5 @@
 {
   "links": [
-    "16c41b255a38dcda",
-    "https://g1.globo.com/tecnologia/noticia/2026/11/18/boato-de-apagao-mundial-e-onda-de-ataques-hackers-o-que-aconteceu-no-mundo-nas-ultimas-semanas.ghtml",
-    "45ecb6e4e0b7db75",
-    "https://www.moneytimes.com.br/durigan-diz-que-reforma-tributaria-nao-deve-gerar-arrecadacao-extra-para-o-governo-mlem/",
-    "f9e49aa1c5fc9413",
-    "https://www.bbc.com/portuguese/articles/cmn0dykxex82o?at_medium=RSS&at_campaign=rss",
-    "0e2415bfb0303e93",
-    "https://www.seudinheiro.com/2026/economia/sinal-de-alerta-para-a-renda-fixa-mercado-teme-inflacao-como-na-epoca-de-dilma-mlim/",
-    "15c77060a17aefe8",
-    "https://www.infomoney.com.br/politica/durigan-governo-aproveitou-oportunidade-para-aprovar-plp-mas-ajuste-nao-para-por-ai/",
-    "d1b8a91c868c9b10",
     "https://exame.com/esg/cop31-se-voce-acha-que-as-mudancas-climaticas-nao-sao-nada-venha-ao-nepal-diz-ministra/",
     "0de66a1e50391cc9",
     "https://exame.com/casual/por-que-a-picanha-se-tornou-a-protagonista-da-churrasqueira-brasileira-e-mundial/",
@@ -799,7 +788,18 @@
     "2744b1ca2a752751",
     "af0550cc896a3f81",
     "https://www.infomoney.com.br/mercados/minerio-cai-com-enfraquecimento-da-demanda-chinesa-e-piora-das-margens-siderurgicas/",
-    "d3d1161dd3c25691"
+    "d3d1161dd3c25691",
+    "ac8e3d8650472028",
+    "f5bda54fa56d5389",
+    "151754d0e91a8f83",
+    "https://www.estadao.com.br/economia/focus-mercado-eleva-projecao-inflacao-dolar-preve-pib-menor-2026/",
+    "733bced96e99d51d",
+    "https://megawhat.uol.com.br/destaques-do-diario/empresa-desiste-de-80-mw-em-geracao-solar-em-pe-por-falta-de-margem/",
+    "894ecf8c96a4a4f3",
+    "https://www.estadao.com.br/economia/cvm-suspende-registro-brb-refit-ambipar-falta-informacoes/",
+    "292e22a313cbc217",
+    "https://www.infomoney.com.br/mundo/kremlin-desmente-midia-alema-sobre-lancamento-de-satelite-russo-com-armamento-nuclear/",
+    "988962cb54474393"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1266,7 +1266,11 @@
     "Tokenização de ações estreia sob objeção de 90% das empresas",
     "JBSS3: JBS conclui transação de joint venture em Omã",
     "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia",
-    "Minério cai com enfraquecimento da demanda chinesa e piora das margens siderúrgicas"
+    "Minério cai com enfraquecimento da demanda chinesa e piora das margens siderúrgicas",
+    "Mercado eleva projeção para inflação e dólar e prevê PIB menor em 2026",
+    "Empresa desiste de 80 MW em geração solar em PE por falta de margem",
+    "CVM suspende registro de BRB, Refit, Ambipar e mais duas companhias abertas por falta de informações",
+    "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1441,7 +1445,11 @@
     "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
     "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante",
     "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22).",
-    "– Os contratos futuros de minério de ferro caíram na bolsa de Dalian nesta segunda-feira, pressionados pela demanda persistentemente baixa e pelas margens cada vez menores do setor siderúrgico na China, enquanto a referência do minério na bolsa Cingapura se estabilizou após atingir a menor cotação em quatro anos na semana passada."
+    "– Os contratos futuros de minério de ferro caíram na bolsa de Dalian nesta segunda-feira, pressionados pela demanda persistentemente baixa e pelas margens cada vez menores do setor siderúrgico na China, enquanto a referência do minério na bolsa Cingapura se estabilizou após atingir a menor cotação em quatro anos na semana passada.",
+    "Juros x Inflação: Entenda a relação entre eles",
+    "A Central Geradora Fotovoltaica Barrinhas SPE solicitou a revogação da outorga da UFV Solar Barrinhas, por falta de margem de escoamento. O projeto previa uma planta de 80 MW localizada no município de Ouricuri, em Pernambuco, com conexão à subestação Ouricuri 138/69 kV, da Neoenergia Pernambuco.",
+    "A Superintendência de Relações com Empresas (SEP) da Comissão de Valores Mobiliários (CVM) suspendeu nesta segunda-feira, 23, o registro de cinco companhias abertas por descumprimento, há mais de 12 meses, da obrigação de prestar informações periódicas à autarquia, conforme previsto na Resolução CVM 80.",
+    "– O Kremlin afirmou nesta segunda-feira que reportagens da mídia alemã sugerindo que a Rússia estaria planejando lançar ao espaço, ainda este ano, um satélite com armamento nuclear não devem ser levadas a sério."
   ],
   "eventos_recentes": [
     {
@@ -1691,6 +1699,14 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795439904.454989
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795440308.831018
+    },
+    {
+      "chave": "ambipar::GERAL_ATIVO",
+      "ts": 1795440308.831018
     }
   ],
   "hashes_imagens": [
@@ -1850,6 +1866,10 @@
     "a3a804818270ff69",
     "be2a7e9851d78548",
     "5e38d005007ff3d1",
-    "cc81d342fb9655aa"
+    "cc81d342fb9655aa",
+    "81c20fde124b6327",
+    "e047fc50459e6c4c",
+    "0841eb45ba5f6427",
+    "ef4cb657d8948899"
   ]
 }
