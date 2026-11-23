@@ -1,10 +1,5 @@
 {
   "links": [
-    "b8aeee3b49c22244",
-    "https://www.infomoney.com.br/mercados/axia-simpar-unifique-iguatemi-e-mais-acoes-para-acompanhar-nesta-quarta-feira/",
-    "6d6dc68aa662e2da",
-    "https://www.infomoney.com.br/mercados/pf-investiga-apoio-de-rede-ligada-a-jd-vance-a-campanha-de-flavio-diz-jornal/",
-    "d67a93e7928e115f",
     "https://exame.com/tecnologia/examelab/por-que-o-mesmo-celular-aparece-varias-vezes-na-conta-google/",
     "ff1df203939d7a31",
     "https://exame.com/negocios/o-que-ela-fez-para-faturar-r-3-milhoes-em-um-unico-mes-apenas-com-o-tiktok-shop/",
@@ -799,7 +794,12 @@
     "aa9f53126d0c2c62",
     "843596bddc0050da",
     "https://www.spacemoney.com.br/investimentos/etfs/etfs-bitcoin-terceira-maior-saida-semanal/",
-    "741408d3d41c2a38"
+    "741408d3d41c2a38",
+    "6e130170a020b7bc",
+    "a3f9c78b94eac583",
+    "e5e41f4f0524cf26",
+    "https://www.poder360.com.br/poder-economia/risco-pais-da-argentina-chega-ao-maior-patamar-de-2026/",
+    "8a4131b2b4dc62da"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1221,7 +1221,8 @@
     "Anúncios maliciosos invadem iPhones para roubar seed phrases",
     "Futuros de NY sobem após liquidação de ações de tecnologia na semana passada",
     "Capim na lavoura vira aposta de expansão da Soesp",
-    "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates"
+    "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates",
+    "Risco-país da Argentina chega ao maior patamar de 2026"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1351,7 +1352,8 @@
     "Os anúncios levam a páginas criadas pelos operadores da campanha, chamada MoldyRoost pelos pesquisadores. A página entrega o código malicioso enquanto carrega, sem cliques extras. “Basta carregar a página de um anúncio MoldyRoost em um iPhone vulnerável para ser infectado”, escreveram Roshan e Eliya Stein em relatório publicado em 20 de novembro.",
     "Os futuros de Nova York operam em forte alta nesta segunda-feira (23), em razão de um movimento de recuperação após a forte liquidação das ações de tecnologia na semana passada. Investidores voltam a comprar papéis ligados à inteligência artificial (IA), aproveitando a queda recente dos preços.",
     "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro",
-    "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph."
+    "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
+    "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce"
   ],
   "eventos_recentes": [
     {
@@ -1627,6 +1629,7 @@
     "ec7bb0fa3eccbf53",
     "74b92e184e1fa947",
     "17c9f657dc4b95b6",
-    "4628da901d8ca5d1"
+    "4628da901d8ca5d1",
+    "497e5801aa2b375c"
   ]
 }
