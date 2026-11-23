@@ -1,7 +1,5 @@
 {
   "links": [
-    "a83dcd7482c473f8",
-    "https://www.moneytimes.com.br/democratas-tomam-9-cadeiras-dos-republicanos-no-senado-dos-eua-a-maior-virada-em-quase-70-anos/",
     "b9ff707c396cbcc8",
     "https://www.infomoney.com.br/economia/inflacao-anual-do-reino-unido-acelera-a-36-em-outubro-mas-fica-abaixo-do-esperado/",
     "cccc8b82fffde600",
@@ -799,7 +797,9 @@
     "69aebd3176710045",
     "1d2e84b1542a14ae",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/anuncios-maliciosos-iphones-seed-phrases/",
-    "8449408a5fed7068"
+    "8449408a5fed7068",
+    "https://www.infomoney.com.br/mercados/futuros-de-ny-sobem-apos-liquidacao-de-acoes-de-tecnologia-na-semana-passada/",
+    "30657f0173e35d77"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1218,7 +1218,8 @@
     "FIDCs em Alta: Nova Regra Pode Aumentar Concorrência no Crédito a Pequenas Empresas",
     "O plano dos EUA contra carros chineses que pode atingir a Mercedes-Benz de tabela",
     "Estrangeiros reforçam compras de dólar futuro e pressão sobre o real continua",
-    "Anúncios maliciosos invadem iPhones para roubar seed phrases"
+    "Anúncios maliciosos invadem iPhones para roubar seed phrases",
+    "Futuros de NY sobem após liquidação de ações de tecnologia na semana passada"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1345,7 +1346,8 @@
     "Os Fundos de Investimento em Direitos Creditórios (FIDCs) acumularam R$ 56,1 bilhões em captação líquida entre janeiro e outubro de 2026, segundo dados da Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais (ANBIMA). O resultado ocorre em um momento de mudanças nas regras de antecipação de recebíveis, que podem ampliar as alte",
     "Agora, parlamentares negociam as condições para que a empresa possa continuar no mercado americano se o projeto passar.",
     "Os estrangeiros seguem comprando dólar futuro no Brasil, mesmo após a forte valorização da moeda nas últimas semanas. Antes do feriado, grandes bancos estrangeiros acompanhados pelo trader Léo Molini encerraram o pregão, do dia 19, com saldo comprador de R$ 3,75 bilhões, enquanto um grupo de bancos e corretoras locais terminou o dia com vendas líqu",
-    "Os anúncios levam a páginas criadas pelos operadores da campanha, chamada MoldyRoost pelos pesquisadores. A página entrega o código malicioso enquanto carrega, sem cliques extras. “Basta carregar a página de um anúncio MoldyRoost em um iPhone vulnerável para ser infectado”, escreveram Roshan e Eliya Stein em relatório publicado em 20 de novembro."
+    "Os anúncios levam a páginas criadas pelos operadores da campanha, chamada MoldyRoost pelos pesquisadores. A página entrega o código malicioso enquanto carrega, sem cliques extras. “Basta carregar a página de um anúncio MoldyRoost em um iPhone vulnerável para ser infectado”, escreveram Roshan e Eliya Stein em relatório publicado em 20 de novembro.",
+    "Os futuros de Nova York operam em forte alta nesta segunda-feira (23), em razão de um movimento de recuperação após a forte liquidação das ações de tecnologia na semana passada. Investidores voltam a comprar papéis ligados à inteligência artificial (IA), aproveitando a queda recente dos preços."
   ],
   "eventos_recentes": [
     {
@@ -1614,6 +1616,7 @@
     "7e2d4c205cfa7ccf",
     "5c918f14f01e5ee1",
     "e03ef5d293fe4791",
-    "ec7bb0fa3eccbf53"
+    "ec7bb0fa3eccbf53",
+    "74b92e184e1fa947"
   ]
 }
