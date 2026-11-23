@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/politica/noticia/2026/11/18/a-geografia-da-polarizacao-na-eleicao-presidencial.ghtml",
-    "51151cc2b39d83e4",
-    "https://exame.com/esg/quem-lotou-antalia-os-dez-paises-com-as-maiores-comitivas-da-cop31/",
-    "7541c5983e072dc8",
-    "https://www.infomoney.com.br/brasil/mario-gomes-condenado-a-pagar-13-anos-de-aluguel/",
-    "f7285f23d798a12e",
     "https://g1.globo.com/economia/noticia/2026/11/18/durigan-ve-economia-deve-crescer-em-patamar-menor-em-2027-descarta-recessao-e-diz-acreditar-em-aprovacao-de-pacote-fiscal.ghtml",
     "2bc2132a21d2f9e0",
     "https://www.infomoney.com.br/onde-investir/nova-classificacao-de-fidcs-trara-mais-clareza-dos-ativos-de-cada-fundo-diz-anbima/",
@@ -799,7 +793,13 @@
     "dab16b0a86418e9b",
     "fbd62828952bbdcb",
     "https://www.infomoney.com.br/onde-investir/taxas-de-prefixados-do-tesouro-renovam-maximas-do-ano-na-volta-do-feriado/",
-    "e00605900891845b"
+    "e00605900891845b",
+    "22c104434b6f64fa",
+    "36f5b481cd0ea257",
+    "https://www.infomoney.com.br/mercados/jpmorgan-ve-alivio-no-caixa-do-gpa-pcar3-apos-renegociacao-de-divida-trabalhista/",
+    "29a33c9d6874ae8a",
+    "https://www.cnnbrasil.com.br/economia/investimentos/investir-em-ipos-pode-trazer-riscos-para-o-investidor-diz-economista/",
+    "c718e083782f6642"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1283,7 +1283,9 @@
     "OUJP11 fará pagamento extraordinário antes de liquidação",
     "HGRU11 registra vacância de 0,8% e negocia imóveis em SP",
     "BC facilita acesso de instituições a depósitos remunerados",
-    "Taxas de prefixados do Tesouro renovam máximas do ano na volta do feriado"
+    "Taxas de prefixados do Tesouro renovam máximas do ano na volta do feriado",
+    "JPMorgan vê alívio no caixa do GPA (PCAR3) após renegociação de dívida trabalhista",
+    "Investir em IPOs pode trazer riscos para o investidor, diz economista"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1475,7 +1477,9 @@
     "O fundo imobiliário OUJP11 vai pagar R$ 0,85 por cota em 24 de novembro de 2026, em um repasse extraordinário. Segundo a Suno Notícias, têm direito quem encerrou o dia 13 de novembro com cotas. A antecipação busca levar aos cotistas o caixa existente antes de concluir a venda dos ativos e a liquidação. A gestão afirmou que as próximas etapas não tê",
     "O HGRU11 informou, segundo a Suno Notícias, resultado distribuível de R$ 19,79 milhões em outubro de 2026, com distribuição de R$ 0,95 por cota. O pagamento, previsto para 16 de novembro, soma R$ 23,59 milhões e supera o resultado gerado no mês.",
     "Resolução atualiza regras do Sistema Especial de Liquidação e de Custódia",
-    "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis"
+    "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis",
+    "O GPA (PCAR3) informou que o Tribunal Regional do Trabalho da 2ª Região (TRT-2) aprovou seu Plano Especial de Pagamento Trabalhista (PEPT), prorrogando o prazo para quitar R$ 140 milhões em passivos trabalhistas que venceriam até o fim de 2027. Com as novas condições, a companhia poderá pagar o montante em até 72 parcelas mensais, ao longo de seis ",
+    "Quando uma empresa estreia na Bolsa de Valores do seu país ela faz um IPO, sigla em inglês para oferta pública inicial de ações. Nessa ação os investidores conseguem comprar ações da companhia e garantir um pedacinho dela para si."
   ],
   "eventos_recentes": [
     {
@@ -1777,6 +1781,14 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795444634.311048
+    },
+    {
+      "chave": "pcar3::GERAL_ATIVO",
+      "ts": 1795445067.601783
+    },
+    {
+      "chave": "jpmorgan::GERAL_ATIVO",
+      "ts": 1795445067.601783
     }
   ],
   "hashes_imagens": [
@@ -1953,6 +1965,8 @@
     "f195a95a0438174b",
     "c2ac4c3d9998b910",
     "879112f9b03944fc",
-    "32c9444c1d7b101e"
+    "32c9444c1d7b101e",
+    "26471d65bccd41e7",
+    "4939fc89c69fa407"
   ]
 }
