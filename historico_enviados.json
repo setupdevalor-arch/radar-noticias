@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.seudinheiro.com/2026/colunistas/faz-diferenca-investidores-repercutem-ajuste-fiscal-estreia-anthopic-encontro-xi-trump-putin-rsgp/",
-    "f6605c6b405448df",
     "https://valor.globo.com/empresas/noticia/2026/11/19/copel-ve-oportunidade-para-crescer-em-geracao.ghtml",
     "81e381eb6bb59a03",
     "https://www.moneytimes.com.br/a-bolsa-caiu-mas-o-risco-ficou-btg-rebaixa-brasil-para-neutro-e-tira-itau-xp-e-assai-da-carteira-miql/",
@@ -799,7 +797,9 @@
     "https://megawhat.uol.com.br/economia-e-politica/empresas/gas-de-vaca-muerta-vai-abastecer-operacoes-de-siderurgica-no-rio/",
     "b5b3c3174d3c3d1a",
     "https://www.suno.com.br/noticias/unifique-fiqe3-acoes-disparam-opa-7-reais/",
-    "c4cfddefe9b43737"
+    "c4cfddefe9b43737",
+    "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-23112026/",
+    "b2c1b8db22685045"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1321,7 +1321,8 @@
     "Etanol compensa em 16 estados e no DF; gasolina cai",
     "Petrobras divulga hoje plano bilionário: o que investidores devem observar para PETR4",
     "Gás de Vaca Muerta vai abastecer operações de siderúrgica no Rio",
-    "Unifique (FIQE3) dispara 17% após reviravolta em oferta de compra; entenda"
+    "Unifique (FIQE3) dispara 17% após reviravolta em oferta de compra; entenda",
+    "Dólar hoje bate R$ 6 na máxima, mas ameniza com cenário externo"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1550,7 +1551,8 @@
     "O etanol continua sendo a opção mais vantajosa para carros flex em 16 estados e no Distrito Federal, mesmo após a terceira alta consecutiva do combustível. Na primeira quinzena de novembro, o litro do etanol fechou a R$ 4,38, em média, avanço de 1,39%, enquanto a gasolina recuou 0,89%, para R$ 6,67. Os dados são do Índice de Preços Edenred Ticket L",
     "A Petrobras (PETR3;PETR4) deve apresentar nesta semana seu aguardado Plano de Negócios 2027-2031, documento que definirá o rumo dos investimentos da companhia para os próximos cinco anos e pode servir como um importante catalisador para as ações Petrobras ON (PETR3) e Petrobras PN (PETR4).",
     "A comercializadora de gás natural da Pan American Energy (PAE) e a Companhia Siderúrgica Nacional (CSN) firmaram um contrato para o fornecimento de gás natural de Vaca Muerta, na Argentina, às operações industriais da siderúrgica no estado do Rio de Janeiro. O acordo tem vigência de 12 meses e as entregas de gás já foram iniciadas.",
-    "As ações da Unifique (FIQE3) dispararam nesta segunda-feira (23), após uma mudança importante nas condições da oferta pública de aquisição de ações (OPA) da companhia. Os papéis chegaram a avançar 17,10%, negociados a R$ 6,71, às 12h20, depois que a Unitá Participações elevou de R$ 6 para R$ 7 o valor oferecido por ação, um aumento de aproximadamen"
+    "As ações da Unifique (FIQE3) dispararam nesta segunda-feira (23), após uma mudança importante nas condições da oferta pública de aquisição de ações (OPA) da companhia. Os papéis chegaram a avançar 17,10%, negociados a R$ 6,71, às 12h20, depois que a Unitá Participações elevou de R$ 6 para R$ 7 o valor oferecido por ação, um aumento de aproximadamen",
+    "O dólar chegou a superar a marca de R$ 6,00 nesta manhã de segunda-feira, com as cotações novamente refletindo o mal-estar do mercado com a política fiscal do governo Lula, enquanto no exterior a moeda norte-americana tinha sinais mistos ante as divisas de países emergentes."
   ],
   "eventos_recentes": [
     {
@@ -1932,6 +1934,10 @@
     {
       "chave": "unifique::EVENTO_CORP",
       "ts": 1795458969.0351
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795459331.482116
     }
   ],
   "hashes_imagens": [
@@ -2146,6 +2152,7 @@
     "00f73714aa76ceec",
     "6d61d204c4f474bc",
     "9f70571464b9210f",
-    "4d224a4eb6a9ba5b"
+    "4d224a4eb6a9ba5b",
+    "b596f7c4c446c4b4"
   ]
 }
