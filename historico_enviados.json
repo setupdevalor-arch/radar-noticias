@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/nao-e-so-a-caixa-ceo-da-direcional-aponta-outro-motivo-por-tras-da-aceleracao-dos-distratos-nas-construtoras-do-minha-casa-minha-vida-bdap/",
-    "27961640d09a2336",
-    "https://livecoins.com.br/binance-revela-como-agiu-apos-ataque-de-us-63-bilhoes-e-faz-recomendacoes-de-seguranca-para-investidores/",
     "aca2eb35cbe4e5f9",
     "https://www.bbc.com/portuguese/articles/c64gnx55rxzlo?at_medium=RSS&at_campaign=rss",
     "4df2e1d3a7462d5d",
@@ -799,7 +796,10 @@
     "ca2f88ba51329a9c",
     "2ebede10e20e7d91",
     "https://www.spacemoney.com.br/agronegocio/rondonia-maximas-37-c-quarta/",
-    "3e12781cb9900409"
+    "3e12781cb9900409",
+    "8f4adde878ea2652",
+    "https://www.infomoney.com.br/mercados/ubs-bb-corta-b3-para-neutra-com-visao-de-cenario-desafiador-para-mercado-de-capitais/",
+    "67168f543fabdf24"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1271,7 +1271,8 @@
     "Empresa desiste de 80 MW em geração solar em PE por falta de margem",
     "CVM suspende registro de BRB, Refit, Ambipar e mais duas companhias abertas por falta de informações",
     "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear",
-    "Rondônia terá máximas de até 37 °C na quarta-feira"
+    "Rondônia terá máximas de até 37 °C na quarta-feira",
+    "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1451,7 +1452,8 @@
     "A Central Geradora Fotovoltaica Barrinhas SPE solicitou a revogação da outorga da UFV Solar Barrinhas, por falta de margem de escoamento. O projeto previa uma planta de 80 MW localizada no município de Ouricuri, em Pernambuco, com conexão à subestação Ouricuri 138/69 kV, da Neoenergia Pernambuco.",
     "A Superintendência de Relações com Empresas (SEP) da Comissão de Valores Mobiliários (CVM) suspendeu nesta segunda-feira, 23, o registro de cinco companhias abertas por descumprimento, há mais de 12 meses, da obrigação de prestar informações periódicas à autarquia, conforme previsto na Resolução CVM 80.",
     "– O Kremlin afirmou nesta segunda-feira que reportagens da mídia alemã sugerindo que a Rússia estaria planejando lançar ao espaço, ainda este ano, um satélite com armamento nuclear não devem ser levadas a sério.",
-    "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local."
+    "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local.",
+    "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo."
   ],
   "eventos_recentes": [
     {
@@ -1709,6 +1711,10 @@
     {
       "chave": "ambipar::GERAL_ATIVO",
       "ts": 1795440308.831018
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795441064.15927
     }
   ],
   "hashes_imagens": [
@@ -1873,6 +1879,7 @@
     "e047fc50459e6c4c",
     "0841eb45ba5f6427",
     "ef4cb657d8948899",
-    "7a23374886dab4b7"
+    "7a23374886dab4b7",
+    "48603b934267e5dc"
   ]
 }
