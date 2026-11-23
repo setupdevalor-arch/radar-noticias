@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/business/presidente-do-conselho-da-nvidia-descarta-possibilidade-de-recontratar-huang/",
-    "https://www.seudinheiro.com/2026/empresas/fim-da-escala-6x1-como-as-varejistas-da-bolsa-correm-para-evitar-pagar-a-conta-e-quem-ja-ve-o-copo-meio-cheio-bdap/",
     "https://www.moneytimes.com.br/custo-brasil-sobe-a-r-35-trilhoes-ao-ano-com-seguranca-e-juros-reais-diz-estudo-mbc-deloitte-fets/",
     "https://www.moneytimes.com.br/agenda-economica-o-que-pode-mexer-com-a-bolsa-e-o-dolar-nesta-quarta-feira-mlem-2/",
     "https://www.infomoney.com.br/business/nvidia-suspende-envio-de-chips-de-ia-aprovados-pelos-eua-para-china/",
@@ -799,7 +797,9 @@
     "81fee9db6ac42961",
     "0c06566a06a6e92e",
     "5a2041c94ad2630e",
-    "1fcb3d988f187067"
+    "1fcb3d988f187067",
+    "https://www.cnnbrasil.com.br/economia/alta-dos-gastos-faz-investidor-exigir-mais-juros-diz-pesquisadora-da-fgv/",
+    "4dce612514fd634e"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1210,7 +1210,8 @@
     "Houthis atacam refinaria saudita e Trump ameaça Teerã",
     "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT",
     "Traders descartam alta de 0,50 ponto do Fed em dezembro",
-    "Futuros de NY avançam após selloff global da IA"
+    "Futuros de NY avançam após selloff global da IA",
+    "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1329,7 +1330,8 @@
     "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters.",
     "Alice Huang, a chinesa no centro do recente escândalo da Nvidia, manteve contato com um funcionário da principal agência de espionagem da China por mais de um ano durante seu caso com o ex-CEO Jensen Huang, informou o New York Times neste domingo (22).",
     "Os fed funds futures deixaram de precificar uma alta de 50 pontos-base na taxa básica de juros dos EUA, para 4,5%, na reunião do Fed de dezembro, segundo o CME FedWatch. Cerca de dez dias antes, a probabilidade era de 10%.",
-    "Os futuros das bolsas de Nova York subiam nesta segunda-feira (23), devolvendo parte das fortes perdas da semana anterior, quando o comércio de inteligência artificial passou por uma correção global. Os contratos do Nasdaq-100 avançavam 2,76%, os do S&P 500 ganhavam 2,03% e os do Dow Jones subiam 673 pontos, ou 1,4%."
+    "Os futuros das bolsas de Nova York subiam nesta segunda-feira (23), devolvendo parte das fortes perdas da semana anterior, quando o comércio de inteligência artificial passou por uma correção global. Os contratos do Nasdaq-100 avançavam 2,76%, os do S&P 500 ganhavam 2,03% e os do Dow Jones subiam 673 pontos, ou 1,4%.",
+    "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP."
   ],
   "eventos_recentes": [
     {
@@ -1471,6 +1473,10 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795414269.935256
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795419267.909189
     }
   ],
   "hashes_imagens": [
@@ -1574,6 +1580,7 @@
     "a254393777ad3e24",
     "a5edc42315feede0",
     "b6cae3ac334a330b",
-    "0a2be891c473e27a"
+    "0a2be891c473e27a",
+    "414b71c3060c549e"
   ]
 }
