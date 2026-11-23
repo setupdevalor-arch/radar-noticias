@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://exame.com/carreira/quem-leva-mais-de-2-horas-para-chegar-ao-trabalho-pensa-quase-3-vezes-mais-em-pedir-demissao/",
-    "82dce61ae16a7c35",
     "https://exame.com/exame-in/apos-conceder-r-1-bilhao-em-credito-olist-amplia-aposta-em-servicos-financeiros/",
     "803fa6e50940e535",
     "https://exame.com/negocios/ele-ia-deixar-o-comando-da-propria-empresa-mas-a-ia-o-fez-ficar-e-agora-vai-faturar-r-850-milhoes/",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/economia/macroeconomia/ajuste-fiscal-petrobras-agenda-mercado/",
     "85e56622fd3180cb",
     "https://www.spacemoney.com.br/educacao-financeira/black-friday-planejamento-financeiro-dividas/",
-    "d9abb830e81a0d8d"
+    "d9abb830e81a0d8d",
+    "https://www.seudinheiro.com/2026/empresas/ceo-da-smart-fit-smft3-revela-a-estrategia-por-tras-do-crescimento-do-totalpass-foi-uma-decisao-muito-correta-lmrs/",
+    "317cf422184cfe24"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1229,7 +1229,8 @@
     "São os juros da dívida, não o BPC, mercadistas",
     "Bolsas da Ásia fecham mistas após novas medidas para conter turbulência ligada à IA",
     "Ajuste fiscal e Petrobras ditam o ritmo do mercado",
-    "Black Friday: planejar vale mais que qualquer desconto"
+    "Black Friday: planejar vale mais que qualquer desconto",
+    "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1367,7 +1368,8 @@
     "É um insanidade um país que ainda tem grande concentração de renda e quase 25% da população abaixo da linha de pobreza, torrar mais de um R$ 1 trilhão por ano com os juros da dívida pública. Isso não significa que o país deva deixar a inflação subir livremente, muito menos que os cortes de despesas públicas devam ocorrer nos programas sociais e no ",
     "As bolsas asiáticas fecharam sem direção única nesta segunda-feira (23), enquanto reguladores e operadores de mercado da China, da Coreia do Sul e de Taiwan reforçaram medidas para conter a turbulência provocada pela onda global de vendas de ações ligadas à inteligência artificial (IA).",
     "A semana começa com o mercado dividido entre a votação do projeto de ajuste fiscal na Câmara dos Deputados, o novo Plano de Negócios da Petrobras e uma agenda densa de indicadores domésticos e externos. Segundo apurou o InfoMoney, a sessão desta segunda-feira (23) também reserva o Relatório Focus, o Boletim Macrofiscal, dados da balança comercial e",
-    "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev"
+    "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev",
+    "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias"
   ],
   "eventos_recentes": [
     {
@@ -1541,6 +1543,10 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795425981.01454
+    },
+    {
+      "chave": "smft3::GERAL_ATIVO",
+      "ts": 1795426302.585655
     }
   ],
   "hashes_imagens": [
@@ -1663,6 +1669,7 @@
     "1e209e8a2973b7d6",
     "4ed3ff128884ac25",
     "299b4a2e6c0eebc1",
-    "79c02eff8daaf1a6"
+    "79c02eff8daaf1a6",
+    "009ce1e292d690aa"
   ]
 }
