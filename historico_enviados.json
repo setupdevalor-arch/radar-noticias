@@ -1,7 +1,5 @@
 {
   "links": [
-    "5fa3d733c54a71fc",
-    "https://www.suno.com.br/noticias/sp-500-etf-itau-asset-gss/",
     "c875d0bb5d0e2790",
     "https://www.moneytimes.com.br/banco-do-brasil-bbas3-b3-b3sa3-americanas-amer3-e-outros-destaques-desta-quarta-feira-mlem/",
     "b74e5500ac0fa1dc",
@@ -799,7 +797,9 @@
     "8ea894b4b4f891e7",
     "https://www.bloomberglinea.com.br/brasil/diretor-do-bc-nilton-david-participa-do-bloomberg-linea-summit-nesta-segunda-assista/",
     "36397777eb55550c",
-    "774f3b9d50cb649e"
+    "774f3b9d50cb649e",
+    "https://www.infomoney.com.br/mercados/hapvida-hapv3-nega-acordo-para-venda-de-ativos-a-advent-e-bain/",
+    "ca75a4af5a5138b9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1237,7 +1237,8 @@
     "Empresas europeias alertam UE contra cortes que afetem competitividade",
     "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
     "Montadoras alemãs enfrentam tensão crescente com sindicatos",
-    "Diretor do BC, Nilton David, participa do Bloomberg Línea Summit nesta segunda; assista"
+    "Diretor do BC, Nilton David, participa do Bloomberg Línea Summit nesta segunda; assista",
+    "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1383,7 +1384,8 @@
     "– Empresas europeias do setor de energia verde e tecnologias limpas, bem como grupos industriais, alertaram os líderes da UE nesta segunda-feira contra os cortes propostos ao Fundo Europeu de Competitividade, afirmando que o fundo é essencial para que o bloco consiga alcançar os Estados Unidos e a China.",
     "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
     "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso.",
-    "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo."
+    "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo.",
+    "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia."
   ],
   "eventos_recentes": [
     {
@@ -1573,6 +1575,10 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795428263.112012
+    },
+    {
+      "chave": "hapvida::GERAL_ATIVO",
+      "ts": 1795430484.131092
     }
   ],
   "hashes_imagens": [
@@ -1703,6 +1709,7 @@
     "e4bf98f84603f2ff",
     "b0db26a83a278535",
     "f97f520214cc4bf0",
-    "a5db412086d97a8c"
+    "a5db412086d97a8c",
+    "dc33a6226cd85103"
   ]
 }
