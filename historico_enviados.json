@@ -1,13 +1,5 @@
 {
   "links": [
-    "a382037926562fe6",
-    "https://valor.globo.com/financas/noticia/2026/11/19/ata-do-fed-pressiona-treasuries-e-acoes-em-ny.ghtml",
-    "591c2fb28d5d9c90",
-    "https://valor.globo.com/eu-e/noticia/2026/11/19/avancos-contra-o-racismo-nas-universidades-ainda-convivem-com-barreiras-aos-alunos-e-professores-negros.ghtml",
-    "6e6ba0254d8031e9",
-    "https://valor.globo.com/brasil/noticia/2026/11/19/fim-da-isencao-de-crime-patrimonial-vale-para-acao-em-curso.ghtml",
-    "a45bc4cc7b7e4d11",
-    "https://valor.globo.com/impresso/noticia/2026/11/19/dolar-volta-a-subir-e-alcanca-r-586-juro-futuro-tem-alta.ghtml",
     "62d855fe3563769e",
     "https://www.moneytimes.com.br/dividendo-a-vista-fundo-imobiliario-reduz-vacancia-do-portfolio-e-preve-impacto-por-cota-ifix-recua-igdl/",
     "978b8bb597bf7bff",
@@ -799,7 +791,15 @@
     "https://www.poder360.com.br/poder-economia/fazenda-reduz-estimativa-do-pib-de-2026-de-20-para-19/",
     "e0b3dafb2012c0f5",
     "https://www.seudinheiro.com/2026/carreiras/uma-empresa-bem-sucedida-erra-ao-confiar-demais-na-propria-formula-ceo-do-itau-revela-o-que-aprendeu-sobre-lideranca-miql/",
-    "169e545a681c44d8"
+    "169e545a681c44d8",
+    "ae3325ecfaf6afbd",
+    "d156bc67f08a43c9",
+    "https://www.seudinheiro.com/2026/bolsa-dolar/mercado-vive-dias-de-incerteza-mas-galipolo-ve-uma-vantagem-para-o-bc-tempo-jcav/",
+    "bdb5a5749f3d18ff",
+    "https://www.spacemoney.com.br/economia/etanol-compensa-16-estados-df-gasolina-recua/",
+    "bf7621de90cdd1cb",
+    "https://www.infomoney.com.br/mercados/petrobras-divulga-hoje-plano-bilionario-o-que-investidores-devem-observar-para-petr4/",
+    "0938f39289d63347"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1316,7 +1316,10 @@
     "Natal mais magro? Para Molina, da MBRF (MBRF3), fim das bets pode trazer ‘surpresa muito boa’ para o varejo",
     "Gerdau: Juro é definido no mercado; não há governo que consiga comandar esse processo",
     "Fazenda reduz estimativa do PIB de 2026 de 2,0% para 1,9%",
-    "Uma empresa bem-sucedida erra ao confiar demais na própria fórmula: CEO do Itaú revela o que aprendeu sobre liderança"
+    "Uma empresa bem-sucedida erra ao confiar demais na própria fórmula: CEO do Itaú revela o que aprendeu sobre liderança",
+    "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
+    "Etanol compensa em 16 estados e no DF; gasolina cai",
+    "Petrobras divulga hoje plano bilionário: o que investidores devem observar para PETR4"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1540,7 +1543,10 @@
     "A Advocacia-Geral da União (AGU) se manifestou contra a liminar do ministro do Supremo Tribunal Federal (STF) Flávio Dino que flexibilizou os prazos para folgas após o fim da escala 6×1. No documento enviado ao ministro nesta segunda-feira, 23, o braço jurídico do governo sustenta que as questões tratadas pela liminar são contempladas pelo decreto ",
     "Neste fim de ano, podemos ter “uma surpresa muito boa” e, possivelmente, “um dos melhores Natais” para o varejo e para a venda de proteínas, na avaliação de Marcos Molina, presidente do conselho de administração da MBRF (MBRF3), gigante dona de marcas como Sadia, Perdigão e Bassi.",
     "A projeção para o IPCA (Índice Nacional de Preços ao Consumidor Amplo), índice de inflação, deste ano subiu de 4,9% para 5,3%",
-    "No Itaú, Milton Maluhy renovou toda a cúpula do banco e aposta em uma nova cultura de gestão, com menos hierarquia, mais autonomia e preparação de sucessores"
+    "No Itaú, Milton Maluhy renovou toda a cúpula do banco e aposta em uma nova cultura de gestão, com menos hierarquia, mais autonomia e preparação de sucessores",
+    "Em meio à volatilidade dos mercados presidente do BC afirma que postura conservadora adotada anteriormente permite ganhar tempo",
+    "O etanol continua sendo a opção mais vantajosa para carros flex em 16 estados e no Distrito Federal, mesmo após a terceira alta consecutiva do combustível. Na primeira quinzena de novembro, o litro do etanol fechou a R$ 4,38, em média, avanço de 1,39%, enquanto a gasolina recuou 0,89%, para R$ 6,67. Os dados são do Índice de Preços Edenred Ticket L",
+    "A Petrobras (PETR3;PETR4) deve apresentar nesta semana seu aguardado Plano de Negócios 2027-2031, documento que definirá o rumo dos investimentos da companhia para os próximos cinco anos e pode servir como um importante catalisador para as ações Petrobras ON (PETR3) e Petrobras PN (PETR4)."
   ],
   "eventos_recentes": [
     {
@@ -1910,6 +1916,14 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795457370.487432
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795457901.925214
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795457901.925214
     }
   ],
   "hashes_imagens": [
@@ -2119,6 +2133,9 @@
     "a1e93b92a6167101",
     "15772f0f6f4a66a6",
     "17206945cd6e6a89",
-    "da8bff20785cfd40"
+    "da8bff20785cfd40",
+    "9d1279b3097f0387",
+    "00f73714aa76ceec",
+    "6d61d204c4f474bc"
   ]
 }
