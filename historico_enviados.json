@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://megawhat.uol.com.br/economia-e-politica/empresas/copel-prepara-9-gw-em-hidreletricas-reversiveis-para-leiloes/",
-    "799ab316882123fc",
     "https://www.sonhoseguro.com.br/2026/11/caixa-seguridade-registra-lucro-de-r-12-bilhao-no-terceiro-trimestre/",
     "d094cb6e879035a0",
     "https://www.suno.com.br/noticias/novo11-investe-nubank-itau/",
@@ -799,7 +797,9 @@
     "151f7ceef7e106d8",
     "511ef7dbf7757d11",
     "https://www.moneytimes.com.br/capitalizacao-da-raizen-deve-fechar-na-faixa-superior-da-meta-dizem-fontes/",
-    "6ec2d54875d60ad2"
+    "6ec2d54875d60ad2",
+    "https://megawhat.uol.com.br/destaques-do-diario/equatorial-recebe-nova-multa-por-favorecer-comercializadora-do-grupo/",
+    "c1849c873960ac00"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1327,7 +1327,8 @@
     "UE economizou € 120 bilhões em importações de energia desde 2022",
     "BDR da Anthropic (ANTH34) recua mais de 6% após estreia positiva na Bolsa brasileira",
     "Cemig restringe injeção de energia solar à noite e caso vai parar na Aneel",
-    "Raízen (RAIZ55) deve atingir meta de capitalização, mas Ometto pode ficar de fora e diluir participação"
+    "Raízen (RAIZ55) deve atingir meta de capitalização, mas Ometto pode ficar de fora e diluir participação",
+    "Equatorial recebe nova multa por favorecer comercializadora do grupo"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1562,7 +1563,8 @@
     "Medidas de eficiência energética economizaram cerca de € 120 bilhões (US$ 132 bilhões) em custos de importação de gás e petróleo pela União Europeia desde a invasão da Ucrânia pela Rússia, em 2022. A Comissão Europeia afirmou nesta segunda-feira (23) que a economia de energia precisa caminhar junto com a eletrificação durante a transição do bloco p",
     "Os BDR (Brazilian Depositary Receipts, em inglês) da Anthropic, no ticker ANTH34, recuavam 6,74%, negociados a R$ 66,76, às 15h desta segunda-feira (23). Na quinta-feira, os BDRs encerraram o dia sendo negociados a R$ 71,70.",
     "O Ministério Público Federal (MPF) acionou a Agência Nacional de Energia Elétrica (Aneel) após a Cemig Distribuição limitar ao período noturno, entre 19h e 5h, a injeção de excedentes de energia de uma usina solar da Universidade Federal do Triângulo Mineiro (UFTM).",
-    "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio."
+    "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio.",
+    "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor."
   ],
   "eventos_recentes": [
     {
@@ -1968,6 +1970,10 @@
     {
       "chave": "raizen::GERAL_ATIVO",
       "ts": 1795461855.513999
+    },
+    {
+      "chave": "equatorial::GERAL_ATIVO",
+      "ts": 1795463033.661648
     }
   ],
   "hashes_imagens": [
@@ -2188,6 +2194,7 @@
     "758806a8314f0d46",
     "0044611e8462ac9f",
     "c61db3eaeae3cdbd",
-    "c5474207227f9e6e"
+    "c5474207227f9e6e",
+    "423529f68b661b1f"
   ]
 }
