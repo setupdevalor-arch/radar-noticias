@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://exame.com/invest/mercados/fed-endurece-tom-sobre-impacto-da-ia-na-estabilidade-financeira-dos-eua/",
-    "2bc41f5be52c0621",
-    "https://www.infomoney.com.br/business/startups-anthropic-concentra-56-do-gasto-em-ia-nas-empresas-brasileiras/",
-    "790450ff56989fbb",
-    "https://www.moneytimes.com.br/klabin-klbn11-impacto-de-acidente-pode-variar-entre-4-e-7-do-ebitda-mas-e-administravel-diz-safra-pads/",
-    "04c7522e42b2d21a",
-    "https://braziljournal.com/desenvolve-sp-vai-financiar-cameras-30-da-gabriel",
-    "a17ff448245cf9b3",
     "https://www.suno.com.br/noticias/eqtl3-aneel-revisao-tarifaria-ceee-d/",
     "4965c43988a903a7",
     "https://www.suno.com.br/noticias/ggbr4-gerdau-cancela-investor-day-2026/",
@@ -799,7 +791,15 @@
     "b9463797f37e8f4b",
     "ffe0372dfa99ed21",
     "https://agenciainfra.com/blog/antt-aprova-avanco-da-transferencia-da-regis-bittencourt-a-epr/?utm_source=rss&utm_medium=rss&utm_campaign=antt-aprova-avanco-da-transferencia-da-regis-bittencourt-a-epr",
-    "83ce8c90638641ee"
+    "83ce8c90638641ee",
+    "1291afe21b721b6f",
+    "f18e2f73a497ff13",
+    "2a081492e9405795",
+    "23c0dba20a4eed1e",
+    "https://www.estadao.com.br/economia/pedidos-demissao-conta-propria-perdem-folego-arrefecimento-emprego-formal/",
+    "2272603131b35c49",
+    "https://www.infomoney.com.br/mercados/citi-eleva-vivo-vivt3-e-tim-tims3-para-compra-e-destaca-resiliencia-do-setor/",
+    "6a5742f17b18d165"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1291,7 +1291,9 @@
     "SUSEP lança estudo sobre educação securitária",
     "Braskem sobe forte com notícia sobre acordo com credores para reestruturar dívidas",
     "Fintechs brasileiras despencam em Nova York; PicPay perde 32% na semana",
-    "ANTT aprova avanço da transferência da Régis Bittencourt à EPR"
+    "ANTT aprova avanço da transferência da Régis Bittencourt à EPR",
+    "Pedidos de demissão por conta própria perdem fôlego e confirmam arrefecimento do emprego formal",
+    "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1491,7 +1493,9 @@
     "Nesse texto de novembro de 2026, temos as seguintes conclusões.",
     "A Braskem (BRKM5) vê suas ações subirem forte em meio a notícias sobre chegado de um acordo sobre plano de reestruturação. Às 12h03 (horário de Brasília), BRKM5 subia 5,77%, a R$ 2,75.",
     "Nenhuma das sete fintechs brasileiras listadas nos Estados Unidos fechou no azul entre segunda-feira (16) e sexta-feira (20). O PicPay (PICS) teve a pior semana: caiu 32,35% e terminou cotado a US$ 5,02.",
-    "A ANTT (Agência Nacional de Transportes Terrestres) aprovou nesta segunda-feira (23) os procedimentos para a assinatura do contrato de compra e venda de 100% das ações da Régis Bittencourt pela EPR. A decisão representa uma das últimas etapas do processo competitivo realizado para transferir o controle da concessão, após a repactuação do contrato o"
+    "A ANTT (Agência Nacional de Transportes Terrestres) aprovou nesta segunda-feira (23) os procedimentos para a assinatura do contrato de compra e venda de 100% das ações da Régis Bittencourt pela EPR. A decisão representa uma das últimas etapas do processo competitivo realizado para transferir o controle da concessão, após a repactuação do contrato o",
+    "As demissões por iniciativa dos próprios trabalhadores estão na máxima histórica, mas perdendo fôlego. Entre janeiro e setembro de 2026, os pedidos de demissão “por conta própria” registraram a menor taxa de crescimento dos últimos seis anos, isto é, desde o início do Novo Cadastro Geral de Empregados (Caged), que passou a medir o emprego formal no",
+    "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra."
   ],
   "eventos_recentes": [
     {
@@ -1805,6 +1809,14 @@
     {
       "chave": "braskem::GERAL_ATIVO",
       "ts": 1795446650.248986
+    },
+    {
+      "chave": "vivo::BALANCO",
+      "ts": 1795448169.790704
+    },
+    {
+      "chave": "tim::BALANCO",
+      "ts": 1795448169.790704
     }
   ],
   "hashes_imagens": [
@@ -1989,6 +2001,8 @@
     "f49be025a774ac5f",
     "e730c5e7124a5a5f",
     "07d7f99b637c7ce2",
-    "543f4a3d046e7200"
+    "543f4a3d046e7200",
+    "6e484c66de3f18b8",
+    "69c276ad8bde988b"
   ]
 }
