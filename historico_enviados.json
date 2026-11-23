@@ -1,11 +1,5 @@
 {
   "links": [
-    "53b78efc6a452114",
-    "https://www.infomoney.com.br/brasil/klabin-evacua-fabrica-apos-explosao-de-caldeira-que-deixa-feridos-em-sc/",
-    "b912b2c3c6a6e456",
-    "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-18112026/",
-    "e6063c17d720c143",
-    "https://www.infomoney.com.br/mercados/petroleo-fecha-em-queda-com-perspectiva-de-excesso-de-oferta/",
     "68a43aec1c128bae",
     "https://www.moneytimes.com.br/trump-vai-baixar-a-guarda-derrota-eleitoral-pode-mudar-relacao-com-lula-china-e-russia-avalia-professor-jcav/",
     "cfa6b6fb60c0047c",
@@ -799,7 +793,13 @@
     "6a5742f17b18d165",
     "d36f685d890336c6",
     "https://www.spacemoney.com.br/investimentos/acoes/ez-tec-reorganizacao-incorporacoes-cisao/",
-    "3101c2a8ddcea499"
+    "3101c2a8ddcea499",
+    "33f3cdacaa840060",
+    "70f8fb1e9fbced3f",
+    "dceef971958b22df",
+    "9fd0d2279ef14db2",
+    "https://www.infomoney.com.br/politica/instituto-alerta-para-risco-de-fuga-de-capital-com-regra-para-empresas-estrangeiras/",
+    "6b0d13a281cec299"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1294,7 +1294,8 @@
     "ANTT aprova avanço da transferência da Régis Bittencourt à EPR",
     "Pedidos de demissão por conta própria perdem fôlego e confirmam arrefecimento do emprego formal",
     "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
-    "EZ Tec aprova reorganização com incorporações e cisão"
+    "EZ Tec aprova reorganização com incorporações e cisão",
+    "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1497,7 +1498,8 @@
     "A ANTT (Agência Nacional de Transportes Terrestres) aprovou nesta segunda-feira (23) os procedimentos para a assinatura do contrato de compra e venda de 100% das ações da Régis Bittencourt pela EPR. A decisão representa uma das últimas etapas do processo competitivo realizado para transferir o controle da concessão, após a repactuação do contrato o",
     "As demissões por iniciativa dos próprios trabalhadores estão na máxima histórica, mas perdendo fôlego. Entre janeiro e setembro de 2026, os pedidos de demissão “por conta própria” registraram a menor taxa de crescimento dos últimos seis anos, isto é, desde o início do Novo Cadastro Geral de Empregados (Caged), que passou a medir o emprego formal no",
     "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra.",
-    "A EZ Tec Empreendimentos e Participações comunicou ao mercado, em fato relevante conjunto enviado à CVM, que os conselhos de administração da EZ Tec e da EZ Inc Incorporações aprovaram submeter a uma assembleia geral extraordinária uma reorganização societária que prevê a incorporação da EZ Inc e da Itajubá pela companhia e a cisão parcial da Mairi"
+    "A EZ Tec Empreendimentos e Participações comunicou ao mercado, em fato relevante conjunto enviado à CVM, que os conselhos de administração da EZ Tec e da EZ Inc Incorporações aprovaram submeter a uma assembleia geral extraordinária uma reorganização societária que prevê a incorporação da EZ Inc e da Itajubá pela companhia e a cisão parcial da Mairi",
+    "O Projeto de Lei 1.051/2025, em tramitação na Câmara dos Deputados, prevê que o governo federal poderá barrar ou impor condições à compra de empresas brasileiras por investidores estrangeiros em setores estratégicos."
   ],
   "eventos_recentes": [
     {
@@ -2006,6 +2008,7 @@
     "543f4a3d046e7200",
     "6e484c66de3f18b8",
     "69c276ad8bde988b",
-    "78fa2dd6aab80ed8"
+    "78fa2dd6aab80ed8",
+    "9faa0fea7e9c36f3"
   ]
 }
