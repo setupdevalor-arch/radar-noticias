@@ -1,11 +1,5 @@
 {
   "links": [
-    "c58eec743f3f8559",
-    "e1f62778ca70b1f6",
-    "aa5b3eaf579b32ac",
-    "774a2d231a454fee",
-    "a7e35972fbeb5f7e",
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/goldman-sachs-brasil-precisa-de-ajuste-nas-contas-publicas-de-r-400-bi/",
     "ea278b6afa5b50e2",
     "https://www.cnnbrasil.com.br/economia/money/tecnologia/por-que-eua-nao-querem-que-empresas-construam-data-centers-em-outros-paises/",
     "b3b966f3fd44aca9",
@@ -799,7 +793,13 @@
     "https://www.moneytimes.com.br/petrobras-petr4-vai-pagar-us-156-bilhoes-em-dividendos-extraordinarios-veja-prazos-e-quem-pode-receber-ccgg/",
     "009d2094f8d392e8",
     "https://www.cnnbrasil.com.br/agro/petrobras-compra-42-da-produtora-de-etanol-de-milho-neomille-por-r-28-bi/",
-    "a672ca6c15c19ef2"
+    "a672ca6c15c19ef2",
+    "https://www.spacemoney.com.br/investimentos/ibovespa-dolar-magalu/",
+    "e7173e1319a489f0",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hgre11-compra-salas-wework/",
+    "9998d9b190a1ff44",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/trco11-pagamento-aluguel-outubro/",
+    "847fe3d5495bc8ae"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1351,12 +1351,12 @@
     "DI cai com falas do BC e nomes próximos ao mercado",
     "Dólar fecha a R$ 5,92 após romper R$ 6 de olho no BC",
     "Petrobras (PETR4) vai pagar US$ 15,6 bilhões em dividendos extraordinários; veja prazos e quem pode receber",
-    "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi"
+    "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi",
+    "Dólar toca R$ 6; Ibovespa cai e Magalu sobe",
+    "HGRE11 adquire 67 salas ocupadas pela WeWork",
+    "TRCO11 registra quitação de aluguel de outubro"
   ],
   "leads": [
-    "Ata da última reunião de política monetária do Fed mostrou que os dirigentes esperam novos apertos nos próximos meses",
-    "Se parcela da população negra com ensino superior mais que quintuplicou neste século, preconceitos e assédio ainda persistem na academia",
-    "Supremo decide aplicar imediatamente decisão que evita violência financeira com base na lei Maria da Penha",
     "Valorização global da moeda americana e expectativa de juros mais altos nos EUA ampliam a pressão sobre os ativos brasileiros, em meio a preocupações fiscais e inflacionárias",
     "O fundo imobiliário Rio Negro (RNGO11) anunciou, por meio de fato relevante, que alugou o terceiro andar da Torre Padauiri para a CSI Latina Arrendamento Mercantil S.A. O espaço possui 1,35 mil metros quadrados (m²).",
     "A Priner (PRNR3) informou nesta terça-feira (18) que não conseguiu levantar os recursos que pretendia com um aumento de capital privado e decidiu cancelar a operação de até R$ 220 milhões aprovada em outubro.",
@@ -1603,7 +1603,10 @@
     "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria",
     "O dólar encerrou esta segunda-feira (23) em queda de 0,15%, a R$ 5,92, depois de ultrapassar a marca de R$ 6 pela primeira vez desde o início de abril de 2025, em um pregão marcado por preocupações fiscais, relatos de saída de recursos e valorização da moeda americana no exterior. Segundo o Monitor do Mercado, o alívio apareceu na parte da tarde, q",
     "A semana começa com uma das notícias mais aguardadas pelos acionistas: dividendos extraordinários da Petrobras (PETR4). O Conselho de Administração da estatal aprovou nesta segunda-feira (23) a distribuição de R$ 15,60 bilhões, ou R$ 1,21035949 por ação ordinária e preferencial em circulação.",
-    "A Petrobras fechou um acordo para adquirir 42% do capital social da Neomille, produtora de etanol de milho controlada pela CerradinhoBio, em uma operação avaliada em R$ 2,8 bilhões. O acordo foi anunciado nesta segunda-feira (23) e marca a retomada dos investimentos da estatal no mercado de etanol."
+    "A Petrobras fechou um acordo para adquirir 42% do capital social da Neomille, produtora de etanol de milho controlada pela CerradinhoBio, em uma operação avaliada em R$ 2,8 bilhões. O acordo foi anunciado nesta segunda-feira (23) e marca a retomada dos investimentos da estatal no mercado de etanol.",
+    "O Ibovespa encerrou a segunda-feira (23) aos 164.796,05 pontos, com queda de 0,95% e perda de 1.580,38 pontos, segundo a Suno Notícias. Foi a terceira sessão seguida no negativo, e o índice ficou abaixo dos 165 mil pontos. No câmbio, a máxima do dólar foi de R$ 6,006; o patamar de R$ 6 não era alcançado desde abril de 2025. A moeda, porém, fechou a",
+    "Conforme a Suno Notícias, o HGRE11, fundo imobiliário administrado pela Pátria Investimentos, concluiu a compra de 67 salas no empreendimento One Eleven, da Helbor, na Vila Olímpia (SP), por R$ 73,5 milhões. As unidades somam 3.831 m² de área bruta locável e respondem por 84% do condomínio.",
+    "Segundo a Suno Notícias, o TRCO11 (Torre Rio Claro Offices), administrado pelo Ouribank, registrou nesta segunda-feira (23) o recebimento do aluguel de outubro da BM Varejo Empreendimentos S.A. O valor foi acrescido de multa equivalente a 5% e de juros mensais de 1%, conforme fato relevante do administrador."
   ],
   "eventos_recentes": [
     {
@@ -2093,6 +2096,18 @@
     {
       "chave": "petrobras::EVENTO_CORP",
       "ts": 1795475194.920769
+    },
+    {
+      "chave": "magazine_luiza::GERAL_ATIVO",
+      "ts": 1795475541.49734
+    },
+    {
+      "chave": "hgre11::GERAL_ATIVO",
+      "ts": 1795475541.49734
+    },
+    {
+      "chave": "trco11::GERAL_ATIVO",
+      "ts": 1795475541.49734
     }
   ],
   "hashes_imagens": [
@@ -2337,6 +2352,9 @@
     "32d2112ebad2d253",
     "58fe0d5271104f6b",
     "bc6368298a15cd11",
-    "a6803543a929fe8e"
+    "a6803543a929fe8e",
+    "958cbba10e7929ab",
+    "1f9c2974992fe642",
+    "57cca73d2d35f9d6"
   ]
 }
