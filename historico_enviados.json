@@ -1,18 +1,5 @@
 {
   "links": [
-    "e594e636947f3a5c",
-    "https://www.infomoney.com.br/mundo/sheinbaum-diz-que-reuniao-com-trump-foi-muito-boa-e-negociacoes-estao-avancadas/",
-    "263835829062c547",
-    "https://www.infomoney.com.br/mercados/deterioracao-no-credito-afeta-grandes-bancos-no-3o-tri-bb-tem-pior-resultado/",
-    "d9a82b7f1bfcd968",
-    "https://exame.com/bussola/corporate-venture-capital-o-que-empresas-precisam-saber-antes-de-investir-em-startups/",
-    "b6c3f691d0ce61e0",
-    "https://www.infomoney.com.br/politica/nome-de-alckmin-para-fazenda-e-elogiado-por-economistas-e-analistas-em-evento/",
-    "8744abcdf111f609",
-    "https://exame.com/future-of-money/memecoins-de-gta-6-sobem-ate-21-000-com-o-lancamento-do-jogo/",
-    "eecef405afacf6a7",
-    "https://portaldobitcoin.uol.com.br/gta-6-memecoin-inspirada-no-jogo-rende-lucro-de-66-000-a-investidor/",
-    "2b26143cb8650f8c",
     "https://livecoins.com.br/arthur-hayes-preve-forte-valorizacao-para-o-bitcoin-e-outras-quatro-criptomoedas/",
     "d08b0350bbc4dd6e",
     "https://www.moneytimes.com.br/klabin-klbn11-suspende-operacoes-em-unidade-de-sc-apos-incidente-10-funcionarios-sao-hospitalizados-pads/",
@@ -799,7 +786,20 @@
     "cf0de898e0f16cec",
     "96f3232d09271a5f",
     "591c7e062d825812",
-    "4048aa4bae7140eb"
+    "4048aa4bae7140eb",
+    "5e2c5d74a0f96d5b",
+    "f0f1bdadf9e92698",
+    "792e111020d6d1ec",
+    "da5e9db0791bb17b",
+    "974c021c8f0456a2",
+    "0e3d26511f76688f",
+    "83a7a2a1ea709a27",
+    "https://www.estadao.com.br/economia/governo-pretende-iniciar-desmame-subsidio-combustiveis-dezembro/",
+    "8dbbaf8a30935d22",
+    "https://www.spacemoney.com.br/tecnologia/samsung-galaxy-watch-adiamento-2027/",
+    "57ae526055261078",
+    "https://www.spacemoney.com.br/tecnologia/falhas-eua-microsoft-apple-aviacao-fbi/",
+    "1b8f8b5c2b1b0348"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1273,7 +1273,10 @@
     "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear",
     "Rondônia terá máximas de até 37 °C na quarta-feira",
     "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais",
-    "TOTVS (TOTS3): BlackRock informa participação acionária na companhia"
+    "TOTVS (TOTS3): BlackRock informa participação acionária na companhia",
+    "Governo pretende iniciar ‘desmame’ de subsídio de combustíveis em dezembro",
+    "Samsung pode adiar Galaxy Watch e priorizar pulseira em 2027",
+    "Falhas em Microsoft, Apple e voos elevam suspeita de ataque"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1455,7 +1458,10 @@
     "– O Kremlin afirmou nesta segunda-feira que reportagens da mídia alemã sugerindo que a Rússia estaria planejando lançar ao espaço, ainda este ano, um satélite com armamento nuclear não devem ser levadas a sério.",
     "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local.",
     "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo.",
-    "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021."
+    "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021.",
+    "O governo brasileiro planeja reduzir gradualmente o subsídio aos combustíveis a partir do próximo mês, apesar dos conflitos globais, como a guerra EUA-Irã. Criado em março para mitigar o impacto dos preços internacionais, o subsídio ao diesel, atualmente em R$ 2,12 por litro, visa conter a inflação e garantir o abastecimento. A medida, que já custo",
+    "De acordo com o TecMundo, a Samsung estuda não apresentar uma nova geração do Galaxy Watch em 2027. A informação, divulgada pelo site sul-coreano ETNews, indica que a linha teria seu próximo modelo apenas no ano seguinte, com lançamentos a cada dois anos. A Samsung não confirmou o rumor.",
+    "Uma sequência de falhas atingiu serviços digitais e a aviação nos Estados Unidos nas últimas semanas, envolvendo sistemas da Microsoft, da Apple, o controle do espaço aéreo e o FBI. As causas oficiais apontam sobrecarga e problemas de infraestrutura, mas não há confirmação de um ataque cibernético."
   ],
   "eventos_recentes": [
     {
@@ -1721,6 +1727,14 @@
     {
       "chave": "totvs::GERAL_ATIVO",
       "ts": 1795441411.405437
+    },
+    {
+      "chave": "apple::GERAL_ATIVO",
+      "ts": 1795442207.593635
+    },
+    {
+      "chave": "microsoft::GERAL_ATIVO",
+      "ts": 1795442207.593635
     }
   ],
   "hashes_imagens": [
@@ -1887,6 +1901,9 @@
     "ef4cb657d8948899",
     "7a23374886dab4b7",
     "48603b934267e5dc",
-    "4b8306a657181ed1"
+    "4b8306a657181ed1",
+    "c06b05c224c27f12",
+    "bb982d106248a6c6",
+    "b0c3ad71e547beac"
   ]
 }
