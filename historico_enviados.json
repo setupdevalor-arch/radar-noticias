@@ -1,7 +1,5 @@
 {
   "links": [
-    "b98a7d5419a7da43",
-    "https://www.poder360.com.br/poder-economia/telebras-mira-autonomia-financeira-e-projeta-fim-de-aportes-do-governo/",
     "c06cc3c7d2cefed0",
     "https://www.poder360.com.br/poder-infra/telebras-estima-iniciar-operacao-de-data-center-de-ia-em-1-ano/",
     "7fb3863d66729cb5",
@@ -799,7 +797,9 @@
     "https://www.cnnbrasil.com.br/economia/money/mercado/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-jensen-huang-a-nvidia/",
     "509df43955adf936",
     "https://www.spacemoney.com.br/economia/legislacao/kalshi-nova-york-decisao-judicial/",
-    "12bf715d93abcaab"
+    "12bf715d93abcaab",
+    "https://www.infomoney.com.br/business/volta-de-jensen-huang-ao-comando-da-nvidia-foi-decidida-sem-consulta-a-diretoria/",
+    "d19206b6e0f629b5"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1339,7 +1339,8 @@
     "Amazon compra software de chips da Decart",
     "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior",
     "Bitcoin sobe após voltar ao menor nível em dois anos",
-    "Justiça de Nova York nega restrição imediata à Kalshi"
+    "Justiça de Nova York nega restrição imediata à Kalshi",
+    "Volta de Jensen Huang ao comando da Nvidia foi decidida sem consulta à diretoria"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1586,7 +1587,8 @@
     "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
     "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial.",
     "O bitcoin registrou alta nesta segunda-feira (23) em recuperação após bater o menor valor em dois anos no fim de semana. A movimentação acontece em meio à recuperação do setor acionário nos Estados Unidos após a volta de Jensen Huang à Nvidia.",
-    "Um juiz da Justiça estadual de Nova York rejeitou o pedido do procurador-geral do estado para barrar de imediato a Kalshi, segundo o Cointelegraph. Com a decisão, a plataforma de mercados de previsão pode continuar oferecendo contratos de eventos no estado enquanto a disputa judicial sobre seus produtos ligados a esportes segue em tramitação."
+    "Um juiz da Justiça estadual de Nova York rejeitou o pedido do procurador-geral do estado para barrar de imediato a Kalshi, segundo o Cointelegraph. Com a decisão, a plataforma de mercados de previsão pode continuar oferecendo contratos de eventos no estado enquanto a disputa judicial sobre seus produtos ligados a esportes segue em tramitação.",
+    "A decisão surpreendente do conselho da Nvidia de reintegrar o ex-presidente-executivo Jensen Huang foi tomada sem consulta aos principais dirigentes da empresa, que foram informados do plano apenas nos momentos finais, segundo pessoas familiarizadas com o assunto."
   ],
   "eventos_recentes": [
     {
@@ -2024,6 +2026,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795468159.376829
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795468525.540612
     }
   ],
   "hashes_imagens": [
@@ -2256,6 +2262,7 @@
     "f290d56353a2d485",
     "5e854881656d22b7",
     "8968c24885efbf68",
-    "a7760067a2c010c8"
+    "a7760067a2c010c8",
+    "91534925a586a1ec"
   ]
 }
