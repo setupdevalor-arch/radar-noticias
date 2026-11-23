@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://exame.com/mundo/voltamos-a-lei-da-selva-diz-analista-sobre-cupula-entre-trump-putin-e-xi-jinping/",
-    "195f12b8358abac2",
-    "https://www.seudinheiro.com/2026/empresas/seus-dados-estao-seguros-banco-do-brasil-confirma-vazamento-de-informacoes-de-clientes-veja-o-que-foi-exposto-miql/",
-    "fb79c0ce07b2e40e",
-    "https://exame.com/negocios/eles-criaram-o-pix-para-gringos-e-movimentaram-r-1-milhao-em-30-dias/",
-    "389f38577d3f572b",
     "https://g1.globo.com/trabalho-e-carreira/noticia/2026/11/18/99-acao-mpt-taxa-zero.ghtml",
     "302cf26e2746f4f8",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/18/banco-do-brasil-bbas3-informa-vazamentos-de-dados-de-clientes-mas-nega-invasao-a-seus-sistemas.ghtml",
@@ -799,7 +793,13 @@
     "https://bmcnews.com.br/mercados/bolsas-europeias-sobem-com-techs-e-mineradoras-apos-quatro-quedas/",
     "d7838337cef14a51",
     "https://www.moneytimes.com.br/dividendos-de-11-e-desconto-na-bolsa-fundo-imobiliario-recebe-recomendacao-de-compra-do-btg-veja-preco-alvo-igdl/",
-    "018aa9afbaaa62ea"
+    "018aa9afbaaa62ea",
+    "1583594f8d508688",
+    "d04bb05f695dde03",
+    "c8ca6298213fb62b",
+    "82972b589574f566",
+    "https://www.infomoney.com.br/economia/cambio-reforca-tendencia-de-queda-de-precos-de-commodities-diz-stonex/",
+    "8f56f81fa3e2ef73"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1308,7 +1308,8 @@
     "Plantio de soja no Brasil avança para 86% com ajuda das chuvas, diz AgRural",
     "Dólar a R$ 6 acende alerta sobre inflação: veja como a alta pode elevar o IPCA",
     "Bolsas europeias sobem com techs e mineradoras após quatro quedas",
-    "Dividendos de 11% e desconto na bolsa: por que este fundo imobiliário é compra para o BTG"
+    "Dividendos de 11% e desconto na bolsa: por que este fundo imobiliário é compra para o BTG",
+    "Câmbio reforça tendência de queda de preços de commodities, diz StoneX"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1525,7 +1526,8 @@
     "O plantio da safra 2026/27 de soja do Brasil alcançou 86% da área projetada na última quinta-feira, contra 78% observado na semana anterior e 81% um ano atrás, segundo levantamento da AgRural divulgado nesta segunda-feira.",
     "Por trás da alta está, sobretudo, a desconfiança com as contas públicas. Quando o mercado teme que o governo não consiga controlar sua dívida, hoje em 83% do PIB, quem investe busca lugares mais seguros para o dinheiro. Mais gente vendendo reais para comprar dólares empurra a cotação para cima.",
     "As bolsas europeias fecharam em alta nesta 2ª feira, interrompendo uma sequência de quatro sessões consecutivas de perdas, com ações de tecnologia e de mineração à frente dos ganhos e recuperação mais ampla dos índices do continente.",
-    "O fundo imobiliário Patria Malls (PMLL11), do segmento de shopping centers, entrou na cobertura do BTG Pactual com recomendação de compra e preço-alvo de R$ 112 para as cotas, o que representa potencial de alta (upside) de 16% frente ao valor atual, de R$ 96."
+    "O fundo imobiliário Patria Malls (PMLL11), do segmento de shopping centers, entrou na cobertura do BTG Pactual com recomendação de compra e preço-alvo de R$ 112 para as cotas, o que representa potencial de alta (upside) de 16% frente ao valor atual, de R$ 96.",
+    "A cotação comercial do dólar testou nesta segunda-feira (23) a fronteira psicológica dos R$ 6, alcançado R$ 6,005 pouco antes das 10h30, voltando a um patamar um pouco inferior depois disso. Para o mercado de commodities, o efeito dessa depreciação do real foi considerado “heterogêneo” pela consultoria StoneX."
   ],
   "eventos_recentes": [
     {
@@ -1875,6 +1877,10 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795455652.146754
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795456084.793008
     }
   ],
   "hashes_imagens": [
@@ -2076,6 +2082,7 @@
     "633a8c94db27670f",
     "8ce10722f79e4e3f",
     "99e8c48c03591fc5",
-    "b9ae823a004e57fd"
+    "b9ae823a004e57fd",
+    "b9199f800ca39aca"
   ]
 }
