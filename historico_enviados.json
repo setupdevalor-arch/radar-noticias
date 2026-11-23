@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/19/copel-cple3-aprova-o-pagamento-de-r-871-milhoes-em-juros-sobre-capital-proprio.ghtml",
-    "fca5252fedf1b670",
-    "https://www.suno.com.br/noticias/axia3-axia-energia-rating-cronograma-debentures-191126/",
-    "42b4dc719dc43c48",
-    "https://telesintese.com.br/assembleia-sobre-a-opa-da-unifique-segue-em-aberto-e-sera-retomada-no-dia-23/",
-    "e00f0c67930baf80",
-    "https://www.poder360.com.br/poder-infra/copel-mira-leilao-de-2027-para-transformar-hidreletricas-em-baterias/",
     "cda04205004403b2",
     "https://www.moneytimes.com.br/dividendos-a-vista-porto-seguro-pssa3-confirma-pagamento-de-r-567-milhoes-veja-valor-por-acao-igdl/",
     "dbf032198d5c2bfc",
@@ -799,7 +792,14 @@
     "https://www.cnnbrasil.com.br/agro/acucar-fecha-em-alta-de-341-em-nova-york-apos-minima-de-tres-meses/",
     "94aea44e1a288fa2",
     "https://www.poder360.com.br/poder-economia/durigan-projeta-resolucao-sobre-aliquota-da-cbs-em-duas-semanas/",
-    "bcb601242035df36"
+    "bcb601242035df36",
+    "f894bbb8b8501fa4",
+    "https://www.infomoney.com.br/politica/tarcisio-defende-discussao-de-limites-de-decisoes-monocraticas-e-competencia-do-stf/",
+    "baa9500748a837b6",
+    "https://forbes.com.br/forbes-tech/2026/11/ferramentas-de-ia-ajudam-marcas-a-otimizar-promocoes-de-black-friday/",
+    "bad90bc0e8c6e037",
+    "https://www.infomoney.com.br/mercados/taxas-dos-dis-caem-em-meio-a-especulacoes-sobre-nomes-de-lula-para-a-area-economica/",
+    "c030313957414494"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1330,7 +1330,10 @@
     "Raízen (RAIZ55) deve atingir meta de capitalização, mas Ometto pode ficar de fora e diluir participação",
     "Equatorial recebe nova multa por favorecer comercializadora do grupo",
     "Açúcar fecha em alta de 3,41% em Nova York após mínima de três meses",
-    "Durigan projeta resolução sobre alíquota da CBS em duas semanas"
+    "Durigan projeta resolução sobre alíquota da CBS em duas semanas",
+    "Tarcísio defende discussão de limites de decisões monocráticas e competência do STF",
+    "Ferramentas de IA Ajudam Marcas a Otimizar Promoções de Black Friday",
+    "Taxas dos DIs caem em meio a especulações sobre nomes de Lula para a área econômica"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1568,7 +1571,10 @@
     "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio.",
     "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor.",
     "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso.",
-    "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027"
+    "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027",
+    "O governador de São Paulo, Tarcísio de Freitas (Republicanos), defendeu nesta segunda-feira, 23, que o novo Congresso discuta limites para as decisões monocráticas do Judiciário e as competências do Supremo Tribunal Federal (STF). Em painel no Itaú BBA Macro Vision 2026, na capital paulista, ele afirmou que o sistema de freios e contrapesos não fun",
+    "As marcas de consumo estão recorrendo cada vez mais à inteligência artificial para ajudar a definir preços, na esperança de reduzir descontos e elevar margens de lucro.",
+    "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato."
   ],
   "eventos_recentes": [
     {
@@ -2209,6 +2215,9 @@
     "c5474207227f9e6e",
     "423529f68b661b1f",
     "ff472277878aec71",
-    "27acd27cb343cffb"
+    "27acd27cb343cffb",
+    "2f354000670fc3db",
+    "ca78e1530b098f65",
+    "46b6b04d6671edfd"
   ]
 }
