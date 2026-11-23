@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/klabin-klbn11-suspende-operacoes-em-unidade-de-sc-apos-incidente-10-funcionarios-sao-hospitalizados-pads/",
-    "3b01785e95035838",
-    "https://www.suno.com.br/noticias/dividendos-mensais-6-empresas-b3/",
-    "d9b341ca8eba2585",
     "https://www.moneytimes.com.br/dolar-rompe-os-r-584-hoje-ate-onde-a-moeda-ainda-pode-subir-davs/",
     "af1239ba331e6d82",
     "https://www.moneytimes.com.br/grupo-do-tocantins-entra-com-pedido-de-protecao-bilionario-contra-credores-e-atinge-bb-bbas3-e-mais-bancos-veja-lista/",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/tecnologia/falhas-eua-microsoft-apple-aviacao-fbi/",
     "1b8f8b5c2b1b0348",
     "https://www.infomoney.com.br/mercados/vibra-vbbr3-e-ultra-ugpa3-ficam-mais-atrativas-apos-queda-das-acoes-avalia-bbi/",
-    "4cd00a282b12d769"
+    "4cd00a282b12d769",
+    "https://www.poder360.com.br/poder-economia/e-possivel-manter-programas-sociais-e-rever-regras-fiscais-diz-galipolo/",
+    "e224f4e2f41e101e",
+    "https://www.moneytimes.com.br/dolar-sustenta-alta-e-atinge-r-600-com-cautela-fiscal-e-exterior-davs/",
+    "488b2a366de3a358"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1277,7 +1277,9 @@
     "Governo pretende iniciar ‘desmame’ de subsídio de combustíveis em dezembro",
     "Samsung pode adiar Galaxy Watch e priorizar pulseira em 2027",
     "Falhas em Microsoft, Apple e voos elevam suspeita de ataque",
-    "Vibra (VBBR3) e Ultra (UGPA3) ficam mais atrativas após queda das ações, avalia BBI"
+    "Vibra (VBBR3) e Ultra (UGPA3) ficam mais atrativas após queda das ações, avalia BBI",
+    "É possível manter programas sociais e rever regras fiscais, diz Galípolo",
+    "Dólar sustenta alta e ultrapassa os R$ 6,00 com cautela fiscal"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1463,7 +1465,9 @@
     "O governo brasileiro planeja reduzir gradualmente o subsídio aos combustíveis a partir do próximo mês, apesar dos conflitos globais, como a guerra EUA-Irã. Criado em março para mitigar o impacto dos preços internacionais, o subsídio ao diesel, atualmente em R$ 2,12 por litro, visa conter a inflação e garantir o abastecimento. A medida, que já custo",
     "De acordo com o TecMundo, a Samsung estuda não apresentar uma nova geração do Galaxy Watch em 2027. A informação, divulgada pelo site sul-coreano ETNews, indica que a linha teria seu próximo modelo apenas no ano seguinte, com lançamentos a cada dois anos. A Samsung não confirmou o rumor.",
     "Uma sequência de falhas atingiu serviços digitais e a aviação nos Estados Unidos nas últimas semanas, envolvendo sistemas da Microsoft, da Apple, o controle do espaço aéreo e o FBI. As causas oficiais apontam sobrecarga e problemas de infraestrutura, mas não há confirmação de um ataque cibernético.",
-    "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa"
+    "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa",
+    "Presidente do BC afirmou também que a estabilidade de preços é o “principal mandato” da política monetária",
+    "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior."
   ],
   "eventos_recentes": [
     {
@@ -1745,6 +1749,14 @@
     {
       "chave": "ultrapar::GERAL_ATIVO",
       "ts": 1795442666.55868
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795443064.226398
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795443064.226398
     }
   ],
   "hashes_imagens": [
@@ -1915,6 +1927,8 @@
     "c06b05c224c27f12",
     "bb982d106248a6c6",
     "b0c3ad71e547beac",
-    "b6c151cd25d6b8c6"
+    "b6c151cd25d6b8c6",
+    "28295beb5c6a88e6",
+    "2f9bd9a7c1db5789"
   ]
 }
