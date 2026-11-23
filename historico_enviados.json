@@ -1,10 +1,5 @@
 {
   "links": [
-    "528718a3b40e1c30",
-    "https://www.infomoney.com.br/mundo/deutsche-bank-vazou-dados-fiscais-de-trump-em-2017-e-nao-avisou-a-casa-branca-diz-ft/",
-    "a39f75ea19bd86d1",
-    "https://exame.com/esg/floresta-amazonica-perdeu-resistencia-natural-ao-fogo-alerta-capobianco/",
-    "1bf3b8289df6d5d2",
     "https://www.cnnbrasil.com.br/esportes/brasileirao/brasileirao-de-volta-veja-como-esta-a-briga-contra-o-rebaixamento/",
     "5b02a463cfd4d25b",
     "https://www.seudinheiro.com/2026/lifestyle/la-vuelta-btg-competicao-de-ciclismo-de-estrada-de-120-km-chega-ao-litoral-paulista-sama/",
@@ -799,7 +794,12 @@
     "bdc4238132df064f",
     "6ede86f4a419f57e",
     "https://www.infomoney.com.br/business/bhp-anuncia-plano-de-us-174-bi-para-dobrar-producao-de-cobre-na-australia-do-sul/",
-    "6114a9596596f73a"
+    "6114a9596596f73a",
+    "6f7e50a63550d4f1",
+    "abc66fb4f69c8071",
+    "936dd7ab89e4f4f6",
+    "https://braziljournal.com/opiniao-ainda-da-para-apostar-tudo-no-cdi",
+    "eaa05441506bf8fa"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1232,7 +1232,8 @@
     "Black Friday: planejar vale mais que qualquer desconto",
     "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”",
     "El Niño leva Chile a alerta máximo de incêndios no verão",
-    "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul"
+    "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul",
+    "OPINIÃO. Ainda dá para apostar tudo no CDI?"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1373,7 +1374,8 @@
     "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev",
     "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias",
     "O Chile se prepara para o verão austral com todo o território sob risco alto de incêndios florestais, segundo o mapa de alerta precoce da Corporação Nacional Florestal (Conaf). A combinação de temperaturas previstas acima de 40°C em algumas regiões, ventos quentes associados ao El Niño e grande volume de vegetação seca criou um cenário que a direto",
-    "– A BHP, uma das maiores mineradoras do mundo, anunciou nesta segunda-feira que planeja dobrar sua produção de cobre na Austrália do Sul até 2040, à medida que amplia sua participação nesse metal, que deve impulsionar a eletrificação, com uma decisão final de investimento prevista para o primeiro semestre de 2027."
+    "– A BHP, uma das maiores mineradoras do mundo, anunciou nesta segunda-feira que planeja dobrar sua produção de cobre na Austrália do Sul até 2040, à medida que amplia sua participação nesse metal, que deve impulsionar a eletrificação, com uma decisão final de investimento prevista para o primeiro semestre de 2027.",
+    "Parece que a história não foi exatamente assim – mas seria chato demais estragar uma boa anedota com uma correção histórica. Então, neste caso, preferimos acreditar na versão."
   ],
   "eventos_recentes": [
     {
@@ -1551,6 +1553,10 @@
     {
       "chave": "smft3::GERAL_ATIVO",
       "ts": 1795426302.585655
+    },
+    {
+      "chave": "rf_credito_juros::RF_EVENTO",
+      "ts": 1795427580.695889
     }
   ],
   "hashes_imagens": [
@@ -1676,6 +1682,7 @@
     "79c02eff8daaf1a6",
     "009ce1e292d690aa",
     "8c23b932bfbc3134",
-    "c621edb035dcba1a"
+    "c621edb035dcba1a",
+    "f3082e41dfecf6a8"
   ]
 }
