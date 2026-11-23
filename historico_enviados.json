@@ -1,7 +1,5 @@
 {
   "links": [
-    "b5e758d231a5b23d",
-    "https://www.poder360.com.br/poder-economia/btg-desistiu-de-comprar-master-por-falta-de-garantias-diz-esteves/",
     "5013aa3c9e8bf0b0",
     "https://www.seudinheiro.com/2026/bolsa-dolar/ouro-nao-protege-ninguem-cai-a-minima-em-um-ano-e-falha-como-porto-seguro-ccgg/",
     "7221c3a6da33b89a",
@@ -799,7 +797,9 @@
     "https://www.poder360.com.br/poder-tech/governo-lula-lancara-edital-de-nuvem-propria-para-fugir-de-big-techs/",
     "530d163a1ed207ae",
     "https://www.spacemoney.com.br/tecnologia/amazon-decarte-software-chips/",
-    "b26f01257f655a51"
+    "b26f01257f655a51",
+    "https://braziljournal.com/a-braskem-estava-com-a-rj-pronta-um-acordo-de-ultima-hora-evitou-o-pior",
+    "0ab5e523138ab300"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1336,7 +1336,8 @@
     "Taxas dos DIs caem em meio a especulações sobre nomes de Lula para a área econômica",
     "Temporal destrói unidades da C.Vale no RS e compromete estoque de grãos",
     "Governo Lula lançará edital de nuvem própria para fugir de big techs",
-    "Amazon compra software de chips da Decart"
+    "Amazon compra software de chips da Decart",
+    "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1580,7 +1581,8 @@
     "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato.",
     "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
     "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais",
-    "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória."
+    "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
+    "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial."
   ],
   "eventos_recentes": [
     {
@@ -2010,6 +2012,10 @@
     {
       "chave": "amazon::GERAL_ATIVO",
       "ts": 1795467427.85466
+    },
+    {
+      "chave": "braskem::EVENTO_CORP",
+      "ts": 1795467789.471563
     }
   ],
   "hashes_imagens": [
@@ -2239,6 +2245,7 @@
     "46b6b04d6671edfd",
     "f1d6f4ea61e42e4c",
     "ded9c41d2eb5847b",
-    "f290d56353a2d485"
+    "f290d56353a2d485",
+    "5e854881656d22b7"
   ]
 }
