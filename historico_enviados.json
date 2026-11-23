@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://livecoins.com.br/banco-mundial-estuda-uso-de-stablecoins-para-modernizar-pagamentos/",
-    "dba125b8b61b3819",
-    "https://g1.globo.com/economia/noticia/2026/11/18/um-ano-depois-fraude-do-banco-master-deixou-prejuizo-de-r-76-bilhoes.ghtml",
-    "a56013d3f0ecae1a",
-    "https://www.moneytimes.com.br/diretor-do-fed-defende-alta-de-05-ponto-percentual-nos-juros-dos-eua-precisa-tomar-medidas-agressivas-diz-davs/",
     "8f92e291f90310c0",
     "https://exame.com/invest/mercados/gta-6-pode-impulsionar-acao-da-take-two-veja-como-o-brasileiro-pode-investir/",
     "9e001a8ecabe4461",
@@ -799,7 +794,12 @@
     "16edf8fd9d869e07",
     "06400d0f714b55db",
     "https://www.infomoney.com.br/mercados/receita-da-randoncorp-cai-quase-3-em-outubro/",
-    "9e773277258647d6"
+    "9e773277258647d6",
+    "3a5cca81ac63b6fb",
+    "https://www.infomoney.com.br/business/crowdstrike-reverte-prejuizo-supera-projecoes-e-anuncia-para-compra-de-empresa/",
+    "c98881016db998d7",
+    "https://www.spacemoney.com.br/economia/macroeconomia/chip-dolar-comercio-chips-supera-petroleo/",
+    "79fd3a6b6c3c09de"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1257,7 +1257,9 @@
     "Como funciona o LTBX11, ETF de renda fixa da XP?",
     "IPC-S mantém 0,38% na terceira leitura de novembro",
     "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França",
-    "Receita da Randoncorp cai quase 3% em outubro"
+    "Receita da Randoncorp cai quase 3% em outubro",
+    "CrowdStrike reverte prejuízo, supera projeções e anuncia para compra de empresa",
+    "Chip-dólar: comércio de chips supera petróleo pela 1ª vez"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1423,7 +1425,9 @@
     "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação.",
     "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
     "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global.",
-    "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia."
+    "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia.",
+    "A CrowdStrike registrou lucro líquido de US$ 24,9 milhões no terceiro trimestre do ano fiscal de 2027, encerrado em outubro, revertendo prejuízo de US$ 26,8 milhões apurado no mesmo período do ano anterior. O lucro ajustado foi de US$ 354,9 milhões, ou US$ 0,34 por ação, acima dos US$ 0,31 por ação esperados por analistas consultados pela FactSet.",
+    "O comércio global de chips superou o de petróleo e gás pela primeira vez na história moderna, em movimento que o Deutsche Bank descreve como a ascensão do “chip-dólar”. Levantamento publicado pelo Seeking Alpha aponta que as exportações de semicondutores somaram cerca de US$ 1,60 trilhão nos quatro trimestres encerrados no segundo trimestre de 2026"
   ],
   "eventos_recentes": [
     {
@@ -1653,6 +1657,10 @@
     {
       "chave": "randon::BALANCO",
       "ts": 1795437458.080422
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795437786.438121
     }
   ],
   "hashes_imagens": [
@@ -1803,6 +1811,8 @@
     "1360a4e281138ff8",
     "cf6863f26007dde9",
     "845480dac427ea9d",
-    "a3b230056b6df354"
+    "a3b230056b6df354",
+    "e77b2269bc582829",
+    "3a3771d0f1d73a76"
   ]
 }
