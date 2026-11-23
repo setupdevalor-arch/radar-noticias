@@ -1,12 +1,5 @@
 {
   "links": [
-    "627321c23100e894",
-    "https://exame.com/economia/selic-parada-em-1375-ate-metade-de-2027-e-certeza-diz-padovani-do-bv/",
-    "360b0a3e97595ddf",
-    "https://www.infomoney.com.br/consumo/clientes-shopeevip-isencao-tag-conect-car/",
-    "5782f96800fab804",
-    "https://www.infomoney.com.br/economia/transmissao-da-politica-monetaria-e-maior-no-credito-rotativo-e-ao-consumo-diz-bc/",
-    "fcf72f4f07f35c5e",
     "https://www.infomoney.com.br/politica/ccj-do-senado-aprova-projeto-que-endurece-punicoes-para-fraudes-financeiras/",
     "efa36d78d70aa716",
     "https://www.infomoney.com.br/economia/trabalhador-branco-pode-ganhar-cerca-de-70-a-mais-que-o-negro-no-brasil-aponta-ibge/",
@@ -799,7 +792,14 @@
     "ecd1fc84264e8ea0",
     "80cbf6860f9a9028",
     "e2bdeb14a73b2191",
-    "aa409ea8acb591a7"
+    "aa409ea8acb591a7",
+    "d864ef4555adec98",
+    "6f9355e01f76d761",
+    "40d2a09cac185140",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/ipc-s-repete-038-na-3a-quadrissemana/",
+    "dc242c94a1ede6bd",
+    "https://www.infomoney.com.br/economia/pmi-da-zona-do-euro-fica-estavel-em-novembro-alemanha-compensa-queda-na-franca/",
+    "8379035669452c9a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1254,7 +1254,9 @@
     "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro",
     "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul",
     "Leilões de baterias têm inscrições prorrogadas até esta segunda",
-    "Como funciona o LTBX11, ETF de renda fixa da XP?"
+    "Como funciona o LTBX11, ETF de renda fixa da XP?",
+    "IPC-S mantém 0,38% na terceira leitura de novembro",
+    "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1417,7 +1419,9 @@
     "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027.",
     "Quitar dívidas, reservar recursos para despesas de janeiro ou investir? Especialistas explicam como definir prioridades e aproveitar melhor o benefício",
     "A Agência Nacional de Energia Elétrica (Aneel) prorrogou até esta segunda-feira, 23 de novembro, às 12h, o prazo de inscrição online nos dois leilões de reserva de capacidade para contratação de sistemas de armazenamento em baterias, previstos para os dias 2 e 4 de dezembro.",
-    "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação."
+    "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação.",
+    "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
+    "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global."
   ],
   "eventos_recentes": [
     {
@@ -1639,6 +1643,10 @@
     {
       "chave": "ltbx11::GERAL_ATIVO",
       "ts": 1795435505.57897
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795437128.460143
     }
   ],
   "hashes_imagens": [
@@ -1786,6 +1794,8 @@
     "bebc0a65cd096d45",
     "f8965016d9913c99",
     "6f00daf056a50911",
-    "1360a4e281138ff8"
+    "1360a4e281138ff8",
+    "cf6863f26007dde9",
+    "845480dac427ea9d"
   ]
 }
