@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-18112026/",
-    "https://www.infomoney.com.br/mercados/minidolar-hoje-futuro-do-dolar-wdoz26-17112026-2/",
-    "https://www.bbc.com/portuguese/articles/c60mdv3k3wdpo?at_medium=RSS&at_campaign=rss",
     "https://www.bbc.com/portuguese/articles/c6kgr9zp38xgo?at_medium=RSS&at_campaign=rss",
     "https://www.infomoney.com.br/politica/apos-validar-uma-anistia-stf-julga-outro-perdao-concedido-a-partidos-entenda/",
     "https://www.infomoney.com.br/politica/aliados-de-lula-veem-camilo-como-favorito-para-a-casa-civil-apos-missoes/",
@@ -799,7 +796,10 @@
     "15b1ec892b75ecba",
     "7043739a81c2d19b",
     "https://www.infomoney.com.br/onde-investir/ubs-ve-possibilidade-de-estagflacao-no-brasil-em-2027-como-balancear-o-portfolio/",
-    "22630d3b1cfb5457"
+    "22630d3b1cfb5457",
+    "3e4e26141a3f81f1",
+    "https://forbes.com.br/forbes-money/2026/11/reforma-tributaria-duplicata-escritural-credito-pmes-fidcs/",
+    "dc2bf5ba6c52d82c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1214,7 +1214,8 @@
     "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
     "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal",
     "Preços do petróleo caem com mercado volátil nesta segunda-feira",
-    "UBS vê possibilidade de estagflação no Brasil em 2027; como balancear o portfólio?"
+    "UBS vê possibilidade de estagflação no Brasil em 2027; como balancear o portfólio?",
+    "FIDCs em Alta: Nova Regra Pode Aumentar Concorrência no Crédito a Pequenas Empresas"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1337,7 +1338,8 @@
     "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP.",
     "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais",
     "Os preços do petróleo caem no pregão asiático desta segunda-feira (23), mesmo com investidores incorporando um prêmio de risco decorrente da continuidade dos ataques a embarcações e refinarias no Oriente Médio, em meio aos esforços diplomáticos para pôr fim à guerra.",
-    "O cenário externo para o próximo ano é de juros mais altos nos países desenvolvidos, estima o UBS Global Wealth Management em seu relatório “Year Ahead 2027”, o que não é favorável para as economias emergentes e torna mais difícil para o Brasil “empurrar com a barriga” os problemas das contas públicas, como tem feito desde a criação do arcabouço fi"
+    "O cenário externo para o próximo ano é de juros mais altos nos países desenvolvidos, estima o UBS Global Wealth Management em seu relatório “Year Ahead 2027”, o que não é favorável para as economias emergentes e torna mais difícil para o Brasil “empurrar com a barriga” os problemas das contas públicas, como tem feito desde a criação do arcabouço fi",
+    "Os Fundos de Investimento em Direitos Creditórios (FIDCs) acumularam R$ 56,1 bilhões em captação líquida entre janeiro e outubro de 2026, segundo dados da Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais (ANBIMA). O resultado ocorre em um momento de mudanças nas regras de antecipação de recebíveis, que podem ampliar as alte"
   ],
   "eventos_recentes": [
     {
@@ -1487,6 +1489,10 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795420232.892298
+    },
+    {
+      "chave": "rf_fundos::FUNDOS_EVENTO",
+      "ts": 1795421186.615183
     }
   ],
   "hashes_imagens": [
@@ -1594,6 +1600,7 @@
     "414b71c3060c549e",
     "810dff1abaf81093",
     "2f3a44d0176843b9",
-    "eae41bb83e11847d"
+    "eae41bb83e11847d",
+    "7e2d4c205cfa7ccf"
   ]
 }
