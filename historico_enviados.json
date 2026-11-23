@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://exame.com/tecnologia/examelab/por-que-o-mesmo-celular-aparece-varias-vezes-na-conta-google/",
-    "ff1df203939d7a31",
     "https://exame.com/negocios/o-que-ela-fez-para-faturar-r-3-milhoes-em-um-unico-mes-apenas-com-o-tiktok-shop/",
     "92d24969831153e4",
     "https://exame.com/inteligencia-artificial/chatgpt-ganha-gpt-6-2-astra-e-sol-astra-fica-20-mais-barato-por-token/",
@@ -799,7 +797,9 @@
     "a3f9c78b94eac583",
     "e5e41f4f0524cf26",
     "https://www.poder360.com.br/poder-economia/risco-pais-da-argentina-chega-ao-maior-patamar-de-2026/",
-    "8a4131b2b4dc62da"
+    "8a4131b2b4dc62da",
+    "https://www.bloomberglinea.com.br/negocios/economia-vai-desacelerar-mais-e-pesar-nos-balancos-diz-chefe-de-research-do-btg-pactual/",
+    "eee9a3603a31f450"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1222,7 +1222,8 @@
     "Futuros de NY sobem após liquidação de ações de tecnologia na semana passada",
     "Capim na lavoura vira aposta de expansão da Soesp",
     "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates",
-    "Risco-país da Argentina chega ao maior patamar de 2026"
+    "Risco-país da Argentina chega ao maior patamar de 2026",
+    "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1353,17 +1354,10 @@
     "Os futuros de Nova York operam em forte alta nesta segunda-feira (23), em razão de um movimento de recuperação após a forte liquidação das ações de tecnologia na semana passada. Investidores voltam a comprar papéis ligados à inteligência artificial (IA), aproveitando a queda recente dos preços.",
     "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro",
     "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
-    "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce"
+    "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
+    "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea."
   ],
   "eventos_recentes": [
-    {
-      "chave": "telebras::BALANCO",
-      "ts": 1795251907.310128
-    },
-    {
-      "chave": "telebras::EVENTO_CORP",
-      "ts": 1795251907.310128
-    },
     {
       "chave": "copel::GERAL_ATIVO",
       "ts": 1795258978.870899
@@ -1515,6 +1509,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795424354.150907
+    },
+    {
+      "chave": "btg_pactual::GERAL_ATIVO",
+      "ts": 1795424996.028502
     }
   ],
   "hashes_imagens": [
@@ -1630,6 +1628,7 @@
     "74b92e184e1fa947",
     "17c9f657dc4b95b6",
     "4628da901d8ca5d1",
-    "497e5801aa2b375c"
+    "497e5801aa2b375c",
+    "a2377665360772f6"
   ]
 }
