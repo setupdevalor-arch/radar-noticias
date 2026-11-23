@@ -1,8 +1,5 @@
 {
   "links": [
-    "ac9693d3a262467e",
-    "https://www.infomoney.com.br/politica/braga-nega-que-haja-acordo-com-oposicao-de-trecho-do-plp-que-trata-de-lei-kandir/",
-    "440302c70381f29f",
     "https://exame.com/invest/mercados/dolar-a-r-580-e-oportunidade-goldman-ve-real-rendendo-mais-que-a-bolsa-em-2027/",
     "48858e77f91b37e9",
     "https://www.moneytimes.com.br/quadro-fiscal-nao-e-esse-desastre-que-a-faria-lima-acha-diz-salto-da-warren-jcav/",
@@ -799,7 +796,10 @@
     "e1e5f9c38403088b",
     "dfb25b6fbf3ac1cc",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/okxice-acoes-tokenizadas-objecoes/",
-    "7cb0295adfa606ae"
+    "7cb0295adfa606ae",
+    "43be11f486fd0bce",
+    "https://www.suno.com.br/noticias/jbss3-jbs-conclui-joint-venture-oma-231126/",
+    "3d5526aff5f6617f"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1263,7 +1263,8 @@
     "Espiões usam vagas de trabalho falsas para conseguir informações dos EUA",
     "Crowdstrike aposta na segurança de rede em acordo de US$ 43 bi com Zscaler",
     "“Se nada for feito, vamos para uma recessão”, diz Mendonça de Barros",
-    "Tokenização de ações estreia sob objeção de 90% das empresas"
+    "Tokenização de ações estreia sob objeção de 90% das empresas",
+    "JBSS3: JBS conclui transação de joint venture em Omã"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1435,7 +1436,8 @@
     "Supostos espiões chineses criaram uma rede elaborada de empresas fictícias que oferecem vagas de emprego, com o objetivo de induzir funcionários e ex-funcionários do governo dos Estados Unidos a revelar segredos oficiais.",
     "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes.",
     "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027",
-    "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC."
+    "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
+    "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante"
   ],
   "eventos_recentes": [
     {
@@ -1677,6 +1679,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795438791.21743
+    },
+    {
+      "chave": "jbs::EVENTO_CORP",
+      "ts": 1795439122.660954
     }
   ],
   "hashes_imagens": [
@@ -1833,6 +1839,7 @@
     "21d7a37c2516550a",
     "969be40105ee1f9f",
     "0106e18b1d63d732",
-    "a3a804818270ff69"
+    "a3a804818270ff69",
+    "be2a7e9851d78548"
   ]
 }
