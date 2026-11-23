@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://exame.com/negocios/o-que-ela-fez-para-faturar-r-3-milhoes-em-um-unico-mes-apenas-com-o-tiktok-shop/",
-    "92d24969831153e4",
-    "https://exame.com/inteligencia-artificial/chatgpt-ganha-gpt-6-2-astra-e-sol-astra-fica-20-mais-barato-por-token/",
     "95d51fea94e2275e",
     "https://exame.com/negocios/aos-29-anos-ele-fatura-r-88-milhoes-vendendo-lencois-e-vai-abrir-40-lojas-pelo-brasil/",
     "02db3680f23df791",
@@ -799,7 +796,10 @@
     "https://www.poder360.com.br/poder-economia/risco-pais-da-argentina-chega-ao-maior-patamar-de-2026/",
     "8a4131b2b4dc62da",
     "https://www.bloomberglinea.com.br/negocios/economia-vai-desacelerar-mais-e-pesar-nos-balancos-diz-chefe-de-research-do-btg-pactual/",
-    "eee9a3603a31f450"
+    "eee9a3603a31f450",
+    "8dc028be193d83fb",
+    "https://www.spacemoney.com.br/agronegocio/jbs-joint-venture-oma-us-150-milhoes/",
+    "7a9c880049618192"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1223,7 +1223,8 @@
     "Capim na lavoura vira aposta de expansão da Soesp",
     "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates",
     "Risco-país da Argentina chega ao maior patamar de 2026",
-    "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual"
+    "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual",
+    "JBS assume 80% de negócio de carnes em Omã com US$ 150 mi"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1355,7 +1356,8 @@
     "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro",
     "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
     "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
-    "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea."
+    "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea.",
+    "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país"
   ],
   "eventos_recentes": [
     {
@@ -1513,6 +1515,10 @@
     {
       "chave": "btg_pactual::GERAL_ATIVO",
       "ts": 1795424996.028502
+    },
+    {
+      "chave": "jbs::GERAL_ATIVO",
+      "ts": 1795425319.273868
     }
   ],
   "hashes_imagens": [
@@ -1629,6 +1635,7 @@
     "17c9f657dc4b95b6",
     "4628da901d8ca5d1",
     "497e5801aa2b375c",
-    "a2377665360772f6"
+    "a2377665360772f6",
+    "30fe4b6680fa3d92"
   ]
 }
