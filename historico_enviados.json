@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/18/banco-do-brasil-bbas3-informa-vazamentos-de-dados-de-clientes-mas-nega-invasao-a-seus-sistemas.ghtml",
-    "1f7752fe647df4cd",
     "https://www.estadao.com.br/economia/coluna-da-broad/mercado-livre-capta-us-735-milhoes-para-dar-credito-na-amazonia/",
     "3325074f5876f011",
     "https://valor.globo.com/financas/noticia/2026/11/18/aena-capta-r-18-bilho-para-pagar-outorga-do-galeo.ghtml",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/economia/cambio-reforca-tendencia-de-queda-de-precos-de-commodities-diz-stonex/",
     "8f56f81fa3e2ef73",
     "https://www.infomoney.com.br/mercados/como-mbrf-pretende-entregar-o-maior-natal-do-mundo-em-2026/",
-    "2b55b0de4e4fd341"
+    "2b55b0de4e4fd341",
+    "https://www.infomoney.com.br/mercados/cvm-suspende-registro-do-brb-e-instituicao-fica-impedida-de-negociar-acoes-na-bolsa/",
+    "207b490d43e5a2e8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1310,7 +1310,8 @@
     "Bolsas europeias sobem com techs e mineradoras após quatro quedas",
     "Dividendos de 11% e desconto na bolsa: por que este fundo imobiliário é compra para o BTG",
     "Câmbio reforça tendência de queda de preços de commodities, diz StoneX",
-    "Como MBRF pretende entregar o “maior Natal do mundo” em 2026?"
+    "Como MBRF pretende entregar o “maior Natal do mundo” em 2026?",
+    "CVM suspende registro do BRB e instituição fica impedida de negociar ações na Bolsa"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1529,7 +1530,8 @@
     "As bolsas europeias fecharam em alta nesta 2ª feira, interrompendo uma sequência de quatro sessões consecutivas de perdas, com ações de tecnologia e de mineração à frente dos ganhos e recuperação mais ampla dos índices do continente.",
     "O fundo imobiliário Patria Malls (PMLL11), do segmento de shopping centers, entrou na cobertura do BTG Pactual com recomendação de compra e preço-alvo de R$ 112 para as cotas, o que representa potencial de alta (upside) de 16% frente ao valor atual, de R$ 96.",
     "A cotação comercial do dólar testou nesta segunda-feira (23) a fronteira psicológica dos R$ 6, alcançado R$ 6,005 pouco antes das 10h30, voltando a um patamar um pouco inferior depois disso. Para o mercado de commodities, o efeito dessa depreciação do real foi considerado “heterogêneo” pela consultoria StoneX.",
-    "Para a MBRF (MBRF3), o Natal começa já em janeiro. A principal operação do grupo, que conta com marcas como Sadia, Perdigão e Bassi em seu portfólio, passa por diversos setores ao longo dos meses para ter seu pontapé inicial oficialmente em novembro."
+    "Para a MBRF (MBRF3), o Natal começa já em janeiro. A principal operação do grupo, que conta com marcas como Sadia, Perdigão e Bassi em seu portfólio, passa por diversos setores ao longo dos meses para ter seu pontapé inicial oficialmente em novembro.",
+    "A Comissão de Valores Mobiliários (CVM) suspendeu o registro do Banco de Brasília (BRB – BSLI3) como companhia aberta após a falta de um ano nos lançamentos de balanços trimestrais. Junto com o BRB, mais quatro companhias de capital aberto perderam seus registros."
   ],
   "eventos_recentes": [
     {
@@ -2086,6 +2088,7 @@
     "99e8c48c03591fc5",
     "b9ae823a004e57fd",
     "b9199f800ca39aca",
-    "dbf7fbc5d532f695"
+    "dbf7fbc5d532f695",
+    "c5ddbcdbd9b6682e"
   ]
 }
