@@ -1,9 +1,5 @@
 {
   "links": [
-    "5013aa3c9e8bf0b0",
-    "https://www.seudinheiro.com/2026/bolsa-dolar/ouro-nao-protege-ninguem-cai-a-minima-em-um-ano-e-falha-como-porto-seguro-ccgg/",
-    "7221c3a6da33b89a",
-    "https://www.spacemoney.com.br/tecnologia/vivo-5g-plus-2-gbps/",
     "b98a7d5419a7da43",
     "https://www.poder360.com.br/poder-economia/telebras-mira-autonomia-financeira-e-projeta-fim-de-aportes-do-governo/",
     "c06cc3c7d2cefed0",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/tecnologia/amazon-decarte-software-chips/",
     "b26f01257f655a51",
     "https://braziljournal.com/a-braskem-estava-com-a-rj-pronta-um-acordo-de-ultima-hora-evitou-o-pior",
-    "0ab5e523138ab300"
+    "0ab5e523138ab300",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-jensen-huang-a-nvidia/",
+    "509df43955adf936",
+    "https://www.spacemoney.com.br/economia/legislacao/kalshi-nova-york-decisao-judicial/",
+    "12bf715d93abcaab"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1337,7 +1337,9 @@
     "Temporal destrói unidades da C.Vale no RS e compromete estoque de grãos",
     "Governo Lula lançará edital de nuvem própria para fugir de big techs",
     "Amazon compra software de chips da Decart",
-    "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior"
+    "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior",
+    "Bitcoin sobe após voltar ao menor nível em dois anos",
+    "Justiça de Nova York nega restrição imediata à Kalshi"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1582,7 +1584,9 @@
     "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
     "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais",
     "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
-    "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial."
+    "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial.",
+    "O bitcoin registrou alta nesta segunda-feira (23) em recuperação após bater o menor valor em dois anos no fim de semana. A movimentação acontece em meio à recuperação do setor acionário nos Estados Unidos após a volta de Jensen Huang à Nvidia.",
+    "Um juiz da Justiça estadual de Nova York rejeitou o pedido do procurador-geral do estado para barrar de imediato a Kalshi, segundo o Cointelegraph. Com a decisão, a plataforma de mercados de previsão pode continuar oferecendo contratos de eventos no estado enquanto a disputa judicial sobre seus produtos ligados a esportes segue em tramitação."
   ],
   "eventos_recentes": [
     {
@@ -2016,6 +2020,10 @@
     {
       "chave": "braskem::EVENTO_CORP",
       "ts": 1795467789.471563
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795468159.376829
     }
   ],
   "hashes_imagens": [
@@ -2246,6 +2254,8 @@
     "f1d6f4ea61e42e4c",
     "ded9c41d2eb5847b",
     "f290d56353a2d485",
-    "5e854881656d22b7"
+    "5e854881656d22b7",
+    "8968c24885efbf68",
+    "a7760067a2c010c8"
   ]
 }
