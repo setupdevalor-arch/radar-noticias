@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/fiagros-captam-r-122-bi-em-outubro-e-tem-melhor-mes-em-cinco-anos-mercado-de-capitais-movimenta-r-714-bi/",
-    "c482215368d1e441",
-    "https://www.suno.com.br/noticias/fundo-imobiliario-aciona-caixa-justica-aluguel/",
-    "10767517b4ca0fe0",
-    "https://www.suno.com.br/noticias/fundo-imobiliario-lots11-compra-imoveis-brasilia/",
-    "3dd668164e6b56fb",
-    "https://www.seudinheiro.com/2026/empresas/nao-e-so-o-banco-do-brasil-bbsa3-veja-os-outros-bancos-na-lista-de-credores-do-grupo-fazendao-divida-ultrapassa-r-2-bilhoes/",
-    "ac4ba047ccb14668",
     "https://exame.com/mundo/voltamos-a-lei-da-selva-diz-analista-sobre-cupula-entre-trump-putin-e-xi-jinping/",
     "195f12b8358abac2",
     "https://www.seudinheiro.com/2026/empresas/seus-dados-estao-seguros-banco-do-brasil-confirma-vazamento-de-informacoes-de-clientes-veja-o-que-foi-exposto-miql/",
@@ -799,7 +791,15 @@
     "ec9c6fdcc4939a04",
     "fd2178d301f6e41c",
     "https://investnews.com.br/investimentos/dolar-a-r-6-acende-alerta-sobre-inflacao-veja-como-a-alta-pode-elevar-o-ipca/",
-    "6df58f6e329f7439"
+    "6df58f6e329f7439",
+    "3d2afaf7d4d2de34",
+    "b0d9893c72ac6ebc",
+    "8100526b2a1c6562",
+    "a83f1e3e8c7aff25",
+    "https://bmcnews.com.br/mercados/bolsas-europeias-sobem-com-techs-e-mineradoras-apos-quatro-quedas/",
+    "d7838337cef14a51",
+    "https://www.moneytimes.com.br/dividendos-de-11-e-desconto-na-bolsa-fundo-imobiliario-recebe-recomendacao-de-compra-do-btg-veja-preco-alvo-igdl/",
+    "018aa9afbaaa62ea"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1306,7 +1306,9 @@
     "UE abre investigação antitruste contra Coca-Cola Europacific Partners",
     "Bill Ackman diz que Fed pode gerar recessão com alta de juros",
     "Plantio de soja no Brasil avança para 86% com ajuda das chuvas, diz AgRural",
-    "Dólar a R$ 6 acende alerta sobre inflação: veja como a alta pode elevar o IPCA"
+    "Dólar a R$ 6 acende alerta sobre inflação: veja como a alta pode elevar o IPCA",
+    "Bolsas europeias sobem com techs e mineradoras após quatro quedas",
+    "Dividendos de 11% e desconto na bolsa: por que este fundo imobiliário é compra para o BTG"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1521,7 +1523,9 @@
     "A Comissão Europeia, braço executivo da UE (União Europeia), abriu uma investigação antitruste formal para apurar se a CCEP (Coca-Cola Europacific Partners) violou as regras de concorrência do bloco.",
     "O bilionário e investidor Bill Ackman afirmou que o Federal Reserve (Fed, o banco central norte-americano) corre o risco de cometer \"outro erro\" na decisão de juros de 9 de dezembro, diante do forte aperto das condições financeiras.",
     "O plantio da safra 2026/27 de soja do Brasil alcançou 86% da área projetada na última quinta-feira, contra 78% observado na semana anterior e 81% um ano atrás, segundo levantamento da AgRural divulgado nesta segunda-feira.",
-    "Por trás da alta está, sobretudo, a desconfiança com as contas públicas. Quando o mercado teme que o governo não consiga controlar sua dívida, hoje em 83% do PIB, quem investe busca lugares mais seguros para o dinheiro. Mais gente vendendo reais para comprar dólares empurra a cotação para cima."
+    "Por trás da alta está, sobretudo, a desconfiança com as contas públicas. Quando o mercado teme que o governo não consiga controlar sua dívida, hoje em 83% do PIB, quem investe busca lugares mais seguros para o dinheiro. Mais gente vendendo reais para comprar dólares empurra a cotação para cima.",
+    "As bolsas europeias fecharam em alta nesta 2ª feira, interrompendo uma sequência de quatro sessões consecutivas de perdas, com ações de tecnologia e de mineração à frente dos ganhos e recuperação mais ampla dos índices do continente.",
+    "O fundo imobiliário Patria Malls (PMLL11), do segmento de shopping centers, entrou na cobertura do BTG Pactual com recomendação de compra e preço-alvo de R$ 112 para as cotas, o que representa potencial de alta (upside) de 16% frente ao valor atual, de R$ 96."
   ],
   "eventos_recentes": [
     {
@@ -1867,6 +1871,10 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795455135.946861
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795455652.146754
     }
   ],
   "hashes_imagens": [
@@ -2066,6 +2074,8 @@
     "539fde8a21f53faf",
     "40f6f7c1b9cb0e95",
     "633a8c94db27670f",
-    "8ce10722f79e4e3f"
+    "8ce10722f79e4e3f",
+    "99e8c48c03591fc5",
+    "b9ae823a004e57fd"
   ]
 }
