@@ -1,7 +1,5 @@
 {
   "links": [
-    "412d8c8e30572771",
-    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-equipe-economica-discute-com-lula-nomes-para-substituir-tarciana-diz-jornal/",
     "4875e647638c5fad",
     "259a56cad443e1b6",
     "b06a1d80f2069648",
@@ -799,7 +797,9 @@
     "https://www.estadao.com.br/economia/dolar-a-r-6-preocupa-governo-mas-fazenda-nao-ve-recessao-em-2027-so-desaceleracao-diz-secretaria/",
     "090a82eb2f8397c6",
     "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
-    "b048f48eba5fe45a"
+    "b048f48eba5fe45a",
+    "https://neofeed.com.br/economia/conta-de-luz-sobe-quase-o-dobro-da-inflacao-em-2026-e-pressiona-empresas/",
+    "c91207916aeb4f0d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1342,7 +1342,8 @@
     "Justiça de Nova York nega restrição imediata à Kalshi",
     "Volta de Jensen Huang ao comando da Nvidia foi decidida sem consulta à diretoria",
     "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
-    "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’"
+    "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
+    "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1592,7 +1593,8 @@
     "Um juiz da Justiça estadual de Nova York rejeitou o pedido do procurador-geral do estado para barrar de imediato a Kalshi, segundo o Cointelegraph. Com a decisão, a plataforma de mercados de previsão pode continuar oferecendo contratos de eventos no estado enquanto a disputa judicial sobre seus produtos ligados a esportes segue em tramitação.",
     "A decisão surpreendente do conselho da Nvidia de reintegrar o ex-presidente-executivo Jensen Huang foi tomada sem consulta aos principais dirigentes da empresa, que foram informados do plano apenas nos momentos finais, segundo pessoas familiarizadas com o assunto.",
     "BRASÍLIA - A secretária de Política Econômica do Ministério da Fazenda, Débora Freire, afirmou nesta segunda-feira, 23, que a cotação do dólar a R$ 6 preocupa o governo pelo risco de repasse da desvalorização cambial para a inflação. Segundo ela, a revisão da projeção de inflação para 2027 foi influenciada principalmente pela perspectiva de efeitos",
-    "A CSN Mineração (CMIN3) terá um duplo desafio pela frente: lidar com uma geração de caixa mais pressionada ao mesmo tempo em que verá seu endividamento aumentar. Essa é a avaliação do BB Investimentos, que reduziu o preço-alvo da ação de R$ 5,40 para R$ 5,10 e manteve a recomendação de venda para o papel."
+    "A CSN Mineração (CMIN3) terá um duplo desafio pela frente: lidar com uma geração de caixa mais pressionada ao mesmo tempo em que verá seu endividamento aumentar. Essa é a avaliação do BB Investimentos, que reduziu o preço-alvo da ação de R$ 5,40 para R$ 5,10 e manteve a recomendação de venda para o papel.",
+    "Um levantamento inédito obtido pelo NeoFeed e produzido pela Lemon Energia – climatech especializada em geração distribuída (GD) compartilhada – mostra que o valor pago pela energia elétrica subiu, em média, 7,7% entre janeiro e setembro de 2026, na comparação com o mesmo período do ano anterior."
   ],
   "eventos_recentes": [
     {
@@ -2042,6 +2044,10 @@
     {
       "chave": "csn::PROVENTOS",
       "ts": 1795469242.288574
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795469626.034479
     }
   ],
   "hashes_imagens": [
@@ -2277,6 +2283,7 @@
     "a7760067a2c010c8",
     "91534925a586a1ec",
     "0d5ba4da09c90b5a",
-    "ecc5ef775dbe7589"
+    "ecc5ef775dbe7589",
+    "07e63feacdb5791b"
   ]
 }
