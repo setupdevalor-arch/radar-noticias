@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/goldman-sachs-rebaixa-brasil-por-crescimento-fraco-e-pouco-espaco-para-cortar-juros/",
-    "71af9decf06bdb3e",
-    "https://livecoins.com.br/receita-federal-e-pf-miram-esquema-de-bets-com-fintechs-que-movimentou-mais-de-r-6-bilhoes/",
-    "33882b5a6464ba56",
-    "https://exame.com/mercado-imobiliario/com-juro-da-casa-propria-a-15-bofa-corta-previsao-de-lancamentos-de-incorporadoras/",
     "b5210e4e79cd23d3",
     "https://www.moneytimes.com.br/track-field-tfco4-exposicao-diferenciada-ao-consumo-domestico-com-crescimento-e-rentabilidade-mlem/",
     "1da02edb5c8b1498",
@@ -799,7 +794,12 @@
     "https://www.spacemoney.com.br/economia/exterior/zelenskyy-corveta-russa-libia/",
     "6c8ce05921e469dc",
     "https://neofeed.com.br/startups/bradesco-volta-ao-jogo-do-private-equity-e-venture-capital-e-ja-soma-r-400-milhoes-em-aportes/",
-    "82c94c4c1067230a"
+    "82c94c4c1067230a",
+    "485e1db4e61e21a8",
+    "https://www.infomoney.com.br/mercados/porto-pssa3-fara-pagamento-de-dividendos-adicionais-na-sexta-feira/",
+    "5fd66ee9fe036da0",
+    "https://www.infomoney.com.br/mercados/brava-energia-brav3-conclui-aquisicao-de-parcela-complementar-do-polo-pescada/",
+    "b9630f16e7a61aa1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1241,7 +1241,9 @@
     "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain",
     "Mercado imobiliário dos EUA trava com salto dos juros",
     "Zelenskyy exalta afundamento de corveta russa na Líbia",
-    "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes"
+    "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes",
+    "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
+    "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1391,7 +1393,9 @@
     "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia.",
     "O mercado imobiliário dos Estados Unidos entrou em um período de paralisia depois que as taxas de financiamento dispararam em setembro, segundo a CNBC. A taxa média do crédito imobiliário de 30 anos, o mais usado no país, girava em torno de 6,60% em julho e chegou a 7,61% no início de outubro, uma alta de um ponto percentual completo, conforme dado",
     "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
-    "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026."
+    "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026.",
+    "A Porto Seguro (PSSA3) realizará no dia 27 de novembro de 2026 o pagamento dos dividendos adicionais aprovados na Assembleia Geral Ordinária e Extraordinária da companhia.",
+    "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras."
   ],
   "eventos_recentes": [
     {
@@ -1589,6 +1593,14 @@
     {
       "chave": "bradesco::GERAL_ATIVO",
       "ts": 1795431134.359446
+    },
+    {
+      "chave": "porto_seguro::PROVENTOS",
+      "ts": 1795431484.65224
+    },
+    {
+      "chave": "brava::EVENTO_CORP",
+      "ts": 1795431484.65224
     }
   ],
   "hashes_imagens": [
@@ -1723,6 +1735,8 @@
     "dc33a6226cd85103",
     "f6025e974f1607cd",
     "cfa1a4c024336a2a",
-    "2858539c9fd2c9d1"
+    "2858539c9fd2c9d1",
+    "939078d02967eebc",
+    "0b063ef0bb04d174"
   ]
 }
