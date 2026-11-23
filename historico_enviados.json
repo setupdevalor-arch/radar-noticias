@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/ibovespa-fecha-em-queda-com-receios-sobre-cenario-fiscal-e-juro-maior-nos-eua/",
-    "1d432ffec522b226",
-    "https://www.moneytimes.com.br/vitoria-do-governo-senado-rejeita-destaques-e-mantem-plano-fiscal-projeto-segue-para-camara-rnda/",
-    "5f9855f0b6719dce",
-    "https://braziljournal.com/custo-brasil-chega-a-27-5-do-pib-ainda-maior-do-que-se-imaginava",
-    "55a2bfdd907be2d1",
-    "https://exame.com/invest/mercados/dona-do-claude-cobra-us-83-por-acao-acima-do-previsto-em-ipo-de-us-68-bilhoes/",
-    "71d1f92fff86c4c1",
     "https://exame.com/economia/ajuste-fiscal-entenda-ponto-a-ponto-o-texto-do-pacote-apos-senado-rejeitar-destaques/",
     "536b53c190c374e9",
     "https://exame.com/saude/a-empresa-que-fez-o-banco-central-rever-o-pib-da-dinamarca/",
@@ -799,7 +791,15 @@
     "72a42933f0f9d9f1",
     "https://www.infomoney.com.br/business/mbrf-avalia-que-fim-das-bets-deve-impulsionar-vendas-de-carnes-nas-festas-natalinas/",
     "73dc8385e21bce26",
-    "704b325505bd6b49"
+    "704b325505bd6b49",
+    "c93006a1bb070883",
+    "e6d95de4c17f47a3",
+    "55b801df623573e5",
+    "6dbe2d288adb103b",
+    "1e62c0276bfaf6b2",
+    "50bbc86488030b2f",
+    "https://www.poder360.com.br/poder-economia/carteira-de-credito-no-brasil-deve-crescer-04-em-outubro-diz-febraban/",
+    "168f3afe38dccfcb"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1299,7 +1299,8 @@
     "Fenacor detalha impactos da Reforma Tributária para corretores",
     "Moretti e parlamentares discutirão mais medidas após 1ª rodada de ajuste",
     "Atividade empresarial nos EUA volta a mostrar perda de ritmo em novembro",
-    "MBRF avalia que fim das “bets” deve impulsionar vendas de carnes nas festas natalinas"
+    "MBRF avalia que fim das “bets” deve impulsionar vendas de carnes nas festas natalinas",
+    "Carteira de crédito no Brasil deve crescer 0,4% em outubro, diz Febraban"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1507,7 +1508,8 @@
     "A Fenacor disponibilizou, na última quarta-feira (18), no site oficial, uma FAQ (Frequently Asked Questions) com 40 perguntas e respostas para esclarecer as dúvidas dos corretores de seguros no que diz respeito à Reforma Tributária e os impactos na atividade profissional da categoria.",
     "O ministro do MPO (Planejamento e Orçamento), Bruno Moretti, combinou com parlamentares uma reunião para discutir novas medidas de ajuste fiscal. O encontro acontecerá após a aprovação de PLP (projeto de lei complementar) considerado o \"primeiro passo\" do processo.",
     "– O crescimento da atividade empresarial nos Estados Unidos desacelerou ainda mais em novembro uma vez que os preços elevados frearam novos pedidos e as restrições de capacidade limitaram a produção, mostrou uma pesquisa divulgada nesta segunda-feira.",
-    "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira."
+    "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
+    "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês"
   ],
   "eventos_recentes": [
     {
@@ -2025,6 +2027,7 @@
     "ef5793557780d028",
     "862d424f7b84b7b7",
     "366ea0eee91e90e9",
-    "ebbfd45f427996e3"
+    "ebbfd45f427996e3",
+    "170601191361b92b"
   ]
 }
