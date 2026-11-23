@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://exame.com/exame-in/hapvida-busca-comprador-para-pacote-de-ativos-em-operacao-que-pode-chegar-a-r-1-bilhao/",
-    "00a7b53c79af0b1d",
-    "https://exame.com/mercado-imobiliario/dona-da-zara-e-berksha-quer-levar-outras-marcas-aos-shoppings-da-multiplan-diz-ceo/",
-    "f14019f9377ce4d2",
-    "https://exame.com/esg/conservar-para-nao-precisar-reconstruir-o-investimento-inteligente-na-protecao-das-florestas/",
     "332348fd46d0acd1",
     "https://www.infomoney.com.br/onde-investir/mercado-de-capitais-soma-r-714-bi-em-outubro-com-forte-captacao-de-fiagros/",
     "e5299bc660b2d363",
@@ -799,7 +794,12 @@
     "https://www.cnnbrasil.com.br/internacional/espioes-usam-vagas-de-trabalho-falsas-para-conseguir-informacoes-dos-eua/",
     "44219ea09d6cf26f",
     "https://www.cnnbrasil.com.br/economia/money/negocios/crowdstrike-aposta-na-seguranca-de-rede-em-acordo-de-us-43-bi-com-zscaler/",
-    "73b73587a3dc41d8"
+    "73b73587a3dc41d8",
+    "8628be93bc6416c3",
+    "c39fd273e948abbf",
+    "8c3f842c5f594a05",
+    "https://www.poder360.com.br/poder-economia/se-nada-for-feito-vamos-para-uma-recessao-diz-mendonca-de-barros/",
+    "a1d677ebac0709c7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1261,7 +1261,8 @@
     "CrowdStrike reverte prejuízo, supera projeções e anuncia para compra de empresa",
     "Chip-dólar: comércio de chips supera petróleo pela 1ª vez",
     "Espiões usam vagas de trabalho falsas para conseguir informações dos EUA",
-    "Crowdstrike aposta na segurança de rede em acordo de US$ 43 bi com Zscaler"
+    "Crowdstrike aposta na segurança de rede em acordo de US$ 43 bi com Zscaler",
+    "“Se nada for feito, vamos para uma recessão”, diz Mendonça de Barros"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1431,7 +1432,8 @@
     "A CrowdStrike registrou lucro líquido de US$ 24,9 milhões no terceiro trimestre do ano fiscal de 2027, encerrado em outubro, revertendo prejuízo de US$ 26,8 milhões apurado no mesmo período do ano anterior. O lucro ajustado foi de US$ 354,9 milhões, ou US$ 0,34 por ação, acima dos US$ 0,31 por ação esperados por analistas consultados pela FactSet.",
     "O comércio global de chips superou o de petróleo e gás pela primeira vez na história moderna, em movimento que o Deutsche Bank descreve como a ascensão do “chip-dólar”. Levantamento publicado pelo Seeking Alpha aponta que as exportações de semicondutores somaram cerca de US$ 1,60 trilhão nos quatro trimestres encerrados no segundo trimestre de 2026",
     "Supostos espiões chineses criaram uma rede elaborada de empresas fictícias que oferecem vagas de emprego, com o objetivo de induzir funcionários e ex-funcionários do governo dos Estados Unidos a revelar segredos oficiais.",
-    "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes."
+    "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes.",
+    "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027"
   ],
   "eventos_recentes": [
     {
@@ -1665,6 +1667,10 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795437786.438121
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795438458.907147
     }
   ],
   "hashes_imagens": [
@@ -1819,6 +1825,7 @@
     "e77b2269bc582829",
     "3a3771d0f1d73a76",
     "21d7a37c2516550a",
-    "969be40105ee1f9f"
+    "969be40105ee1f9f",
+    "0106e18b1d63d732"
   ]
 }
