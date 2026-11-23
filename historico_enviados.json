@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/mercado-de-niquel-pode-chegar-a-us-8068-bi-ate-2031/",
-    "https://www.moneytimes.com.br/b3-muda-metodologia-do-ibovespa-para-permitir-bdrs-a-partir-de-maio-de-2027-fets/",
     "https://www.infomoney.com.br/onde-investir/o-cambio-disparou-e-agora-como-ficam-os-investimentos-com-o-dolar-mais-alto/",
     "https://www.infomoney.com.br/mercados/com-consumidor-proximo-ao-limite-3o-tri-reforca-mensagem-para-varejistas-da-bolsa/",
     "https://www.infomoney.com.br/consumo/dois-papas-prisoes-do-mensalao-e-brasil-campeao-o-mundo-no-lancamento-do-gta-5/",
@@ -799,7 +797,9 @@
     "c4276e3ca6610e3d",
     "https://www.spacemoney.com.br/economia/exterior/houthis-refinaria-rabigh-trump-ameaca-teera/",
     "9283295fa37a06a9",
-    "64490f123aeaaa9b"
+    "64490f123aeaaa9b",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/amante-de-ex-ceo-da-nvidia-manteve-contato-com-agente-chines-diz-nyt/",
+    "b4f552f34e6b4792"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1207,7 +1207,8 @@
     "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
     "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
     "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
-    "Houthis atacam refinaria saudita e Trump ameaça Teerã"
+    "Houthis atacam refinaria saudita e Trump ameaça Teerã",
+    "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1323,7 +1324,8 @@
     "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
     "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência.",
-    "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters."
+    "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters.",
+    "Alice Huang, a chinesa no centro do recente escândalo da Nvidia, manteve contato com um funcionário da principal agência de espionagem da China por mais de um ano durante seu caso com o ex-CEO Jensen Huang, informou o New York Times neste domingo (22)."
   ],
   "eventos_recentes": [
     {
@@ -1453,6 +1455,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795404639.300408
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795406862.080563
     }
   ],
   "hashes_imagens": [
@@ -1553,6 +1559,7 @@
     "fffaeacee035085c",
     "a2217dfa90d49148",
     "821f5e92da6e3bf2",
-    "a254393777ad3e24"
+    "a254393777ad3e24",
+    "a5edc42315feede0"
   ]
 }
