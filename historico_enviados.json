@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.suno.com.br/noticias/dividend-yield-alzc11-sobe-dividendos-estaveis/",
-    "241478d12c478de3",
-    "https://www.moneytimes.com.br/tencent-diz-que-novas-restricoes-dos-eua-nao-afetarao-receita-de-nuvem-mas-podem-desacelerar-treinamento-de-modelos-rens/",
     "16c41b255a38dcda",
     "https://g1.globo.com/tecnologia/noticia/2026/11/18/boato-de-apagao-mundial-e-onda-de-ataques-hackers-o-que-aconteceu-no-mundo-nas-ultimas-semanas.ghtml",
     "45ecb6e4e0b7db75",
@@ -799,7 +796,10 @@
     "3cb721167dc9a60d",
     "d1073658eed16137",
     "https://www.cnnbrasil.com.br/economia/money/negocios/trump-volta-a-defender-restituicao-de-huang-ao-cargo-de-ceo-da-nvidia/",
-    "2744b1ca2a752751"
+    "2744b1ca2a752751",
+    "af0550cc896a3f81",
+    "https://www.infomoney.com.br/mercados/minerio-cai-com-enfraquecimento-da-demanda-chinesa-e-piora-das-margens-siderurgicas/",
+    "d3d1161dd3c25691"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1265,7 +1265,8 @@
     "“Se nada for feito, vamos para uma recessão”, diz Mendonça de Barros",
     "Tokenização de ações estreia sob objeção de 90% das empresas",
     "JBSS3: JBS conclui transação de joint venture em Omã",
-    "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia"
+    "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia",
+    "Minério cai com enfraquecimento da demanda chinesa e piora das margens siderúrgicas"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1439,13 +1440,10 @@
     "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027",
     "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
     "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante",
-    "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22)."
+    "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22).",
+    "– Os contratos futuros de minério de ferro caíram na bolsa de Dalian nesta segunda-feira, pressionados pela demanda persistentemente baixa e pelas margens cada vez menores do setor siderúrgico na China, enquanto a referência do minério na bolsa Cingapura se estabilizou após atingir a menor cotação em quatro anos na semana passada."
   ],
   "eventos_recentes": [
-    {
-      "chave": "banco_do_brasil::GERAL_ATIVO",
-      "ts": 1795267014.016658
-    },
     {
       "chave": "itausa::PROVENTOS",
       "ts": 1795309463.50717
@@ -1689,6 +1687,10 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795439546.355855
+    },
+    {
+      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
+      "ts": 1795439904.454989
     }
   ],
   "hashes_imagens": [
@@ -1847,6 +1849,7 @@
     "0106e18b1d63d732",
     "a3a804818270ff69",
     "be2a7e9851d78548",
-    "5e38d005007ff3d1"
+    "5e38d005007ff3d1",
+    "cc81d342fb9655aa"
   ]
 }
