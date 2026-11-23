@@ -1,7 +1,5 @@
 {
   "links": [
-    "4875e647638c5fad",
-    "259a56cad443e1b6",
     "b06a1d80f2069648",
     "13473ad6a003a039",
     "3a2461519c978df0",
@@ -799,7 +797,9 @@
     "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
     "b048f48eba5fe45a",
     "https://neofeed.com.br/economia/conta-de-luz-sobe-quase-o-dobro-da-inflacao-em-2026-e-pressiona-empresas/",
-    "c91207916aeb4f0d"
+    "c91207916aeb4f0d",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/petroleo-fecha-em-queda-de-3-e-volta-aos-us-80-com-fluxo-melhor-em-ormuz/",
+    "3802cd8d4950da2e"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1343,7 +1343,8 @@
     "Volta de Jensen Huang ao comando da Nvidia foi decidida sem consulta à diretoria",
     "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
     "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
-    "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas"
+    "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas",
+    "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1594,7 +1595,8 @@
     "A decisão surpreendente do conselho da Nvidia de reintegrar o ex-presidente-executivo Jensen Huang foi tomada sem consulta aos principais dirigentes da empresa, que foram informados do plano apenas nos momentos finais, segundo pessoas familiarizadas com o assunto.",
     "BRASÍLIA - A secretária de Política Econômica do Ministério da Fazenda, Débora Freire, afirmou nesta segunda-feira, 23, que a cotação do dólar a R$ 6 preocupa o governo pelo risco de repasse da desvalorização cambial para a inflação. Segundo ela, a revisão da projeção de inflação para 2027 foi influenciada principalmente pela perspectiva de efeitos",
     "A CSN Mineração (CMIN3) terá um duplo desafio pela frente: lidar com uma geração de caixa mais pressionada ao mesmo tempo em que verá seu endividamento aumentar. Essa é a avaliação do BB Investimentos, que reduziu o preço-alvo da ação de R$ 5,40 para R$ 5,10 e manteve a recomendação de venda para o papel.",
-    "Um levantamento inédito obtido pelo NeoFeed e produzido pela Lemon Energia – climatech especializada em geração distribuída (GD) compartilhada – mostra que o valor pago pela energia elétrica subiu, em média, 7,7% entre janeiro e setembro de 2026, na comparação com o mesmo período do ano anterior."
+    "Um levantamento inédito obtido pelo NeoFeed e produzido pela Lemon Energia – climatech especializada em geração distribuída (GD) compartilhada – mostra que o valor pago pela energia elétrica subiu, em média, 7,7% entre janeiro e setembro de 2026, na comparação com o mesmo período do ano anterior.",
+    "O petróleo fechou em queda nesta segunda-feira (23) com o Brent encerrando abaixo dos US$ 90 pela primeira vez em duas semanas, enquanto os investidores se concentravam no aumento do fluxo da commodity do Oriente Médio, apesar de ataques persistentes a navios e refinarias na região."
   ],
   "eventos_recentes": [
     {
@@ -2048,6 +2050,10 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795469626.034479
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795470673.642613
     }
   ],
   "hashes_imagens": [
@@ -2284,6 +2290,7 @@
     "91534925a586a1ec",
     "0d5ba4da09c90b5a",
     "ecc5ef775dbe7589",
-    "07e63feacdb5791b"
+    "07e63feacdb5791b",
+    "7f586bdb881ddfa4"
   ]
 }
