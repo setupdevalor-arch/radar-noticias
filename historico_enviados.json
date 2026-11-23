@@ -1,10 +1,5 @@
 {
   "links": [
-    "882020f0c18b14b6",
-    "https://www.infomoney.com.br/economia/durigan-sinaliza-medidas-fiscais-adicionais-no-curto-prazo/",
-    "5daf951d4d081406",
-    "https://www.infomoney.com.br/mercados/anthropic-desafia-recorde-da-spacex-os-numeros-do-possivel-maior-ipo-da-historia/",
-    "648de9b85238b233",
     "https://g1.globo.com/politica/noticia/2026/11/18/a-geografia-da-polarizacao-na-eleicao-presidencial.ghtml",
     "51151cc2b39d83e4",
     "https://exame.com/esg/quem-lotou-antalia-os-dez-paises-com-as-maiores-comitivas-da-cop31/",
@@ -799,7 +794,12 @@
     "2a55e46e3e531095",
     "3c90ae87739de88a",
     "https://www.poder360.com.br/poder-diario-oficial/bc-facilita-acesso-de-instituicoes-a-depositos-remunerados/",
-    "151300ffc21c19a3"
+    "151300ffc21c19a3",
+    "ed013783e41c1c0a",
+    "dab16b0a86418e9b",
+    "fbd62828952bbdcb",
+    "https://www.infomoney.com.br/onde-investir/taxas-de-prefixados-do-tesouro-renovam-maximas-do-ano-na-volta-do-feriado/",
+    "e00605900891845b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1282,7 +1282,8 @@
     "Dólar sustenta alta e ultrapassa os R$ 6,00 com cautela fiscal",
     "OUJP11 fará pagamento extraordinário antes de liquidação",
     "HGRU11 registra vacância de 0,8% e negocia imóveis em SP",
-    "BC facilita acesso de instituições a depósitos remunerados"
+    "BC facilita acesso de instituições a depósitos remunerados",
+    "Taxas de prefixados do Tesouro renovam máximas do ano na volta do feriado"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1473,7 +1474,8 @@
     "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior.",
     "O fundo imobiliário OUJP11 vai pagar R$ 0,85 por cota em 24 de novembro de 2026, em um repasse extraordinário. Segundo a Suno Notícias, têm direito quem encerrou o dia 13 de novembro com cotas. A antecipação busca levar aos cotistas o caixa existente antes de concluir a venda dos ativos e a liquidação. A gestão afirmou que as próximas etapas não tê",
     "O HGRU11 informou, segundo a Suno Notícias, resultado distribuível de R$ 19,79 milhões em outubro de 2026, com distribuição de R$ 0,95 por cota. O pagamento, previsto para 16 de novembro, soma R$ 23,59 milhões e supera o resultado gerado no mês.",
-    "Resolução atualiza regras do Sistema Especial de Liquidação e de Custódia"
+    "Resolução atualiza regras do Sistema Especial de Liquidação e de Custódia",
+    "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis"
   ],
   "eventos_recentes": [
     {
@@ -1771,6 +1773,10 @@
     {
       "chave": "hgru11::GERAL_ATIVO",
       "ts": 1795443465.837336
+    },
+    {
+      "chave": "rf_tesouro::RF_EVENTO",
+      "ts": 1795444634.311048
     }
   ],
   "hashes_imagens": [
@@ -1946,6 +1952,7 @@
     "2f9bd9a7c1db5789",
     "f195a95a0438174b",
     "c2ac4c3d9998b910",
-    "879112f9b03944fc"
+    "879112f9b03944fc",
+    "32c9444c1d7b101e"
   ]
 }
