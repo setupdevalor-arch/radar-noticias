@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/economia/construcoes-de-moradias-iniciadas-nos-eua-avancam-99-em-outubro-ante-setembro/",
-    "eea15d7618672c91",
-    "https://www.infomoney.com.br/onde-investir/renda-fixa-hoje-confira-as-taxas-de-cdbs-lcis-e-lcas-na-xp-nesta-quarta-feira-18/",
-    "18651622748b1407",
-    "https://www.infomoney.com.br/onde-investir/cdi-alto-mudou-o-jogo-por-que-gestor-abandonou-os-fundos-de-cri-e-mira-tijolo/",
-    "159f50dd484b79d8",
     "https://g1.globo.com/politica/blog/valdo-cruz/post/2026/11/18/risco-de-derrota-no-ajuste-fiscal-mostra-que-lula-tera-de-ceder-mais-espaco-ao-centrao-e-partidos-da-frente-ampla.ghtml",
     "2cc975c8ab81d08a",
     "https://exame.com/negocios/a-wework-valia-us-47-bilhoes-e-devia-outros-47-em-aluguel-o-que-a-queda-ensina-sobre-valuation/",
@@ -799,7 +793,13 @@
     "b6f309d4a4297012",
     "72479181d6c05cde",
     "https://valorinveste.globo.com/objetivo/hora-de-investir/noticia/2026/11/23/mudancas-em-impostos-de-dividendos-investimentos-isentos-e-fortunas-entram-no-radar.ghtml",
-    "f82c214770f8076a"
+    "f82c214770f8076a",
+    "f0c4bae14dd4c876",
+    "87cbd82da59e77bf",
+    "96103b99d0a8c460",
+    "7afe4157a671096c",
+    "https://www.infomoney.com.br/politica/alem-do-pacote-fiscal-veja-pautas-economicas-que-governo-tenta-aprovar-ate-dezembro/",
+    "43a40d5d36d701aa"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1250,7 +1250,8 @@
     "A alegria do CLT: a estratégia do TotalPass e uma semana mais curta de aversão a risco",
     "Seguro rural pode ser a salvação das lavouras gaúchas",
     "Tempestade perfeita? Goldman vê real atrativo, mas recomenda cautela no curto prazo",
-    "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar"
+    "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar",
+    "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1409,7 +1410,8 @@
     "CEO da SmartFit conta sobre a estratégia por trás do TotalPass; nos mercados, bolsa brasileira reabre após semana negativa e diante de feriados no exterior",
     "As estiagens que atingiram as regiões agrícolas do Rio Grande do Sul incineraram 48,7 milhões de toneladas de grãos de 2020 até o final de 2025 (sem contar a safra colhida em 2026). Ou seja, das 227,030 milhões de toneladas de soja, milho e outras culturas projetadas pelos organismos que realizam as estimativas foram efetivamente ceifadas 178,474 m",
     "O real voltou a figurar entre as moedas emergentes que mais sofreram com a recente onda de aversão a risco global, mas ainda apresenta uma combinação de valuation e retorno potencial que o mantém no radar dos investidores, segundo relatório do Kamakshya Trivedi e estrategistas do Goldman Sachs.",
-    "As alterações nos impostos não estão valendo ainda, mas já levantaram questionamentos e fizeram algum barulho"
+    "As alterações nos impostos não estão valendo ainda, mas já levantaram questionamentos e fizeram algum barulho",
+    "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027."
   ],
   "eventos_recentes": [
     {
@@ -1623,6 +1625,10 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795433113.525872
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795434835.606939
     }
   ],
   "hashes_imagens": [
@@ -1766,6 +1772,7 @@
     "f97e9d8e196eec5b",
     "49713e6b1e8f7868",
     "b6c6fa5035d7297a",
-    "c3cbdfb79b0859d8"
+    "c3cbdfb79b0859d8",
+    "bebc0a65cd096d45"
   ]
 }
