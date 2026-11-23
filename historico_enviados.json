@@ -1,9 +1,5 @@
 {
   "links": [
-    "5e8a2a2e34c9eeb3",
-    "https://www.infomoney.com.br/mercados/ibovespa-futuro-cai-com-pacote-fiscal-no-radar-apos-adiamento-da-votacao-no-senado/",
-    "86790784d54e6225",
-    "https://www.cnnbrasil.com.br/comportamento/presente-em-todo-o-pais-como-um-produto-de-limpeza-chega-a-cada-cidade/",
     "528718a3b40e1c30",
     "https://www.infomoney.com.br/mundo/deutsche-bank-vazou-dados-fiscais-de-trump-em-2017-e-nao-avisou-a-casa-branca-diz-ft/",
     "a39f75ea19bd86d1",
@@ -799,7 +795,11 @@
     "317cf422184cfe24",
     "b48ff62c6e2b583e",
     "https://www.spacemoney.com.br/economia/exterior/el-nino-chile-incendios-calor-extremo/",
-    "b85bbd692cd5df30"
+    "b85bbd692cd5df30",
+    "bdc4238132df064f",
+    "6ede86f4a419f57e",
+    "https://www.infomoney.com.br/business/bhp-anuncia-plano-de-us-174-bi-para-dobrar-producao-de-cobre-na-australia-do-sul/",
+    "6114a9596596f73a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1231,7 +1231,8 @@
     "Ajuste fiscal e Petrobras ditam o ritmo do mercado",
     "Black Friday: planejar vale mais que qualquer desconto",
     "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”",
-    "El Niño leva Chile a alerta máximo de incêndios no verão"
+    "El Niño leva Chile a alerta máximo de incêndios no verão",
+    "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1371,7 +1372,8 @@
     "A semana começa com o mercado dividido entre a votação do projeto de ajuste fiscal na Câmara dos Deputados, o novo Plano de Negócios da Petrobras e uma agenda densa de indicadores domésticos e externos. Segundo apurou o InfoMoney, a sessão desta segunda-feira (23) também reserva o Relatório Focus, o Boletim Macrofiscal, dados da balança comercial e",
     "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev",
     "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias",
-    "O Chile se prepara para o verão austral com todo o território sob risco alto de incêndios florestais, segundo o mapa de alerta precoce da Corporação Nacional Florestal (Conaf). A combinação de temperaturas previstas acima de 40°C em algumas regiões, ventos quentes associados ao El Niño e grande volume de vegetação seca criou um cenário que a direto"
+    "O Chile se prepara para o verão austral com todo o território sob risco alto de incêndios florestais, segundo o mapa de alerta precoce da Corporação Nacional Florestal (Conaf). A combinação de temperaturas previstas acima de 40°C em algumas regiões, ventos quentes associados ao El Niño e grande volume de vegetação seca criou um cenário que a direto",
+    "– A BHP, uma das maiores mineradoras do mundo, anunciou nesta segunda-feira que planeja dobrar sua produção de cobre na Austrália do Sul até 2040, à medida que amplia sua participação nesse metal, que deve impulsionar a eletrificação, com uma decisão final de investimento prevista para o primeiro semestre de 2027."
   ],
   "eventos_recentes": [
     {
@@ -1673,6 +1675,7 @@
     "299b4a2e6c0eebc1",
     "79c02eff8daaf1a6",
     "009ce1e292d690aa",
-    "8c23b932bfbc3134"
+    "8c23b932bfbc3134",
+    "c621edb035dcba1a"
   ]
 }
