@@ -1,16 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/politica/o-que-e-a-lei-kandir-que-motivou-acordo-no-senado-e-quase-travou-ajuste-fiscal/",
-    "110dc7c078a56986",
-    "https://valorinveste.globo.com/noticia/2026/11/18/senado-aprova-projeto-de-ajuste-fiscal-do-governo-com-mudancas-acatadas-pelo-relator.ghtml",
-    "7fb39f9602531fb3",
-    "https://www.moneytimes.com.br/petroleo-fecha-em-queda-em-meio-a-alta-do-dolar-e-recuperacao-da-oferta-davs/",
-    "c081a5135bd66ea5",
-    "https://www.suno.com.br/noticias/petr3-petrobras-recolhe-251-bilhoes-em-tributos/",
-    "001fb0f403112a1f",
-    "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/11/18/ministro-da-fazenda-defende-equilibrio-entre-politicas-sociais-e-trajetoria-fiscal.ghtml",
-    "657b3eb3f08e7f50",
-    "https://www.moneytimes.com.br/dolar-a-vista-supera-os-r-585-e-fecha-na-maior-cotacao-em-19-meses-davs/",
     "48c6e90819a250d7",
     "https://www.seudinheiro.com/2026/colunistas/um-pouco-mais-devagar-do-que-a-rotacao-da-terra-ccgg/",
     "d3af0599f4ff99ec",
@@ -799,7 +788,18 @@
     "7e933d9f00254bcd",
     "d1859ab6e2554a54",
     "https://www.spacemoney.com.br/investimentos/itausa-resultado-9m26/",
-    "076d209ccaf78ff1"
+    "076d209ccaf78ff1",
+    "0c98149962fcb634",
+    "0b19e08f2f382aed",
+    "7ad8466cc4c98cba",
+    "5687f630e79e57f4",
+    "f7371db2ab0a60f3",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/ue-abre-investigacao-antitruste-contra-coca-cola-europacific-partners/",
+    "92b5774faed850a8",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/bill-ackman-diz-que-fed-pode-gerar-recessao-com-alta-de-juros/",
+    "49fd2c62cedd3b1c",
+    "https://www.cnnbrasil.com.br/agro/plantio-de-soja-no-8/",
+    "ef271acf85721b2d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1302,7 +1302,10 @@
     "MBRF avalia que fim das “bets” deve impulsionar vendas de carnes nas festas natalinas",
     "Carteira de crédito no Brasil deve crescer 0,4% em outubro, diz Febraban",
     "Cross River passa a emprestar com Bitcoin em garantia",
-    "Itaúsa aponta avanço de 16% no lucro recorrente do 9M26"
+    "Itaúsa aponta avanço de 16% no lucro recorrente do 9M26",
+    "UE abre investigação antitruste contra Coca-Cola Europacific Partners",
+    "Bill Ackman diz que Fed pode gerar recessão com alta de juros",
+    "Plantio de soja no Brasil avança para 86% com ajuda das chuvas, diz AgRural"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1513,7 +1516,10 @@
     "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
     "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês",
     "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente.",
-    "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões."
+    "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões.",
+    "A Comissão Europeia, braço executivo da UE (União Europeia), abriu uma investigação antitruste formal para apurar se a CCEP (Coca-Cola Europacific Partners) violou as regras de concorrência do bloco.",
+    "O bilionário e investidor Bill Ackman afirmou que o Federal Reserve (Fed, o banco central norte-americano) corre o risco de cometer \"outro erro\" na decisão de juros de 9 de dezembro, diante do forte aperto das condições financeiras.",
+    "O plantio da safra 2026/27 de soja do Brasil alcançou 86% da área projetada na última quinta-feira, contra 78% observado na semana anterior e 81% um ano atrás, segundo levantamento da AgRural divulgado nesta segunda-feira."
   ],
   "eventos_recentes": [
     {
@@ -1847,6 +1853,14 @@
     {
       "chave": "itausa::BALANCO",
       "ts": 1795454201.511648
+    },
+    {
+      "chave": "coca_cola::GERAL_ATIVO",
+      "ts": 1795454659.917262
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795454659.917262
     }
   ],
   "hashes_imagens": [
@@ -2042,6 +2056,9 @@
     "ebbfd45f427996e3",
     "170601191361b92b",
     "95edc1a335348783",
-    "20d90a4905101d34"
+    "20d90a4905101d34",
+    "539fde8a21f53faf",
+    "40f6f7c1b9cb0e95",
+    "633a8c94db27670f"
   ]
 }
