@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/agenda-economica-o-que-pode-mexer-com-a-bolsa-e-o-dolar-nesta-quarta-feira-mlem-2/",
-    "https://www.infomoney.com.br/business/nvidia-suspende-envio-de-chips-de-ia-aprovados-pelos-eua-para-china/",
-    "https://www.moneytimes.com.br/bispo-edir-macedo-coloca-r-17-bilhao-para-capitalizar-banco-digimais-fets/",
     "https://www.infomoney.com.br/business/banco-da-nvidia-esta-se-tornando-mais-disciplinado-e-seletivo/",
     "https://www.bbc.com/portuguese/articles/c8y5xkwx75dxo?at_medium=RSS&at_campaign=rss",
     "https://g1.globo.com/mundo/noticia/2026/11/18/eua-ainda-nao-sabem-causa-de-falha-que-cancelou-18-mil-voos-diz-secretario-de-trump.ghtml",
@@ -799,7 +796,10 @@
     "1fcb3d988f187067",
     "https://www.cnnbrasil.com.br/economia/alta-dos-gastos-faz-investidor-exigir-mais-juros-diz-pesquisadora-da-fgv/",
     "4dce612514fd634e",
-    "c3adcbcaa48328cf"
+    "c3adcbcaa48328cf",
+    "12e08022612976c4",
+    "https://www.poder360.com.br/poder-congresso/eduardo-braga-defende-mudanca-na-constituicao-para-novo-ajuste-fiscal/",
+    "55eee52d4d49325b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1211,7 +1211,8 @@
     "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT",
     "Traders descartam alta de 0,50 ponto do Fed em dezembro",
     "Futuros de NY avançam após selloff global da IA",
-    "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV"
+    "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
+    "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1331,7 +1332,8 @@
     "Alice Huang, a chinesa no centro do recente escândalo da Nvidia, manteve contato com um funcionário da principal agência de espionagem da China por mais de um ano durante seu caso com o ex-CEO Jensen Huang, informou o New York Times neste domingo (22).",
     "Os fed funds futures deixaram de precificar uma alta de 50 pontos-base na taxa básica de juros dos EUA, para 4,5%, na reunião do Fed de dezembro, segundo o CME FedWatch. Cerca de dez dias antes, a probabilidade era de 10%.",
     "Os futuros das bolsas de Nova York subiam nesta segunda-feira (23), devolvendo parte das fortes perdas da semana anterior, quando o comércio de inteligência artificial passou por uma correção global. Os contratos do Nasdaq-100 avançavam 2,76%, os do S&P 500 ganhavam 2,03% e os do Dow Jones subiam 673 pontos, ou 1,4%.",
-    "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP."
+    "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP.",
+    "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais"
   ],
   "eventos_recentes": [
     {
@@ -1581,6 +1583,7 @@
     "a5edc42315feede0",
     "b6cae3ac334a330b",
     "0a2be891c473e27a",
-    "414b71c3060c549e"
+    "414b71c3060c549e",
+    "810dff1abaf81093"
   ]
 }
