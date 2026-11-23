@@ -1,10 +1,5 @@
 {
   "links": [
-    "6e2e3d9e4f78760a",
-    "8bbe84e881393667",
-    "https://www.estadao.com.br/economia/coluna-da-broad/fintech-copia-modelo-do-minha-casa-minha-vida-para-credito-imobiliario/",
-    "88f7ddf53e01cc48",
-    "https://www.spacemoney.com.br/investimentos/bancos-rebaixam-brasil-e-elevam-mexico-carteiras-2027/",
     "e10735a917ef81c2",
     "https://www.estadao.com.br/economia/coluna-da-broad/bv-recebe-aval-da-cvm-e-da-novo-passo-para-abertura-de-capital-na-b3/",
     "68868e7ecf1d98ce",
@@ -799,7 +794,12 @@
     "1d5755e628b7228a",
     "https://www.mobiletime.com.br/noticias/23/11/2026/pl-4675-nao-e-consenso/",
     "6f27abe81c7959e7",
-    "502d82c3752d3491"
+    "502d82c3752d3491",
+    "912f720fbc67ecf1",
+    "https://www.spacemoney.com.br/investimentos/acoes/brb-cvm-suspensao-registro/",
+    "90b7f9ded7cf5e2d",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/jornada-5x2-veja-como-ficam-regras-de-salario-folgas-e-horas-extras",
+    "220f7f899ed90649"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1360,11 +1360,11 @@
     "Meta suspende ações Classe C em meio a litígio de acionistas",
     "Hapvida (HAPV3) confirma contratação de bancos para reavaliar portfólio de ativos",
     "Alares busca R$ 140 milhões para gestão de dívidas e reforço de caixa",
-    "PL 4675/2025 não é consenso entre entidades empresariais"
+    "PL 4675/2025 não é consenso entre entidades empresariais",
+    "BRB mantém operações bancárias após suspensão na CVM",
+    "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras"
   ],
   "leads": [
-    "A bolsa brasileira está perdendo espaço nas carteiras dos grandes bancos de investimento. Depois de Morgan Stanley e Goldman Sachs reduzirem suas recomendações para as ações do país, foi a vez do BTG Pactual colocar o Brasil em posição neutra em sua carteira para a América Latina.",
-    "Clube e banco negam conversas; parceria atual com a Mondelez, dona do Bis, soma R$ 75 milhões em 3 anos",
     "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c",
     "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese.",
     "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente.",
@@ -1612,7 +1612,9 @@
     "A Meta decidiu congelar a emissão de ações ordinárias Classe C — papéis sem poder de voto — enquanto correm as etapas de pré-julgamento e julgamento de uma série de processos movidos por acionistas. A companhia informou a decisão à Comissão de Valores Mobiliários dos Estados Unidos (SEC) nesta segunda-feira, 23, segundo a Estadão Conteúdo. Em comun",
     "A Hapvida (HAPV3) confirmou nesta segunda-feira (23) que contratou bancos de investimento para assessorá-la no processo de reavaliação de seu portfólio de ativos, em resposta a questionamentos da Comissão de Valores Mobiliários (CVM).",
     "A Alares Internet Participações iniciou nesta segunda-feira, 23, uma oferta pública de R$ 140 milhões em notas comerciais escriturais. Os recursos líquidos captados serão destinados integralmente à gestão de passivos e ao reforço de caixa da companhia, conforme decisão aprovada pelo Conselho de Administração em reunião realizada no último dia 19.",
-    "Embora tenha como alvo as grandes plataformas digitais, o PL 4675/2025 preocupa entidades empresariais pelos possíveis efeitos sobre negócios que dependem desses ecossistemas. As associações ouvidas por Mobile Time, Abes e Amobitec, alertam para riscos de aumento de custos, insegurança jurídica e impactos sobre investimentos, serviços e empresas de"
+    "Embora tenha como alvo as grandes plataformas digitais, o PL 4675/2025 preocupa entidades empresariais pelos possíveis efeitos sobre negócios que dependem desses ecossistemas. As associações ouvidas por Mobile Time, Abes e Amobitec, alertam para riscos de aumento de custos, insegurança jurídica e impactos sobre investimentos, serviços e empresas de",
+    "O BRB informou que mantém o atendimento a clientes e o pagamento de compromissos com depositantes e fornecedores, apesar de a CVM ter suspendido seu registro de companhia aberta, segundo o g1. A decisão foi divulgada nesta segunda-feira (23).",
+    "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro."
   ],
   "eventos_recentes": [
     {
@@ -2375,6 +2377,8 @@
     "e41bb6628c27cdd2",
     "daabc49e07b2cbbe",
     "7c3d46e86559d1d1",
-    "3482f48241370a6a"
+    "3482f48241370a6a",
+    "5dde0f7e18d417b0",
+    "c09786794cd207ae"
   ]
 }
