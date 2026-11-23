@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/brasil/pf-indicia-17-por-fraude-de-r-48-milhoes-em-respiradores-na-covid-19/",
-    "4dce4d7d87974afc",
-    "https://exame.com/pop/por-que-robert-pattinson-foi-escolhido-como-james-bond-jeff-bezos-explica/",
     "b8aeee3b49c22244",
     "https://www.infomoney.com.br/mercados/axia-simpar-unifique-iguatemi-e-mais-acoes-para-acompanhar-nesta-quarta-feira/",
     "6d6dc68aa662e2da",
@@ -799,7 +796,10 @@
     "5dbfb746cbe1125e",
     "1b4bfbda83121649",
     "https://www.estadao.com.br/economia/coluna-do-broadcast-agro/capim-na-lavoura-vira-aposta-de-expansao-da-soesp/",
-    "aa9f53126d0c2c62"
+    "aa9f53126d0c2c62",
+    "843596bddc0050da",
+    "https://www.spacemoney.com.br/investimentos/etfs/etfs-bitcoin-terceira-maior-saida-semanal/",
+    "741408d3d41c2a38"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1220,7 +1220,8 @@
     "Estrangeiros reforçam compras de dólar futuro e pressão sobre o real continua",
     "Anúncios maliciosos invadem iPhones para roubar seed phrases",
     "Futuros de NY sobem após liquidação de ações de tecnologia na semana passada",
-    "Capim na lavoura vira aposta de expansão da Soesp"
+    "Capim na lavoura vira aposta de expansão da Soesp",
+    "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1349,7 +1350,8 @@
     "Os estrangeiros seguem comprando dólar futuro no Brasil, mesmo após a forte valorização da moeda nas últimas semanas. Antes do feriado, grandes bancos estrangeiros acompanhados pelo trader Léo Molini encerraram o pregão, do dia 19, com saldo comprador de R$ 3,75 bilhões, enquanto um grupo de bancos e corretoras locais terminou o dia com vendas líqu",
     "Os anúncios levam a páginas criadas pelos operadores da campanha, chamada MoldyRoost pelos pesquisadores. A página entrega o código malicioso enquanto carrega, sem cliques extras. “Basta carregar a página de um anúncio MoldyRoost em um iPhone vulnerável para ser infectado”, escreveram Roshan e Eliya Stein em relatório publicado em 20 de novembro.",
     "Os futuros de Nova York operam em forte alta nesta segunda-feira (23), em razão de um movimento de recuperação após a forte liquidação das ações de tecnologia na semana passada. Investidores voltam a comprar papéis ligados à inteligência artificial (IA), aproveitando a queda recente dos preços.",
-    "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro"
+    "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro",
+    "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph."
   ],
   "eventos_recentes": [
     {
@@ -1507,6 +1509,10 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795421828.127607
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795424354.150907
     }
   ],
   "hashes_imagens": [
@@ -1620,6 +1626,7 @@
     "e03ef5d293fe4791",
     "ec7bb0fa3eccbf53",
     "74b92e184e1fa947",
-    "17c9f657dc4b95b6"
+    "17c9f657dc4b95b6",
+    "4628da901d8ca5d1"
   ]
 }
