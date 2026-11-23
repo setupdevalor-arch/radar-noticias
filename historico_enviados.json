@@ -1,9 +1,5 @@
 {
   "links": [
-    "8cecd81c5d260ec2",
-    "7b59912715bb35e0",
-    "e76cbedf78cb8e61",
-    "294e3f4ec27f333d",
     "5348c3f57cecfcaf",
     "b4dab6cae5b12fa2",
     "c58eec743f3f8559",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/alzr11-xplg11-dividend-yield-outubro/",
     "cda25c1978d50bef",
     "https://www.spacemoney.com.br/economia/macroeconomia/juros-futuros-recua-bc-diretorias/",
-    "0a15c10fa4f4039b"
+    "0a15c10fa4f4039b",
+    "https://www.spacemoney.com.br/economia/dolar-hoje/dolar-r6-fecha-queda-sinal-bc/",
+    "6fca1153f843a15d",
+    "https://www.moneytimes.com.br/petrobras-petr4-vai-pagar-us-156-bilhoes-em-dividendos-extraordinarios-veja-prazos-e-quem-pode-receber-ccgg/",
+    "009d2094f8d392e8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1348,11 +1348,11 @@
     "Por que o Nubank (ROXO34) vê nas pequenas e médias empresas uma oportunidade para crescer",
     "Ministro da Fazenda Prevê Superávit de até 2% do PIB Ao Fim do Mandato",
     "XPLG11 supera ALZR11 no dividend yield de outubro",
-    "DI cai com falas do BC e nomes próximos ao mercado"
+    "DI cai com falas do BC e nomes próximos ao mercado",
+    "Dólar fecha a R$ 5,92 após romper R$ 6 de olho no BC",
+    "Petrobras (PETR4) vai pagar US$ 15,6 bilhões em dividendos extraordinários; veja prazos e quem pode receber"
   ],
   "leads": [
-    "Os balanços dos bancos no 3T26 mostram que a piora do crédito não atinge todas as instituições da mesma forma — e a qualidade do capital pode fazer toda a diferença daqui para frente",
-    "O feriado nacional da Consciência Negra, nesta sexta-feira (20), altera o funcionamento de bancos, Bolsa de Valores (B3), Correios, INSS e outros serviços em todo o Brasil. Enquanto algumas atividades serão suspensas, outras, como o Pix, operam normalmente.",
     "Mesmo antes do lançamento oficial, as vendas do game da Rockstar somam desde junho US$ 1,65 bilhão, com 17 milhões de cópias comercializadas",
     "Ata da última reunião de política monetária do Fed mostrou que os dirigentes esperam novos apertos nos próximos meses",
     "Se parcela da população negra com ensino superior mais que quintuplicou neste século, preconceitos e assédio ainda persistem na academia",
@@ -1600,7 +1600,9 @@
     "Banco aposta em diversificar serviços e atender regiões em que é mais difícil ter acesso a agências bancárias",
     "O ministro da Fazenda, Dario Durigan, afirmou nesta segunda-feira que o governo do presidente Luiz Inácio Lula da Silva continuará perseguindo o superávit fiscal nos próximos anos, mirando em um resultado positivo entre 1,5% e 2% do Produto Interno Bruto (PIB) no fim do quarto mandato.",
     "Os fundos imobiliários ALZR11 e XPLG11 apresentaram indicadores distintos nos relatórios gerenciais de outubro de 2026, segundo o Suno Notícias. No comparativo de dividend yield anualizado, o XP Log ficou em 10,79%, acima dos 10,5% do Alianza Trust Renda Imobiliária, embora as carteiras tenham perfis próprios e métricas de patrimônio, preço e vacân",
-    "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria"
+    "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria",
+    "O dólar encerrou esta segunda-feira (23) em queda de 0,15%, a R$ 5,92, depois de ultrapassar a marca de R$ 6 pela primeira vez desde o início de abril de 2025, em um pregão marcado por preocupações fiscais, relatos de saída de recursos e valorização da moeda americana no exterior. Segundo o Monitor do Mercado, o alívio apareceu na parte da tarde, q",
+    "A semana começa com uma das notícias mais aguardadas pelos acionistas: dividendos extraordinários da Petrobras (PETR4). O Conselho de Administração da estatal aprovou nesta segunda-feira (23) a distribuição de R$ 15,60 bilhões, ou R$ 1,21035949 por ação ordinária e preferencial em circulação."
   ],
   "eventos_recentes": [
     {
@@ -2078,6 +2080,14 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795473462.346684
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795473810.980946
+    },
+    {
+      "chave": "petrobras::PROVENTOS",
+      "ts": 1795473810.980946
     }
   ],
   "hashes_imagens": [
@@ -2319,6 +2329,8 @@
     "97a9854467b979bc",
     "73e96f9b51f351c8",
     "102e455bf8cfa50e",
-    "32d2112ebad2d253"
+    "32d2112ebad2d253",
+    "58fe0d5271104f6b",
+    "bc6368298a15cd11"
   ]
 }
