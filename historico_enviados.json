@@ -1,7 +1,5 @@
 {
   "links": [
-    "5348c3f57cecfcaf",
-    "b4dab6cae5b12fa2",
     "c58eec743f3f8559",
     "e1f62778ca70b1f6",
     "aa5b3eaf579b32ac",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/economia/dolar-hoje/dolar-r6-fecha-queda-sinal-bc/",
     "6fca1153f843a15d",
     "https://www.moneytimes.com.br/petrobras-petr4-vai-pagar-us-156-bilhoes-em-dividendos-extraordinarios-veja-prazos-e-quem-pode-receber-ccgg/",
-    "009d2094f8d392e8"
+    "009d2094f8d392e8",
+    "https://www.cnnbrasil.com.br/agro/petrobras-compra-42-da-produtora-de-etanol-de-milho-neomille-por-r-28-bi/",
+    "a672ca6c15c19ef2"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1350,10 +1350,10 @@
     "XPLG11 supera ALZR11 no dividend yield de outubro",
     "DI cai com falas do BC e nomes próximos ao mercado",
     "Dólar fecha a R$ 5,92 após romper R$ 6 de olho no BC",
-    "Petrobras (PETR4) vai pagar US$ 15,6 bilhões em dividendos extraordinários; veja prazos e quem pode receber"
+    "Petrobras (PETR4) vai pagar US$ 15,6 bilhões em dividendos extraordinários; veja prazos e quem pode receber",
+    "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi"
   ],
   "leads": [
-    "Mesmo antes do lançamento oficial, as vendas do game da Rockstar somam desde junho US$ 1,65 bilhão, com 17 milhões de cópias comercializadas",
     "Ata da última reunião de política monetária do Fed mostrou que os dirigentes esperam novos apertos nos próximos meses",
     "Se parcela da população negra com ensino superior mais que quintuplicou neste século, preconceitos e assédio ainda persistem na academia",
     "Supremo decide aplicar imediatamente decisão que evita violência financeira com base na lei Maria da Penha",
@@ -1602,7 +1602,8 @@
     "Os fundos imobiliários ALZR11 e XPLG11 apresentaram indicadores distintos nos relatórios gerenciais de outubro de 2026, segundo o Suno Notícias. No comparativo de dividend yield anualizado, o XP Log ficou em 10,79%, acima dos 10,5% do Alianza Trust Renda Imobiliária, embora as carteiras tenham perfis próprios e métricas de patrimônio, preço e vacân",
     "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria",
     "O dólar encerrou esta segunda-feira (23) em queda de 0,15%, a R$ 5,92, depois de ultrapassar a marca de R$ 6 pela primeira vez desde o início de abril de 2025, em um pregão marcado por preocupações fiscais, relatos de saída de recursos e valorização da moeda americana no exterior. Segundo o Monitor do Mercado, o alívio apareceu na parte da tarde, q",
-    "A semana começa com uma das notícias mais aguardadas pelos acionistas: dividendos extraordinários da Petrobras (PETR4). O Conselho de Administração da estatal aprovou nesta segunda-feira (23) a distribuição de R$ 15,60 bilhões, ou R$ 1,21035949 por ação ordinária e preferencial em circulação."
+    "A semana começa com uma das notícias mais aguardadas pelos acionistas: dividendos extraordinários da Petrobras (PETR4). O Conselho de Administração da estatal aprovou nesta segunda-feira (23) a distribuição de R$ 15,60 bilhões, ou R$ 1,21035949 por ação ordinária e preferencial em circulação.",
+    "A Petrobras fechou um acordo para adquirir 42% do capital social da Neomille, produtora de etanol de milho controlada pela CerradinhoBio, em uma operação avaliada em R$ 2,8 bilhões. O acordo foi anunciado nesta segunda-feira (23) e marca a retomada dos investimentos da estatal no mercado de etanol."
   ],
   "eventos_recentes": [
     {
@@ -2088,6 +2089,10 @@
     {
       "chave": "petrobras::PROVENTOS",
       "ts": 1795473810.980946
+    },
+    {
+      "chave": "petrobras::EVENTO_CORP",
+      "ts": 1795475194.920769
     }
   ],
   "hashes_imagens": [
@@ -2331,6 +2336,7 @@
     "102e455bf8cfa50e",
     "32d2112ebad2d253",
     "58fe0d5271104f6b",
-    "bc6368298a15cd11"
+    "bc6368298a15cd11",
+    "a6803543a929fe8e"
   ]
 }
