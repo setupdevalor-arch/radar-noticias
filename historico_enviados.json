@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/mundo/noticia/2026/11/18/eua-ainda-nao-sabem-causa-de-falha-que-cancelou-18-mil-voos-diz-secretario-de-trump.ghtml",
-    "https://www.infomoney.com.br/business/huang-prestara-esclarecimentos-ao-congresso-sobre-caso-apos-demissao-da-nvidia/",
-    "https://www.infomoney.com.br/mercados/acoes-de-ia-da-china-sao-afetadas-por-sinais-de-restricoes-mais-rigorosas-ao-setor/",
-    "https://www.moneytimes.com.br/americanas-amer3-ve-recuperacao-operacional-mesmo-sem-ganhos-extraordinarios-e-nao-conta-com-melhora-da-economia-lmrs/",
     "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-18112026/",
     "https://www.infomoney.com.br/mercados/minidolar-hoje-futuro-do-dolar-wdoz26-17112026-2/",
     "https://www.bbc.com/portuguese/articles/c60mdv3k3wdpo?at_medium=RSS&at_campaign=rss",
@@ -799,7 +795,11 @@
     "https://www.poder360.com.br/poder-congresso/eduardo-braga-defende-mudanca-na-constituicao-para-novo-ajuste-fiscal/",
     "55eee52d4d49325b",
     "https://www.moneytimes.com.br/precos-do-petroleo-caem-com-mercado-volatil-nesta-segunda-feira-fets/",
-    "0cec9617cc3fa9f3"
+    "0cec9617cc3fa9f3",
+    "15b1ec892b75ecba",
+    "7043739a81c2d19b",
+    "https://www.infomoney.com.br/onde-investir/ubs-ve-possibilidade-de-estagflacao-no-brasil-em-2027-como-balancear-o-portfolio/",
+    "22630d3b1cfb5457"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1213,7 +1213,8 @@
     "Futuros de NY avançam após selloff global da IA",
     "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
     "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal",
-    "Preços do petróleo caem com mercado volátil nesta segunda-feira"
+    "Preços do petróleo caem com mercado volátil nesta segunda-feira",
+    "UBS vê possibilidade de estagflação no Brasil em 2027; como balancear o portfólio?"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1335,7 +1336,8 @@
     "Os futuros das bolsas de Nova York subiam nesta segunda-feira (23), devolvendo parte das fortes perdas da semana anterior, quando o comércio de inteligência artificial passou por uma correção global. Os contratos do Nasdaq-100 avançavam 2,76%, os do S&P 500 ganhavam 2,03% e os do Dow Jones subiam 673 pontos, ou 1,4%.",
     "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP.",
     "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais",
-    "Os preços do petróleo caem no pregão asiático desta segunda-feira (23), mesmo com investidores incorporando um prêmio de risco decorrente da continuidade dos ataques a embarcações e refinarias no Oriente Médio, em meio aos esforços diplomáticos para pôr fim à guerra."
+    "Os preços do petróleo caem no pregão asiático desta segunda-feira (23), mesmo com investidores incorporando um prêmio de risco decorrente da continuidade dos ataques a embarcações e refinarias no Oriente Médio, em meio aos esforços diplomáticos para pôr fim à guerra.",
+    "O cenário externo para o próximo ano é de juros mais altos nos países desenvolvidos, estima o UBS Global Wealth Management em seu relatório “Year Ahead 2027”, o que não é favorável para as economias emergentes e torna mais difícil para o Brasil “empurrar com a barriga” os problemas das contas públicas, como tem feito desde a criação do arcabouço fi"
   ],
   "eventos_recentes": [
     {
@@ -1591,6 +1593,7 @@
     "0a2be891c473e27a",
     "414b71c3060c549e",
     "810dff1abaf81093",
-    "2f3a44d0176843b9"
+    "2f3a44d0176843b9",
+    "eae41bb83e11847d"
   ]
 }
