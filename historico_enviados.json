@@ -1,9 +1,5 @@
 {
   "links": [
-    "6733f5dfb5fd798a",
-    "https://g1.globo.com/economia/noticia/2026/11/18/tcu-mantem-correios-em-lista-de-estatais-da-administracao-federal-com-riscos-fiscais.ghtml",
-    "638be360cb573973",
-    "https://exame.com/brasil/senado-rejeita-mudancas-propostas-pela-oposicao-a-pacote-fiscal-de-lula/",
     "a9a3c291625a93cd",
     "https://exame.com/brasil/senado-aprova-pacote-fiscal-apresentado-pelo-governo-lula-texto-vai-a-camara/",
     "65038c107f17ab63",
@@ -799,7 +795,11 @@
     "5be3be8099a2b7bd",
     "d78390badc00067e",
     "d0410a840ab80716",
-    "84042b9063e62658"
+    "84042b9063e62658",
+    "9a347cc6892c8b8b",
+    "568181bfd8d0b27a",
+    "https://www.spacemoney.com.br/credito/cross-river-emprestimo-bitcoin-garantia/",
+    "b974420d8e096756"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1300,7 +1300,8 @@
     "Moretti e parlamentares discutirão mais medidas após 1ª rodada de ajuste",
     "Atividade empresarial nos EUA volta a mostrar perda de ritmo em novembro",
     "MBRF avalia que fim das “bets” deve impulsionar vendas de carnes nas festas natalinas",
-    "Carteira de crédito no Brasil deve crescer 0,4% em outubro, diz Febraban"
+    "Carteira de crédito no Brasil deve crescer 0,4% em outubro, diz Febraban",
+    "Cross River passa a emprestar com Bitcoin em garantia"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1509,7 +1510,8 @@
     "O ministro do MPO (Planejamento e Orçamento), Bruno Moretti, combinou com parlamentares uma reunião para discutir novas medidas de ajuste fiscal. O encontro acontecerá após a aprovação de PLP (projeto de lei complementar) considerado o \"primeiro passo\" do processo.",
     "– O crescimento da atividade empresarial nos Estados Unidos desacelerou ainda mais em novembro uma vez que os preços elevados frearam novos pedidos e as restrições de capacidade limitaram a produção, mostrou uma pesquisa divulgada nesta segunda-feira.",
     "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
-    "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês"
+    "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês",
+    "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente."
   ],
   "eventos_recentes": [
     {
@@ -1835,6 +1837,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795449725.00988
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795453436.468141
     }
   ],
   "hashes_imagens": [
@@ -2028,6 +2034,7 @@
     "862d424f7b84b7b7",
     "366ea0eee91e90e9",
     "ebbfd45f427996e3",
-    "170601191361b92b"
+    "170601191361b92b",
+    "95edc1a335348783"
   ]
 }
