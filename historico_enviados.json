@@ -1,7 +1,5 @@
 {
   "links": [
-    "ea278b6afa5b50e2",
-    "https://www.cnnbrasil.com.br/economia/money/tecnologia/por-que-eua-nao-querem-que-empresas-construam-data-centers-em-outros-paises/",
     "b3b966f3fd44aca9",
     "2dcb23d9da1c9cc7",
     "c1fca862eb13d58b",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hgre11-compra-salas-wework/",
     "9998d9b190a1ff44",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/trco11-pagamento-aluguel-outubro/",
-    "847fe3d5495bc8ae"
+    "847fe3d5495bc8ae",
+    "https://www.spacemoney.com.br/economia/exterior/melenchon-engie-controle-estatal-franca/",
+    "cc70878422748bef"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1354,10 +1354,10 @@
     "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi",
     "Dólar toca R$ 6; Ibovespa cai e Magalu sobe",
     "HGRE11 adquire 67 salas ocupadas pela WeWork",
-    "TRCO11 registra quitação de aluguel de outubro"
+    "TRCO11 registra quitação de aluguel de outubro",
+    "Mélenchon quer devolver Engie ao controle estatal"
   ],
   "leads": [
-    "Valorização global da moeda americana e expectativa de juros mais altos nos EUA ampliam a pressão sobre os ativos brasileiros, em meio a preocupações fiscais e inflacionárias",
     "O fundo imobiliário Rio Negro (RNGO11) anunciou, por meio de fato relevante, que alugou o terceiro andar da Torre Padauiri para a CSI Latina Arrendamento Mercantil S.A. O espaço possui 1,35 mil metros quadrados (m²).",
     "A Priner (PRNR3) informou nesta terça-feira (18) que não conseguiu levantar os recursos que pretendia com um aumento de capital privado e decidiu cancelar a operação de até R$ 220 milhões aprovada em outubro.",
     "A Copel (CPLE3) planeja investimentos de R$ 21,1 bilhões para o período de 2027 a 2030, com quase 70% desse montante voltado ao negócio de distribuição de energia elétrica, anunciou a companhia nesta quinta-feira (19).",
@@ -1606,7 +1606,8 @@
     "A Petrobras fechou um acordo para adquirir 42% do capital social da Neomille, produtora de etanol de milho controlada pela CerradinhoBio, em uma operação avaliada em R$ 2,8 bilhões. O acordo foi anunciado nesta segunda-feira (23) e marca a retomada dos investimentos da estatal no mercado de etanol.",
     "O Ibovespa encerrou a segunda-feira (23) aos 164.796,05 pontos, com queda de 0,95% e perda de 1.580,38 pontos, segundo a Suno Notícias. Foi a terceira sessão seguida no negativo, e o índice ficou abaixo dos 165 mil pontos. No câmbio, a máxima do dólar foi de R$ 6,006; o patamar de R$ 6 não era alcançado desde abril de 2025. A moeda, porém, fechou a",
     "Conforme a Suno Notícias, o HGRE11, fundo imobiliário administrado pela Pátria Investimentos, concluiu a compra de 67 salas no empreendimento One Eleven, da Helbor, na Vila Olímpia (SP), por R$ 73,5 milhões. As unidades somam 3.831 m² de área bruta locável e respondem por 84% do condomínio.",
-    "Segundo a Suno Notícias, o TRCO11 (Torre Rio Claro Offices), administrado pelo Ouribank, registrou nesta segunda-feira (23) o recebimento do aluguel de outubro da BM Varejo Empreendimentos S.A. O valor foi acrescido de multa equivalente a 5% e de juros mensais de 1%, conforme fato relevante do administrador."
+    "Segundo a Suno Notícias, o TRCO11 (Torre Rio Claro Offices), administrado pelo Ouribank, registrou nesta segunda-feira (23) o recebimento do aluguel de outubro da BM Varejo Empreendimentos S.A. O valor foi acrescido de multa equivalente a 5% e de juros mensais de 1%, conforme fato relevante do administrador.",
+    "De acordo com reportagem de Luciano Costa, do Brazil Journal, a presidente-executiva da Engie, Catherine MacGregor, criticou a proposta de Jean-Luc Mélenchon de devolver a companhia ao controle estatal. O presidenciável de esquerda radical, que disputa a eleição francesa de 2027, defende a medida sem apresentar método ou estimativa de gastos."
   ],
   "eventos_recentes": [
     {
@@ -2108,6 +2109,10 @@
     {
       "chave": "trco11::GERAL_ATIVO",
       "ts": 1795475541.49734
+    },
+    {
+      "chave": "engie::GERAL_ATIVO",
+      "ts": 1795475901.954757
     }
   ],
   "hashes_imagens": [
@@ -2355,6 +2360,7 @@
     "a6803543a929fe8e",
     "958cbba10e7929ab",
     "1f9c2974992fe642",
-    "57cca73d2d35f9d6"
+    "57cca73d2d35f9d6",
+    "70b54d3192894a24"
   ]
 }
