@@ -1,7 +1,5 @@
 {
   "links": [
-    "1da02edb5c8b1498",
-    "https://www.moneytimes.com.br/nvidia-nvda-trimestre-de-balanco-forte-prepara-empresa-para-disputa-entre-eua-e-china-veja-numeros-rens/",
     "de54d97f7608e7b0",
     "https://g1.globo.com/mundo/noticia/2026/11/18/ira-ataca-instalacoes-de-drones-e-misseis-dos-eua-no-kuwait.ghtml",
     "949a7495d0563416",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/mercados/brava-energia-brav3-conclui-aquisicao-de-parcela-complementar-do-polo-pescada/",
     "b9630f16e7a61aa1",
     "fe201fcbab00592f",
-    "757083b23b784efc"
+    "757083b23b784efc",
+    "https://www.cnnbrasil.com.br/politica/manifesto-de-juristas-e-economistas-pede-rejeicao-do-pl-das-big-techs/",
+    "f3408b7c6c7b2c95"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1243,7 +1243,8 @@
     "Zelenskyy exalta afundamento de corveta russa na Líbia",
     "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes",
     "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
-    "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada"
+    "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada",
+    "Manifesto de juristas e economistas pede rejeição do PL das big techs"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1395,7 +1396,8 @@
     "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
     "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026.",
     "A Porto Seguro (PSSA3) realizará no dia 27 de novembro de 2026 o pagamento dos dividendos adicionais aprovados na Assembleia Geral Ordinária e Extraordinária da companhia.",
-    "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras."
+    "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras.",
+    "Um grupo de 78 juristas e economistas assinou manifesto contra o avanço do projeto de regulamentação econômica das big techs, que deverá ser votado pela Câmara dos Deputados nesta semana."
   ],
   "eventos_recentes": [
     {
@@ -1597,6 +1599,10 @@
     {
       "chave": "brava::EVENTO_CORP",
       "ts": 1795431484.65224
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795432460.261045
     }
   ],
   "hashes_imagens": [
@@ -1733,6 +1739,7 @@
     "cfa1a4c024336a2a",
     "2858539c9fd2c9d1",
     "939078d02967eebc",
-    "0b063ef0bb04d174"
+    "0b063ef0bb04d174",
+    "2d69737aece53c9b"
   ]
 }
