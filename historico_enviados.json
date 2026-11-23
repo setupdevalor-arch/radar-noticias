@@ -1,7 +1,5 @@
 {
   "links": [
-    "de54d97f7608e7b0",
-    "https://g1.globo.com/mundo/noticia/2026/11/18/ira-ataca-instalacoes-de-drones-e-misseis-dos-eua-no-kuwait.ghtml",
     "949a7495d0563416",
     "https://exame.com/brasil/quem-e-o-favorito-para-o-ministerio-da-fazenda-segundo-a-eurasia/",
     "ed07357f8637adb3",
@@ -799,7 +797,9 @@
     "fe201fcbab00592f",
     "757083b23b784efc",
     "https://www.cnnbrasil.com.br/politica/manifesto-de-juristas-e-economistas-pede-rejeicao-do-pl-das-big-techs/",
-    "f3408b7c6c7b2c95"
+    "f3408b7c6c7b2c95",
+    "https://www.moneytimes.com.br/rd-saude-radl3-anuncia-programa-de-recompra-de-ate-1275-milhoes-de-acoes-veja-os-objetivos-lmrs/",
+    "cd75687916e53603"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1244,7 +1244,8 @@
     "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes",
     "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
     "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada",
-    "Manifesto de juristas e economistas pede rejeição do PL das big techs"
+    "Manifesto de juristas e economistas pede rejeição do PL das big techs",
+    "RD Saúde (RADL3) lança programa de recompra de ações de até R$ 600 milhões; veja os objetivos"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1397,7 +1398,8 @@
     "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026.",
     "A Porto Seguro (PSSA3) realizará no dia 27 de novembro de 2026 o pagamento dos dividendos adicionais aprovados na Assembleia Geral Ordinária e Extraordinária da companhia.",
     "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras.",
-    "Um grupo de 78 juristas e economistas assinou manifesto contra o avanço do projeto de regulamentação econômica das big techs, que deverá ser votado pela Câmara dos Deputados nesta semana."
+    "Um grupo de 78 juristas e economistas assinou manifesto contra o avanço do projeto de regulamentação econômica das big techs, que deverá ser votado pela Câmara dos Deputados nesta semana.",
+    "O conselho de administração da RD Saúde (RADL3) aprovou a realização de um programa de recompra de até 127,59 milhões de ações ordinárias, mostra fato relevante divulgado ao mercado nesta segunda-feira (23)."
   ],
   "eventos_recentes": [
     {
@@ -1603,6 +1605,10 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795432460.261045
+    },
+    {
+      "chave": "raia_drogasil::EVENTO_CORP",
+      "ts": 1795432784.523787
     }
   ],
   "hashes_imagens": [
@@ -1740,6 +1746,7 @@
     "2858539c9fd2c9d1",
     "939078d02967eebc",
     "0b063ef0bb04d174",
-    "2d69737aece53c9b"
+    "2d69737aece53c9b",
+    "dcc1204490ad4c52"
   ]
 }
