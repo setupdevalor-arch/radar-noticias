@@ -1,7 +1,5 @@
 {
   "links": [
-    "b06a1d80f2069648",
-    "13473ad6a003a039",
     "3a2461519c978df0",
     "https://www.spacemoney.com.br/agronegocio/boi-gordo-recorde-futuro-dezembro/",
     "e139762fdb18cac7",
@@ -799,7 +797,9 @@
     "https://neofeed.com.br/economia/conta-de-luz-sobe-quase-o-dobro-da-inflacao-em-2026-e-pressiona-empresas/",
     "c91207916aeb4f0d",
     "https://www.cnnbrasil.com.br/economia/money/mercado/petroleo-fecha-em-queda-de-3-e-volta-aos-us-80-com-fluxo-melhor-em-ormuz/",
-    "3802cd8d4950da2e"
+    "3802cd8d4950da2e",
+    "https://www.seudinheiro.com/2026/seu-negocio/executivo-do-nubank-roxo34-explica-por-que-nao-teme-briga-de-bancoes-e-fintechs-pelas-pmes-giov/",
+    "28e652e2c69eb30a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1344,10 +1344,10 @@
     "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
     "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
     "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas",
-    "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz"
+    "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz",
+    "Por que o Nubank (ROXO34) vê nas pequenas e médias empresas uma oportunidade para crescer"
   ],
   "leads": [
-    "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
     "O gigante de comércio eletrônico Mercado Livre captou US$ 735 milhões em um financiamento com a International Finance Corporation (IFC), o braço financeiro do Banco Mundial, e um grupo de seis bancos internacionais, que inclui o JPMorgan e o Bank of America. Os recursos serão usados para dar crédito a micro, pequenas e médias empresas na Amazônia.",
     "Segundo a empresa, projetos privados de terceiros já previstos para o aeroporto somam cerca de R$ 1 bilhão em investimentos estimados, com potencial de geração de 3.860 empregos",
     "Com mais idosos no Brasil, mercado imobiliário cria prédios para quem não quer envelhecer sozinho",
@@ -1596,7 +1596,8 @@
     "BRASÍLIA - A secretária de Política Econômica do Ministério da Fazenda, Débora Freire, afirmou nesta segunda-feira, 23, que a cotação do dólar a R$ 6 preocupa o governo pelo risco de repasse da desvalorização cambial para a inflação. Segundo ela, a revisão da projeção de inflação para 2027 foi influenciada principalmente pela perspectiva de efeitos",
     "A CSN Mineração (CMIN3) terá um duplo desafio pela frente: lidar com uma geração de caixa mais pressionada ao mesmo tempo em que verá seu endividamento aumentar. Essa é a avaliação do BB Investimentos, que reduziu o preço-alvo da ação de R$ 5,40 para R$ 5,10 e manteve a recomendação de venda para o papel.",
     "Um levantamento inédito obtido pelo NeoFeed e produzido pela Lemon Energia – climatech especializada em geração distribuída (GD) compartilhada – mostra que o valor pago pela energia elétrica subiu, em média, 7,7% entre janeiro e setembro de 2026, na comparação com o mesmo período do ano anterior.",
-    "O petróleo fechou em queda nesta segunda-feira (23) com o Brent encerrando abaixo dos US$ 90 pela primeira vez em duas semanas, enquanto os investidores se concentravam no aumento do fluxo da commodity do Oriente Médio, apesar de ataques persistentes a navios e refinarias na região."
+    "O petróleo fechou em queda nesta segunda-feira (23) com o Brent encerrando abaixo dos US$ 90 pela primeira vez em duas semanas, enquanto os investidores se concentravam no aumento do fluxo da commodity do Oriente Médio, apesar de ataques persistentes a navios e refinarias na região.",
+    "Banco aposta em diversificar serviços e atender regiões em que é mais difícil ter acesso a agências bancárias"
   ],
   "eventos_recentes": [
     {
@@ -2054,6 +2055,10 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795470673.642613
+    },
+    {
+      "chave": "nubank::GERAL_ATIVO",
+      "ts": 1795471746.529137
     }
   ],
   "hashes_imagens": [
@@ -2291,6 +2296,7 @@
     "0d5ba4da09c90b5a",
     "ecc5ef775dbe7589",
     "07e63feacdb5791b",
-    "7f586bdb881ddfa4"
+    "7f586bdb881ddfa4",
+    "97a9854467b979bc"
   ]
 }
