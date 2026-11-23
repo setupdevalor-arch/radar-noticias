@@ -1,8 +1,5 @@
 {
   "links": [
-    "949a7495d0563416",
-    "https://exame.com/brasil/quem-e-o-favorito-para-o-ministerio-da-fazenda-segundo-a-eurasia/",
-    "ed07357f8637adb3",
     "https://www.infomoney.com.br/brasil/entre-a-venda-negociada-e-a-rescisao-inedita-entenda-o-que-pode-acontecer-a-enel/",
     "533c8b43cf3795d3",
     "https://www.infomoney.com.br/mercados/itau-bba-reduz-preco-alvo-da-direcional-dirr3-mas-mantem-confianca-na-construtora/",
@@ -799,7 +796,10 @@
     "https://www.cnnbrasil.com.br/politica/manifesto-de-juristas-e-economistas-pede-rejeicao-do-pl-das-big-techs/",
     "f3408b7c6c7b2c95",
     "https://www.moneytimes.com.br/rd-saude-radl3-anuncia-programa-de-recompra-de-ate-1275-milhoes-de-acoes-veja-os-objetivos-lmrs/",
-    "cd75687916e53603"
+    "cd75687916e53603",
+    "75f2138f85ba80b5",
+    "https://www.moneytimes.com.br/fundo-imobiliario-anuncia-menor-dividendo-em-29-meses-veja-valor-e-motivo-do-corte-igdl/",
+    "39d96746fcf1c2f4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1245,7 +1245,8 @@
     "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
     "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada",
     "Manifesto de juristas e economistas pede rejeição do PL das big techs",
-    "RD Saúde (RADL3) lança programa de recompra de ações de até R$ 600 milhões; veja os objetivos"
+    "RD Saúde (RADL3) lança programa de recompra de ações de até R$ 600 milhões; veja os objetivos",
+    "Fundo imobiliário anuncia menor dividendo em 29 meses; veja valor e motivo do corte"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1399,7 +1400,8 @@
     "A Porto Seguro (PSSA3) realizará no dia 27 de novembro de 2026 o pagamento dos dividendos adicionais aprovados na Assembleia Geral Ordinária e Extraordinária da companhia.",
     "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras.",
     "Um grupo de 78 juristas e economistas assinou manifesto contra o avanço do projeto de regulamentação econômica das big techs, que deverá ser votado pela Câmara dos Deputados nesta semana.",
-    "O conselho de administração da RD Saúde (RADL3) aprovou a realização de um programa de recompra de até 127,59 milhões de ações ordinárias, mostra fato relevante divulgado ao mercado nesta segunda-feira (23)."
+    "O conselho de administração da RD Saúde (RADL3) aprovou a realização de um programa de recompra de até 127,59 milhões de ações ordinárias, mostra fato relevante divulgado ao mercado nesta segunda-feira (23).",
+    "O fundo imobiliário XP Malls (XPML11) anunciou que pagará o menor dividendo dos últimos 29 meses: os investidores receberão, no próximo dia 25 de novembro, R$ 0,80 por cota."
   ],
   "eventos_recentes": [
     {
@@ -1609,6 +1611,10 @@
     {
       "chave": "raia_drogasil::EVENTO_CORP",
       "ts": 1795432784.523787
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795433113.525872
     }
   ],
   "hashes_imagens": [
@@ -1747,6 +1753,7 @@
     "939078d02967eebc",
     "0b063ef0bb04d174",
     "2d69737aece53c9b",
-    "dcc1204490ad4c52"
+    "dcc1204490ad4c52",
+    "8abece8e7ff7df88"
   ]
 }
