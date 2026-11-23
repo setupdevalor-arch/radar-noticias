@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/dolar-rompe-os-r-584-hoje-ate-onde-a-moeda-ainda-pode-subir-davs/",
-    "af1239ba331e6d82",
-    "https://www.moneytimes.com.br/grupo-do-tocantins-entra-com-pedido-de-protecao-bilionario-contra-credores-e-atinge-bb-bbas3-e-mais-bancos-veja-lista/",
-    "bceb6af092215943",
     "https://www.moneytimes.com.br/mercado-exige-o-maior-premio-contra-inflacao-desde-dilma-e-cobra-mais-para-financiar-o-brasil/",
     "cd84873c8700fd38",
     "https://exame.com/ciencia/robo-vestivel-pesquisadores-do-es-criam-exoesqueleto-portatil-para-reabilitacao-apos-avc/",
@@ -799,7 +795,11 @@
     "https://www.poder360.com.br/poder-economia/e-possivel-manter-programas-sociais-e-rever-regras-fiscais-diz-galipolo/",
     "e224f4e2f41e101e",
     "https://www.moneytimes.com.br/dolar-sustenta-alta-e-atinge-r-600-com-cautela-fiscal-e-exterior-davs/",
-    "488b2a366de3a358"
+    "488b2a366de3a358",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/oujp11-pagamento-liquidacao/",
+    "1116f4c8e0584bd8",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hgru11-vacancia-vendas-imoveis-sp/",
+    "2a55e46e3e531095"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1279,7 +1279,9 @@
     "Falhas em Microsoft, Apple e voos elevam suspeita de ataque",
     "Vibra (VBBR3) e Ultra (UGPA3) ficam mais atrativas após queda das ações, avalia BBI",
     "É possível manter programas sociais e rever regras fiscais, diz Galípolo",
-    "Dólar sustenta alta e ultrapassa os R$ 6,00 com cautela fiscal"
+    "Dólar sustenta alta e ultrapassa os R$ 6,00 com cautela fiscal",
+    "OUJP11 fará pagamento extraordinário antes de liquidação",
+    "HGRU11 registra vacância de 0,8% e negocia imóveis em SP"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1467,7 +1469,9 @@
     "Uma sequência de falhas atingiu serviços digitais e a aviação nos Estados Unidos nas últimas semanas, envolvendo sistemas da Microsoft, da Apple, o controle do espaço aéreo e o FBI. As causas oficiais apontam sobrecarga e problemas de infraestrutura, mas não há confirmação de um ataque cibernético.",
     "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa",
     "Presidente do BC afirmou também que a estabilidade de preços é o “principal mandato” da política monetária",
-    "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior."
+    "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior.",
+    "O fundo imobiliário OUJP11 vai pagar R$ 0,85 por cota em 24 de novembro de 2026, em um repasse extraordinário. Segundo a Suno Notícias, têm direito quem encerrou o dia 13 de novembro com cotas. A antecipação busca levar aos cotistas o caixa existente antes de concluir a venda dos ativos e a liquidação. A gestão afirmou que as próximas etapas não tê",
+    "O HGRU11 informou, segundo a Suno Notícias, resultado distribuível de R$ 19,79 milhões em outubro de 2026, com distribuição de R$ 0,95 por cota. O pagamento, previsto para 16 de novembro, soma R$ 23,59 milhões e supera o resultado gerado no mês."
   ],
   "eventos_recentes": [
     {
@@ -1757,6 +1761,14 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795443064.226398
+    },
+    {
+      "chave": "oujp11::GERAL_ATIVO",
+      "ts": 1795443465.837336
+    },
+    {
+      "chave": "hgru11::GERAL_ATIVO",
+      "ts": 1795443465.837336
     }
   ],
   "hashes_imagens": [
@@ -1929,6 +1941,8 @@
     "b0c3ad71e547beac",
     "b6c151cd25d6b8c6",
     "28295beb5c6a88e6",
-    "2f9bd9a7c1db5789"
+    "2f9bd9a7c1db5789",
+    "f195a95a0438174b",
+    "c2ac4c3d9998b910"
   ]
 }
