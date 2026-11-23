@@ -1,7 +1,5 @@
 {
   "links": [
-    "17b3ca3f3943db79",
-    "https://www.moneytimes.com.br/e-tarde-demais-para-a-vale-vale3-por-que-o-btg-ainda-nao-rebaixou-a-recomendacao-para-o-papel-bdap/",
     "044d14e1284139f8",
     "https://www.infomoney.com.br/mercados/banco-do-brasil-bbas3-xp-ve-recuperacao-lenta-corta-preco-alvo-e-tem-visao-neutra/",
     "2c53e8749cfb73d9",
@@ -799,7 +797,9 @@
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/ue-economizou-e-120-bilhoes-em-importacoes-de-energia-desde-2022/",
     "ada4d8fd8712215e",
     "https://www.infomoney.com.br/mercados/bdr-da-anthropic-anth34-recua-apos-estreia-positiva-na-bolsa-brasileira/",
-    "c671c32e7d8195f8"
+    "c671c32e7d8195f8",
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/cemig-restringe-injecao-de-energia-solar-a-noite-e-caso-vai-parar-na-aneel/",
+    "151f7ceef7e106d8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1325,7 +1325,8 @@
     "Dólar hoje bate R$ 6 na máxima, mas ameniza com cenário externo",
     "VGHF11: lucro sobe 14,6% mesmo com queda no patrimônio líquido",
     "UE economizou € 120 bilhões em importações de energia desde 2022",
-    "BDR da Anthropic (ANTH34) recua mais de 6% após estreia positiva na Bolsa brasileira"
+    "BDR da Anthropic (ANTH34) recua mais de 6% após estreia positiva na Bolsa brasileira",
+    "Cemig restringe injeção de energia solar à noite e caso vai parar na Aneel"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1558,7 +1559,8 @@
     "O dólar chegou a superar a marca de R$ 6,00 nesta manhã de segunda-feira, com as cotações novamente refletindo o mal-estar do mercado com a política fiscal do governo Lula, enquanto no exterior a moeda norte-americana tinha sinais mistos ante as divisas de países emergentes.",
     "O VGHF11, fundo imobiliário Valora Hedge Fund administrado pelo Banco Daycoval, divulgou em 19 de novembro suas demonstrações financeiras auditadas pela PricewaterhouseCoopers referentes ao exercício encerrado em junho. O documento mostra recuo patrimonial, alta no lucro líquido e mudanças na composição da carteira de investimentos.",
     "Medidas de eficiência energética economizaram cerca de € 120 bilhões (US$ 132 bilhões) em custos de importação de gás e petróleo pela União Europeia desde a invasão da Ucrânia pela Rússia, em 2022. A Comissão Europeia afirmou nesta segunda-feira (23) que a economia de energia precisa caminhar junto com a eletrificação durante a transição do bloco p",
-    "Os BDR (Brazilian Depositary Receipts, em inglês) da Anthropic, no ticker ANTH34, recuavam 6,74%, negociados a R$ 66,76, às 15h desta segunda-feira (23). Na quinta-feira, os BDRs encerraram o dia sendo negociados a R$ 71,70."
+    "Os BDR (Brazilian Depositary Receipts, em inglês) da Anthropic, no ticker ANTH34, recuavam 6,74%, negociados a R$ 66,76, às 15h desta segunda-feira (23). Na quinta-feira, os BDRs encerraram o dia sendo negociados a R$ 71,70.",
+    "O Ministério Público Federal (MPF) acionou a Agência Nacional de Energia Elétrica (Aneel) após a Cemig Distribuição limitar ao período noturno, entre 19h e 5h, a injeção de excedentes de energia de uma usina solar da Universidade Federal do Triângulo Mineiro (UFTM)."
   ],
   "eventos_recentes": [
     {
@@ -1956,6 +1958,10 @@
     {
       "chave": "anth34::GERAL_ATIVO",
       "ts": 1795460069.069252
+    },
+    {
+      "chave": "cemig::GERAL_ATIVO",
+      "ts": 1795461496.342842
     }
   ],
   "hashes_imagens": [
@@ -2174,6 +2180,7 @@
     "b596f7c4c446c4b4",
     "0795773fc6c51599",
     "758806a8314f0d46",
-    "0044611e8462ac9f"
+    "0044611e8462ac9f",
+    "c61db3eaeae3cdbd"
   ]
 }
