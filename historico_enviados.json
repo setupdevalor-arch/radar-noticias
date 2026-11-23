@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/mundo/noticia/2026/11/18/iniciativa-do-governo-tump-para-destinar-us-50-bilhoes-para-a-aviacao-enfrenta-oposicao-nos-eua.ghtml",
-    "https://g1.globo.com/df/distrito-federal/noticia/2026/11/18/identidade-e-memoria-entenda-por-que-o-stf-agora-tem-uma-escultura-de-xango-no-acesso-ao-plenario.ghtml",
     "https://www.infomoney.com.br/business/global/o-sarampo-voltou-oficialmente-aos-estados-unidos-e-agora/",
     "https://www.infomoney.com.br/business/global/disney-amplia-investimentos-em-novas-series-e-filmes-em-meio-a-turbulencia-do-setor/",
     "https://www.infomoney.com.br/business/global/novo-jantar-de-trump-com-memecoin-pode-fracassar-130-carteiras-disputam-185-vagas/",
@@ -799,7 +797,9 @@
     "7b05ad8b089c194d",
     "c994bcae9d7e2d95",
     "e029c4d5e3a233e2",
-    "98b83ecb515dca0c"
+    "98b83ecb515dca0c",
+    "https://www.spacemoney.com.br/politica/camara-votacao-ajuste-fiscal-2027/",
+    "81f5828712e4d7c7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1205,7 +1205,8 @@
     "Dólar digital chega a R$ 6,15 em negociação neste domingo",
     "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
     "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
-    "Bolsas chinesas anunciam medidas para apoiar os mercados acionários"
+    "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
+    "Deputados analisam pacote fiscal com estimativa de R$ 50 bi"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1319,7 +1320,8 @@
     "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado",
     "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
     "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
-    "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas"
+    "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
+    "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência."
   ],
   "eventos_recentes": [
     {
@@ -1445,6 +1447,10 @@
     {
       "chave": "petrobras::PROVENTOS",
       "ts": 1795389422.515095
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795404639.300408
     }
   ],
   "hashes_imagens": [
@@ -1543,6 +1549,7 @@
     "816720a10b88ec66",
     "6f2a3b230b07876f",
     "fffaeacee035085c",
-    "a2217dfa90d49148"
+    "a2217dfa90d49148",
+    "821f5e92da6e3bf2"
   ]
 }
