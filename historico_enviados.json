@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/trump-vai-baixar-a-guarda-derrota-eleitoral-pode-mudar-relacao-com-lula-china-e-russia-avalia-professor-jcav/",
-    "cfa6b6fb60c0047c",
-    "https://www.infomoney.com.br/mercados/taxas-dos-dis-sobem-em-meio-a-preocupacoes-com-o-ajuste-fiscal/",
     "e6bd1fc5565c78c2",
     "https://www.moneytimes.com.br/atencao-clientes-do-banco-do-brasil-bb-identifica-acesso-indevido-a-dados-e-alerta-para-risco-de-novos-golpes-miql/",
     "e22a469acfe8ea1a",
@@ -799,7 +796,10 @@
     "9fd0d2279ef14db2",
     "https://www.infomoney.com.br/politica/instituto-alerta-para-risco-de-fuga-de-capital-com-regra-para-empresas-estrangeiras/",
     "6b0d13a281cec299",
-    "efbadbc3c0372788"
+    "efbadbc3c0372788",
+    "dc6ef41df12d19ed",
+    "https://cqcs.com.br/noticia/fenacor-detalha-impactos-da-reforma-tributaria-para-corretores/",
+    "4aac4fc1bc5bc9c7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1295,7 +1295,8 @@
     "Pedidos de demissão por conta própria perdem fôlego e confirmam arrefecimento do emprego formal",
     "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
     "EZ Tec aprova reorganização com incorporações e cisão",
-    "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras"
+    "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras",
+    "Fenacor detalha impactos da Reforma Tributária para corretores"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1499,7 +1500,8 @@
     "As demissões por iniciativa dos próprios trabalhadores estão na máxima histórica, mas perdendo fôlego. Entre janeiro e setembro de 2026, os pedidos de demissão “por conta própria” registraram a menor taxa de crescimento dos últimos seis anos, isto é, desde o início do Novo Cadastro Geral de Empregados (Caged), que passou a medir o emprego formal no",
     "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra.",
     "A EZ Tec Empreendimentos e Participações comunicou ao mercado, em fato relevante conjunto enviado à CVM, que os conselhos de administração da EZ Tec e da EZ Inc Incorporações aprovaram submeter a uma assembleia geral extraordinária uma reorganização societária que prevê a incorporação da EZ Inc e da Itajubá pela companhia e a cisão parcial da Mairi",
-    "O Projeto de Lei 1.051/2025, em tramitação na Câmara dos Deputados, prevê que o governo federal poderá barrar ou impor condições à compra de empresas brasileiras por investidores estrangeiros em setores estratégicos."
+    "O Projeto de Lei 1.051/2025, em tramitação na Câmara dos Deputados, prevê que o governo federal poderá barrar ou impor condições à compra de empresas brasileiras por investidores estrangeiros em setores estratégicos.",
+    "A Fenacor disponibilizou, na última quarta-feira (18), no site oficial, uma FAQ (Frequently Asked Questions) com 40 perguntas e respostas para esclarecer as dúvidas dos corretores de seguros no que diz respeito à Reforma Tributária e os impactos na atividade profissional da categoria."
   ],
   "eventos_recentes": [
     {
@@ -1821,6 +1823,10 @@
     {
       "chave": "tim::BALANCO",
       "ts": 1795448169.790704
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795449725.00988
     }
   ],
   "hashes_imagens": [
@@ -2009,6 +2015,7 @@
     "6e484c66de3f18b8",
     "69c276ad8bde988b",
     "78fa2dd6aab80ed8",
-    "9faa0fea7e9c36f3"
+    "9faa0fea7e9c36f3",
+    "ef5793557780d028"
   ]
 }
