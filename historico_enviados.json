@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.suno.com.br/noticias/novo11-investe-nubank-itau/",
-    "761560ae61d76f31",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/19/copel-cple3-aprova-o-pagamento-de-r-871-milhoes-em-juros-sobre-capital-proprio.ghtml",
     "fca5252fedf1b670",
     "https://www.suno.com.br/noticias/axia3-axia-energia-rating-cronograma-debentures-191126/",
@@ -799,7 +797,9 @@
     "https://megawhat.uol.com.br/destaques-do-diario/equatorial-recebe-nova-multa-por-favorecer-comercializadora-do-grupo/",
     "c1849c873960ac00",
     "https://www.cnnbrasil.com.br/agro/acucar-fecha-em-alta-de-341-em-nova-york-apos-minima-de-tres-meses/",
-    "94aea44e1a288fa2"
+    "94aea44e1a288fa2",
+    "https://www.poder360.com.br/poder-economia/durigan-projeta-resolucao-sobre-aliquota-da-cbs-em-duas-semanas/",
+    "bcb601242035df36"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1329,7 +1329,8 @@
     "Cemig restringe injeção de energia solar à noite e caso vai parar na Aneel",
     "Raízen (RAIZ55) deve atingir meta de capitalização, mas Ometto pode ficar de fora e diluir participação",
     "Equatorial recebe nova multa por favorecer comercializadora do grupo",
-    "Açúcar fecha em alta de 3,41% em Nova York após mínima de três meses"
+    "Açúcar fecha em alta de 3,41% em Nova York após mínima de três meses",
+    "Durigan projeta resolução sobre alíquota da CBS em duas semanas"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1566,7 +1567,8 @@
     "O Ministério Público Federal (MPF) acionou a Agência Nacional de Energia Elétrica (Aneel) após a Cemig Distribuição limitar ao período noturno, entre 19h e 5h, a injeção de excedentes de energia de uma usina solar da Universidade Federal do Triângulo Mineiro (UFTM).",
     "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio.",
     "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor.",
-    "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso."
+    "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso.",
+    "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027"
   ],
   "eventos_recentes": [
     {
@@ -1980,6 +1982,10 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795463389.356648
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795464458.602047
     }
   ],
   "hashes_imagens": [
@@ -2202,6 +2208,7 @@
     "c61db3eaeae3cdbd",
     "c5474207227f9e6e",
     "423529f68b661b1f",
-    "ff472277878aec71"
+    "ff472277878aec71",
+    "27acd27cb343cffb"
   ]
 }
