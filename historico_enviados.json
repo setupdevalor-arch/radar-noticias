@@ -1,10 +1,5 @@
 {
   "links": [
-    "8f92e291f90310c0",
-    "https://exame.com/invest/mercados/gta-6-pode-impulsionar-acao-da-take-two-veja-como-o-brasileiro-pode-investir/",
-    "9e001a8ecabe4461",
-    "https://www.moneytimes.com.br/goldman-sachs-rebaixa-bolsa-brasileira-para-neutra-e-prefere-outros-emergentes-lmrs/",
-    "68da333ce683b208",
     "https://exame.com/exame-in/hapvida-busca-comprador-para-pacote-de-ativos-em-operacao-que-pode-chegar-a-r-1-bilhao/",
     "00a7b53c79af0b1d",
     "https://exame.com/mercado-imobiliario/dona-da-zara-e-berksha-quer-levar-outras-marcas-aos-shoppings-da-multiplan-diz-ceo/",
@@ -799,7 +794,12 @@
     "https://www.infomoney.com.br/business/crowdstrike-reverte-prejuizo-supera-projecoes-e-anuncia-para-compra-de-empresa/",
     "c98881016db998d7",
     "https://www.spacemoney.com.br/economia/macroeconomia/chip-dolar-comercio-chips-supera-petroleo/",
-    "79fd3a6b6c3c09de"
+    "79fd3a6b6c3c09de",
+    "cfcf987b58034bfa",
+    "https://www.cnnbrasil.com.br/internacional/espioes-usam-vagas-de-trabalho-falsas-para-conseguir-informacoes-dos-eua/",
+    "44219ea09d6cf26f",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/crowdstrike-aposta-na-seguranca-de-rede-em-acordo-de-us-43-bi-com-zscaler/",
+    "73b73587a3dc41d8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1259,7 +1259,9 @@
     "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França",
     "Receita da Randoncorp cai quase 3% em outubro",
     "CrowdStrike reverte prejuízo, supera projeções e anuncia para compra de empresa",
-    "Chip-dólar: comércio de chips supera petróleo pela 1ª vez"
+    "Chip-dólar: comércio de chips supera petróleo pela 1ª vez",
+    "Espiões usam vagas de trabalho falsas para conseguir informações dos EUA",
+    "Crowdstrike aposta na segurança de rede em acordo de US$ 43 bi com Zscaler"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1427,7 +1429,9 @@
     "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global.",
     "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia.",
     "A CrowdStrike registrou lucro líquido de US$ 24,9 milhões no terceiro trimestre do ano fiscal de 2027, encerrado em outubro, revertendo prejuízo de US$ 26,8 milhões apurado no mesmo período do ano anterior. O lucro ajustado foi de US$ 354,9 milhões, ou US$ 0,34 por ação, acima dos US$ 0,31 por ação esperados por analistas consultados pela FactSet.",
-    "O comércio global de chips superou o de petróleo e gás pela primeira vez na história moderna, em movimento que o Deutsche Bank descreve como a ascensão do “chip-dólar”. Levantamento publicado pelo Seeking Alpha aponta que as exportações de semicondutores somaram cerca de US$ 1,60 trilhão nos quatro trimestres encerrados no segundo trimestre de 2026"
+    "O comércio global de chips superou o de petróleo e gás pela primeira vez na história moderna, em movimento que o Deutsche Bank descreve como a ascensão do “chip-dólar”. Levantamento publicado pelo Seeking Alpha aponta que as exportações de semicondutores somaram cerca de US$ 1,60 trilhão nos quatro trimestres encerrados no segundo trimestre de 2026",
+    "Supostos espiões chineses criaram uma rede elaborada de empresas fictícias que oferecem vagas de emprego, com o objetivo de induzir funcionários e ex-funcionários do governo dos Estados Unidos a revelar segredos oficiais.",
+    "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes."
   ],
   "eventos_recentes": [
     {
@@ -1813,6 +1817,8 @@
     "845480dac427ea9d",
     "a3b230056b6df354",
     "e77b2269bc582829",
-    "3a3771d0f1d73a76"
+    "3a3771d0f1d73a76",
+    "21d7a37c2516550a",
+    "969be40105ee1f9f"
   ]
 }
