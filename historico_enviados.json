@@ -1,9 +1,5 @@
 {
   "links": [
-    "cda04205004403b2",
-    "https://www.moneytimes.com.br/dividendos-a-vista-porto-seguro-pssa3-confirma-pagamento-de-r-567-milhoes-veja-valor-por-acao-igdl/",
-    "dbf032198d5c2bfc",
-    "https://www.infomoney.com.br/mercados/ceo-do-bradesco-afirma-que-e-hora-de-prudencia-nos-bancos-brasileiros/",
     "9c4a33de5f98fa1d",
     "https://www.spacemoney.com.br/noticias/celesc-energia-48h-temporais/",
     "b5e758d231a5b23d",
@@ -799,7 +795,11 @@
     "https://forbes.com.br/forbes-tech/2026/11/ferramentas-de-ia-ajudam-marcas-a-otimizar-promocoes-de-black-friday/",
     "bad90bc0e8c6e037",
     "https://www.infomoney.com.br/mercados/taxas-dos-dis-caem-em-meio-a-especulacoes-sobre-nomes-de-lula-para-a-area-economica/",
-    "c030313957414494"
+    "c030313957414494",
+    "https://www.cnnbrasil.com.br/agro/temporal-destroi-unidades-da-c-vale-no-rs-e-compromete-estoque-de-graos/",
+    "adac158cd7593971",
+    "https://www.poder360.com.br/poder-tech/governo-lula-lancara-edital-de-nuvem-propria-para-fugir-de-big-techs/",
+    "530d163a1ed207ae"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1333,7 +1333,9 @@
     "Durigan projeta resolução sobre alíquota da CBS em duas semanas",
     "Tarcísio defende discussão de limites de decisões monocráticas e competência do STF",
     "Ferramentas de IA Ajudam Marcas a Otimizar Promoções de Black Friday",
-    "Taxas dos DIs caem em meio a especulações sobre nomes de Lula para a área econômica"
+    "Taxas dos DIs caem em meio a especulações sobre nomes de Lula para a área econômica",
+    "Temporal destrói unidades da C.Vale no RS e compromete estoque de grãos",
+    "Governo Lula lançará edital de nuvem própria para fugir de big techs"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1574,7 +1576,9 @@
     "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027",
     "O governador de São Paulo, Tarcísio de Freitas (Republicanos), defendeu nesta segunda-feira, 23, que o novo Congresso discuta limites para as decisões monocráticas do Judiciário e as competências do Supremo Tribunal Federal (STF). Em painel no Itaú BBA Macro Vision 2026, na capital paulista, ele afirmou que o sistema de freios e contrapesos não fun",
     "As marcas de consumo estão recorrendo cada vez mais à inteligência artificial para ajudar a definir preços, na esperança de reduzir descontos e elevar margens de lucro.",
-    "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato."
+    "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato.",
+    "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
+    "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais"
   ],
   "eventos_recentes": [
     {
@@ -1992,6 +1996,14 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795464458.602047
+    },
+    {
+      "chave": "vale::GERAL_ATIVO",
+      "ts": 1795467057.472291
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795467057.472291
     }
   ],
   "hashes_imagens": [
@@ -2218,6 +2230,8 @@
     "27acd27cb343cffb",
     "2f354000670fc3db",
     "ca78e1530b098f65",
-    "46b6b04d6671edfd"
+    "46b6b04d6671edfd",
+    "f1d6f4ea61e42e4c",
+    "ded9c41d2eb5847b"
   ]
 }
