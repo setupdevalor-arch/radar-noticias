@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://exame.com/brasil/senado-aprova-pacote-fiscal-apresentado-pelo-governo-lula-texto-vai-a-camara/",
-    "65038c107f17ab63",
-    "https://www.moneytimes.com.br/bolsas-de-ny-fecham-sem-direcao-unica-com-balanco-da-nvidia-e-ata-do-fed-davs/",
-    "7849326a35f3eed3",
     "https://www.infomoney.com.br/politica/o-que-e-a-lei-kandir-que-motivou-acordo-no-senado-e-quase-travou-ajuste-fiscal/",
     "110dc7c078a56986",
     "https://valorinveste.globo.com/noticia/2026/11/18/senado-aprova-projeto-de-ajuste-fiscal-do-governo-com-mudancas-acatadas-pelo-relator.ghtml",
@@ -799,7 +795,11 @@
     "568181bfd8d0b27a",
     "https://www.spacemoney.com.br/credito/cross-river-emprestimo-bitcoin-garantia/",
     "b974420d8e096756",
-    "907f0ee5634acdfd"
+    "907f0ee5634acdfd",
+    "7e933d9f00254bcd",
+    "d1859ab6e2554a54",
+    "https://www.spacemoney.com.br/investimentos/itausa-resultado-9m26/",
+    "076d209ccaf78ff1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1301,7 +1301,8 @@
     "Atividade empresarial nos EUA volta a mostrar perda de ritmo em novembro",
     "MBRF avalia que fim das “bets” deve impulsionar vendas de carnes nas festas natalinas",
     "Carteira de crédito no Brasil deve crescer 0,4% em outubro, diz Febraban",
-    "Cross River passa a emprestar com Bitcoin em garantia"
+    "Cross River passa a emprestar com Bitcoin em garantia",
+    "Itaúsa aponta avanço de 16% no lucro recorrente do 9M26"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1511,7 +1512,8 @@
     "– O crescimento da atividade empresarial nos Estados Unidos desacelerou ainda mais em novembro uma vez que os preços elevados frearam novos pedidos e as restrições de capacidade limitaram a produção, mostrou uma pesquisa divulgada nesta segunda-feira.",
     "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
     "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês",
-    "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente."
+    "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente.",
+    "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões."
   ],
   "eventos_recentes": [
     {
@@ -1841,6 +1843,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795453436.468141
+    },
+    {
+      "chave": "itausa::BALANCO",
+      "ts": 1795454201.511648
     }
   ],
   "hashes_imagens": [
@@ -2035,6 +2041,7 @@
     "366ea0eee91e90e9",
     "ebbfd45f427996e3",
     "170601191361b92b",
-    "95edc1a335348783"
+    "95edc1a335348783",
+    "20d90a4905101d34"
   ]
 }
