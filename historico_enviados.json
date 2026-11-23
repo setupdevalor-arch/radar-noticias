@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/consumo/gta-6-veja-precos-onde-comprar-mais-barato-e-como-parcelar/",
-    "https://www.moneytimes.com.br/banco-central-anuncia-leiloes-de-linha-no-total-de-us-1-bilhao-para-manha-de-hoje-fets/",
     "https://www.bbc.com/portuguese/articles/c79gpqyrdy2o?at_medium=RSS&at_campaign=rss",
     "https://www.moneytimes.com.br/governo-publica-decreto-que-simplifica-exportacao-de-cosmeticos-para-america-latina-fets/",
     "https://www.bbc.com/portuguese/articles/cvy0epwyy9nro?at_medium=RSS&at_campaign=rss",
@@ -799,7 +797,9 @@
     "b4f552f34e6b4792",
     "79199cfbd58c8e47",
     "59920de87b61fc87",
-    "7f8461ce0c2ef9e3"
+    "7f8461ce0c2ef9e3",
+    "https://www.spacemoney.com.br/economia/macroeconomia/mercado-descarta-alta-50-pontos-fed-dezembro/",
+    "0701f2ace783e352"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1208,7 +1208,8 @@
     "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
     "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
     "Houthis atacam refinaria saudita e Trump ameaça Teerã",
-    "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT"
+    "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT",
+    "Traders descartam alta de 0,50 ponto do Fed em dezembro"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1325,7 +1326,8 @@
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
     "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência.",
     "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters.",
-    "Alice Huang, a chinesa no centro do recente escândalo da Nvidia, manteve contato com um funcionário da principal agência de espionagem da China por mais de um ano durante seu caso com o ex-CEO Jensen Huang, informou o New York Times neste domingo (22)."
+    "Alice Huang, a chinesa no centro do recente escândalo da Nvidia, manteve contato com um funcionário da principal agência de espionagem da China por mais de um ano durante seu caso com o ex-CEO Jensen Huang, informou o New York Times neste domingo (22).",
+    "Os fed funds futures deixaram de precificar uma alta de 50 pontos-base na taxa básica de juros dos EUA, para 4,5%, na reunião do Fed de dezembro, segundo o CME FedWatch. Cerca de dez dias antes, a probabilidade era de 10%."
   ],
   "eventos_recentes": [
     {
@@ -1459,6 +1461,10 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795406862.080563
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795411468.346569
     }
   ],
   "hashes_imagens": [
@@ -1560,6 +1566,7 @@
     "a2217dfa90d49148",
     "821f5e92da6e3bf2",
     "a254393777ad3e24",
-    "a5edc42315feede0"
+    "a5edc42315feede0",
+    "b6cae3ac334a330b"
   ]
 }
