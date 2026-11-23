@@ -1,9 +1,5 @@
 {
   "links": [
-    "aca2eb35cbe4e5f9",
-    "https://www.bbc.com/portuguese/articles/c64gnx55rxzlo?at_medium=RSS&at_campaign=rss",
-    "4df2e1d3a7462d5d",
-    "https://www.moneytimes.com.br/ccj-aprova-punicao-a-crime-de-fraude-no-mercado-de-capitais-para-evitar-caso-americanas-mlem/",
     "a331f5e5393edb08",
     "https://www.infomoney.com.br/mercados/bolsas-da-europa-caem-com-pressao-de-mineradoras-techs-buscando-folego-e-olho-no-fed/",
     "bb13b1386914d712",
@@ -799,7 +795,11 @@
     "3e12781cb9900409",
     "8f4adde878ea2652",
     "https://www.infomoney.com.br/mercados/ubs-bb-corta-b3-para-neutra-com-visao-de-cenario-desafiador-para-mercado-de-capitais/",
-    "67168f543fabdf24"
+    "67168f543fabdf24",
+    "15d78ea11a904a4f",
+    "63e964addc5e7edc",
+    "https://www.suno.com.br/noticias/tots3-blackrock-informa-participacao-acionaria-totvs-231126/",
+    "899cf9acdfe55d6a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1272,7 +1272,8 @@
     "CVM suspende registro de BRB, Refit, Ambipar e mais duas companhias abertas por falta de informações",
     "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear",
     "Rondônia terá máximas de até 37 °C na quarta-feira",
-    "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais"
+    "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais",
+    "TOTVS (TOTS3): BlackRock informa participação acionária na companhia"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1453,7 +1454,8 @@
     "A Superintendência de Relações com Empresas (SEP) da Comissão de Valores Mobiliários (CVM) suspendeu nesta segunda-feira, 23, o registro de cinco companhias abertas por descumprimento, há mais de 12 meses, da obrigação de prestar informações periódicas à autarquia, conforme previsto na Resolução CVM 80.",
     "– O Kremlin afirmou nesta segunda-feira que reportagens da mídia alemã sugerindo que a Rússia estaria planejando lançar ao espaço, ainda este ano, um satélite com armamento nuclear não devem ser levadas a sério.",
     "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local.",
-    "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo."
+    "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo.",
+    "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021."
   ],
   "eventos_recentes": [
     {
@@ -1715,6 +1717,10 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795441064.15927
+    },
+    {
+      "chave": "totvs::GERAL_ATIVO",
+      "ts": 1795441411.405437
     }
   ],
   "hashes_imagens": [
@@ -1880,6 +1886,7 @@
     "0841eb45ba5f6427",
     "ef4cb657d8948899",
     "7a23374886dab4b7",
-    "48603b934267e5dc"
+    "48603b934267e5dc",
+    "4b8306a657181ed1"
   ]
 }
