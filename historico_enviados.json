@@ -1,10 +1,5 @@
 {
   "links": [
-    "e22a469acfe8ea1a",
-    "https://g1.globo.com/economia/noticia/2026/11/18/tributaria-aliquota-de-113percent-para-imposto-federal-valera-so-em-2027-e-segundo-receita-pode-subir-ou-descer-depois-entenda.ghtml",
-    "1f476f30a7d80ecc",
-    "https://www.infomoney.com.br/mercados/ipo-da-anthropic-deve-criar-milhares-de-milionarios/",
-    "167e7688808e2cff",
     "https://exame.com/inteligencia-artificial/anthropic-claude-gasto-ia-clara-brasil/",
     "b2d464bad85ea856",
     "https://www.suno.com.br/noticias/ifix-fecha-perto-da-minima-52-semanas/",
@@ -799,7 +794,12 @@
     "https://cqcs.com.br/noticia/fenacor-detalha-impactos-da-reforma-tributaria-para-corretores/",
     "4aac4fc1bc5bc9c7",
     "10e627be188616f7",
-    "3402c68936f2319d"
+    "3402c68936f2319d",
+    "43b2f2fa24914af7",
+    "7b5a3a951a4f20f0",
+    "c246e94fdddc80c1",
+    "https://www.cnnbrasil.com.br/politica/moretti-e-parlamentares-discutirao-mais-medidas-apos-1a-rodada-de-ajuste/",
+    "539d64e3e58d4df1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1296,7 +1296,8 @@
     "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
     "EZ Tec aprova reorganização com incorporações e cisão",
     "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras",
-    "Fenacor detalha impactos da Reforma Tributária para corretores"
+    "Fenacor detalha impactos da Reforma Tributária para corretores",
+    "Moretti e parlamentares discutirão mais medidas após 1ª rodada de ajuste"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1501,7 +1502,8 @@
     "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra.",
     "A EZ Tec Empreendimentos e Participações comunicou ao mercado, em fato relevante conjunto enviado à CVM, que os conselhos de administração da EZ Tec e da EZ Inc Incorporações aprovaram submeter a uma assembleia geral extraordinária uma reorganização societária que prevê a incorporação da EZ Inc e da Itajubá pela companhia e a cisão parcial da Mairi",
     "O Projeto de Lei 1.051/2025, em tramitação na Câmara dos Deputados, prevê que o governo federal poderá barrar ou impor condições à compra de empresas brasileiras por investidores estrangeiros em setores estratégicos.",
-    "A Fenacor disponibilizou, na última quarta-feira (18), no site oficial, uma FAQ (Frequently Asked Questions) com 40 perguntas e respostas para esclarecer as dúvidas dos corretores de seguros no que diz respeito à Reforma Tributária e os impactos na atividade profissional da categoria."
+    "A Fenacor disponibilizou, na última quarta-feira (18), no site oficial, uma FAQ (Frequently Asked Questions) com 40 perguntas e respostas para esclarecer as dúvidas dos corretores de seguros no que diz respeito à Reforma Tributária e os impactos na atividade profissional da categoria.",
+    "O ministro do MPO (Planejamento e Orçamento), Bruno Moretti, combinou com parlamentares uma reunião para discutir novas medidas de ajuste fiscal. O encontro acontecerá após a aprovação de PLP (projeto de lei complementar) considerado o \"primeiro passo\" do processo."
   ],
   "eventos_recentes": [
     {
@@ -2016,6 +2018,7 @@
     "69c276ad8bde988b",
     "78fa2dd6aab80ed8",
     "9faa0fea7e9c36f3",
-    "ef5793557780d028"
+    "ef5793557780d028",
+    "862d424f7b84b7b7"
   ]
 }
