@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/politica/ccj-do-senado-aprova-projeto-que-endurece-punicoes-para-fraudes-financeiras/",
-    "efa36d78d70aa716",
-    "https://www.infomoney.com.br/economia/trabalhador-branco-pode-ganhar-cerca-de-70-a-mais-que-o-negro-no-brasil-aponta-ibge/",
-    "afa7ebda0ff927b8",
     "https://livecoins.com.br/banco-mundial-estuda-uso-de-stablecoins-para-modernizar-pagamentos/",
     "dba125b8b61b3819",
     "https://g1.globo.com/economia/noticia/2026/11/18/um-ano-depois-fraude-do-banco-master-deixou-prejuizo-de-r-76-bilhoes.ghtml",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/economia/indicadores-economicos/ipc-s-repete-038-na-3a-quadrissemana/",
     "dc242c94a1ede6bd",
     "https://www.infomoney.com.br/economia/pmi-da-zona-do-euro-fica-estavel-em-novembro-alemanha-compensa-queda-na-franca/",
-    "8379035669452c9a"
+    "8379035669452c9a",
+    "16edf8fd9d869e07",
+    "06400d0f714b55db",
+    "https://www.infomoney.com.br/mercados/receita-da-randoncorp-cai-quase-3-em-outubro/",
+    "9e773277258647d6"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1256,7 +1256,8 @@
     "Leilões de baterias têm inscrições prorrogadas até esta segunda",
     "Como funciona o LTBX11, ETF de renda fixa da XP?",
     "IPC-S mantém 0,38% na terceira leitura de novembro",
-    "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França"
+    "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França",
+    "Receita da Randoncorp cai quase 3% em outubro"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1421,7 +1422,8 @@
     "A Agência Nacional de Energia Elétrica (Aneel) prorrogou até esta segunda-feira, 23 de novembro, às 12h, o prazo de inscrição online nos dois leilões de reserva de capacidade para contratação de sistemas de armazenamento em baterias, previstos para os dias 2 e 4 de dezembro.",
     "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação.",
     "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
-    "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global."
+    "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global.",
+    "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia."
   ],
   "eventos_recentes": [
     {
@@ -1647,6 +1649,10 @@
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795437128.460143
+    },
+    {
+      "chave": "randon::BALANCO",
+      "ts": 1795437458.080422
     }
   ],
   "hashes_imagens": [
@@ -1796,6 +1802,7 @@
     "6f00daf056a50911",
     "1360a4e281138ff8",
     "cf6863f26007dde9",
-    "845480dac427ea9d"
+    "845480dac427ea9d",
+    "a3b230056b6df354"
   ]
 }
