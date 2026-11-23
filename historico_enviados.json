@@ -1,12 +1,5 @@
 {
   "links": [
-    "95d51fea94e2275e",
-    "https://exame.com/negocios/aos-29-anos-ele-fatura-r-88-milhoes-vendendo-lencois-e-vai-abrir-40-lojas-pelo-brasil/",
-    "02db3680f23df791",
-    "https://www.moneytimes.com.br/rede-dor-rdor3-vende-gestoras-da-sulamerica-para-blackrock-em-transacao-de-r-850-milhoes-lmrs/",
-    "f8d083532b9ee0f9",
-    "https://exame.com/brasil/gabarito-oficial-do-enem-2026-sai-nesta-quarta-veja-como-consultar/",
-    "79caead8c9629f6e",
     "https://www.moneytimes.com.br/fundo-imobiliario-renova-contratos-com-banco-do-brasil-bbas3-mas-preve-queda-na-receita-ifix-recua-igdl/",
     "316ee56483bc8bcf",
     "https://exame.com/carreira/mesmo-insatisfeitos-com-o-trabalho-brasileiros-evitam-pedir-demissao-em-meio-aos-juros-altos/",
@@ -799,7 +792,14 @@
     "eee9a3603a31f450",
     "8dc028be193d83fb",
     "https://www.spacemoney.com.br/agronegocio/jbs-joint-venture-oma-us-150-milhoes/",
-    "7a9c880049618192"
+    "7a9c880049618192",
+    "f51b5fd256448699",
+    "https://www.poder360.com.br/poder-governo/lula-nao-definiu-ministro-da-fazenda-anuncio-fica-para-dezembro/",
+    "ef992ca67ad2deb0",
+    "https://www.estadao.com.br/economia/claudio-considera/sao-os-juros-da-divida-nao-o-bpc-mercadistas/",
+    "0254219fd6674fe0",
+    "https://www.moneytimes.com.br/bolsas-da-asia-fecham-mistas-apos-novas-medidas-para-conter-turbulencia-ligada-a-ia-fets/",
+    "e892e38d40e1cadc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1224,7 +1224,10 @@
     "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates",
     "Risco-país da Argentina chega ao maior patamar de 2026",
     "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual",
-    "JBS assume 80% de negócio de carnes em Omã com US$ 150 mi"
+    "JBS assume 80% de negócio de carnes em Omã com US$ 150 mi",
+    "Lula não definiu ministro da Fazenda; anúncio fica para dezembro",
+    "São os juros da dívida, não o BPC, mercadistas",
+    "Bolsas da Ásia fecham mistas após novas medidas para conter turbulência ligada à IA"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1357,7 +1360,10 @@
     "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
     "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
     "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea.",
-    "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país"
+    "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país",
+    "Presidente quer acomodar o Centrão para só depois escolher nomes para cargos que não entram na partilha da fisiologia",
+    "É um insanidade um país que ainda tem grande concentração de renda e quase 25% da população abaixo da linha de pobreza, torrar mais de um R$ 1 trilhão por ano com os juros da dívida pública. Isso não significa que o país deva deixar a inflação subir livremente, muito menos que os cortes de despesas públicas devam ocorrer nos programas sociais e no ",
+    "As bolsas asiáticas fecharam sem direção única nesta segunda-feira (23), enquanto reguladores e operadores de mercado da China, da Coreia do Sul e de Taiwan reforçaram medidas para conter a turbulência provocada pela onda global de vendas de ações ligadas à inteligência artificial (IA)."
   ],
   "eventos_recentes": [
     {
@@ -1519,6 +1525,14 @@
     {
       "chave": "jbs::GERAL_ATIVO",
       "ts": 1795425319.273868
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795425650.353822
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795425650.353822
     }
   ],
   "hashes_imagens": [
@@ -1636,6 +1650,9 @@
     "4628da901d8ca5d1",
     "497e5801aa2b375c",
     "a2377665360772f6",
-    "30fe4b6680fa3d92"
+    "30fe4b6680fa3d92",
+    "8c0ff647567a1cf1",
+    "1e209e8a2973b7d6",
+    "4ed3ff128884ac25"
   ]
 }
