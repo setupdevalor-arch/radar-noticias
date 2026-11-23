@@ -1,14 +1,5 @@
 {
   "links": [
-    "c875d0bb5d0e2790",
-    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-b3-b3sa3-americanas-amer3-e-outros-destaques-desta-quarta-feira-mlem/",
-    "b74e5500ac0fa1dc",
-    "https://www.infomoney.com.br/mercados/minerio-de-ferro-na-china-se-estabiliza-com-producao-maior-de-ferro-gusa-e-estocagem/",
-    "20a208b14980401b",
-    "https://www.moneytimes.com.br/trump-afirma-que-os-eua-tem-mais-energia-do-que-qualquer-outro-pais-e-descreve-a-venezuela-como-sua-nova-aquisicao-mlem/",
-    "3552647292c07ef1",
-    "https://www.moneytimes.com.br/dolar-supera-r580-antes-de-leiloes-do-bc-e-com-pacote-fiscal-no-foco/",
-    "730efe77067e8b20",
     "https://www.infomoney.com.br/mercados/goldman-sachs-rebaixa-brasil-por-crescimento-fraco-e-pouco-espaco-para-cortar-juros/",
     "71af9decf06bdb3e",
     "https://livecoins.com.br/receita-federal-e-pf-miram-esquema-de-bets-com-fintechs-que-movimentou-mais-de-r-6-bilhoes/",
@@ -799,7 +790,16 @@
     "36397777eb55550c",
     "774f3b9d50cb649e",
     "https://www.infomoney.com.br/mercados/hapvida-hapv3-nega-acordo-para-venda-de-ativos-a-advent-e-bain/",
-    "ca75a4af5a5138b9"
+    "ca75a4af5a5138b9",
+    "3093b8b5f5fe168b",
+    "2e5fedbfd9874df0",
+    "2f3154bdd10b3819",
+    "https://www.spacemoney.com.br/economia/macroeconomia/mercado-imobiliario-eua-juros-travados/",
+    "6bb00e5b156e8c1f",
+    "https://www.spacemoney.com.br/economia/exterior/zelenskyy-corveta-russa-libia/",
+    "6c8ce05921e469dc",
+    "https://neofeed.com.br/startups/bradesco-volta-ao-jogo-do-private-equity-e-venture-capital-e-ja-soma-r-400-milhoes-em-aportes/",
+    "82c94c4c1067230a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1238,7 +1238,10 @@
     "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
     "Montadoras alemãs enfrentam tensão crescente com sindicatos",
     "Diretor do BC, Nilton David, participa do Bloomberg Línea Summit nesta segunda; assista",
-    "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain"
+    "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain",
+    "Mercado imobiliário dos EUA trava com salto dos juros",
+    "Zelenskyy exalta afundamento de corveta russa na Líbia",
+    "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes"
   ],
   "leads": [
     "Segundo o comunicado, houve acesso não autorizado a alguns dados pessoais que podem incluir nome, CPF, e-mail, agência e, em alguns casos, número de conta",
@@ -1385,7 +1388,10 @@
     "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
     "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso.",
     "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo.",
-    "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia."
+    "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia.",
+    "O mercado imobiliário dos Estados Unidos entrou em um período de paralisia depois que as taxas de financiamento dispararam em setembro, segundo a CNBC. A taxa média do crédito imobiliário de 30 anos, o mais usado no país, girava em torno de 6,60% em julho e chegou a 7,61% no início de outubro, uma alta de um ponto percentual completo, conforme dado",
+    "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
+    "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026."
   ],
   "eventos_recentes": [
     {
@@ -1579,6 +1585,10 @@
     {
       "chave": "hapvida::GERAL_ATIVO",
       "ts": 1795430484.131092
+    },
+    {
+      "chave": "bradesco::GERAL_ATIVO",
+      "ts": 1795431134.359446
     }
   ],
   "hashes_imagens": [
@@ -1710,6 +1720,9 @@
     "b0db26a83a278535",
     "f97f520214cc4bf0",
     "a5db412086d97a8c",
-    "dc33a6226cd85103"
+    "dc33a6226cd85103",
+    "f6025e974f1607cd",
+    "cfa1a4c024336a2a",
+    "2858539c9fd2c9d1"
   ]
 }
