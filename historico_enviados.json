@@ -1,7 +1,5 @@
 {
   "links": [
-    "9cc887bf3449d7b0",
-    "5e9c67d316c78442",
     "8cecd81c5d260ec2",
     "7b59912715bb35e0",
     "e76cbedf78cb8e61",
@@ -799,7 +797,9 @@
     "https://forbes.com.br/forbes-money/2026/11/ministro-da-fazenda-preve-superavit-de-ate-2-do-pib-ao-fim-do-mandato/",
     "a9022b0ea6327177",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/alzr11-xplg11-dividend-yield-outubro/",
-    "cda25c1978d50bef"
+    "cda25c1978d50bef",
+    "https://www.spacemoney.com.br/economia/macroeconomia/juros-futuros-recua-bc-diretorias/",
+    "0a15c10fa4f4039b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1347,10 +1347,10 @@
     "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz",
     "Por que o Nubank (ROXO34) vê nas pequenas e médias empresas uma oportunidade para crescer",
     "Ministro da Fazenda Prevê Superávit de até 2% do PIB Ao Fim do Mandato",
-    "XPLG11 supera ALZR11 no dividend yield de outubro"
+    "XPLG11 supera ALZR11 no dividend yield de outubro",
+    "DI cai com falas do BC e nomes próximos ao mercado"
   ],
   "leads": [
-    "Com mais idosos no Brasil, mercado imobiliário cria prédios para quem não quer envelhecer sozinho",
     "Os balanços dos bancos no 3T26 mostram que a piora do crédito não atinge todas as instituições da mesma forma — e a qualidade do capital pode fazer toda a diferença daqui para frente",
     "O feriado nacional da Consciência Negra, nesta sexta-feira (20), altera o funcionamento de bancos, Bolsa de Valores (B3), Correios, INSS e outros serviços em todo o Brasil. Enquanto algumas atividades serão suspensas, outras, como o Pix, operam normalmente.",
     "Mesmo antes do lançamento oficial, as vendas do game da Rockstar somam desde junho US$ 1,65 bilhão, com 17 milhões de cópias comercializadas",
@@ -1599,7 +1599,8 @@
     "O petróleo fechou em queda nesta segunda-feira (23) com o Brent encerrando abaixo dos US$ 90 pela primeira vez em duas semanas, enquanto os investidores se concentravam no aumento do fluxo da commodity do Oriente Médio, apesar de ataques persistentes a navios e refinarias na região.",
     "Banco aposta em diversificar serviços e atender regiões em que é mais difícil ter acesso a agências bancárias",
     "O ministro da Fazenda, Dario Durigan, afirmou nesta segunda-feira que o governo do presidente Luiz Inácio Lula da Silva continuará perseguindo o superávit fiscal nos próximos anos, mirando em um resultado positivo entre 1,5% e 2% do Produto Interno Bruto (PIB) no fim do quarto mandato.",
-    "Os fundos imobiliários ALZR11 e XPLG11 apresentaram indicadores distintos nos relatórios gerenciais de outubro de 2026, segundo o Suno Notícias. No comparativo de dividend yield anualizado, o XP Log ficou em 10,79%, acima dos 10,5% do Alianza Trust Renda Imobiliária, embora as carteiras tenham perfis próprios e métricas de patrimônio, preço e vacân"
+    "Os fundos imobiliários ALZR11 e XPLG11 apresentaram indicadores distintos nos relatórios gerenciais de outubro de 2026, segundo o Suno Notícias. No comparativo de dividend yield anualizado, o XP Log ficou em 10,79%, acima dos 10,5% do Alianza Trust Renda Imobiliária, embora as carteiras tenham perfis próprios e métricas de patrimônio, preço e vacân",
+    "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria"
   ],
   "eventos_recentes": [
     {
@@ -2073,6 +2074,10 @@
     {
       "chave": "alzr11::GERAL_ATIVO",
       "ts": 1795472099.098308
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795473462.346684
     }
   ],
   "hashes_imagens": [
@@ -2313,6 +2318,7 @@
     "7f586bdb881ddfa4",
     "97a9854467b979bc",
     "73e96f9b51f351c8",
-    "102e455bf8cfa50e"
+    "102e455bf8cfa50e",
+    "32d2112ebad2d253"
   ]
 }
