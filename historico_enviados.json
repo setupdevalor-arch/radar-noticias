@@ -1,7 +1,5 @@
 {
   "links": [
-    "e10735a917ef81c2",
-    "https://www.estadao.com.br/economia/coluna-da-broad/bv-recebe-aval-da-cvm-e-da-novo-passo-para-abertura-de-capital-na-b3/",
     "68868e7ecf1d98ce",
     "521c7512261342e1",
     "https://www.estadao.com.br/economia/fim-de-beneficio-fiscal-nos-estados-faz-empresas-repensarem-localizacao-de-fabricas-e-galpoes/",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/investimentos/acoes/brb-cvm-suspensao-registro/",
     "90b7f9ded7cf5e2d",
     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/jornada-5x2-veja-como-ficam-regras-de-salario-folgas-e-horas-extras",
-    "220f7f899ed90649"
+    "220f7f899ed90649",
+    "https://neofeed.com.br/negocios/ajuste-fiscal-e-um-bom-comeco-diz-trabuco-novo-presidente-do-movimento-brasil-competitivo/",
+    "6080276cb7970810"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1362,10 +1362,10 @@
     "Alares busca R$ 140 milhões para gestão de dívidas e reforço de caixa",
     "PL 4675/2025 não é consenso entre entidades empresariais",
     "BRB mantém operações bancárias após suspensão na CVM",
-    "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras"
+    "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
+    "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo"
   ],
   "leads": [
-    "As ações da BB Seguridade (BBSE3) atravessam um período de forte correção após atingirem sua máxima histórica de R$ 44,34, no fim de outubro. Apesar de acumularem valorização de 14,43% em 2026, os papéis registram queda de 11,28% em novembro, revertendo parte dos ganhos de 5,46% obtidos em outubro. Na última sessão analisada, a ação recuou 1,66%, c",
     "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese.",
     "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente.",
     "A Copel tem uma carteira de aproximadamente 9 GW em projetos de hidrelétricas reversíveis, dos quais 2,2 GW correspondem a uma nova casa de força na hidrelétrica de Segredo, no Paraná. A companhia aposta na realização de novos leilões de reserva de capacidade para viabilizar os empreendimentos, além de uma ampliação de 900 MW na potência da hidrelé",
@@ -1614,7 +1614,8 @@
     "A Alares Internet Participações iniciou nesta segunda-feira, 23, uma oferta pública de R$ 140 milhões em notas comerciais escriturais. Os recursos líquidos captados serão destinados integralmente à gestão de passivos e ao reforço de caixa da companhia, conforme decisão aprovada pelo Conselho de Administração em reunião realizada no último dia 19.",
     "Embora tenha como alvo as grandes plataformas digitais, o PL 4675/2025 preocupa entidades empresariais pelos possíveis efeitos sobre negócios que dependem desses ecossistemas. As associações ouvidas por Mobile Time, Abes e Amobitec, alertam para riscos de aumento de custos, insegurança jurídica e impactos sobre investimentos, serviços e empresas de",
     "O BRB informou que mantém o atendimento a clientes e o pagamento de compromissos com depositantes e fornecedores, apesar de a CVM ter suspendido seu registro de companhia aberta, segundo o g1. A decisão foi divulgada nesta segunda-feira (23).",
-    "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro."
+    "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro.",
+    "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco."
   ],
   "eventos_recentes": [
     {
@@ -2379,6 +2380,7 @@
     "7c3d46e86559d1d1",
     "3482f48241370a6a",
     "5dde0f7e18d417b0",
-    "c09786794cd207ae"
+    "c09786794cd207ae",
+    "46356439bd194f2a"
   ]
 }
