@@ -1,7 +1,5 @@
 {
   "links": [
-    "3cb721167dc9a60d",
-    "d1073658eed16137",
     "https://www.cnnbrasil.com.br/economia/money/negocios/trump-volta-a-defender-restituicao-de-huang-ao-cargo-de-ceo-da-nvidia/",
     "2744b1ca2a752751",
     "af0550cc896a3f81",
@@ -799,7 +797,9 @@
     "https://www.suno.com.br/noticias/hapv3-hapvida-reavaliacao-portfolio-cvm/",
     "edfe5c6ef9e2e6b2",
     "https://g1.globo.com/economia/blog/ana-flor/post/2026/11/24/governo-prepara-pec-com-medidas-de-para-dar-potencia-fiscal-e-assegurar-cumprimento-de-meta.ghtml",
-    "291bf64b03ee8e69"
+    "291bf64b03ee8e69",
+    "https://www.spacemoney.com.br/commodities/petroleo-fecha-alta-ataques-ormuz/",
+    "dcc78fbd6341617d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1498,10 +1498,10 @@
     "Dólar fecha em queda e volta para os R$ 5,90 com redução dos riscos fiscais",
     "“A Amazon não compete com o concorrente”: a estratégia para bater rivais como Mercado Livre e Shopee no Brasil",
     "HAPV3: Hapvida esclarece à CVM sobre reavaliação de portfólio",
-    "Governo prepara PEC com medidas para dar 'potência fiscal' e assegurar cumprimento de meta, diz Moretti"
+    "Governo prepara PEC com medidas para dar 'potência fiscal' e assegurar cumprimento de meta, diz Moretti",
+    "Petróleo sobe após ataques no Estreito de Ormuz"
   ],
   "leads": [
-    "As estiagens que atingiram as regiões agrícolas do Rio Grande do Sul incineraram 48,7 milhões de toneladas de grãos de 2020 até o final de 2025 (sem contar a safra colhida em 2026). Ou seja, das 227,030 milhões de toneladas de soja, milho e outras culturas projetadas pelos organismos que realizam as estimativas foram efetivamente ceifadas 178,474 m",
     "O real voltou a figurar entre as moedas emergentes que mais sofreram com a recente onda de aversão a risco global, mas ainda apresenta uma combinação de valuation e retorno potencial que o mantém no radar dos investidores, segundo relatório do Kamakshya Trivedi e estrategistas do Goldman Sachs.",
     "As alterações nos impostos não estão valendo ainda, mas já levantaram questionamentos e fizeram algum barulho",
     "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027.",
@@ -1750,7 +1750,8 @@
     "Após ultrapassar os R$ 6,00 na véspera, o dólar passou toda a sessão desta terça-feira (24) em queda e recuou para o nível dos R$ 5,90. A moeda norte-americana fechou em queda de 0,26%, a R$ 5,9107, no mercado à vista.",
     "Ricardo Pagani, diretor de operações da Amazon Brasil, chamou atenção para o foco da companhia no cliente em entrevista para o Seu Dinheiro",
     "A Hapvida Participações e Investimentos S.A. (HAPV3) divulgou comunicado ao mercado em resposta ao Ofício nº 272/2026/CVM/SEP/GEA-2, da Comissão de Valores Mobiliários, em continuidade ao comunicado já divulgado em 19 de novembro de 2026.",
-    "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico."
+    "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico.",
+    "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05."
   ],
   "eventos_recentes": [
     {
@@ -2492,10 +2493,13 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795552194.431046
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795553356.404898
     }
   ],
   "hashes_imagens": [
-    "626ff11222c25349",
     "359441399e0c461f",
     "22d1431f6258a4a1",
     "816720a10b88ec66",
@@ -2794,6 +2798,7 @@
     "8cb501c7f911dad7",
     "ec9754883c470a23",
     "29359e5ac0b7fb09",
-    "398599525494f300"
+    "398599525494f300",
+    "d79d49ce4fa8c21a"
   ]
 }
