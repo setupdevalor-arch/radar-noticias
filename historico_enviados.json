@@ -1,7 +1,5 @@
 {
   "links": [
-    "2a018e087078b464",
-    "c3f9827972d6e234",
     "69cfa4a307331778",
     "543e1eb86e411bb7",
     "d4a7d1fdba865b4e",
@@ -799,7 +797,9 @@
     "029ac5f7b2e68008",
     "1a985197432b9d51",
     "https://agenciainfra.com/blog/cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento/?utm_source=rss&utm_medium=rss&utm_campaign=cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento",
-    "306c3340b3afa958"
+    "306c3340b3afa958",
+    "https://www.cnnbrasil.com.br/internacional/analise-jensen-huang-e-um-exemplo-ambulante-de-risco-moral/",
+    "ff937dedfb7adb31"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1472,10 +1472,10 @@
     "Trabalhadores da VW protestam e ameaçam parar em janeiro",
     "Dólar cai quase 2% e vai a R$ 5,80, com foco em ajuste fiscal e noticiário corporativo",
     "Democratas da Câmara dos EUA investigam empresa de filho de Donald Trump",
-    "Cotado para a ANM, Pedro Guerra defende reestruturação e maior orçamento"
+    "Cotado para a ANM, Pedro Guerra defende reestruturação e maior orçamento",
+    "Análise: Jensen Huang é um exemplo ambulante de risco moral"
   ],
   "leads": [
-    "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
     "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea.",
     "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país",
     "Presidente quer acomodar o Centrão para só depois escolher nomes para cargos que não entram na partilha da fisiologia",
@@ -1724,7 +1724,8 @@
     "A Volkswagen iniciou com os empregados alemães o primeiro pacote de negociações, em clima de confronto. Cerca de 4 mil pessoas protestaram em Emden, no norte do país, pouco antes de representantes do IG Metall e do conselho de trabalhadores se reunirem com a cúpula da empresa.",
     "O dólar inverteu o sinal e passou a operar em queda nesta terça-feira (24), com recuo de 1,81% perto das 11h30, cotado a R$ 5,8190. Na mínima do dia, chegou a R$ 5,8015. Já o Ibovespa, principal índice da bolsa brasileira, tinha alta de 1,24% no mesmo horário, aos 166.846 pontos.",
     "Democratas da Câmara dos Representantes dos Estados Unidos que investigam investimentos feitos por Donald Trump Jr. e pela 1789 Capital enviaram cartas à Polymarket, à Juul e a outras empresas ligadas à firma de capital de risco do filho do presidente, apesar de uma ordem executiva emitida na semana passada com o objetivo de limitar investigações s",
-    "Na corrida pela indicação ao cargo de diretor-geral da ANM (Agência Nacional de Mineração), o chefe de gabinete da Vice-Presidência da República, Pedro Guerra, defende medidas de reestruturação e reforço no orçamento do órgão regulador. Ele reconheceu, em entrevista à Agência iNFRA nesta segunda-feira (23), que o governo passa por um momento de con"
+    "Na corrida pela indicação ao cargo de diretor-geral da ANM (Agência Nacional de Mineração), o chefe de gabinete da Vice-Presidência da República, Pedro Guerra, defende medidas de reestruturação e reforço no orçamento do órgão regulador. Ele reconheceu, em entrevista à Agência iNFRA nesta segunda-feira (23), que o governo passa por um momento de con",
+    "\"Com a situação se tornando mais precária a cada dia, enfrentei uma escolha: agir de forma decisiva ou ficar de braços cruzados e permitir que as ações irresponsáveis de alguns comprometessem a segurança financeira de todos.\""
   ],
   "eventos_recentes": [
     {
@@ -2405,7 +2406,6 @@
     }
   ],
   "hashes_imagens": [
-    "0fbafc97a568b241",
     "8c5fc04993f7fc80",
     "b6243796bf7cd45c",
     "2b63c60e4c8071f8",
@@ -2704,6 +2704,7 @@
     "a7be86fab6bb1e06",
     "2c0f0e8b231ef5dd",
     "4d21022723933b6c",
-    "07c1a506cfd25994"
+    "07c1a506cfd25994",
+    "ac03f63bd592d33e"
   ]
 }
