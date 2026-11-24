@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/economia/exterior/otan-starlift-rede-lancamento-satelites/",
-    "b5d0fbd35fbe8447",
-    "ed19567a38e7a701",
-    "8d71c9c0f3f23c42",
-    "f6b227557152f1a5",
     "44e77b2b339aa548",
     "https://www.poder360.com.br/poder-congresso/projeto-define-regras-para-provedores-de-internet-no-brasil/",
     "62d9b3c703161c09",
@@ -799,7 +794,12 @@
     "ed016c183571286e",
     "c82561f8c3a412dd",
     "https://www.spacemoney.com.br/economia/macroeconomia/franca-pmi-recessao-tecnica-eleicao/",
-    "4de45929774e62cb"
+    "4de45929774e62cb",
+    "c5a59f4d9093985d",
+    "https://www.infomoney.com.br/onde-investir/e-uma-boa-hora-para-vender-dolar-o-que-fazer-com-o-cambio-perto-de-r-6/",
+    "4b81e4409bdaa49e",
+    "https://www.infomoney.com.br/minhas-financas/aluguel-comercial-sobe-12-em-um-ano-quase-tres-vezes-a-inflacao-diz-fipezap/",
+    "243b66f80a5216d7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1382,11 +1382,11 @@
     "Nvidia: sucessão e governança após retorno de Huang",
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
     "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças",
-    "PMI acende alerta de recessão na França antes de eleição"
+    "PMI acende alerta de recessão na França antes de eleição",
+    "É uma boa hora para vender dólar? O que fazer com o câmbio perto de R$ 6",
+    "Aluguel comercial sobe 12% em um ano, quase três vezes a inflação, diz FipeZAP"
   ],
   "leads": [
-    "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
-    "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425.",
     "O Brasil enfrenta um cenário macroeconômico desafiador para 2027, com crescimento modesto e inflação persistentemente elevada. É o que aponta Alberto Ramos, economista-chefe para América Latina do Goldman Sachs, em entrevista ao CNN Money, ao detalhar as projeções do banco.",
     "A mais recente investida do presidente dos Estados Unidos, Donald Trump, sobre a indústria da tecnologia marca um novo episódio de sua política econômica protecionista, segundo especialistas ouvidos pelo CNN Money.",
     "Uma empresa de cibersegurança chamada Calif localizou, com apoio de inteligência artificial, uma vulnerabilidade crítica nas funções de memória do Java, segundo o g1. A falha foi batizada de Java4Shell e permitiria que um invasor executasse comandos remotos no sistema. A Oracle, que controla o Java, publicou uma correção de segurança na terça-feira",
@@ -1634,7 +1634,9 @@
     "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador.",
     "As empresas de Elon Musk, Tesla e SpaceX, discutem uma possível fusão avaliada em US$ 3,5 trilhões (cerca de R$ 20,8 trilhões), segundo o g1. Conforme o portal, que cita informações publicadas nesta terça-feira (24) pelo jornal britânico Financial Times, o negócio seria o maior da história e pode ser concluído até o fim deste ano.",
     "Os preços do petróleo caem pelo segundo dia consecutivo nesta terça-feira (24), sendo negociados próximos das mínimas de três meses, diante de sinais de aumento da oferta de petróleo bruto e de um possível excedente no mercado, embora persistam os riscos para o transporte marítimo pelo Estreito de Ormuz.",
-    "A atividade do setor privado francês caiu em novembro ao menor patamar em seis meses, com a indústria em situação pior do que os serviços, de acordo com o índice de gerentes de compras (PMI) da S&P Global divulgado na segunda-feira e destacado em reportagem da CNBC. O dado reforçou os temores de recessão técnica — dois trimestres seguidos de queda "
+    "A atividade do setor privado francês caiu em novembro ao menor patamar em seis meses, com a indústria em situação pior do que os serviços, de acordo com o índice de gerentes de compras (PMI) da S&P Global divulgado na segunda-feira e destacado em reportagem da CNBC. O dado reforçou os temores de recessão técnica — dois trimestres seguidos de queda ",
+    "O dólar atingiu R$ 6 pela primeira vez desde abril de 2025 na segunda-feira (23), após ter chegado a fechar a R$ 4,99 na sexta-feira anterior ao segundo turno das eleições, em 23 de outubro. A alta passa de 20% em um mês, aprofundando um desempenho ruim que já havia deixado o real com o pior desempenho de uma cesta de 32 divisas entre os dias 21 de",
+    "Os preços de aluguel de salas e conjuntos comerciais subiram 12,04% nos 12 meses encerrados em outubro de 2026, quase três vezes a inflação oficial de 4,63% registrada no mesmo período. O resultado, divulgado pelo Índice FipeZAP nesta terça-feira (24), mostra que o custo de ocupação de imóveis comerciais continua avançando acima dos preços gerais d"
   ],
   "eventos_recentes": [
     {
@@ -2196,6 +2198,14 @@
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795506948.061936
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795507342.313254
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795507342.313254
     }
   ],
   "hashes_imagens": [
@@ -2471,6 +2481,8 @@
     "22ac1a4729081214",
     "f97711bcfc7cc014",
     "f39a438c48224e12",
-    "b7bfc9e5375e8ccb"
+    "b7bfc9e5375e8ccb",
+    "a2fbdf846d90a1c5",
+    "bc63738617ea4806"
   ]
 }
