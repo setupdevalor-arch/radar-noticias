@@ -1,14 +1,5 @@
 {
   "links": [
-    "https://www.seudinheiro.com/2026/colunistas/a-alegria-do-clt-a-estrategia-do-totalpass-e-uma-semana-mais-curta-de-aversao-a-risco-julw/",
-    "5dd0f7bdccd0b2ea",
-    "https://cqcs.com.br/noticia/seguro-rural-pode-ser-a-salvacao-das-lavouras-gauchas/",
-    "8653579fda5821f9",
-    "dac2456265e87b96",
-    "021513a4380a93b0",
-    "https://www.infomoney.com.br/mercados/tempestade-perfeita-cambio-goldman-ve-real-atrativo-mas-recomenda-cautela-no-curto-prazo/",
-    "a5269428595b074b",
-    "0de8fe1fd948df59",
     "2a018e087078b464",
     "c3f9827972d6e234",
     "69cfa4a307331778",
@@ -799,7 +790,16 @@
     "288da524097ddff1",
     "c321bf26dfdd5909",
     "https://www.cnnbrasil.com.br/internacional/democratas-da-camara-dos-eua-investigam-empresa-de-filho-de-donald-trump/",
-    "164a142ddef71649"
+    "164a142ddef71649",
+    "1467b39ad6969eff",
+    "e1bd8965d397f5f7",
+    "ed92c1e200e2e774",
+    "bd32cd11bf0a6128",
+    "c09275b162b47fd6",
+    "029ac5f7b2e68008",
+    "1a985197432b9d51",
+    "https://agenciainfra.com/blog/cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento/?utm_source=rss&utm_medium=rss&utm_campaign=cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento",
+    "306c3340b3afa958"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1471,10 +1471,10 @@
     "BNDES prevê liberar recorde de R$ 4 bi para setor de fertilizantes em 2026",
     "Trabalhadores da VW protestam e ameaçam parar em janeiro",
     "Dólar cai quase 2% e vai a R$ 5,80, com foco em ajuste fiscal e noticiário corporativo",
-    "Democratas da Câmara dos EUA investigam empresa de filho de Donald Trump"
+    "Democratas da Câmara dos EUA investigam empresa de filho de Donald Trump",
+    "Cotado para a ANM, Pedro Guerra defende reestruturação e maior orçamento"
   ],
   "leads": [
-    "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
     "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
     "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea.",
     "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país",
@@ -1723,7 +1723,8 @@
     "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) estima aprovar R$ 4 bilhões em crédito para o setor de fertilizantes até o fim de 2026, volume recorde para o setor.",
     "A Volkswagen iniciou com os empregados alemães o primeiro pacote de negociações, em clima de confronto. Cerca de 4 mil pessoas protestaram em Emden, no norte do país, pouco antes de representantes do IG Metall e do conselho de trabalhadores se reunirem com a cúpula da empresa.",
     "O dólar inverteu o sinal e passou a operar em queda nesta terça-feira (24), com recuo de 1,81% perto das 11h30, cotado a R$ 5,8190. Na mínima do dia, chegou a R$ 5,8015. Já o Ibovespa, principal índice da bolsa brasileira, tinha alta de 1,24% no mesmo horário, aos 166.846 pontos.",
-    "Democratas da Câmara dos Representantes dos Estados Unidos que investigam investimentos feitos por Donald Trump Jr. e pela 1789 Capital enviaram cartas à Polymarket, à Juul e a outras empresas ligadas à firma de capital de risco do filho do presidente, apesar de uma ordem executiva emitida na semana passada com o objetivo de limitar investigações s"
+    "Democratas da Câmara dos Representantes dos Estados Unidos que investigam investimentos feitos por Donald Trump Jr. e pela 1789 Capital enviaram cartas à Polymarket, à Juul e a outras empresas ligadas à firma de capital de risco do filho do presidente, apesar de uma ordem executiva emitida na semana passada com o objetivo de limitar investigações s",
+    "Na corrida pela indicação ao cargo de diretor-geral da ANM (Agência Nacional de Mineração), o chefe de gabinete da Vice-Presidência da República, Pedro Guerra, defende medidas de reestruturação e reforço no orçamento do órgão regulador. Ele reconheceu, em entrevista à Agência iNFRA nesta segunda-feira (23), que o governo passa por um momento de con"
   ],
   "eventos_recentes": [
     {
@@ -2404,7 +2405,6 @@
     }
   ],
   "hashes_imagens": [
-    "cb413ebaf44e67e5",
     "0fbafc97a568b241",
     "8c5fc04993f7fc80",
     "b6243796bf7cd45c",
@@ -2703,6 +2703,7 @@
     "52f9374ef47c41d1",
     "a7be86fab6bb1e06",
     "2c0f0e8b231ef5dd",
-    "4d21022723933b6c"
+    "4d21022723933b6c",
+    "07c1a506cfd25994"
   ]
 }
