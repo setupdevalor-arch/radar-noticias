@@ -1,18 +1,5 @@
 {
   "links": [
-    "ccf9a861a86692e0",
-    "69ef765deac257fc",
-    "https://www.poder360.com.br/poder-brasil/sabesp-conclui-manutencao-mas-5-regioes-ainda-tem-abastecimento-afetado/",
-    "dc56711a126aa030",
-    "a917347742a3e5d8",
-    "25728f9d43005234",
-    "b6fc51d3e88f85d2",
-    "9638c8924d62c9b6",
-    "https://www.estadao.com.br/economia/roberto-waack/futuro-das-cops-modelo-que-pede-consenso-fracassa-na-turquia-e-novas-formas-devem-ser-adotadas/",
-    "2440a36b55a956f4",
-    "https://www.spacemoney.com.br/politica/pf-licitacao-veiculos-blindados-lula/",
-    "c38ced760a57a5c7",
-    "125921bcf2930ed7",
     "4d82721548d8fa54",
     "https://www.spacemoney.com.br/tecnologia/clayton-alerta-apagoes-tecnologicos-eua/",
     "e10f68f68ec12148",
@@ -799,7 +786,20 @@
     "https://www.infomoney.com.br/mercados/raizen-raiz4-aprova-pre-pagamento-de-r-3-bilhoes-em-dividas/",
     "5d677dfeb3171566",
     "https://cqcs.com.br/noticia/pane-da-microsoft-expoe-limites-da-cobertura-de-seguro-cyber/",
-    "b23ffaf1d9aca681"
+    "b23ffaf1d9aca681",
+    "a4d37cb82ed8539e",
+    "12d108d99aee7413",
+    "d2648d4cb1d4a2c6",
+    "https://www.cnnbrasil.com.br/agro/preco-do-tomate-recua-na-maioria-dos-atacados-do-pais/",
+    "94c9b8798b60576a",
+    "https://www.cnnbrasil.com.br/economia/o-grande-debate-ajuste-fiscal-e-possivel-sem-reduzir-programas-sociais/",
+    "3de1edfbed294aaf",
+    "https://www.infomoney.com.br/economia/confianca-do-consumidor-cai-em-novembro-para-o-menor-nivel-desde-agosto-de-2022/",
+    "bee671e961eaa7dd",
+    "https://megawhat.uol.com.br/noticias/casa-dos-ventos-pede-prioridade-para-antecipar-carga-de-data-center-do-tik-tok/",
+    "72b619b8bb11b6a6",
+    "https://www.poder360.com.br/poder-internacional/trump-lucra-ate-us-15-mi-com-alta-da-nvidia-apos-volta-de-ceo/",
+    "684475aaeb31f794"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1411,14 +1411,14 @@
     "Braskem pede prorrogação de 20 dias para apresentar plano de recuperação extrajudicial",
     "Seguro garantia agora suspende a exigibilidade do crédito tributário",
     "Raízen (RAIZ4) aprova pré-pagamento de R$ 3 bilhões em dívidas",
-    "Pane da Microsoft expõe limites da cobertura de Seguro Cyber?"
+    "Pane da Microsoft expõe limites da cobertura de Seguro Cyber?",
+    "Preço do tomate recua na maioria dos atacados do país",
+    "O Grande Debate: Ajuste fiscal é possível sem reduzir programas sociais?",
+    "Confiança do consumidor cai em novembro para o menor nível desde agosto de 2022",
+    "Casa dos Ventos pede prioridade para antecipar carga de data center do Tik Tok",
+    "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO"
   ],
   "leads": [
-    "As negociações internacionais sobre o clima perdiam força neste domingo, abrindo caminho para que a cúpula termine sem um acordo amplo. Alguns países europeus alertaram que a proposta em discussão adotaria falsas soluções contra o aquecimento global e enfraqueceria o combate a ele.",
-    "Quando a indústria do cobre se reuniu em Xangai na semana passada, Grace Li ficou impressionada com o pessimismo esmagador sobre a demanda. Ela concordava com esse diagnóstico. Depois das conversas de segunda-feira, quase pegou o celular ali mesmo para montar uma posição vendida.",
-    "Analistas considerados de ponta em Wall Street apontam três ações de dividendos com potencial de retorno forte, segundo reportagem da CNBC. A seleção usa ranking da plataforma TipRanks, que avalia os profissionais pelo desempenho passado, e reúne Devon Energy, Energy Transfer e ConocoPhillips.",
-    "Em reportagem publicada neste domingo (22), a CNBC relata que, após o fechamento de sexta-feira, o autor consultou a ferramenta Claude sobre o que fazer com a queda do mercado. A orientação recebida foi evitar vendas por pânico e buscar oportunidades, com a Amazon citada como uma ação a ser observada.",
-    "Agentes autônomos podem acessar sistemas e dados sensíveis sem autorização, diz pesquisador português",
     "A energia nuclear ganhou novo impulso no cenário global, em meio a debates sobre segurança, custos e o destino dos rejeitos radioativos. Governos e grandes empresas de tecnologia estão ampliando suas apostas nessa fonte energética para garantir o abastecimento e reduzir as emissões que contribuem para o aquecimento do planeta.",
     "As três principais bolsas de valores da China anunciaram planos para auxiliar os preços das ações em dificuldades com um conjunto de medidas, como a flexibilização dos requisitos para financiamento com margem.",
     "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
@@ -1663,7 +1663,12 @@
     "Entenda o processo que empresas podem solicitar para superar uma crise financeira.",
     "A Lei Complementar 236/2026 promoveu diversas e importantes modificações no Código Tributário Nacional, dentre elas a disciplina do seguro garantia [1] no âmbito do contencioso tributário.",
     "O Conselho de Administração de Raízen (RAIZ4) aprovou na segunda-feira (23) o pré-pagamento parcial da dívida financeira reestruturada da Raízen Energia, no montante total agregado de R$ 3 bilhões.",
-    "A pane global nos serviços em nuvem da Microsoft, registrada entre os dias 12 e 14 de novembro, gerou US$ 500 milhões em perdas seguradas, segundo a agência Morningstar DBRS, e expôs uma limitação crítica para empresas que contratam Seguro Cyber. Como o incidente que paralisou plataformas como Outlook, Teams, Copilot e Microsoft 365 em mais de 70 p"
+    "A pane global nos serviços em nuvem da Microsoft, registrada entre os dias 12 e 14 de novembro, gerou US$ 500 milhões em perdas seguradas, segundo a agência Morningstar DBRS, e expôs uma limitação crítica para empresas que contratam Seguro Cyber. Como o incidente que paralisou plataformas como Outlook, Teams, Copilot e Microsoft 365 em mais de 70 p",
+    "Após uma longa sequência de altas, os preços do tomate recuaram na maior parte dos mercados atacadistas acompanhados pelo Cepea (Centro de Estudos Avançados em Economia Aplicada).",
+    "O empresário Leonardo Bortoletto e o advogado Vitor Marques debateram, na segunda-feira (23), em O Grande Debate (de segunda a sexta-feira, às 23h), se a \"o ajuste fiscal é possível sem reduzir programas sociais\".",
+    "O Índice de Confiança do Consumidor, medido pelo FGV/Ibre, voltou a recuar em novembro. O ICC baixou 1,2 ponto no mês, atingindo para 83,5 pontos, o menor nível observado desde agosto de 2022. Na média móvel trimestral, o índice cedeu 0,4 ponto, para 84,1 pontos.",
+    "A Casa dos Ventos pediu à Agência Nacional de Energia Elétrica (Aneel) que estenda ao seu projeto de data center no Pecém, Ceará, a regra de transição que garante prioridade na contratação de capacidade na rede de transmissão em 2029. A empresa quer antecipar para aquele ano uma demanda de energia prevista para os anos seguintes, sem precisar dispu",
+    "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa"
   ],
   "eventos_recentes": [
     {
@@ -2269,14 +2274,13 @@
     {
       "chave": "microsoft::GERAL_ATIVO",
       "ts": 1795519198.348225
+    },
+    {
+      "chave": "nvidia::BALANCO",
+      "ts": 1795519583.205036
     }
   ],
   "hashes_imagens": [
-    "d305573262799892",
-    "59cfe842dffee3fb",
-    "22bc1b3df310f106",
-    "975a3244af78df95",
-    "948b5fbae12a07e1",
     "74f10bc4d78d52b1",
     "c1e0b2659879c3b2",
     "2404d220ace67c05",
@@ -2571,6 +2575,11 @@
     "797a50d35023496d",
     "8f1bf488d82a79c3",
     "d4e189785dd0713c",
-    "30922a397fd8f1ee"
+    "30922a397fd8f1ee",
+    "57380fb98ef8d9a3",
+    "e51d36ee609b7595",
+    "029686419f6174c8",
+    "8ce180b787e27480",
+    "50b49dac0f9583be"
   ]
 }
