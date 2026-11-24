@@ -1,7 +1,5 @@
 {
   "links": [
-    "3a5cca81ac63b6fb",
-    "https://www.infomoney.com.br/business/crowdstrike-reverte-prejuizo-supera-projecoes-e-anuncia-para-compra-de-empresa/",
     "c98881016db998d7",
     "https://www.spacemoney.com.br/economia/macroeconomia/chip-dolar-comercio-chips-supera-petroleo/",
     "79fd3a6b6c3c09de",
@@ -799,7 +797,9 @@
     "https://www.cnnbrasil.com.br/agro/petrobras-buscara-outras-empresas/",
     "f7ca43215e2eed3c",
     "https://www.poder360.com.br/poder-internacional/alibaba-reduz-previsao-de-crescimento-na-nuvem-apos-restricoes-dos-eua/",
-    "24e63b9f6f660e3a"
+    "24e63b9f6f660e3a",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/blackrock-fundo-tokenizado-stablecoin-hong-kong/",
+    "643d5affcfca12ee"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1487,10 +1487,10 @@
     "LVBI11 sinaliza provento extra antes de fusão com HGLG11",
     "Coalizão cobra investigação da UE contra Apple no iOS",
     "Após retomar investimentos, Petrobras buscará novas empresas de etanol",
-    "Alibaba reduz previsão de crescimento na nuvem após restrições dos EUA"
+    "Alibaba reduz previsão de crescimento na nuvem após restrições dos EUA",
+    "BlackRock usa stablecoin em fundo tokenizado em Hong Kong"
   ],
   "leads": [
-    "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo.",
     "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia.",
     "O mercado imobiliário dos Estados Unidos entrou em um período de paralisia depois que as taxas de financiamento dispararam em setembro, segundo a CNBC. A taxa média do crédito imobiliário de 30 anos, o mais usado no país, girava em torno de 6,60% em julho e chegou a 7,61% no início de outubro, uma alta de um ponto percentual completo, conforme dado",
     "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
@@ -1739,7 +1739,8 @@
     "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao",
     "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in",
     "A Petrobras deverá buscar aquisições de outras participações de usinas de etanol de milho, à medida que quer expandir sua atuação em renováveis e vê sinergias em matérias-primas para a produção de outros combustíveis sustentáveis, como o SAF para o setor de aviação, disseram três fontes com conhecimento do assunto nesta terça-feira.",
-    "Crescimento da receita com serviços em nuvem deverá desacelerar para 30% a 45% em 2027, ante 53% no 3º trimestre de 2026"
+    "Crescimento da receita com serviços em nuvem deverá desacelerar para 30% a 45% em 2027, ante 53% no 3º trimestre de 2026",
+    "O Cointelegraph informou que a BlackRock estreou na Ásia-Pacífico um fundo tokenizado de liquidez em dólar de Hong Kong, com aplicações e retiradas que podem ser feitas por stablecoin. O South China Morning Post é citado como fonte do relato."
   ],
   "eventos_recentes": [
     {
@@ -2441,10 +2442,13 @@
     {
       "chave": "alibaba::GERAL_ATIVO",
       "ts": 1795546440.321404
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795546860.773873
     }
   ],
   "hashes_imagens": [
-    "ec852cca70d10c48",
     "102447c255e458aa",
     "70f36f2a13c6a2c6",
     "663717983500b29d",
@@ -2743,6 +2747,7 @@
     "17286e74fb4f4f14",
     "a1569b6f2cffbffa",
     "a8cc74ad406cb88a",
-    "43dd069fa499b89e"
+    "43dd069fa499b89e",
+    "7e8f1068dcb8b677"
   ]
 }
