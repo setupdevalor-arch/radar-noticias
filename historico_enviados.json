@@ -1,8 +1,5 @@
 {
   "links": [
-    "68868e7ecf1d98ce",
-    "521c7512261342e1",
-    "https://www.estadao.com.br/economia/fim-de-beneficio-fiscal-nos-estados-faz-empresas-repensarem-localizacao-de-fabricas-e-galpoes/",
     "0282e096a4d04a6a",
     "3103becdf2ce4474",
     "26e84ec7e081b598",
@@ -799,7 +796,10 @@
     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/jornada-5x2-veja-como-ficam-regras-de-salario-folgas-e-horas-extras",
     "220f7f899ed90649",
     "https://neofeed.com.br/negocios/ajuste-fiscal-e-um-bom-comeco-diz-trabuco-novo-presidente-do-movimento-brasil-competitivo/",
-    "6080276cb7970810"
+    "6080276cb7970810",
+    "c2c2228039d75ca5",
+    "https://www.estadao.com.br/economia/camara-aprova-urgencia-e-acelera-votacao-de-projeto-de-ajuste-fiscal-do-governo-lula/",
+    "202919ebb3b6ea9c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1363,10 +1363,10 @@
     "PL 4675/2025 não é consenso entre entidades empresariais",
     "BRB mantém operações bancárias após suspensão na CVM",
     "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
-    "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo"
+    "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
+    "Câmara aprova urgência e acelera votação de projeto de ajuste fiscal do governo Lula"
   ],
   "leads": [
-    "A Vale (VALE3) está diante de um dos momentos mais desafiadores dos últimos anos. A queda dos preços do minério de ferro, a pressão dos custos e as dificuldades operacionais em importantes minas da companhia têm colocado cada vez mais pressão sobre a tese.",
     "A XP Investimentos reduziu o preço-alvo para ações do Banco do Brasil (BBAS3) de R$ 21 para R$ 15 e manteve recomendação neutra, uma vez que a recuperação dos resultados deve levar mais tempo do que esperado anteriormente.",
     "A Copel tem uma carteira de aproximadamente 9 GW em projetos de hidrelétricas reversíveis, dos quais 2,2 GW correspondem a uma nova casa de força na hidrelétrica de Segredo, no Paraná. A companhia aposta na realização de novos leilões de reserva de capacidade para viabilizar os empreendimentos, além de uma ampliação de 900 MW na potência da hidrelé",
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
@@ -1615,7 +1615,8 @@
     "Embora tenha como alvo as grandes plataformas digitais, o PL 4675/2025 preocupa entidades empresariais pelos possíveis efeitos sobre negócios que dependem desses ecossistemas. As associações ouvidas por Mobile Time, Abes e Amobitec, alertam para riscos de aumento de custos, insegurança jurídica e impactos sobre investimentos, serviços e empresas de",
     "O BRB informou que mantém o atendimento a clientes e o pagamento de compromissos com depositantes e fornecedores, apesar de a CVM ter suspendido seu registro de companhia aberta, segundo o g1. A decisão foi divulgada nesta segunda-feira (23).",
     "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro.",
-    "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco."
+    "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco.",
+    "A Câmara dos Deputados aprovou a urgência para o projeto de ajuste fiscal do governo Lula, com impacto de R$ 50 bilhões até 2027. A proposta, de autoria do senador Jaques Wagner, visa conter gastos e cortar isenções tributárias. O PSOL, liderado por Tarcísio Motta, criticou o projeto, alegando que prejudica políticas sociais. O relator Mauro Benevi"
   ],
   "eventos_recentes": [
     {
@@ -2125,6 +2126,10 @@
     {
       "chave": "hapvida::GERAL_ATIVO",
       "ts": 1795477399.182074
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795479084.881142
     }
   ],
   "hashes_imagens": [
@@ -2381,6 +2386,7 @@
     "3482f48241370a6a",
     "5dde0f7e18d417b0",
     "c09786794cd207ae",
-    "46356439bd194f2a"
+    "46356439bd194f2a",
+    "a6dccc84a46cf63e"
   ]
 }
