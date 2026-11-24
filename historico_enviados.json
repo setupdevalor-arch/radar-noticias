@@ -1,12 +1,5 @@
 {
   "links": [
-    "59b0d03a2b7b2f4a",
-    "538a67fae634d5e8",
-    "1264d92c0eddce76",
-    "https://www.cnnbrasil.com.br/agro/producao-de-cafe-da-4/",
-    "7beeff3588d5172c",
-    "fac6168a0e9521d4",
-    "e437d836263492cc",
     "affbdc962ea3e42b",
     "e621e9ea09c6b162",
     "3732e747359a9b7f",
@@ -799,7 +792,14 @@
     "https://g1.globo.com/economia/noticia/2026/11/24/a-tempestade-perfeita-dentro-e-fora-do-brasil-que-fez-dolar-chegar-a-r-6.ghtml",
     "c0d2fb959d9886c9",
     "https://www.poder360.com.br/poder-economia/credito-em-atraso-bate-recorde-de-r-371-bi-no-brasil/",
-    "0b21da9e2505e1a9"
+    "0b21da9e2505e1a9",
+    "139cf221dfbdcb9e",
+    "ff6b09b5d158445b",
+    "6bed23d0ff27fc64",
+    "https://www.suno.com.br/noticias/rent3-norges-bank-reduz-participacao-localiza-241126/",
+    "8fa5dfa225684a69",
+    "https://www.infomoney.com.br/mercados/com-brasil-entre-destaques-na-producao-jpmorgan-projeta-petroleo-brent-a-us-65-em-2028/",
+    "01de5be847982cd9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1423,11 +1423,11 @@
     "Crimeia restringirá o fornecimento de eletricidade por 10 dias",
     "Sem reação adequada, Brasil pode viver recessão, diz ex-diretor do BC",
     "A tempestade perfeita (dentro e fora do Brasil) que fez dólar chegar a R$ 6",
-    "Crédito em atraso bate recorde de R$ 371 bi no Brasil"
+    "Crédito em atraso bate recorde de R$ 371 bi no Brasil",
+    "RENT3: Norges Bank reduz participação acionária na Localiza",
+    "Com Brasil entre destaques na produção, JPMorgan projeta petróleo a US$ 65 em 2028"
   ],
   "leads": [
-    "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global.",
-    "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais.",
     "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou.",
     "A recuperação econômica do Chile pode demorar mais, porque ainda não há sinais claros de retomada dos investimentos, afirmou a presidente do banco central do país, Rosanna Costa, em entrevista ao jornal El Mercurio publicada neste domingo.",
     "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
@@ -1675,7 +1675,9 @@
     "A península da Crimeia, no Mar Negro, passará por 10 dias de restrições no fornecimento de energia elétrica devido a trabalhos de \"resposta a emergências\", informou nesta terça-feira (24) o governador nomeado pela Rússia.",
     "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico.",
     "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
-    "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos"
+    "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos",
+    "A Localiza Rent a Car S.A. (RENT3 e RENT4; OTCQX: LZRFY) informou, em comunicado ao mercado datado de 23 de novembro de 2026, ter recebido correspondência do Norges Bank sobre alteração em sua participação acionária.",
+    "Apesar das guerras em curso no Oriente Médio e na Ucrânia, o mercado global de petróleo deverá voltar a conviver com um excesso de oferta nos próximos dois anos, pressionando os preços da commodity, segundo relatório de perspectivas para 2027 e 2028 de Natasha Kaneva, Lyuba Savinova e Artem Fakhretdinov, do JPMorgan."
   ],
   "eventos_recentes": [
     {
@@ -2297,11 +2299,17 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795521958.693367
+    },
+    {
+      "chave": "localiza::GERAL_ATIVO",
+      "ts": 1795522374.133599
+    },
+    {
+      "chave": "jpmorgan::GERAL_ATIVO",
+      "ts": 1795522374.133599
     }
   ],
   "hashes_imagens": [
-    "b41bcfbb3d13ccbb",
-    "0fa24b702cc5146d",
     "ccddaaa4f7ccc4cf",
     "5b953562eee71037",
     "d8c9a8fd058bd61c",
@@ -2599,6 +2607,8 @@
     "70750616c84e78c3",
     "13ba2b0325a0f59a",
     "f16d0b849916f192",
-    "7628deec4cc31898"
+    "7628deec4cc31898",
+    "2404d220ace67c05",
+    "1c97b6e850e795d6"
   ]
 }
