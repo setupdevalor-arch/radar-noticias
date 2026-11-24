@@ -1,10 +1,5 @@
 {
   "links": [
-    "4dce612514fd634e",
-    "c3adcbcaa48328cf",
-    "12e08022612976c4",
-    "https://www.poder360.com.br/poder-congresso/eduardo-braga-defende-mudanca-na-constituicao-para-novo-ajuste-fiscal/",
-    "55eee52d4d49325b",
     "https://www.moneytimes.com.br/precos-do-petroleo-caem-com-mercado-volatil-nesta-segunda-feira-fets/",
     "0cec9617cc3fa9f3",
     "15b1ec892b75ecba",
@@ -799,7 +794,12 @@
     "ecb7a411f3b07790",
     "dcc00ad04412ef7c",
     "https://megawhat.uol.com.br/conteudo-de-marca/com-30-anos-de-brasil-e-r-515-bilhoes-investidos-edp-mira-novo-ciclo-de-crescimento/",
-    "d793ef12b9046980"
+    "d793ef12b9046980",
+    "b1eee1b4eaa571f7",
+    "https://www.spacemoney.com.br/investimentos/acoes/anthropic-abaixo-preco-ipo/",
+    "9bd155d2d8f18e03",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/juros-futuros-recuam-com-exterior-e-aprovacao-de-ajuste-fiscal-na-camara/",
+    "85bc0b86f9645a78"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1446,11 +1446,11 @@
     "MDIA3: JPMorgan rebaixa M. Dias Branco para venda, corta preço-alvo e ação cai forte",
     "Ramadã antecipa compras e impulsiona agro para árabes",
     "Fundo imobiliário KNIP11 detalha dividendos e impacto do IPCA; confira",
-    "Com 30 anos de Brasil e R$ 51,5 bilhões investidos, EDP mira novo ciclo de crescimento"
+    "Com 30 anos de Brasil e R$ 51,5 bilhões investidos, EDP mira novo ciclo de crescimento",
+    "Papéis da Anthropic recuam para menos de US$ 83 na Nasdaq",
+    "Juros futuros recuam com exterior e aprovação de ajuste fiscal na Câmara"
   ],
   "leads": [
-    "O governo enfrenta um quadro desafiador nesta semana decisiva para a economia em 2027. A Câmara votará o pacote de medidas fiscais para tentar reduzir o gasto público em até R$ 60 bilhões no ano que vem. O mercado reagiu negativamente, pois considerou o número insuficiente, e o dólar está ao redor de R$ 6. Do outro lado, parte da base do governo re",
-    "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
     "Voos da Petrobras e invasões mudam rotina, mas euro e ouro valem mais que petróleo em Oiapoque",
     "Juros altos, endividamento e entraves tributários e logísticos dificultam a expansão do setor, segundo a Associação Brasileira de Empresas de Vendas Diretas",
     "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria",
@@ -1698,7 +1698,9 @@
     "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
     "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027.",
     "O KNIP11 é um fundo imobiliário que concentra seus investimentos em títulos de crédito corrigidos pela inflação, somando patrimônio líquido de R$ 7,52 bilhões em outubro de 2026. Administrado pela Intrag e gerido ativamente pela Kinea Investimentos desde 2016, o fundo distribui rendimentos mensais a investidores qualificados, com resultados sensíve",
-    "Com R$ 51,5 bilhões investido desde sua chegada ao Brasil, em 1996, a EDP completa 30 anos de atuação no país com uma estratégia de crescimento voltada à expansão em transmissão, à modernização das redes de distribuição e às oportunidades com a liberalização do mercado de energia."
+    "Com R$ 51,5 bilhões investido desde sua chegada ao Brasil, em 1996, a EDP completa 30 anos de atuação no país com uma estratégia de crescimento voltada à expansão em transmissão, à modernização das redes de distribuição e às oportunidades com a liberalização do mercado de energia.",
+    "As ações da Anthropic ficaram abaixo dos US$ 83 definidos em seu IPO no pré-mercado desta terça-feira (24), segundo o g1. Os papéis recuavam 6,5%, a US$ 82, no quinto dia de negociação desde a estreia na Nasdaq.",
+    "A curva de juros perde levemente a inclinação na manhã desta terça-feira (24), com recuo dos médios e longos, enquanto os curtos rondam a estabilidade."
   ],
   "eventos_recentes": [
     {
@@ -2360,11 +2362,17 @@
     {
       "chave": "knip11::PROVENTOS",
       "ts": 1795527914.198134
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795528650.961963
+    },
+    {
+      "chave": "rf_credito_juros::RF_EVENTO",
+      "ts": 1795528650.961963
     }
   ],
   "hashes_imagens": [
-    "350f6b95bd901450",
-    "30392c677a647f79",
     "fd9f8a0239cfe0e7",
     "818cd9271396305b",
     "8e48fd00a4467f3d",
@@ -2662,6 +2670,8 @@
     "630c626dc7363410",
     "b2616f0753d32ccd",
     "88db50089c66543d",
-    "f50d7e854c6608ec"
+    "f50d7e854c6608ec",
+    "5cd585917e161486",
+    "2e8ca3d95e792e20"
   ]
 }
