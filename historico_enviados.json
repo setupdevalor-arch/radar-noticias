@@ -1,7 +1,5 @@
 {
   "links": [
-    "2f12aa6e1016ae0b",
-    "5c43e44a845f1ffd",
     "https://www.infomoney.com.br/economia/chile-tem-maior-tombo-do-pib-desde-2020-e-bc-ve-recuperacao-mais-lenta/",
     "84efc0bcdbcb5942",
     "https://www.spacemoney.com.br/agronegocio/fertilizantes-importacao-agro/",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/mercados/rd-saude-radl3-aprova-recompra-de-ate-r-600-milhoes-de-acoes/",
     "055276f7601ed72d",
     "https://www.infomoney.com.br/mercados/prio-aprova-cisao-parcial-com-transferencia-de-r-5438-milhoes-em-patrimonio/",
-    "ee13b7e9fc93432a"
+    "ee13b7e9fc93432a",
+    "https://agenciainfra.com/blog/energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil",
+    "ae9f575b6c310936"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1406,10 +1406,10 @@
     "PetroReconcavo (RECV3) pagará R$ 100 milhões em dividendos em dezembro",
     "Sanofi compra Insmed por US$ 41 bilhões",
     "RD Saúde (RADL3) aprova recompra de até R$ 600 milhões de ações",
-    "PRIO aprova cisão parcial com transferência de R$ 543,8 milhões em patrimônio"
+    "PRIO aprova cisão parcial com transferência de R$ 543,8 milhões em patrimônio",
+    "Energia que conecta o futuro: a trajetória da EDP em três décadas de Brasil"
   ],
   "leads": [
-    "A Black Friday de 2026 pode registrar o melhor faturamento do varejo brasileiro desde 2014, com uma movimentação estimada em R$ 11,52 bilhões. A projeção é da CNC (Confederação Nacional do Comércio de Bens, Serviços e Turismo) e foi divulgada no dia 12 de novembro.",
     "Uma pesquisa do BofA (Bank of America) revelou que os investidores diminuíram sua exposição em ações de tecnologia no ritmo mais forte dos últimos 20 anos. O movimento ocorre em meio ao receio de uma possível desaceleração nos gastos com data centers e ao risco de uma bolha de inteligência artificial.",
     "O Reino Unido uniu-se a outras dez nações na assinatura da iniciativa Starlift, coordenada pela Organização do Tratado do Atlântico Norte (Otan), com o objetivo de estruturar uma rede flexível de serviços para o lançamento de satélites, informaram o Ministério da Defesa e o Departamento de Negócios, Inovação, Ciência e Comércio britânicos em comuni",
     "O Reino Unido e mais dez nações formalizaram neste sábado (22), em Bruxelas, a Starlift, iniciativa coordenada pela Otan para montar uma malha adaptável de transporte orbital de satélites, com fornecedores comerciais e infraestrutura espalhada entre aliados. De acordo com a Estadão Conteúdo, o objetivo é assegurar lançamentos rápidos, seguros e eco",
@@ -1658,7 +1658,8 @@
     "A PetroReconcavo (RECV3) informou que, a 1ª parcela dos dividendos anunciados em dezembro do ano passado, no montante de R$ 100 milhões, será paga em 10 de dezembro de 2026.",
     "A Sanofi vai comprar a Insmed por US$ 41 bilhões, em um acordo que, segundo a CNBC, é o maior do setor farmacêutico desde 2023. A empresa pagará US$ 175 por ação em dinheiro e ficará com dois medicamentos respiratórios já comercializados e uma linha de candidatos experimentais.",
     "O Conselho de Administração da RD Saúde (RADL3) aprovou programa de recompra de até R$ 600 milhões de ações de emissão da companhia.",
-    "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda."
+    "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
+    "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização."
   ],
   "eventos_recentes": [
     {
@@ -2555,6 +2556,7 @@
     "89c46a7f7dc2b4e6",
     "7efd8b17a03c68c6",
     "e8271550418f2692",
-    "102c937c8ff0d21f"
+    "102c937c8ff0d21f",
+    "3642ed7bf1ff66ab"
   ]
 }
