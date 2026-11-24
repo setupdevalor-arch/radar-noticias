@@ -1,15 +1,5 @@
 {
   "links": [
-    "7e5ddad23a734594",
-    "d21c01ffff4c43c4",
-    "5f53af6f48072b76",
-    "a48ed42d91b916c9",
-    "487f737ed3c09e1c",
-    "https://www.poder360.com.br/poder-economia/dolar-digital-chega-a-r-615-em-negociacao-neste-domingo/",
-    "55616bbb144767a9",
-    "e86481b5da6241fc",
-    "e78eb36001faff2f",
-    "e55b81cbd76bd306",
     "0860b6fbe8eecd6e",
     "1908eb815dc24f7c",
     "a384413dd75b7a91",
@@ -799,7 +789,17 @@
     "https://www.spacemoney.com.br/economia/macroeconomia/bancos-de-alimentos-eua-demanda-acima-pandemia/",
     "b7f8cecf38f5e26c",
     "https://investnews.com.br/investimentos/tesouro-direto-taxas-rendimento-hoje-recuo-prefixados-24112026/",
-    "8808ec49befe536b"
+    "8808ec49befe536b",
+    "2b85e60d1cfbcb00",
+    "cf0d40f502318f74",
+    "59e4814c29dc66cc",
+    "d02fda09e34174f7",
+    "https://megawhat.uol.com.br/economia-e-politica/negocios/vale-assume-hidreletrica-da-coteminas-em-minas-gerais/",
+    "52dac49e770acd10",
+    "https://www.seudinheiro.com/2026/economia/primeira-parcela-do-13o-salario-deve-ser-paga-pelas-empresas-ate-30-de-novembro-atrasos-podem-gerar-multa-mlem/",
+    "9305a2ed5973b1df",
+    "https://www.suno.com.br/noticias/eqtl3-cppib-eleva-participacao-para-5/",
+    "f638aa2948cf97a3"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1436,12 +1436,12 @@
     "COP31: Geopolítica e agenda desalinhada ajudaram no fracasso, diz diretora",
     "Adobe e Google levam Acrobat ao Drive e Photoshop ao Gemini",
     "Bancos de alimentos dos EUA veem demanda superar pandemia",
-    "Tesouro Direto hoje: taxas recuam em todos os títulos, mas prefixados seguem acima de 15%"
+    "Tesouro Direto hoje: taxas recuam em todos os títulos, mas prefixados seguem acima de 15%",
+    "Vale assume hidrelétrica da Coteminas em Minas Gerais",
+    "Primeira parcela do 13º salário deve ser paga pelas empresas até 30 de novembro; atrasos podem gerar multa",
+    "EQTL3: CPPIB eleva fatia na Equatorial para cerca de 5%"
   ],
   "leads": [
-    "Pela segunda vez neste ano, banqueiros e advogados de Wall Street receberam um pagamento astronômico após uma IPO (oferta pública inicial) recorde. E, pela segunda vez neste ano, alguns deles reclamaram em particular sobre como o processo foi repleto de complicações e diferente de tudo que já haviam vivenciado.",
-    "O InvestNews informa que o mercado vê probabilidade total de o Federal Reserve subir os juros na reunião que se encerra em 9 de dezembro. A ferramenta FedWatch, da CME, indica 94% de chance de alta de 0,25 ponto percentual e 6% de 0,50 ponto. Dirigentes que se pronunciaram defendem um novo aperto, enquanto o presidente Kevin Warsh evita sinalizar o",
-    "Banco trabalha com cenários bastante diferentes para a economia global e destaca renda fixa, commodities, moedas e investimentos alternativos na estratégia de diversificação",
     "Binance sofre ataque hacker histórico de US$ 6,3 bilhões e suspende saques temporariamente",
     "A produção de café da Colômbia deve se recuperar na safra 2026/27, que teve início em outubro, com uma previsão de aumento de 5,9%, para 13,4 milhões de sacas de 60 kg, de acordo com um relatório do USDA (Departamento de Agricultura dos Estados Unidos).",
     "Uma explosão a bordo de um navio russo atracado na base naval de Benghazi, no leste da Líbia, foi causada por um suposto ataque com drone, informou neste domingo o governo sediado no leste do país, com base em uma investigação preliminar.",
@@ -1688,7 +1688,10 @@
     "O resultado da COP31, realizada em Antália, na Turquia, foi considerado frustrante por especialistas em clima e energia. Ao WW, Fernanda Monteiro, diretora técnica de Clima e Energia do CEBDS (Congresso Sustentável do Conselho Empresarial Brasileiro para o Desenvolvimento Sustentável), analisou os principais fatores que contribuíram para o insucess",
     "O Google e a Adobe revelaram uma expansão de sua parceria que coloca o Acrobat dentro do Drive e do Gmail e adiciona funções do Photoshop ao Gemini. O anúncio foi feito em 10 de novembro, no Adobe MAX.",
     "Bancos de alimentos dos Estados Unidos estão registrando procura superior aos níveis observados no auge da pandemia de Covid-19, e boa parte das pessoas atendidas atualmente tem emprego formal, segundo reportagem da CNBC. O quadro é descrito por entidades que atuam em Nova York, Los Angeles e Atlanta.",
-    "O pacote combina o bloqueio de gastos com iniciativas para aumentar a arrecadação, como redução de renúncias tributárias."
+    "O pacote combina o bloqueio de gastos com iniciativas para aumentar a arrecadação, como redução de renúncias tributárias.",
+    "A Vale adquiriu a participação de 33,33% detida pela Coteminas, em recuperação judicial, no consórcio da hidrelétrica Porto Estrela, localizada entre os municípios de Braúnas, Joanésia e Açucena, em Minas Gerais. A operação envolve a transferência integral da fatia da Coteminas no empreendimento para a mineradora e foi aprovada pelo Conselho Admini",
+    "Empresas e órgãos públicos têm até a próxima segunda-feira (30) para pagar a primeira parcela do décimo terceiro salário de 2026; atrasos podem gerar multa ao empregador",
+    "A Equatorial S.A. (EQTL3) comunicou ao mercado, em 23 de novembro de 2026, que recebeu correspondência da Canada Pension Plan Investment Board informando o aumento de sua participação acionária na companhia."
   ],
   "eventos_recentes": [
     {
@@ -2330,12 +2333,17 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795525081.518932
+    },
+    {
+      "chave": "vale::EVENTO_CORP",
+      "ts": 1795525550.040501
+    },
+    {
+      "chave": "equatorial::GERAL_ATIVO",
+      "ts": 1795525550.040501
     }
   ],
   "hashes_imagens": [
-    "aad66a937d99a723",
-    "3063c577ca9e14e6",
-    "9e561741920dddfd",
     "0fdb4288838ec9f0",
     "080825ac0b53eed5",
     "7d797ee5ffc86c29",
@@ -2632,6 +2640,9 @@
     "0c7a702a1cd86a22",
     "d8b363627807a9bb",
     "bd0e7246c5330c7c",
-    "8addd5cc69c8287d"
+    "8addd5cc69c8287d",
+    "a0d91f9f5e39eef7",
+    "97c5fe77978363f4",
+    "90cd0ee10d6c144b"
   ]
 }
