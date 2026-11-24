@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.estadao.com.br/economia/cvm-suspende-registro-brb-refit-ambipar-falta-informacoes/",
-    "292e22a313cbc217",
     "https://www.infomoney.com.br/mundo/kremlin-desmente-midia-alema-sobre-lancamento-de-satelite-russo-com-armamento-nuclear/",
     "988962cb54474393",
     "ca2f88ba51329a9c",
@@ -799,7 +797,9 @@
     "https://www.suno.com.br/noticias/fundo-imobiliario-goias-ganho-1-bilhao/",
     "abc607e597946b48",
     "https://www.spacemoney.com.br/investimentos/acoes/vale-cai-5-43-minerio-fraco-custos-dividendos/",
-    "dd717fe8508e05a5"
+    "dd717fe8508e05a5",
+    "https://www.infomoney.com.br/mercados/braskem-brkm5-cai-apos-forte-alta-com-acordo-que-pode-diluir-atuais-acionistas/",
+    "25f00331e13c627f"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1505,10 +1505,10 @@
     "TRXF11 e HGRU11: dividendos e vacância em foco",
     "Por que a Vale (VALE3) caiu mais de 5% nesta terça?",
     "Fundo imobiliário estadual de Goiás mira ganho de R$ 1 bilhão",
-    "Vale cai 5,43% com minério fraco e dividendos em xeque"
+    "Vale cai 5,43% com minério fraco e dividendos em xeque",
+    "Braskem (BRKM5) cai 14% após forte alta com acordo que pode diluir atuais acionistas"
   ],
   "leads": [
-    "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
     "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global.",
     "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia.",
     "A CrowdStrike registrou lucro líquido de US$ 24,9 milhões no terceiro trimestre do ano fiscal de 2027, encerrado em outubro, revertendo prejuízo de US$ 26,8 milhões apurado no mesmo período do ano anterior. O lucro ajustado foi de US$ 354,9 milhões, ou US$ 0,34 por ação, acima dos US$ 0,31 por ação esperados por analistas consultados pela FactSet.",
@@ -1757,7 +1757,8 @@
     "Segundo a Suno Notícias, TRXF11 e HGRU11, fundos de renda urbana da B3, tiveram seus indicadores comparados com dados de outubro de 2026. A base somava 601 mil cotistas e PL combinado que superava R$ 12 bilhões. A SpaceMoney não apurou a notícia.",
     "As ações da Vale fecharam em forte queda nesta terça-feira, recuando mais de 5%, em meio a uma combinação de fatores que vão desde a deterioração das perspectivas para o minério de ferro até preocupações com custos operacionais, geração de caixa, dividendos e revisões negativas de analistas para a companhia. Os papéis da companhia fecharam com perd",
     "O governo de Goiás avança na estruturação de um fundo imobiliário para monetizar imóveis públicos, em parceria com as gestoras Rio Bravo e HGI Capital. A expectativa é que os primeiros negócios com investidores privados sejam fechados até junho de 2027, elevando o patrimônio estadual em até R$ 1 bilhão.",
-    "As ações da Vale (VALE3) encerraram o pregão desta terça-feira com desvalorização de 5,43%, cotadas a R$ 55,24, sob o peso de um conjunto de vetores que atinge pilares centrais da tese de investimento da mineradora — do enfraquecimento do minério de ferro a custos operacionais mais elevados, passando por incertezas sobre geração de caixa, política "
+    "As ações da Vale (VALE3) encerraram o pregão desta terça-feira com desvalorização de 5,43%, cotadas a R$ 55,24, sob o peso de um conjunto de vetores que atinge pilares centrais da tese de investimento da mineradora — do enfraquecimento do minério de ferro a custos operacionais mais elevados, passando por incertezas sobre geração de caixa, política ",
+    "As ações da Braskem (BRKM5) recuaram nesta terça-feira (24), devolvendo parte da forte valorização da sessão anterior, quando subiram quase 12% com a perspectiva de um acordo para reestruturar as dívidas da companhia. Apesar do avanço nas negociações com credores, a avaliação do Bradesco BBI aponta um possível custo elevado para os atuais acionista"
   ],
   "eventos_recentes": [
     {
@@ -2527,10 +2528,13 @@
     {
       "chave": "vale::PROVENTOS",
       "ts": 1795555573.034678
+    },
+    {
+      "chave": "braskem::GERAL_ATIVO",
+      "ts": 1795556298.089843
     }
   ],
   "hashes_imagens": [
-    "821f5e92da6e3bf2",
     "a254393777ad3e24",
     "a5edc42315feede0",
     "b6cae3ac334a330b",
@@ -2829,6 +2833,7 @@
     "816d9d2a7adc4e71",
     "b7cd3466ed744532",
     "edccccd59b95a6d4",
-    "b5ebba9ef9d3ac38"
+    "b5ebba9ef9d3ac38",
+    "ace08cf6d3cdb461"
   ]
 }
