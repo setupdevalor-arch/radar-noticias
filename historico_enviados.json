@@ -1,7 +1,5 @@
 {
   "links": [
-    "79fd3a6b6c3c09de",
-    "cfcf987b58034bfa",
     "https://www.cnnbrasil.com.br/internacional/espioes-usam-vagas-de-trabalho-falsas-para-conseguir-informacoes-dos-eua/",
     "44219ea09d6cf26f",
     "https://www.cnnbrasil.com.br/economia/money/negocios/crowdstrike-aposta-na-seguranca-de-rede-em-acordo-de-us-43-bi-com-zscaler/",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/investimentos/criptomoedas/blackrock-fundo-tokenizado-stablecoin-hong-kong/",
     "643d5affcfca12ee",
     "https://www.moneytimes.com.br/xp-e-b3-podem-ter-um-2027-mais-dificil-safra-rebaixa-acoes-e-corta-preco-alvo-confira-miql/",
-    "d9eab6f643d84dff"
+    "d9eab6f643d84dff",
+    "https://eixos.com.br/gas-natural/biogas/gas-verde-recebe-certificacao-da-anp-para-emitir-cgobs-na-planta-de-seropedica-rj/",
+    "a5920a28cf60b291"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1489,10 +1489,10 @@
     "Após retomar investimentos, Petrobras buscará novas empresas de etanol",
     "Alibaba reduz previsão de crescimento na nuvem após restrições dos EUA",
     "BlackRock usa stablecoin em fundo tokenizado em Hong Kong",
-    "XP (XPBR31) e B3 (B3SA3) podem ter um 2027 mais difícil: Safra rebaixa ações e corta preço-alvo; confira"
+    "XP (XPBR31) e B3 (B3SA3) podem ter um 2027 mais difícil: Safra rebaixa ações e corta preço-alvo; confira",
+    "Gás Verde recebe certificação da ANP para emitir CGOBs na planta de Seropédica (RJ)"
   ],
   "leads": [
-    "O mercado imobiliário dos Estados Unidos entrou em um período de paralisia depois que as taxas de financiamento dispararam em setembro, segundo a CNBC. A taxa média do crédito imobiliário de 30 anos, o mais usado no país, girava em torno de 6,60% em julho e chegou a 7,61% no início de outubro, uma alta de um ponto percentual completo, conforme dado",
     "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
     "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026.",
     "A Porto Seguro (PSSA3) realizará no dia 27 de novembro de 2026 o pagamento dos dividendos adicionais aprovados na Assembleia Geral Ordinária e Extraordinária da companhia.",
@@ -1741,7 +1741,8 @@
     "A Petrobras deverá buscar aquisições de outras participações de usinas de etanol de milho, à medida que quer expandir sua atuação em renováveis e vê sinergias em matérias-primas para a produção de outros combustíveis sustentáveis, como o SAF para o setor de aviação, disseram três fontes com conhecimento do assunto nesta terça-feira.",
     "Crescimento da receita com serviços em nuvem deverá desacelerar para 30% a 45% em 2027, ante 53% no 3º trimestre de 2026",
     "O Cointelegraph informou que a BlackRock estreou na Ásia-Pacífico um fundo tokenizado de liquidez em dólar de Hong Kong, com aplicações e retiradas que podem ser feitas por stablecoin. O South China Morning Post é citado como fonte do relato.",
-    "O Safra rebaixou nesta terça-feira (24) as recomendações para as ações da B3 (B3SA3) e da XP (XPBR31) para neutra, em meio à perspectiva de um mercado de capitais menos favorável em 2027."
+    "O Safra rebaixou nesta terça-feira (24) as recomendações para as ações da B3 (B3SA3) e da XP (XPBR31) para neutra, em meio à perspectiva de um mercado de capitais menos favorável em 2027.",
+    "A Gás Verde recebeu, nesta terça-feira (24/11), a certificação da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) para emissão de Certificado de Garantia de Origem do Biometano (CGOB) na planta de Seropédica (RJ)."
   ],
   "eventos_recentes": [
     {
@@ -2451,10 +2452,13 @@
     {
       "chave": "b3::GERAL_ATIVO",
       "ts": 1795548243.369572
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795548607.56983
     }
   ],
   "hashes_imagens": [
-    "70f36f2a13c6a2c6",
     "663717983500b29d",
     "76899cc7a5780733",
     "afa582d4cdede1f7",
@@ -2753,6 +2757,7 @@
     "a8cc74ad406cb88a",
     "43dd069fa499b89e",
     "7e8f1068dcb8b677",
-    "a134a1b3f41ff715"
+    "a134a1b3f41ff715",
+    "24a126b00872754c"
   ]
 }
