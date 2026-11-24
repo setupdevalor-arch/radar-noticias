@@ -1,10 +1,5 @@
 {
   "links": [
-    "e892e38d40e1cadc",
-    "https://www.spacemoney.com.br/economia/macroeconomia/ajuste-fiscal-petrobras-agenda-mercado/",
-    "85e56622fd3180cb",
-    "https://www.spacemoney.com.br/educacao-financeira/black-friday-planejamento-financeiro-dividas/",
-    "d9abb830e81a0d8d",
     "https://www.seudinheiro.com/2026/empresas/ceo-da-smart-fit-smft3-revela-a-estrategia-por-tras-do-crescimento-do-totalpass-foi-uma-decisao-muito-correta-lmrs/",
     "317cf422184cfe24",
     "b48ff62c6e2b583e",
@@ -799,7 +794,12 @@
     "https://www.spacemoney.com.br/economia/11-11-e-commerce-brasileiro/",
     "70a81a90d829e810",
     "https://www.cnnbrasil.com.br/economia/money/mercado/reputacao-na-ue-e-em-ias-define-disputa-por-negocios-do-brasil/",
-    "c5b036260574b5f1"
+    "c5b036260574b5f1",
+    "9bf7bde9046a72b5",
+    "2e50aa21fe2118bf",
+    "dc6394192ab13b37",
+    "b78c8d5ad1f6815c",
+    "e101199af7342a01"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1713,10 +1713,6 @@
     "Entre 2023 e 2025, o Brasil ficou em quinto lugar nas importações totais da União Europeia dentro de um grupo de 11 nações estratégicas comparadas, somando 264,4 bilhões de euros. Ainda assim, um estudo elaborado pela Kreab Consultoria Global, junto à Smart, sua representante no Brasil, aponta que o desafio brasileiro agora é transformar capacidade"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795360728.044644
-    },
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795361702.727815
