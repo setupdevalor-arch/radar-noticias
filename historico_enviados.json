@@ -1,7 +1,5 @@
 {
   "links": [
-    "2160cd5dd7d97290",
-    "https://www.suno.com.br/noticias/ltbx11-como-funciona-etf-renda-fixa-gss/",
     "9ebf11ed35b0a290",
     "ecd1fc84264e8ea0",
     "80cbf6860f9a9028",
@@ -799,7 +797,9 @@
     "https://www.estadao.com.br/economia/receita-federal-arrecadacao-outubro-2026-sobe-recorde/",
     "ca7848a7c277bb6e",
     "https://www.cnnbrasil.com.br/agro/exportacoes-do-setor-de-arvores-cultivadas-crescem-24-ate-setembro/",
-    "18b1b368e03c8497"
+    "18b1b368e03c8497",
+    "https://www.spacemoney.com.br/investimentos/etfs/bdvd39-proventos-mensais-12-meses/",
+    "0a8a8d23cece13d9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1478,10 +1478,10 @@
     "Megaspeed pode entrar em lista de restrições dos EUA",
     "Ação da Petrobras sobe com dividendos extras, apesar de cautela com capex maior",
     "Arrecadação em outubro sobe 7,3%, alcança R$ 294 bilhões e bate recorde para o mês",
-    "Exportações do setor de árvores cultivadas crescem 2,4% até setembro"
+    "Exportações do setor de árvores cultivadas crescem 2,4% até setembro",
+    "BDVD39 paga 4,2% em proventos em 12 meses"
   ],
   "leads": [
-    "A semana começa com o mercado dividido entre a votação do projeto de ajuste fiscal na Câmara dos Deputados, o novo Plano de Negócios da Petrobras e uma agenda densa de indicadores domésticos e externos. Segundo apurou o InfoMoney, a sessão desta segunda-feira (23) também reserva o Relatório Focus, o Boletim Macrofiscal, dados da balança comercial e",
     "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev",
     "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias",
     "O Chile se prepara para o verão austral com todo o território sob risco alto de incêndios florestais, segundo o mapa de alerta precoce da Corporação Nacional Florestal (Conaf). A combinação de temperaturas previstas acima de 40°C em algumas regiões, ventos quentes associados ao El Niño e grande volume de vegetação seca criou um cenário que a direto",
@@ -1730,7 +1730,8 @@
     "Os Estados Unidos preparam a inclusão da Megaspeed, fabricante de chips sediada em Cingapura, em sua relação de restrições comerciais. A informação é atribuída a uma fonte. Com isso, fornecedores dos EUA passariam a precisar de licença para entregar produtos, softwares ou tecnologia à companhia. Na prática, porém, essas autorizações são pouco conce",
     "– As ações da Petrobras (PETR3;PETR4) subiam nesta terça-feira após a companhia publicar na véspera seu plano de negócios ‌para o período de 2027 a 2031 com investimentos mais elevados do que esperado nos primeiros anos, enquanto inesperados dividendos extraordinários trouxeram algum alívio ao ‌mercado.",
     "BRASÍLIA - A arrecadação de impostos e contribuições federais somou R$ 293,975 bilhões em outubro, informou a Receita Federal nesta terça-feira, 24.",
-    "As exportações do setor brasileiro de árvores cultivadas para fins industriais somaram US$ 11,6 bilhões entre janeiro e setembro de 2026, alta de 2,4% em relação ao mesmo período do ano passado."
+    "As exportações do setor brasileiro de árvores cultivadas para fins industriais somaram US$ 11,6 bilhões entre janeiro e setembro de 2026, alta de 2,4% em relação ao mesmo período do ano passado.",
+    "Segundo a Suno Notícias, o BDVD39, BDR de ETF negociado na B3 que reúne 50 ações americanas de alto pagamento de dividendos, distribui proventos mensalmente, mas o rendimento efetivo recebido pelos investidores brasileiros ficou em 4,2% nos 12 meses analisados. O dado consta em relatório da Eleven Financial Research assinado por Fernando Siqueira, "
   ],
   "eventos_recentes": [
     {
@@ -2412,10 +2413,13 @@
     {
       "chave": "petrobras::PROVENTOS",
       "ts": 1795539583.649242
+    },
+    {
+      "chave": "bdvd39::PROVENTOS",
+      "ts": 1795540541.63056
     }
   ],
   "hashes_imagens": [
-    "b8429e74134ffe09",
     "866659c03b874ec1",
     "f47eef044f4647d3",
     "9b07ee72568f7974",
@@ -2714,6 +2718,7 @@
     "67acd07f6e9653d5",
     "9244c57d21832f05",
     "af33d7ce28884670",
-    "745da96a0c1e0b6d"
+    "745da96a0c1e0b6d",
+    "9328899d5dff804f"
   ]
 }
