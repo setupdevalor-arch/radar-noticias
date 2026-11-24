@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/politica/alem-do-pacote-fiscal-veja-pautas-economicas-que-governo-tenta-aprovar-ate-dezembro/",
-    "43a40d5d36d701aa",
-    "https://valorinveste.globo.com/objetivo/organize-as-contas/noticia/2026/11/23/13o-salario-vai-cair-na-conta-veja-o-que-fazer-com-dinheiro-para-comecar-2027-no-azul.ghtml",
-    "83d39986cb6258bc",
-    "a14f6ee30a864e1d",
-    "https://megawhat.uol.com.br/regulacao/leiloes-de-baterias-tem-inscricoes-prorrogadas-ate-esta-segunda/",
     "2160cd5dd7d97290",
     "https://www.suno.com.br/noticias/ltbx11-como-funciona-etf-renda-fixa-gss/",
     "9ebf11ed35b0a290",
@@ -799,7 +793,13 @@
     "https://www.spacemoney.com.br/tecnologia/eua-megaspeed-restricoes-comerciais/",
     "b93999139dc323d4",
     "https://www.infomoney.com.br/mercados/petr4-acao-da-petrobras-sobe-com-dividendos-extras-apesar-de-cautela-com-capex-maior/",
-    "f8c0abb668dd9fdb"
+    "f8c0abb668dd9fdb",
+    "8e29f71a45dd2b6a",
+    "b86e2c735b74cf57",
+    "https://www.estadao.com.br/economia/receita-federal-arrecadacao-outubro-2026-sobe-recorde/",
+    "ca7848a7c277bb6e",
+    "https://www.cnnbrasil.com.br/agro/exportacoes-do-setor-de-arvores-cultivadas-crescem-24-ate-setembro/",
+    "18b1b368e03c8497"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1476,11 +1476,11 @@
     "Análise: Jensen Huang é um exemplo ambulante de risco moral",
     "COP31 termina sem acordo político amplo, e XP vê mudança no foco dos investidores em ESG",
     "Megaspeed pode entrar em lista de restrições dos EUA",
-    "Ação da Petrobras sobe com dividendos extras, apesar de cautela com capex maior"
+    "Ação da Petrobras sobe com dividendos extras, apesar de cautela com capex maior",
+    "Arrecadação em outubro sobe 7,3%, alcança R$ 294 bilhões e bate recorde para o mês",
+    "Exportações do setor de árvores cultivadas crescem 2,4% até setembro"
   ],
   "leads": [
-    "É um insanidade um país que ainda tem grande concentração de renda e quase 25% da população abaixo da linha de pobreza, torrar mais de um R$ 1 trilhão por ano com os juros da dívida pública. Isso não significa que o país deva deixar a inflação subir livremente, muito menos que os cortes de despesas públicas devam ocorrer nos programas sociais e no ",
-    "As bolsas asiáticas fecharam sem direção única nesta segunda-feira (23), enquanto reguladores e operadores de mercado da China, da Coreia do Sul e de Taiwan reforçaram medidas para conter a turbulência provocada pela onda global de vendas de ações ligadas à inteligência artificial (IA).",
     "A semana começa com o mercado dividido entre a votação do projeto de ajuste fiscal na Câmara dos Deputados, o novo Plano de Negócios da Petrobras e uma agenda densa de indicadores domésticos e externos. Segundo apurou o InfoMoney, a sessão desta segunda-feira (23) também reserva o Relatório Focus, o Boletim Macrofiscal, dados da balança comercial e",
     "Quem imagina a Black Friday como uma máquina automática de economia pode terminar a temporada com o orçamento mais apertado do que antes. Levantamentos citados por planejadores consultados pelo InfoMoney mostram um consumidor dividido: parte relevante admite recorrer a crédito para aproveitar ofertas, enquanto outra parcela tenta impor limites e ev",
     "Diogo Corona falou ao Seu Dinheiro sobre a estratégia e critérios de expansão do agregador de academias",
@@ -1728,7 +1728,9 @@
     "\"Com a situação se tornando mais precária a cada dia, enfrentei uma escolha: agir de forma decisiva ou ficar de braços cruzados e permitir que as ações irresponsáveis de alguns comprometessem a segurança financeira de todos.\"",
     "As principais divergências da conferência envolveram o futuro dos combustíveis fósseis, o financiamento climático e os caminhos para a transição energética",
     "Os Estados Unidos preparam a inclusão da Megaspeed, fabricante de chips sediada em Cingapura, em sua relação de restrições comerciais. A informação é atribuída a uma fonte. Com isso, fornecedores dos EUA passariam a precisar de licença para entregar produtos, softwares ou tecnologia à companhia. Na prática, porém, essas autorizações são pouco conce",
-    "– As ações da Petrobras (PETR3;PETR4) subiam nesta terça-feira após a companhia publicar na véspera seu plano de negócios ‌para o período de 2027 a 2031 com investimentos mais elevados do que esperado nos primeiros anos, enquanto inesperados dividendos extraordinários trouxeram algum alívio ao ‌mercado."
+    "– As ações da Petrobras (PETR3;PETR4) subiam nesta terça-feira após a companhia publicar na véspera seu plano de negócios ‌para o período de 2027 a 2031 com investimentos mais elevados do que esperado nos primeiros anos, enquanto inesperados dividendos extraordinários trouxeram algum alívio ao ‌mercado.",
+    "BRASÍLIA - A arrecadação de impostos e contribuições federais somou R$ 293,975 bilhões em outubro, informou a Receita Federal nesta terça-feira, 24.",
+    "As exportações do setor brasileiro de árvores cultivadas para fins industriais somaram US$ 11,6 bilhões entre janeiro e setembro de 2026, alta de 2,4% em relação ao mesmo período do ano passado."
   ],
   "eventos_recentes": [
     {
@@ -2413,8 +2415,6 @@
     }
   ],
   "hashes_imagens": [
-    "6087205fab1edb01",
-    "ae9ad758422bad1b",
     "b8429e74134ffe09",
     "866659c03b874ec1",
     "f47eef044f4647d3",
@@ -2712,6 +2712,8 @@
     "ac03f63bd592d33e",
     "8b317a287717e568",
     "67acd07f6e9653d5",
-    "9244c57d21832f05"
+    "9244c57d21832f05",
+    "af33d7ce28884670",
+    "745da96a0c1e0b6d"
   ]
 }
