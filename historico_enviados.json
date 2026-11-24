@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/agronegocio/fertilizantes-importacao-agro/",
-    "fbbda2654b9a2ca2",
-    "https://www.infomoney.com.br/business/global/espioes-chips-e-a-nvidia-a-campanha-secreta-da-china-para-driblar-os-eua/",
-    "82ee7a745a371054",
     "300dc1882ef48d34",
     "aee31d451473db43",
     "073811cb9d95f0cb",
@@ -799,7 +795,11 @@
     "https://agenciainfra.com/blog/energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil",
     "ae9f575b6c310936",
     "a02162128b60d4a0",
-    "055571aacdd0c391"
+    "055571aacdd0c391",
+    "https://www.estadao.com.br/economia/negocios/braskem-prorrogacao-apresentar-plano-recuperacao-extrajudicial/",
+    "9ff91aef7d7a4490",
+    "https://cqcs.com.br/noticia/seguro-garantia-agora-suspende-a-exigibilidade-do-credito-tributario/",
+    "9c59ec3d53d254a2"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1407,11 +1407,11 @@
     "Sanofi compra Insmed por US$ 41 bilhões",
     "RD Saúde (RADL3) aprova recompra de até R$ 600 milhões de ações",
     "PRIO aprova cisão parcial com transferência de R$ 543,8 milhões em patrimônio",
-    "Energia que conecta o futuro: a trajetória da EDP em três décadas de Brasil"
+    "Energia que conecta o futuro: a trajetória da EDP em três décadas de Brasil",
+    "Braskem pede prorrogação de 20 dias para apresentar plano de recuperação extrajudicial",
+    "Seguro garantia agora suspende a exigibilidade do crédito tributário"
   ],
   "leads": [
-    "Uma pesquisa do BofA (Bank of America) revelou que os investidores diminuíram sua exposição em ações de tecnologia no ritmo mais forte dos últimos 20 anos. O movimento ocorre em meio ao receio de uma possível desaceleração nos gastos com data centers e ao risco de uma bolha de inteligência artificial.",
-    "O Reino Unido uniu-se a outras dez nações na assinatura da iniciativa Starlift, coordenada pela Organização do Tratado do Atlântico Norte (Otan), com o objetivo de estruturar uma rede flexível de serviços para o lançamento de satélites, informaram o Ministério da Defesa e o Departamento de Negócios, Inovação, Ciência e Comércio britânicos em comuni",
     "O Reino Unido e mais dez nações formalizaram neste sábado (22), em Bruxelas, a Starlift, iniciativa coordenada pela Otan para montar uma malha adaptável de transporte orbital de satélites, com fornecedores comerciais e infraestrutura espalhada entre aliados. De acordo com a Estadão Conteúdo, o objetivo é assegurar lançamentos rápidos, seguros e eco",
     "Substitutivo restringe a exigência a provedores estrangeiros com ao menos 10 milhões de usuários ou receita anual de R$ 100 milhões no Brasil",
     "As negociações internacionais sobre o clima perdiam força neste domingo, abrindo caminho para que a cúpula termine sem um acordo amplo. Alguns países europeus alertaram que a proposta em discussão adotaria falsas soluções contra o aquecimento global e enfraqueceria o combate a ele.",
@@ -1659,7 +1659,9 @@
     "A Sanofi vai comprar a Insmed por US$ 41 bilhões, em um acordo que, segundo a CNBC, é o maior do setor farmacêutico desde 2023. A empresa pagará US$ 175 por ação em dinheiro e ficará com dois medicamentos respiratórios já comercializados e uma linha de candidatos experimentais.",
     "O Conselho de Administração da RD Saúde (RADL3) aprovou programa de recompra de até R$ 600 milhões de ações de emissão da companhia.",
     "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
-    "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização."
+    "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização.",
+    "Entenda o processo que empresas podem solicitar para superar uma crise financeira.",
+    "A Lei Complementar 236/2026 promoveu diversas e importantes modificações no Código Tributário Nacional, dentre elas a disciplina do seguro garantia [1] no âmbito do contencioso tributário."
   ],
   "eventos_recentes": [
     {
@@ -2253,6 +2255,10 @@
     {
       "chave": "prio::GERAL_ATIVO",
       "ts": 1795517832.37808
+    },
+    {
+      "chave": "braskem::GERAL_ATIVO",
+      "ts": 1795518851.615215
     }
   ],
   "hashes_imagens": [
@@ -2553,6 +2559,8 @@
     "7efd8b17a03c68c6",
     "e8271550418f2692",
     "102c937c8ff0d21f",
-    "3642ed7bf1ff66ab"
+    "3642ed7bf1ff66ab",
+    "797a50d35023496d",
+    "8f1bf488d82a79c3"
   ]
 }
