@@ -1,9 +1,5 @@
 {
   "links": [
-    "c041c445decea07b",
-    "38c9deb9f5604f45",
-    "https://www.estadao.com.br/economia/henrique-meirelles/melhor-programa-social-emprego/",
-    "37d7c57af037ec5f",
     "https://www.estadao.com.br/economia/antonio-penteado-mendonca/75-anos-da-cnseg/",
     "6af71a4c77cddfe1",
     "https://www.estadao.com.br/economia/negocios/petrobras-divulga-plano-de-negocios-expectativa-investimentos/",
@@ -799,7 +795,11 @@
     "774a6b004c1ca06d",
     "1f75de9f0e93f359",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/china-estende-ate-janeiro-a-suspensao-de-restricoes-a-materiais-criticos-para-os-eua/",
-    "c8825ea48e38821e"
+    "c8825ea48e38821e",
+    "5f6bae21adb031a7",
+    "b9f028bb1d90b166",
+    "https://www.infomoney.com.br/mercados/gerdau-ggbr4-alta-29-por-cento-ano-analise-tecnica/",
+    "be5333501ead86e6"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1431,10 +1431,10 @@
     "Bancos testam ouro fracionado digital em Londres",
     "China e Índia devem atingir recorde de importações de petróleo russo em 2026",
     "Vale anuncia retomada parcial de operações na mina de Viga em MG",
-    "China adia restrição à exportação de materiais críticos aos EUA até janeiro"
+    "China adia restrição à exportação de materiais críticos aos EUA até janeiro",
+    "Na contramão da Bolsa, Gerdau (GGBR4) sobe 29% no ano: até onde pode ir a alta?"
   ],
   "leads": [
-    "União Europeia diz que não vai assinar acordo da COP-31",
     "A Polícia Federal abriu licitação de R$ 207,5 milhões para comprar 225 veículos blindados. O processo inclui três carros destinados à segurança do presidente Luiz Inácio Lula da Silva, com estimativa de R$ 3,8 milhões por unidade.",
     "O diretor de Inteligência Nacional dos EUA, Jay Clayton, alertou que os americanos devem se preparar para novas interrupções após uma série de apagões tecnológicos que afetaram viagens aéreas e sistemas como o Microsoft Outlook, segundo a CNBC.",
     "Choques de oferta, como o encarecimento de insumos, têm pesado mais nas decisões dos bancos centrais de subir os juros do que o superaquecimento da economia, segundo David Rosenberg, fundador da consultoria Rosenberg Research. Em nota a clientes nesta semana, ele escreveu que, nessas condições, o aperto monetário raramente acaba bem para a economia",
@@ -1683,7 +1683,8 @@
     "JPMorgan, HSBC e StoneX realizaram suas primeiras negociações com propriedade digital de barras físicas de ouro em Londres, usando um sistema do World Gold Council (WGC) que permite negociar frações do metal e usá-las como garantia sem retirá-lo dos cofres. As operações ocorreram na semana passada, segundo a Bloomberg.",
     "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f",
     "A Vale anunciou, na noite da última segunda-feira (23), que retomará parcialmente as operações na mina de Viga, localizada em Congonhas, na região central de Minas Gerais.",
-    "A China prorrogou a suspensão das restrições à exportação de alguns materiais críticos para os Estados Unidos, poucos dias depois de os principais líderes dos dois países se reunirem no polo tecnológico de Shenzhen."
+    "A China prorrogou a suspensão das restrições à exportação de alguns materiais críticos para os Estados Unidos, poucos dias depois de os principais líderes dos dois países se reunirem no polo tecnológico de Shenzhen.",
+    "Na contramão da pressão vendedora que atingiu a Bolsa brasileira no período pós-eleitoral, as ações da Gerdau (GGBR4) preservam a tendência de alta iniciada em abril de 2025. Em 2026, os papéis acumulam valorização de 28,88%."
   ],
   "eventos_recentes": [
     {
@@ -2325,10 +2326,13 @@
     {
       "chave": "vale::GERAL_ATIVO",
       "ts": 1795523486.535954
+    },
+    {
+      "chave": "gerdau::GERAL_ATIVO",
+      "ts": 1795524320.716011
     }
   ],
   "hashes_imagens": [
-    "39eb31d8859b7e0e",
     "65e2dd55df39f2ec",
     "069b40560ee278b3",
     "6f1adc601a8de8b9",
@@ -2627,6 +2631,7 @@
     "4b72cd5871627419",
     "e3c462277d9d8b6f",
     "a26121563d0001b4",
-    "def04f73badafb45"
+    "def04f73badafb45",
+    "f74fdaefb108e858"
   ]
 }
