@@ -1,13 +1,5 @@
 {
   "links": [
-    "affbdc962ea3e42b",
-    "e621e9ea09c6b162",
-    "3732e747359a9b7f",
-    "1d90cda60c941e46",
-    "4fc30862d0b3796f",
-    "https://www.infomoney.com.br/mundo/ataque-a-navio-comercial-na-libia-leva-guerra-dos-drones-ao-mediterraneo/",
-    "0bc2b7d3fce70e07",
-    "c7f1b99faf6387a0",
     "eda0cb35a53dc86b",
     "https://www.infomoney.com.br/mundo/juros-do-cartao-a-10-a-proposta-de-trump-que-une-rivais-e-assusta-bancos/",
     "6111c2c8247c80ad",
@@ -799,7 +791,15 @@
     "https://www.suno.com.br/noticias/rent3-norges-bank-reduz-participacao-localiza-241126/",
     "8fa5dfa225684a69",
     "https://www.infomoney.com.br/mercados/com-brasil-entre-destaques-na-producao-jpmorgan-projeta-petroleo-brent-a-us-65-em-2028/",
-    "01de5be847982cd9"
+    "01de5be847982cd9",
+    "4ba32d3c82c07b1f",
+    "723a45c9e57f8e8e",
+    "d758a1c9d18335fb",
+    "aed7f683061de7cc",
+    "https://www.infomoney.com.br/mercados/volkswagen-enfrenta-sindicato-diante-da-ameaca-de-greve/",
+    "a155d3f796c9716a",
+    "https://www.moneytimes.com.br/opiniao-pacotes-fiscais-parciais-nao-sao-uma-solucao/",
+    "c33ed66fdc3a1ce7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1425,11 +1425,11 @@
     "A tempestade perfeita (dentro e fora do Brasil) que fez dólar chegar a R$ 6",
     "Crédito em atraso bate recorde de R$ 371 bi no Brasil",
     "RENT3: Norges Bank reduz participação acionária na Localiza",
-    "Com Brasil entre destaques na produção, JPMorgan projeta petróleo a US$ 65 em 2028"
+    "Com Brasil entre destaques na produção, JPMorgan projeta petróleo a US$ 65 em 2028",
+    "Volkswagen enfrenta sindicato diante da ameaça de greve",
+    "Opinião: Pacotes fiscais parciais não são uma solução"
   ],
   "leads": [
-    "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou.",
-    "A recuperação econômica do Chile pode demorar mais, porque ainda não há sinais claros de retomada dos investimentos, afirmou a presidente do banco central do país, Rosanna Costa, em entrevista ao jornal El Mercurio publicada neste domingo.",
     "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
     "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país.",
     "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico.",
@@ -1677,7 +1677,9 @@
     "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
     "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos",
     "A Localiza Rent a Car S.A. (RENT3 e RENT4; OTCQX: LZRFY) informou, em comunicado ao mercado datado de 23 de novembro de 2026, ter recebido correspondência do Norges Bank sobre alteração em sua participação acionária.",
-    "Apesar das guerras em curso no Oriente Médio e na Ucrânia, o mercado global de petróleo deverá voltar a conviver com um excesso de oferta nos próximos dois anos, pressionando os preços da commodity, segundo relatório de perspectivas para 2027 e 2028 de Natasha Kaneva, Lyuba Savinova e Artem Fakhretdinov, do JPMorgan."
+    "Apesar das guerras em curso no Oriente Médio e na Ucrânia, o mercado global de petróleo deverá voltar a conviver com um excesso de oferta nos próximos dois anos, pressionando os preços da commodity, segundo relatório de perspectivas para 2027 e 2028 de Natasha Kaneva, Lyuba Savinova e Artem Fakhretdinov, do JPMorgan.",
+    "– A montadora alemã Volkswagen inicia nesta terça-feira (24) negociações salariais com seus representantes sindicais, em meio a protestos e ameaças de greve devido aos planos da montadora ‌de intensificar os cortes de pessoal e reduzir custos.",
+    "O período pós-eleição no Brasil tem sido intenso nos mercados financeiros e o motivo é o mesmo da maior parte dos episódios de estresse dos últimos 20 anos: a trajetória da dívida pública. Agora, apenas a sugestão de que uma nova proposta de reduzir os gastos com juros forçadamente seria considerada, sem antes atacar problemas estruturais básicos d"
   ],
   "eventos_recentes": [
     {
@@ -2307,11 +2309,13 @@
     {
       "chave": "jpmorgan::GERAL_ATIVO",
       "ts": 1795522374.133599
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795522733.741933
     }
   ],
   "hashes_imagens": [
-    "ccddaaa4f7ccc4cf",
-    "5b953562eee71037",
     "d8c9a8fd058bd61c",
     "3c87f22032701c73",
     "55eab09340469fc7",
@@ -2609,6 +2613,8 @@
     "f16d0b849916f192",
     "7628deec4cc31898",
     "2404d220ace67c05",
-    "1c97b6e850e795d6"
+    "1c97b6e850e795d6",
+    "3b4204d34b3778e4",
+    "53a914172191caed"
   ]
 }
