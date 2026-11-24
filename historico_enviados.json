@@ -1,6 +1,5 @@
 {
   "links": [
-    "019750f8da26d90f",
     "657c177be7a44782",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/black-friday-pode-ter-melhor-faturamento-desde-2014-projeta-cnc/",
     "95c592e73347bb31",
@@ -799,7 +798,8 @@
     "https://www.infomoney.com.br/politica/supersalarios-serao-cortados-apos-a-aprovacao-do-pacote-fiscal-entenda-o-que-muda/",
     "6f1d0d6b3527efc0",
     "https://www.estadao.com.br/economia/market-friendly-equipe-economica-sugere-a-lula-nomes-para-o-bc-que-sejam-amigaveis-ao-mercado/",
-    "75605351e7e724c9"
+    "75605351e7e724c9",
+    "df83490b58eed5ab"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1632,10 +1632,6 @@
     "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast."
   ],
   "eventos_recentes": [
-    {
-      "chave": "goldman_sachs::GERAL_ATIVO",
-      "ts": 1795321992.496245
-    },
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795334959.228506
