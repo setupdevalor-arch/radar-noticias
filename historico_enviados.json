@@ -1,12 +1,5 @@
 {
   "links": [
-    "1908eb815dc24f7c",
-    "a384413dd75b7a91",
-    "7e9a91de7deeb5a1",
-    "https://www.infomoney.com.br/mercados/investidores-hesitam-em-comprar-na-baixa-com-nasdaq-100-perto-de-bear-market/",
-    "f3fa74b5ffd2bfdb",
-    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/22/novo-plano-da-petrobras-ronda-os-us-115-bilhes-com-dividendos-no-radar.ghtml",
-    "da32242a40fcc42b",
     "4ee1d8de930a4667",
     "https://valorinveste.globo.com/produtos/investimento-no-exterior/noticia/2026/11/22/bolsas-chinesas-anunciam-medidas-para-apoiar-os-mercados-acionrios.ghtml",
     "ea6a43efcc1e76ef",
@@ -799,7 +792,14 @@
     "9305a2ed5973b1df",
     "https://www.suno.com.br/noticias/eqtl3-cppib-eleva-participacao-para-5/",
     "f638aa2948cf97a3",
-    "1b431849fef0d5cb"
+    "1b431849fef0d5cb",
+    "41c7f3e24860324b",
+    "c3c87d320fa1dfab",
+    "43ff8a3e81703631",
+    "https://www.spacemoney.com.br/investimentos/dividas-empresas-crise-desagio-special-situations/",
+    "6b157a9b53ef4ef4",
+    "https://www.spacemoney.com.br/noticias/az-quest-credito-high-grade-eleicao/",
+    "96c988ae0831a5e4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1439,11 +1439,11 @@
     "Tesouro Direto hoje: taxas recuam em todos os títulos, mas prefixados seguem acima de 15%",
     "Vale assume hidrelétrica da Coteminas em Minas Gerais",
     "Primeira parcela do 13º salário deve ser paga pelas empresas até 30 de novembro; atrasos podem gerar multa",
-    "EQTL3: CPPIB eleva fatia na Equatorial para cerca de 5%"
+    "EQTL3: CPPIB eleva fatia na Equatorial para cerca de 5%",
+    "Com deságio de até 90%, dívidas de empresas em crise atraem investidores",
+    "AZ Quest reforça crédito high grade após eleição"
   ],
   "leads": [
-    "Binance sofre ataque hacker histórico de US$ 6,3 bilhões e suspende saques temporariamente",
-    "A produção de café da Colômbia deve se recuperar na safra 2026/27, que teve início em outubro, com uma previsão de aumento de 5,9%, para 13,4 milhões de sacas de 60 kg, de acordo com um relatório do USDA (Departamento de Agricultura dos Estados Unidos).",
     "Uma explosão a bordo de um navio russo atracado na base naval de Benghazi, no leste da Líbia, foi causada por um suposto ataque com drone, informou neste domingo o governo sediado no leste do país, com base em uma investigação preliminar.",
     "O presidente dos Estados Unidos, Donald Trump, afirmou no sábado que pretende colaborar com o novo Congresso de maioria democrata para estabelecer um teto de 10% para as taxas de juros de cartões de crédito. A medida busca cumprir uma promessa de campanha de 2024 que encontrou resistência tanto da indústria financeira quanto de seus próprios aliado",
     "Conforme a Agência Brasil, a 31ª edição da conferência do clima da ONU terminou na manhã deste domingo (22), em Antália, na Turquia, sem documento final.",
@@ -1691,7 +1691,9 @@
     "O pacote combina o bloqueio de gastos com iniciativas para aumentar a arrecadação, como redução de renúncias tributárias.",
     "A Vale adquiriu a participação de 33,33% detida pela Coteminas, em recuperação judicial, no consórcio da hidrelétrica Porto Estrela, localizada entre os municípios de Braúnas, Joanésia e Açucena, em Minas Gerais. A operação envolve a transferência integral da fatia da Coteminas no empreendimento para a mineradora e foi aprovada pelo Conselho Admini",
     "Empresas e órgãos públicos têm até a próxima segunda-feira (30) para pagar a primeira parcela do décimo terceiro salário de 2026; atrasos podem gerar multa ao empregador",
-    "A Equatorial S.A. (EQTL3) comunicou ao mercado, em 23 de novembro de 2026, que recebeu correspondência da Canada Pension Plan Investment Board informando o aumento de sua participação acionária na companhia."
+    "A Equatorial S.A. (EQTL3) comunicou ao mercado, em 23 de novembro de 2026, que recebeu correspondência da Canada Pension Plan Investment Board informando o aumento de sua participação acionária na companhia.",
+    "Uma dívida empresarial pode ser negociada com deságio de até 90% e ainda preservar valor recuperável para o investidor. É nessa diferença entre o preço atribuído à crise e o valor existente nos ativos, contratos e operações da companhia que atuam os investidores de special situations, especializados na compra de dívidas e outros ativos estressados.",
+    "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à "
   ],
   "eventos_recentes": [
     {
@@ -2344,8 +2346,6 @@
     }
   ],
   "hashes_imagens": [
-    "0fdb4288838ec9f0",
-    "080825ac0b53eed5",
     "7d797ee5ffc86c29",
     "45db7a359ec7c489",
     "ca9837bc4dee1423",
@@ -2643,6 +2643,8 @@
     "8addd5cc69c8287d",
     "a0d91f9f5e39eef7",
     "97c5fe77978363f4",
-    "90cd0ee10d6c144b"
+    "90cd0ee10d6c144b",
+    "ceca4f0023b5a6dc",
+    "3d2e0bdc6f086786"
   ]
 }
