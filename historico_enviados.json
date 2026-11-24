@@ -1,9 +1,5 @@
 {
   "links": [
-    "eb3358423f2157c0",
-    "46f2cf21231f54cb",
-    "7f0c6c719c385967",
-    "066bba98b713bb4f",
     "68168579207cbd58",
     "9f1156e2e58b34f6",
     "https://www.cnnbrasil.com.br/infra/angra-3-e-essencial-para-futuro-nuclear-diz-ativista-e-escritora/",
@@ -799,7 +795,11 @@
     "https://www.estadao.com.br/economia/negocios/invasao-montadoras-chinesas-mercado-veiculos-comerciais/",
     "c39cc60a547f4390",
     "https://www.bloomberglinea.com.br/2026/11/24/capital-estrangeiro-sustenta-ma-no-brasil-a-espera-de-clareza-fiscal-dizem-bancos/",
-    "7838f08c955cac60"
+    "7838f08c955cac60",
+    "b2694fff2171c5c7",
+    "d3ca9167f11de741",
+    "https://www.seudinheiro.com/2026/bolsa-dolar/fiis-3-0-ceo-da-inter-asset-revela-como-a-gestora-se-prepara-para-a-fase-dos-fundos-imobiliarios-de-tudo-igdl/",
+    "6409f833cfdab9a3"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1392,10 +1392,10 @@
     "CEO da Anthropic vende 3,38 milhões de ações em dia da retumbante estreia na Nasdaq",
     "Saiba quais indicadores e balanços saem nesta 3ª feira",
     "Invasão das montadoras chinesas chega ao mercado de caminhões e vans no Brasil",
-    "Capital estrangeiro sustenta M&A no Brasil à espera de clareza fiscal, dizem bancos"
+    "Capital estrangeiro sustenta M&A no Brasil à espera de clareza fiscal, dizem bancos",
+    "FIIs 3.0: CEO da Inter Asset revela como a gestora se prepara para a fase dos “fundos imobiliários de tudo”"
   ],
   "leads": [
-    "Grandes instituições financeiras revisaram nas últimas semanas suas alocações para a América Latina e para os mercados emergentes com vistas a 2027, e o Brasil deixou de ocupar a posição de destaque nesse conjunto, conforme apurou o InfoMoney. O espaço perdido pelo país vem sendo ocupado pelo México, que passou a figurar entre os destinos predileto",
     "O BV, que tem o grupo Votorantim e o Banco do Brasil como donos, deu um passo importante para fazer uma abertura de capital na B3. O banco acaba de receber aval da Comissão de Valores Mobiliários (CVM) para ser uma empresa de capital aberto, na categoria A, que permite lançamento de ações na B3.",
     "Reforma tributária: brasileiro se assusta com alíquota de 28%, mas já paga imposto maior",
     "A Lei Complementar nº 238, sancionada em 21 de outubro, redesenha o regime do Microempreendedor Individual ao elevar o limite anual de faturamento dos atuais R$ 81 mil para R$ 110 mil em 2027 e para R$ 140 mil a partir de 2028. Segundo estudo da Contabilizei detalhado pelo InfoMoney, a permanência no enquadramento simplificado pode representar uma ",
@@ -1644,7 +1644,8 @@
     "O cofundador e CEO da Anthropic, Dario Amodei, vendeu 3,38 milhões de ações classe A da companhia no dia 19 de novembro.",
     "Tesouro divulga relatório sobre receitas e despesas primárias; Receita Federal publica arrecadação de outubro",
     "Carros elétricos serão maioria nas ruas antes do que você pensa",
-    "Bloomberg Línea — O capital estrangeiro de longo prazo continua a buscar negócios no Brasil, apesar da volatilidade externa e da incerteza fiscal."
+    "Bloomberg Línea — O capital estrangeiro de longo prazo continua a buscar negócios no Brasil, apesar da volatilidade externa e da incerteza fiscal.",
+    "Executivo vê mandatos híbridos como próximo passo da indústria e projeta elevar a participação do setor imobiliário para até 25% dos negócios"
   ],
   "eventos_recentes": [
     {
@@ -2214,6 +2215,10 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795510585.462802
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795511588.229782
     }
   ],
   "hashes_imagens": [
@@ -2499,6 +2504,7 @@
     "eafdce7653972f5d",
     "f22d7cccdbd8746c",
     "3b3f80097dc2f672",
-    "9c09933abd9969d3"
+    "9c09933abd9969d3",
+    "b21863437bfcd44e"
   ]
 }
