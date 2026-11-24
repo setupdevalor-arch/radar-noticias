@@ -1,7 +1,5 @@
 {
   "links": [
-    "899cf9acdfe55d6a",
-    "cf0de898e0f16cec",
     "96f3232d09271a5f",
     "591c7e062d825812",
     "4048aa4bae7140eb",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/rect11-renova-locacao-elo/",
     "fd23b71d1356dfe5",
     "https://www.moneytimes.com.br/banco-do-brasil-bbas3-nega-decisao-sobre-ipos-de-empresas-do-grupo-apos-questionamento-da-cvm-rnda/",
-    "eaffe267248f58fd"
+    "eaffe267248f58fd",
+    "https://www.infomoney.com.br/mundo/senado-dos-eua-investiga-papel-de-jd-vance-em-contrato-de-petroleo-da-venezuela/",
+    "ffd89d491de04869"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1512,10 +1512,10 @@
     "Itaú entra no MCMV e avança sobre mercado dominado pela Caixa",
     "BC autoriza Foxbit e Binance a ampliar atuação regulada no Brasil",
     "RECT11 renova locação com Elo e mantém vacância",
-    "Banco do Brasil (BBAS3) nega decisão sobre IPOs de empresas do grupo após questionamento da CVM"
+    "Banco do Brasil (BBAS3) nega decisão sobre IPOs de empresas do grupo após questionamento da CVM",
+    "Senado dos EUA investiga papel de JD Vance em contrato de petróleo da Venezuela"
   ],
   "leads": [
-    "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027",
     "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
     "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante",
     "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22).",
@@ -1764,13 +1764,10 @@
     "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
     "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
     "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
-    "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado."
+    "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado.",
+    "Uma senadora dos Estados Unidos está investigando o papel desempenhado pelo vice-presidente JD Vance na concessão de um lucrativo contrato de petróleo da Venezuela a um doador político e então executivo da comerciante de commodities Vitol Group."
   ],
   "eventos_recentes": [
-    {
-      "chave": "petrobras::PROVENTOS",
-      "ts": 1795389422.515095
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795404639.300408
@@ -2554,10 +2551,13 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795562019.437562
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795563077.881692
     }
   ],
   "hashes_imagens": [
-    "2f3a44d0176843b9",
     "eae41bb83e11847d",
     "7e2d4c205cfa7ccf",
     "5c918f14f01e5ee1",
@@ -2856,6 +2856,7 @@
     "103463d092267450",
     "00b2cdea913bc599",
     "c71fac4742300b43",
-    "5691b8c79931a5f1"
+    "5691b8c79931a5f1",
+    "d5008432bcc0ceb3"
   ]
 }
