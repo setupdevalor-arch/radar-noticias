@@ -1,9 +1,5 @@
 {
   "links": [
-    "0701f2ace783e352",
-    "fb6f2a5b7faad643",
-    "e90c489c81fd11fb",
-    "https://www.spacemoney.com.br/economia/exterior/futuros-nova-york-avancam-selloff-ia/",
     "898ee001ff05e7db",
     "d752107ab7174367",
     "81fee9db6ac42961",
@@ -799,7 +795,11 @@
     "9c0247e26415b2ea",
     "5af9e6e0599d6bcc",
     "https://www.spacemoney.com.br/agronegocio/agro-arabes-ramada/",
-    "3659172786f418fe"
+    "3659172786f418fe",
+    "7674579de2c76b60",
+    "05da83d5b353ba01",
+    "https://www.suno.com.br/noticias/knip11-inflacao-dividendos-fundo-imobiliario/",
+    "026ffb5798f86329"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1444,10 +1444,10 @@
     "AZ Quest reforça crédito high grade após eleição",
     "BGRJ11 lança 2ª emissão de R$ 29,3 mi em São Paulo",
     "MDIA3: JPMorgan rebaixa M. Dias Branco para venda, corta preço-alvo e ação cai forte",
-    "Ramadã antecipa compras e impulsiona agro para árabes"
+    "Ramadã antecipa compras e impulsiona agro para árabes",
+    "Fundo imobiliário KNIP11 detalha dividendos e impacto do IPCA; confira"
   ],
   "leads": [
-    "As usinas de etanol de milho devem destinar cerca de 27 milhões de toneladas do cereal à produção do biocombustível em 2026, segundo estimativa do Rabobank. O avanço dessas plantas altera a comercialização do grão no Brasil, mexe com preços regionais e afeta a receita de quem cultiva.",
     "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas.",
     "O governo enfrenta um quadro desafiador nesta semana decisiva para a economia em 2027. A Câmara votará o pacote de medidas fiscais para tentar reduzir o gasto público em até R$ 60 bilhões no ano que vem. O mercado reagiu negativamente, pois considerou o número insuficiente, e o dólar está ao redor de R$ 6. Do outro lado, parte da base do governo re",
     "No último dia 17, aconteceu em Brasília uma sessão do Senado em homenagem aos 75 anos da CNseg (Confederação Nacional das Seguradoras). Homenagem institucional, mas com forte viés de verdadeiro reconhecimento a uma atividade que, desde a chegada da família real portuguesa, em 1808, presta relevantes serviços para a sociedade brasileira.",
@@ -1696,7 +1696,8 @@
     "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à ",
     "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
     "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
-    "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027."
+    "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027.",
+    "O KNIP11 é um fundo imobiliário que concentra seus investimentos em títulos de crédito corrigidos pela inflação, somando patrimônio líquido de R$ 7,52 bilhões em outubro de 2026. Administrado pela Intrag e gerido ativamente pela Kinea Investimentos desde 2016, o fundo distribui rendimentos mensais a investidores qualificados, com resultados sensíve"
   ],
   "eventos_recentes": [
     {
@@ -2354,10 +2355,13 @@
     {
       "chave": "mdia3::GERAL_ATIVO",
       "ts": 1795527078.390068
+    },
+    {
+      "chave": "knip11::PROVENTOS",
+      "ts": 1795527914.198134
     }
   ],
   "hashes_imagens": [
-    "91bc3eae976af62f",
     "11b244fbe09bcdbd",
     "350f6b95bd901450",
     "30392c677a647f79",
@@ -2656,6 +2660,7 @@
     "3d2e0bdc6f086786",
     "9542a07635a1f2eb",
     "630c626dc7363410",
-    "b2616f0753d32ccd"
+    "b2616f0753d32ccd",
+    "88db50089c66543d"
   ]
 }
