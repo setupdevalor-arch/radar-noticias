@@ -1,10 +1,5 @@
 {
   "links": [
-    "f3408b7c6c7b2c95",
-    "https://www.moneytimes.com.br/rd-saude-radl3-anuncia-programa-de-recompra-de-ate-1275-milhoes-de-acoes-veja-os-objetivos-lmrs/",
-    "cd75687916e53603",
-    "75f2138f85ba80b5",
-    "https://www.moneytimes.com.br/fundo-imobiliario-anuncia-menor-dividendo-em-29-meses-veja-valor-e-motivo-do-corte-igdl/",
     "39d96746fcf1c2f4",
     "b7f44eb62e86d6f3",
     "ccec597b135f1ce2",
@@ -799,7 +794,12 @@
     "https://www.cnnbrasil.com.br/agro/bndes-preve-liberar-recorde-de-r-4-bi-para-setor-de-fertilizantes-em-2026/",
     "0b6a0a0a8889972b",
     "https://www.spacemoney.com.br/economia/exterior/vw-protesto-alemanha-greve-janeiro/",
-    "bb8ba5de4d4e16bd"
+    "bb8ba5de4d4e16bd",
+    "f4347355ce094f26",
+    "4da66df692721153",
+    "63ea0c1c02c976c6",
+    "https://g1.globo.com/economia/noticia/2026/11/24/dolar-ibovespa.ghtml",
+    "288da524097ddff1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1469,10 +1469,10 @@
     "Meio político, meio mercado: o perfil para ministro da Fazenda no governo Lula 4 do CEO da Randoncorp",
     "O tempo fechou para 2027? Por que a economia pode ter o pior ano desde a pandemia",
     "BNDES prevê liberar recorde de R$ 4 bi para setor de fertilizantes em 2026",
-    "Trabalhadores da VW protestam e ameaçam parar em janeiro"
+    "Trabalhadores da VW protestam e ameaçam parar em janeiro",
+    "Dólar cai quase 2% e vai a R$ 5,80, com foco em ajuste fiscal e noticiário corporativo"
   ],
   "leads": [
-    "Os futuros de Nova York operam em forte alta nesta segunda-feira (23), em razão de um movimento de recuperação após a forte liquidação das ações de tecnologia na semana passada. Investidores voltam a comprar papéis ligados à inteligência artificial (IA), aproveitando a queda recente dos preços.",
     "A Sementes Oeste Paulista (Soesp), de Presidente Prudente (SP), planeja ampliar em 50% as vendas de sementes para pasto em cinco anos. Uma das apostas está na comercialização para produtores de soja e milho: tradicionalmente o capim é plantado para o gado, mas o agricultor também pode cultivá-lo entre as safras, para que a palhada das gramíneas pro",
     "Na semana passada, os ETFs de Bitcoin à vista dos EUA tiveram resgates líquidos de US$ 1,79 bilhão, o terceiro maior volume semanal desde o lançamento dos fundos, em janeiro de 2024, segundo o Cointelegraph.",
     "Indicador do JPMorgan atingiu 1.070 pontos-base e acumula alta de 87,4% no ano; desaprovação de Milei cresce",
@@ -1721,7 +1721,8 @@
     "A pergunta que boa parte do setor produtivo brasileiro tem feito nos últimos dias ainda não tem resposta. E não há sinais de que ela virá logo. O chamado Produto Interno Bruto (PIB) do País tem tomado parte das conversas para debater sobre a escolha do ministro da Fazenda para o governo Lula 4.",
     "Em questão de um mês, as projeções para a economia brasileira e, por tabela, os preços dos ativos vivem uma reviravolta. E o cenário deve se agravar, com o risco concentrado no primeiro semestre de 2027.",
     "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) estima aprovar R$ 4 bilhões em crédito para o setor de fertilizantes até o fim de 2026, volume recorde para o setor.",
-    "A Volkswagen iniciou com os empregados alemães o primeiro pacote de negociações, em clima de confronto. Cerca de 4 mil pessoas protestaram em Emden, no norte do país, pouco antes de representantes do IG Metall e do conselho de trabalhadores se reunirem com a cúpula da empresa."
+    "A Volkswagen iniciou com os empregados alemães o primeiro pacote de negociações, em clima de confronto. Cerca de 4 mil pessoas protestaram em Emden, no norte do país, pouco antes de representantes do IG Metall e do conselho de trabalhadores se reunirem com a cúpula da empresa.",
+    "O dólar inverteu o sinal e passou a operar em queda nesta terça-feira (24), com recuo de 1,81% perto das 11h30, cotado a R$ 5,8190. Na mínima do dia, chegou a R$ 5,8015. Já o Ibovespa, principal índice da bolsa brasileira, tinha alta de 1,24% no mesmo horário, aos 166.846 pontos."
   ],
   "eventos_recentes": [
     {
@@ -2395,10 +2396,13 @@
     {
       "chave": "randon::GERAL_ATIVO",
       "ts": 1795535537.870402
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795536634.76429
     }
   ],
   "hashes_imagens": [
-    "a8d29669558af7ea",
     "875a43c45d05e775",
     "cb413ebaf44e67e5",
     "0fbafc97a568b241",
@@ -2697,6 +2701,7 @@
     "78c9dd9d3a77cce9",
     "8a8a4015ffec3387",
     "52f9374ef47c41d1",
-    "a7be86fab6bb1e06"
+    "a7be86fab6bb1e06",
+    "2c0f0e8b231ef5dd"
   ]
 }
