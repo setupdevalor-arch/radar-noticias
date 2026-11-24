@@ -1,10 +1,5 @@
 {
   "links": [
-    "e76a50b69856db88",
-    "https://www.poder360.com.br/poder-justica/oab-sp-estima-perda-de-r-200-bilhoes-por-ano-com-pejotizacao/",
-    "8c3644a63b0d5fd3",
-    "0f5aa48c77400cd0",
-    "7049d5722634030a",
     "ed1c65d914a97a36",
     "4b51df9b798ca461",
     "ba717fc480be2e61",
@@ -799,7 +794,12 @@
     "39f03a1a3659285a",
     "f16522df3d71235a",
     "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bitcoin-cai-abaixo-de-60-mil-com-recuo-do-rali-de-ia/",
-    "e6bcc1a39c63baae"
+    "e6bcc1a39c63baae",
+    "fe180357f04eefbd",
+    "https://eixos.com.br/combustiveis-e-bioenergia/na-conta-da-transicao-petrobras-troca-eolica-e-solar-por-biocombustiveis/",
+    "49e6d8e33379bd1c",
+    "https://www.sonhoseguro.com.br/2026/11/pesquisa-da-icatu-revela-diferencas-nas-estrategias-de-planejamento-da-aposentadoria-entre-homens-e-mulheres/",
+    "7501998af2728762"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1399,11 +1399,11 @@
     "Quanto guardar por mês para complementar a aposentadoria",
     "Vendas de imóveis para a classe média perdem fôlego no ano e 2027 não anima",
     "Mini-índice (WINZ26): o que pode mudar se o WINZ26 perder os 165.345 pontos?",
-    "Bitcoin cai abaixo de US$ 60.000 com recuo do rali de IA"
+    "Bitcoin cai abaixo de US$ 60.000 com recuo do rali de IA",
+    "Na conta da transição, Petrobras troca eólica e solar por biocombustíveis",
+    "Pesquisa da Icatu revela diferenças nas estratégias de planejamento da aposentadoria entre homens e mulheres"
   ],
   "leads": [
-    "A expansão da indústria de etanol de milho está provocando uma mudança estrutural no mercado brasileiro do grão, com impactos sobre a formação de preços, a comercialização e a rentabilidade dos produtores.",
-    "Avaliações atrativas, resiliência do yuan e capacidade das empresas de transformar inovação em lucros atraem interesse",
     "As defesas aéreas do Bahrein interceptaram e destruíram novos ataques aéreos lançados pelo Irã sobre o país no fim da tarde deste sábado, informou o assessor de mídia do rei em comunicado. O Ministério do Interior bareinita emitiu um alerta de risco na rede social X orientando cidadãos e residentes a manterem a calma, buscarem abrigo no local segur",
     "Exportações do setor somaram US$ 22,59 bilhões no período; açúcar e carnes estão entre produtos mais exportados",
     "O recuo da euforia global com a IA atingiu a China em cheio. Os preços elevados das ações e a dependência do apoio do governo deixaram os papéis vulneráveis assim que surgiram os primeiros sinais de fraqueza.",
@@ -1651,7 +1651,9 @@
     "Planejar a renda da aposentadoria começa por uma pergunta prática: qual será o tamanho do gasto mensal e quanto dele já estará coberto por fontes previsíveis, como a previdência pública, a previdência privada contratada no passado ou aluguéis. A parte que não estiver coberta é o complemento que precisa ser financiado por uma reserva. Estimar esse v",
     "A piora das condições de financiamento já afeta os imóveis voltados à classe média e deve continuar pressionando o segmento em 2027, disseram porta-vozes da Câmara Brasileira da Indústria da Construção (CBIC) e do Secovi-SP em coletiva de imprensa na segunda-feira (23).",
     "Os contratos futuros de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,81%, aos 166.250 pontos. Durante o pregão, oscilaram entre a mínima de 165.345 pontos e a máxima de 167.270 pontos. Para esta terça-feira (24), acompanho os suportes de 165.345 e 164.900 pontos, enquanto as primeiras resistências estão",
-    "O Bitcoin caiu abaixo de US$ 60.000 nesta terça-feira, devolvendo a maior parte da alta que o levou para perto de US$ 64.000. A maior criptomoeda por valor de mercado recuou mais de 2% em 24 horas, com o rali das ações de inteligência artificial perdendo força."
+    "O Bitcoin caiu abaixo de US$ 60.000 nesta terça-feira, devolvendo a maior parte da alta que o levou para perto de US$ 64.000. A maior criptomoeda por valor de mercado recuou mais de 2% em 24 horas, com o rali das ações de inteligência artificial perdendo força.",
+    "A Petrobras aprovou na segunda (23/11) um plano de negócios que amplia o investimento em refino, logística e combustíveis líquidos e reduz a verba para geração de eletricidade renovável. A carteira de refino, transporte e comercialização (RTC) soma US$ 23,6 bilhões em 2027-2031, contra US$ 17 bilhões no plano 2024-2028, o primeiro do governo Lula.",
+    "A pesquisa Conversão em Renda, da Icatu Seguros, identificou diferenças entre homens e mulheres na preparação financeira para a aposentadoria. Entre as mulheres, 29% ainda não começaram a se preparar para essa etapa da vida, percentual mais que o dobro dos 14% registrados entre os homens. O levantamento também aponta diferenças nas estratégias de i"
   ],
   "eventos_recentes": [
     {
@@ -2233,6 +2235,10 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795515507.860597
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795515860.849037
     }
   ],
   "hashes_imagens": [
@@ -2525,6 +2531,8 @@
     "1aba26375fb2cc56",
     "66f5fd61812392b9",
     "6b04154506394fa9",
-    "54ebce7e9673f648"
+    "54ebce7e9673f648",
+    "04e2da74b0c6e7d3",
+    "aca79f46d60a10aa"
   ]
 }
