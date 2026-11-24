@@ -1,11 +1,5 @@
 {
   "links": [
-    "300dc1882ef48d34",
-    "aee31d451473db43",
-    "073811cb9d95f0cb",
-    "https://www.infomoney.com.br/mundo/ataques-no-baltico-ameacam-rota-chave-do-petroleo-e-dos-graos-da-russia/",
-    "0b67977751aa6189",
-    "d9e34f2a2268d754",
     "ccf9a861a86692e0",
     "69ef765deac257fc",
     "https://www.poder360.com.br/poder-brasil/sabesp-conclui-manutencao-mas-5-regioes-ainda-tem-abastecimento-afetado/",
@@ -799,7 +793,13 @@
     "https://www.estadao.com.br/economia/negocios/braskem-prorrogacao-apresentar-plano-recuperacao-extrajudicial/",
     "9ff91aef7d7a4490",
     "https://cqcs.com.br/noticia/seguro-garantia-agora-suspende-a-exigibilidade-do-credito-tributario/",
-    "9c59ec3d53d254a2"
+    "9c59ec3d53d254a2",
+    "a1f9074b2b69375a",
+    "84890b0377197054",
+    "https://www.infomoney.com.br/mercados/raizen-raiz4-aprova-pre-pagamento-de-r-3-bilhoes-em-dividas/",
+    "5d677dfeb3171566",
+    "https://cqcs.com.br/noticia/pane-da-microsoft-expoe-limites-da-cobertura-de-seguro-cyber/",
+    "b23ffaf1d9aca681"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1409,11 +1409,11 @@
     "PRIO aprova cisão parcial com transferência de R$ 543,8 milhões em patrimônio",
     "Energia que conecta o futuro: a trajetória da EDP em três décadas de Brasil",
     "Braskem pede prorrogação de 20 dias para apresentar plano de recuperação extrajudicial",
-    "Seguro garantia agora suspende a exigibilidade do crédito tributário"
+    "Seguro garantia agora suspende a exigibilidade do crédito tributário",
+    "Raízen (RAIZ4) aprova pré-pagamento de R$ 3 bilhões em dívidas",
+    "Pane da Microsoft expõe limites da cobertura de Seguro Cyber?"
   ],
   "leads": [
-    "O Reino Unido e mais dez nações formalizaram neste sábado (22), em Bruxelas, a Starlift, iniciativa coordenada pela Otan para montar uma malha adaptável de transporte orbital de satélites, com fornecedores comerciais e infraestrutura espalhada entre aliados. De acordo com a Estadão Conteúdo, o objetivo é assegurar lançamentos rápidos, seguros e eco",
-    "Substitutivo restringe a exigência a provedores estrangeiros com ao menos 10 milhões de usuários ou receita anual de R$ 100 milhões no Brasil",
     "As negociações internacionais sobre o clima perdiam força neste domingo, abrindo caminho para que a cúpula termine sem um acordo amplo. Alguns países europeus alertaram que a proposta em discussão adotaria falsas soluções contra o aquecimento global e enfraqueceria o combate a ele.",
     "Quando a indústria do cobre se reuniu em Xangai na semana passada, Grace Li ficou impressionada com o pessimismo esmagador sobre a demanda. Ela concordava com esse diagnóstico. Depois das conversas de segunda-feira, quase pegou o celular ali mesmo para montar uma posição vendida.",
     "Analistas considerados de ponta em Wall Street apontam três ações de dividendos com potencial de retorno forte, segundo reportagem da CNBC. A seleção usa ranking da plataforma TipRanks, que avalia os profissionais pelo desempenho passado, e reúne Devon Energy, Energy Transfer e ConocoPhillips.",
@@ -1661,7 +1661,9 @@
     "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
     "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização.",
     "Entenda o processo que empresas podem solicitar para superar uma crise financeira.",
-    "A Lei Complementar 236/2026 promoveu diversas e importantes modificações no Código Tributário Nacional, dentre elas a disciplina do seguro garantia [1] no âmbito do contencioso tributário."
+    "A Lei Complementar 236/2026 promoveu diversas e importantes modificações no Código Tributário Nacional, dentre elas a disciplina do seguro garantia [1] no âmbito do contencioso tributário.",
+    "O Conselho de Administração de Raízen (RAIZ4) aprovou na segunda-feira (23) o pré-pagamento parcial da dívida financeira reestruturada da Raízen Energia, no montante total agregado de R$ 3 bilhões.",
+    "A pane global nos serviços em nuvem da Microsoft, registrada entre os dias 12 e 14 de novembro, gerou US$ 500 milhões em perdas seguradas, segundo a agência Morningstar DBRS, e expôs uma limitação crítica para empresas que contratam Seguro Cyber. Como o incidente que paralisou plataformas como Outlook, Teams, Copilot e Microsoft 365 em mais de 70 p"
   ],
   "eventos_recentes": [
     {
@@ -2259,11 +2261,17 @@
     {
       "chave": "braskem::GERAL_ATIVO",
       "ts": 1795518851.615215
+    },
+    {
+      "chave": "raizen::GERAL_ATIVO",
+      "ts": 1795519198.348225
+    },
+    {
+      "chave": "microsoft::GERAL_ATIVO",
+      "ts": 1795519198.348225
     }
   ],
   "hashes_imagens": [
-    "614f989cdb0ee76d",
-    "7dba9a3eb07d1794",
     "d305573262799892",
     "59cfe842dffee3fb",
     "22bc1b3df310f106",
@@ -2561,6 +2569,8 @@
     "102c937c8ff0d21f",
     "3642ed7bf1ff66ab",
     "797a50d35023496d",
-    "8f1bf488d82a79c3"
+    "8f1bf488d82a79c3",
+    "d4e189785dd0713c",
+    "30922a397fd8f1ee"
   ]
 }
