@@ -1,7 +1,5 @@
 {
   "links": [
-    "eee9a3603a31f450",
-    "8dc028be193d83fb",
     "https://www.spacemoney.com.br/agronegocio/jbs-joint-venture-oma-us-150-milhoes/",
     "7a9c880049618192",
     "f51b5fd256448699",
@@ -799,7 +797,9 @@
     "61803a0c4a4f82f4",
     "630c2be3ddd2efb3",
     "https://investnews.com.br/negocios/dia-dos-solteiros-ganha-espaco-no-varejo-brasileiro-com-shopee-aliexpress-e-shein/",
-    "0edadf77bc54062a"
+    "0edadf77bc54062a",
+    "https://www.infomoney.com.br/mercados/wall-street-cai-com-perda-de-forca-de-impulso-da-ia-gerado-pela-nvidia/",
+    "5bb3b45f2004cfe4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1454,10 +1454,10 @@
     "EUA entram com uma ação judicial para recuperar milhões de dólares roubados no ataque cibernético à Binance",
     "CNI: Intenção de investimento da indústria cai ao menor nível em seis anos",
     "Fim da escala 6x1: ministro recomenda que setores 'corram' para fechar acordo coletivo até dia 16 se quiserem escala diferente",
-    "Dia dos Solteiros ganha espaço no varejo brasileiro com Shopee, AliExpress e Shein"
+    "Dia dos Solteiros ganha espaço no varejo brasileiro com Shopee, AliExpress e Shein",
+    "Wall Street cai com perda de força de impulso da IA gerado pela Nvidia"
   ],
   "leads": [
-    "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
     "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência.",
     "Os houthis, apoiados pelo Irã, afirmaram no domingo que atingiram a refinaria de Rabigh, na Arábia Saudita, segundo a CNBC. O grupo diz ter acertado diretamente a infraestrutura, mas a extensão dos danos ainda não está clara, informou a Reuters.",
@@ -1706,17 +1706,10 @@
     "O Departamento de Justiça dos Estados Unidos apresentou uma ação de confisco para recuperar mais de US$ 1,1 bilhão em criptomoedas supostamente roubadas no mês passado por hackers norte-coreanos da plataforma Binance.",
     "A intenção de investimento da indústria brasileira caiu 2,6 pontos em novembro, de 52,6 para 50 pontos, e atingiu o menor patamar desde julho de 2020, durante a pandemia de Covid-19.",
     "O ministro do Trabalho, Luiz Marinho, recomendou nesta terça-feira (24) que empresários e trabalhadores de setores da economia que queiram escala diferente, sem folga aos sábados e domingos, fechem acordos coletivos até o dia 16 — quando começam a valer as novas regras.",
-    "A força da campanha também aparece nos resultados da Shopee. A plataforma registrou em 11 de novembro o maior dia de vendas de sua história no Brasil, com volume mais que duas vezes superior ao da Black Friday de 2025."
+    "A força da campanha também aparece nos resultados da Shopee. A plataforma registrou em 11 de novembro o maior dia de vendas de sua história no Brasil, com volume mais que duas vezes superior ao da Black Friday de 2025.",
+    "– Os principais índices de Wall ‌Street abriram em baixa nesta ‌terça-feira, uma vez que as ações ligadas à inteligência artificial recuavam após ‌uma alta impulsionada pela Nvidia, com os investidores aguardando dados de inflação dos Estados Unidos nesta semana para obter uma pista definitiva sobre a política monetária ‌antes da reunião de dezembr"
   ],
   "eventos_recentes": [
-    {
-      "chave": "banco_do_brasil::GERAL_ATIVO",
-      "ts": 1795359420.472958
-    },
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795359762.565058
-    },
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795360728.044644
@@ -2380,10 +2373,13 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795530449.55248
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795532906.333606
     }
   ],
   "hashes_imagens": [
-    "f01873e05f005dc2",
     "e876d7c163ae0cac",
     "c3f574e4db804376",
     "4fa55bba94962371",
@@ -2682,6 +2678,7 @@
     "73dc2960c5c5efdf",
     "dc24a6003748ae47",
     "53ca19e662ed0d45",
-    "acf66d112348b574"
+    "acf66d112348b574",
+    "17967a4937fd3bd4"
   ]
 }
