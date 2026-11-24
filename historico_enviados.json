@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://megawhat.uol.com.br/destaques-do-diario/empresa-desiste-de-80-mw-em-geracao-solar-em-pe-por-falta-de-margem/",
-    "894ecf8c96a4a4f3",
     "https://www.estadao.com.br/economia/cvm-suspende-registro-brb-refit-ambipar-falta-informacoes/",
     "292e22a313cbc217",
     "https://www.infomoney.com.br/mundo/kremlin-desmente-midia-alema-sobre-lancamento-de-satelite-russo-com-armamento-nuclear/",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/mercados/por-que-a-vale-vale3-caiu-mais-de-5-nesta-terca/",
     "c2ea9746b1caae94",
     "https://www.suno.com.br/noticias/fundo-imobiliario-goias-ganho-1-bilhao/",
-    "abc607e597946b48"
+    "abc607e597946b48",
+    "https://www.spacemoney.com.br/investimentos/acoes/vale-cai-5-43-minerio-fraco-custos-dividendos/",
+    "dd717fe8508e05a5"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1504,10 +1504,10 @@
     "Juros futuros caem com sinalização do governo sobre PEC para limitar gastos",
     "TRXF11 e HGRU11: dividendos e vacância em foco",
     "Por que a Vale (VALE3) caiu mais de 5% nesta terça?",
-    "Fundo imobiliário estadual de Goiás mira ganho de R$ 1 bilhão"
+    "Fundo imobiliário estadual de Goiás mira ganho de R$ 1 bilhão",
+    "Vale cai 5,43% com minério fraco e dividendos em xeque"
   ],
   "leads": [
-    "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação.",
     "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
     "O Índice de Gerentes de Compras (PMI) composto da Zona do Euro permaneceu em 51,7 em novembro, o mesmo patamar observado em outubro, mas com quedas nos serviços e melhora no indicador industrial, informou nesta segunda-feira a S&P Global.",
     "– A Randoncorp (RAPT4) registrou receita líquida consolidada de R$ 1,19 bilhão em outubro, queda de 2,7% na comparação com o mesmo mês do ano passado, conforme dados divulgados nesta segunda-feira pela companhia.",
@@ -1756,7 +1756,8 @@
     "As taxas dos DIs fecharam a terça-feira (24) com baixas após notícias de que o presidente Luiz Inácio Lula da Silva (PT) autorizou a equipe econômica a enviar ao Congresso uma proposta de emenda à Constituição que tratará das despesas obrigatórias.",
     "Segundo a Suno Notícias, TRXF11 e HGRU11, fundos de renda urbana da B3, tiveram seus indicadores comparados com dados de outubro de 2026. A base somava 601 mil cotistas e PL combinado que superava R$ 12 bilhões. A SpaceMoney não apurou a notícia.",
     "As ações da Vale fecharam em forte queda nesta terça-feira, recuando mais de 5%, em meio a uma combinação de fatores que vão desde a deterioração das perspectivas para o minério de ferro até preocupações com custos operacionais, geração de caixa, dividendos e revisões negativas de analistas para a companhia. Os papéis da companhia fecharam com perd",
-    "O governo de Goiás avança na estruturação de um fundo imobiliário para monetizar imóveis públicos, em parceria com as gestoras Rio Bravo e HGI Capital. A expectativa é que os primeiros negócios com investidores privados sejam fechados até junho de 2027, elevando o patrimônio estadual em até R$ 1 bilhão."
+    "O governo de Goiás avança na estruturação de um fundo imobiliário para monetizar imóveis públicos, em parceria com as gestoras Rio Bravo e HGI Capital. A expectativa é que os primeiros negócios com investidores privados sejam fechados até junho de 2027, elevando o patrimônio estadual em até R$ 1 bilhão.",
+    "As ações da Vale (VALE3) encerraram o pregão desta terça-feira com desvalorização de 5,43%, cotadas a R$ 55,24, sob o peso de um conjunto de vetores que atinge pilares centrais da tese de investimento da mineradora — do enfraquecimento do minério de ferro a custos operacionais mais elevados, passando por incertezas sobre geração de caixa, política "
   ],
   "eventos_recentes": [
     {
@@ -2522,10 +2523,13 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795555218.205199
+    },
+    {
+      "chave": "vale::PROVENTOS",
+      "ts": 1795555573.034678
     }
   ],
   "hashes_imagens": [
-    "a2217dfa90d49148",
     "821f5e92da6e3bf2",
     "a254393777ad3e24",
     "a5edc42315feede0",
@@ -2824,6 +2828,7 @@
     "bc5bca2674a99259",
     "816d9d2a7adc4e71",
     "b7cd3466ed744532",
-    "edccccd59b95a6d4"
+    "edccccd59b95a6d4",
+    "b5ebba9ef9d3ac38"
   ]
 }
