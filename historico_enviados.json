@@ -1,11 +1,5 @@
 {
   "links": [
-    "eda0cb35a53dc86b",
-    "https://www.infomoney.com.br/mundo/juros-do-cartao-a-10-a-proposta-de-trump-que-une-rivais-e-assusta-bancos/",
-    "6111c2c8247c80ad",
-    "https://www.spacemoney.com.br/economia/exterior/cop31-termina-sem-acordo-climatico-em-antalia/",
-    "5aab6f4c1e484a3f",
-    "4fab167e318e45d4",
     "fc96e24ce1372f97",
     "9f9702a0ec896fe1",
     "8a5c41432f2a74a5",
@@ -799,7 +793,13 @@
     "https://www.infomoney.com.br/mercados/volkswagen-enfrenta-sindicato-diante-da-ameaca-de-greve/",
     "a155d3f796c9716a",
     "https://www.moneytimes.com.br/opiniao-pacotes-fiscais-parciais-nao-sao-uma-solucao/",
-    "c33ed66fdc3a1ce7"
+    "c33ed66fdc3a1ce7",
+    "8008a14e18352808",
+    "109c4640a7be053d",
+    "https://www.spacemoney.com.br/commodities/bancos-testam-ouro-fracionado-digital-londres/",
+    "8d84f63a182689a1",
+    "https://www.infomoney.com.br/mercados/china-e-india-devem-atingir-recorde-de-importacoes-de-petroleo-russo-em-2026/",
+    "80b0297afb75182d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1427,11 +1427,11 @@
     "RENT3: Norges Bank reduz participação acionária na Localiza",
     "Com Brasil entre destaques na produção, JPMorgan projeta petróleo a US$ 65 em 2028",
     "Volkswagen enfrenta sindicato diante da ameaça de greve",
-    "Opinião: Pacotes fiscais parciais não são uma solução"
+    "Opinião: Pacotes fiscais parciais não são uma solução",
+    "Bancos testam ouro fracionado digital em Londres",
+    "China e Índia devem atingir recorde de importações de petróleo russo em 2026"
   ],
   "leads": [
-    "As entregas de fertilizantes ao mercado brasileiro somaram 27,31 milhões de toneladas entre janeiro e agosto de 2026, uma queda de 10,4% em relação ao mesmo período do ano anterior, segundo a Associação Nacional para Difusão de Adubos (ANDA). Em artigo de opinião publicado pelo Monitor do Mercado, o presidente da entidade, Elias Alves de Lima, afir",
-    "Quando a principal agência de espionagem da China atualizou suas prioridades neste ano, acrescentou um objetivo revelador: superar as barreiras ocidentais a tecnologias que Xi Jinping considera cruciais para a ascensão do país.",
     "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico.",
     "Abastecimento ainda está em recuperação em áreas de São Paulo, Francisco Morato e Guarulhos após intervenção no Sistema Cantareira",
     "União Europeia diz que não vai assinar acordo da COP-31",
@@ -1679,7 +1679,9 @@
     "A Localiza Rent a Car S.A. (RENT3 e RENT4; OTCQX: LZRFY) informou, em comunicado ao mercado datado de 23 de novembro de 2026, ter recebido correspondência do Norges Bank sobre alteração em sua participação acionária.",
     "Apesar das guerras em curso no Oriente Médio e na Ucrânia, o mercado global de petróleo deverá voltar a conviver com um excesso de oferta nos próximos dois anos, pressionando os preços da commodity, segundo relatório de perspectivas para 2027 e 2028 de Natasha Kaneva, Lyuba Savinova e Artem Fakhretdinov, do JPMorgan.",
     "– A montadora alemã Volkswagen inicia nesta terça-feira (24) negociações salariais com seus representantes sindicais, em meio a protestos e ameaças de greve devido aos planos da montadora ‌de intensificar os cortes de pessoal e reduzir custos.",
-    "O período pós-eleição no Brasil tem sido intenso nos mercados financeiros e o motivo é o mesmo da maior parte dos episódios de estresse dos últimos 20 anos: a trajetória da dívida pública. Agora, apenas a sugestão de que uma nova proposta de reduzir os gastos com juros forçadamente seria considerada, sem antes atacar problemas estruturais básicos d"
+    "O período pós-eleição no Brasil tem sido intenso nos mercados financeiros e o motivo é o mesmo da maior parte dos episódios de estresse dos últimos 20 anos: a trajetória da dívida pública. Agora, apenas a sugestão de que uma nova proposta de reduzir os gastos com juros forçadamente seria considerada, sem antes atacar problemas estruturais básicos d",
+    "JPMorgan, HSBC e StoneX realizaram suas primeiras negociações com propriedade digital de barras físicas de ouro em Londres, usando um sistema do World Gold Council (WGC) que permite negociar frações do metal e usá-las como garantia sem retirá-lo dos cofres. As operações ocorreram na semana passada, segundo a Bloomberg.",
+    "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f"
   ],
   "eventos_recentes": [
     {
@@ -2313,11 +2315,13 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795522733.741933
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795523091.495143
     }
   ],
   "hashes_imagens": [
-    "d8c9a8fd058bd61c",
-    "3c87f22032701c73",
     "55eab09340469fc7",
     "958b6ba8d05214b3",
     "39eb31d8859b7e0e",
@@ -2615,6 +2619,8 @@
     "2404d220ace67c05",
     "1c97b6e850e795d6",
     "3b4204d34b3778e4",
-    "53a914172191caed"
+    "53a914172191caed",
+    "4b72cd5871627419",
+    "e3c462277d9d8b6f"
   ]
 }
