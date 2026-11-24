@@ -1,15 +1,5 @@
 {
   "links": [
-    "4d82721548d8fa54",
-    "https://www.spacemoney.com.br/tecnologia/clayton-alerta-apagoes-tecnologicos-eua/",
-    "e10f68f68ec12148",
-    "f214e2e642d0c940",
-    "d7b5fb8214ebbe06",
-    "75ca62a7305cd483",
-    "2b2e56ece3544685",
-    "7aadd515c0ad0096",
-    "aeb610bd32d6eb77",
-    "d650e0c675a7db29",
     "https://investnews.com.br/economia/juros-eua-fed-alta-dez26-expectativa/",
     "7804ae52066d7ff2",
     "2bcf243d4660c246",
@@ -799,7 +789,17 @@
     "https://megawhat.uol.com.br/noticias/casa-dos-ventos-pede-prioridade-para-antecipar-carga-de-data-center-do-tik-tok/",
     "72b619b8bb11b6a6",
     "https://www.poder360.com.br/poder-internacional/trump-lucra-ate-us-15-mi-com-alta-da-nvidia-apos-volta-de-ceo/",
-    "684475aaeb31f794"
+    "684475aaeb31f794",
+    "f4388de8a8de77c9",
+    "f954ecea880140eb",
+    "0c9fa5ed7c9288b6",
+    "5db24b1cafe3fff6",
+    "49dca832509f6e24",
+    "a4d79f9c32d0fd1b",
+    "7d83f469fcae4741",
+    "a1d99d370a4dc21a",
+    "https://www.infomoney.com.br/economia/sentimento-das-empresas-da-alemanha-volta-a-melhorar-em-novembro-mostra-indice-ifo/",
+    "ca6b204525c86946"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1416,10 +1416,10 @@
     "O Grande Debate: Ajuste fiscal é possível sem reduzir programas sociais?",
     "Confiança do consumidor cai em novembro para o menor nível desde agosto de 2022",
     "Casa dos Ventos pede prioridade para antecipar carga de data center do Tik Tok",
-    "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO"
+    "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO",
+    "Sentimento das empresas da Alemanha volta a melhorar em novembro, mostra índice Ifo"
   ],
   "leads": [
-    "A energia nuclear ganhou novo impulso no cenário global, em meio a debates sobre segurança, custos e o destino dos rejeitos radioativos. Governos e grandes empresas de tecnologia estão ampliando suas apostas nessa fonte energética para garantir o abastecimento e reduzir as emissões que contribuem para o aquecimento do planeta.",
     "As três principais bolsas de valores da China anunciaram planos para auxiliar os preços das ações em dificuldades com um conjunto de medidas, como a flexibilização dos requisitos para financiamento com margem.",
     "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
     "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó",
@@ -1668,7 +1668,8 @@
     "O empresário Leonardo Bortoletto e o advogado Vitor Marques debateram, na segunda-feira (23), em O Grande Debate (de segunda a sexta-feira, às 23h), se a \"o ajuste fiscal é possível sem reduzir programas sociais\".",
     "O Índice de Confiança do Consumidor, medido pelo FGV/Ibre, voltou a recuar em novembro. O ICC baixou 1,2 ponto no mês, atingindo para 83,5 pontos, o menor nível observado desde agosto de 2022. Na média móvel trimestral, o índice cedeu 0,4 ponto, para 84,1 pontos.",
     "A Casa dos Ventos pediu à Agência Nacional de Energia Elétrica (Aneel) que estenda ao seu projeto de data center no Pecém, Ceará, a regra de transição que garante prioridade na contratação de capacidade na rede de transmissão em 2029. A empresa quer antecipar para aquele ano uma demanda de energia prevista para os anos seguintes, sem precisar dispu",
-    "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa"
+    "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa",
+    "O índice Ifo de sentimento das empresas da Alemanha subiu para 90,6 pontos em novembro, no sétimo avanço consecutivo, segundo pesquisa divulgada nesta terça-feira (24) pelo instituto alemão Ifo."
   ],
   "eventos_recentes": [
     {
@@ -2281,7 +2282,6 @@
     }
   ],
   "hashes_imagens": [
-    "74f10bc4d78d52b1",
     "c1e0b2659879c3b2",
     "2404d220ace67c05",
     "cae24a5184e5258a",
@@ -2580,6 +2580,7 @@
     "e51d36ee609b7595",
     "029686419f6174c8",
     "8ce180b787e27480",
-    "50b49dac0f9583be"
+    "50b49dac0f9583be",
+    "6ce7b866a62e7f3a"
   ]
 }
