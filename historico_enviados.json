@@ -1,11 +1,5 @@
 {
   "links": [
-    "bae222a15d4d6b5b",
-    "4f92615b09cc95c6",
-    "bc04c88ba91d920a",
-    "4465ce4c3976a858",
-    "https://www.seudinheiro.com/2026/bolsa-dolar/dolar-ouro-e-ate-o-real-entram-no-jogo-onde-o-ubs-ve-oportunidades-para-ganhar-dinheiro-e-se-proteger-em-2027-miql/",
-    "e20f85e612abe4da",
     "bcb3e0526507e894",
     "https://www.estadao.com.br/economia/negocios/the-economist-o-que-esta-causando-os-recentes-apagoes-nos-estados-unidos/",
     "0748f763d58af596",
@@ -799,7 +793,13 @@
     "4f418fe59c1be55f",
     "https://www.infomoney.com.br/politica/eua-barram-pedido-do-brasil-na-omc-contra-tarifaco-de-trump-entenda-proximos-passos/",
     "6514094e0104aaae",
-    "6a75e6cb853a0206"
+    "6a75e6cb853a0206",
+    "47fbbf49d0e1d4fe",
+    "527e97f62df8c803",
+    "https://www.cnnbrasil.com.br/internacional/crimeia-restringira-o-fornecimento-de-eletricidade-por-10-dias/",
+    "03f8c83d1cfbd25e",
+    "https://www.cnnbrasil.com.br/economia/sem-reacao-adequada-brasil-pode-viver-recessao-diz-ex-diretor-do-bc/",
+    "85617e8d4025b8ed"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1419,11 +1419,11 @@
     "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO",
     "Sentimento das empresas da Alemanha volta a melhorar em novembro, mostra índice Ifo",
     "Japão promete disciplina fiscal e independência do BC em diretrizes orçamentárias",
-    "EUA barram pedido do Brasil na OMC contra tarifaço de Trump; entenda próximos passos"
+    "EUA barram pedido do Brasil na OMC contra tarifaço de Trump; entenda próximos passos",
+    "Crimeia restringirá o fornecimento de eletricidade por 10 dias",
+    "Sem reação adequada, Brasil pode viver recessão, diz ex-diretor do BC"
   ],
   "leads": [
-    "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó",
-    "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência",
     "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
     "Segundo a CNBC, os benefícios do Social Security, a previdência pública dos Estados Unidos, serão reajustados em 3,6% em 2027, mas uma série de mudanças nas regras tributárias e nos prêmios do Medicare pode reduzir o ganho líquido de aposentados e trabalhadores. O aumento, o maior desde 2023, deve elevar o benefício médio em cerca de US$ 75 por mês",
     "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global.",
@@ -1671,7 +1671,9 @@
     "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa",
     "O índice Ifo de sentimento das empresas da Alemanha subiu para 90,6 pontos em novembro, no sétimo avanço consecutivo, segundo pesquisa divulgada nesta terça-feira (24) pelo instituto alemão Ifo.",
     "– O governo do Japão adotará uma política fiscal sustentável e respeitará a independência ‌do banco central, segundo um rascunho de diretrizes para o orçamento do próximo ano divulgado nesta ‌terça-feira (24), em um sinal de sua sensibilidade às apreensões do mercado em relação aos seus planos de gastos elevados.",
-    "Os Estados Unidos bloquearam nesta terça-feira (24) a abertura de um painel na Organização Mundial do Comércio (OMC) para investigar as tarifas adicionais impostas pelo governo Donald Trump a produtos brasileiros. A decisão adia o início do julgamento solicitado pelo Brasil, que pretende reapresentar o pedido em dezembro."
+    "Os Estados Unidos bloquearam nesta terça-feira (24) a abertura de um painel na Organização Mundial do Comércio (OMC) para investigar as tarifas adicionais impostas pelo governo Donald Trump a produtos brasileiros. A decisão adia o início do julgamento solicitado pelo Brasil, que pretende reapresentar o pedido em dezembro.",
+    "A península da Crimeia, no Mar Negro, passará por 10 dias de restrições no fornecimento de energia elétrica devido a trabalhos de \"resposta a emergências\", informou nesta terça-feira (24) o governador nomeado pela Rússia.",
+    "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico."
   ],
   "eventos_recentes": [
     {
@@ -2285,11 +2287,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795520847.903266
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795521521.124509
     }
   ],
   "hashes_imagens": [
-    "cae24a5184e5258a",
-    "a143566310ffe643",
     "5aff1a543d8870cc",
     "c21d12425264b803",
     "b41bcfbb3d13ccbb",
@@ -2587,6 +2591,8 @@
     "50b49dac0f9583be",
     "6ce7b866a62e7f3a",
     "a354ec7d438f53fb",
-    "79971468a4ab0a4f"
+    "79971468a4ab0a4f",
+    "70750616c84e78c3",
+    "13ba2b0325a0f59a"
   ]
 }
