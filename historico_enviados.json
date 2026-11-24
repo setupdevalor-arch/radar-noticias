@@ -1,13 +1,5 @@
 {
   "links": [
-    "936dd7ab89e4f4f6",
-    "https://braziljournal.com/opiniao-ainda-da-para-apostar-tudo-no-cdi",
-    "eaa05441506bf8fa",
-    "05a0bd245f9faaea",
-    "https://www.infomoney.com.br/mundo/empresas-europeias-alertam-ue-contra-cortes-que-afetem-competitividade/",
-    "e3777713bb7c0e03",
-    "https://www.infomoney.com.br/mercados/mercados-day-trade-hoje-analistas-23112026/",
-    "7155085209c9cba4",
     "https://www.infomoney.com.br/mundo/montadoras-alemas-enfrentam-tensao-crescente-com-sindicatos/",
     "e66ed28b6a308b67",
     "8ea894b4b4f891e7",
@@ -799,7 +791,15 @@
     "https://www.spacemoney.com.br/economia/legislacao/coreia-do-sul-propoe-liberar-icos/",
     "be6a620ff0dae250",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/mxrf11-estrategia-cautelosa-cris-fundos-imobiliarios/",
-    "b299058ce399ad2c"
+    "b299058ce399ad2c",
+    "ab57a1984eb66562",
+    "274ddc3e995a4f4b",
+    "a60c1c0acde93719",
+    "a692487bf3501130",
+    "https://www.spacemoney.com.br/investimentos/acoes/hbr-realty-opa-helbor-27-janeiro/",
+    "dd3276cabe3dfa27",
+    "https://www.infomoney.com.br/mercados/fim-da-escala-6x1-traz-alivio-para-educacionais-e-bbi-reitera-preferencia-por-yduqs/",
+    "9098752b2547b831"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1461,11 +1461,11 @@
     "Reputação na UE e em IAs define disputa por negócios do Brasil",
     "Fim da escala 6x1: Marinho diz que ‘ninguém vai morrer’ se comércio não abrir todos os dias",
     "Coreia do Sul propõe liberar ICOs com regras de divulgação",
-    "MXRF11 segura aportes e mira CRIs com prêmio maior"
+    "MXRF11 segura aportes e mira CRIs com prêmio maior",
+    "HBR Realty estende adesão à OPA da Helbor até 27 de janeiro",
+    "Fim da escala 6×1 traz alívio para educacionais e BBI reitera preferência por Yduqs"
   ],
   "leads": [
-    "A expansão dos gastos públicos é a principal razão pela qual investidores passaram a exigir prêmios maiores para continuar financiando a dívida do governo brasileiro. A avaliação é de Tatiana Pinheiro, consultora econômica e pesquisadora da FGV-EESP.",
-    "Relator do Orçamento de 2027 cobra medidas para acomodar promessas de campanha sem cortar programas sociais",
     "Os preços do petróleo caem no pregão asiático desta segunda-feira (23), mesmo com investidores incorporando um prêmio de risco decorrente da continuidade dos ataques a embarcações e refinarias no Oriente Médio, em meio aos esforços diplomáticos para pôr fim à guerra.",
     "O cenário externo para o próximo ano é de juros mais altos nos países desenvolvidos, estima o UBS Global Wealth Management em seu relatório “Year Ahead 2027”, o que não é favorável para as economias emergentes e torna mais difícil para o Brasil “empurrar com a barriga” os problemas das contas públicas, como tem feito desde a criação do arcabouço fi",
     "Os Fundos de Investimento em Direitos Creditórios (FIDCs) acumularam R$ 56,1 bilhões em captação líquida entre janeiro e outubro de 2026, segundo dados da Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais (ANBIMA). O resultado ocorre em um momento de mudanças nas regras de antecipação de recebíveis, que podem ampliar as alte",
@@ -1713,17 +1713,11 @@
     "Entre 2023 e 2025, o Brasil ficou em quinto lugar nas importações totais da União Europeia dentro de um grupo de 11 nações estratégicas comparadas, somando 264,4 bilhões de euros. Ainda assim, um estudo elaborado pela Kreab Consultoria Global, junto à Smart, sua representante no Brasil, aponta que o desafio brasileiro agora é transformar capacidade",
     "Entenda o que é a PEC do fim da escala 6x1",
     "A Comissão de Serviços Financeiros (FSC) da Coreia do Sul propôs nesta terça-feira liberar ofertas iniciais de moedas (ICOs) no país pela primeira vez desde 2017, informou o Chosun Biz. A medida integra o Digital Asset Act e exige divulgação detalhada antes da venda de tokens.",
-    "O Maxi Renda (MXRF11) optou por não acelerar a aplicação dos R$ 1 bilhão captados em sua emissão mais recente, conforme informação do InfoMoney. A gestão do fundo imobiliário prefere selecionar operações de crédito com garantias robustas e retornos condizentes com o risco, em vez de alocar recursos apenas para reduzir o caixa. Em um ambiente de jur"
+    "O Maxi Renda (MXRF11) optou por não acelerar a aplicação dos R$ 1 bilhão captados em sua emissão mais recente, conforme informação do InfoMoney. A gestão do fundo imobiliário prefere selecionar operações de crédito com garantias robustas e retornos condizentes com o risco, em vez de alocar recursos apenas para reduzir o caixa. Em um ambiente de jur",
+    "A HBR Realty ampliou de 30 para 90 dias o prazo para que os acionistas remanescentes da Helbor (HBOR3) vendam suas participações na oferta pública de aquisição de ações (OPA) estruturada como permuta para assumir o controle da incorporadora. Segundo o Monitor do Mercado, o anúncio foi feito nesta terça-feira (24).",
+    "A publicação da Portaria nº 2.041 pelo Ministério do Trabalho, que regulamenta a emenda constitucional que pôs fim à escala 6×1, foi avaliada como positiva pelo Bradesco BBI para as empresas de educação, especialmente aquelas com maior exposição a cursos presenciais, excluindo medicina."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795361702.727815
-    },
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795362030.917012
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795362992.952661
@@ -2390,8 +2384,6 @@
     }
   ],
   "hashes_imagens": [
-    "5854bd163864cf99",
-    "5ac94973d630a0ef",
     "04933c206798a6a4",
     "3cbf38f86c0c6df6",
     "7f779d8af595a075",
@@ -2689,6 +2681,8 @@
     "a1e196c7a2308beb",
     "e2f1122be176e736",
     "d4e9c94aa9abde55",
-    "3ac8e047102c2151"
+    "3ac8e047102c2151",
+    "72c3215b203999ca",
+    "085265416263351c"
   ]
 }
