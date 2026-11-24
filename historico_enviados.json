@@ -1,8 +1,5 @@
 {
   "links": [
-    "95ea60cf967f4ce2",
-    "04f0672040a85944",
-    "60ba2cca961f9c58",
     "e87bfcf15305a824",
     "b3ba74014e56af47",
     "9144117c8eac0374",
@@ -799,7 +796,10 @@
     "https://www.spacemoney.com.br/economia/exterior/petroleiros-minas-ormuz-sancoes-eua/",
     "0e3417262875c4a4",
     "https://www.spacemoney.com.br/tecnologia/nvidia-governanca-sucessao-volta-huang/",
-    "65a9bf2c51c903e8"
+    "65a9bf2c51c903e8",
+    "51cf8353086f0426",
+    "https://www.spacemoney.com.br/economia/exterior/fusao-tesla-spacex/",
+    "9144e4f436ae6516"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1379,10 +1379,10 @@
     "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
     "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado",
     "Três petroleiros atingem minas em Ormuz, diz Irã",
-    "Nvidia: sucessão e governança após retorno de Huang"
+    "Nvidia: sucessão e governança após retorno de Huang",
+    "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões"
   ],
   "leads": [
-    "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
     "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
     "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
     "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
@@ -1631,7 +1631,8 @@
     "A aprovação do pacote fiscal do governo Lula pela Câmara dos Deputados nesta segunda-feira (23), por 353 votos a favor e 128 contra, abre caminho para uma nova discussão sobre os supersalários no funcionalismo público. O texto, que segue para a sanção do presidente Luiz Inácio Lula da Silva (PT), estabelece um prazo de 60 dias para que o Congresso ",
     "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast.",
     "Três petroleiros pegaram fogo após atingir minas navais no Estreito de Ormuz, informou a Guarda Revolucionária Iraniana em comunicado divulgado pela agência estatal IRNA, segundo a CNBC. De acordo com o relato, as embarcações estavam sob cobertura aérea e escolta militar dos EUA, que não impediram as explosões.",
-    "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador."
+    "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador.",
+    "As empresas de Elon Musk, Tesla e SpaceX, discutem uma possível fusão avaliada em US$ 3,5 trilhões (cerca de R$ 20,8 trilhões), segundo o g1. Conforme o portal, que cita informações publicadas nesta terça-feira (24) pelo jornal britânico Financial Times, o negócio seria o maior da história e pode ser concluído até o fim deste ano."
   ],
   "eventos_recentes": [
     {
@@ -2181,6 +2182,10 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795499601.372336
+    },
+    {
+      "chave": "tesla::EVENTO_CORP",
+      "ts": 1795502736.736601
     }
   ],
   "hashes_imagens": [
@@ -2453,6 +2458,7 @@
     "b76f9b9c62953abc",
     "607e797daa4addba",
     "af38e58d9c03ba11",
-    "22ac1a4729081214"
+    "22ac1a4729081214",
+    "f97711bcfc7cc014"
   ]
 }
