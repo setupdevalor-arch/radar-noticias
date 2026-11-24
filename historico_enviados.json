@@ -1,8 +1,5 @@
 {
   "links": [
-    "215f35d2f1c339d0",
-    "https://www.infomoney.com.br/mundo/por-que-a-otan-esta-montando-uma-rede-de-taxis-para-o-espaco/",
-    "afc3f5b793139e1f",
     "https://www.spacemoney.com.br/economia/exterior/otan-starlift-rede-lancamento-satelites/",
     "b5d0fbd35fbe8447",
     "ed19567a38e7a701",
@@ -799,7 +796,10 @@
     "https://www.moneytimes.com.br/precos-do-petroleo-proximos-das-minimas-de-tres-meses-com-aumento-da-oferta-compensando-ameacas-fets/",
     "9db73114876cf08b",
     "bfc00082f263851f",
-    "ed016c183571286e"
+    "ed016c183571286e",
+    "c82561f8c3a412dd",
+    "https://www.spacemoney.com.br/economia/macroeconomia/franca-pmi-recessao-tecnica-eleicao/",
+    "4de45929774e62cb"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1381,10 +1381,10 @@
     "Três petroleiros atingem minas em Ormuz, diz Irã",
     "Nvidia: sucessão e governança após retorno de Huang",
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
-    "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças"
+    "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças",
+    "PMI acende alerta de recessão na França antes de eleição"
   ],
   "leads": [
-    "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
     "O indicador Cepea/Esalq do boi gordo, referência para os negócios em São Paulo, fechou a quinta-feira (19/11) cotado a R$ 395,50 por arroba, o maior patamar nominal desde o início da série histórica do centro de estudos, em 1994. A semana foi mais curta por causa do feriado de 20 de novembro, o que reduziu o volume de negócios e deixou os preços es",
     "Se você tem ações da Itaúsa (ITSA4), já pode comemorar, pois a próxima remessa de pagamentos da empresa já tem data para cair. O pagamento de dividendos, que acontece de forma trimestral regular, está agendado para janeiro de 2027 no valor de R$ 0,0242425.",
     "O Brasil enfrenta um cenário macroeconômico desafiador para 2027, com crescimento modesto e inflação persistentemente elevada. É o que aponta Alberto Ramos, economista-chefe para América Latina do Goldman Sachs, em entrevista ao CNN Money, ao detalhar as projeções do banco.",
@@ -1633,7 +1633,8 @@
     "Três petroleiros pegaram fogo após atingir minas navais no Estreito de Ormuz, informou a Guarda Revolucionária Iraniana em comunicado divulgado pela agência estatal IRNA, segundo a CNBC. De acordo com o relato, as embarcações estavam sob cobertura aérea e escolta militar dos EUA, que não impediram as explosões.",
     "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador.",
     "As empresas de Elon Musk, Tesla e SpaceX, discutem uma possível fusão avaliada em US$ 3,5 trilhões (cerca de R$ 20,8 trilhões), segundo o g1. Conforme o portal, que cita informações publicadas nesta terça-feira (24) pelo jornal britânico Financial Times, o negócio seria o maior da história e pode ser concluído até o fim deste ano.",
-    "Os preços do petróleo caem pelo segundo dia consecutivo nesta terça-feira (24), sendo negociados próximos das mínimas de três meses, diante de sinais de aumento da oferta de petróleo bruto e de um possível excedente no mercado, embora persistam os riscos para o transporte marítimo pelo Estreito de Ormuz."
+    "Os preços do petróleo caem pelo segundo dia consecutivo nesta terça-feira (24), sendo negociados próximos das mínimas de três meses, diante de sinais de aumento da oferta de petróleo bruto e de um possível excedente no mercado, embora persistam os riscos para o transporte marítimo pelo Estreito de Ormuz.",
+    "A atividade do setor privado francês caiu em novembro ao menor patamar em seis meses, com a indústria em situação pior do que os serviços, de acordo com o índice de gerentes de compras (PMI) da S&P Global divulgado na segunda-feira e destacado em reportagem da CNBC. O dado reforçou os temores de recessão técnica — dois trimestres seguidos de queda "
   ],
   "eventos_recentes": [
     {
@@ -2191,6 +2192,10 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795506197.512508
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795506948.061936
     }
   ],
   "hashes_imagens": [
@@ -2465,6 +2470,7 @@
     "af38e58d9c03ba11",
     "22ac1a4729081214",
     "f97711bcfc7cc014",
-    "f39a438c48224e12"
+    "f39a438c48224e12",
+    "b7bfc9e5375e8ccb"
   ]
 }
