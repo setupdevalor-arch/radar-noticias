@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/the-wall-street-journal/plano-eua-mercedes-benz-china-wsj/",
-    "8cd10dc38c08b676",
-    "https://www.infomoney.com.br/mercados/estrangeiros-compras-dolar-futuro-pressao-real/",
-    "b27555a6c7b4716d",
-    "3b6ac0c56fe44d90",
     "69aebd3176710045",
     "1d2e84b1542a14ae",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/anuncios-maliciosos-iphones-seed-phrases/",
@@ -799,7 +794,12 @@
     "https://bmcnews.com.br/opiniao/renato-batista/o-que-esta-por-tras-dos-ataques-ciberneticos-que-marcaram-outubro-e-novembro/",
     "c66b3a53708d4d09",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/icdi11-fecha-terceira-oferta-b3/",
-    "5e9e1a2f3987e622"
+    "5e9e1a2f3987e622",
+    "68d3dbf5c8bb972f",
+    "cf60ffb0af85969f",
+    "614be8b1cfadda87",
+    "https://www.moneytimes.com.br/eua-entram-com-uma-acao-judicial-para-recuperar-milhoes-de-dolares-roubados-no-ataque-cibernetico-a-binance/",
+    "9d6e35b71bd9d37a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1450,10 +1450,10 @@
     "Papéis da Anthropic recuam para menos de US$ 83 na Nasdaq",
     "Juros futuros recuam com exterior e aprovação de ajuste fiscal na Câmara",
     "O que está por trás dos ataques cibernéticos que marcaram outubro e novembro",
-    "ICDI11 fecha 3ª oferta com R$ 180 mi na B3"
+    "ICDI11 fecha 3ª oferta com R$ 180 mi na B3",
+    "EUA entram com uma ação judicial para recuperar milhões de dólares roubados no ataque cibernético à Binance"
   ],
   "leads": [
-    "Adriana Colloca, do setor de vendas diretas, destacou a isenção de IBS e CBS e a dispensa de obrigações acessórias para a categoria",
     "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento.",
     "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado",
     "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
@@ -1702,13 +1702,10 @@
     "As ações da Anthropic ficaram abaixo dos US$ 83 definidos em seu IPO no pré-mercado desta terça-feira (24), segundo o g1. Os papéis recuavam 6,5%, a US$ 82, no quinto dia de negociação desde a estreia na Nasdaq.",
     "A curva de juros perde levemente a inclinação na manhã desta terça-feira (24), com recuo dos médios e longos, enquanto os curtos rondam a estabilidade.",
     "No setor de segurança digital, os meses de outubro e novembro de 2026 ficaram conhecidos como “black oktober e black november”. Eles trouxeram uma reflexão importante para o setor de segurança: mesmo organizações com estruturas tecnológicas avançadas podem ser comprometidas por meio de acessos legítimos, dispositivos de funcionários e processos int",
-    "A terceira oferta de cotas do ICDI11 foi concluída em 16/11/2026, com R$ 180.019.363,44 e 2.067 subscritores, conforme a Suno Notícias. O encerramento foi comunicado em 19/11."
+    "A terceira oferta de cotas do ICDI11 foi concluída em 16/11/2026, com R$ 180.019.363,44 e 2.067 subscritores, conforme a Suno Notícias. O encerramento foi comunicado em 19/11.",
+    "O Departamento de Justiça dos Estados Unidos apresentou uma ação de confisco para recuperar mais de US$ 1,1 bilhão em criptomoedas supostamente roubadas no mês passado por hackers norte-coreanos da plataforma Binance."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795357302.55217
-    },
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795359420.472958
@@ -2376,10 +2373,13 @@
     {
       "chave": "icdi11::GERAL_ATIVO",
       "ts": 1795530052.478671
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795530449.55248
     }
   ],
   "hashes_imagens": [
-    "8e48fd00a4467f3d",
     "75e75a690be6f254",
     "a808188c38393f83",
     "f7384e4b1f8e9eec",
@@ -2678,6 +2678,7 @@
     "5cd585917e161486",
     "2e8ca3d95e792e20",
     "9fb1d31354878b29",
-    "ecc8b85639df8e41"
+    "ecc8b85639df8e41",
+    "73dc2960c5c5efdf"
   ]
 }
