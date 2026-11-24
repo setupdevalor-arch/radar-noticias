@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/economia/chile-tem-maior-tombo-do-pib-desde-2020-e-bc-ve-recuperacao-mais-lenta/",
-    "84efc0bcdbcb5942",
     "https://www.spacemoney.com.br/agronegocio/fertilizantes-importacao-agro/",
     "fbbda2654b9a2ca2",
     "https://www.infomoney.com.br/business/global/espioes-chips-e-a-nvidia-a-campanha-secreta-da-china-para-driblar-os-eua/",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/mercados/prio-aprova-cisao-parcial-com-transferencia-de-r-5438-milhoes-em-patrimonio/",
     "ee13b7e9fc93432a",
     "https://agenciainfra.com/blog/energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil",
-    "ae9f575b6c310936"
+    "ae9f575b6c310936",
+    "a02162128b60d4a0",
+    "055571aacdd0c391"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1662,10 +1662,6 @@
     "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização."
   ],
   "eventos_recentes": [
-    {
-      "chave": "fiis_geral::FIIS_GERAL",
-      "ts": 1795345419.246661
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795348267.985351
