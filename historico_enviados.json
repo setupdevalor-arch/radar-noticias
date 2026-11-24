@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/economia/money/negocios/trump-volta-a-defender-restituicao-de-huang-ao-cargo-de-ceo-da-nvidia/",
-    "2744b1ca2a752751",
     "af0550cc896a3f81",
     "https://www.infomoney.com.br/mercados/minerio-cai-com-enfraquecimento-da-demanda-chinesa-e-piora-das-margens-siderurgicas/",
     "d3d1161dd3c25691",
@@ -799,7 +797,9 @@
     "https://g1.globo.com/economia/blog/ana-flor/post/2026/11/24/governo-prepara-pec-com-medidas-de-para-dar-potencia-fiscal-e-assegurar-cumprimento-de-meta.ghtml",
     "291bf64b03ee8e69",
     "https://www.spacemoney.com.br/commodities/petroleo-fecha-alta-ataques-ormuz/",
-    "dcc78fbd6341617d"
+    "dcc78fbd6341617d",
+    "https://www.spacemoney.com.br/commodities/ouro-correlacao-sp500-opcoes-gld/",
+    "d3dd96342118a2be"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1499,10 +1499,10 @@
     "“A Amazon não compete com o concorrente”: a estratégia para bater rivais como Mercado Livre e Shopee no Brasil",
     "HAPV3: Hapvida esclarece à CVM sobre reavaliação de portfólio",
     "Governo prepara PEC com medidas para dar 'potência fiscal' e assegurar cumprimento de meta, diz Moretti",
-    "Petróleo sobe após ataques no Estreito de Ormuz"
+    "Petróleo sobe após ataques no Estreito de Ormuz",
+    "Ouro deixa de agir como proteção e anda junto com ações"
   ],
   "leads": [
-    "O real voltou a figurar entre as moedas emergentes que mais sofreram com a recente onda de aversão a risco global, mas ainda apresenta uma combinação de valuation e retorno potencial que o mantém no radar dos investidores, segundo relatório do Kamakshya Trivedi e estrategistas do Goldman Sachs.",
     "As alterações nos impostos não estão valendo ainda, mas já levantaram questionamentos e fizeram algum barulho",
     "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027.",
     "Quitar dívidas, reservar recursos para despesas de janeiro ou investir? Especialistas explicam como definir prioridades e aproveitar melhor o benefício",
@@ -1751,7 +1751,8 @@
     "Ricardo Pagani, diretor de operações da Amazon Brasil, chamou atenção para o foco da companhia no cliente em entrevista para o Seu Dinheiro",
     "A Hapvida Participações e Investimentos S.A. (HAPV3) divulgou comunicado ao mercado em resposta ao Ofício nº 272/2026/CVM/SEP/GEA-2, da Comissão de Valores Mobiliários, em continuidade ao comunicado já divulgado em 19 de novembro de 2026.",
     "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico.",
-    "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05."
+    "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05.",
+    "O ouro deixou de se comportar como ativo de proteção neste ano e passou a oscilar de forma parecida com um índice de mercado, segundo reportagem da CNBC. Na semana passada, temores relacionados à inteligência artificial, um Federal Reserve mais duro e um dólar mais forte levaram muitos investidores a levantar caixa, e o metal foi vendido junto com "
   ],
   "eventos_recentes": [
     {
@@ -2497,10 +2498,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795553356.404898
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795553715.19109
     }
   ],
   "hashes_imagens": [
-    "359441399e0c461f",
     "22d1431f6258a4a1",
     "816720a10b88ec66",
     "6f2a3b230b07876f",
@@ -2799,6 +2803,7 @@
     "ec9754883c470a23",
     "29359e5ac0b7fb09",
     "398599525494f300",
-    "d79d49ce4fa8c21a"
+    "d79d49ce4fa8c21a",
+    "913daf7a839c60e8"
   ]
 }
