@@ -1,7 +1,5 @@
 {
   "links": [
-    "8c3f842c5f594a05",
-    "https://www.poder360.com.br/poder-economia/se-nada-for-feito-vamos-para-uma-recessao-diz-mendonca-de-barros/",
     "a1d677ebac0709c7",
     "e1e5f9c38403088b",
     "dfb25b6fbf3ac1cc",
@@ -799,7 +797,9 @@
     "https://www.moneytimes.com.br/ouro-fecha-em-queda-com-perspectiva-de-alta-dos-juros-nos-eua-davs/",
     "cfe030114e0bf126",
     "https://www.cnnbrasil.com.br/agro/clima-eleva-precos-do-cacau-na-bolsa-de-nova-york-diante-de-riscos-a-oferta/",
-    "3c149a00ca8e329d"
+    "3c149a00ca8e329d",
+    "https://telesintese.com.br/anatel-localiza-origem-de-interferencia-de-gps-que-afetou-voos-em-guarulhos/",
+    "fa94a958ca2c910b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1493,10 +1493,10 @@
     "Gás Verde recebe certificação da ANP para emitir CGOBs na planta de Seropédica (RJ)",
     "Mudanças no PL das big techs são insuficientes, avalia Conselho Digital",
     "Ouro fecha em queda com perspectiva de alta dos juros nos EUA",
-    "Clima eleva preços do cacau na bolsa de Nova York diante de riscos à oferta"
+    "Clima eleva preços do cacau na bolsa de Nova York diante de riscos à oferta",
+    "Anatel localiza origem de interferência de GPS que afetou voos em Guarulhos"
   ],
   "leads": [
-    "A Brava Energia (BRAV3) concluiu a aquisição dos 65% remanescentes dos direitos da concessão sobre os campos de produção de Pescada, Arabaiana e Dentão, da Petrobras.",
     "Um grupo de 78 juristas e economistas assinou manifesto contra o avanço do projeto de regulamentação econômica das big techs, que deverá ser votado pela Câmara dos Deputados nesta semana.",
     "O conselho de administração da RD Saúde (RADL3) aprovou a realização de um programa de recompra de até 127,59 milhões de ações ordinárias, mostra fato relevante divulgado ao mercado nesta segunda-feira (23).",
     "O fundo imobiliário XP Malls (XPML11) anunciou que pagará o menor dividendo dos últimos 29 meses: os investidores receberão, no próximo dia 25 de novembro, R$ 0,80 por cota.",
@@ -1745,7 +1745,8 @@
     "A Gás Verde recebeu, nesta terça-feira (24/11), a certificação da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) para emissão de Certificado de Garantia de Origem do Biometano (CGOB) na planta de Seropédica (RJ).",
     "Empresas de tecnologia reagiram ao novo parecer apresentado pelo deputado federal Aliel Machado (PV-PR), relator do projeto de lei que prevê a regulação econômica das big techs.",
     "O ouro fechou em forte queda nesta terça-feira (24), pressionado pela perspectiva de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), enquanto investidores aguardam a divulgação de dados de inflação dos Estados Unidos.",
-    "Os contratos futuros do cacau encerraram a sessão desta terça-feira (24) em alta na bolsa de Nova York, ampliando o movimento de valorização observado desde a semana passada. O vencimento para março avançou 2,15%, cotado a US$ 5.413 por tonelada. Em Londres, os contratos também registraram ganhos, de aproximadamente 1,2%."
+    "Os contratos futuros do cacau encerraram a sessão desta terça-feira (24) em alta na bolsa de Nova York, ampliando o movimento de valorização observado desde a semana passada. O vencimento para março avançou 2,15%, cotado a US$ 5.413 por tonelada. Em Londres, os contratos também registraram ganhos, de aproximadamente 1,2%.",
+    "A Agência Nacional de Telecomunicações (Anatel) identificou um estabelecimento comercial em Guarulhos (SP) como a origem das interferências nos sinais de GPS que afetaram operações aéreas no Aeroporto Internacional de São Paulo entre outubro e novembro de 2026. A agência encaminhará proposta de abertura de processo administrativo e representação cr"
   ],
   "eventos_recentes": [
     {
@@ -2467,10 +2468,13 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795551114.64692
+    },
+    {
+      "chave": "localiza::GERAL_ATIVO",
+      "ts": 1795551473.442766
     }
   ],
   "hashes_imagens": [
-    "50f516e2c1f350c5",
     "3882357cfe45c3f7",
     "3842dc24f99bb1ef",
     "1a839460f43add0f",
@@ -2769,6 +2773,7 @@
     "24a126b00872754c",
     "725e7bae50e914d3",
     "30ebb7a59a22e831",
-    "290d1a66d7223d49"
+    "290d1a66d7223d49",
+    "9106ffc97f22c2db"
   ]
 }
