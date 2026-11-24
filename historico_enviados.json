@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-economia/por-que-a-america-latina-precisa-de-conexoes-globais-para-inovar/",
-    "83dc62e37461f7db",
-    "2350b70d52df2654",
     "039ce8e2d46598fb",
     "a2f1c746560427dd",
     "02a3cfa58def870c",
@@ -799,7 +796,10 @@
     "https://www.spacemoney.com.br/tecnologia/empresas-asia-pacifico-ia-retorno-medicao/",
     "988e8a6f04c9374d",
     "https://www.spacemoney.com.br/tecnologia/ethereum-seguranca-protocolo-ia-quantica/",
-    "4f634485e923bd9c"
+    "4f634485e923bd9c",
+    "f21ced03fa7b4060",
+    "https://www.estadao.com.br/economia/coluna-da-broad/vendas-nos-shoppings-esfriam-ate-para-allos-iguatemi-e-multiplan/",
+    "c9e31b173cef2b99"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1368,10 +1368,10 @@
     "Ucrânia afunda navio russo na Líbia com drones navais",
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
     "Empresas da Ásia veem retorno com IA, mas medição é difícil",
-    "Ethereum acelera defesa contra ameaças quânticas e de IA"
+    "Ethereum acelera defesa contra ameaças quânticas e de IA",
+    "Vendas nos shoppings esfriam até para Allos, Iguatemi e Multiplan"
   ],
   "leads": [
-    "Primeira parcela, de R$ 500 milhões, será paga aos investidores no próximo dia 23 de dezembro",
     "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta.",
     "Os acionistas da Unifique voltaram a se reunir nesta quinta-feira, 19 de novembro, mas a assembleia foi novamente suspensa sem decisão a respeito de uma nova avaliação do valor da operadora. Segundo a companhia, a controladora Unitá Participações e o representante dos acionistas que pediram a reunião negociam a continuidade da oferta pública de aqu",
     "Projetos em estudo somam 9,1 GW de potência; companhia defende disputa com baterias químicas nos mesmos certames",
@@ -1620,7 +1620,8 @@
     "A Ucrânia afundou a corveta russa Merkury, um dos navios de guerra mais recentes de Moscou, em uma ofensiva com sete drones marítimos contra a base naval de Benghazi, no norte da Líbia, no domingo (22). A reivindicação foi feita pelo presidente Volodymyr Zelensky na segunda-feira (23). O cargueiro MV Angara, que segundo Kiev era usado para transpor",
     "O presidente do Bradesco, Marcelo Noronha, afirmou que o crédito no Brasil está “totalmente travado”, tanto para pessoas físicas quanto para empresas. Em conversa com o Estadão/Broadcast, antes do início da cerimônia de posse de Luiz Carlos Trabuco Cappi na presidência do Movimento Brasil Competitivo (MBC), Noronha disse que 2027 será um ano muito ",
     "Empresas da Ásia-Pacífico afirmam que seus investimentos em inteligência artificial já superaram os custos iniciais, mas transformar esses ganhos em números mensuráveis continua sendo um obstáculo, segundo reportagem da CNBC. Pesquisa da Strand Partners encomendada pela Amazon Web Services (AWS) mostra que 58% das companhias que usam IA dizem ter r",
-    "Segundo o Cointelegraph, a Fundação Ethereum dobrou o time responsável pela segurança do protocolo enquanto acelera mudanças nas defesas da rede contra ameaças de computadores quânticos e de inteligência artificial."
+    "Segundo o Cointelegraph, a Fundação Ethereum dobrou o time responsável pela segurança do protocolo enquanto acelera mudanças nas defesas da rede contra ameaças de computadores quânticos e de inteligência artificial.",
+    "A piora da economia brasileira ao longo do ano afetou o consumo nos shopping centers das três maiores redes do País - Allos, Iguatemi e Multiplan - no último trimestre. Juntas, elas detêm participação em cerca de 85 empreendimentos, dentre um total de 658 centros de compras existentes no Brasil."
   ],
   "eventos_recentes": [
     {
@@ -2138,6 +2139,18 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795482651.847331
+    },
+    {
+      "chave": "multiplan::GERAL_ATIVO",
+      "ts": 1795483019.195295
+    },
+    {
+      "chave": "allos::GERAL_ATIVO",
+      "ts": 1795483019.195295
+    },
+    {
+      "chave": "iguatemi::GERAL_ATIVO",
+      "ts": 1795483019.195295
     }
   ],
   "hashes_imagens": [
@@ -2399,6 +2412,7 @@
     "64f41e20ca3a2c05",
     "862dc120e33287ea",
     "2398870d1ddd91b4",
-    "f4f9fe7d51048193"
+    "f4f9fe7d51048193",
+    "ef94999dcd48f62b"
   ]
 }
