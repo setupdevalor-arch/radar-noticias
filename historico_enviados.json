@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/black-friday-pode-ter-melhor-faturamento-desde-2014-projeta-cnc/",
-    "95c592e73347bb31",
-    "https://www.cnnbrasil.com.br/economia/money/tecnologia/impacto-de-custo-de-data-centers-ainda-e-duvida-diz-analista/",
-    "c132d2c7a596e38c",
     "95ea60cf967f4ce2",
     "04f0672040a85944",
     "60ba2cca961f9c58",
@@ -799,7 +795,11 @@
     "https://www.estadao.com.br/economia/market-friendly-equipe-economica-sugere-a-lula-nomes-para-o-bc-que-sejam-amigaveis-ao-mercado/",
     "75605351e7e724c9",
     "df83490b58eed5ab",
-    "acb1cb65a7fa7278"
+    "acb1cb65a7fa7278",
+    "https://www.spacemoney.com.br/economia/exterior/petroleiros-minas-ormuz-sancoes-eua/",
+    "0e3417262875c4a4",
+    "https://www.spacemoney.com.br/tecnologia/nvidia-governanca-sucessao-volta-huang/",
+    "65a9bf2c51c903e8"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1377,11 +1377,11 @@
     "Petrobras prevê investir US$ 122 bi entre 2027-2031",
     "Inflação na Europa: o mapa que separa Leste e Norte",
     "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
-    "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado"
+    "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado",
+    "Três petroleiros atingem minas em Ormuz, diz Irã",
+    "Nvidia: sucessão e governança após retorno de Huang"
   ],
   "leads": [
-    "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa",
-    "Estatal de telecomunicações acumula prejuízo de R$ 90,7 milhões em 2026, apesar de ter recebido R$ 169,9 milhões em subvenções orçamentárias",
     "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
     "Daniel Slaviero afirma que incertezas sobre os cortes de geração dificultam a projeção de receitas e a viabilidade de novos investimentos na fonte",
     "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da instituição e à forte desvalorização de suas ações. Segundo informações da Folha de S.Paulo publicadas neste sábado (21), pessoas do governo ouvi",
@@ -1629,7 +1629,9 @@
     "Entre os segmentos, o de exploração e produção (E&P) continua sendo o que receberá o maior aporte, concentrando mais de 70% dos investimentos.",
     "Dados reunidos pelo Visual Capitalist a partir de estatísticas do Eurostat e do Office for National Statistics colocam 31 países europeus em uma mesma régua e revelam um continente dividido: a inflação anual segue pressionada no Leste e no Sul, enquanto os menores índices aparecem no Norte. O retrato, referente a outubro de 2026 — com leituras de s",
     "A aprovação do pacote fiscal do governo Lula pela Câmara dos Deputados nesta segunda-feira (23), por 353 votos a favor e 128 contra, abre caminho para uma nova discussão sobre os supersalários no funcionalismo público. O texto, que segue para a sanção do presidente Luiz Inácio Lula da Silva (PT), estabelece um prazo de 60 dias para que o Congresso ",
-    "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast."
+    "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast.",
+    "Três petroleiros pegaram fogo após atingir minas navais no Estreito de Ormuz, informou a Guarda Revolucionária Iraniana em comunicado divulgado pela agência estatal IRNA, segundo a CNBC. De acordo com o relato, as embarcações estavam sob cobertura aérea e escolta militar dos EUA, que não impediram as explosões.",
+    "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador."
   ],
   "eventos_recentes": [
     {
@@ -2175,6 +2177,10 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795494257.557914
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795499601.372336
     }
   ],
   "hashes_imagens": [
@@ -2445,6 +2451,8 @@
     "30c57939798db84a",
     "e58afa94d96b2b71",
     "b76f9b9c62953abc",
-    "607e797daa4addba"
+    "607e797daa4addba",
+    "af38e58d9c03ba11",
+    "22ac1a4729081214"
   ]
 }
