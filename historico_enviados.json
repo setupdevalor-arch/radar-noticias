@@ -1,12 +1,5 @@
 {
   "links": [
-    "fc96e24ce1372f97",
-    "9f9702a0ec896fe1",
-    "8a5c41432f2a74a5",
-    "https://www.spacemoney.com.br/agronegocio/etanol-de-milho-27-mi-toneladas-2026/",
-    "915c726c7de523e7",
-    "https://www.spacemoney.com.br/economia/banco-do-brasil-lucro-cai-42/",
-    "4058ddaa87ab506a",
     "bdba587fd9ce0fc8",
     "4cf60a3dc2c9274c",
     "61945d3a79931369",
@@ -799,7 +792,14 @@
     "https://www.spacemoney.com.br/commodities/bancos-testam-ouro-fracionado-digital-londres/",
     "8d84f63a182689a1",
     "https://www.infomoney.com.br/mercados/china-e-india-devem-atingir-recorde-de-importacoes-de-petroleo-russo-em-2026/",
-    "80b0297afb75182d"
+    "80b0297afb75182d",
+    "7c65d54c14b602ed",
+    "fea9840e79160ecd",
+    "7ebdd762df0ae362",
+    "89f21fc2fb1b0fb5",
+    "8d68e203dbc79590",
+    "https://www.cnnbrasil.com.br/infra/vale-anuncia-retomada-parcial-de-operacoes-na-mina-de-viga-em-mg/",
+    "c1e39e2fe53a7765"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1429,10 +1429,10 @@
     "Volkswagen enfrenta sindicato diante da ameaça de greve",
     "Opinião: Pacotes fiscais parciais não são uma solução",
     "Bancos testam ouro fracionado digital em Londres",
-    "China e Índia devem atingir recorde de importações de petróleo russo em 2026"
+    "China e Índia devem atingir recorde de importações de petróleo russo em 2026",
+    "Vale anuncia retomada parcial de operações na mina de Viga em MG"
   ],
   "leads": [
-    "A Rússia afirmou que um navio de carga com destino ao enclave de Kaliningrado foi atacado em águas internacionais no Golfo da Finlândia, o que evidencia os riscos crescentes para as exportações russas de energia e alimentos pelas rotas marítimas do Mar Báltico.",
     "Abastecimento ainda está em recuperação em áreas de São Paulo, Francisco Morato e Guarulhos após intervenção no Sistema Cantareira",
     "União Europeia diz que não vai assinar acordo da COP-31",
     "A Polícia Federal abriu licitação de R$ 207,5 milhões para comprar 225 veículos blindados. O processo inclui três carros destinados à segurança do presidente Luiz Inácio Lula da Silva, com estimativa de R$ 3,8 milhões por unidade.",
@@ -1681,7 +1681,8 @@
     "– A montadora alemã Volkswagen inicia nesta terça-feira (24) negociações salariais com seus representantes sindicais, em meio a protestos e ameaças de greve devido aos planos da montadora ‌de intensificar os cortes de pessoal e reduzir custos.",
     "O período pós-eleição no Brasil tem sido intenso nos mercados financeiros e o motivo é o mesmo da maior parte dos episódios de estresse dos últimos 20 anos: a trajetória da dívida pública. Agora, apenas a sugestão de que uma nova proposta de reduzir os gastos com juros forçadamente seria considerada, sem antes atacar problemas estruturais básicos d",
     "JPMorgan, HSBC e StoneX realizaram suas primeiras negociações com propriedade digital de barras físicas de ouro em Londres, usando um sistema do World Gold Council (WGC) que permite negociar frações do metal e usá-las como garantia sem retirá-lo dos cofres. As operações ocorreram na semana passada, segundo a Bloomberg.",
-    "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f"
+    "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f",
+    "A Vale anunciou, na noite da última segunda-feira (23), que retomará parcialmente as operações na mina de Viga, localizada em Congonhas, na região central de Minas Gerais."
   ],
   "eventos_recentes": [
     {
@@ -2319,10 +2320,13 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795523091.495143
+    },
+    {
+      "chave": "vale::GERAL_ATIVO",
+      "ts": 1795523486.535954
     }
   ],
   "hashes_imagens": [
-    "55eab09340469fc7",
     "958b6ba8d05214b3",
     "39eb31d8859b7e0e",
     "65e2dd55df39f2ec",
@@ -2621,6 +2625,7 @@
     "3b4204d34b3778e4",
     "53a914172191caed",
     "4b72cd5871627419",
-    "e3c462277d9d8b6f"
+    "e3c462277d9d8b6f",
+    "a26121563d0001b4"
   ]
 }
