@@ -1,8 +1,5 @@
 {
   "links": [
-    "dd9b50aaea53ca68",
-    "2ddf620c7a523a66",
-    "60630248b0239644",
     "e76a50b69856db88",
     "https://www.poder360.com.br/poder-justica/oab-sp-estima-perda-de-r-200-bilhoes-por-ano-com-pejotizacao/",
     "8c3644a63b0d5fd3",
@@ -799,7 +796,10 @@
     "82c8470f59dda060",
     "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-24112026/",
     "7774d9ce13d5dadb",
-    "39f03a1a3659285a"
+    "39f03a1a3659285a",
+    "f16522df3d71235a",
+    "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bitcoin-cai-abaixo-de-60-mil-com-recuo-do-rali-de-ia/",
+    "e6bcc1a39c63baae"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1398,10 +1398,10 @@
     "OPINIÃO. O País que não fura poço – e ainda perde da Argentina",
     "Quanto guardar por mês para complementar a aposentadoria",
     "Vendas de imóveis para a classe média perdem fôlego no ano e 2027 não anima",
-    "Mini-índice (WINZ26): o que pode mudar se o WINZ26 perder os 165.345 pontos?"
+    "Mini-índice (WINZ26): o que pode mudar se o WINZ26 perder os 165.345 pontos?",
+    "Bitcoin cai abaixo de US$ 60.000 com recuo do rali de IA"
   ],
   "leads": [
-    "Os Fundos de Investimento Imobiliário (FIIs) continuam sendo uma alternativa para quem deseja participar do mercado imobiliário e buscar rendimentos periódicos sem precisar comprar um imóvel. Por meio deles, investidores aplicam recursos em conjunto em empreendimentos, como shoppings, galpões logísticos, hospitais e edifícios comerciais, ou em títu",
     "A expansão da indústria de etanol de milho está provocando uma mudança estrutural no mercado brasileiro do grão, com impactos sobre a formação de preços, a comercialização e a rentabilidade dos produtores.",
     "Avaliações atrativas, resiliência do yuan e capacidade das empresas de transformar inovação em lucros atraem interesse",
     "As defesas aéreas do Bahrein interceptaram e destruíram novos ataques aéreos lançados pelo Irã sobre o país no fim da tarde deste sábado, informou o assessor de mídia do rei em comunicado. O Ministério do Interior bareinita emitiu um alerta de risco na rede social X orientando cidadãos e residentes a manterem a calma, buscarem abrigo no local segur",
@@ -1650,7 +1650,8 @@
     "O Brasil parece condenado a conviver com a expressão eternizada por Stefan Zweig: o país do futuro. Uma nação de extraordinárias riquezas naturais e oportunidades que raramente conseguimos transformar em prosperidade. No setor energético, corremos o risco de acrescentar uma palavra à frase de Zweig: “perdido”.",
     "Planejar a renda da aposentadoria começa por uma pergunta prática: qual será o tamanho do gasto mensal e quanto dele já estará coberto por fontes previsíveis, como a previdência pública, a previdência privada contratada no passado ou aluguéis. A parte que não estiver coberta é o complemento que precisa ser financiado por uma reserva. Estimar esse v",
     "A piora das condições de financiamento já afeta os imóveis voltados à classe média e deve continuar pressionando o segmento em 2027, disseram porta-vozes da Câmara Brasileira da Indústria da Construção (CBIC) e do Secovi-SP em coletiva de imprensa na segunda-feira (23).",
-    "Os contratos futuros de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,81%, aos 166.250 pontos. Durante o pregão, oscilaram entre a mínima de 165.345 pontos e a máxima de 167.270 pontos. Para esta terça-feira (24), acompanho os suportes de 165.345 e 164.900 pontos, enquanto as primeiras resistências estão"
+    "Os contratos futuros de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,81%, aos 166.250 pontos. Durante o pregão, oscilaram entre a mínima de 165.345 pontos e a máxima de 167.270 pontos. Para esta terça-feira (24), acompanho os suportes de 165.345 e 164.900 pontos, enquanto as primeiras resistências estão",
+    "O Bitcoin caiu abaixo de US$ 60.000 nesta terça-feira, devolvendo a maior parte da alta que o levou para perto de US$ 64.000. A maior criptomoeda por valor de mercado recuou mais de 2% em 24 horas, com o rali das ações de inteligência artificial perdendo força."
   ],
   "eventos_recentes": [
     {
@@ -2228,6 +2229,10 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795515130.698795
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795515507.860597
     }
   ],
   "hashes_imagens": [
@@ -2519,6 +2524,7 @@
     "610ce74ef7816eaf",
     "1aba26375fb2cc56",
     "66f5fd61812392b9",
-    "6b04154506394fa9"
+    "6b04154506394fa9",
+    "54ebce7e9673f648"
   ]
 }
