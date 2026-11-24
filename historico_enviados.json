@@ -1,9 +1,5 @@
 {
   "links": [
-    "36c24fe521473f4d",
-    "5fa549cd34e84d87",
-    "https://www.cnnbrasil.com.br/economia/money/negocios/assim-como-a-spacex-anthropic-adota-modelo-incomum-de-ipo/",
-    "d779bbcbf6f306fb",
     "https://www.spacemoney.com.br/economia/mercado-chance-alta-fed-dezembro/",
     "bae222a15d4d6b5b",
     "4f92615b09cc95c6",
@@ -799,7 +795,11 @@
     "d051023c7cf09b3f",
     "c7aa45e2609c9972",
     "https://www.infomoney.com.br/economia/japao-promete-disciplina-fiscal-e-independencia-do-bc-em-diretrizes-orcamentarias/",
-    "2915e12f352f70d1"
+    "2915e12f352f70d1",
+    "6626dca4145c7cc7",
+    "4f418fe59c1be55f",
+    "https://www.infomoney.com.br/politica/eua-barram-pedido-do-brasil-na-omc-contra-tarifaco-de-trump-entenda-proximos-passos/",
+    "6514094e0104aaae"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1418,10 +1418,10 @@
     "Casa dos Ventos pede prioridade para antecipar carga de data center do Tik Tok",
     "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO",
     "Sentimento das empresas da Alemanha volta a melhorar em novembro, mostra índice Ifo",
-    "Japão promete disciplina fiscal e independência do BC em diretrizes orçamentárias"
+    "Japão promete disciplina fiscal e independência do BC em diretrizes orçamentárias",
+    "EUA barram pedido do Brasil na OMC contra tarifaço de Trump; entenda próximos passos"
   ],
   "leads": [
-    "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
     "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó",
     "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência",
     "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
@@ -1670,7 +1670,8 @@
     "A Casa dos Ventos pediu à Agência Nacional de Energia Elétrica (Aneel) que estenda ao seu projeto de data center no Pecém, Ceará, a regra de transição que garante prioridade na contratação de capacidade na rede de transmissão em 2029. A empresa quer antecipar para aquele ano uma demanda de energia prevista para os anos seguintes, sem precisar dispu",
     "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa",
     "O índice Ifo de sentimento das empresas da Alemanha subiu para 90,6 pontos em novembro, no sétimo avanço consecutivo, segundo pesquisa divulgada nesta terça-feira (24) pelo instituto alemão Ifo.",
-    "– O governo do Japão adotará uma política fiscal sustentável e respeitará a independência ‌do banco central, segundo um rascunho de diretrizes para o orçamento do próximo ano divulgado nesta ‌terça-feira (24), em um sinal de sua sensibilidade às apreensões do mercado em relação aos seus planos de gastos elevados."
+    "– O governo do Japão adotará uma política fiscal sustentável e respeitará a independência ‌do banco central, segundo um rascunho de diretrizes para o orçamento do próximo ano divulgado nesta ‌terça-feira (24), em um sinal de sua sensibilidade às apreensões do mercado em relação aos seus planos de gastos elevados.",
+    "Os Estados Unidos bloquearam nesta terça-feira (24) a abertura de um painel na Organização Mundial do Comércio (OMC) para investigar as tarifas adicionais impostas pelo governo Donald Trump a produtos brasileiros. A decisão adia o início do julgamento solicitado pelo Brasil, que pretende reapresentar o pedido em dezembro."
   ],
   "eventos_recentes": [
     {
@@ -2284,10 +2285,13 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795520512.187019
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795520847.903266
     }
   ],
   "hashes_imagens": [
-    "2404d220ace67c05",
     "cae24a5184e5258a",
     "a143566310ffe643",
     "5aff1a543d8870cc",
@@ -2586,6 +2590,7 @@
     "8ce180b787e27480",
     "50b49dac0f9583be",
     "6ce7b866a62e7f3a",
-    "a354ec7d438f53fb"
+    "a354ec7d438f53fb",
+    "79971468a4ab0a4f"
   ]
 }
