@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.estadao.com.br/economia/negocios/the-economist-o-que-esta-causando-os-recentes-apagoes-nos-estados-unidos/",
-    "0748f763d58af596",
-    "e9ca1f4fe41f1748",
-    "20f6c04db3c1b548",
-    "8b15999a1ab7f089",
     "59b0d03a2b7b2f4a",
     "538a67fae634d5e8",
     "1264d92c0eddce76",
@@ -799,7 +794,12 @@
     "03f8c83d1cfbd25e",
     "https://www.cnnbrasil.com.br/economia/sem-reacao-adequada-brasil-pode-viver-recessao-diz-ex-diretor-do-bc/",
     "85617e8d4025b8ed",
-    "355ed1dfd34da86d"
+    "355ed1dfd34da86d",
+    "79dc6c2bf72941e7",
+    "https://g1.globo.com/economia/noticia/2026/11/24/a-tempestade-perfeita-dentro-e-fora-do-brasil-que-fez-dolar-chegar-a-r-6.ghtml",
+    "c0d2fb959d9886c9",
+    "https://www.poder360.com.br/poder-economia/credito-em-atraso-bate-recorde-de-r-371-bi-no-brasil/",
+    "0b21da9e2505e1a9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1421,11 +1421,11 @@
     "Japão promete disciplina fiscal e independência do BC em diretrizes orçamentárias",
     "EUA barram pedido do Brasil na OMC contra tarifaço de Trump; entenda próximos passos",
     "Crimeia restringirá o fornecimento de eletricidade por 10 dias",
-    "Sem reação adequada, Brasil pode viver recessão, diz ex-diretor do BC"
+    "Sem reação adequada, Brasil pode viver recessão, diz ex-diretor do BC",
+    "A tempestade perfeita (dentro e fora do Brasil) que fez dólar chegar a R$ 6",
+    "Crédito em atraso bate recorde de R$ 371 bi no Brasil"
   ],
   "leads": [
-    "Analistas reduzem preço-alvo das ações BBAS3 de R$ 21 para R$ 15 até o fim de 2027; entenda o porquê",
-    "Segundo a CNBC, os benefícios do Social Security, a previdência pública dos Estados Unidos, serão reajustados em 3,6% em 2027, mas uma série de mudanças nas regras tributárias e nos prêmios do Medicare pode reduzir o ganho líquido de aposentados e trabalhadores. O aumento, o maior desde 2023, deve elevar o benefício médio em cerca de US$ 75 por mês",
     "As negociações climáticas da Organização das Nações Unidas (ONU) fracassaram neste domingo (22), quando a União Europeia e outros países rejeitaram um esboço final de acordo apresentado pelos presidentes da COP31, Turquia e Austrália, alegando que ele era fraco demais para impulsionar a luta contra o aquecimento global.",
     "A semana de 23 a 27 de novembro será marcada por indicadores de inflação, atividade econômica e contas públicas, além de um feriado que deve reduzir a liquidez dos mercados internacionais.",
     "Para o líder chinês Xi Jinping, receber o presidente dos EUA, Donald Trump, na futurista cidade de Shenzhen foi uma oportunidade de mostrar o quanto a indústria de alta tecnologia do país avançou.",
@@ -1673,7 +1673,9 @@
     "– O governo do Japão adotará uma política fiscal sustentável e respeitará a independência ‌do banco central, segundo um rascunho de diretrizes para o orçamento do próximo ano divulgado nesta ‌terça-feira (24), em um sinal de sua sensibilidade às apreensões do mercado em relação aos seus planos de gastos elevados.",
     "Os Estados Unidos bloquearam nesta terça-feira (24) a abertura de um painel na Organização Mundial do Comércio (OMC) para investigar as tarifas adicionais impostas pelo governo Donald Trump a produtos brasileiros. A decisão adia o início do julgamento solicitado pelo Brasil, que pretende reapresentar o pedido em dezembro.",
     "A península da Crimeia, no Mar Negro, passará por 10 dias de restrições no fornecimento de energia elétrica devido a trabalhos de \"resposta a emergências\", informou nesta terça-feira (24) o governador nomeado pela Rússia.",
-    "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico."
+    "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico.",
+    "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
+    "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos"
   ],
   "eventos_recentes": [
     {
@@ -2291,11 +2293,13 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795521521.124509
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795521958.693367
     }
   ],
   "hashes_imagens": [
-    "5aff1a543d8870cc",
-    "c21d12425264b803",
     "b41bcfbb3d13ccbb",
     "0fa24b702cc5146d",
     "ccddaaa4f7ccc4cf",
@@ -2593,6 +2597,8 @@
     "a354ec7d438f53fb",
     "79971468a4ab0a4f",
     "70750616c84e78c3",
-    "13ba2b0325a0f59a"
+    "13ba2b0325a0f59a",
+    "f16d0b849916f192",
+    "7628deec4cc31898"
   ]
 }
