@@ -1,7 +1,5 @@
 {
   "links": [
-    "16edf8fd9d869e07",
-    "06400d0f714b55db",
     "https://www.infomoney.com.br/mercados/receita-da-randoncorp-cai-quase-3-em-outubro/",
     "9e773277258647d6",
     "3a5cca81ac63b6fb",
@@ -799,7 +797,9 @@
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/lvbi11-provento-extra-fusao-hglg11/",
     "3bbe1754da993d48",
     "https://telesintese.com.br/coalizao-cobra-investigacao-da-ue-contra-apple-no-ios/",
-    "c01532fc675d2ecd"
+    "c01532fc675d2ecd",
+    "https://www.cnnbrasil.com.br/agro/petrobras-buscara-outras-empresas/",
+    "f7ca43215e2eed3c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1485,10 +1485,10 @@
     "Krispy Kreme na Estação 4-Pinheiros expande presença de grandes marcas no metrô",
     "Concentração no mercado livre de energia pode levar a intervenções da Aneel",
     "LVBI11 sinaliza provento extra antes de fusão com HGLG11",
-    "Coalizão cobra investigação da UE contra Apple no iOS"
+    "Coalizão cobra investigação da UE contra Apple no iOS",
+    "Após retomar investimentos, Petrobras buscará novas empresas de etanol"
   ],
   "leads": [
-    "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
     "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso.",
     "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo.",
     "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia.",
@@ -1737,13 +1737,10 @@
     "A rede de donuts Krispy Kreme inaugura sua primeira unidade em uma estação de metrô no Brasil em um quiosque no piso térreo da Estação Pinheiros, da Linha 4-Amarela, operada pela concessionária Motiva (MOTV3) em meio à expansão de grandes marcas de alimentação no trecho.",
     "As cinco maiores comercializadoras de energia do mercado livre varejista detêm uma participação conjunta de 32,08% em âmbito nacional, mas esse percentual supera 60% em grande parte das áreas de concessão de distribuição analisadas pela Agência Nacional de Energia Elétrica (Aneel). Diante das diferenças regionais, a área técnica da agência propõe i",
     "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao",
-    "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in"
+    "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in",
+    "A Petrobras deverá buscar aquisições de outras participações de usinas de etanol de milho, à medida que quer expandir sua atuação em renováveis e vê sinergias em matérias-primas para a produção de outros combustíveis sustentáveis, como o SAF para o setor de aviação, disseram três fontes com conhecimento do assunto nesta terça-feira."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795371776.220128
-    },
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795375296.069925
@@ -2435,10 +2432,13 @@
     {
       "chave": "apple::GERAL_ATIVO",
       "ts": 1795544396.730913
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795544736.683132
     }
   ],
   "hashes_imagens": [
-    "f26b50cc4387f901",
     "c72d5fa39ef4c160",
     "ec852cca70d10c48",
     "102447c255e458aa",
@@ -2737,6 +2737,7 @@
     "2b2a7cf78aae5c69",
     "ebdd57b0dc6e4eee",
     "17286e74fb4f4f14",
-    "a1569b6f2cffbffa"
+    "a1569b6f2cffbffa",
+    "a8cc74ad406cb88a"
   ]
 }
