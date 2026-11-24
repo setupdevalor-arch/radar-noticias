@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/economia/pmi-da-zona-do-euro-fica-estavel-em-novembro-alemanha-compensa-queda-na-franca/",
-    "8379035669452c9a",
     "16edf8fd9d869e07",
     "06400d0f714b55db",
     "https://www.infomoney.com.br/mercados/receita-da-randoncorp-cai-quase-3-em-outubro/",
@@ -799,7 +797,9 @@
     "https://megawhat.uol.com.br/regulacao/concentracao-no-mercado-livre-de-energia-pode-levar-a-intervencoes-da-aneel/",
     "39446359e2e10de6",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/lvbi11-provento-extra-fusao-hglg11/",
-    "3bbe1754da993d48"
+    "3bbe1754da993d48",
+    "https://telesintese.com.br/coalizao-cobra-investigacao-da-ue-contra-apple-no-ios/",
+    "c01532fc675d2ecd"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1484,10 +1484,10 @@
     "Bill Ackman: buscar meta de inflação de 2% levará a economia dos EUA a outra recessão",
     "Krispy Kreme na Estação 4-Pinheiros expande presença de grandes marcas no metrô",
     "Concentração no mercado livre de energia pode levar a intervenções da Aneel",
-    "LVBI11 sinaliza provento extra antes de fusão com HGLG11"
+    "LVBI11 sinaliza provento extra antes de fusão com HGLG11",
+    "Coalizão cobra investigação da UE contra Apple no iOS"
   ],
   "leads": [
-    "– Empresas europeias do setor de energia verde e tecnologias limpas, bem como grupos industriais, alertaram os líderes da UE nesta segunda-feira contra os cortes propostos ao Fundo Europeu de Competitividade, afirmando que o fundo é essencial para que o bloco consiga alcançar os Estados Unidos e a China.",
     "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
     "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso.",
     "Bloomberg Línea — O diretor de Política Monetária do Banco Central, Nilton David, está programado para participar nesta segunda-feira (23) do Bloomberg Línea Summit 2026, em São Paulo, onde fará um um keynote com transmissão online ao vivo.",
@@ -1736,13 +1736,10 @@
     "Com o mercado acionário registrando uma recuperação impressionante nas últimas 24 horas e as perspectivas relativamente otimistas para 2027, pouco coisa, neste momento, é capaz de abalar os investidores. Ainda assim, sussurros sobre uma temida recessão vêm de figuras que Wall Street não pode se dar ao luxo de ignorar.:",
     "A rede de donuts Krispy Kreme inaugura sua primeira unidade em uma estação de metrô no Brasil em um quiosque no piso térreo da Estação Pinheiros, da Linha 4-Amarela, operada pela concessionária Motiva (MOTV3) em meio à expansão de grandes marcas de alimentação no trecho.",
     "As cinco maiores comercializadoras de energia do mercado livre varejista detêm uma participação conjunta de 32,08% em âmbito nacional, mas esse percentual supera 60% em grande parte das áreas de concessão de distribuição analisadas pela Agência Nacional de Energia Elétrica (Aneel). Diante das diferenças regionais, a área técnica da agência propõe i",
-    "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao"
+    "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao",
+    "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795371452.86429
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795371776.220128
@@ -2434,10 +2431,13 @@
     {
       "chave": "hglg11::EVENTO_CORP",
       "ts": 1795544051.757109
+    },
+    {
+      "chave": "apple::GERAL_ATIVO",
+      "ts": 1795544396.730913
     }
   ],
   "hashes_imagens": [
-    "e7f7daf3f70376ae",
     "f26b50cc4387f901",
     "c72d5fa39ef4c160",
     "ec852cca70d10c48",
@@ -2736,6 +2736,7 @@
     "400d3d2221d59366",
     "2b2a7cf78aae5c69",
     "ebdd57b0dc6e4eee",
-    "17286e74fb4f4f14"
+    "17286e74fb4f4f14",
+    "a1569b6f2cffbffa"
   ]
 }
