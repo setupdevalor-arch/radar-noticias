@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/economia/juros-eua-fed-alta-dez26-expectativa/",
-    "7804ae52066d7ff2",
-    "2bcf243d4660c246",
-    "9b6baffd738e93c8",
-    "e749e25aea442e5c",
-    "https://www.spacemoney.com.br/tecnologia/brasil-data-centers-investimentos-ia/",
-    "0039ff4b978dc079",
     "36c24fe521473f4d",
     "5fa549cd34e84d87",
     "https://www.cnnbrasil.com.br/economia/money/negocios/assim-como-a-spacex-anthropic-adota-modelo-incomum-de-ipo/",
@@ -799,7 +792,14 @@
     "7d83f469fcae4741",
     "a1d99d370a4dc21a",
     "https://www.infomoney.com.br/economia/sentimento-das-empresas-da-alemanha-volta-a-melhorar-em-novembro-mostra-indice-ifo/",
-    "ca6b204525c86946"
+    "ca6b204525c86946",
+    "044a1fc7c67288e3",
+    "ef1e3e29c8117c53",
+    "0eb781ecccca3369",
+    "d051023c7cf09b3f",
+    "c7aa45e2609c9972",
+    "https://www.infomoney.com.br/economia/japao-promete-disciplina-fiscal-e-independencia-do-bc-em-diretrizes-orcamentarias/",
+    "2915e12f352f70d1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1417,10 +1417,10 @@
     "Confiança do consumidor cai em novembro para o menor nível desde agosto de 2022",
     "Casa dos Ventos pede prioridade para antecipar carga de data center do Tik Tok",
     "Trump lucra até US$ 15 mi com alta da Nvidia após volta de CEO",
-    "Sentimento das empresas da Alemanha volta a melhorar em novembro, mostra índice Ifo"
+    "Sentimento das empresas da Alemanha volta a melhorar em novembro, mostra índice Ifo",
+    "Japão promete disciplina fiscal e independência do BC em diretrizes orçamentárias"
   ],
   "leads": [
-    "As três principais bolsas de valores da China anunciaram planos para auxiliar os preços das ações em dificuldades com um conjunto de medidas, como a flexibilização dos requisitos para financiamento com margem.",
     "Arábia Saudita e Bahrein relataram ataques de forças ligadas ao Irã no fim de semana, enquanto o chanceler iraniano, Abbas Araghchi, afirmou que o governo segue aberto a um acordo para encerrar a guerra com os EUA, segundo a CNBC.",
     "O Bitcoin enfrenta um desafio que a criptografia mais forte, sozinha, não resolve: mover milhões de moedas para uma proteção resistente a computadores quânticos e, ao mesmo tempo, atualizar exchanges, custodiantes e pontes que lidam com esses ativos. Algumas blockchains já começaram a introduzir esse tipo de segurança: a NEAR incluiu assinaturas pó",
     "Estudo entregue ao STF considera migração de 1,08 milhão de trabalhadores e calcula impacto sobre tributos e Previdência",
@@ -1669,7 +1669,8 @@
     "O Índice de Confiança do Consumidor, medido pelo FGV/Ibre, voltou a recuar em novembro. O ICC baixou 1,2 ponto no mês, atingindo para 83,5 pontos, o menor nível observado desde agosto de 2022. Na média móvel trimestral, o índice cedeu 0,4 ponto, para 84,1 pontos.",
     "A Casa dos Ventos pediu à Agência Nacional de Energia Elétrica (Aneel) que estenda ao seu projeto de data center no Pecém, Ceará, a regra de transição que garante prioridade na contratação de capacidade na rede de transmissão em 2029. A empresa quer antecipar para aquele ano uma demanda de energia prevista para os anos seguintes, sem precisar dispu",
     "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa",
-    "O índice Ifo de sentimento das empresas da Alemanha subiu para 90,6 pontos em novembro, no sétimo avanço consecutivo, segundo pesquisa divulgada nesta terça-feira (24) pelo instituto alemão Ifo."
+    "O índice Ifo de sentimento das empresas da Alemanha subiu para 90,6 pontos em novembro, no sétimo avanço consecutivo, segundo pesquisa divulgada nesta terça-feira (24) pelo instituto alemão Ifo.",
+    "– O governo do Japão adotará uma política fiscal sustentável e respeitará a independência ‌do banco central, segundo um rascunho de diretrizes para o orçamento do próximo ano divulgado nesta ‌terça-feira (24), em um sinal de sua sensibilidade às apreensões do mercado em relação aos seus planos de gastos elevados."
   ],
   "eventos_recentes": [
     {
@@ -2279,10 +2280,13 @@
     {
       "chave": "nvidia::BALANCO",
       "ts": 1795519583.205036
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795520512.187019
     }
   ],
   "hashes_imagens": [
-    "c1e0b2659879c3b2",
     "2404d220ace67c05",
     "cae24a5184e5258a",
     "a143566310ffe643",
@@ -2581,6 +2585,7 @@
     "029686419f6174c8",
     "8ce180b787e27480",
     "50b49dac0f9583be",
-    "6ce7b866a62e7f3a"
+    "6ce7b866a62e7f3a",
+    "a354ec7d438f53fb"
   ]
 }
