@@ -1,9 +1,5 @@
 {
   "links": [
-    "d3d1161dd3c25691",
-    "ac8e3d8650472028",
-    "f5bda54fa56d5389",
-    "151754d0e91a8f83",
     "https://www.estadao.com.br/economia/focus-mercado-eleva-projecao-inflacao-dolar-preve-pib-menor-2026/",
     "733bced96e99d51d",
     "https://megawhat.uol.com.br/destaques-do-diario/empresa-desiste-de-80-mw-em-geracao-solar-em-pe-por-falta-de-margem/",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/commodities/ouro-correlacao-sp500-opcoes-gld/",
     "d3dd96342118a2be",
     "https://www.cnnbrasil.com.br/economia/money/mercado/juros-futuros-caem-com-sinalizacao-do-governo-sobre-pec-para-limitar-gastos/",
-    "f8417dff7809571e"
+    "f8417dff7809571e",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/trxf11-hgru11-indicadores/",
+    "62964bf92e9ce97a",
+    "https://www.infomoney.com.br/mercados/por-que-a-vale-vale3-caiu-mais-de-5-nesta-terca/",
+    "c2ea9746b1caae94"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1501,11 +1501,11 @@
     "Governo prepara PEC com medidas para dar 'potência fiscal' e assegurar cumprimento de meta, diz Moretti",
     "Petróleo sobe após ataques no Estreito de Ormuz",
     "Ouro deixa de agir como proteção e anda junto com ações",
-    "Juros futuros caem com sinalização do governo sobre PEC para limitar gastos"
+    "Juros futuros caem com sinalização do governo sobre PEC para limitar gastos",
+    "TRXF11 e HGRU11: dividendos e vacância em foco",
+    "Por que a Vale (VALE3) caiu mais de 5% nesta terça?"
   ],
   "leads": [
-    "Após avançar com o primeiro pacote de medidas fiscais no Senado, que deve ser votado hoje na Câmara dos Deputados, o governo buscará avançar sobre outras propostas econômicas consideradas prioritárias antes do recesso parlamentar, entre eles o Orçamento de 2027.",
-    "Quitar dívidas, reservar recursos para despesas de janeiro ou investir? Especialistas explicam como definir prioridades e aproveitar melhor o benefício",
     "A Agência Nacional de Energia Elétrica (Aneel) prorrogou até esta segunda-feira, 23 de novembro, às 12h, o prazo de inscrição online nos dois leilões de reserva de capacidade para contratação de sistemas de armazenamento em baterias, previstos para os dias 2 e 4 de dezembro.",
     "Os ETFs de renda fixa são uma das alternativas disponíveis para investidores que desejam acessar títulos públicos e privados por meio da Bolsa de Valores. Entre essas opções está o LTBX11, da XP Asset, fundo que investe majoritariamente em títulos públicos atrelados à taxa Selic, mas também mantém uma parcela em papéis indexados à inflação.",
     "O IPC-S ficou em 0,38% na terceira apuração de novembro, repetindo as duas leituras anteriores do mês, conforme a Fundação Getulio Vargas. Em 12 meses, o indicador acumula 4,24%.",
@@ -1753,7 +1753,9 @@
     "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico.",
     "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05.",
     "O ouro deixou de se comportar como ativo de proteção neste ano e passou a oscilar de forma parecida com um índice de mercado, segundo reportagem da CNBC. Na semana passada, temores relacionados à inteligência artificial, um Federal Reserve mais duro e um dólar mais forte levaram muitos investidores a levantar caixa, e o metal foi vendido junto com ",
-    "As taxas dos DIs fecharam a terça-feira (24) com baixas após notícias de que o presidente Luiz Inácio Lula da Silva (PT) autorizou a equipe econômica a enviar ao Congresso uma proposta de emenda à Constituição que tratará das despesas obrigatórias."
+    "As taxas dos DIs fecharam a terça-feira (24) com baixas após notícias de que o presidente Luiz Inácio Lula da Silva (PT) autorizou a equipe econômica a enviar ao Congresso uma proposta de emenda à Constituição que tratará das despesas obrigatórias.",
+    "Segundo a Suno Notícias, TRXF11 e HGRU11, fundos de renda urbana da B3, tiveram seus indicadores comparados com dados de outubro de 2026. A base somava 601 mil cotistas e PL combinado que superava R$ 12 bilhões. A SpaceMoney não apurou a notícia.",
+    "As ações da Vale fecharam em forte queda nesta terça-feira, recuando mais de 5%, em meio a uma combinação de fatores que vão desde a deterioração das perspectivas para o minério de ferro até preocupações com custos operacionais, geração de caixa, dividendos e revisões negativas de analistas para a companhia. Os papéis da companhia fecharam com perd"
   ],
   "eventos_recentes": [
     {
@@ -2507,11 +2509,21 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795554477.713189
+    },
+    {
+      "chave": "trxf11::PROVENTOS",
+      "ts": 1795554841.953438
+    },
+    {
+      "chave": "hgru11::PROVENTOS",
+      "ts": 1795554841.953438
+    },
+    {
+      "chave": "vale::GERAL_ATIVO",
+      "ts": 1795554841.953438
     }
   ],
   "hashes_imagens": [
-    "816720a10b88ec66",
-    "6f2a3b230b07876f",
     "fffaeacee035085c",
     "a2217dfa90d49148",
     "821f5e92da6e3bf2",
@@ -2809,6 +2821,8 @@
     "398599525494f300",
     "d79d49ce4fa8c21a",
     "913daf7a839c60e8",
-    "bc5bca2674a99259"
+    "bc5bca2674a99259",
+    "816d9d2a7adc4e71",
+    "b7cd3466ed744532"
   ]
 }
