@@ -1,11 +1,5 @@
 {
   "links": [
-    "6e130170a020b7bc",
-    "a3f9c78b94eac583",
-    "e5e41f4f0524cf26",
-    "https://www.poder360.com.br/poder-economia/risco-pais-da-argentina-chega-ao-maior-patamar-de-2026/",
-    "8a4131b2b4dc62da",
-    "https://www.bloomberglinea.com.br/negocios/economia-vai-desacelerar-mais-e-pesar-nos-balancos-diz-chefe-de-research-do-btg-pactual/",
     "eee9a3603a31f450",
     "8dc028be193d83fb",
     "https://www.spacemoney.com.br/agronegocio/jbs-joint-venture-oma-us-150-milhoes/",
@@ -799,7 +793,13 @@
     "315809f03f7fcf09",
     "df135094140b2ed5",
     "d223c6956394eb6e",
-    "e1f6a4ffae17b3e4"
+    "e1f6a4ffae17b3e4",
+    "850e007e860d0743",
+    "9d941a99b9d562d5",
+    "61803a0c4a4f82f4",
+    "630c2be3ddd2efb3",
+    "https://investnews.com.br/negocios/dia-dos-solteiros-ganha-espaco-no-varejo-brasileiro-com-shopee-aliexpress-e-shein/",
+    "0edadf77bc54062a"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1453,10 +1453,10 @@
     "ICDI11 fecha 3ª oferta com R$ 180 mi na B3",
     "EUA entram com uma ação judicial para recuperar milhões de dólares roubados no ataque cibernético à Binance",
     "CNI: Intenção de investimento da indústria cai ao menor nível em seis anos",
-    "Fim da escala 6x1: ministro recomenda que setores 'corram' para fechar acordo coletivo até dia 16 se quiserem escala diferente"
+    "Fim da escala 6x1: ministro recomenda que setores 'corram' para fechar acordo coletivo até dia 16 se quiserem escala diferente",
+    "Dia dos Solteiros ganha espaço no varejo brasileiro com Shopee, AliExpress e Shein"
   ],
   "leads": [
-    "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
     "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
     "Os deputados devem apreciar nesta segunda-feira (23) o projeto de ajuste fiscal do governo de Lula (PT), conforme informou o g1. O Senado já aprovou a proposta. A primeira etapa na Câmara é a votação de um pedido de urgência.",
@@ -1705,7 +1705,8 @@
     "A terceira oferta de cotas do ICDI11 foi concluída em 16/11/2026, com R$ 180.019.363,44 e 2.067 subscritores, conforme a Suno Notícias. O encerramento foi comunicado em 19/11.",
     "O Departamento de Justiça dos Estados Unidos apresentou uma ação de confisco para recuperar mais de US$ 1,1 bilhão em criptomoedas supostamente roubadas no mês passado por hackers norte-coreanos da plataforma Binance.",
     "A intenção de investimento da indústria brasileira caiu 2,6 pontos em novembro, de 52,6 para 50 pontos, e atingiu o menor patamar desde julho de 2020, durante a pandemia de Covid-19.",
-    "O ministro do Trabalho, Luiz Marinho, recomendou nesta terça-feira (24) que empresários e trabalhadores de setores da economia que queiram escala diferente, sem folga aos sábados e domingos, fechem acordos coletivos até o dia 16 — quando começam a valer as novas regras."
+    "O ministro do Trabalho, Luiz Marinho, recomendou nesta terça-feira (24) que empresários e trabalhadores de setores da economia que queiram escala diferente, sem folga aos sábados e domingos, fechem acordos coletivos até o dia 16 — quando começam a valer as novas regras.",
+    "A força da campanha também aparece nos resultados da Shopee. A plataforma registrou em 11 de novembro o maior dia de vendas de sua história no Brasil, com volume mais que duas vezes superior ao da Black Friday de 2025."
   ],
   "eventos_recentes": [
     {
@@ -2382,7 +2383,6 @@
     }
   ],
   "hashes_imagens": [
-    "f7384e4b1f8e9eec",
     "f01873e05f005dc2",
     "e876d7c163ae0cac",
     "c3f574e4db804376",
@@ -2681,6 +2681,7 @@
     "ecc8b85639df8e41",
     "73dc2960c5c5efdf",
     "dc24a6003748ae47",
-    "53ca19e662ed0d45"
+    "53ca19e662ed0d45",
+    "acf66d112348b574"
   ]
 }
