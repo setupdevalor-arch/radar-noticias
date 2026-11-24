@@ -1,9 +1,5 @@
 {
   "links": [
-    "a3bcbfdc9f8c93de",
-    "31c8ce0d5838eb5d",
-    "7b05ad8b089c194d",
-    "c994bcae9d7e2d95",
     "e029c4d5e3a233e2",
     "98b83ecb515dca0c",
     "https://www.spacemoney.com.br/politica/camara-votacao-ajuste-fiscal-2027/",
@@ -799,7 +795,11 @@
     "5b7bbeafd2f7ee0d",
     "15b767dcfdb9bf0e",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/bgrj11-segunda-emissao-cotas/",
-    "2b8acb124853a4c6"
+    "2b8acb124853a4c6",
+    "9b3e65e36d8f0324",
+    "f1f6703ad185273b",
+    "https://www.infomoney.com.br/mercados/mdia3-jpmorgan-rebaixa-m-dias-a-venda-por-custos-maiores-e-perspectiva-de-demanda-fraca/",
+    "780a0dbe4027a922"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1442,10 +1442,10 @@
     "EQTL3: CPPIB eleva fatia na Equatorial para cerca de 5%",
     "Com deságio de até 90%, dívidas de empresas em crise atraem investidores",
     "AZ Quest reforça crédito high grade após eleição",
-    "BGRJ11 lança 2ª emissão de R$ 29,3 mi em São Paulo"
+    "BGRJ11 lança 2ª emissão de R$ 29,3 mi em São Paulo",
+    "MDIA3: JPMorgan rebaixa M. Dias Branco para venda, corta preço-alvo e ação cai forte"
   ],
   "leads": [
-    "O presidente dos Estados Unidos, Donald Trump, afirmou no sábado que pretende colaborar com o novo Congresso de maioria democrata para estabelecer um teto de 10% para as taxas de juros de cartões de crédito. A medida busca cumprir uma promessa de campanha de 2024 que encontrou resistência tanto da indústria financeira quanto de seus próprios aliado",
     "Conforme a Agência Brasil, a 31ª edição da conferência do clima da ONU terminou na manhã deste domingo (22), em Antália, na Turquia, sem documento final.",
     "As usinas de etanol de milho devem destinar cerca de 27 milhões de toneladas do cereal à produção do biocombustível em 2026, segundo estimativa do Rabobank. O avanço dessas plantas altera a comercialização do grão no Brasil, mexe com preços regionais e afeta a receita de quem cultiva.",
     "O Banco do Brasil divulgou balanço com lucro líquido de R$ 8,6 bilhões acumulado até setembro, recuo de 42%. As reservas para eventuais calotes de crédito subiram 33%. O desempenho ficou abaixo até das projeções mais pessimistas dos analistas.",
@@ -1694,7 +1694,8 @@
     "A Equatorial S.A. (EQTL3) comunicou ao mercado, em 23 de novembro de 2026, que recebeu correspondência da Canada Pension Plan Investment Board informando o aumento de sua participação acionária na companhia.",
     "Uma dívida empresarial pode ser negociada com deságio de até 90% e ainda preservar valor recuperável para o investidor. É nessa diferença entre o preço atribuído à crise e o valor existente nos ativos, contratos e operações da companhia que atuam os investidores de special situations, especializados na compra de dívidas e outros ativos estressados.",
     "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à ",
-    "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026."
+    "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
+    "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54."
   ],
   "eventos_recentes": [
     {
@@ -2348,10 +2349,13 @@
     {
       "chave": "bgrj11::EVENTO_CORP",
       "ts": 1795526684.210684
+    },
+    {
+      "chave": "mdia3::GERAL_ATIVO",
+      "ts": 1795527078.390068
     }
   ],
   "hashes_imagens": [
-    "45db7a359ec7c489",
     "ca9837bc4dee1423",
     "91bc3eae976af62f",
     "11b244fbe09bcdbd",
@@ -2650,6 +2654,7 @@
     "90cd0ee10d6c144b",
     "ceca4f0023b5a6dc",
     "3d2e0bdc6f086786",
-    "9542a07635a1f2eb"
+    "9542a07635a1f2eb",
+    "630c626dc7363410"
   ]
 }
