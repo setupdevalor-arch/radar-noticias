@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-brasil/brasil-supera-meta-e-recebe-75-milhoes-de-turistas-estrangeiros/",
-    "34cac3636d71c726",
     "019750f8da26d90f",
     "657c177be7a44782",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/black-friday-pode-ter-melhor-faturamento-desde-2014-projeta-cnc/",
@@ -799,7 +797,9 @@
     "a4c06162d0d910f1",
     "33e51ceb29a2ac5b",
     "https://www.infomoney.com.br/politica/supersalarios-serao-cortados-apos-a-aprovacao-do-pacote-fiscal-entenda-o-que-muda/",
-    "6f1d0d6b3527efc0"
+    "6f1d0d6b3527efc0",
+    "https://www.estadao.com.br/economia/market-friendly-equipe-economica-sugere-a-lula-nomes-para-o-bc-que-sejam-amigaveis-ao-mercado/",
+    "75605351e7e724c9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1376,10 +1376,10 @@
     "Compra da Zscaler pela CrowdStrike: CEO rebate temores",
     "Petrobras prevê investir US$ 122 bi entre 2027-2031",
     "Inflação na Europa: o mapa que separa Leste e Norte",
-    "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda"
+    "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
+    "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado"
   ],
   "leads": [
-    "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa",
     "Estatal de telecomunicações acumula prejuízo de R$ 90,7 milhões em 2026, apesar de ter recebido R$ 169,9 milhões em subvenções orçamentárias",
     "Anatel formalizou a destinação de R$ 375 milhões em recursos remanescentes do leilão do 5G para o empreendimento",
@@ -1628,7 +1628,8 @@
     "O CEO da CrowdStrike, George Kurtz, defendeu nesta segunda-feira a aquisição da Zscaler e afirmou à CNBC que o negócio cria uma “combinação vencedora” para ampliar a proteção contra ataques cibernéticos. A declaração foi dada após as ações da CrowdStrike caírem cerca de 9%, enquanto as da Zscaler subiram mais de 17%.",
     "Entre os segmentos, o de exploração e produção (E&P) continua sendo o que receberá o maior aporte, concentrando mais de 70% dos investimentos.",
     "Dados reunidos pelo Visual Capitalist a partir de estatísticas do Eurostat e do Office for National Statistics colocam 31 países europeus em uma mesma régua e revelam um continente dividido: a inflação anual segue pressionada no Leste e no Sul, enquanto os menores índices aparecem no Norte. O retrato, referente a outubro de 2026 — com leituras de s",
-    "A aprovação do pacote fiscal do governo Lula pela Câmara dos Deputados nesta segunda-feira (23), por 353 votos a favor e 128 contra, abre caminho para uma nova discussão sobre os supersalários no funcionalismo público. O texto, que segue para a sanção do presidente Luiz Inácio Lula da Silva (PT), estabelece um prazo de 60 dias para que o Congresso "
+    "A aprovação do pacote fiscal do governo Lula pela Câmara dos Deputados nesta segunda-feira (23), por 353 votos a favor e 128 contra, abre caminho para uma nova discussão sobre os supersalários no funcionalismo público. O texto, que segue para a sanção do presidente Luiz Inácio Lula da Silva (PT), estabelece um prazo de 60 dias para que o Congresso ",
+    "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast."
   ],
   "eventos_recentes": [
     {
@@ -2174,6 +2175,10 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795493605.25544
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795494257.557914
     }
   ],
   "hashes_imagens": [
@@ -2443,6 +2448,7 @@
     "bdd749d3fe75e352",
     "30c57939798db84a",
     "e58afa94d96b2b71",
-    "b76f9b9c62953abc"
+    "b76f9b9c62953abc",
+    "607e797daa4addba"
   ]
 }
