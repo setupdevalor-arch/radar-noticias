@@ -1,14 +1,5 @@
 {
   "links": [
-    "69cfa4a307331778",
-    "543e1eb86e411bb7",
-    "d4a7d1fdba865b4e",
-    "b6f309d4a4297012",
-    "72479181d6c05cde",
-    "https://valorinveste.globo.com/objetivo/hora-de-investir/noticia/2026/11/23/mudancas-em-impostos-de-dividendos-investimentos-isentos-e-fortunas-entram-no-radar.ghtml",
-    "f82c214770f8076a",
-    "f0c4bae14dd4c876",
-    "87cbd82da59e77bf",
     "96103b99d0a8c460",
     "7afe4157a671096c",
     "https://www.infomoney.com.br/politica/alem-do-pacote-fiscal-veja-pautas-economicas-que-governo-tenta-aprovar-ate-dezembro/",
@@ -799,7 +790,16 @@
     "https://agenciainfra.com/blog/cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento/?utm_source=rss&utm_medium=rss&utm_campaign=cotado-para-a-anm-pedro-guerra-defende-reestruturacao-e-maior-orcamento",
     "306c3340b3afa958",
     "https://www.cnnbrasil.com.br/internacional/analise-jensen-huang-e-um-exemplo-ambulante-de-risco-moral/",
-    "ff937dedfb7adb31"
+    "ff937dedfb7adb31",
+    "43f197195c98d4b0",
+    "8379a630c6d9866a",
+    "dac55099dbdb180f",
+    "322ad0e7a06f3d7c",
+    "37d4d62e71e7b74f",
+    "https://www.seudinheiro.com/2026/economia/cop31-termina-sem-acordo-politico-amplo-e-xp-ve-mudanca-no-foco-dos-investidores-esg-cbcb/",
+    "53f74486a6212654",
+    "https://www.spacemoney.com.br/tecnologia/eua-megaspeed-restricoes-comerciais/",
+    "b93999139dc323d4"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1473,11 +1473,11 @@
     "Dólar cai quase 2% e vai a R$ 5,80, com foco em ajuste fiscal e noticiário corporativo",
     "Democratas da Câmara dos EUA investigam empresa de filho de Donald Trump",
     "Cotado para a ANM, Pedro Guerra defende reestruturação e maior orçamento",
-    "Análise: Jensen Huang é um exemplo ambulante de risco moral"
+    "Análise: Jensen Huang é um exemplo ambulante de risco moral",
+    "COP31 termina sem acordo político amplo, e XP vê mudança no foco dos investidores em ESG",
+    "Megaspeed pode entrar em lista de restrições dos EUA"
   ],
   "leads": [
-    "Bloomberg Línea — A economia brasileira deve desacelerar ainda mais nos próximos trimestres e pesar sobre os resultados das companhias abertas, na avaliação de Carlos Sequeira, chefe de pesquisa do BTG Pactual (BPAC11), à Bloomberg Línea.",
-    "A JBS comunicou ao mercado na noite de 19 de novembro, uma quinta-feira, a assinatura definitiva da sociedade com a Oman Food Investment Holding Company (OFC) para atuar na produção e no processamento de proteínas animais em território omanense. O grupo brasileiro aplicou US$ 150 milhões e ficou com 80% do capital da nova empresa. À estatal do país",
     "Presidente quer acomodar o Centrão para só depois escolher nomes para cargos que não entram na partilha da fisiologia",
     "É um insanidade um país que ainda tem grande concentração de renda e quase 25% da população abaixo da linha de pobreza, torrar mais de um R$ 1 trilhão por ano com os juros da dívida pública. Isso não significa que o país deva deixar a inflação subir livremente, muito menos que os cortes de despesas públicas devam ocorrer nos programas sociais e no ",
     "As bolsas asiáticas fecharam sem direção única nesta segunda-feira (23), enquanto reguladores e operadores de mercado da China, da Coreia do Sul e de Taiwan reforçaram medidas para conter a turbulência provocada pela onda global de vendas de ações ligadas à inteligência artificial (IA).",
@@ -1725,7 +1725,9 @@
     "O dólar inverteu o sinal e passou a operar em queda nesta terça-feira (24), com recuo de 1,81% perto das 11h30, cotado a R$ 5,8190. Na mínima do dia, chegou a R$ 5,8015. Já o Ibovespa, principal índice da bolsa brasileira, tinha alta de 1,24% no mesmo horário, aos 166.846 pontos.",
     "Democratas da Câmara dos Representantes dos Estados Unidos que investigam investimentos feitos por Donald Trump Jr. e pela 1789 Capital enviaram cartas à Polymarket, à Juul e a outras empresas ligadas à firma de capital de risco do filho do presidente, apesar de uma ordem executiva emitida na semana passada com o objetivo de limitar investigações s",
     "Na corrida pela indicação ao cargo de diretor-geral da ANM (Agência Nacional de Mineração), o chefe de gabinete da Vice-Presidência da República, Pedro Guerra, defende medidas de reestruturação e reforço no orçamento do órgão regulador. Ele reconheceu, em entrevista à Agência iNFRA nesta segunda-feira (23), que o governo passa por um momento de con",
-    "\"Com a situação se tornando mais precária a cada dia, enfrentei uma escolha: agir de forma decisiva ou ficar de braços cruzados e permitir que as ações irresponsáveis de alguns comprometessem a segurança financeira de todos.\""
+    "\"Com a situação se tornando mais precária a cada dia, enfrentei uma escolha: agir de forma decisiva ou ficar de braços cruzados e permitir que as ações irresponsáveis de alguns comprometessem a segurança financeira de todos.\"",
+    "As principais divergências da conferência envolveram o futuro dos combustíveis fósseis, o financiamento climático e os caminhos para a transição energética",
+    "Os Estados Unidos preparam a inclusão da Megaspeed, fabricante de chips sediada em Cingapura, em sua relação de restrições comerciais. A informação é atribuída a uma fonte. Com isso, fornecedores dos EUA passariam a precisar de licença para entregar produtos, softwares ou tecnologia à companhia. Na prática, porém, essas autorizações são pouco conce"
   ],
   "eventos_recentes": [
     {
@@ -2406,8 +2408,6 @@
     }
   ],
   "hashes_imagens": [
-    "8c5fc04993f7fc80",
-    "b6243796bf7cd45c",
     "2b63c60e4c8071f8",
     "6087205fab1edb01",
     "ae9ad758422bad1b",
@@ -2705,6 +2705,8 @@
     "2c0f0e8b231ef5dd",
     "4d21022723933b6c",
     "07c1a506cfd25994",
-    "ac03f63bd592d33e"
+    "ac03f63bd592d33e",
+    "8b317a287717e568",
+    "67acd07f6e9653d5"
   ]
 }
