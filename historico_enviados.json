@@ -1,9 +1,5 @@
 {
   "links": [
-    "29b9e728f71638c8",
-    "1225c96e54a57bc0",
-    "2b0f1f12f7de7330",
-    "780162c3922caf33",
     "https://www.spacemoney.com.br/economia/exterior/ataques-golfo-ira-acordo-eua/",
     "18c57ef84176ee2b",
     "6b24c36c3ca66826",
@@ -799,7 +795,11 @@
     "8e089cd4f540bf74",
     "https://braziljournal.com/opiniao-o-pais-que-nao-fura-poco-e-ainda-perde-da-argentina",
     "a1c67abc461f12ba",
-    "865ed4978ee5af52"
+    "865ed4978ee5af52",
+    "https://www.spacemoney.com.br/educacao-financeira/quanto-guardar-por-mes-aposentadoria/",
+    "0369d0f227fd8c3d",
+    "https://www.infomoney.com.br/minhas-financas/vendas-de-imoveis-para-a-classe-media-perdem-folego-no-ano-e-2027-nao-anima/",
+    "33f9cb9cbd9cb9b1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1395,11 +1395,11 @@
     "Capital estrangeiro sustenta M&A no Brasil à espera de clareza fiscal, dizem bancos",
     "FIIs 3.0: CEO da Inter Asset revela como a gestora se prepara para a fase dos “fundos imobiliários de tudo”",
     "Campanha de IA pró-Pequim mira eleições em Taiwan",
-    "OPINIÃO. O País que não fura poço – e ainda perde da Argentina"
+    "OPINIÃO. O País que não fura poço – e ainda perde da Argentina",
+    "Quanto guardar por mês para complementar a aposentadoria",
+    "Vendas de imóveis para a classe média perdem fôlego no ano e 2027 não anima"
   ],
   "leads": [
-    "A Lei Complementar nº 238, sancionada em 21 de outubro, redesenha o regime do Microempreendedor Individual ao elevar o limite anual de faturamento dos atuais R$ 81 mil para R$ 110 mil em 2027 e para R$ 140 mil a partir de 2028. Segundo estudo da Contabilizei detalhado pelo InfoMoney, a permanência no enquadramento simplificado pode representar uma ",
-    "Depois de 13 anos de espera, milhões de jogadores finalmente puderam explorar as ruas de Vice City em GTA VI. Mas, para muitos, a estreia do jogo também trouxe um lembrete incômodo: acompanhar os avanços da indústria dos games está ficando cada vez mais caro.",
     "Estudo em 16 países mostra que parcerias internacionais impulsionam o desenvolvimento de tecnologias verdes na região",
     "Os Fundos de Investimento Imobiliário (FIIs) continuam sendo uma alternativa para quem deseja participar do mercado imobiliário e buscar rendimentos periódicos sem precisar comprar um imóvel. Por meio deles, investidores aplicam recursos em conjunto em empreendimentos, como shoppings, galpões logísticos, hospitais e edifícios comerciais, ou em títu",
     "A expansão da indústria de etanol de milho está provocando uma mudança estrutural no mercado brasileiro do grão, com impactos sobre a formação de preços, a comercialização e a rentabilidade dos produtores.",
@@ -1647,7 +1647,9 @@
     "Bloomberg Línea — O capital estrangeiro de longo prazo continua a buscar negócios no Brasil, apesar da volatilidade externa e da incerteza fiscal.",
     "Executivo vê mandatos híbridos como próximo passo da indústria e projeta elevar a participação do setor imobiliário para até 25% dos negócios",
     "Uma operação coordenada de perfis falsos turbinados por inteligência artificial está sendo mobilizada para tentar influenciar as eleições locais de Taiwan, marcadas para 28 de novembro, quando os eleitores da ilha vão escolher mais de 11 mil ocupantes de cargos em cidades e condados. Pesquisadores identificaram personas sintéticas que, segundo as e",
-    "O Brasil parece condenado a conviver com a expressão eternizada por Stefan Zweig: o país do futuro. Uma nação de extraordinárias riquezas naturais e oportunidades que raramente conseguimos transformar em prosperidade. No setor energético, corremos o risco de acrescentar uma palavra à frase de Zweig: “perdido”."
+    "O Brasil parece condenado a conviver com a expressão eternizada por Stefan Zweig: o país do futuro. Uma nação de extraordinárias riquezas naturais e oportunidades que raramente conseguimos transformar em prosperidade. No setor energético, corremos o risco de acrescentar uma palavra à frase de Zweig: “perdido”.",
+    "Planejar a renda da aposentadoria começa por uma pergunta prática: qual será o tamanho do gasto mensal e quanto dele já estará coberto por fontes previsíveis, como a previdência pública, a previdência privada contratada no passado ou aluguéis. A parte que não estiver coberta é o complemento que precisa ser financiado por uma reserva. Estimar esse v",
+    "A piora das condições de financiamento já afeta os imóveis voltados à classe média e deve continuar pressionando o segmento em 2027, disseram porta-vozes da Câmara Brasileira da Indústria da Construção (CBIC) e do Secovi-SP em coletiva de imprensa na segunda-feira (23)."
   ],
   "eventos_recentes": [
     {
@@ -2509,6 +2511,8 @@
     "9c09933abd9969d3",
     "b21863437bfcd44e",
     "c3e55b586a1b7bf9",
-    "610ce74ef7816eaf"
+    "610ce74ef7816eaf",
+    "1aba26375fb2cc56",
+    "66f5fd61812392b9"
   ]
 }
