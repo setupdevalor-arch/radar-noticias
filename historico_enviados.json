@@ -1,7 +1,5 @@
 {
   "links": [
-    "70a4fa7a11b9c266",
-    "0a82f101b1f908c9",
     "e01540b75f70f57c",
     "c45ba5f04c3fa0bd",
     "https://www.poder360.com.br/poder-economia/por-que-a-america-latina-precisa-de-conexoes-globais-para-inovar/",
@@ -799,7 +797,9 @@
     "c4ada79cd6dd169d",
     "https://www.estadao.com.br/economia/credito-esta-travado-2027-sera-dificil-para-a-economia-diz-presidente-do-bradesco/",
     "0990f895cfda1a82",
-    "fd29fdb59460bb48"
+    "fd29fdb59460bb48",
+    "https://www.spacemoney.com.br/tecnologia/empresas-asia-pacifico-ia-retorno-medicao/",
+    "988e8a6f04c9374d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1366,10 +1366,10 @@
     "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
     "Câmara aprova urgência e acelera votação de projeto de ajuste fiscal do governo Lula",
     "Ucrânia afunda navio russo na Líbia com drones navais",
-    "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco"
+    "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
+    "Empresas da Ásia veem retorno com IA, mas medição é difícil"
   ],
   "leads": [
-    "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
     "O fundo NOVO11, ETF que a Buena Vista Capital lançou na quinta-feira (19), reúne em uma única cota ações de 35 empresas negociadas nos Estados Unidos com receita relevante no Brasil. Os maiores pesos da carteira são Nubank (6,44%), Itaú Unibanco (6,43%), Petrobras (6,26%) e Mercado Livre (6,19%), segundo o material de divulgação do fundo.",
     "Primeira parcela, de R$ 500 milhões, será paga aos investidores no próximo dia 23 de dezembro",
     "A Axia Energia S.A. (AXIA3), em conjunto com o Banco Santander (Brasil) S.A., coordenador líder da operação, comunicou ao mercado na quarta-feira (18) a divulgação do relatório de classificação de risco da sua 15ª emissão de debêntures e a modificação do cronograma tentativo da oferta.",
@@ -1618,13 +1618,10 @@
     "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco.",
     "A Câmara dos Deputados aprovou a urgência para o projeto de ajuste fiscal do governo Lula, com impacto de R$ 50 bilhões até 2027. A proposta, de autoria do senador Jaques Wagner, visa conter gastos e cortar isenções tributárias. O PSOL, liderado por Tarcísio Motta, criticou o projeto, alegando que prejudica políticas sociais. O relator Mauro Benevi",
     "A Ucrânia afundou a corveta russa Merkury, um dos navios de guerra mais recentes de Moscou, em uma ofensiva com sete drones marítimos contra a base naval de Benghazi, no norte da Líbia, no domingo (22). A reivindicação foi feita pelo presidente Volodymyr Zelensky na segunda-feira (23). O cargueiro MV Angara, que segundo Kiev era usado para transpor",
-    "O presidente do Bradesco, Marcelo Noronha, afirmou que o crédito no Brasil está “totalmente travado”, tanto para pessoas físicas quanto para empresas. Em conversa com o Estadão/Broadcast, antes do início da cerimônia de posse de Luiz Carlos Trabuco Cappi na presidência do Movimento Brasil Competitivo (MBC), Noronha disse que 2027 será um ano muito "
+    "O presidente do Bradesco, Marcelo Noronha, afirmou que o crédito no Brasil está “totalmente travado”, tanto para pessoas físicas quanto para empresas. Em conversa com o Estadão/Broadcast, antes do início da cerimônia de posse de Luiz Carlos Trabuco Cappi na presidência do Movimento Brasil Competitivo (MBC), Noronha disse que 2027 será um ano muito ",
+    "Empresas da Ásia-Pacífico afirmam que seus investimentos em inteligência artificial já superaram os custos iniciais, mas transformar esses ganhos em números mensuráveis continua sendo um obstáculo, segundo reportagem da CNBC. Pesquisa da Strand Partners encomendada pela Amazon Web Services (AWS) mostra que 58% das companhias que usam IA dizem ter r"
   ],
   "eventos_recentes": [
-    {
-      "chave": "itausa::PROVENTOS",
-      "ts": 1795309463.50717
-    },
     {
       "chave": "goldman_sachs::GERAL_ATIVO",
       "ts": 1795321992.496245
@@ -2395,6 +2392,7 @@
     "46356439bd194f2a",
     "a6dccc84a46cf63e",
     "64f41e20ca3a2c05",
-    "862dc120e33287ea"
+    "862dc120e33287ea",
+    "2398870d1ddd91b4"
   ]
 }
