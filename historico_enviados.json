@@ -1,12 +1,5 @@
 {
   "links": [
-    "69aebd3176710045",
-    "1d2e84b1542a14ae",
-    "https://www.spacemoney.com.br/investimentos/criptomoedas/anuncios-maliciosos-iphones-seed-phrases/",
-    "8449408a5fed7068",
-    "https://www.infomoney.com.br/mercados/futuros-de-ny-sobem-apos-liquidacao-de-acoes-de-tecnologia-na-semana-passada/",
-    "30657f0173e35d77",
-    "d3200c3c25557004",
     "5dbfb746cbe1125e",
     "1b4bfbda83121649",
     "https://www.estadao.com.br/economia/coluna-do-broadcast-agro/capim-na-lavoura-vira-aposta-de-expansao-da-soesp/",
@@ -799,7 +792,14 @@
     "cf60ffb0af85969f",
     "614be8b1cfadda87",
     "https://www.moneytimes.com.br/eua-entram-com-uma-acao-judicial-para-recuperar-milhoes-de-dolares-roubados-no-ataque-cibernetico-a-binance/",
-    "9d6e35b71bd9d37a"
+    "9d6e35b71bd9d37a",
+    "6438c40cd0fee6f0",
+    "921ea97eb43624e4",
+    "4afc2210c95b3b9f",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/cni-intencao-de-investimento-da-industria-cai-ao-menor-nivel-em-seis-anos/",
+    "b6c98fbb7db18922",
+    "https://g1.globo.com/economia/noticia/2026/11/24/fim-da-escala-6-por-1-ministro-recomenda-que-setor-da-economia-feche-acordo-coletivo-ate-dia-16-se-quiser-escala-diferente.ghtml",
+    "2f5a9fcf0518932d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1451,11 +1451,11 @@
     "Juros futuros recuam com exterior e aprovação de ajuste fiscal na Câmara",
     "O que está por trás dos ataques cibernéticos que marcaram outubro e novembro",
     "ICDI11 fecha 3ª oferta com R$ 180 mi na B3",
-    "EUA entram com uma ação judicial para recuperar milhões de dólares roubados no ataque cibernético à Binance"
+    "EUA entram com uma ação judicial para recuperar milhões de dólares roubados no ataque cibernético à Binance",
+    "CNI: Intenção de investimento da indústria cai ao menor nível em seis anos",
+    "Fim da escala 6x1: ministro recomenda que setores 'corram' para fechar acordo coletivo até dia 16 se quiserem escala diferente"
   ],
   "leads": [
-    "O cientista-chefe da OpenAI propôs que as empresas de inteligência artificial concordem em impor limites ao desenvolvimento de modelos cada vez mais poderosos até que os pesquisadores disponham de maneiras melhores de entender e monitorar seu comportamento.",
-    "Cotação do USDT na corretora OKX se distancia do dólar comercial e pode sinalizar pressão sobre o real na abertura do mercado",
     "Como os fundamentos não mudaram de forma dramática durante a forte liquidação das ações na semana passada e muitas métricas de valuation agora indicam ativos baratos, o impulso contrário para aproveitar a queda dos preços das ações está forte.",
     "O novo plano de negócios da Petrobras, que será divulgado depois do fechamento dos mercados na segunda-feira (23), deve aumentar a perspectiva de investimentos da companhia, conforme expectativas de analistas de mercado. No entanto, a projeção de dividendos para o quinquênio 2027-2031, assim como a forma que a companhia pretende priorizar a aplicaç",
     "As medidas foram tomadas após Pequim anunciar, no início de novembro, ações para incentivar a compra de ações, em um momento em que o mercado acionário enfrenta dificuldades devido ao crescimento lento no país, à queda global das ações de inteligência artificial (IA) e ao aumento das tensões geopolíticas",
@@ -1703,7 +1703,9 @@
     "A curva de juros perde levemente a inclinação na manhã desta terça-feira (24), com recuo dos médios e longos, enquanto os curtos rondam a estabilidade.",
     "No setor de segurança digital, os meses de outubro e novembro de 2026 ficaram conhecidos como “black oktober e black november”. Eles trouxeram uma reflexão importante para o setor de segurança: mesmo organizações com estruturas tecnológicas avançadas podem ser comprometidas por meio de acessos legítimos, dispositivos de funcionários e processos int",
     "A terceira oferta de cotas do ICDI11 foi concluída em 16/11/2026, com R$ 180.019.363,44 e 2.067 subscritores, conforme a Suno Notícias. O encerramento foi comunicado em 19/11.",
-    "O Departamento de Justiça dos Estados Unidos apresentou uma ação de confisco para recuperar mais de US$ 1,1 bilhão em criptomoedas supostamente roubadas no mês passado por hackers norte-coreanos da plataforma Binance."
+    "O Departamento de Justiça dos Estados Unidos apresentou uma ação de confisco para recuperar mais de US$ 1,1 bilhão em criptomoedas supostamente roubadas no mês passado por hackers norte-coreanos da plataforma Binance.",
+    "A intenção de investimento da indústria brasileira caiu 2,6 pontos em novembro, de 52,6 para 50 pontos, e atingiu o menor patamar desde julho de 2020, durante a pandemia de Covid-19.",
+    "O ministro do Trabalho, Luiz Marinho, recomendou nesta terça-feira (24) que empresários e trabalhadores de setores da economia que queiram escala diferente, sem folga aos sábados e domingos, fechem acordos coletivos até o dia 16 — quando começam a valer as novas regras."
   ],
   "eventos_recentes": [
     {
@@ -2380,8 +2382,6 @@
     }
   ],
   "hashes_imagens": [
-    "75e75a690be6f254",
-    "a808188c38393f83",
     "f7384e4b1f8e9eec",
     "f01873e05f005dc2",
     "e876d7c163ae0cac",
@@ -2679,6 +2679,8 @@
     "2e8ca3d95e792e20",
     "9fb1d31354878b29",
     "ecc8b85639df8e41",
-    "73dc2960c5c5efdf"
+    "73dc2960c5c5efdf",
+    "dc24a6003748ae47",
+    "53ca19e662ed0d45"
   ]
 }
