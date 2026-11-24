@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/negocios/queda-acoes-ia-china/",
-    "80391bcf76f18246",
-    "0008b5c6902a1cb6",
     "9352e1ec9961fb73",
     "https://www.moneytimes.com.br/minuta-final-da-cop31-na-turquia-omite-mencoes-a-combustiveis-fosseis-gaep/",
     "2de32319e6c62816",
@@ -799,7 +796,10 @@
     "6c6559534b914240",
     "1ff9ffaf3747dc1a",
     "8fd0777a928a4da1",
-    "59e220041b2d0fda"
+    "59e220041b2d0fda",
+    "1fa9b5a271944864",
+    "https://www.spacemoney.com.br/economia/macroeconomia/inflacao-europa-ranking-2026/",
+    "a4c06162d0d910f1"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1374,10 +1374,10 @@
     "Metade dos executivos prevê retorno de investimentos em IA em até 12 meses",
     "Damares pede a Fachin visita a Vorcaro e depoimento público",
     "Compra da Zscaler pela CrowdStrike: CEO rebate temores",
-    "Petrobras prevê investir US$ 122 bi entre 2027-2031"
+    "Petrobras prevê investir US$ 122 bi entre 2027-2031",
+    "Inflação na Europa: o mapa que separa Leste e Norte"
   ],
   "leads": [
-    "O deputado estadual Dr. Vicente Caropreso usou o plenário da Assembleia Legislativa de Santa Catarina para destacar a atuação da Celesc na reconquista do fornecimento de energia após os temporais e tornados que castigaram o Meio-Oeste e o Oeste catarinense no início de novembro. No pronunciamento, o parlamentar elogiou o trabalho das equipes da com",
     "Banqueiro afirmou à PF que alertou o Banco Central sobre dúvidas quanto à qualidade dos ativos da instituição em 2024",
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "A Vivo começou a vender o 5G+ ao consumidor brasileiro, versão comercial do 5G Advanced (ou 5.5G). O serviço é direcionado a usuários que querem mais velocidade e experiências novas. A empresa divulga picos de 2 Gbps e afirma que os planos vigentes já incluem o acesso, sem custo extra, para quem estiver em região atendida e contar com celular compa",
@@ -1626,7 +1626,8 @@
     "Mais da metade (53%) dos executivos de alto escalão espera obter retorno mensurável dos investimentos em inteligência artificial (IA) em até 12 meses, e 20% contam com esse resultado já nos próximos seis meses. Hoje, porém, só 25% dizem ver ganhos amplos e sustentados para o negócio. Os dados são da edição de outubro da pesquisa Pulse of Change, da",
     "A senadora Damares Alves (Republicanos-DF) pediu ao presidente do Supremo Tribunal Federal, Edson Fachin, autorização para visitar Daniel Vorcaro, do Banco Master, na Penitenciária da Papuda, em Brasília. Ela também solicitou uma audiência ao ministro para tratar da proposta de fiscalização que relata no Senado sobre o caso da instituição financeir",
     "O CEO da CrowdStrike, George Kurtz, defendeu nesta segunda-feira a aquisição da Zscaler e afirmou à CNBC que o negócio cria uma “combinação vencedora” para ampliar a proteção contra ataques cibernéticos. A declaração foi dada após as ações da CrowdStrike caírem cerca de 9%, enquanto as da Zscaler subiram mais de 17%.",
-    "Entre os segmentos, o de exploração e produção (E&P) continua sendo o que receberá o maior aporte, concentrando mais de 70% dos investimentos."
+    "Entre os segmentos, o de exploração e produção (E&P) continua sendo o que receberá o maior aporte, concentrando mais de 70% dos investimentos.",
+    "Dados reunidos pelo Visual Capitalist a partir de estatísticas do Eurostat e do Office for National Statistics colocam 31 países europeus em uma mesma régua e revelam um continente dividido: a inflação anual segue pressionada no Leste e no Sul, enquanto os menores índices aparecem no Norte. O retrato, referente a outubro de 2026 — com leituras de s"
   ],
   "eventos_recentes": [
     {
@@ -2164,6 +2165,10 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795486908.550707
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795492657.62042
     }
   ],
   "hashes_imagens": [
@@ -2431,6 +2436,7 @@
     "1a5014d760bcc4f6",
     "28a353db9097bf96",
     "bdd749d3fe75e352",
-    "30c57939798db84a"
+    "30c57939798db84a",
+    "e58afa94d96b2b71"
   ]
 }
