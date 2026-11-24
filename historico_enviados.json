@@ -1,7 +1,5 @@
 {
   "links": [
-    "c98881016db998d7",
-    "https://www.spacemoney.com.br/economia/macroeconomia/chip-dolar-comercio-chips-supera-petroleo/",
     "79fd3a6b6c3c09de",
     "cfcf987b58034bfa",
     "https://www.cnnbrasil.com.br/internacional/espioes-usam-vagas-de-trabalho-falsas-para-conseguir-informacoes-dos-eua/",
@@ -799,7 +797,9 @@
     "https://www.poder360.com.br/poder-internacional/alibaba-reduz-previsao-de-crescimento-na-nuvem-apos-restricoes-dos-eua/",
     "24e63b9f6f660e3a",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/blackrock-fundo-tokenizado-stablecoin-hong-kong/",
-    "643d5affcfca12ee"
+    "643d5affcfca12ee",
+    "https://www.moneytimes.com.br/xp-e-b3-podem-ter-um-2027-mais-dificil-safra-rebaixa-acoes-e-corta-preco-alvo-confira-miql/",
+    "d9eab6f643d84dff"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1488,10 +1488,10 @@
     "Coalizão cobra investigação da UE contra Apple no iOS",
     "Após retomar investimentos, Petrobras buscará novas empresas de etanol",
     "Alibaba reduz previsão de crescimento na nuvem após restrições dos EUA",
-    "BlackRock usa stablecoin em fundo tokenizado em Hong Kong"
+    "BlackRock usa stablecoin em fundo tokenizado em Hong Kong",
+    "XP (XPBR31) e B3 (B3SA3) podem ter um 2027 mais difícil: Safra rebaixa ações e corta preço-alvo; confira"
   ],
   "leads": [
-    "A Hapvida (HAPV3) disse, em resposta a questionamento da Comissão de Valores Mobiliários (CVM), que não há qualquer decisão concreta ou documento vinculante celebrado com relação a eventual transação envolvendo os ativos mencionados na referida notícia.",
     "O mercado imobiliário dos Estados Unidos entrou em um período de paralisia depois que as taxas de financiamento dispararam em setembro, segundo a CNBC. A taxa média do crédito imobiliário de 30 anos, o mais usado no país, girava em torno de 6,60% em julho e chegou a 7,61% no início de outubro, uma alta de um ponto percentual completo, conforme dado",
     "O presidente da Ucrânia, Volodymyr Zelenskyy, exaltou nesta segunda-feira uma operação que afundou um dos mais novos navios da Rússia no porto líbio de Benghazi, segundo a CNBC. Forças ucranianas usaram sete drones navais de fabricação própria no ataque à corveta Merkury, ocorrido na madrugada de domingo.",
     "Enquanto boa parte dos fundos de private equity enfrenta dificuldades para captar recursos e realizar novos investimentos no Brasil, o Bradesco decidiu seguir na direção contrária. Após alguns anos de menor atividade, o banco retomou sua atuação no segmento e acelerou também os aportes em venture capital em 2026.",
@@ -1740,13 +1740,10 @@
     "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in",
     "A Petrobras deverá buscar aquisições de outras participações de usinas de etanol de milho, à medida que quer expandir sua atuação em renováveis e vê sinergias em matérias-primas para a produção de outros combustíveis sustentáveis, como o SAF para o setor de aviação, disseram três fontes com conhecimento do assunto nesta terça-feira.",
     "Crescimento da receita com serviços em nuvem deverá desacelerar para 30% a 45% em 2027, ante 53% no 3º trimestre de 2026",
-    "O Cointelegraph informou que a BlackRock estreou na Ásia-Pacífico um fundo tokenizado de liquidez em dólar de Hong Kong, com aplicações e retiradas que podem ser feitas por stablecoin. O South China Morning Post é citado como fonte do relato."
+    "O Cointelegraph informou que a BlackRock estreou na Ásia-Pacífico um fundo tokenizado de liquidez em dólar de Hong Kong, com aplicações e retiradas que podem ser feitas por stablecoin. O South China Morning Post é citado como fonte do relato.",
+    "O Safra rebaixou nesta terça-feira (24) as recomendações para as ações da B3 (B3SA3) e da XP (XPBR31) para neutra, em meio à perspectiva de um mercado de capitais menos favorável em 2027."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795375296.069925
-    },
     {
       "chave": "banco_do_brasil::BALANCO",
       "ts": 1795377167.890251
@@ -2446,10 +2443,17 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795546860.773873
+    },
+    {
+      "chave": "xp_inc::GERAL_ATIVO",
+      "ts": 1795548243.369572
+    },
+    {
+      "chave": "b3::GERAL_ATIVO",
+      "ts": 1795548243.369572
     }
   ],
   "hashes_imagens": [
-    "102447c255e458aa",
     "70f36f2a13c6a2c6",
     "663717983500b29d",
     "76899cc7a5780733",
@@ -2748,6 +2752,7 @@
     "a1569b6f2cffbffa",
     "a8cc74ad406cb88a",
     "43dd069fa499b89e",
-    "7e8f1068dcb8b677"
+    "7e8f1068dcb8b677",
+    "a134a1b3f41ff715"
   ]
 }
