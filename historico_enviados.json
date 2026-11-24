@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/economia/indicadores-economicos/ipc-s-repete-038-na-3a-quadrissemana/",
-    "dc242c94a1ede6bd",
     "https://www.infomoney.com.br/economia/pmi-da-zona-do-euro-fica-estavel-em-novembro-alemanha-compensa-queda-na-franca/",
     "8379035669452c9a",
     "16edf8fd9d869e07",
@@ -799,7 +797,9 @@
     "https://www.infomoney.com.br/business/krispy-kreme-na-estacao-4-pinheiros-expande-presenca-de-grandes-marcas-no-metro/",
     "047d34d0ff56f8c0",
     "https://megawhat.uol.com.br/regulacao/concentracao-no-mercado-livre-de-energia-pode-levar-a-intervencoes-da-aneel/",
-    "39446359e2e10de6"
+    "39446359e2e10de6",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/lvbi11-provento-extra-fusao-hglg11/",
+    "3bbe1754da993d48"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1483,10 +1483,10 @@
     "BTG Pactual e Edge recebem autorização para importar gás natural",
     "Bill Ackman: buscar meta de inflação de 2% levará a economia dos EUA a outra recessão",
     "Krispy Kreme na Estação 4-Pinheiros expande presença de grandes marcas no metrô",
-    "Concentração no mercado livre de energia pode levar a intervenções da Aneel"
+    "Concentração no mercado livre de energia pode levar a intervenções da Aneel",
+    "LVBI11 sinaliza provento extra antes de fusão com HGLG11"
   ],
   "leads": [
-    "Parece que a história não foi exatamente assim – mas seria chato demais estragar uma boa anedota com uma correção histórica. Então, neste caso, preferimos acreditar na versão.",
     "– Empresas europeias do setor de energia verde e tecnologias limpas, bem como grupos industriais, alertaram os líderes da UE nesta segunda-feira contra os cortes propostos ao Fundo Europeu de Competitividade, afirmando que o fundo é essencial para que o bloco consiga alcançar os Estados Unidos e a China.",
     "O Ibovespa encerrou a última sessão em queda de 0,69%, aos 166.376 pontos, mantendo a pressão vendedora e se aproximando novamente do suporte de 164.446 pontos. Na direção oposta, o minidólar avançou 0,62%, aos 5.933,50 pontos, sustentando a forte tendência de alta e mantendo no radar a região psicológica dos 6.000 pontos. Já o Bitcoin futuro subiu",
     "– As montadoras alemãs enfrentam meses de negociações trabalhistas conturbadas e greves sobre cortes de pessoal e possíveis fechamentos de fábricas, à medida que o modelo que sustentava a força de trabalho altamente remunerada do setor automotivo do país entra em colapso.",
@@ -1735,7 +1735,8 @@
     "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) autorizou o BTG Pactual Commodities e a Edge Comercialização a importar até 5 milhões de m³/dia de gás natural, cada uma, da Bolívia e da Argentina. As autorizações foram aprovadas pela diretoria da autarquia e publicadas no Diário Oficial da União (DOU) desta terça-feira, 24 de no",
     "Com o mercado acionário registrando uma recuperação impressionante nas últimas 24 horas e as perspectivas relativamente otimistas para 2027, pouco coisa, neste momento, é capaz de abalar os investidores. Ainda assim, sussurros sobre uma temida recessão vêm de figuras que Wall Street não pode se dar ao luxo de ignorar.:",
     "A rede de donuts Krispy Kreme inaugura sua primeira unidade em uma estação de metrô no Brasil em um quiosque no piso térreo da Estação Pinheiros, da Linha 4-Amarela, operada pela concessionária Motiva (MOTV3) em meio à expansão de grandes marcas de alimentação no trecho.",
-    "As cinco maiores comercializadoras de energia do mercado livre varejista detêm uma participação conjunta de 32,08% em âmbito nacional, mas esse percentual supera 60% em grande parte das áreas de concessão de distribuição analisadas pela Agência Nacional de Energia Elétrica (Aneel). Diante das diferenças regionais, a área técnica da agência propõe i"
+    "As cinco maiores comercializadoras de energia do mercado livre varejista detêm uma participação conjunta de 32,08% em âmbito nacional, mas esse percentual supera 60% em grande parte das áreas de concessão de distribuição analisadas pela Agência Nacional de Energia Elétrica (Aneel). Diante das diferenças regionais, a área técnica da agência propõe i",
+    "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao"
   ],
   "eventos_recentes": [
     {
@@ -2425,10 +2426,17 @@
     {
       "chave": "mercado_livre::EVENTO_CORP",
       "ts": 1795543672.863521
+    },
+    {
+      "chave": "lvbi11::EVENTO_CORP",
+      "ts": 1795544051.757109
+    },
+    {
+      "chave": "hglg11::EVENTO_CORP",
+      "ts": 1795544051.757109
     }
   ],
   "hashes_imagens": [
-    "1c5b07872e14ed5d",
     "e7f7daf3f70376ae",
     "f26b50cc4387f901",
     "c72d5fa39ef4c160",
@@ -2727,6 +2735,7 @@
     "4a3abfe6802be601",
     "400d3d2221d59366",
     "2b2a7cf78aae5c69",
-    "ebdd57b0dc6e4eee"
+    "ebdd57b0dc6e4eee",
+    "17286e74fb4f4f14"
   ]
 }
