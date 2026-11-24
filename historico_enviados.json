@@ -1,7 +1,5 @@
 {
   "links": [
-    "8f4adde878ea2652",
-    "https://www.infomoney.com.br/mercados/ubs-bb-corta-b3-para-neutra-com-visao-de-cenario-desafiador-para-mercado-de-capitais/",
     "67168f543fabdf24",
     "15d78ea11a904a4f",
     "63e964addc5e7edc",
@@ -799,7 +797,9 @@
     "https://www.cnnbrasil.com.br/agro/jbs-convoca-assembleia-para-votar-nomeacao-de-wesley-batista-filho-como-ceo/",
     "b5e5da1f9561ce9a",
     "https://www.infomoney.com.br/business/itau-entra-no-mcmv-e-avanca-sobre-mercado-dominado-pela-caixa/",
-    "f849ea27d1c6fc9d"
+    "f849ea27d1c6fc9d",
+    "https://bmcnews.com.br/criptoativos/bc-autoriza-foxbit-e-binance-a-ampliar-atuacao-regulada-no-brasil/",
+    "9350b2b3bf971e1b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1509,10 +1509,10 @@
     "Braskem (BRKM5) cai 14% após forte alta com acordo que pode diluir atuais acionistas",
     "Salários e preços: a corrida de três décadas nos EUA",
     "JBS convoca assembleia para votar nomeação de Wesley Batista Filho como CEO",
-    "Itaú entra no MCMV e avança sobre mercado dominado pela Caixa"
+    "Itaú entra no MCMV e avança sobre mercado dominado pela Caixa",
+    "BC autoriza Foxbit e Binance a ampliar atuação regulada no Brasil"
   ],
   "leads": [
-    "O comércio global de chips superou o de petróleo e gás pela primeira vez na história moderna, em movimento que o Deutsche Bank descreve como a ascensão do “chip-dólar”. Levantamento publicado pelo Seeking Alpha aponta que as exportações de semicondutores somaram cerca de US$ 1,60 trilhão nos quatro trimestres encerrados no segundo trimestre de 2026",
     "Supostos espiões chineses criaram uma rede elaborada de empresas fictícias que oferecem vagas de emprego, com o objetivo de induzir funcionários e ex-funcionários do governo dos Estados Unidos a revelar segredos oficiais.",
     "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes.",
     "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027",
@@ -1761,7 +1761,8 @@
     "As ações da Braskem (BRKM5) recuaram nesta terça-feira (24), devolvendo parte da forte valorização da sessão anterior, quando subiram quase 12% com a perspectiva de um acordo para reestruturar as dívidas da companhia. Apesar do avanço nas negociações com credores, a avaliação do Bradesco BBI aponta um possível custo elevado para os atuais acionista",
     "Entre 1996 e 2025, o salário médio nos Estados Unidos cresceu acima da inflação em 22 dos 30 anos analisados, segundo compilação do Visual Capitalist com base no National Average Wage Index da Social Security Administration e em dados de inflação do Federal Reserve Bank de Minneapolis. A vantagem máxima da série ocorreu em 2021, com ganho de 4,2 po",
     "A JBS vai propor aos acionistas a nomeação de Wesley Batista Filho como administrador executivo da companhia. A indicação será submetida à votação durante uma AGE (Assembleia Geral Extraordinária), convocada para 15 de dezembro de 2026, às 9h (horário da Europa Central), em Amsterdã, nos Países Baixos.",
-    "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do "
+    "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
+    "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil."
   ],
   "eventos_recentes": [
     {
@@ -2543,10 +2544,13 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795560958.256648
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795561306.969999
     }
   ],
   "hashes_imagens": [
-    "0a2be891c473e27a",
     "414b71c3060c549e",
     "810dff1abaf81093",
     "2f3a44d0176843b9",
@@ -2845,6 +2849,7 @@
     "ace08cf6d3cdb461",
     "6b61ad3fcd1a00cf",
     "001f2eb02cf815ff",
-    "103463d092267450"
+    "103463d092267450",
+    "00b2cdea913bc599"
   ]
 }
