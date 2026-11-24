@@ -1,9 +1,5 @@
 {
   "links": [
-    "67168f543fabdf24",
-    "15d78ea11a904a4f",
-    "63e964addc5e7edc",
-    "https://www.suno.com.br/noticias/tots3-blackrock-informa-participacao-acionaria-totvs-231126/",
     "899cf9acdfe55d6a",
     "cf0de898e0f16cec",
     "96f3232d09271a5f",
@@ -799,7 +795,11 @@
     "https://www.infomoney.com.br/business/itau-entra-no-mcmv-e-avanca-sobre-mercado-dominado-pela-caixa/",
     "f849ea27d1c6fc9d",
     "https://bmcnews.com.br/criptoativos/bc-autoriza-foxbit-e-binance-a-ampliar-atuacao-regulada-no-brasil/",
-    "9350b2b3bf971e1b"
+    "9350b2b3bf971e1b",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/rect11-renova-locacao-elo/",
+    "fd23b71d1356dfe5",
+    "https://www.moneytimes.com.br/banco-do-brasil-bbas3-nega-decisao-sobre-ipos-de-empresas-do-grupo-apos-questionamento-da-cvm-rnda/",
+    "eaffe267248f58fd"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1510,11 +1510,11 @@
     "Salários e preços: a corrida de três décadas nos EUA",
     "JBS convoca assembleia para votar nomeação de Wesley Batista Filho como CEO",
     "Itaú entra no MCMV e avança sobre mercado dominado pela Caixa",
-    "BC autoriza Foxbit e Binance a ampliar atuação regulada no Brasil"
+    "BC autoriza Foxbit e Binance a ampliar atuação regulada no Brasil",
+    "RECT11 renova locação com Elo e mantém vacância",
+    "Banco do Brasil (BBAS3) nega decisão sobre IPOs de empresas do grupo após questionamento da CVM"
   ],
   "leads": [
-    "Supostos espiões chineses criaram uma rede elaborada de empresas fictícias que oferecem vagas de emprego, com o objetivo de induzir funcionários e ex-funcionários do governo dos Estados Unidos a revelar segredos oficiais.",
-    "A CrowdStrike anunciou na segunda-feira (23) que comprará a Zscaler em uma transação integralmente em ações que avalia a empresa em cerca de US$ 43,9 bilhões, em uma das maiores aquisições de cibersegurança da história, aprofundando sua atuação na área de segurança de redes.",
     "Economista declara que medidas apresentadas até agora não são ajuste fiscal, mas “adequação do Orçamento” de 2027",
     "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
     "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante",
@@ -1762,13 +1762,11 @@
     "Entre 1996 e 2025, o salário médio nos Estados Unidos cresceu acima da inflação em 22 dos 30 anos analisados, segundo compilação do Visual Capitalist com base no National Average Wage Index da Social Security Administration e em dados de inflação do Federal Reserve Bank de Minneapolis. A vantagem máxima da série ocorreu em 2021, com ganho de 4,2 po",
     "A JBS vai propor aos acionistas a nomeação de Wesley Batista Filho como administrador executivo da companhia. A indicação será submetida à votação durante uma AGE (Assembleia Geral Extraordinária), convocada para 15 de dezembro de 2026, às 9h (horário da Europa Central), em Amsterdã, nos Países Baixos.",
     "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
-    "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil."
+    "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
+    "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
+    "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795389106.461729
-    },
     {
       "chave": "petrobras::PROVENTOS",
       "ts": 1795389422.515095
@@ -2548,11 +2546,17 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795561306.969999
+    },
+    {
+      "chave": "rect11::GERAL_ATIVO",
+      "ts": 1795562019.437562
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795562019.437562
     }
   ],
   "hashes_imagens": [
-    "414b71c3060c549e",
-    "810dff1abaf81093",
     "2f3a44d0176843b9",
     "eae41bb83e11847d",
     "7e2d4c205cfa7ccf",
@@ -2850,6 +2854,8 @@
     "6b61ad3fcd1a00cf",
     "001f2eb02cf815ff",
     "103463d092267450",
-    "00b2cdea913bc599"
+    "00b2cdea913bc599",
+    "c71fac4742300b43",
+    "5691b8c79931a5f1"
   ]
 }
