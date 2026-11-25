@@ -1,7 +1,5 @@
 {
   "links": [
-    "5af9e6e0599d6bcc",
-    "https://www.spacemoney.com.br/agronegocio/agro-arabes-ramada/",
     "3659172786f418fe",
     "7674579de2c76b60",
     "05da83d5b353ba01",
@@ -799,10 +797,11 @@
     "f63ea1169dc1af3c",
     "fc82001731c1e243",
     "https://www.cnnbrasil.com.br/agro/cafe-arabica-sobe-282-em-nova-york-e-fecha-a-us-270-por-libra-peso/",
-    "410218da9c1e851c"
+    "410218da9c1e851c",
+    "https://neofeed.com.br/negocios/estoque-elevado-na-argentina-e-juro-alto-no-brasil-colocam-a-prova-estrategia-da-ford-na-america-do-sul/",
+    "7cab4f781aedca34"
   ],
   "titulos": [
-    "Tempo real: Ibovespa acompanha divulgação da ata do Fomc e do fluxo cambial do Brasil",
     "Bolsas da Ásia fecham sem direção única após balanço e projeções da Nvidia",
     "Presidente do conselho da Nvidia descarta possibilidade de recontratar Huang",
     "Fim da escala 6×1: como as varejistas da bolsa correm para evitar pagar a conta — e quem já vê o copo meio cheio",
@@ -1601,10 +1600,10 @@
     "Tether anuncia aporte na Lemon para ampliar USDT e XAUT",
     "Governo aposta em concessões de geração para conter alta das tarifas até 2030",
     "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula",
-    "Café arábica sobe 2,82% em Nova York e fecha a US$ 2,70 por libra-peso"
+    "Café arábica sobe 2,82% em Nova York e fecha a US$ 2,70 por libra-peso",
+    "Estoque elevado na Argentina e juro alto no Brasil colocam à prova estratégia da Ford na América do Sul"
   ],
   "leads": [
-    "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
     "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
     "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027.",
     "O KNIP11 é um fundo imobiliário que concentra seus investimentos em títulos de crédito corrigidos pela inflação, somando patrimônio líquido de R$ 7,52 bilhões em outubro de 2026. Administrado pela Intrag e gerido ativamente pela Kinea Investimentos desde 2016, o fundo distribui rendimentos mensais a investidores qualificados, com resultados sensíve",
@@ -1853,7 +1852,8 @@
     "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
     "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
     "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista.",
-    "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio."
+    "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio.",
+    "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas."
   ],
   "eventos_recentes": [
     {
@@ -2706,7 +2706,6 @@
     }
   ],
   "hashes_imagens": [
-    "9c09933abd9969d3",
     "b21863437bfcd44e",
     "c3e55b586a1b7bf9",
     "610ce74ef7816eaf",
@@ -3005,6 +3004,7 @@
     "60c9f6825e3a595e",
     "d388eee4d0accebd",
     "4b05a9f91083cc78",
-    "f36a0dd994d6ee86"
+    "f36a0dd994d6ee86",
+    "396098ffe880e360"
   ]
 }
