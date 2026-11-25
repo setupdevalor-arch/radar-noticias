@@ -1,6 +1,5 @@
 {
   "links": [
-    "5a595114415013b6",
     "40803433849eb8de",
     "6f476b6d87dbbbc9",
     "b9463797f37e8f4b",
@@ -799,7 +798,8 @@
     "https://www.cnnbrasil.com.br/internacional/eua-abandonam-plano-de-acordos-com-russia-para-encerrar-guerra-diz-jornal/",
     "79c453b37a1b4ceb",
     "https://www.spacemoney.com.br/commodities/japao-forca-tarefa-petroleo-asia/",
-    "0c9ffd89dc722e17"
+    "0c9ffd89dc722e17",
+    "989e96cca12760cf"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1788,14 +1788,6 @@
     "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795419267.909189
-    },
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795420232.892298
-    },
     {
       "chave": "rf_fundos::FUNDOS_EVENTO",
       "ts": 1795421186.615183
