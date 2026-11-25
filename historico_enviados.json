@@ -1,6 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/bgrj11-segunda-emissao-cotas/",
     "2b8acb124853a4c6",
     "9b3e65e36d8f0324",
     "f1f6703ad185273b",
@@ -799,7 +798,8 @@
     "https://www.moneytimes.com.br/livro-bege-precos-sobem-moderadamente-nos-eua-emprego-e-economia-mostram-avanco-leve-ccgg/",
     "82ba626e89cd2ca3",
     "de86ac727b70b9b0",
-    "f37b2bdc08da589a"
+    "f37b2bdc08da589a",
+    "40ba0ea159e338ac"
   ],
   "titulos": [
     "Os filhos que lutam na Justiça para apagar nomes de pais ausentes ou abusivos dos documentos",
@@ -1856,10 +1856,6 @@
     "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado."
   ],
   "eventos_recentes": [
-    {
-      "chave": "equatorial::GERAL_ATIVO",
-      "ts": 1795463033.661648
-    },
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795463389.356648
