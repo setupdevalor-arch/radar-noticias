@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://braziljournal.com/opiniao-o-pais-que-nao-fura-poco-e-ainda-perde-da-argentina",
-    "a1c67abc461f12ba",
-    "865ed4978ee5af52",
-    "https://www.spacemoney.com.br/educacao-financeira/quanto-guardar-por-mes-aposentadoria/",
-    "0369d0f227fd8c3d",
     "https://www.infomoney.com.br/minhas-financas/vendas-de-imoveis-para-a-classe-media-perdem-folego-no-ano-e-2027-nao-anima/",
     "33f9cb9cbd9cb9b1",
     "36167c705f88fc40",
@@ -799,11 +794,14 @@
     "67cc07a2d8497b6b",
     "5384187bbb4dda55",
     "cc4ff5a884b2e7ed",
-    "c1395ee56974bdf2"
+    "c1395ee56974bdf2",
+    "4a16c0edf4725ab5",
+    "https://www.estadao.com.br/economia/entrevista-marcio-garcia-nao-vejo-senso-urgencia-governo-lula/",
+    "76e4d4a4b2f5a8ed",
+    "https://www.spacemoney.com.br/investimentos/acoes/anvisa-glp1-manipulado-farmacias-acoes/",
+    "9c99e9b1c267e43c"
   ],
   "titulos": [
-    "Férias, alistamento militar e 'viagem falsa' à Nova Zelândia: as loucuras que fãs de 'GTA 6' estão fazendo pelo lançamento",
-    "Bolsas de NY fecham em queda com bancos pressionados e techs em foco com Nvidia",
     "Em meio a polêmicas, Nvidia (NVDA) ‘não trai’ confiança de investidores e supera expectativas; veja números do resultado",
     "Ibovespa recupera fôlego e encerra sessão no azul em meio à alta do petróleo",
     "EUA suspendem instalação de roteadores que levaram à paralisação de voos no país",
@@ -1601,11 +1599,11 @@
     "Tesouro Direto hoje: taxas curtas caem, longas sobem e Prefixado 2029 fica abaixo de 15%",
     "Washington mira 14 países com nova rodada tarifária",
     "EUA propõem tarifa de 10% sobre aeronaves brasileiras e novas cobranças sobre açúcar",
-    "Banco Central vende US$ 2 bilhões em leilão em meio à pressão sobre o dólar"
+    "Banco Central vende US$ 2 bilhões em leilão em meio à pressão sobre o dólar",
+    "‘Falta senso de urgência ao governo; acho que vamos mesmo para a crise’, diz economista da PUC-Rio",
+    "Anvisa mira GLP-1 manipulado e pode favorecer farmácias"
   ],
   "leads": [
-    "A atividade do setor privado francês caiu em novembro ao menor patamar em seis meses, com a indústria em situação pior do que os serviços, de acordo com o índice de gerentes de compras (PMI) da S&P Global divulgado na segunda-feira e destacado em reportagem da CNBC. O dado reforçou os temores de recessão técnica — dois trimestres seguidos de queda ",
-    "O dólar atingiu R$ 6 pela primeira vez desde abril de 2025 na segunda-feira (23), após ter chegado a fechar a R$ 4,99 na sexta-feira anterior ao segundo turno das eleições, em 23 de outubro. A alta passa de 20% em um mês, aprofundando um desempenho ruim que já havia deixado o real com o pior desempenho de uma cesta de 32 divisas entre os dias 21 de",
     "Os preços de aluguel de salas e conjuntos comerciais subiram 12,04% nos 12 meses encerrados em outubro de 2026, quase três vezes a inflação oficial de 4,63% registrada no mesmo período. O resultado, divulgado pelo Índice FipeZAP nesta terça-feira (24), mostra que o custo de ocupação de imóveis comerciais continua avançando acima dos preços gerais d",
     "Dez anos depois de votar pela saída da União Europeia (UE), o Reino Unido começa a rever, na prática, os termos econômicos de sua separação. A decisão de deixar o bloco devolveu ao governo britânico liberdade para definir suas próprias regras comerciais e regulatórias, mas também criou obstáculos para empresas que dependiam do mercado europeu, redu",
     "O colapso das negociações climáticas das Nações Unidas na Turquia representou um duro golpe para o esforço global de impedir o superaquecimento do planeta, deixando em aberto como — ou mesmo se — será possível reparar os danos.",
@@ -1853,7 +1851,9 @@
     "Nesta quarta, os prefixados recuaram mais alguns centésimos, e o vencimento de 2029 seguiu abaixo de 15%.",
     "Segundo o g1, os Estados Unidos propuseram nesta quarta-feira (25) tarifas contra 14 grandes parceiros comerciais, com foco no que Washington classifica como excesso estrutural de capacidade na indústria. A China deve responder pela maior cobrança entre os alvos.",
     "No caso das aeronaves, a proposta prevê encerrar a isenção que atualmente beneficia os aviões acabados brasileiros e aplicar uma tarifa adicional de 10% sobre as importações desses produtos. A medida pode afetar especialmente a Embraer, uma das principais fabricantes brasileiras do setor.",
-    "O Banco Central vendeu nesta manhã de quarta-feira o total de US$ 2 bilhões em dois leilões de linha (venda de dólares com compromisso de recompra) realizados simultaneamente."
+    "O Banco Central vendeu nesta manhã de quarta-feira o total de US$ 2 bilhões em dois leilões de linha (venda de dólares com compromisso de recompra) realizados simultaneamente.",
+    "BRASÍLIA - O economista Márcio Garcia, professor titular do departamento de economia da PUC-Rio e PhD pela Universidade de Stanford, nos Estados Unidos, não enxerga senso de urgência no presidente Luiz Inácio Lula da Silva para tentar superar a crise de confiança que atinge o mercado sobre as contas públicas.",
+    "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti"
   ],
   "eventos_recentes": [
     {
@@ -2666,8 +2666,6 @@
     }
   ],
   "hashes_imagens": [
-    "ca78e1530b098f65",
-    "46b6b04d6671edfd",
     "f1d6f4ea61e42e4c",
     "ded9c41d2eb5847b",
     "f290d56353a2d485",
@@ -2965,6 +2963,8 @@
     "e3e71d6f6b7dd86d",
     "4304d50a2cc538a4",
     "4e0ad79ad3c9295d",
-    "2bb59310a07d5016"
+    "2bb59310a07d5016",
+    "43f752f4b06b219d",
+    "8ea2f804400578f5"
   ]
 }
