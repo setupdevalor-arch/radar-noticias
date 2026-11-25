@@ -1,7 +1,5 @@
 {
   "links": [
-    "2ee73afcf66b3081",
-    "b68e1d9226059206",
     "9898fb92542e8cbb",
     "10a8fd62f9c04262",
     "30ea33440cbbbd17",
@@ -799,7 +797,9 @@
     "b3f10e1a4e07d260",
     "29b3616918054e84",
     "https://www.bloomberglinea.com.br/agro/temos-sido-bastante-criteriosos-na-concessao-do-credito-diz-diretor-de-agro-do-bb/",
-    "da05b3e99cba2334"
+    "da05b3e99cba2334",
+    "https://www.bloomberglinea.com.br/agro/3tentos-usa-barter-e-alienacao-fiduciaria-de-graos-para-reduzir-risco-com-produtores/",
+    "aaab912153fad576"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1524,10 +1524,10 @@
     "Após voltar ao comando da Nvidia, Jensen Huang pede desculpas por traição e diz fazer terapia",
     "Com melhora do setor, venda de fatia da Ipiranga pela Ultrapar esfria",
     "Transmissoras se afastam de leilão de baterias por compartilhamento de receita com consumidor",
-    "‘Temos sido bastante criteriosos na concessão do crédito', diz diretor de agro do BB"
+    "‘Temos sido bastante criteriosos na concessão do crédito', diz diretor de agro do BB",
+    "3tentos usa barter e alienação fiduciária de grãos para reduzir risco com produtores"
   ],
   "leads": [
-    "O governo brasileiro planeja reduzir gradualmente o subsídio aos combustíveis a partir do próximo mês, apesar dos conflitos globais, como a guerra EUA-Irã. Criado em março para mitigar o impacto dos preços internacionais, o subsídio ao diesel, atualmente em R$ 2,12 por litro, visa conter a inflação e garantir o abastecimento. A medida, que já custo",
     "De acordo com o TecMundo, a Samsung estuda não apresentar uma nova geração do Galaxy Watch em 2027. A informação, divulgada pelo site sul-coreano ETNews, indica que a linha teria seu próximo modelo apenas no ano seguinte, com lançamentos a cada dois anos. A Samsung não confirmou o rumor.",
     "Uma sequência de falhas atingiu serviços digitais e a aviação nos Estados Unidos nas últimas semanas, envolvendo sistemas da Microsoft, da Apple, o controle do espaço aéreo e o FBI. As causas oficiais apontam sobrecarga e problemas de infraestrutura, mas não há confirmação de um ataque cibernético.",
     "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa",
@@ -1776,7 +1776,8 @@
     "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana.",
     "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes.",
     "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
-    "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago."
+    "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
+    "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo."
   ],
   "eventos_recentes": [
     {
@@ -2598,10 +2599,13 @@
     {
       "chave": "banco_do_brasil::EVENTO_CORP",
       "ts": 1795575737.195804
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795576748.309084
     }
   ],
   "hashes_imagens": [
-    "8c0ff647567a1cf1",
     "1e209e8a2973b7d6",
     "4ed3ff128884ac25",
     "299b4a2e6c0eebc1",
@@ -2900,6 +2904,7 @@
     "da507594c5b4c874",
     "38d124910257783c",
     "2bf6a6a68741727c",
-    "b279810e1bdec259"
+    "b279810e1bdec259",
+    "0b2d93bd06337d7a"
   ]
 }
