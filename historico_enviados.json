@@ -1,13 +1,5 @@
 {
   "links": [
-    "a4973ed2cada59f1",
-    "https://megawhat.uol.com.br/economia-e-politica/empresas/moura-obtem-aval-do-bndes-para-disputar-leilao-de-baterias-com-conteudo-nacional/",
-    "4551c462f7cc6a4c",
-    "https://www.spacemoney.com.br/investimentos/criptomoedas/okxice-titulos-tokenizados-eua/",
-    "eca3a7bd2c8d4cbe",
-    "https://cqcs.com.br/coluna/susep-lanca-estudo-sobre-educacao-securitaria/",
-    "b361362f003cc6c5",
-    "267690028b857294",
     "4f2ca36b243214d0",
     "https://www.infomoney.com.br/mercados/braskem-sobe-forte-com-noticia-sobre-acordo-com-credores-para-reestruturar-dividas/",
     "0c738ad3d3ab1aaf",
@@ -799,7 +791,15 @@
     "https://www.spacemoney.com.br/economia/macroeconomia/cbs-fim-6x1-inflacao-2027/",
     "918d424456cf052b",
     "https://www.spacemoney.com.br/economia/macroeconomia/divida-publica-europa-2026-2/",
-    "142b313adf59526b"
+    "142b313adf59526b",
+    "614b152f5486c7d1",
+    "b2d970423124fea4",
+    "1a8946cbc9f4cc64",
+    "462b44af391e6ad3",
+    "https://www.bloomberglinea.com.br/agro/kepler-weber-processa-70-mais-aco-e-ve-demanda-por-armazenagem-em-alta-diz-ceo/",
+    "aded2db8e2614203",
+    "https://www.spacemoney.com.br/economia/legislacao/justica-reativa-regras-vale-alimentacao/",
+    "70603fbb69ab3804"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1527,11 +1527,11 @@
     "‘Temos sido bastante criteriosos na concessão do crédito', diz diretor de agro do BB",
     "3tentos usa barter e alienação fiduciária de grãos para reduzir risco com produtores",
     "CBS e jornada menor pressionam inflação no início de 2027",
-    "Dívida pública na Europa: o fosso entre os países"
+    "Dívida pública na Europa: o fosso entre os países",
+    "Kepler Weber processa 70% mais aço e vê demanda por armazenagem em alta, diz CEO",
+    "Decisão judicial reativa regras do vale-alimentação"
   ],
   "leads": [
-    "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa",
-    "Presidente do BC afirmou também que a estabilidade de preços é o “principal mandato” da política monetária",
     "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior.",
     "O fundo imobiliário OUJP11 vai pagar R$ 0,85 por cota em 24 de novembro de 2026, em um repasse extraordinário. Segundo a Suno Notícias, têm direito quem encerrou o dia 13 de novembro com cotas. A antecipação busca levar aos cotistas o caixa existente antes de concluir a venda dos ativos e a liquidação. A gestão afirmou que as próximas etapas não tê",
     "O HGRU11 informou, segundo a Suno Notícias, resultado distribuível de R$ 19,79 milhões em outubro de 2026, com distribuição de R$ 0,95 por cota. O pagamento, previsto para 16 de novembro, soma R$ 23,59 milhões e supera o resultado gerado no mês.",
@@ -1779,7 +1779,9 @@
     "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
     "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo.",
     "Segundo o g1, economistas apontam que a troca do sistema de tributos sobre o consumo e o encerramento do regime 6×1 podem tornar a inflação brasileira mais desafiadora no começo de 2027. A primeira mudança deve mexer com os preços de alguns itens, sobretudo serviços; a segunda tende a encarecer a folha de parte das empresas e pode ser repassada ao ",
-    "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. "
+    "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. ",
+    "Bloomberg Línea — Para o CEO da Kepler Weber (KEPL3), Bernardo Nogueira, o agronegócio é cíclico, com crises recorrentes, mas o crescimento no Brasil continua, com a demanda por armazenagem em alta.",
+    "A Justiça acolheu um recurso apresentado pelo governo federal e voltou a validar as novas normas de vale-refeição e vale-alimentação, conforme o g1. A decisão, divulgada na terça-feira (24), anula os efeitos de uma liminar de novembro que havia beneficiado empresas associadas à Associação Brasileira das Empresas de Benefícios ao Trabalhador (ABBT)."
   ],
   "eventos_recentes": [
     {
@@ -2608,8 +2610,6 @@
     }
   ],
   "hashes_imagens": [
-    "299b4a2e6c0eebc1",
-    "79c02eff8daaf1a6",
     "009ce1e292d690aa",
     "8c23b932bfbc3134",
     "c621edb035dcba1a",
@@ -2907,6 +2907,8 @@
     "b279810e1bdec259",
     "0b2d93bd06337d7a",
     "8aa0a4bcd9d2acbc",
-    "6177bba29e467060"
+    "6177bba29e467060",
+    "5abb4815416c3d91",
+    "fce02739722a0ea8"
   ]
 }
