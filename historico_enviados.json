@@ -1,8 +1,5 @@
 {
   "links": [
-    "191d13f1fc3fecce",
-    "23cd4f516ee6b019",
-    "9c0247e26415b2ea",
     "5af9e6e0599d6bcc",
     "https://www.spacemoney.com.br/agronegocio/agro-arabes-ramada/",
     "3659172786f418fe",
@@ -799,10 +796,12 @@
     "https://megawhat.uol.com.br/noticias/governo-aposta-em-concessoes-de-geracao-para-conter-alta-das-tarifas-ate-2030/",
     "3309d70048651251",
     "https://www.moneytimes.com.br/dolar-recua-para-os-r-580-com-expectativas-sobre-equipe-economica-de-lula-davs/",
-    "f63ea1169dc1af3c"
+    "f63ea1169dc1af3c",
+    "fc82001731c1e243",
+    "https://www.cnnbrasil.com.br/agro/cafe-arabica-sobe-282-em-nova-york-e-fecha-a-us-270-por-libra-peso/",
+    "410218da9c1e851c"
   ],
   "titulos": [
-    "GTA 6 é uma vitória para fabricantes de videogames pressionados por custos",
     "Tempo real: Ibovespa acompanha divulgação da ata do Fomc e do fluxo cambial do Brasil",
     "Bolsas da Ásia fecham sem direção única após balanço e projeções da Nvidia",
     "Presidente do conselho da Nvidia descarta possibilidade de recontratar Huang",
@@ -1601,10 +1600,10 @@
     "RARA11: o ETF que dá acesso à disputa global por terras raras por menos de R$ 15",
     "Tether anuncia aporte na Lemon para ampliar USDT e XAUT",
     "Governo aposta em concessões de geração para conter alta das tarifas até 2030",
-    "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula"
+    "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula",
+    "Café arábica sobe 2,82% em Nova York e fecha a US$ 2,70 por libra-peso"
   ],
   "leads": [
-    "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à ",
     "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
     "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
     "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027.",
@@ -1853,7 +1852,8 @@
     "Por que o Brasil está no centro da disputa",
     "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
     "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
-    "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista."
+    "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista.",
+    "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio."
   ],
   "eventos_recentes": [
     {
@@ -2699,10 +2699,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795638913.752705
+    },
+    {
+      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
+      "ts": 1795639307.539934
     }
   ],
   "hashes_imagens": [
-    "3b3f80097dc2f672",
     "9c09933abd9969d3",
     "b21863437bfcd44e",
     "c3e55b586a1b7bf9",
@@ -3001,6 +3004,7 @@
     "b2c9097540f82b55",
     "60c9f6825e3a595e",
     "d388eee4d0accebd",
-    "4b05a9f91083cc78"
+    "4b05a9f91083cc78",
+    "f36a0dd994d6ee86"
   ]
 }
