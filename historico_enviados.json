@@ -1,8 +1,5 @@
 {
   "links": [
-    "109c4640a7be053d",
-    "https://www.spacemoney.com.br/commodities/bancos-testam-ouro-fracionado-digital-londres/",
-    "8d84f63a182689a1",
     "https://www.infomoney.com.br/mercados/china-e-india-devem-atingir-recorde-de-importacoes-de-petroleo-russo-em-2026/",
     "80b0297afb75182d",
     "7c65d54c14b602ed",
@@ -799,7 +796,10 @@
     "https://www.seudinheiro.com/2026/seu-negocio/ex-ceo-da-maior-rede-de-academias-do-mundo-quer-fazer-a-panobianco-bater-de-frente-com-a-smart-fit-smft3/",
     "a1553d26185a494f",
     "2bb6db5085a6e615",
-    "3060df80b14d8136"
+    "3060df80b14d8136",
+    "17bc0ec4363a6d7c",
+    "3e8888adc6e49471",
+    "77ce41d84293be87"
   ],
   "titulos": [
     "STF julga nesta quarta (18) regra sobre nepotismo em cargos políticos; entenda",
@@ -1856,10 +1856,6 @@
     "Chris Rondeau defende que a Panobianco tem semelhanças com a Planet Fitness e vê horizonte para chegar à bolsa no longo prazo"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795455135.946861
-    },
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795455652.146754
