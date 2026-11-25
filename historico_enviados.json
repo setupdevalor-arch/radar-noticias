@@ -1,9 +1,5 @@
 {
   "links": [
-    "9305a2ed5973b1df",
-    "https://www.suno.com.br/noticias/eqtl3-cppib-eleva-participacao-para-5/",
-    "f638aa2948cf97a3",
-    "1b431849fef0d5cb",
     "41c7f3e24860324b",
     "c3c87d320fa1dfab",
     "43ff8a3e81703631",
@@ -799,11 +795,13 @@
     "https://www.spacemoney.com.br/tecnologia/alice-huang-servidores-garantia/",
     "60ce60400546e14a",
     "https://www.infomoney.com.br/mercados/dados-da-nielsen-trazem-boas-noticias-para-acoes-de-assai-grupo-mateus-e-gpa/",
-    "3db0a060243702fd"
+    "3db0a060243702fd",
+    "https://www.spacemoney.com.br/investimentos/fundos-incentivados-resgates-retorno-cdi/",
+    "fd78b7f5d34b2818",
+    "https://www.infomoney.com.br/business/reforma-tributaria-nao-muda-rota-da-amazon-que-ampliara-centros-logisticos-em-2027/",
+    "04dc4d79a9ec6390"
   ],
   "titulos": [
-    "B3 muda metodologia do Ibovespa para permitir BDRs a partir de maio de 2027",
-    "O câmbio disparou — e agora? Como ficam os investimentos com o dólar em alta",
     "Com consumidor próximo ao limite, 3º tri reforça mensagem para varejistas da Bolsa",
     "Dois papas, prisões do Mensalão e Brasil campeão: o mundo no lançamento do GTA 5",
     "GTA 6: veja preços, onde comprar mais barato e como parcelar",
@@ -1601,11 +1599,11 @@
     "Proposta da TAG para tarifas promete economia de R$ 5,5 bi, mas erro em planilha reduz valor a R$ 130 milhões",
     "Em crise diplomática, governo Lula decide que embaixador não deve voltar à Argentina",
     "Empresas de Alice Huang teriam usado servidores em garantia",
-    "Dados da Nielsen trazem boas notícias para ações de Assaí, Grupo Mateus e GPA"
+    "Dados da Nielsen trazem boas notícias para ações de Assaí, Grupo Mateus e GPA",
+    "Fundos incentivados amargam resgates e retorno fraco",
+    "Reforma tributária não muda rota da Amazon, que ampliará centros logísticos em 2027"
   ],
   "leads": [
-    "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f",
-    "A Vale anunciou, na noite da última segunda-feira (23), que retomará parcialmente as operações na mina de Viga, localizada em Congonhas, na região central de Minas Gerais.",
     "A China prorrogou a suspensão das restrições à exportação de alguns materiais críticos para os Estados Unidos, poucos dias depois de os principais líderes dos dois países se reunirem no polo tecnológico de Shenzhen.",
     "Na contramão da pressão vendedora que atingiu a Bolsa brasileira no período pós-eleitoral, as ações da Gerdau (GGBR4) preservam a tendência de alta iniciada em abril de 2025. Em 2026, os papéis acumulam valorização de 28,88%.",
     "O resultado da COP31, realizada em Antália, na Turquia, foi considerado frustrante por especialistas em clima e energia. Ao WW, Fernanda Monteiro, diretora técnica de Clima e Energia do CEBDS (Congresso Sustentável do Conselho Empresarial Brasileiro para o Desenvolvimento Sustentável), analisou os principais fatores que contribuíram para o insucess",
@@ -1853,13 +1851,11 @@
     "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos.",
     "O governo brasileiro decidiu que o embaixador do Brasil na Argentina, Julio Bitelli, não deve retomar suas funções diplomáticas no país vizinho. Bitelli deve ir a Buenos Aires apenas para buscar pertences pessoais sem reassumir o posto que deixou em julho após atritos diplomáticos entre os dois governos.",
     "De acordo com o TecMundo, uma investigação da Reuters apontou que empresas associadas a Alice Huang teriam usado equipamentos de data centers de IA como garantia para obter financiamentos na China. Alice ficou conhecida após o caso extraconjugal com Jensen Huang, CEO da Nvidia, que se afastou temporariamente do cargo.",
-    "O varejo alimentar brasileiro teve sua semana mais forte deste ano entre os dias 9 e 15 de novembro. Dados da Nielsen, empresa global de inteligência de mercado, mostram que as vendas em supermercados e hipermercados, lojas de atacarejo e farmácias tiveram alta de 12% em valor e de 6,7% na comparação anual."
+    "O varejo alimentar brasileiro teve sua semana mais forte deste ano entre os dias 9 e 15 de novembro. Dados da Nielsen, empresa global de inteligência de mercado, mostram que as vendas em supermercados e hipermercados, lojas de atacarejo e farmácias tiveram alta de 12% em valor e de 6,7% na comparação anual.",
+    "Os fundos de debêntures incentivadas acumulam oito meses de saques e, no acumulado de 12 meses encerrado em meados de novembro, tiveram ganho médio de 6,93%, menos da metade do CDI, conforme números da Anbima reunidos pelo InvestNews. O índice IDA-IPCA Infraestrutura recuou 1,03% em novembro até o dia 24, quando o CDI subiu 0,76%; no ano, o indicad",
+    "A Reforma Tributária, que deve alterar a lógica histórica de localização de centros de distribuição no Brasil ao reduzir a relevância dos incentivos fiscais estaduais, não deve provocar mudanças na estratégia logística da Amazon (AMZO34) no país. Pelo contrário: a companhia pretende expandir sua rede de operações, aumentar o número de centros logís"
   ],
   "eventos_recentes": [
-    {
-      "chave": "anth34::GERAL_ATIVO",
-      "ts": 1795460069.069252
-    },
     {
       "chave": "cemig::GERAL_ATIVO",
       "ts": 1795461496.342842
@@ -2675,11 +2671,17 @@
     {
       "chave": "assai::GERAL_ATIVO",
       "ts": 1795632854.896133
+    },
+    {
+      "chave": "rf_fundos::FUNDOS_EVENTO",
+      "ts": 1795633593.020607
+    },
+    {
+      "chave": "amazon::GERAL_ATIVO",
+      "ts": 1795633593.020607
     }
   ],
   "hashes_imagens": [
-    "22ac1a4729081214",
-    "f97711bcfc7cc014",
     "f39a438c48224e12",
     "b7bfc9e5375e8ccb",
     "a2fbdf846d90a1c5",
@@ -2977,6 +2979,8 @@
     "d1dd9fcf49e0152d",
     "1686db03d84818f8",
     "81e59a8920665f1e",
-    "0bb8363e2ef3e82b"
+    "0bb8363e2ef3e82b",
+    "7d4ade074aaebc41",
+    "3d707c741402562d"
   ]
 }
