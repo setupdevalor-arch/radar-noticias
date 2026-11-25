@@ -1,7 +1,5 @@
 {
   "links": [
-    "7c00275a10be74f4",
-    "1466329c5c538768",
     "https://finsidersbrasil.com.br/noticias-sobre-fintechs/fintechs-brasileiras-despencam-em-nova-york-picpay-perde-32-na-semana/",
     "4853756fec382763",
     "390eb79e28425385",
@@ -799,7 +797,9 @@
     "2815a939340bb0bc",
     "c5eb972a7298aa79",
     "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bc-tcheco-bitcoin-carteira-teste-sigilo/",
-    "79ed6f1aa8d57195"
+    "79ed6f1aa8d57195",
+    "https://g1.globo.com/trabalho-e-carreira/concursos/noticia/2026/11/25/inscricoes-concurso-do-ibge-com-27-mil-vagas.ghtml",
+    "6dcbf007175dac5c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1530,10 +1530,10 @@
     "Dívida pública na Europa: o fosso entre os países",
     "Kepler Weber processa 70% mais aço e vê demanda por armazenagem em alta, diz CEO",
     "Decisão judicial reativa regras do vale-alimentação",
-    "BC tcheco não revela preço do Bitcoin em carteira de teste"
+    "BC tcheco não revela preço do Bitcoin em carteira de teste",
+    "Inscrições para concurso do IBGE com 27 mil vagas terminam nesta quarta; veja como participar"
   ],
   "leads": [
-    "O fundo imobiliário OUJP11 vai pagar R$ 0,85 por cota em 24 de novembro de 2026, em um repasse extraordinário. Segundo a Suno Notícias, têm direito quem encerrou o dia 13 de novembro com cotas. A antecipação busca levar aos cotistas o caixa existente antes de concluir a venda dos ativos e a liquidação. A gestão afirmou que as próximas etapas não tê",
     "O HGRU11 informou, segundo a Suno Notícias, resultado distribuível de R$ 19,79 milhões em outubro de 2026, com distribuição de R$ 0,95 por cota. O pagamento, previsto para 16 de novembro, soma R$ 23,59 milhões e supera o resultado gerado no mês.",
     "Resolução atualiza regras do Sistema Especial de Liquidação e de Custódia",
     "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis",
@@ -1782,13 +1782,10 @@
     "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. ",
     "Bloomberg Línea — Para o CEO da Kepler Weber (KEPL3), Bernardo Nogueira, o agronegócio é cíclico, com crises recorrentes, mas o crescimento no Brasil continua, com a demanda por armazenagem em alta.",
     "A Justiça acolheu um recurso apresentado pelo governo federal e voltou a validar as novas normas de vale-refeição e vale-alimentação, conforme o g1. A decisão, divulgada na terça-feira (24), anula os efeitos de uma liminar de novembro que havia beneficiado empresas associadas à Associação Brasileira das Empresas de Benefícios ao Trabalhador (ABBT).",
-    "O Banco Central da República Tcheca (CNB) mantém sob sigilo o preço pago, a quantidade adquirida e o valor atual do Bitcoin que integra sua carteira de teste de US$ 1 milhão, lançada em 13 de novembro do ano passado."
+    "O Banco Central da República Tcheca (CNB) mantém sob sigilo o preço pago, a quantidade adquirida e o valor atual do Bitcoin que integra sua carteira de teste de US$ 1 milhão, lançada em 13 de novembro do ano passado.",
+    "As inscrições para o processo seletivo temporário do Instituto Brasileiro de Geografia e Estatística (IBGE), que vai contratar profissionais para atuar no 12º Censo Agropecuário, Florestal e Aquícola de 2027, terminam nesta quarta-feira (25), às 23h59."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795411468.346569
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795414269.935256
@@ -2615,7 +2612,6 @@
     }
   ],
   "hashes_imagens": [
-    "8c23b932bfbc3134",
     "c621edb035dcba1a",
     "f3082e41dfecf6a8",
     "e4bf98f84603f2ff",
@@ -2914,6 +2910,7 @@
     "6177bba29e467060",
     "5abb4815416c3d91",
     "fce02739722a0ea8",
-    "b8e4e78ee6aad6be"
+    "b8e4e78ee6aad6be",
+    "5e4dca745927dc72"
   ]
 }
