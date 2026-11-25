@@ -1,14 +1,5 @@
 {
   "links": [
-    "0938f39289d63347",
-    "d0bdbd8d9e3e2d64",
-    "1fba5e9c34de02dc",
-    "e241fa87bca192a1",
-    "https://megawhat.uol.com.br/economia-e-politica/empresas/gas-de-vaca-muerta-vai-abastecer-operacoes-de-siderurgica-no-rio/",
-    "b5b3c3174d3c3d1a",
-    "https://www.suno.com.br/noticias/unifique-fiqe3-acoes-disparam-opa-7-reais/",
-    "c4cfddefe9b43737",
-    "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-23112026/",
     "b2c1b8db22685045",
     "3334a423befd057f",
     "https://www.suno.com.br/noticias/vghf11-balanco-auditado-lucro-patrimonio/",
@@ -799,7 +790,16 @@
     "https://www.spacemoney.com.br/investimentos/acoes/bb-desmente-ipo-controladas-bb-seguridade/",
     "94f807bb81b78e21",
     "https://www.infomoney.com.br/politica/lula-tem-reunioes-com-ministro-da-justica-e-com-ministra-da-casa-civil-nesta-quarta/",
-    "ac67204b88f4f16b"
+    "ac67204b88f4f16b",
+    "e2e33b38b650851b",
+    "a7faa4b4078c0d54",
+    "5f58fae4d1c901ce",
+    "https://www.cnnbrasil.com.br/internacional/houthis-dizem-ter-atacado-refinaria-de-petroleo-na-arabia-saudita/",
+    "fb15cb4d0ede9fd6",
+    "https://www.spacemoney.com.br/agronegocio/rondonia-maximas-37-graus/",
+    "9ee13fbc1b199b53",
+    "https://www.infomoney.com.br/mercados/braskem-avanca-em-reestruturacao-de-divida-mas-acordo-ainda-nao-e-vinculante/",
+    "2a6cdaa264b11cbd"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1573,12 +1573,12 @@
     "AWS amplia infraestrutura na América Latina e mantém planos de expansão no Brasil",
     "Índia vira refúgio anti-IA e atrai US$ 14 bilhões",
     "BB desmente planos de IPO e afasta venda da BB Seguridade",
-    "Lula tem reuniões com ministro da Justiça e com ministra da Casa Civil nesta quarta"
+    "Lula tem reuniões com ministro da Justiça e com ministra da Casa Civil nesta quarta",
+    "Houthis dizem ter atacado refinaria de petróleo na Arábia Saudita",
+    "Três cidades de Rondônia devem ter máximas de até 37 °C",
+    "Braskem avança em reestruturação de dívida, mas acordo ainda não é vinculante"
   ],
   "leads": [
-    "Medidas de eficiência energética economizaram cerca de € 120 bilhões (US$ 132 bilhões) em custos de importação de gás e petróleo pela União Europeia desde a invasão da Ucrânia pela Rússia, em 2022. A Comissão Europeia afirmou nesta segunda-feira (23) que a economia de energia precisa caminhar junto com a eletrificação durante a transição do bloco p",
-    "Os BDR (Brazilian Depositary Receipts, em inglês) da Anthropic, no ticker ANTH34, recuavam 6,74%, negociados a R$ 66,76, às 15h desta segunda-feira (23). Na quinta-feira, os BDRs encerraram o dia sendo negociados a R$ 71,70.",
-    "O Ministério Público Federal (MPF) acionou a Agência Nacional de Energia Elétrica (Aneel) após a Cemig Distribuição limitar ao período noturno, entre 19h e 5h, a injeção de excedentes de energia de uma usina solar da Universidade Federal do Triângulo Mineiro (UFTM).",
     "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio.",
     "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor.",
     "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso.",
@@ -1825,7 +1825,10 @@
     "Bloomberg Línea — A Amazon Web Services (AWS) colocou em funcionamento nesta sexta-feira (20), em Bogotá, uma infraestrutura que permite armazenar e processar dados dentro da Colômbia. O projeto é parte de uma ampliação dos investimentos da empresa na América Latina, incluindo projetos de longo prazo na Colômbia, no Chile e no Brasil.",
     "A Índia se consolidou como o principal destino dos recursos que deixaram, em novembro, os mercados mais expostos à inteligência artificial. O índice NSE Nifty 50 avançou 1,9% na quarta-feira, sessão em que as bolsas asiáticas recuaram em bloco, e a rupia registrou sua cotação mais forte em oito meses frente ao dólar, conforme dados compilados pela ",
     "O Banco do Brasil (BBAS3) esclareceu à Comissão de Valores Mobiliários (CVM) que nenhuma deliberação foi tomada por seus órgãos de governança sobre abertura de capital de empresas do conglomerado ou sobre a alienação da fatia que detém na BB Seguridade (BBSE3), conforme apurou o InfoMoney. O comunicado veio depois de questionamento do regulador e t",
-    "O presidente Luiz Inácio Lula da Silva reúne-se com o ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, nesta quarta-feira, 25, às 10h30, no Palácio da Alvorada. Às 15h, a agenda prevê reunião com a ministra da Casa Civil, Miriam Belchior, também no Alvorada."
+    "O presidente Luiz Inácio Lula da Silva reúne-se com o ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, nesta quarta-feira, 25, às 10h30, no Palácio da Alvorada. Às 15h, a agenda prevê reunião com a ministra da Casa Civil, Miriam Belchior, também no Alvorada.",
+    "Os Houthis do Iêmen, apoiados pelo Irã, afirmaram nesta quarta-feira (25) que atacaram a refinaria de petróleo de Ras Tanura, na Arábia Saudita.",
+    "Cujubim deve registrar 37 °C na sexta-feira (27), patamar previsto para três dias em sequência. A máxima fica 6,3 °C acima da referência climatológica local, de 30,7 °C, segundo a Climatempo.",
+    "A Braskem (BRKM5) confirmou ter chegado a um acordo preliminar com credores para avançar na reestruturação de sua dívida, com apoio de seus principais acionistas, Petrobras (PETR3; PETR4) e Shine I FIP, fundo ligado à gestora IG4. O entendimento, alcançado em 23 de novembro, envolve os principais termos e condições comerciais de um plano atualizado"
   ],
   "eventos_recentes": [
     {
@@ -2647,12 +2650,17 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795606296.358651
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795606725.921048
+    },
+    {
+      "chave": "braskem::GERAL_ATIVO",
+      "ts": 1795606725.921048
     }
   ],
   "hashes_imagens": [
-    "c06b05c224c27f12",
-    "bb982d106248a6c6",
-    "b0c3ad71e547beac",
     "b6c151cd25d6b8c6",
     "28295beb5c6a88e6",
     "2f9bd9a7c1db5789",
@@ -2949,6 +2957,9 @@
     "f0da3489e702c1e5",
     "353c7e0d9feed373",
     "4f944c646a494e51",
-    "a1e912a2b75c7396"
+    "a1e912a2b75c7396",
+    "85a305e2ea2013ba",
+    "62fc542cc615f556",
+    "fb996e2f273fa85f"
   ]
 }
