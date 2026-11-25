@@ -1,9 +1,5 @@
 {
   "links": [
-    "82972b589574f566",
-    "https://www.infomoney.com.br/economia/cambio-reforca-tendencia-de-queda-de-precos-de-commodities-diz-stonex/",
-    "8f56f81fa3e2ef73",
-    "https://www.infomoney.com.br/mercados/como-mbrf-pretende-entregar-o-maior-natal-do-mundo-em-2026/",
     "2b55b0de4e4fd341",
     "https://www.infomoney.com.br/mercados/cvm-suspende-registro-do-brb-e-instituicao-fica-impedida-de-negociar-acoes-na-bolsa/",
     "207b490d43e5a2e8",
@@ -799,7 +795,11 @@
     "d1dcd7f19dd700d5",
     "d263f0f6a43fd893",
     "https://neofeed.com.br/videos/revolucao-ia/shadow-ai-a-ameaca-que-desafia-ceos-e-conselhos-de-administracao/",
-    "6f9643553c77dd02"
+    "6f9643553c77dd02",
+    "https://www.infomoney.com.br/economia/china-diz-que-excesso-de-capacidade-nao-existe-em-resposta-a-plano-tarifario-dos-eua/",
+    "ecdc02ba7b46fd9f",
+    "https://neofeed.com.br/negocios/nao-vou-pagar-essa-conta-diz-ceo-da-allos-sobre-o-fim-da-escala-6x1/",
+    "925f688feb2e2c50"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1566,11 +1566,11 @@
     "ETFs de bitcoin caminham para pior mês da história",
     "Anatel rejeita recurso da TIM para manter ferramenta AntiSpam em operação",
     "Governo amplia previsão de déficit primário para 2026",
-    "Shadow AI: a ameaça que desafia CEOs e conselhos de administração"
+    "Shadow AI: a ameaça que desafia CEOs e conselhos de administração",
+    "China diz que excesso de capacidade não existe, em resposta a plano tarifário dos EUA",
+    "“Não vou pagar essa conta”, diz CEO da Allos sobre o fim da escala 6×1"
   ],
   "leads": [
-    "Em meio à volatilidade dos mercados presidente do BC afirma que postura conservadora adotada anteriormente permite ganhar tempo",
-    "O etanol continua sendo a opção mais vantajosa para carros flex em 16 estados e no Distrito Federal, mesmo após a terceira alta consecutiva do combustível. Na primeira quinzena de novembro, o litro do etanol fechou a R$ 4,38, em média, avanço de 1,39%, enquanto a gasolina recuou 0,89%, para R$ 6,67. Os dados são do Índice de Preços Edenred Ticket L",
     "A Petrobras (PETR3;PETR4) deve apresentar nesta semana seu aguardado Plano de Negócios 2027-2031, documento que definirá o rumo dos investimentos da companhia para os próximos cinco anos e pode servir como um importante catalisador para as ações Petrobras ON (PETR3) e Petrobras PN (PETR4).",
     "A comercializadora de gás natural da Pan American Energy (PAE) e a Companhia Siderúrgica Nacional (CSN) firmaram um contrato para o fornecimento de gás natural de Vaca Muerta, na Argentina, às operações industriais da siderúrgica no estado do Rio de Janeiro. O acordo tem vigência de 12 meses e as entregas de gás já foram iniciadas.",
     "As ações da Unifique (FIQE3) dispararam nesta segunda-feira (23), após uma mudança importante nas condições da oferta pública de aquisição de ações (OPA) da companhia. Os papéis chegaram a avançar 17,10%, negociados a R$ 6,71, às 12h20, depois que a Unitá Participações elevou de R$ 6 para R$ 7 o valor oferecido por ação, um aumento de aproximadamen",
@@ -1818,21 +1818,11 @@
     "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
     "O presidente da Agência Nacional de Telecomunicações (Anatel), Alexandre Freire, negou nesta terça-feira, 24, o pedido de efeito suspensivo apresentado pela TIM contra a medida cautelar que determinou a interrupção do funcionamento de sua ferramenta de combate às chamadas massivas, denominada AntiSpam. A agência identificou bloqueios indevidos de t",
     "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro.",
-    "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, "
+    "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, ",
+    "– As tarifas e as guerras comerciais não atendem aos interesses de ninguém, e a questão do chamado “excesso de capacidade” não existe de fato, afirmou o Ministério das Relações Exteriores da China nesta quarta-feira, antes do anúncio previsto de novas tarifas comerciais pelos Estados Unidos.",
+    "A menos de um mês do início do período de transição do fim da escala 6x1, a Allos, maior administradora de shopping centers do Brasil, já faz as contas para entender o impacto da nova jornada de trabalho."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bradesco::GERAL_ATIVO",
-      "ts": 1795431134.359446
-    },
-    {
-      "chave": "porto_seguro::PROVENTOS",
-      "ts": 1795431484.65224
-    },
-    {
-      "chave": "brava::EVENTO_CORP",
-      "ts": 1795431484.65224
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795432460.261045
@@ -2652,11 +2642,13 @@
     {
       "chave": "tim::GERAL_ATIVO",
       "ts": 1795602384.415285
+    },
+    {
+      "chave": "allos::GERAL_ATIVO",
+      "ts": 1795604412.626343
     }
   ],
   "hashes_imagens": [
-    "81c20fde124b6327",
-    "e047fc50459e6c4c",
     "0841eb45ba5f6427",
     "ef4cb657d8948899",
     "7a23374886dab4b7",
@@ -2954,6 +2946,8 @@
     "7e7e124a10fb4658",
     "30ce5ccabccecf42",
     "70ef74244428f58d",
-    "20279c2e14a14655"
+    "20279c2e14a14655",
+    "3ee4fd39ed72184f",
+    "4073b46b67e8a533"
   ]
 }
