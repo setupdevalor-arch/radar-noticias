@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
-    "b048f48eba5fe45a",
-    "https://neofeed.com.br/economia/conta-de-luz-sobe-quase-o-dobro-da-inflacao-em-2026-e-pressiona-empresas/",
-    "c91207916aeb4f0d",
-    "https://www.cnnbrasil.com.br/economia/money/mercado/petroleo-fecha-em-queda-de-3-e-volta-aos-us-80-com-fluxo-melhor-em-ormuz/",
-    "3802cd8d4950da2e",
-    "https://www.seudinheiro.com/2026/seu-negocio/executivo-do-nubank-roxo34-explica-por-que-nao-teme-briga-de-bancoes-e-fintechs-pelas-pmes-giov/",
     "28e652e2c69eb30a",
     "https://forbes.com.br/forbes-money/2026/11/ministro-da-fazenda-preve-superavit-de-ate-2-do-pib-ao-fim-do-mandato/",
     "a9022b0ea6327177",
@@ -799,7 +792,14 @@
     "https://www.infomoney.com.br/mercados/suzano-suzb3-sobe-30-em-meio-queda-do-ibovespa-ainda-ha-espaco-para-alta/",
     "7e5c97a225cb9ce9",
     "https://bmcnews.com.br/economia/incc-m-sobe-0-30-em-novembro-e-confianca-da-construcao-cai-a-85-8/",
-    "a5d245efe507d6b7"
+    "a5d245efe507d6b7",
+    "83f61baef1a420c2",
+    "698904b24f4aa0ce",
+    "d67c938a136f2e1e",
+    "https://www.infomoney.com.br/mundo/ira-diz-que-navios-colidiram-com-minas-em-ormuz-e-alerta-para-passagem-coordenada/",
+    "62824803e4c1bb44",
+    "https://bmcnews.com.br/petroleo-e-energia/confaz-atualiza-pmpf-de-combustiveis-e-define-novos-valores-para-icms/",
+    "506edf1335dfc7e7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1585,11 +1585,11 @@
     "Dólar hoje acompanha exterior e sobe ante o real",
     "Pacote fiscal coloca isenção de LCA e LCI em discussão",
     "Suzano (SUZB3) sobe 30% em meio à queda do Ibovespa; ainda há espaço para alta?",
-    "INCC-M sobe 0,30% em novembro e confiança da construção cai a 85,8"
+    "INCC-M sobe 0,30% em novembro e confiança da construção cai a 85,8",
+    "Irã diz que navios colidiram com minas em Ormuz e alerta para passagem coordenada",
+    "Confaz atualiza PMPF de combustíveis e define novos valores para ICMS"
   ],
   "leads": [
-    "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
-    "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial.",
     "O bitcoin registrou alta nesta segunda-feira (23) em recuperação após bater o menor valor em dois anos no fim de semana. A movimentação acontece em meio à recuperação do setor acionário nos Estados Unidos após a volta de Jensen Huang à Nvidia.",
     "Um juiz da Justiça estadual de Nova York rejeitou o pedido do procurador-geral do estado para barrar de imediato a Kalshi, segundo o Cointelegraph. Com a decisão, a plataforma de mercados de previsão pode continuar oferecendo contratos de eventos no estado enquanto a disputa judicial sobre seus produtos ligados a esportes segue em tramitação.",
     "A decisão surpreendente do conselho da Nvidia de reintegrar o ex-presidente-executivo Jensen Huang foi tomada sem consulta aos principais dirigentes da empresa, que foram informados do plano apenas nos momentos finais, segundo pessoas familiarizadas com o assunto.",
@@ -1837,13 +1837,11 @@
     "O dólar à vista opera com alta ante o real nesta quarta-feira (25), acompanhando o avanço da moeda norte-americana ante outras divisas de emergentes no exterior, com os investidores à espera da divulgação de novos dados sobre a economia dos Estados Unidos.",
     "Um projeto de deputados que prevê imposto de renda de 7,5% sobre rendimentos de LCA e LCI, hoje isentos para pessoa física, segue sem despacho definido na Câmara e pode elevar o custo do crédito no campo. O primeiro pacote fiscal foi sancionado por Lula em 24 de novembro. As LCAs em circulação totalizavam aproximadamente R$ 563 bilhões em outubro, ",
     "As ações da Suzano (SUZB3), maior produtora de celulose de eucalipto do mundo, acumulam valorização de 30,38% desde o último pregão antes do segundo turno das eleições. Enquanto o Ibovespa recua aproximadamente 20% no mesmo período, os papéis da companhia encerraram a última sessão em alta de 1,72%, aos R$ 56,14.",
-    "O custo da construção, medido pelo INCC-M da FGV, subiu 0,30% em novembro, após alta de 0,35% em outubro, enquanto a confiança da construção caiu 4,9 pontos, para 85,8. O dados foi divulgado nesta quarta-feira (25)."
+    "O custo da construção, medido pelo INCC-M da FGV, subiu 0,30% em novembro, após alta de 0,35% em outubro, enquanto a confiança da construção caiu 4,9 pontos, para 85,8. O dados foi divulgado nesta quarta-feira (25).",
+    "– Dois petroleiros colidiram com minas navais, explodiram e pegaram ‌fogo no Estreito de Ormuz nesta quarta-feira (25), informou a Marinha ‌da Guarda Revolucionária do Irã em um comunicado divulgado pela mídia estatal.",
+    "O Confaz divulgou novos preços médios ponderados ao consumidor final (PMPF) dos combustíveis, que passam a valer em 16 de novembro e servirão de base para o cálculo do ICMS pelos estados e pelo Distrito Federal."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795437786.438121
-    },
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795438458.907147
@@ -2670,8 +2668,6 @@
     }
   ],
   "hashes_imagens": [
-    "421d7deb1c584334",
-    "e0adcfb431c64f04",
     "f49be025a774ac5f",
     "e730c5e7124a5a5f",
     "07d7f99b637c7ce2",
@@ -2969,6 +2965,8 @@
     "1c7a15b8a4f68e36",
     "127fe074965288c0",
     "cb83aca0bc31b1a8",
-    "8262f3142cde3f1d"
+    "8262f3142cde3f1d",
+    "2c16e66efbe01a0c",
+    "84a565c3aa496c2e"
   ]
 }
