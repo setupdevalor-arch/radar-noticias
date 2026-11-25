@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/investimentos/tesouro-direto-taxas-rendimento-hoje-recuo-prefixados-24112026/",
-    "8808ec49befe536b",
     "2b85e60d1cfbcb00",
     "cf0d40f502318f74",
     "59e4814c29dc66cc",
@@ -799,10 +797,11 @@
     "af966323eb8c1a8d",
     "6aa984a4baef1a81",
     "https://eixos.com.br/gas-natural/proposta-da-tag-para-tarifas-promete-economia-de-r-55-bi-mas-erro-em-planilha-reduz-valor-a-r-130-milhoes/",
-    "ba5d53f972584499"
+    "ba5d53f972584499",
+    "https://www.moneytimes.com.br/em-crise-diplomatica-governo-lula-decide-que-embaixador-nao-deve-voltar-a-argentina-mlem/",
+    "cbc9fd940264529a"
   ],
   "titulos": [
-    "Novo jantar de Trump com memecoin pode fracassar: 130 carteiras disputam 185 vagas",
     "Gás: XP atualiza estimativas para Eneva e Compass com novos preços-alvo para 2027",
     "Mercado de níquel pode chegar a US$ 80,68 bi até 2031",
     "B3 muda metodologia do Ibovespa para permitir BDRs a partir de maio de 2027",
@@ -1601,10 +1600,10 @@
     "Preço das memórias DRAM deve subir até 22% em 2027, estima ABISEMI",
     "Anatel nega recurso da TIM para suspender interrupção de bloqueador de chamadas",
     "HLOG11 negocia renovações e mantém galpões 100% ocupados",
-    "Proposta da TAG para tarifas promete economia de R$ 5,5 bi, mas erro em planilha reduz valor a R$ 130 milhões"
+    "Proposta da TAG para tarifas promete economia de R$ 5,5 bi, mas erro em planilha reduz valor a R$ 130 milhões",
+    "Em crise diplomática, governo Lula decide que embaixador não deve voltar à Argentina"
   ],
   "leads": [
-    "– A montadora alemã Volkswagen inicia nesta terça-feira (24) negociações salariais com seus representantes sindicais, em meio a protestos e ameaças de greve devido aos planos da montadora ‌de intensificar os cortes de pessoal e reduzir custos.",
     "O período pós-eleição no Brasil tem sido intenso nos mercados financeiros e o motivo é o mesmo da maior parte dos episódios de estresse dos últimos 20 anos: a trajetória da dívida pública. Agora, apenas a sugestão de que uma nova proposta de reduzir os gastos com juros forçadamente seria considerada, sem antes atacar problemas estruturais básicos d",
     "JPMorgan, HSBC e StoneX realizaram suas primeiras negociações com propriedade digital de barras físicas de ouro em Londres, usando um sistema do World Gold Council (WGC) que permite negociar frações do metal e usá-las como garantia sem retirá-lo dos cofres. As operações ocorreram na semana passada, segundo a Bloomberg.",
     "– China e Índia estão a caminho de registrar importações recordes de petróleo russo neste ano, preenchendo uma lacuna de oferta causada pela guerra com o Irã, à medida que ‌isenções às sanções dos EUA facilitaram as compras e ataques de drones ucranianos interromperam parte da capacidade de refino da Rússia, segundo dados de transporte marítimo e f",
@@ -1853,13 +1852,10 @@
     "Os preços das memórias DRAM devem registrar aumentos de 18% a 22% em 2027, mesmo com a expectativa de expansão da oferta mundial de memórias. Já os preços das memórias Flash devem apresentar variação de zero a 5%. As projeções foram apresentadas pelo presidente da Associação Brasileira da Indústria de Semicondutores (ABISEMI), Rogério Nunes, durant",
     "A Anatel negou recurso administrativo apresentado pela TIM contra a suspensão de sua ferramenta de bloqueio de chamadas. A decisão foi tomada pelo presidente do Conselho Diretor da agência, Alexandre Freire. Na tentativa de reverter a medida, a operadora alegou ter adotado as providências solicitadas pela Anatel e afirmou que a suspensão poderia ex",
     "O fundo imobiliário HLOG11 (Hedge Logística FII) fechou outubro com ocupação total em seus galpões e avançou em tratativas para renovar contratos de locação com inquilinos como Unilever e Boticário. O patrimônio líquido do fundo soma cerca de R$ 507 milhões, distribuídos em dois empreendimentos logísticos que totalizam 205,2 mil metros quadrados de",
-    "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos."
+    "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos.",
+    "O governo brasileiro decidiu que o embaixador do Brasil na Argentina, Julio Bitelli, não deve retomar suas funções diplomáticas no país vizinho. Bitelli deve ir a Buenos Aires apenas para buscar pertences pessoais sem reassumir o posto que deixou em julho após atritos diplomáticos entre os dois governos."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795459331.482116
-    },
     {
       "chave": "vghf11::BALANCO",
       "ts": 1795459695.795275
@@ -2686,7 +2682,6 @@
     }
   ],
   "hashes_imagens": [
-    "b76f9b9c62953abc",
     "607e797daa4addba",
     "af38e58d9c03ba11",
     "22ac1a4729081214",
@@ -2985,6 +2980,7 @@
     "864a2e118e97e841",
     "683227ac9e99f6be",
     "c2adfe1897c77fa8",
-    "d1dd9fcf49e0152d"
+    "d1dd9fcf49e0152d",
+    "1686db03d84818f8"
   ]
 }
