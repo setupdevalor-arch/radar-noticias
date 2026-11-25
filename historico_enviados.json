@@ -1,7 +1,5 @@
 {
   "links": [
-    "b1e868e607097211",
-    "https://forbes.com.br/forbes-money/forbes-real-estate/2026/11/shoppings-lideram-compras-fim-ano/",
     "8160bccbbace3704",
     "00cf35a9f9160eac",
     "https://forbes.com.br/forbes-money/2026/11/saida-investidores-bolsa-brasileira-risco-brasil-2027/",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/agronegocio/ucrania-colheita-graos-85-area/",
     "e82fddbfc3284c2d",
     "https://www.cnnbrasil.com.br/agro/estados-unidos-propoem-novas-tarifas-sobre-acucar-brasileiro/",
-    "182a9e6f35d8d4b7"
+    "182a9e6f35d8d4b7",
+    "https://borainvestir.b3.com.br/noticias/financiamento-de-veiculos-eletricos-e-hibridos-mais-que-dobra-e-supera-392-mil-unidades-ate-outubro/",
+    "7014d896cd7512f5"
   ],
   "titulos": [
-    "Empresas usaram R$ 200 bilhões em créditos para pagar tributos até setembro; Senado debate restrição no ajuste fiscal",
     "Ibovespa quase recupera tombo de 3 mil pontos, mas devolve ganhos e fecha com alta de 0,31%",
     "Nvidia apresenta projeção otimista em seu primeiro balanço desde a saída de Huang",
     "Aneel forma maioria para recomendar caducidade da concessão da Enel São Paulo",
@@ -1601,10 +1600,10 @@
     "Inflação vai piorar antes de melhorar, alerta JP Morgan em relatório sobre 2027",
     "Auxiliares de Lula cogitam sessão extra em janeiro",
     "Ucrânia colhe 52,3 milhões de t de grãos em 85% da área",
-    "Estados Unidos propõem novas tarifas sobre açúcar brasileiro"
+    "Estados Unidos propõem novas tarifas sobre açúcar brasileiro",
+    "Financiamento de veículos elétricos e híbridos mais que dobra e supera 392 mil unidades até outubro"
   ],
   "leads": [
-    "BRASÍLIA - Integrantes da equipe econômica estão empenhados em preencher os postos abertos e os que vagarão no início do ano que vem na diretoria do Banco Central com nomes que sejam amigáveis ao mercado, conforme apurou o Estadão/Broadcast.",
     "Três petroleiros pegaram fogo após atingir minas navais no Estreito de Ormuz, informou a Guarda Revolucionária Iraniana em comunicado divulgado pela agência estatal IRNA, segundo a CNBC. De acordo com o relato, as embarcações estavam sob cobertura aérea e escolta militar dos EUA, que não impediram as explosões.",
     "Segundo a CNBC, a volta de Jensen Huang ao comando da Nvidia pode ter reduzido temores sobre a liderança da companhia, mas também colocou sob nova avaliação a governança corporativa e a dependência da fabricante de chips em relação ao fundador.",
     "As empresas de Elon Musk, Tesla e SpaceX, discutem uma possível fusão avaliada em US$ 3,5 trilhões (cerca de R$ 20,8 trilhões), segundo o g1. Conforme o portal, que cita informações publicadas nesta terça-feira (24) pelo jornal britânico Financial Times, o negócio seria o maior da história e pode ser concluído até o fim deste ano.",
@@ -1853,13 +1852,10 @@
     "A economia brasileira vai manter a tendência de desaceleração no próximo ano, com uma expectativa de crescimento do PIB de cerca de 0,6% em 2027, mas esse esfriamento não deve provocar uma desinflação imediata, projeta o banco de investimentos JP Morgan. “Nosso cenário-base incorpora parte desses efeitos e prevê que a inflação cheia se aproxime de ",
     "Segundo Valdo Cruz, em seu blog no g1, auxiliares do presidente Lula avaliam a possibilidade de pedir aos presidentes da Câmara e do Senado uma sessão legislativa extra em janeiro para votar a proposta de emenda à Constituição com a segunda fase do ajuste fiscal.",
     "Até a terça-feira (25), a Ucrânia havia colhido 52,3 milhões de t de grãos, volume que cobre 85% dos 9,86 milhões de ha semeados, segundo o Ministério da Política Agrária e Alimentação. O rendimento médio dos cereais e leguminosas ficou em 5,24 t/ha.",
-    "O governo dos Estados Unidos anunciou nesta quarta-feira (25) uma proposta de elevação das tarifas de importação de açúcar bruto e refinado como parte da estratégia para ampliar a pressão sobre o Brasil nas negociações comerciais entre os dois países."
+    "O governo dos Estados Unidos anunciou nesta quarta-feira (25) uma proposta de elevação das tarifas de importação de açúcar bruto e refinado como parte da estratégia para ampliar a pressão sobre o Brasil nas negociações comerciais entre os dois países.",
+    "O financiamento de veículos elétricos e híbridos mais que dobrou no Brasil em 2026. De janeiro a outubro, foram financiadas 392.111 unidades, crescimento de 142,5% em relação às 161.700 registradas no mesmo período de 2025. Os dados são da Trillia, linha de negócios da B3 dedicada a Dados, Analytics e Inteligência Artificial. Com o avanço, os eletr"
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_tesouro::RF_EVENTO",
-      "ts": 1795444634.311048
-    },
     {
       "chave": "pcar3::GERAL_ATIVO",
       "ts": 1795445067.601783
@@ -2674,7 +2670,6 @@
     }
   ],
   "hashes_imagens": [
-    "c5474207227f9e6e",
     "423529f68b661b1f",
     "ff472277878aec71",
     "27acd27cb343cffb",
@@ -2973,6 +2968,7 @@
     "a5802f17d863f97a",
     "314609bc89a1074a",
     "9ad61632ea4c08be",
-    "7a424ad0db4ccd10"
+    "7a424ad0db4ccd10",
+    "61f5aab88123d5b1"
   ]
 }
