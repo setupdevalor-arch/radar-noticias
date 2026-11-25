@@ -1,7 +1,5 @@
 {
   "links": [
-    "68ca6f595050843d",
-    "eb65fcfc997c5820",
     "191d13f1fc3fecce",
     "23cd4f516ee6b019",
     "9c0247e26415b2ea",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/investimentos/criptomoedas/tether-aporte-lemon-usdt-xaut/",
     "0563103e0318b11f",
     "https://megawhat.uol.com.br/noticias/governo-aposta-em-concessoes-de-geracao-para-conter-alta-das-tarifas-ate-2030/",
-    "3309d70048651251"
+    "3309d70048651251",
+    "https://www.moneytimes.com.br/dolar-recua-para-os-r-580-com-expectativas-sobre-equipe-economica-de-lula-davs/",
+    "f63ea1169dc1af3c"
   ],
   "titulos": [
-    "Alunos do quarto ano descobrem moeda de quase 2 mil anos em passeio da escola",
     "GTA 6 é uma vitória para fabricantes de videogames pressionados por custos",
     "Tempo real: Ibovespa acompanha divulgação da ata do Fomc e do fluxo cambial do Brasil",
     "Bolsas da Ásia fecham sem direção única após balanço e projeções da Nvidia",
@@ -1601,10 +1600,10 @@
     "Brasil chega a oito plantas de biometano aptas a emitir certificados de origem",
     "RARA11: o ETF que dá acesso à disputa global por terras raras por menos de R$ 15",
     "Tether anuncia aporte na Lemon para ampliar USDT e XAUT",
-    "Governo aposta em concessões de geração para conter alta das tarifas até 2030"
+    "Governo aposta em concessões de geração para conter alta das tarifas até 2030",
+    "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula"
   ],
   "leads": [
-    "Uma dívida empresarial pode ser negociada com deságio de até 90% e ainda preservar valor recuperável para o investidor. É nessa diferença entre o preço atribuído à crise e o valor existente nos ativos, contratos e operações da companhia que atuam os investidores de special situations, especializados na compra de dívidas e outros ativos estressados.",
     "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à ",
     "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
     "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
@@ -1853,7 +1852,8 @@
     "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) certificou mais cinco plantas de biometano a emitir Certificados de Garantia de Origem do Biometano (CGobs), títulos que atestam os atributos ambientais do combustível renovável e asseguram sua rastreabilidade. Os CGobs podem ser utilizados por produtores e importadores de gás natu",
     "Por que o Brasil está no centro da disputa",
     "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
-    "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo"
+    "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
+    "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista."
   ],
   "eventos_recentes": [
     {
@@ -2695,10 +2695,13 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795638558.81176
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795638913.752705
     }
   ],
   "hashes_imagens": [
-    "f22d7cccdbd8746c",
     "3b3f80097dc2f672",
     "9c09933abd9969d3",
     "b21863437bfcd44e",
@@ -2997,6 +3000,7 @@
     "45f4fb01876dae53",
     "b2c9097540f82b55",
     "60c9f6825e3a595e",
-    "d388eee4d0accebd"
+    "d388eee4d0accebd",
+    "4b05a9f91083cc78"
   ]
 }
