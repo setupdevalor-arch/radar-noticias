@@ -1,7 +1,5 @@
 {
   "links": [
-    "30ea33440cbbbd17",
-    "5c431a91e969cb79",
     "a4973ed2cada59f1",
     "https://megawhat.uol.com.br/economia-e-politica/empresas/moura-obtem-aval-do-bndes-para-disputar-leilao-de-baterias-com-conteudo-nacional/",
     "4551c462f7cc6a4c",
@@ -799,7 +797,9 @@
     "https://www.bloomberglinea.com.br/agro/3tentos-usa-barter-e-alienacao-fiduciaria-de-graos-para-reduzir-risco-com-produtores/",
     "aaab912153fad576",
     "https://www.spacemoney.com.br/economia/macroeconomia/cbs-fim-6x1-inflacao-2027/",
-    "918d424456cf052b"
+    "918d424456cf052b",
+    "https://www.spacemoney.com.br/economia/macroeconomia/divida-publica-europa-2026-2/",
+    "142b313adf59526b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1526,10 +1526,10 @@
     "Transmissoras se afastam de leilão de baterias por compartilhamento de receita com consumidor",
     "‘Temos sido bastante criteriosos na concessão do crédito', diz diretor de agro do BB",
     "3tentos usa barter e alienação fiduciária de grãos para reduzir risco com produtores",
-    "CBS e jornada menor pressionam inflação no início de 2027"
+    "CBS e jornada menor pressionam inflação no início de 2027",
+    "Dívida pública na Europa: o fosso entre os países"
   ],
   "leads": [
-    "Uma sequência de falhas atingiu serviços digitais e a aviação nos Estados Unidos nas últimas semanas, envolvendo sistemas da Microsoft, da Apple, o controle do espaço aéreo e o FBI. As causas oficiais apontam sobrecarga e problemas de infraestrutura, mas não há confirmação de um ataque cibernético.",
     "O Bradesco BBI avalia que a forte queda das ações das distribuidoras de combustíveis abriu uma oportunidade de investimento, diante do descolamento entre os múltiplos de mercado e os fundamentos operacionais das empresas. Em relatório assinado pelos analistas Vicente Falanga, Gustavo Sadka e Leandro Neto, o banco destaca que Vibra (VBBR3) e Ultrapa",
     "Presidente do BC afirmou também que a estabilidade de preços é o “principal mandato” da política monetária",
     "O dólar mantém o ritmo de valorização no mercado à vista nesta segunda-feira (23) e caminha para a sétima sessão seguida de alta ante o real. O câmbio é pressionado pelas preocupações dos investidores em relação ao cenário fiscal brasileiro e pelo fortalecimento da moeda no exterior.",
@@ -1778,13 +1778,10 @@
     "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
     "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
     "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo.",
-    "Segundo o g1, economistas apontam que a troca do sistema de tributos sobre o consumo e o encerramento do regime 6×1 podem tornar a inflação brasileira mais desafiadora no começo de 2027. A primeira mudança deve mexer com os preços de alguns itens, sobretudo serviços; a segunda tende a encarecer a folha de parte das empresas e pode ser repassada ao "
+    "Segundo o g1, economistas apontam que a troca do sistema de tributos sobre o consumo e o encerramento do regime 6×1 podem tornar a inflação brasileira mais desafiadora no começo de 2027. A primeira mudança deve mexer com os preços de alguns itens, sobretudo serviços; a segunda tende a encarecer a folha de parte das empresas e pode ser repassada ao ",
+    "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. "
   ],
   "eventos_recentes": [
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795406862.080563
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795411468.346569
@@ -2604,10 +2601,13 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795578374.463252
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795581259.879036
     }
   ],
   "hashes_imagens": [
-    "4ed3ff128884ac25",
     "299b4a2e6c0eebc1",
     "79c02eff8daaf1a6",
     "009ce1e292d690aa",
@@ -2906,6 +2906,7 @@
     "2bf6a6a68741727c",
     "b279810e1bdec259",
     "0b2d93bd06337d7a",
-    "8aa0a4bcd9d2acbc"
+    "8aa0a4bcd9d2acbc",
+    "6177bba29e467060"
   ]
 }
