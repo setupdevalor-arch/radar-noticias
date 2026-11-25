@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/internacional/crimeia-restringira-o-fornecimento-de-eletricidade-por-10-dias/",
-    "03f8c83d1cfbd25e",
-    "https://www.cnnbrasil.com.br/economia/sem-reacao-adequada-brasil-pode-viver-recessao-diz-ex-diretor-do-bc/",
     "85617e8d4025b8ed",
     "355ed1dfd34da86d",
     "79dc6c2bf72941e7",
@@ -799,10 +796,12 @@
     "53d84b689b4372b8",
     "425d6de2bc1d5e5b",
     "https://investnews.com.br/economia/restricoes-eua-chips-de-ia-data-centers/",
-    "521389079ad34f1f"
+    "521389079ad34f1f",
+    "92e59d746732fd75",
+    "https://bmcnews.com.br/programas-bmc/money-report/brasil-em-2027-o-que-esperar-da-economia-no-quarto-mandato-de-lula/",
+    "a87af12775844b21"
   ],
   "titulos": [
-    "Analista de FP&A: o que faz, requisitos e carreira",
     "Mãe de Cristiano Ronaldo 'celebra' derrota de Portugal; Jorge Jesus responde",
     "Projeto que torna hediondo crime de maus-tratos a cães e gatos é aprovado na Câmara",
     "O brasileiro da Aston Martin no Rally Dakar",
@@ -1601,10 +1600,10 @@
     "EBA pede à Comissão Europeia regras para DeFi e stablecoins",
     "Vai viajar para o exterior? Veja como economizar mesmo com a alta do dólar",
     "FIIs ALZR11, SNEL11 e XPML11 pagam dividendos hoje; veja valores e yields",
-    "Restrições dos EUA a chips de IA travam bilhões em empréstimos para data centers na Ásia"
+    "Restrições dos EUA a chips de IA travam bilhões em empréstimos para data centers na Ásia",
+    "Brasil em 2027: o que esperar da economia no quarto mandato de Lula?"
   ],
   "leads": [
-    "O Conselho de Administração da RD Saúde (RADL3) aprovou programa de recompra de até R$ 600 milhões de ações de emissão da companhia.",
     "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
     "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização.",
     "Entenda o processo que empresas podem solicitar para superar uma crise financeira.",
@@ -1853,13 +1852,10 @@
     "A Autoridade Bancária Europeia (EBA) recomendou que a Comissão Europeia avalie regras mais rigorosas para empresas de criptomoedas que direcionam clientes ao setor de finanças descentralizadas (DeFi). O pedido consta de um relatório sobre stablecoins em DeFi e retoma recomendação feita em setembro, na resposta da EBA à revisão do MiCA pela Comissão",
     "Nos aplicativos de conta global, aparece também a alíquota de 1,1%. Ela vale apenas para o dinheiro enviado com finalidade de investimento e não se aplica a gastos de viagem.",
     "Alguns fundos imobiliários com estratégias distintas realizam o pagamento de rendimentos nesta quarta-feira (25).",
-    "Alguns credores adiaram a decisão enquanto fazem uma análise mais detalhada de um empréstimo ampliado de US$ 6,6 bilhões pedido pela Bridge Data Centres (BDC), controlada pela Bain Capital, segundo pessoas envolvidas nas negociações."
+    "Alguns credores adiaram a decisão enquanto fazem uma análise mais detalhada de um empréstimo ampliado de US$ 6,6 bilhões pedido pela Bridge Data Centres (BDC), controlada pela Bain Capital, segundo pessoas envolvidas nas negociações.",
+    "Especialistas analisam os impactos da reforma tributária, os desafios das contas públicas e as incertezas sobre a política econômica brasileira."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795453436.468141
-    },
     {
       "chave": "itausa::BALANCO",
       "ts": 1795454201.511648
@@ -2687,10 +2683,13 @@
     {
       "chave": "xpml11::PROVENTOS",
       "ts": 1795624353.442477
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795626244.962995
     }
   ],
   "hashes_imagens": [
-    "70b54d3192894a24",
     "9372afcf617f9dc3",
     "e41bb6628c27cdd2",
     "daabc49e07b2cbbe",
@@ -2989,6 +2988,7 @@
     "1a403cfed2f29a75",
     "1d9fe4ced3a82264",
     "f611ec11ff956d4d",
-    "53f8ec4c47d22f3d"
+    "53f8ec4c47d22f3d",
+    "40f4867181ce77e5"
   ]
 }
