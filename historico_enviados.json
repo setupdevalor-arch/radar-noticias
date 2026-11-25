@@ -1,11 +1,5 @@
 {
   "links": [
-    "6409f833cfdab9a3",
-    "https://www.spacemoney.com.br/economia/exterior/campanha-ia-contas-falsas-eleicoes-taiwan/",
-    "d32e7aedd497469c",
-    "09d5a9c7506e0da9",
-    "288491c52c3fd692",
-    "599488715763f24a",
     "8e089cd4f540bf74",
     "https://braziljournal.com/opiniao-o-pais-que-nao-fura-poco-e-ainda-perde-da-argentina",
     "a1c67abc461f12ba",
@@ -799,7 +793,13 @@
     "1a389a92e32e5828",
     "8a9cb55459be8828",
     "3a51b65ac18abf8b",
-    "bc770ea202937e62"
+    "bc770ea202937e62",
+    "02c7fb3fcb1c38f8",
+    "362015aece5e13aa",
+    "50b49c18c9909426",
+    "67cc07a2d8497b6b",
+    "5384187bbb4dda55",
+    "cc4ff5a884b2e7ed"
   ],
   "titulos": [
     "Férias, alistamento militar e 'viagem falsa' à Nova Zelândia: as loucuras que fãs de 'GTA 6' estão fazendo pelo lançamento",
@@ -1856,10 +1856,6 @@
     "O Banco Central vendeu nesta manhã de quarta-feira o total de US$ 2 bilhões em dois leilões de linha (venda de dólares com compromisso de recompra) realizados simultaneamente."
   ],
   "eventos_recentes": [
-    {
-      "chave": "braskem::GERAL_ATIVO",
-      "ts": 1795446650.248986
-    },
     {
       "chave": "vivo::BALANCO",
       "ts": 1795448169.790704
