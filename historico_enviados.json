@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/volkswagen-enfrenta-sindicato-diante-da-ameaca-de-greve/",
-    "a155d3f796c9716a",
-    "https://www.moneytimes.com.br/opiniao-pacotes-fiscais-parciais-nao-sao-uma-solucao/",
     "c33ed66fdc3a1ce7",
     "8008a14e18352808",
     "109c4640a7be053d",
@@ -799,10 +796,12 @@
     "https://www.cnnbrasil.com.br/economia/money/tecnologia/por-dentro-do-conselho-da-nvidia-que-demitiu-e-recontratou-jensen-huang/",
     "e3b64d360fb2cfd0",
     "https://www.infomoney.com.br/politica/governo-deve-renovar-subsidio-ao-diesel-por-30-dias-com-custo-de-ate-r-105-bi/",
-    "cd8e0d9a44675cdc"
+    "cd8e0d9a44675cdc",
+    "06b7e4f8c5eb4d9e",
+    "https://www.seudinheiro.com/2026/seu-negocio/ex-ceo-da-maior-rede-de-academias-do-mundo-quer-fazer-a-panobianco-bater-de-frente-com-a-smart-fit-smft3/",
+    "a1553d26185a494f"
   ],
   "titulos": [
-    "Número de brasileiros no exterior que foram às urnas cresce em mais de 40 mil no 2º turno; Lisboa, Boston e Porto lideram aumento",
     "STF julga nesta quarta (18) regra sobre nepotismo em cargos políticos; entenda",
     "Secretários defendem ministro da Segurança com experiência na 'linha de frente' e sem indicação política e querem combate a líderes de facções",
     "Fachin recebe nesta quarta relatório da PF sobre ministros no caso Master e deve avaliar modelo para definir próximos passos",
@@ -1601,10 +1600,10 @@
     "Insegurança aumenta custos da infraestrutura, aponta MoveInfra",
     "Vendas de novas moradias nos EUA atingem em outubro maior nível em 10 meses",
     "Por dentro do conselho da Nvidia que demitiu e recontratou Jensen Huang",
-    "Governo deve renovar subsídio ao diesel por 30 dias, com custo de até R$ 10,5 bi"
+    "Governo deve renovar subsídio ao diesel por 30 dias, com custo de até R$ 10,5 bi",
+    "Ex-CEO da maior rede de academias do mundo quer fazer a Panobianco bater de frente com a Smart Fit (SMFT3)"
   ],
   "leads": [
-    "O empresário Leonardo Bortoletto e o advogado Vitor Marques debateram, na segunda-feira (23), em O Grande Debate (de segunda a sexta-feira, às 23h), se a \"o ajuste fiscal é possível sem reduzir programas sociais\".",
     "O Índice de Confiança do Consumidor, medido pelo FGV/Ibre, voltou a recuar em novembro. O ICC baixou 1,2 ponto no mês, atingindo para 83,5 pontos, o menor nível observado desde agosto de 2022. Na média móvel trimestral, o índice cedeu 0,4 ponto, para 84,1 pontos.",
     "A Casa dos Ventos pediu à Agência Nacional de Energia Elétrica (Aneel) que estenda ao seu projeto de data center no Pecém, Ceará, a regra de transição que garante prioridade na contratação de capacidade na rede de transmissão em 2029. A empresa quer antecipar para aquele ano uma demanda de energia prevista para os anos seguintes, sem precisar dispu",
     "Lucro, calculado pelo “Financial Times”, se baseia no valor máximo que o presidente dos EUA poderia deter em ações da empresa",
@@ -1853,7 +1852,8 @@
     "O avanço do crime organizado no Brasil está tornando a operação dos serviços concedidos nas áreas de transporte mais cara e insegura, aumentando os custos para os usuários e impactando o resultado das empresas.",
     "– As vendas de novas moradias unifamiliares nos EUA dispararam em outubro, à medida que as construtoras reduziram os preços para atrair compradores, mas o aumento das taxas de ‌hipotecas continua sendo um obstáculo para a atividade geral do mercado imobiliário.",
     "O CEO da Nvidia, Jensen Huang, declarou no ano passado que o apoio dos membros de longa data do conselho, Tench Coxe, Mark Stevens e Harvey Jones, foi crucial para ajudá-lo a navegar por três décadas à frente da empresa.",
-    "O governo federal deve estender por mais um mês o pagamento do subsídio de R$ 2,12 por litro de diesel vendido no país. A prorrogação poderá elevar entre R$ 8 bilhões e R$ 10,5 bilhões o custo das medidas adotadas neste ano para conter a alta dos combustíveis."
+    "O governo federal deve estender por mais um mês o pagamento do subsídio de R$ 2,12 por litro de diesel vendido no país. A prorrogação poderá elevar entre R$ 8 bilhões e R$ 10,5 bilhões o custo das medidas adotadas neste ano para conter a alta dos combustíveis.",
+    "Chris Rondeau defende que a Panobianco tem semelhanças com a Planet Fitness e vê horizonte para chegar à bolsa no longo prazo"
   ],
   "eventos_recentes": [
     {
@@ -2695,10 +2695,13 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795627019.014531
+    },
+    {
+      "chave": "smft3::GERAL_ATIVO",
+      "ts": 1795627377.379294
     }
   ],
   "hashes_imagens": [
-    "46356439bd194f2a",
     "a6dccc84a46cf63e",
     "64f41e20ca3a2c05",
     "862dc120e33287ea",
@@ -2997,6 +3000,7 @@
     "22730691f0de2e02",
     "1794f00485518745",
     "09fd36626155f8d5",
-    "00ba92f2fd72092a"
+    "00ba92f2fd72092a",
+    "b030a54ad1f73fe6"
   ]
 }
