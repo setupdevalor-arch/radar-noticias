@@ -1,11 +1,5 @@
 {
   "links": [
-    "a83f1e3e8c7aff25",
-    "https://bmcnews.com.br/mercados/bolsas-europeias-sobem-com-techs-e-mineradoras-apos-quatro-quedas/",
-    "d7838337cef14a51",
-    "https://www.moneytimes.com.br/dividendos-de-11-e-desconto-na-bolsa-fundo-imobiliario-recebe-recomendacao-de-compra-do-btg-veja-preco-alvo-igdl/",
-    "018aa9afbaaa62ea",
-    "1583594f8d508688",
     "d04bb05f695dde03",
     "c8ca6298213fb62b",
     "82972b589574f566",
@@ -799,7 +793,13 @@
     "a668c003992f9b4b",
     "https://www.infomoney.com.br/economia/governo-amplia-previsao-de-deficit-primario-para-2026/",
     "0170abc6633c29dc",
-    "7f329c43e4aaa925"
+    "7f329c43e4aaa925",
+    "1feefd75cc2442ec",
+    "130aa34cb2d0ce42",
+    "8261389a0b3efa58",
+    "3d1a4273fa5aa8b1",
+    "d1dcd7f19dd700d5",
+    "d263f0f6a43fd893"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1820,10 +1820,6 @@
     "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro."
   ],
   "eventos_recentes": [
-    {
-      "chave": "hapvida::GERAL_ATIVO",
-      "ts": 1795430484.131092
-    },
     {
       "chave": "bradesco::GERAL_ATIVO",
       "ts": 1795431134.359446
