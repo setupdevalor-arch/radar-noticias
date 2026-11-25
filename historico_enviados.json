@@ -1,9 +1,5 @@
 {
   "links": [
-    "2b55b0de4e4fd341",
-    "https://www.infomoney.com.br/mercados/cvm-suspende-registro-do-brb-e-instituicao-fica-impedida-de-negociar-acoes-na-bolsa/",
-    "207b490d43e5a2e8",
-    "16f65b922f273650",
     "https://www.infomoney.com.br/politica/agu-se-manifesta-contra-liminar-de-dino-sobre-fim-da-escala-6x1/",
     "b6f72291e65b100c",
     "https://www.moneytimes.com.br/natal-mais-magro-para-molina-da-mbrf-fim-das-bets-pode-trazer-surpresa-muito-boa-para-o-varejo/",
@@ -799,7 +795,11 @@
     "https://www.infomoney.com.br/economia/china-diz-que-excesso-de-capacidade-nao-existe-em-resposta-a-plano-tarifario-dos-eua/",
     "ecdc02ba7b46fd9f",
     "https://neofeed.com.br/negocios/nao-vou-pagar-essa-conta-diz-ceo-da-allos-sobre-o-fim-da-escala-6x1/",
-    "925f688feb2e2c50"
+    "925f688feb2e2c50",
+    "0b3bf9ae312c4974",
+    "15f1b3cb3a8eb8d1",
+    "https://eixos.com.br/newsletters/comece-seu-dia/ajuste-fiscal-abre-espaco-para-renovar-subvencao-do-diesel/",
+    "730fa66c903fa795"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1568,10 +1568,10 @@
     "Governo amplia previsão de déficit primário para 2026",
     "Shadow AI: a ameaça que desafia CEOs e conselhos de administração",
     "China diz que excesso de capacidade não existe, em resposta a plano tarifário dos EUA",
-    "“Não vou pagar essa conta”, diz CEO da Allos sobre o fim da escala 6×1"
+    "“Não vou pagar essa conta”, diz CEO da Allos sobre o fim da escala 6×1",
+    "Ajuste fiscal abre espaço para renovar subvenção do diesel"
   ],
   "leads": [
-    "A Petrobras (PETR3;PETR4) deve apresentar nesta semana seu aguardado Plano de Negócios 2027-2031, documento que definirá o rumo dos investimentos da companhia para os próximos cinco anos e pode servir como um importante catalisador para as ações Petrobras ON (PETR3) e Petrobras PN (PETR4).",
     "A comercializadora de gás natural da Pan American Energy (PAE) e a Companhia Siderúrgica Nacional (CSN) firmaram um contrato para o fornecimento de gás natural de Vaca Muerta, na Argentina, às operações industriais da siderúrgica no estado do Rio de Janeiro. O acordo tem vigência de 12 meses e as entregas de gás já foram iniciadas.",
     "As ações da Unifique (FIQE3) dispararam nesta segunda-feira (23), após uma mudança importante nas condições da oferta pública de aquisição de ações (OPA) da companhia. Os papéis chegaram a avançar 17,10%, negociados a R$ 6,71, às 12h20, depois que a Unitá Participações elevou de R$ 6 para R$ 7 o valor oferecido por ação, um aumento de aproximadamen",
     "O dólar chegou a superar a marca de R$ 6,00 nesta manhã de segunda-feira, com as cotações novamente refletindo o mal-estar do mercado com a política fiscal do governo Lula, enquanto no exterior a moeda norte-americana tinha sinais mistos ante as divisas de países emergentes.",
@@ -1820,7 +1820,8 @@
     "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro.",
     "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, ",
     "– As tarifas e as guerras comerciais não atendem aos interesses de ninguém, e a questão do chamado “excesso de capacidade” não existe de fato, afirmou o Ministério das Relações Exteriores da China nesta quarta-feira, antes do anúncio previsto de novas tarifas comerciais pelos Estados Unidos.",
-    "A menos de um mês do início do período de transição do fim da escala 6x1, a Allos, maior administradora de shopping centers do Brasil, já faz as contas para entender o impacto da nova jornada de trabalho."
+    "A menos de um mês do início do período de transição do fim da escala 6x1, a Allos, maior administradora de shopping centers do Brasil, já faz as contas para entender o impacto da nova jornada de trabalho.",
+    "A LCP 239/2026 foi sancionada sem vetos e publicada em edição extra do Diário Oficial na terça (24/11). A lei autoriza tirar da meta de resultado primário de 2026 até R$ 10,5 bilhões gastos com a subvenção a produtores e importadores criada pela MP 1391/2026."
   ],
   "eventos_recentes": [
     {
@@ -2649,7 +2650,6 @@
     }
   ],
   "hashes_imagens": [
-    "0841eb45ba5f6427",
     "ef4cb657d8948899",
     "7a23374886dab4b7",
     "48603b934267e5dc",
@@ -2948,6 +2948,7 @@
     "70ef74244428f58d",
     "20279c2e14a14655",
     "3ee4fd39ed72184f",
-    "4073b46b67e8a533"
+    "4073b46b67e8a533",
+    "9f596780f2f08b87"
   ]
 }
