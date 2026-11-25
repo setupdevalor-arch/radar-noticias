@@ -1,7 +1,5 @@
 {
   "links": [
-    "2b8acb124853a4c6",
-    "9b3e65e36d8f0324",
     "f1f6703ad185273b",
     "https://www.infomoney.com.br/mercados/mdia3-jpmorgan-rebaixa-m-dias-a-venda-por-custos-maiores-e-perspectiva-de-demanda-fraca/",
     "780a0dbe4027a922",
@@ -799,10 +797,11 @@
     "82ba626e89cd2ca3",
     "de86ac727b70b9b0",
     "f37b2bdc08da589a",
-    "40ba0ea159e338ac"
+    "40ba0ea159e338ac",
+    "https://www.suno.com.br/noticias/nubank-roxo34-aplicativos-financeiros/",
+    "82d5c5a526c230f5"
   ],
   "titulos": [
-    "Os filhos que lutam na Justiça para apagar nomes de pais ausentes ou abusivos dos documentos",
     "Governo publica decreto que simplifica exportação de cosméticos para América Latina",
     "Por que 'humano' foi escolhida como a palavra do ano pelo Dicionário de Cambridge",
     "Xi e Putin criticam políticas do Ocidente às vésperas de encontro com Trump",
@@ -1601,10 +1600,10 @@
     "Self storage cresce e atrai atenção de FIIs",
     "IRB (IRBR3): o que fez o BTG elevar o preço-alvo da ação e enxergar potencial de alta de 54%?",
     "Ouro fecha em queda com perspectiva de alta dos juros nos EUA após PCE",
-    "Livro Bege: preços sobem moderadamente nos EUA; emprego e economia mostram avanço leve"
+    "Livro Bege: preços sobem moderadamente nos EUA; emprego e economia mostram avanço leve",
+    "Nubank (ROXO34) supera rivais e vira 2º app financeiro mais baixado da América Latina"
   ],
   "leads": [
-    "Bancos de alimentos dos Estados Unidos estão registrando procura superior aos níveis observados no auge da pandemia de Covid-19, e boa parte das pessoas atendidas atualmente tem emprego formal, segundo reportagem da CNBC. O quadro é descrito por entidades que atuam em Nova York, Los Angeles e Atlanta.",
     "O pacote combina o bloqueio de gastos com iniciativas para aumentar a arrecadação, como redução de renúncias tributárias.",
     "A Vale adquiriu a participação de 33,33% detida pela Coteminas, em recuperação judicial, no consórcio da hidrelétrica Porto Estrela, localizada entre os municípios de Braúnas, Joanésia e Açucena, em Minas Gerais. A operação envolve a transferência integral da fatia da Coteminas no empreendimento para a mineradora e foi aprovada pelo Conselho Admini",
     "Empresas e órgãos públicos têm até a próxima segunda-feira (30) para pagar a primeira parcela do décimo terceiro salário de 2026; atrasos podem gerar multa ao empregador",
@@ -1853,13 +1852,10 @@
     "A Suno Notícias informou que o avanço de apartamentos compactos em grandes centros urbanos tem ampliado a procura por self storage, serviço de locação para guardar móveis, itens pessoais e mercadorias. O segmento começa a ser observado como possível alternativa de diversificação para fundos imobiliários focados em renda.",
     "O BTG Pactual elevou o preço-alvo do IRB (IRBR3) de R$ 75 para R$ 90, reiterando a recomendação de compra. O novo preço implica um potencial de alta de 54,2%. O banco atualizou as estimativas para incorporar os resultados da resseguradora no terceiro trimestre de 2026 e o impacto da Lei 15.525/2026, que altera regras tributárias para resseguradoras",
     "O ouro entendeu as perdas da véspera e fechou em queda nesta quarta-feira (25). O metal segue sob pressão das expectativas de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), após a divulgação de dados de inflação dos Estados Unidos.",
-    "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado."
+    "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado.",
+    "A disputa pelo espaço no celular dos consumidores latino-americanos tem um brasileiro entre os protagonistas. O Nubank (ROXO34) conquistou a segunda posição entre os aplicativos financeiros mais baixados da América Latina no terceiro trimestre de 2026, ficando atrás apenas do Mercado Pago e à frente de concorrentes como PicPay, Santander e Inter."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
-      "ts": 1795463389.356648
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795464458.602047
@@ -2687,10 +2683,13 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795635320.236499
+    },
+    {
+      "chave": "nubank::GERAL_ATIVO",
+      "ts": 1795636424.30078
     }
   ],
   "hashes_imagens": [
-    "137464607073a10e",
     "97c138d4eec39b1d",
     "2edba1359d1736c1",
     "7ca696848518484a",
@@ -2989,6 +2988,7 @@
     "182ce856eb35ed6d",
     "81fce3ed060dcc71",
     "d63b0cd8f178da64",
-    "af5d2c257265eb07"
+    "af5d2c257265eb07",
+    "3b4d9f8fa964ad1f"
   ]
 }
