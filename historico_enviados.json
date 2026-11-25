@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/natal-mais-magro-para-molina-da-mbrf-fim-das-bets-pode-trazer-surpresa-muito-boa-para-o-varejo/",
-    "7889574b3e0f9365",
     "https://www.estadao.com.br/economia/gerdau-juro-e-definido-no-mercado-nao-ha-governo-que-consiga-comandar-esse-processo/",
     "962fc57a775038ac",
     "https://www.poder360.com.br/poder-economia/fazenda-reduz-estimativa-do-pib-de-2026-de-20-para-19/",
@@ -799,7 +797,9 @@
     "https://eixos.com.br/newsletters/comece-seu-dia/ajuste-fiscal-abre-espaco-para-renovar-subvencao-do-diesel/",
     "730fa66c903fa795",
     "177f0f7deded8045",
-    "7bb2202841c82037"
+    "7bb2202841c82037",
+    "959effc134b53a00",
+    "06693f00b3ad952d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1824,10 +1824,6 @@
     "A LCP 239/2026 foi sancionada sem vetos e publicada em edição extra do Diário Oficial na terça (24/11). A lei autoriza tirar da meta de resultado primário de 2026 até R$ 10,5 bilhões gastos com a subvenção a produtores e importadores criada pela MP 1391/2026."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795432460.261045
-    },
     {
       "chave": "raia_drogasil::EVENTO_CORP",
       "ts": 1795432784.523787
