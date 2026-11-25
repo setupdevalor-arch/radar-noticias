@@ -1,11 +1,5 @@
 {
   "links": [
-    "39f03a1a3659285a",
-    "f16522df3d71235a",
-    "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bitcoin-cai-abaixo-de-60-mil-com-recuo-do-rali-de-ia/",
-    "e6bcc1a39c63baae",
-    "fe180357f04eefbd",
-    "https://eixos.com.br/combustiveis-e-bioenergia/na-conta-da-transicao-petrobras-troca-eolica-e-solar-por-biocombustiveis/",
     "49e6d8e33379bd1c",
     "https://www.sonhoseguro.com.br/2026/11/pesquisa-da-icatu-revela-diferencas-nas-estrategias-de-planejamento-da-aposentadoria-entre-homens-e-mulheres/",
     "7501998af2728762",
@@ -799,10 +793,15 @@
     "https://www.poder360.com.br/poder-economia/bc-injeta-us-2-bilhoes-no-mercado-com-leilao-de-dolares/",
     "a7cf485bccf2abd5",
     "https://www.spacemoney.com.br/politica/pf-stf-pgr-banco-master/",
-    "f46ca0ae38ba2698"
+    "f46ca0ae38ba2698",
+    "6ba38d3df9aeaee9",
+    "642f77d846634ddd",
+    "b95a4d8b3246bcf3",
+    "cbdf4681f62ab29b",
+    "https://www.spacemoney.com.br/economia/macroeconomia/el-nino-alimentos-inflacao-2027/",
+    "97394d56b6000048"
   ],
   "titulos": [
-    "EUA suspendem instalação de roteadores que levaram à paralisação de voos no país",
     "56% dos profissionais acreditam que podem precisar mudar de carreira nos próximos anos, aponta HP",
     "Dólar hoje passa de R$ 5,80 e recua; por que o real não reage?",
     "EUA fazem teste nacional em serviço de emergência; mensagem foi transmitida em rádios e TVs",
@@ -1601,10 +1600,10 @@
     "‘Falta senso de urgência ao governo; acho que vamos mesmo para a crise’, diz economista da PUC-Rio",
     "Anvisa mira GLP-1 manipulado e pode favorecer farmácias",
     "BC injeta US$ 2 bilhões no mercado com leilão de dólares",
-    "PF afirma que STF e PGR têm material sobre Banco Master"
+    "PF afirma que STF e PGR têm material sobre Banco Master",
+    "Alerta da NOAA aponta El Niño e risco para alimentos em 2027"
   ],
   "leads": [
-    "O colapso das negociações climáticas das Nações Unidas na Turquia representou um duro golpe para o esforço global de impedir o superaquecimento do planeta, deixando em aberto como — ou mesmo se — será possível reparar os danos.",
     "As lojas físicas de shopping centers são o canal de venda preferido das pessoas para realizar as compras de final de ano, segundo pesquisa conduzida pela SYN, empresa responsável pelos shoppings Cidade São Paulo, Tietê Plaza, Grand Plaza e Metropolitano Barra. Há uma diferença de mais de dez pontos percentuais da segunda resposta.",
     "Osinvestidores estrangeiros retiraram R$ 5,86 bilhões da Bolsa brasileiraem novembro, até o dia 18, revertendo parte dos R$ 8,17 bilhões aplicados no mercado acionário em outubro.",
     "O cofundador e CEO da Anthropic, Dario Amodei, vendeu 3,38 milhões de ações classe A da companhia no dia 19 de novembro.",
@@ -1853,17 +1852,10 @@
     "BRASÍLIA - O economista Márcio Garcia, professor titular do departamento de economia da PUC-Rio e PhD pela Universidade de Stanford, nos Estados Unidos, não enxerga senso de urgência no presidente Luiz Inácio Lula da Silva para tentar superar a crise de confiança que atinge o mercado sobre as contas públicas.",
     "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti",
     "Autoridade monetária vendeu a moeda com compromisso de recompra para ampliar a oferta e dar liquidez ao mercado cambial",
-    "Segundo Andréia Sadi, em seu blog no g1, Andrei Passos Rodrigues, diretor-geral da PF, declarou que o STF e a PGR já possuem o material exigido para dar seguimento às apurações sobre o Banco Master conforme a lei."
+    "Segundo Andréia Sadi, em seu blog no g1, Andrei Passos Rodrigues, diretor-geral da PF, declarou que o STF e a PGR já possuem o material exigido para dar seguimento às apurações sobre o Banco Master conforme a lei.",
+    "O Climate Prediction Center, da NOAA, agência climática dos Estados Unidos, informou que há “condições de El Niño presentes” e que o fenômeno pode encarecer alimentos em 2027, com efeitos sobre a produção de leite e o regime de chuvas na Amazônia, segundo o Monitor do Mercado."
   ],
   "eventos_recentes": [
-    {
-      "chave": "vivo::BALANCO",
-      "ts": 1795448169.790704
-    },
-    {
-      "chave": "tim::BALANCO",
-      "ts": 1795448169.790704
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795449725.00988
@@ -2666,7 +2658,6 @@
     }
   ],
   "hashes_imagens": [
-    "f290d56353a2d485",
     "5e854881656d22b7",
     "8968c24885efbf68",
     "a7760067a2c010c8",
@@ -2965,6 +2956,7 @@
     "43f752f4b06b219d",
     "8ea2f804400578f5",
     "d1d2a4c1161b307b",
-    "a145d45ec69a0ec6"
+    "a145d45ec69a0ec6",
+    "0e5a10bd58d95c23"
   ]
 }
