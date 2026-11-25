@@ -1,9 +1,5 @@
 {
   "links": [
-    "848cc6b10598af27",
-    "df3d7724901650b4",
-    "6296b9aafc6df147",
-    "50377088694c4947",
     "68ca6f595050843d",
     "eb65fcfc997c5820",
     "191d13f1fc3fecce",
@@ -799,11 +795,13 @@
     "54a1a1992b88e19d",
     "https://investnews.com.br/investimentos/etf-terras-raras-rara11/",
     "2caf403c124cd73b",
-    "92e466f7ff16782b"
+    "92e466f7ff16782b",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/tether-aporte-lemon-usdt-xaut/",
+    "0563103e0318b11f",
+    "https://megawhat.uol.com.br/noticias/governo-aposta-em-concessoes-de-geracao-para-conter-alta-das-tarifas-ate-2030/",
+    "3309d70048651251"
   ],
   "titulos": [
-    "Xi e Putin criticam políticas do Ocidente às vésperas de encontro com Trump",
-    "De festas a funerais: entenda por que o karaokê é uma obsessão nacional nas Filipinas",
     "Alunos do quarto ano descobrem moeda de quase 2 mil anos em passeio da escola",
     "GTA 6 é uma vitória para fabricantes de videogames pressionados por custos",
     "Tempo real: Ibovespa acompanha divulgação da ata do Fomc e do fluxo cambial do Brasil",
@@ -1601,11 +1599,11 @@
     "Livro Bege: preços sobem moderadamente nos EUA; emprego e economia mostram avanço leve",
     "Nubank (ROXO34) supera rivais e vira 2º app financeiro mais baixado da América Latina",
     "Brasil chega a oito plantas de biometano aptas a emitir certificados de origem",
-    "RARA11: o ETF que dá acesso à disputa global por terras raras por menos de R$ 15"
+    "RARA11: o ETF que dá acesso à disputa global por terras raras por menos de R$ 15",
+    "Tether anuncia aporte na Lemon para ampliar USDT e XAUT",
+    "Governo aposta em concessões de geração para conter alta das tarifas até 2030"
   ],
   "leads": [
-    "Empresas e órgãos públicos têm até a próxima segunda-feira (30) para pagar a primeira parcela do décimo terceiro salário de 2026; atrasos podem gerar multa ao empregador",
-    "A Equatorial S.A. (EQTL3) comunicou ao mercado, em 23 de novembro de 2026, que recebeu correspondência da Canada Pension Plan Investment Board informando o aumento de sua participação acionária na companhia.",
     "Uma dívida empresarial pode ser negociada com deságio de até 90% e ainda preservar valor recuperável para o investidor. É nessa diferença entre o preço atribuído à crise e o valor existente nos ativos, contratos e operações da companhia que atuam os investidores de special situations, especializados na compra de dívidas e outros ativos estressados.",
     "Conforme a Suno Notícias, a AZ Quest sinalizou em suas cartas de outubro que projeta um ciclo prolongado de custo do dinheiro elevado após o resultado eleitoral. A gestora pretende concentrar suas escolhas em crédito high grade, ou seja, papéis emitidos por companhias com notas de risco mais fortes. A avaliação é que esses ativos resistem melhor à ",
     "O fundo imobiliário BGRJ11 iniciou sua segunda emissão de cotas, uma oferta pública que soma cerca de R$ 29,36 milhões, segundo a Suno Notícias. A operação prevê a distribuição de 298.078 novas cotas. A XP Investimentos atuou na coordenação entre setembro e novembro de 2026.",
@@ -1853,7 +1851,9 @@
     "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado.",
     "A disputa pelo espaço no celular dos consumidores latino-americanos tem um brasileiro entre os protagonistas. O Nubank (ROXO34) conquistou a segunda posição entre os aplicativos financeiros mais baixados da América Latina no terceiro trimestre de 2026, ficando atrás apenas do Mercado Pago e à frente de concorrentes como PicPay, Santander e Inter.",
     "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) certificou mais cinco plantas de biometano a emitir Certificados de Garantia de Origem do Biometano (CGobs), títulos que atestam os atributos ambientais do combustível renovável e asseguram sua rastreabilidade. Os CGobs podem ser utilizados por produtores e importadores de gás natu",
-    "Por que o Brasil está no centro da disputa"
+    "Por que o Brasil está no centro da disputa",
+    "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
+    "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo"
   ],
   "eventos_recentes": [
     {
@@ -2691,11 +2691,13 @@
     {
       "chave": "rara11::GERAL_ATIVO",
       "ts": 1795637508.16075
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795638558.81176
     }
   ],
   "hashes_imagens": [
-    "7ca696848518484a",
-    "eafdce7653972f5d",
     "f22d7cccdbd8746c",
     "3b3f80097dc2f672",
     "9c09933abd9969d3",
@@ -2993,6 +2995,8 @@
     "af5d2c257265eb07",
     "3b4d9f8fa964ad1f",
     "45f4fb01876dae53",
-    "b2c9097540f82b55"
+    "b2c9097540f82b55",
+    "60c9f6825e3a595e",
+    "d388eee4d0accebd"
   ]
 }
