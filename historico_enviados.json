@@ -1,9 +1,5 @@
 {
   "links": [
-    "6514094e0104aaae",
-    "6a75e6cb853a0206",
-    "47fbbf49d0e1d4fe",
-    "527e97f62df8c803",
     "https://www.cnnbrasil.com.br/internacional/crimeia-restringira-o-fornecimento-de-eletricidade-por-10-dias/",
     "03f8c83d1cfbd25e",
     "https://www.cnnbrasil.com.br/economia/sem-reacao-adequada-brasil-pode-viver-recessao-diz-ex-diretor-do-bc/",
@@ -799,10 +795,13 @@
     "7015bfd74921fcd1",
     "139a16cafe6b6d9e",
     "8c589c7593261dc1",
-    "a097ae708dcdccd9"
+    "a097ae708dcdccd9",
+    "53d84b689b4372b8",
+    "425d6de2bc1d5e5b",
+    "https://investnews.com.br/economia/restricoes-eua-chips-de-ia-data-centers/",
+    "521389079ad34f1f"
   ],
   "titulos": [
-    "Chuva de meteoros Leônidas: saiba como tirar boas fotos com o iPhone",
     "Analista de FP&A: o que faz, requisitos e carreira",
     "Mãe de Cristiano Ronaldo 'celebra' derrota de Portugal; Jorge Jesus responde",
     "Projeto que torna hediondo crime de maus-tratos a cães e gatos é aprovado na Câmara",
@@ -1601,10 +1600,10 @@
     "JBS prevê alta de 15% nas vendas de itens para churrasco no fim do ano",
     "EBA pede à Comissão Europeia regras para DeFi e stablecoins",
     "Vai viajar para o exterior? Veja como economizar mesmo com a alta do dólar",
-    "FIIs ALZR11, SNEL11 e XPML11 pagam dividendos hoje; veja valores e yields"
+    "FIIs ALZR11, SNEL11 e XPML11 pagam dividendos hoje; veja valores e yields",
+    "Restrições dos EUA a chips de IA travam bilhões em empréstimos para data centers na Ásia"
   ],
   "leads": [
-    "A Sanofi vai comprar a Insmed por US$ 41 bilhões, em um acordo que, segundo a CNBC, é o maior do setor farmacêutico desde 2023. A empresa pagará US$ 175 por ação em dinheiro e ficará com dois medicamentos respiratórios já comercializados e uma linha de candidatos experimentais.",
     "O Conselho de Administração da RD Saúde (RADL3) aprovou programa de recompra de até R$ 600 milhões de ações de emissão da companhia.",
     "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
     "A história recente da infraestrutura brasileira não pode ser contada sem acompanhar as transformações regulatórias e estruturais do setor elétrico a partir de meados dos anos 1990. Foi exatamente nesse período que a EDP – grupo global de energia de origem portuguesa – elegeu o Brasil como primeiro passo de sua internacionalização.",
@@ -1853,7 +1852,8 @@
     "A JBS projeta um crescimento de 15% nas vendas de itens voltados ao churrasco no fim deste ano, na comparação com 2025. A expectativa reflete a maior demanda por proteínas durante as festividades, em um cenário em que as comemorações têm se espalhado por diferentes encontros entre familiares e amigos.",
     "A Autoridade Bancária Europeia (EBA) recomendou que a Comissão Europeia avalie regras mais rigorosas para empresas de criptomoedas que direcionam clientes ao setor de finanças descentralizadas (DeFi). O pedido consta de um relatório sobre stablecoins em DeFi e retoma recomendação feita em setembro, na resposta da EBA à revisão do MiCA pela Comissão",
     "Nos aplicativos de conta global, aparece também a alíquota de 1,1%. Ela vale apenas para o dinheiro enviado com finalidade de investimento e não se aplica a gastos de viagem.",
-    "Alguns fundos imobiliários com estratégias distintas realizam o pagamento de rendimentos nesta quarta-feira (25)."
+    "Alguns fundos imobiliários com estratégias distintas realizam o pagamento de rendimentos nesta quarta-feira (25).",
+    "Alguns credores adiaram a decisão enquanto fazem uma análise mais detalhada de um empréstimo ampliado de US$ 6,6 bilhões pedido pela Bridge Data Centres (BDC), controlada pela Bain Capital, segundo pessoas envolvidas nas negociações."
   ],
   "eventos_recentes": [
     {
@@ -2690,7 +2690,6 @@
     }
   ],
   "hashes_imagens": [
-    "57cca73d2d35f9d6",
     "70b54d3192894a24",
     "9372afcf617f9dc3",
     "e41bb6628c27cdd2",
@@ -2989,6 +2988,7 @@
     "58bb0c0f30ed0390",
     "1a403cfed2f29a75",
     "1d9fe4ced3a82264",
-    "f611ec11ff956d4d"
+    "f611ec11ff956d4d",
+    "53f8ec4c47d22f3d"
   ]
 }
