@@ -1,12 +1,5 @@
 {
   "links": [
-    "509df43955adf936",
-    "https://www.spacemoney.com.br/economia/legislacao/kalshi-nova-york-decisao-judicial/",
-    "12bf715d93abcaab",
-    "https://www.infomoney.com.br/business/volta-de-jensen-huang-ao-comando-da-nvidia-foi-decidida-sem-consulta-a-diretoria/",
-    "d19206b6e0f629b5",
-    "https://www.estadao.com.br/economia/dolar-a-r-6-preocupa-governo-mas-fazenda-nao-ve-recessao-em-2027-so-desaceleracao-diz-secretaria/",
-    "090a82eb2f8397c6",
     "https://www.moneytimes.com.br/csn-mineracao-cmin3-dividas-podem-bater-nos-dividendos-ve-bb-investimentos-melhor-vender-rnda/",
     "b048f48eba5fe45a",
     "https://neofeed.com.br/economia/conta-de-luz-sobe-quase-o-dobro-da-inflacao-em-2026-e-pressiona-empresas/",
@@ -799,7 +792,14 @@
     "175e1ca9ac1cbcec",
     "8c75702b70d6668b",
     "https://www.spacemoney.com.br/investimentos/renda-fixa/taxacao-lca-lci-credito-rural/",
-    "49addf3d5f6b27dc"
+    "49addf3d5f6b27dc",
+    "7c0687b660afe322",
+    "0dca7fb57e3918a8",
+    "322ad9fcddc467d8",
+    "https://www.infomoney.com.br/mercados/suzano-suzb3-sobe-30-em-meio-queda-do-ibovespa-ainda-ha-espaco-para-alta/",
+    "7e5c97a225cb9ce9",
+    "https://bmcnews.com.br/economia/incc-m-sobe-0-30-em-novembro-e-confianca-da-construcao-cai-a-85-8/",
+    "a5d245efe507d6b7"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1583,11 +1583,11 @@
     "A Argentina depois da motosserra: o que os números dizem sobre Milei",
     "Opinião - A morte anunciada do Ebitda como conhecemos",
     "Dólar hoje acompanha exterior e sobe ante o real",
-    "Pacote fiscal coloca isenção de LCA e LCI em discussão"
+    "Pacote fiscal coloca isenção de LCA e LCI em discussão",
+    "Suzano (SUZB3) sobe 30% em meio à queda do Ibovespa; ainda há espaço para alta?",
+    "INCC-M sobe 0,30% em novembro e confiança da construção cai a 85,8"
   ],
   "leads": [
-    "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
-    "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais",
     "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
     "Os advogados envolvidos na negociação da Braskem com seus credores chegaram à noite de domingo com todos os documentos prontos para um pedido de recuperação judicial.",
     "O bitcoin registrou alta nesta segunda-feira (23) em recuperação após bater o menor valor em dois anos no fim de semana. A movimentação acontece em meio à recuperação do setor acionário nos Estados Unidos após a volta de Jensen Huang à Nvidia.",
@@ -1835,13 +1835,11 @@
     "Em dezembro de 2023, quando chegou à presidência da Argentina, Javier Milei rompeu a tradição e fez um discurso de posse na escadaria do Congresso, de costas para o plenário do Legislativo. Aos apoiadores que acompanhavam a cerimônia, o recém-empossado presidente avisou que a situação econômica do país pioraria antes de melhorar.",
     "Ao incorporar as medidas Non-GAAP às demonstrações financeiras e submetê-las à auditoria independente, o CPC 51 inaugura uma nova etapa de transparência, com potenciais efeitos sobre valuation, covenants e remuneração de executivos",
     "O dólar à vista opera com alta ante o real nesta quarta-feira (25), acompanhando o avanço da moeda norte-americana ante outras divisas de emergentes no exterior, com os investidores à espera da divulgação de novos dados sobre a economia dos Estados Unidos.",
-    "Um projeto de deputados que prevê imposto de renda de 7,5% sobre rendimentos de LCA e LCI, hoje isentos para pessoa física, segue sem despacho definido na Câmara e pode elevar o custo do crédito no campo. O primeiro pacote fiscal foi sancionado por Lula em 24 de novembro. As LCAs em circulação totalizavam aproximadamente R$ 563 bilhões em outubro, "
+    "Um projeto de deputados que prevê imposto de renda de 7,5% sobre rendimentos de LCA e LCI, hoje isentos para pessoa física, segue sem despacho definido na Câmara e pode elevar o custo do crédito no campo. O primeiro pacote fiscal foi sancionado por Lula em 24 de novembro. As LCAs em circulação totalizavam aproximadamente R$ 563 bilhões em outubro, ",
+    "As ações da Suzano (SUZB3), maior produtora de celulose de eucalipto do mundo, acumulam valorização de 30,38% desde o último pregão antes do segundo turno das eleições. Enquanto o Ibovespa recua aproximadamente 20% no mesmo período, os papéis da companhia encerraram a última sessão em alta de 1,72%, aos R$ 56,14.",
+    "O custo da construção, medido pelo INCC-M da FGV, subiu 0,30% em novembro, após alta de 0,35% em outubro, enquanto a confiança da construção caiu 4,9 pontos, para 85,8. O dados foi divulgado nesta quarta-feira (25)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "randon::BALANCO",
-      "ts": 1795437458.080422
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795437786.438121
@@ -2665,11 +2663,13 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795609964.7834
+    },
+    {
+      "chave": "suzano::GERAL_ATIVO",
+      "ts": 1795610339.517435
     }
   ],
   "hashes_imagens": [
-    "26471d65bccd41e7",
-    "4939fc89c69fa407",
     "421d7deb1c584334",
     "e0adcfb431c64f04",
     "f49be025a774ac5f",
@@ -2967,6 +2967,8 @@
     "51c29cfd97cde694",
     "1e5dd8ad6a294028",
     "1c7a15b8a4f68e36",
-    "127fe074965288c0"
+    "127fe074965288c0",
+    "cb83aca0bc31b1a8",
+    "8262f3142cde3f1d"
   ]
 }
