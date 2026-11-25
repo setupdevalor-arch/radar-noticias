@@ -1,9 +1,5 @@
 {
   "links": [
-    "49fd2c62cedd3b1c",
-    "https://www.cnnbrasil.com.br/agro/plantio-de-soja-no-8/",
-    "ef271acf85721b2d",
-    "7a380f36f64ef1d7",
     "3ca202379bdc863e",
     "6b37fe25e455c9df",
     "ec9c6fdcc4939a04",
@@ -799,7 +795,11 @@
     "e49e639490685dcf",
     "https://www.infomoney.com.br/mercados/dell-eleva-previsoes-de-lucro-e-receita-apos-trimestre-impulsionado-por-ia/",
     "a39e8b92a52de889",
-    "192c30f14b8babe9"
+    "192c30f14b8babe9",
+    "e9729a89b1160c99",
+    "db494e4b98ebb55f",
+    "https://www.spacemoney.com.br/economia/macroeconomia/ashmore-dois-caminhos-brasil-risco-fiscal/",
+    "659527aa781eb5fc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1560,10 +1560,10 @@
     "Política de preços da Petrobras segue adequada, mas empresa ainda avalia ajuste",
     "Banco Inter demite mais de 200 funcionários, diz sindicato",
     "Mini-índice (WINZ26): abaixo das médias, ativo pode buscar novos suportes",
-    "Dell eleva previsões de lucro e receita após trimestre impulsionado por IA"
+    "Dell eleva previsões de lucro e receita após trimestre impulsionado por IA",
+    "Gestor da Ashmore vê dois caminhos para o Brasil"
   ],
   "leads": [
-    "Para a MBRF (MBRF3), o Natal começa já em janeiro. A principal operação do grupo, que conta com marcas como Sadia, Perdigão e Bassi em seu portfólio, passa por diversos setores ao longo dos meses para ter seu pontapé inicial oficialmente em novembro.",
     "A Comissão de Valores Mobiliários (CVM) suspendeu o registro do Banco de Brasília (BRB – BSLI3) como companhia aberta após a falta de um ano nos lançamentos de balanços trimestrais. Junto com o BRB, mais quatro companhias de capital aberto perderam seus registros.",
     "A Advocacia-Geral da União (AGU) se manifestou contra a liminar do ministro do Supremo Tribunal Federal (STF) Flávio Dino que flexibilizou os prazos para folgas após o fim da escala 6×1. No documento enviado ao ministro nesta segunda-feira, 23, o braço jurídico do governo sustenta que as questões tratadas pela liminar são contempladas pelo decreto ",
     "Neste fim de ano, podemos ter “uma surpresa muito boa” e, possivelmente, “um dos melhores Natais” para o varejo e para a venda de proteínas, na avaliação de Marcos Molina, presidente do conselho de administração da MBRF (MBRF3), gigante dona de marcas como Sadia, Perdigão e Bassi.",
@@ -1812,7 +1812,8 @@
     "– A política de preços de combustíveis da Petrobras (PETR4) permanece ‌válida e adequada, embora a companhia continue acompanhando a forte volatilidade dos preços ‌internacionais para avaliar se serão necessários ajustes conjunturais, disse nesta terça-feira a diretora executiva de Logística, Comercialização e Mercados, Angélica Laureano.",
     "– O banco digital Inter demitiu ‌na manhã desta terça-feira mais de 200 funcionários, ‌afirmou o Sindicato dos Bancários de Belo Horizonte, em comunicado.",
     "Os contratos de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,58%, aos 165.305 pontos, após registrarem mínima de 165.180 pontos e máxima de 168.935 pontos. Apesar da lateralização observada nos últimos dois pregões, o ativo permanece em tendência de baixa no gráfico de 15 minutos.",
-    "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial."
+    "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial.",
+    "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi"
   ],
   "eventos_recentes": [
     {
@@ -2641,7 +2642,6 @@
     }
   ],
   "hashes_imagens": [
-    "969be40105ee1f9f",
     "0106e18b1d63d732",
     "a3a804818270ff69",
     "be2a7e9851d78548",
@@ -2940,6 +2940,7 @@
     "da3f6d22c75ee1b3",
     "51adc794aa4183da",
     "05748b4837700cbe",
-    "f35351c05b33067b"
+    "f35351c05b33067b",
+    "b1582f7d6147d82b"
   ]
 }
