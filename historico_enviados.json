@@ -1,9 +1,5 @@
 {
   "links": [
-    "b26f01257f655a51",
-    "https://braziljournal.com/a-braskem-estava-com-a-rj-pronta-um-acordo-de-ultima-hora-evitou-o-pior",
-    "0ab5e523138ab300",
-    "https://www.cnnbrasil.com.br/economia/money/mercado/criptomoedas-bitcoin-sobe-do-menor-nivel-em-2-anos-com-volta-de-jensen-huang-a-nvidia/",
     "509df43955adf936",
     "https://www.spacemoney.com.br/economia/legislacao/kalshi-nova-york-decisao-judicial/",
     "12bf715d93abcaab",
@@ -799,7 +795,11 @@
     "7b238fa51c58b810",
     "db5703c79bb078e7",
     "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-25112026/",
-    "8f3238b31b40c6d5"
+    "8f3238b31b40c6d5",
+    "175e1ca9ac1cbcec",
+    "8c75702b70d6668b",
+    "https://www.spacemoney.com.br/investimentos/renda-fixa/taxacao-lca-lci-credito-rural/",
+    "49addf3d5f6b27dc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1582,10 +1582,10 @@
     "Vittia conclui recompra de 4,5 milhões de ações e anuncia novo programa",
     "A Argentina depois da motosserra: o que os números dizem sobre Milei",
     "Opinião - A morte anunciada do Ebitda como conhecemos",
-    "Dólar hoje acompanha exterior e sobe ante o real"
+    "Dólar hoje acompanha exterior e sobe ante o real",
+    "Pacote fiscal coloca isenção de LCA e LCI em discussão"
   ],
   "leads": [
-    "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato.",
     "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
     "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais",
     "A Amazon fechou acordo para comprar a tecnologia proprietária da israelense Decart, startup de inteligência artificial, e para contratar seus três fundadores, além de seus pesquisadores e engenheiros de IA, segundo a CNBC. A operação ainda depende de aprovação regulatória.",
@@ -1834,13 +1834,10 @@
     "A Vittia concluiu seu sexto programa de recompra de ações, com a aquisição de 4,5 milhões de ações ordinárias, equivalente a 100% do limite aprovado e a 2,9% do capital social da companhia. A empresa também anunciou a aprovação de um novo programa de recompra, com limite de mais 4,5 milhões de ações.",
     "Em dezembro de 2023, quando chegou à presidência da Argentina, Javier Milei rompeu a tradição e fez um discurso de posse na escadaria do Congresso, de costas para o plenário do Legislativo. Aos apoiadores que acompanhavam a cerimônia, o recém-empossado presidente avisou que a situação econômica do país pioraria antes de melhorar.",
     "Ao incorporar as medidas Non-GAAP às demonstrações financeiras e submetê-las à auditoria independente, o CPC 51 inaugura uma nova etapa de transparência, com potenciais efeitos sobre valuation, covenants e remuneração de executivos",
-    "O dólar à vista opera com alta ante o real nesta quarta-feira (25), acompanhando o avanço da moeda norte-americana ante outras divisas de emergentes no exterior, com os investidores à espera da divulgação de novos dados sobre a economia dos Estados Unidos."
+    "O dólar à vista opera com alta ante o real nesta quarta-feira (25), acompanhando o avanço da moeda norte-americana ante outras divisas de emergentes no exterior, com os investidores à espera da divulgação de novos dados sobre a economia dos Estados Unidos.",
+    "Um projeto de deputados que prevê imposto de renda de 7,5% sobre rendimentos de LCA e LCI, hoje isentos para pessoa física, segue sem despacho definido na Câmara e pode elevar o custo do crédito no campo. O primeiro pacote fiscal foi sancionado por Lula em 24 de novembro. As LCAs em circulação totalizavam aproximadamente R$ 563 bilhões em outubro, "
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795437128.460143
-    },
     {
       "chave": "randon::BALANCO",
       "ts": 1795437458.080422
@@ -2664,10 +2661,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795609600.68111
+    },
+    {
+      "chave": "rf_credito_juros::RF_EVENTO",
+      "ts": 1795609964.7834
     }
   ],
   "hashes_imagens": [
-    "32c9444c1d7b101e",
     "26471d65bccd41e7",
     "4939fc89c69fa407",
     "421d7deb1c584334",
@@ -2966,6 +2966,7 @@
     "07d5061007488357",
     "51c29cfd97cde694",
     "1e5dd8ad6a294028",
-    "1c7a15b8a4f68e36"
+    "1c7a15b8a4f68e36",
+    "127fe074965288c0"
   ]
 }
