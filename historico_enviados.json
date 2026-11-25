@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-diario-oficial/bc-facilita-acesso-de-instituicoes-a-depositos-remunerados/",
-    "151300ffc21c19a3",
-    "ed013783e41c1c0a",
-    "dab16b0a86418e9b",
-    "fbd62828952bbdcb",
     "https://www.infomoney.com.br/onde-investir/taxas-de-prefixados-do-tesouro-renovam-maximas-do-ano-na-volta-do-feriado/",
     "e00605900891845b",
     "22c104434b6f64fa",
@@ -799,7 +794,12 @@
     "014991523847aa06",
     "21b2b344e785c7ef",
     "https://www.poder360.com.br/poder-congresso/camara-deve-votar-projeto-de-regulacao-das-big-techs-em-1o-de-dezembro/",
-    "6502877b17e09757"
+    "6502877b17e09757",
+    "bccc75a1940b2195",
+    "https://www.spacemoney.com.br/tecnologia/ciberataque-cia-eua/",
+    "eb525bbe79bf7dab",
+    "https://g1.globo.com/tecnologia/noticia/2026/11/24/apos-voltar-ao-comando-da-nvidia-jensen-huang-pede-desculpas-por-traicao-e-diz-fazer-terapia.ghtml",
+    "ecb3c52a0b594b55"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1519,11 +1519,11 @@
     "Chinesa Huawei é condenada nos EUA por negócios no Irã e roubo de segredos comerciais; entenda",
     "Google terá de adequar tratamento de dados de menores à legislação colombiana",
     "Boato de mais ajuste sobre contas públicas soa como música para bolsa, mas alívio não dura",
-    "Câmara deve votar projeto de regulação das big techs em 1º de dezembro"
+    "Câmara deve votar projeto de regulação das big techs em 1º de dezembro",
+    "Ciberataque expõe dados não secretos de agências dos EUA",
+    "Após voltar ao comando da Nvidia, Jensen Huang pede desculpas por traição e diz fazer terapia"
   ],
   "leads": [
-    "A Superintendência de Relações com Empresas (SEP) da Comissão de Valores Mobiliários (CVM) suspendeu nesta segunda-feira, 23, o registro de cinco companhias abertas por descumprimento, há mais de 12 meses, da obrigação de prestar informações periódicas à autarquia, conforme previsto na Resolução CVM 80.",
-    "– O Kremlin afirmou nesta segunda-feira que reportagens da mídia alemã sugerindo que a Rússia estaria planejando lançar ao espaço, ainda este ano, um satélite com armamento nuclear não devem ser levadas a sério.",
     "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local.",
     "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo.",
     "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021.",
@@ -1771,7 +1771,9 @@
     "A chinesa Huawei foi condenada nesta terça-feira (24) em um amplo processo criminal nos Estados Unidos. A gigante de tecnologia e equipamentos de telecomunicações foi acusada de enganar bancos sobre seus negócios no Irã e roubar segredos comerciais de empresas americanas.",
     "| Mobile Time Latinoamérica | O Tribunal Administrativo de Cundinamarca confirmou a validade das determinações da Superintendência de Indústria e Comércio (SIC) para que o Google LLC adeque suas práticas de tratamento de dados pessoais de menores de idade na Colômbia. A decisão judicial também respalda a competência das autoridades colombianas para",
     "Saldo do Dia: Bolsa ensaiou ter um dia de glória com notícia de que o presidente Lula autorizou a equipe a mandar ao Congresso uma proposta para tratar do controle das despesas obrigatórias, mas os relatos ainda são boatos",
-    "Novo parecer de Aliel Machado restringe enquadramento das plataformas digitais no regime especial de fiscalização e limita poderes do Cade"
+    "Novo parecer de Aliel Machado restringe enquadramento das plataformas digitais no regime especial de fiscalização e limita poderes do Cade",
+    "A CIA e a Oficina do Diretor de Inteligência Nacional dos Estados Unidos detectaram uma invasão cibernética que expôs parte de informações não classificadas. O ataque atingiu uma rede usada para identificar dados de inteligência a partir de materiais públicos. Até o momento, não se sabe quais dados foram comprometidos nem a extensão do incidente, e",
+    "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana."
   ],
   "eventos_recentes": [
     {
@@ -2581,11 +2583,13 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795567620.489896
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795567968.658375
     }
   ],
   "hashes_imagens": [
-    "17c9f657dc4b95b6",
-    "4628da901d8ca5d1",
     "497e5801aa2b375c",
     "a2377665360772f6",
     "30fe4b6680fa3d92",
@@ -2883,6 +2887,8 @@
     "ba0e89e0d06ca222",
     "a2f1db261e18ac8f",
     "bef2aeefd45f2824",
-    "1715654018118bd1"
+    "1715654018118bd1",
+    "c21b4642ffb14d4e",
+    "da507594c5b4c874"
   ]
 }
