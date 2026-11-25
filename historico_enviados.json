@@ -1,7 +1,5 @@
 {
   "links": [
-    "390eb79e28425385",
-    "743b3ff001d71d70",
     "5a595114415013b6",
     "40803433849eb8de",
     "6f476b6d87dbbbc9",
@@ -799,7 +797,9 @@
     "https://g1.globo.com/trabalho-e-carreira/concursos/noticia/2026/11/25/inscricoes-concurso-do-ibge-com-27-mil-vagas.ghtml",
     "6dcbf007175dac5c",
     "https://www.cnnbrasil.com.br/internacional/eua-abandonam-plano-de-acordos-com-russia-para-encerrar-guerra-diz-jornal/",
-    "79c453b37a1b4ceb"
+    "79c453b37a1b4ceb",
+    "https://www.spacemoney.com.br/commodities/japao-forca-tarefa-petroleo-asia/",
+    "0c9ffd89dc722e17"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1532,10 +1532,10 @@
     "Decisão judicial reativa regras do vale-alimentação",
     "BC tcheco não revela preço do Bitcoin em carteira de teste",
     "Inscrições para concurso do IBGE com 27 mil vagas terminam nesta quarta; veja como participar",
-    "EUA abandonam plano de acordos com Rússia para encerrar guerra, diz jornal"
+    "EUA abandonam plano de acordos com Rússia para encerrar guerra, diz jornal",
+    "Golfo em risco leva Japão a coordenar reservas de petróleo"
   ],
   "leads": [
-    "Resolução atualiza regras do Sistema Especial de Liquidação e de Custódia",
     "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis",
     "O GPA (PCAR3) informou que o Tribunal Regional do Trabalho da 2ª Região (TRT-2) aprovou seu Plano Especial de Pagamento Trabalhista (PEPT), prorrogando o prazo para quitar R$ 140 milhões em passivos trabalhistas que venceriam até o fim de 2027. Com as novas condições, a companhia poderá pagar o montante em até 72 parcelas mensais, ao longo de seis ",
     "Quando uma empresa estreia na Bolsa de Valores do seu país ela faz um IPO, sigla em inglês para oferta pública inicial de ações. Nessa ação os investidores conseguem comprar ações da companhia e garantir um pedacinho dela para si.",
@@ -1784,7 +1784,8 @@
     "A Justiça acolheu um recurso apresentado pelo governo federal e voltou a validar as novas normas de vale-refeição e vale-alimentação, conforme o g1. A decisão, divulgada na terça-feira (24), anula os efeitos de uma liminar de novembro que havia beneficiado empresas associadas à Associação Brasileira das Empresas de Benefícios ao Trabalhador (ABBT).",
     "O Banco Central da República Tcheca (CNB) mantém sob sigilo o preço pago, a quantidade adquirida e o valor atual do Bitcoin que integra sua carteira de teste de US$ 1 milhão, lançada em 13 de novembro do ano passado.",
     "As inscrições para o processo seletivo temporário do Instituto Brasileiro de Geografia e Estatística (IBGE), que vai contratar profissionais para atuar no 12º Censo Agropecuário, Florestal e Aquícola de 2027, terminam nesta quarta-feira (25), às 23h59.",
-    "O governo Trump deixou discretamente de lado propostas de utilizar acordos comerciais como incentivo para que a Rússia encerre a guerra na Ucrânia, depois que Moscou demonstrou pouco interesse nos projetos sugeridos para os setores de energia e aviação, informou o jornal Financial Times nesta quarta-feira (25)."
+    "O governo Trump deixou discretamente de lado propostas de utilizar acordos comerciais como incentivo para que a Rússia encerre a guerra na Ucrânia, depois que Moscou demonstrou pouco interesse nos projetos sugeridos para os setores de energia e aviação, informou o jornal Financial Times nesta quarta-feira (25).",
+    "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As"
   ],
   "eventos_recentes": [
     {
@@ -2610,10 +2611,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795587576.223143
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795589141.52098
     }
   ],
   "hashes_imagens": [
-    "f3082e41dfecf6a8",
     "e4bf98f84603f2ff",
     "b0db26a83a278535",
     "f97f520214cc4bf0",
@@ -2912,6 +2916,7 @@
     "fce02739722a0ea8",
     "b8e4e78ee6aad6be",
     "5e4dca745927dc72",
-    "611bbdfa6f744c31"
+    "611bbdfa6f744c31",
+    "c9aa8bb68fb5b4bc"
   ]
 }
