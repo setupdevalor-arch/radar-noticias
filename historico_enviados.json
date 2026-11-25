@@ -1,7 +1,5 @@
 {
   "links": [
-    "d04bb05f695dde03",
-    "c8ca6298213fb62b",
     "82972b589574f566",
     "https://www.infomoney.com.br/economia/cambio-reforca-tendencia-de-queda-de-precos-de-commodities-diz-stonex/",
     "8f56f81fa3e2ef73",
@@ -799,7 +797,9 @@
     "8261389a0b3efa58",
     "3d1a4273fa5aa8b1",
     "d1dcd7f19dd700d5",
-    "d263f0f6a43fd893"
+    "d263f0f6a43fd893",
+    "https://neofeed.com.br/videos/revolucao-ia/shadow-ai-a-ameaca-que-desafia-ceos-e-conselhos-de-administracao/",
+    "6f9643553c77dd02"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1565,10 +1565,10 @@
     "Bolsas da Ásia fecham em baixa com dúvidas sobre IA e temor de novas tarifas dos EUA",
     "ETFs de bitcoin caminham para pior mês da história",
     "Anatel rejeita recurso da TIM para manter ferramenta AntiSpam em operação",
-    "Governo amplia previsão de déficit primário para 2026"
+    "Governo amplia previsão de déficit primário para 2026",
+    "Shadow AI: a ameaça que desafia CEOs e conselhos de administração"
   ],
   "leads": [
-    "No Itaú, Milton Maluhy renovou toda a cúpula do banco e aposta em uma nova cultura de gestão, com menos hierarquia, mais autonomia e preparação de sucessores",
     "Em meio à volatilidade dos mercados presidente do BC afirma que postura conservadora adotada anteriormente permite ganhar tempo",
     "O etanol continua sendo a opção mais vantajosa para carros flex em 16 estados e no Distrito Federal, mesmo após a terceira alta consecutiva do combustível. Na primeira quinzena de novembro, o litro do etanol fechou a R$ 4,38, em média, avanço de 1,39%, enquanto a gasolina recuou 0,89%, para R$ 6,67. Os dados são do Índice de Preços Edenred Ticket L",
     "A Petrobras (PETR3;PETR4) deve apresentar nesta semana seu aguardado Plano de Negócios 2027-2031, documento que definirá o rumo dos investimentos da companhia para os próximos cinco anos e pode servir como um importante catalisador para as ações Petrobras ON (PETR3) e Petrobras PN (PETR4).",
@@ -1817,7 +1817,8 @@
     "As bolsas asiáticas fecharam em baixa nesta quarta-feira (25), com a perda de força do alívio provocado pela volta de Jensen Huang ao comando da Nvidia e o aumento das dúvidas sobre as perspectivas para a inteligência artificial (IA). O temor de novas tarifas também voltou ao radar, após notícias de que os Estados Unidos poderiam elevar as alíquota",
     "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
     "O presidente da Agência Nacional de Telecomunicações (Anatel), Alexandre Freire, negou nesta terça-feira, 24, o pedido de efeito suspensivo apresentado pela TIM contra a medida cautelar que determinou a interrupção do funcionamento de sua ferramenta de combate às chamadas massivas, denominada AntiSpam. A agência identificou bloqueios indevidos de t",
-    "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro."
+    "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro.",
+    "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, "
   ],
   "eventos_recentes": [
     {
@@ -2654,7 +2655,6 @@
     }
   ],
   "hashes_imagens": [
-    "cc81d342fb9655aa",
     "81c20fde124b6327",
     "e047fc50459e6c4c",
     "0841eb45ba5f6427",
@@ -2953,6 +2953,7 @@
     "8629c3ec1543ddbb",
     "7e7e124a10fb4658",
     "30ce5ccabccecf42",
-    "70ef74244428f58d"
+    "70ef74244428f58d",
+    "20279c2e14a14655"
   ]
 }
