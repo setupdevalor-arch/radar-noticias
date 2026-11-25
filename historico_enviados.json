@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/gerdau-ggbr4-alta-29-por-cento-ano-analise-tecnica/",
-    "be5333501ead86e6",
-    "c4156db317b2ebc3",
     "2329e57b7d033a97",
     "d3e1c0223dd8c014",
     "901ae9b2a1a974c7",
@@ -799,10 +796,12 @@
     "https://www.spacemoney.com.br/investimentos/itau-itub4-calendario-provento/",
     "9c4532d7922bd124",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/apto11-renegocia-locacao-cri-gafisa/",
-    "019e71d933db0bbf"
+    "019e71d933db0bbf",
+    "f952e2f33e0bd5d7",
+    "https://megawhat.uol.com.br/armazenamento/weg-habilita-sistema-de-baterias-para-leilao-de-reserva-de-capacidade/",
+    "97f9f96153a52601"
   ],
   "titulos": [
-    "Exportação de milho do Brasil em novembro deve atingir maior nível em mais de 3 anos, diz Anec",
     "Iniciativa do governo Tump para destinar US$ 50 bilhões para a aviação enfrenta oposição nos EUA",
     "'Identidade e memória': entenda por que o STF agora tem uma escultura de Xangô no acesso ao plenário",
     "O sarampo voltou oficialmente aos Estados Unidos. E agora?",
@@ -1601,10 +1600,10 @@
     "Fabricantes de celulares reduzem metas para 2027",
     "Índice de Letras Financeiras lidera valorização da renda fixa na B3 em outubro",
     "Itaú (ITUB4) agenda provento de dezembro",
-    "APTO11 revê locação e monitora CRI Gafisa"
+    "APTO11 revê locação e monitora CRI Gafisa",
+    "WEG habilita sistema de baterias para leilão de reserva de capacidade"
   ],
   "leads": [
-    "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico.",
     "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
     "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos",
     "A Localiza Rent a Car S.A. (RENT3 e RENT4; OTCQX: LZRFY) informou, em comunicado ao mercado datado de 23 de novembro de 2026, ter recebido correspondência do Norges Bank sobre alteração em sua participação acionária.",
@@ -1853,17 +1852,10 @@
     "As metas de remessas para 2027 foram revistas para baixo por fabricantes como Apple, Samsung e Xiaomi, além de outras empresas do setor. O movimento ocorre em meio à alta no preço de chips de memória e à expectativa de retração nas vendas globais.",
     "Os investimentos ligados a letras financeiras foram o destaque da renda fixa na B3 em outubro. Os índices que acompanham as debêntures e os títulos públicos atrelados à Selic também integram Top 5 do mês entre os indicadores calculados pela bolsa do Brasil.",
     "Segundo a Suno Notícias, o Itaú Unibanco (ITUB4) fará em 4 de janeiro de 2027, no Brasil, o pagamento dos proventos de dezembro. A instituição mantém o crédito mensal no primeiro dia útil seguinte ao mês de referência e usa como base a carteira registrada no fechamento do último pregão do mês precedente.",
-    "O Vinci Residencial FII (APTO11), sob gestão da Vinci Compass, fechou novas condições para um contrato de locação em outubro e viu o aluguel recebido cair 20%, conforme a Suno Notícias. O acordo vale até fevereiro de 2027. Em setembro, a receita imobiliária foi de R$ 97,8 mil; em outubro, ficou perto de R$ 79 mil."
+    "O Vinci Residencial FII (APTO11), sob gestão da Vinci Compass, fechou novas condições para um contrato de locação em outubro e viu o aluguel recebido cair 20%, conforme a Suno Notícias. O acordo vale até fevereiro de 2027. Em setembro, a receita imobiliária foi de R$ 97,8 mil; em outubro, ficou perto de R$ 79 mil.",
+    "A WEG conseguiu o credenciamento de seu pack de baterias de lítio na rota 2 do Banco Nacional de Desenvolvimento Econômico e Social (BNDES). O registro posiciona a companhia para participar do primeiro leilão de reserva de capacidade (LRCap) com armazenamento do Brasil, marcado para começar na próxima quarta-feira, 2 de dezembro."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795457901.925214
-    },
-    {
-      "chave": "petrobras::GERAL_ATIVO",
-      "ts": 1795457901.925214
-    },
     {
       "chave": "unifique::EVENTO_CORP",
       "ts": 1795458969.0351
@@ -2679,10 +2671,13 @@
     {
       "chave": "apto11::GERAL_ATIVO",
       "ts": 1795630457.435597
+    },
+    {
+      "chave": "weg::EVENTO_CORP",
+      "ts": 1795630808.072339
     }
   ],
   "hashes_imagens": [
-    "1a5014d760bcc4f6",
     "28a353db9097bf96",
     "bdd749d3fe75e352",
     "30c57939798db84a",
@@ -2981,6 +2976,7 @@
     "09c3c79899018f7c",
     "afbcb3710ae09f5d",
     "87d26cbdf8e96c5f",
-    "fafc8fc631b6ec0b"
+    "fafc8fc631b6ec0b",
+    "3ab27176f9559940"
   ]
 }
