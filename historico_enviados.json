@@ -1,11 +1,5 @@
 {
   "links": [
-    "d78390badc00067e",
-    "d0410a840ab80716",
-    "84042b9063e62658",
-    "9a347cc6892c8b8b",
-    "568181bfd8d0b27a",
-    "https://www.spacemoney.com.br/credito/cross-river-emprestimo-bitcoin-garantia/",
     "b974420d8e096756",
     "907f0ee5634acdfd",
     "7e933d9f00254bcd",
@@ -799,7 +793,13 @@
     "84764e467b4fabec",
     "https://www.spacemoney.com.br/economia/indicadores-economicos/dow-futuro-pce-tarifas-eua/",
     "8775bc8acce8995c",
-    "6319f4b3e3fc8417"
+    "6319f4b3e3fc8417",
+    "a7b1e9847f8f46d8",
+    "2a54e36f9cc7ff10",
+    "https://braziljournal.com/e-possivel-reverter-rapidamente-esse-pessimismo-diz-gestor-da-ashmore",
+    "43b0fae79c649f08",
+    "https://www.infomoney.com.br/mercados/do-trading-cientifico-inteligencia-artificial-os-destaques-do-profit-summit-2026/",
+    "895399c957ad85fe"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1552,11 +1552,11 @@
     "UE articula fundo de €50 bi para IA e computação quântica",
     "CEO da Latam vê demanda estável e mantém planos com jatos da Embraer no Brasil",
     "“Ninguém investe na Sequoia para receber dividendo”: CEO diz por que não está com pressa para voltar a dar lucro",
-    "Dow futuro recua com PCE no radar e temor de tarifas"
+    "Dow futuro recua com PCE no radar e temor de tarifas",
+    "É possível reverter rapidamente esse pessimismo, diz gestor da Ashmore",
+    "Do trading científico à inteligência artificial: os destaques do Profit Summit 2026"
   ],
   "leads": [
-    "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões.",
-    "A Comissão Europeia, braço executivo da UE (União Europeia), abriu uma investigação antitruste formal para apurar se a CCEP (Coca-Cola Europacific Partners) violou as regras de concorrência do bloco.",
     "O bilionário e investidor Bill Ackman afirmou que o Federal Reserve (Fed, o banco central norte-americano) corre o risco de cometer \"outro erro\" na decisão de juros de 9 de dezembro, diante do forte aperto das condições financeiras.",
     "O plantio da safra 2026/27 de soja do Brasil alcançou 86% da área projetada na última quinta-feira, contra 78% observado na semana anterior e 81% um ano atrás, segundo levantamento da AgRural divulgado nesta segunda-feira.",
     "Por trás da alta está, sobretudo, a desconfiança com as contas públicas. Quando o mercado teme que o governo não consiga controlar sua dívida, hoje em 83% do PIB, quem investe busca lugares mais seguros para o dinheiro. Mais gente vendendo reais para comprar dólares empurra a cotação para cima.",
@@ -1804,7 +1804,9 @@
     "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
     "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo.",
     "Ao Seu Dinheiro, Leopoldo de Bruggen e Silva detalha os planos para a nova fase da companhia, que deixou as grandes encomendas do e-commerce para apostar em cartões, maquininhas e transporte B2B",
-    "Os futuros de Wall Street iniciaram a sessão desta quarta-feira, 25, em território negativo, com investidores concentrados no índice PCE de outubro e na expectativa de que o governo dos Estados Unidos anuncie uma nova rodada de tarifas sobre parceiros comerciais, conforme apurou o InfoMoney. A combinação de inflação ainda elevada e risco de escalad"
+    "Os futuros de Wall Street iniciaram a sessão desta quarta-feira, 25, em território negativo, com investidores concentrados no índice PCE de outubro e na expectativa de que o governo dos Estados Unidos anuncie uma nova rodada de tarifas sobre parceiros comerciais, conforme apurou o InfoMoney. A combinação de inflação ainda elevada e risco de escalad",
+    "Um relatório da Ashmore, uma das maiores gestoras internacionais especializadas em mercados emergentes, viralizou nos últimos dias ao traçar um cenário sombrio para a economia brasileira.",
+    "Com mais de 4 mil participantes, o Profit Summit 2026 registrou recorde de público, segundo dados divulgados pela Nelogica."
   ],
   "eventos_recentes": [
     {
@@ -2633,8 +2635,6 @@
     }
   ],
   "hashes_imagens": [
-    "6f00daf056a50911",
-    "1360a4e281138ff8",
     "cf6863f26007dde9",
     "845480dac427ea9d",
     "a3b230056b6df354",
@@ -2932,6 +2932,8 @@
     "18c8d278b3a1a42a",
     "c983109ec3c37c92",
     "1f533b0f2a15aa95",
-    "efdcd987972cef77"
+    "efdcd987972cef77",
+    "4312a35155aaaed7",
+    "ded2b3afb79bd0f3"
   ]
 }
