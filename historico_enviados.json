@@ -1,14 +1,5 @@
 {
   "links": [
-    "6d0ce6e8c414f4a7",
-    "a5f7bd10f78b13b3",
-    "https://www.poder360.com.br/poder-congresso/pc-do-b-acorda-emenda-para-excluir-lei-rouanet-do-ajuste-fiscal/",
-    "249648715338254f",
-    "https://www.spacemoney.com.br/investimentos/acoes/meta-suspende-acoes-classe-c-litigio-acionistas/",
-    "ee9b37d3948a721d",
-    "00dba6ddfeac6bd6",
-    "https://www.moneytimes.com.br/hapvida-hapv3-confirma-contratacao-de-bancos-para-reavaliar-portfolio-de-ativos-rnda/",
-    "bb5835e3235a7b1f",
     "https://telesintese.com.br/alares-busca-r-140-milhoes-para-gestao-de-dividas-e-reforco-de-caixa/",
     "1d5755e628b7228a",
     "https://www.mobiletime.com.br/noticias/23/11/2026/pl-4675-nao-e-consenso/",
@@ -799,7 +790,16 @@
     "https://telesintese.com.br/aprovado-o-pl-dos-postes-a-disputa-passa-a-ser-o-que-entra-no-preco/",
     "ba3d8dbe0b1c1aee",
     "https://www.suno.com.br/noticias/hglg11-lucro-outubro-dividendos-incorporacao-lvbi11/",
-    "0df64fe3b18130d1"
+    "0df64fe3b18130d1",
+    "63ddcc8f8cd64c2f",
+    "a231246d73545375",
+    "756df2d419725a75",
+    "https://www.seudinheiro.com/2026/colunistas/arvores-nao-crescem-ate-o-ceu-o-turnaround-da-sequoia-seql3-e-tudo-que-mexe-com-seu-bolso-hoje-julw/",
+    "a59d785dd5cab86c",
+    "https://www.infomoney.com.br/mercados/dolar-forte-favorece-vale-e-csn-mineracao-mas-pressiona-usiminas-diz-morgan-stanley/",
+    "d043c401f1cc4c14",
+    "https://forbes.com.br/forbes-money/forbes-real-estate/2026/11/barzel-quantum-faria-lima/",
+    "a2912db4c43bdb82"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1596,12 +1596,12 @@
     "Caixa analisa ativos do BRB para possível aquisição após crise do Caso Master",
     "Seguro de carros elétricos e híbridos segue mais caro: o que explica a diferença e o que muda para o corretor?",
     "Aprovado o PL dos postes, a disputa passa a ser o que entra no preço",
-    "HGLG11 eleva lucro em 22,3%; veja dividendos do mês"
+    "HGLG11 eleva lucro em 22,3%; veja dividendos do mês",
+    "Árvores não crescem até o céu: o turnaround da Sequoia (SEQL3) e tudo que mexe com seu bolso hoje",
+    "Dólar forte favorece Vale e CSN Mineração, mas pressiona Usiminas, diz Morgan Stanley",
+    "Com Vacância Baixa e Aluguel a R$ 325/m², Faria Lima Ganha Novo Prédio de Escritórios com 10 Mil m²"
   ],
   "leads": [
-    "Os fundos imobiliários ALZR11 e XPLG11 apresentaram indicadores distintos nos relatórios gerenciais de outubro de 2026, segundo o Suno Notícias. No comparativo de dividend yield anualizado, o XP Log ficou em 10,79%, acima dos 10,5% do Alianza Trust Renda Imobiliária, embora as carteiras tenham perfis próprios e métricas de patrimônio, preço e vacân",
-    "As taxas dos contratos de Depósito Interfinanceiro (DI) fecharam em baixa nesta segunda-feira (23), mesmo após o dólar alcançar R$ 6 durante o dia e depois ceder. A queda foi impulsionada por declarações de Gabriel Galípolo, presidente do BC, e de Nilton David, diretor de Política Monetária, além da percepção de que as cadeiras abertas na diretoria",
-    "O dólar encerrou esta segunda-feira (23) em queda de 0,15%, a R$ 5,92, depois de ultrapassar a marca de R$ 6 pela primeira vez desde o início de abril de 2025, em um pregão marcado por preocupações fiscais, relatos de saída de recursos e valorização da moeda americana no exterior. Segundo o Monitor do Mercado, o alívio apareceu na parte da tarde, q",
     "A semana começa com uma das notícias mais aguardadas pelos acionistas: dividendos extraordinários da Petrobras (PETR4). O Conselho de Administração da estatal aprovou nesta segunda-feira (23) a distribuição de R$ 15,60 bilhões, ou R$ 1,21035949 por ação ordinária e preferencial em circulação.",
     "A Petrobras fechou um acordo para adquirir 42% do capital social da Neomille, produtora de etanol de milho controlada pela CerradinhoBio, em uma operação avaliada em R$ 2,8 bilhões. O acordo foi anunciado nesta segunda-feira (23) e marca a retomada dos investimentos da estatal no mercado de etanol.",
     "O Ibovespa encerrou a segunda-feira (23) aos 164.796,05 pontos, com queda de 0,95% e perda de 1.580,38 pontos, segundo a Suno Notícias. Foi a terceira sessão seguida no negativo, e o índice ficou abaixo dos 165 mil pontos. No câmbio, a máxima do dólar foi de R$ 6,006; o patamar de R$ 6 não era alcançado desde abril de 2025. A moeda, porém, fechou a",
@@ -1848,13 +1848,12 @@
     "A Caixa Econômica Federal está interessada no BRB e analisa os ativos do banco para uma possível aquisição. Se a operação avançar com a transferência de controle, o BRB seria federalizado e o Governo do Distrito Federal deixaria de comandar a instituição.",
     "Os seguros de carros elétricos e híbridos continuam entre os mais caros do mercado brasileiro. Mesmo com a queda geral dos preços das apólices registrada em agosto de 23,79% para o perfil masculino e 21,45% para o feminino, segundo levantamento da Creditas Seguros, esses veículos ainda apresentam custos de proteção mais elevados. O BYD Song Plus hí",
     "Por Leandro Pacifico* – Na última semana, o Senado aprovou em votação simbólica o substitutivo da Câmara ao PL 3.220/2019, que estabelece regras para o compartilhamento de postes de energia elétrica, e agora segue para sanção. Durante anos, a regulação dos postes dependeu de um entendimento entre agências que nunca se fechou, e coube ao Congresso d",
-    "O fundo imobiliário HGLG11 encerrou outubro de 2026 com resultado distribuível de R$ 49,75 milhões, alta de 22,31% ante setembro, equivalente a R$ 1,09 por cota, enquanto a distribuição aos cotistas permaneceu em R$ 1,17 por cota, paga em 16 de novembro."
+    "O fundo imobiliário HGLG11 encerrou outubro de 2026 com resultado distribuível de R$ 49,75 milhões, alta de 22,31% ante setembro, equivalente a R$ 1,09 por cota, enquanto a distribuição aos cotistas permaneceu em R$ 1,17 por cota, paga em 16 de novembro.",
+    "Em entrevista ao Seu Dinheiro, CEO da empresa de logística fala sobre a reestruturação da companhia; nos mercados, investidores acompanham medidas de ajuste fiscal e divulgação do PCE, nos EUA",
+    "A desvalorização do real frente ao dólar tende a beneficiar boa parte das empresas brasileiras de materiais básicos, mas os efeitos estão longe de ser uniformes. Em relatório publicado nesta terça-feira, a equipe de metais e mineração do Carlos De Alba, do Morgan Stanley, traçou um mapa detalhado da exposição cambial e de juros de mineradoras e sid",
+    "Às margens da Avenida Faria Lima, a Barzel Properties inaugura um edifício de cerca de 10,2 mil metros quadrados de áreal bruta locável (ABL), com nove pavimentos."
   ],
   "eventos_recentes": [
-    {
-      "chave": "jbs::EVENTO_CORP",
-      "ts": 1795439122.660954
-    },
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795439546.355855
@@ -2686,12 +2685,29 @@
     {
       "chave": "hglg11::PROVENTOS",
       "ts": 1795611883.584353
+    },
+    {
+      "chave": "seql3::GERAL_ATIVO",
+      "ts": 1795612313.642646
+    },
+    {
+      "chave": "csn::GERAL_ATIVO",
+      "ts": 1795612313.642646
+    },
+    {
+      "chave": "usiminas::GERAL_ATIVO",
+      "ts": 1795612313.642646
+    },
+    {
+      "chave": "vale::GERAL_ATIVO",
+      "ts": 1795612313.642646
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795612313.642646
     }
   ],
   "hashes_imagens": [
-    "862d424f7b84b7b7",
-    "366ea0eee91e90e9",
-    "ebbfd45f427996e3",
     "170601191361b92b",
     "95edc1a335348783",
     "20d90a4905101d34",
@@ -2988,6 +3004,9 @@
     "a47696367db4313b",
     "6fe3afe1451b8a7b",
     "9c580ab5d0aa89f3",
-    "6586004c2133904a"
+    "6586004c2133904a",
+    "0a37a3f3b33ca9d7",
+    "d217a878152a7b16",
+    "bf325cb87c9b5e94"
   ]
 }
