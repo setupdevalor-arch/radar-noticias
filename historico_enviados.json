@@ -1,9 +1,5 @@
 {
   "links": [
-    "bad90bc0e8c6e037",
-    "https://www.infomoney.com.br/mercados/taxas-dos-dis-caem-em-meio-a-especulacoes-sobre-nomes-de-lula-para-a-area-economica/",
-    "c030313957414494",
-    "https://www.cnnbrasil.com.br/agro/temporal-destroi-unidades-da-c-vale-no-rs-e-compromete-estoque-de-graos/",
     "adac158cd7593971",
     "https://www.poder360.com.br/poder-tech/governo-lula-lancara-edital-de-nuvem-propria-para-fugir-de-big-techs/",
     "530d163a1ed207ae",
@@ -799,7 +795,11 @@
     "bdd6731282262913",
     "https://www.cnnbrasil.com.br/agro/vittia-conclui-recompra-de-45-milhoes-de-acoes-e-anuncia-novo-programa/",
     "ec2f8693b018bf41",
-    "3343feb6b712e48b"
+    "3343feb6b712e48b",
+    "https://www.infomoney.com.br/mundo/a-argentina-depois-da-motosserra-o-que-os-numeros-dizem-sobre-milei/",
+    "dd8356089ed1a33f",
+    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/coluna/opiniao-a-morte-anunciada-do-ebitda-como-conhecemos.ghtml",
+    "eff4f56e6215458d"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1579,11 +1579,11 @@
     "Braskem avança em reestruturação de dívida, mas acordo ainda não é vinculante",
     "Norse Atlantic afunda 81% com alerta de caixa crítico",
     "Vamos ter que repetir o pré-sal na Margem Equatorial, diz Magda",
-    "Vittia conclui recompra de 4,5 milhões de ações e anuncia novo programa"
+    "Vittia conclui recompra de 4,5 milhões de ações e anuncia novo programa",
+    "A Argentina depois da motosserra: o que os números dizem sobre Milei",
+    "Opinião - A morte anunciada do Ebitda como conhecemos"
   ],
   "leads": [
-    "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027",
-    "O governador de São Paulo, Tarcísio de Freitas (Republicanos), defendeu nesta segunda-feira, 23, que o novo Congresso discuta limites para as decisões monocráticas do Judiciário e as competências do Supremo Tribunal Federal (STF). Em painel no Itaú BBA Macro Vision 2026, na capital paulista, ele afirmou que o sistema de freios e contrapesos não fun",
     "As marcas de consumo estão recorrendo cada vez mais à inteligência artificial para ajudar a definir preços, na esperança de reduzir descontos e elevar margens de lucro.",
     "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato.",
     "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
@@ -1831,7 +1831,9 @@
     "A Braskem (BRKM5) confirmou ter chegado a um acordo preliminar com credores para avançar na reestruturação de sua dívida, com apoio de seus principais acionistas, Petrobras (PETR3; PETR4) e Shine I FIP, fundo ligado à gestora IG4. O entendimento, alcançado em 23 de novembro, envolve os principais termos e condições comerciais de um plano atualizado",
     "As ações da Norse Atlantic caíram nesta quarta-feira depois que a companhia norueguesa de baixo custo disse estar em uma “situação financeira crítica”, segundo a CNBC. Os papéis eram negociados com queda de 81,4%, e a empresa condicionou sua continuidade à obtenção de financiamento para necessidades de liquidez de curto prazo.",
     "Magda Chambriard, presidente da Petrobras, afirmou nesta terça-feira (24) que enxerga para a Margem Equatorial uma trajetória semelhante à do desenvolvimento do pré-sal, durante coletiva de imprensa realizada para comentar o plano de negócios divulgado pela companhia na noite desta segunda-feira (23).",
-    "A Vittia concluiu seu sexto programa de recompra de ações, com a aquisição de 4,5 milhões de ações ordinárias, equivalente a 100% do limite aprovado e a 2,9% do capital social da companhia. A empresa também anunciou a aprovação de um novo programa de recompra, com limite de mais 4,5 milhões de ações."
+    "A Vittia concluiu seu sexto programa de recompra de ações, com a aquisição de 4,5 milhões de ações ordinárias, equivalente a 100% do limite aprovado e a 2,9% do capital social da companhia. A empresa também anunciou a aprovação de um novo programa de recompra, com limite de mais 4,5 milhões de ações.",
+    "Em dezembro de 2023, quando chegou à presidência da Argentina, Javier Milei rompeu a tradição e fez um discurso de posse na escadaria do Congresso, de costas para o plenário do Legislativo. Aos apoiadores que acompanhavam a cerimônia, o recém-empossado presidente avisou que a situação econômica do país pioraria antes de melhorar.",
+    "Ao incorporar as medidas Non-GAAP às demonstrações financeiras e submetê-las à auditoria independente, o CPC 51 inaugura uma nova etapa de transparência, com potenciais efeitos sobre valuation, covenants e remuneração de executivos"
   ],
   "eventos_recentes": [
     {
@@ -2660,8 +2662,6 @@
     }
   ],
   "hashes_imagens": [
-    "f195a95a0438174b",
-    "c2ac4c3d9998b910",
     "879112f9b03944fc",
     "32c9444c1d7b101e",
     "26471d65bccd41e7",
@@ -2959,6 +2959,8 @@
     "fb996e2f273fa85f",
     "81fc9d28e1c38750",
     "c590c98a0366364c",
-    "07d5061007488357"
+    "07d5061007488357",
+    "51c29cfd97cde694",
+    "1e5dd8ad6a294028"
   ]
 }
