@@ -1,16 +1,5 @@
 {
   "links": [
-    "6fca1153f843a15d",
-    "https://www.moneytimes.com.br/petrobras-petr4-vai-pagar-us-156-bilhoes-em-dividendos-extraordinarios-veja-prazos-e-quem-pode-receber-ccgg/",
-    "009d2094f8d392e8",
-    "https://www.cnnbrasil.com.br/agro/petrobras-compra-42-da-produtora-de-etanol-de-milho-neomille-por-r-28-bi/",
-    "a672ca6c15c19ef2",
-    "https://www.spacemoney.com.br/investimentos/ibovespa-dolar-magalu/",
-    "e7173e1319a489f0",
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hgre11-compra-salas-wework/",
-    "9998d9b190a1ff44",
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/trco11-pagamento-aluguel-outubro/",
-    "847fe3d5495bc8ae",
     "https://www.spacemoney.com.br/economia/exterior/melenchon-engie-controle-estatal-franca/",
     "cc70878422748bef",
     "f31ad12b192cd982",
@@ -799,7 +788,18 @@
     "https://www.spacemoney.com.br/economia/byd-reduz-precos-song-king-promocao/",
     "8a2f937653e9b487",
     "https://www.infomoney.com.br/mercados/gerdau-ggbr4-bradesco-bbi-eleva-recomendacao-para-compra-desempenho-acoes/",
-    "62378db658e16391"
+    "62378db658e16391",
+    "fd690fab61b346a2",
+    "38e339f98fd96976",
+    "23e5272f33a66880",
+    "https://valorinveste.globo.com/mercados/renda-variavel/bolsas-e-indices/noticia/2026/11/25/entrada-de-bdrs-de-empresas-brasileiras-no-ibovespa-deve-ampliar-a-liquidez-desses-papeis.ghtml",
+    "0f7ca95d7c5b8a14",
+    "https://www.infomoney.com.br/politica/ajuste-fiscal-de-r-50-bi-foi-aprovado-por-que-lula-ja-prepara-outro/",
+    "b97fde33c813388f",
+    "https://borainvestir.b3.com.br/noticias/mercado/mercados-hoje-ajuste-fiscal-e-inflacao-nos-eua-ficam-no-radar-nesta-quarta-feira/",
+    "41fd7eab7246651b",
+    "https://bmcnews.com.br/empresas-e-negocios/caixa-analisa-ativos-do-brb-para-possivel-aquisicao-apos-crise-do-caso-master/",
+    "9c3604bb8361501f"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1589,13 +1589,13 @@
     "Irã diz que navios colidiram com minas em Ormuz e alerta para passagem coordenada",
     "Confaz atualiza PMPF de combustíveis e define novos valores para ICMS",
     "BYD reduz preços de Song e King em ação de fim de semana",
-    "Gerdau (GGBR4): BBI eleva recomendação para compra e preço-alvo sobe a R$ 34"
+    "Gerdau (GGBR4): BBI eleva recomendação para compra e preço-alvo sobe a R$ 34",
+    "Entrada de BDRs de empresas brasileiras no Ibovespa deve ampliar a liquidez desses papéis",
+    "Ajuste fiscal de R$ 50 bi foi aprovado. Por que Lula já prepara outro?",
+    "Mercados hoje: ajuste fiscal e inflação nos EUA ficam no radar nesta quarta-feira",
+    "Caixa analisa ativos do BRB para possível aquisição após crise do Caso Master"
   ],
   "leads": [
-    "A decisão surpreendente do conselho da Nvidia de reintegrar o ex-presidente-executivo Jensen Huang foi tomada sem consulta aos principais dirigentes da empresa, que foram informados do plano apenas nos momentos finais, segundo pessoas familiarizadas com o assunto.",
-    "BRASÍLIA - A secretária de Política Econômica do Ministério da Fazenda, Débora Freire, afirmou nesta segunda-feira, 23, que a cotação do dólar a R$ 6 preocupa o governo pelo risco de repasse da desvalorização cambial para a inflação. Segundo ela, a revisão da projeção de inflação para 2027 foi influenciada principalmente pela perspectiva de efeitos",
-    "A CSN Mineração (CMIN3) terá um duplo desafio pela frente: lidar com uma geração de caixa mais pressionada ao mesmo tempo em que verá seu endividamento aumentar. Essa é a avaliação do BB Investimentos, que reduziu o preço-alvo da ação de R$ 5,40 para R$ 5,10 e manteve a recomendação de venda para o papel.",
-    "Um levantamento inédito obtido pelo NeoFeed e produzido pela Lemon Energia – climatech especializada em geração distribuída (GD) compartilhada – mostra que o valor pago pela energia elétrica subiu, em média, 7,7% entre janeiro e setembro de 2026, na comparação com o mesmo período do ano anterior.",
     "O petróleo fechou em queda nesta segunda-feira (23) com o Brent encerrando abaixo dos US$ 90 pela primeira vez em duas semanas, enquanto os investidores se concentravam no aumento do fluxo da commodity do Oriente Médio, apesar de ataques persistentes a navios e refinarias na região.",
     "Banco aposta em diversificar serviços e atender regiões em que é mais difícil ter acesso a agências bancárias",
     "O ministro da Fazenda, Dario Durigan, afirmou nesta segunda-feira que o governo do presidente Luiz Inácio Lula da Silva continuará perseguindo o superávit fiscal nos próximos anos, mirando em um resultado positivo entre 1,5% e 2% do Produto Interno Bruto (PIB) no fim do quarto mandato.",
@@ -1841,13 +1841,13 @@
     "– Dois petroleiros colidiram com minas navais, explodiram e pegaram ‌fogo no Estreito de Ormuz nesta quarta-feira (25), informou a Marinha ‌da Guarda Revolucionária do Irã em um comunicado divulgado pela mídia estatal.",
     "O Confaz divulgou novos preços médios ponderados ao consumidor final (PMPF) dos combustíveis, que passam a valer em 16 de novembro e servirão de base para o cálculo do ICMS pelos estados e pelo Distrito Federal.",
     "A BYD programou para este fim de semana uma ação comercial com preços menores em vários modelos híbridos. A campanha Song Friday começa na sexta-feira (27), passa pelo sábado (28) e envolve 250 lojas da marca, que terão horário de atendimento ampliado.",
-    "O Bradesco BBI elevou a recomendação para as ações da Gerdau (GGBR4) de neutra para outperform (desempenho acima da média do mercado, equivalente à compra) e aumentou o preço-alvo de R$ 24 para R$ 34 por ação, diante de uma perspectiva mais favorável para as margens da divisão da América do Norte, que agora responde por cerca de 75% dos resultados "
+    "O Bradesco BBI elevou a recomendação para as ações da Gerdau (GGBR4) de neutra para outperform (desempenho acima da média do mercado, equivalente à compra) e aumentou o preço-alvo de R$ 24 para R$ 34 por ação, diante de uma perspectiva mais favorável para as margens da divisão da América do Norte, que agora responde por cerca de 75% dos resultados ",
+    "Com base nas regras atuais, os papéis da JBS, Nubank, XP e Inter já estariam aptos a fazer parte da carteira do índice",
+    "O presidente Luiz Inácio Lula da Silva (PT) se reúne nesta quarta-feira (25) com integrantes do governo para discutir novas medidas de contenção de gastos, um dia depois de sancionar o pacote fiscal que deve produzir um impacto de aproximadamente R$ 50 bilhões nas contas públicas em 2027.",
+    "Os mercados começam esta quarta-feira (25) com as atenções voltadas novamente para o cenário fiscal brasileiro. A perspectiva de que o governo poderá elaborar uma nova Proposta de Emenda à Constituição (PEC) para conter despesas obrigatórias deu impulso ao mercado acionário ontem. O movimento acontece depois da aprovação de um primeiro pacote fisca",
+    "A Caixa Econômica Federal está interessada no BRB e analisa os ativos do banco para uma possível aquisição. Se a operação avançar com a transferência de controle, o BRB seria federalizado e o Governo do Distrito Federal deixaria de comandar a instituição."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_global::MACRO_EVENTO",
-      "ts": 1795438458.907147
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795438791.21743
@@ -2671,13 +2671,21 @@
     {
       "chave": "gerdau::GERAL_ATIVO",
       "ts": 1795611106.491049
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795611520.797164
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795611520.797164
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795611520.797164
     }
   ],
   "hashes_imagens": [
-    "07d7f99b637c7ce2",
-    "543f4a3d046e7200",
-    "6e484c66de3f18b8",
-    "69c276ad8bde988b",
     "78fa2dd6aab80ed8",
     "9faa0fea7e9c36f3",
     "ef5793557780d028",
@@ -2973,6 +2981,10 @@
     "2c16e66efbe01a0c",
     "84a565c3aa496c2e",
     "588542fe8a75390c",
-    "ba8a842abcf5bfd8"
+    "ba8a842abcf5bfd8",
+    "4e24cccc60bb7b9a",
+    "3ef23e9cbf82ed62",
+    "5f77a5b3f643d8d0",
+    "a47696367db4313b"
   ]
 }
