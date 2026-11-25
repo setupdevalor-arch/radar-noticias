@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/tecnologia/samsung-galaxy-watch-adiamento-2027/",
-    "57ae526055261078",
-    "https://www.spacemoney.com.br/tecnologia/falhas-eua-microsoft-apple-aviacao-fbi/",
-    "1b8f8b5c2b1b0348",
     "https://www.infomoney.com.br/mercados/vibra-vbbr3-e-ultra-ugpa3-ficam-mais-atrativas-apos-queda-das-acoes-avalia-bbi/",
     "4cd00a282b12d769",
     "https://www.poder360.com.br/poder-economia/e-possivel-manter-programas-sociais-e-rever-regras-fiscais-diz-galipolo/",
@@ -799,7 +795,11 @@
     "7c29bd8c9e552bf6",
     "bfdd6409621076da",
     "3f89452168980d24",
-    "b05e9e2b313b38fd"
+    "b05e9e2b313b38fd",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/atividade-economica-da-argentina-cai-12-em-setembro-diz-governo/",
+    "57a8178b5ea87226",
+    "https://www.mobiletime.com.br/noticias/24/11/2026/temu-mastercard-acordo/",
+    "04b5e20cfd7dc748"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1513,11 +1513,11 @@
     "BC autoriza Foxbit e Binance a ampliar atuação regulada no Brasil",
     "RECT11 renova locação com Elo e mantém vacância",
     "Banco do Brasil (BBAS3) nega decisão sobre IPOs de empresas do grupo após questionamento da CVM",
-    "Senado dos EUA investiga papel de JD Vance em contrato de petróleo da Venezuela"
+    "Senado dos EUA investiga papel de JD Vance em contrato de petróleo da Venezuela",
+    "Atividade econômica da Argentina cai 1,2% em setembro, diz governo",
+    "Temu fecha acordo com Mastercard para testar Click to Pay e agentes"
   ],
   "leads": [
-    "A plataforma de negociação de ações tokenizadas OKXICE, operada em conjunto pela Intercontinental Exchange — dona da NYSE — e pela corretora de criptoativos OKX, estreia nesta segunda-feira mesmo após a objeção de 90% das empresas cujas ações propôs listar inicialmente, segundo a CNBC.",
-    "A JBS N.V. (JBSS3) comunicou, em fato relevante, a conclusão, no dia 19 de novembro de 2026, da transação prevista no Contrato de Compra e Venda de Ações firmado com a Oman Food Investment Holding Company S.A.O.C. (OFC). O acordo prevê a constituição de uma joint venture entre as duas empresas, com sede na Holanda, em continuidade ao Fato Relevante",
     "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22).",
     "– Os contratos futuros de minério de ferro caíram na bolsa de Dalian nesta segunda-feira, pressionados pela demanda persistentemente baixa e pelas margens cada vez menores do setor siderúrgico na China, enquanto a referência do minério na bolsa Cingapura se estabilizou após atingir a menor cotação em quatro anos na semana passada.",
     "Juros x Inflação: Entenda a relação entre eles",
@@ -1765,7 +1765,9 @@
     "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
     "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
     "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado.",
-    "Uma senadora dos Estados Unidos está investigando o papel desempenhado pelo vice-presidente JD Vance na concessão de um lucrativo contrato de petróleo da Venezuela a um doador político e então executivo da comerciante de commodities Vitol Group."
+    "Uma senadora dos Estados Unidos está investigando o papel desempenhado pelo vice-presidente JD Vance na concessão de um lucrativo contrato de petróleo da Venezuela a um doador político e então executivo da comerciante de commodities Vitol Group.",
+    "A atividade econômica da Argentina, o Emae, recuou 1,2% em setembro em relação ao mesmo período do ano passado, informou nesta terça-feira (24) o Indec (Instituto Nacional de Estatística e Censos), um dado pior do que o esperado pelos analistas privados, o que coloca o país em recessão.",
+    "A Temu (Android, iOS) firmou um memorando de entendimento (MoU) com a Mastercard para avançar no desenvolvimento de soluções que facilitem a intermediação de pagamentos entre vendedores e consumidores. O acordo prevê o estudo de duas soluções:"
   ],
   "eventos_recentes": [
     {
@@ -2555,11 +2557,17 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795563077.881692
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795565346.635182
+    },
+    {
+      "chave": "mastercard::GERAL_ATIVO",
+      "ts": 1795565346.635182
     }
   ],
   "hashes_imagens": [
-    "eae41bb83e11847d",
-    "7e2d4c205cfa7ccf",
     "5c918f14f01e5ee1",
     "e03ef5d293fe4791",
     "ec7bb0fa3eccbf53",
@@ -2857,6 +2865,8 @@
     "00b2cdea913bc599",
     "c71fac4742300b43",
     "5691b8c79931a5f1",
-    "d5008432bcc0ceb3"
+    "d5008432bcc0ceb3",
+    "de5516225885c64a",
+    "8ba010958694cdc4"
   ]
 }
