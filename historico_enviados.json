@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/23/petrobras-preve-investir-us-122-bi-entre-2027-2031.ghtml",
-    "78974134146931b1",
-    "6c6559534b914240",
     "1ff9ffaf3747dc1a",
     "8fd0777a928a4da1",
     "59e220041b2d0fda",
@@ -799,10 +796,12 @@
     "9c36fc10735765c4",
     "d74a09219d12a99f",
     "84d3a726439e0c25",
-    "29b1424aa1289fac"
+    "29b1424aa1289fac",
+    "d0041d536a8840c8",
+    "https://www.spacemoney.com.br/economia/exterior/eua-tarifas-14-parceiros-comerciais/",
+    "2621758ed7d22631"
   ],
   "titulos": [
-    "Serviço Geológico do Brasil prepara a maior campanha de sua história",
     "“Seja um benfeitor para alguém.” Warren Buffett e o ROI da bondade",
     "Como acabar com a jabuticaba dos juros. Sem truque",
     "OPINIÃO. Ao vencedor, as alíquotas. Ao contribuinte, a inflação",
@@ -1601,10 +1600,10 @@
     "Com US$ 41 bi, Sanofi faz maior M&A em 20 anos e mira medicamentos respiratórios",
     "Risco tarifário e PCE pressionam mercados globais",
     "Ventos e chuva ameaçam viagens de Thanksgiving nos EUA",
-    "Fux nega prorrogação de contrato entre BRB e TJ-BA sobre precatórios"
+    "Fux nega prorrogação de contrato entre BRB e TJ-BA sobre precatórios",
+    "EUA propõem tarifas a 14 parceiros, com foco na China"
   ],
   "leads": [
-    "O BRB informou que mantém o atendimento a clientes e o pagamento de compromissos com depositantes e fornecedores, apesar de a CVM ter suspendido seu registro de companhia aberta, segundo o g1. A decisão foi divulgada nesta segunda-feira (23).",
     "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro.",
     "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco.",
     "A Câmara dos Deputados aprovou a urgência para o projeto de ajuste fiscal do governo Lula, com impacto de R$ 50 bilhões até 2027. A proposta, de autoria do senador Jaques Wagner, visa conter gastos e cortar isenções tributárias. O PSOL, liderado por Tarcísio Motta, criticou o projeto, alegando que prejudica políticas sociais. O relator Mauro Benevi",
@@ -1853,7 +1852,8 @@
     "A Sanofi comprará a farmacêutica norte-americana Insmed por US$ 41 bilhões em dinheiro, informou a empresa nesta terça-feira. Trata-se de sua maior transação em duas décadas, em ‌um momento em que a CEO Belen Garijo busca reestruturar a empresa francesa e encontrar novas fontes de crescimento além do medicamento de grande sucesso ‌Dupixent.",
     "Os mercados globais operam sob pressão nesta quarta-feira, 25, à espera do índice de preços de gastos com consumo pessoal (PCE) de outubro dos Estados Unidos e diante da possibilidade de uma nova rodada de tarifas comerciais do governo de Donald Trump. O cenário de aversão ao risco derruba bolsas na Ásia, mantém os futuros de Nova York no vermelho ",
     "Uma combinação de tempestades nas duas costas dos Estados Unidos ameaça as viagens de Thanksgiving, feriado celebrado nesta quinta-feira, 26 de novembro, com chuva forte, rajadas que podem superar 60 mph e risco de enchentes costeiras. Mais de 81 milhões de pessoas devem se deslocar no período, segundo projeção da AAA, enquanto companhias aéreas já",
-    "O ministro Luiz Fux, do STF (Supremo Tribunal Federal), negou um pedido do BRB (Banco Regional de Brasília) para prorrogar um contrato da instituição com o TJ-BA (Tribunal de Justiça da Bahia) sobre a custódia de cerca de R$ 2 bilhões em recursos de precatórios."
+    "O ministro Luiz Fux, do STF (Supremo Tribunal Federal), negou um pedido do BRB (Banco Regional de Brasília) para prorrogar um contrato da instituição com o TJ-BA (Tribunal de Justiça da Bahia) sobre a custódia de cerca de R$ 2 bilhões em recursos de precatórios.",
+    "Os Estados Unidos propuseram novas tarifas sobre 14 parceiros comerciais, entre eles China, União Europeia, Japão e Índia, segundo a CNBC. A investida amplia a ofensiva tarifária do presidente Donald Trump mesmo depois de a Suprema Corte derrubar boa parte das sobretaxas anteriores."
   ],
   "eventos_recentes": [
     {
@@ -2694,7 +2694,6 @@
     }
   ],
   "hashes_imagens": [
-    "c5ddbcdbd9b6682e",
     "b6c4fa4150e41043",
     "a1e93b92a6167101",
     "15772f0f6f4a66a6",
@@ -2993,6 +2992,7 @@
     "11283ea198b0d7fe",
     "2e85951eeb057abc",
     "bee328d6db4d40fb",
-    "6b29610d3d131f96"
+    "6b29610d3d131f96",
+    "795c52fe936b93d3"
   ]
 }
