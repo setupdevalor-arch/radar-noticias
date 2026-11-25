@@ -1,12 +1,5 @@
 {
   "links": [
-    "7d83f469fcae4741",
-    "a1d99d370a4dc21a",
-    "https://www.infomoney.com.br/economia/sentimento-das-empresas-da-alemanha-volta-a-melhorar-em-novembro-mostra-indice-ifo/",
-    "ca6b204525c86946",
-    "044a1fc7c67288e3",
-    "ef1e3e29c8117c53",
-    "0eb781ecccca3369",
     "d051023c7cf09b3f",
     "c7aa45e2609c9972",
     "https://www.infomoney.com.br/economia/japao-promete-disciplina-fiscal-e-independencia-do-bc-em-diretrizes-orcamentarias/",
@@ -799,11 +792,16 @@
     "https://www.cnnbrasil.com.br/agro/jbs-preve-alta-de-15-nas-vendas-de-itens-para-churrasco-no-fim-do-ano/",
     "b7b2f5a659a38dd1",
     "https://www.spacemoney.com.br/economia/legislacao/eba-comissao-europeia-regras-defi-stablecoins/",
-    "1dca08a5bf3ccf50"
+    "1dca08a5bf3ccf50",
+    "2b804b9d90044639",
+    "98352bc3e8282c5d",
+    "e95ccdf931a8402b",
+    "https://investnews.com.br/economia/vai-viajar-exterior-como-economizar-dolar/",
+    "26125b811fa49dce",
+    "https://www.infomoney.com.br/onde-investir/fiis-alzr11-snel11-e-xpml11-pagam-dividendos-hoje-veja-valores-e-yields/",
+    "a519a682e75ab6da"
   ],
   "titulos": [
-    "Quina hoje, concurso 7170: confira o resultado sorteado nesta terça (17)",
-    "FP&A na prática: ciclo de planejamento, forecast e rotina",
     "Chuva de meteoros Leônidas: saiba como tirar boas fotos com o iPhone",
     "Analista de FP&A: o que faz, requisitos e carreira",
     "Mãe de Cristiano Ronaldo 'celebra' derrota de Portugal; Jorge Jesus responde",
@@ -1601,11 +1599,11 @@
     "Saiba quais países podem ser tarifados após nova ofensiva comercial dos EUA",
     "Moretti reafirma foco em conter gasto obrigatório com novas medidas fiscais",
     "JBS prevê alta de 15% nas vendas de itens para churrasco no fim do ano",
-    "EBA pede à Comissão Europeia regras para DeFi e stablecoins"
+    "EBA pede à Comissão Europeia regras para DeFi e stablecoins",
+    "Vai viajar para o exterior? Veja como economizar mesmo com a alta do dólar",
+    "FIIs ALZR11, SNEL11 e XPML11 pagam dividendos hoje; veja valores e yields"
   ],
   "leads": [
-    "Tales de Mileto é lembrado como o primeiro filósofo do Ocidente. Viveu na Grécia há mais de 2.500 anos, estudava os astros e, como acontece até hoje com muita gente que pensa demais, vivia ouvindo que filosofia não enchia barriga. Aristóteles conta, no livro Política, como Tales resolveu responder a essa provocação. Sem que ninguém soubesse, a resp",
-    "A PetroReconcavo (RECV3) informou que, a 1ª parcela dos dividendos anunciados em dezembro do ano passado, no montante de R$ 100 milhões, será paga em 10 de dezembro de 2026.",
     "A Sanofi vai comprar a Insmed por US$ 41 bilhões, em um acordo que, segundo a CNBC, é o maior do setor farmacêutico desde 2023. A empresa pagará US$ 175 por ação em dinheiro e ficará com dois medicamentos respiratórios já comercializados e uma linha de candidatos experimentais.",
     "O Conselho de Administração da RD Saúde (RADL3) aprovou programa de recompra de até R$ 600 milhões de ações de emissão da companhia.",
     "A PRIO (PRIO3) informou que seus acionistas aprovaram, em Assembleia Geral Extraordinária (AGE), a cisão parcial da companhia, com a transferência de R$ 543,8 milhões em patrimônio para uma nova sociedade limitada, denominada PRIO Forte Ltda.",
@@ -1853,7 +1851,9 @@
     "O Escritório do Representante Comercial dos Estados Unidos (USTR, na sigla em inglês) propôs nesta quarta-feira, 25, a aplicação de tarifas sobre produtos de economias como Brasil, China, União Europeia (UE), Japão e Índia, após concluir que as práticas relacionadas ao excesso estrutural de capacidade produtiva industrial prejudicam o comércio amer",
     "O ministro do Planejamento e Orçamento, Bruno Moretti, confirmou nesta quarta-feira (25) que a equipe econômica elabora um \"cardápio\" de novas medidas de ajuste fiscal. Segundo o chefe da pasta, o conjunto de proposta deve promover uma contenção das despesas obrigatórias.",
     "A JBS projeta um crescimento de 15% nas vendas de itens voltados ao churrasco no fim deste ano, na comparação com 2025. A expectativa reflete a maior demanda por proteínas durante as festividades, em um cenário em que as comemorações têm se espalhado por diferentes encontros entre familiares e amigos.",
-    "A Autoridade Bancária Europeia (EBA) recomendou que a Comissão Europeia avalie regras mais rigorosas para empresas de criptomoedas que direcionam clientes ao setor de finanças descentralizadas (DeFi). O pedido consta de um relatório sobre stablecoins em DeFi e retoma recomendação feita em setembro, na resposta da EBA à revisão do MiCA pela Comissão"
+    "A Autoridade Bancária Europeia (EBA) recomendou que a Comissão Europeia avalie regras mais rigorosas para empresas de criptomoedas que direcionam clientes ao setor de finanças descentralizadas (DeFi). O pedido consta de um relatório sobre stablecoins em DeFi e retoma recomendação feita em setembro, na resposta da EBA à revisão do MiCA pela Comissão",
+    "Nos aplicativos de conta global, aparece também a alíquota de 1,1%. Ela vale apenas para o dinheiro enviado com finalidade de investimento e não se aplica a gastos de viagem.",
+    "Alguns fundos imobiliários com estratégias distintas realizam o pagamento de rendimentos nesta quarta-feira (25)."
   ],
   "eventos_recentes": [
     {
@@ -2671,11 +2671,25 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795623987.756497
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795624353.442477
+    },
+    {
+      "chave": "alzr11::PROVENTOS",
+      "ts": 1795624353.442477
+    },
+    {
+      "chave": "snel11::PROVENTOS",
+      "ts": 1795624353.442477
+    },
+    {
+      "chave": "xpml11::PROVENTOS",
+      "ts": 1795624353.442477
     }
   ],
   "hashes_imagens": [
-    "958cbba10e7929ab",
-    "1f9c2974992fe642",
     "57cca73d2d35f9d6",
     "70b54d3192894a24",
     "9372afcf617f9dc3",
@@ -2973,6 +2987,8 @@
     "84d28a712070aafe",
     "a13d19d4293b54c9",
     "58bb0c0f30ed0390",
-    "1a403cfed2f29a75"
+    "1a403cfed2f29a75",
+    "1d9fe4ced3a82264",
+    "f611ec11ff956d4d"
   ]
 }
