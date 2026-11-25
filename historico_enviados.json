@@ -1,9 +1,5 @@
 {
   "links": [
-    "3659172786f418fe",
-    "7674579de2c76b60",
-    "05da83d5b353ba01",
-    "https://www.suno.com.br/noticias/knip11-inflacao-dividendos-fundo-imobiliario/",
     "026ffb5798f86329",
     "ae159ce81e6af374",
     "fcc0f80b5932c51e",
@@ -799,11 +795,13 @@
     "https://www.cnnbrasil.com.br/agro/cafe-arabica-sobe-282-em-nova-york-e-fecha-a-us-270-por-libra-peso/",
     "410218da9c1e851c",
     "https://neofeed.com.br/negocios/estoque-elevado-na-argentina-e-juro-alto-no-brasil-colocam-a-prova-estrategia-da-ford-na-america-do-sul/",
-    "7cab4f781aedca34"
+    "7cab4f781aedca34",
+    "https://www.cnnbrasil.com.br/politica/comissao-do-senado-convoca-ministro-dos-transportes-para-explicar-concessao/",
+    "c63e8263984184e7",
+    "https://braziljournal.com/a-petrobras-ja-perdeu-dinheiro-no-etanol-de-cana-agora-vai-tentar-o-milho",
+    "9b787fbbd155048e"
   ],
   "titulos": [
-    "Bolsas da Ásia fecham sem direção única após balanço e projeções da Nvidia",
-    "Presidente do conselho da Nvidia descarta possibilidade de recontratar Huang",
     "Fim da escala 6×1: como as varejistas da bolsa correm para evitar pagar a conta — e quem já vê o copo meio cheio",
     "Custo Brasil sobe a R$ 3,5 trilhões ao ano com segurança e juros reais, diz estudo MBC/Deloitte",
     "Agenda econômica: o que pode mexer com a Bolsa e o dólar nesta quarta-feira (18)",
@@ -1601,11 +1599,11 @@
     "Governo aposta em concessões de geração para conter alta das tarifas até 2030",
     "Dólar recua para os R$ 5,80 com expectativas sobre equipe econômica de Lula",
     "Café arábica sobe 2,82% em Nova York e fecha a US$ 2,70 por libra-peso",
-    "Estoque elevado na Argentina e juro alto no Brasil colocam à prova estratégia da Ford na América do Sul"
+    "Estoque elevado na Argentina e juro alto no Brasil colocam à prova estratégia da Ford na América do Sul",
+    "Comissão do Senado convoca ministro dos Transportes para explicar concessão",
+    "A Petrobras já perdeu dinheiro no etanol de cana; agora, vai tentar o milho"
   ],
   "leads": [
-    "O JPMorgan rebaixou a recomendação para ações da fabricante de massas e biscoitos M. Dias Branco (MDIA3) de neutra para underweight (abaixo da média do mercado, equivalente à venda). O banco também cortou o preço-alvo de R$ 21,50 para R$ 16. Com isso, às 10h29 (horário de Brasília) desa terça-feira (24), os ativos caíam 6,39%, a R$ 15,54.",
-    "As vendas do agronegócio brasileiro aos países árabes totalizaram US$ 1,724 bilhão em outubro, avanço de 15,94% sobre igual mês de 2025. A Câmara de Comércio Árabe-Brasileira atribui o resultado à antecipação de compras para o Ramadã, marcado para 8 de fevereiro de 2027.",
     "O KNIP11 é um fundo imobiliário que concentra seus investimentos em títulos de crédito corrigidos pela inflação, somando patrimônio líquido de R$ 7,52 bilhões em outubro de 2026. Administrado pela Intrag e gerido ativamente pela Kinea Investimentos desde 2016, o fundo distribui rendimentos mensais a investidores qualificados, com resultados sensíve",
     "Com R$ 51,5 bilhões investido desde sua chegada ao Brasil, em 1996, a EDP completa 30 anos de atuação no país com uma estratégia de crescimento voltada à expansão em transmissão, à modernização das redes de distribuição e às oportunidades com a liberalização do mercado de energia.",
     "As ações da Anthropic ficaram abaixo dos US$ 83 definidos em seu IPO no pré-mercado desta terça-feira (24), segundo o g1. Os papéis recuavam 6,5%, a US$ 82, no quinto dia de negociação desde a estreia na Nasdaq.",
@@ -1853,25 +1851,11 @@
     "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
     "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista.",
     "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio.",
-    "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas."
+    "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas.",
+    "A Comissão de Infraestrutura do Senado Federal aprovou nesta quarta-feira (25) a convocação do ministro dos Transportes, George Santoro, para prestar esclarecimentos sobre a concessão do trecho rodoviário entre Vilhena (RO) e Cuiabá (MT).",
+    "A Petrobras está retornando ao mercado de etanol com uma aquisição bilionária – anos depois de ter perdido dinheiro com seus investimentos no setor."
   ],
   "eventos_recentes": [
-    {
-      "chave": "vale::GERAL_ATIVO",
-      "ts": 1795467057.472291
-    },
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795467057.472291
-    },
-    {
-      "chave": "amazon::GERAL_ATIVO",
-      "ts": 1795467427.85466
-    },
-    {
-      "chave": "braskem::EVENTO_CORP",
-      "ts": 1795467789.471563
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795468159.376829
@@ -2703,11 +2687,17 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795639307.539934
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795640693.134192
+    },
+    {
+      "chave": "petrobras::EVENTO_CORP",
+      "ts": 1795640693.134192
     }
   ],
   "hashes_imagens": [
-    "b21863437bfcd44e",
-    "c3e55b586a1b7bf9",
     "610ce74ef7816eaf",
     "1aba26375fb2cc56",
     "66f5fd61812392b9",
@@ -3005,6 +2995,8 @@
     "d388eee4d0accebd",
     "4b05a9f91083cc78",
     "f36a0dd994d6ee86",
-    "396098ffe880e360"
+    "396098ffe880e360",
+    "b629f626f638e108",
+    "6d8aea181ef61f2b"
   ]
 }
