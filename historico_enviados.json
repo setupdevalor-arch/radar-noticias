@@ -1,9 +1,5 @@
 {
   "links": [
-    "adac158cd7593971",
-    "https://www.poder360.com.br/poder-tech/governo-lula-lancara-edital-de-nuvem-propria-para-fugir-de-big-techs/",
-    "530d163a1ed207ae",
-    "https://www.spacemoney.com.br/tecnologia/amazon-decarte-software-chips/",
     "b26f01257f655a51",
     "https://braziljournal.com/a-braskem-estava-com-a-rj-pronta-um-acordo-de-ultima-hora-evitou-o-pior",
     "0ab5e523138ab300",
@@ -799,7 +795,11 @@
     "https://www.infomoney.com.br/mundo/a-argentina-depois-da-motosserra-o-que-os-numeros-dizem-sobre-milei/",
     "dd8356089ed1a33f",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/coluna/opiniao-a-morte-anunciada-do-ebitda-como-conhecemos.ghtml",
-    "eff4f56e6215458d"
+    "eff4f56e6215458d",
+    "7b238fa51c58b810",
+    "db5703c79bb078e7",
+    "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-25112026/",
+    "8f3238b31b40c6d5"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1581,10 +1581,10 @@
     "Vamos ter que repetir o pré-sal na Margem Equatorial, diz Magda",
     "Vittia conclui recompra de 4,5 milhões de ações e anuncia novo programa",
     "A Argentina depois da motosserra: o que os números dizem sobre Milei",
-    "Opinião - A morte anunciada do Ebitda como conhecemos"
+    "Opinião - A morte anunciada do Ebitda como conhecemos",
+    "Dólar hoje acompanha exterior e sobe ante o real"
   ],
   "leads": [
-    "As marcas de consumo estão recorrendo cada vez mais à inteligência artificial para ajudar a definir preços, na esperança de reduzir descontos e elevar margens de lucro.",
     "– As taxas dos DIs fecharam a segunda-feira com baixas firmes, próximas a 20 pontos-base em alguns vencimentos, em meio a especulações de que o presidente Luiz Inácio Lula da Silva poderá escolher nomes amigáveis ao mercado ‌para ocupar cargos na área econômica no próximo mandato.",
     "O temporal que atingiu Tupanciretã, no Rio Grande do Sul, na madrugada de sexta-feira (20), provocou a destruição total das estruturas de três unidades da cooperativa C.Vale e danos de 60% a 70% em uma quarta instalação.",
     "Ideia é publicar detalhes para parceria público-privada até o início de 2027; dados deverão ficar hospedados em infraestruturas locais",
@@ -1833,7 +1833,8 @@
     "Magda Chambriard, presidente da Petrobras, afirmou nesta terça-feira (24) que enxerga para a Margem Equatorial uma trajetória semelhante à do desenvolvimento do pré-sal, durante coletiva de imprensa realizada para comentar o plano de negócios divulgado pela companhia na noite desta segunda-feira (23).",
     "A Vittia concluiu seu sexto programa de recompra de ações, com a aquisição de 4,5 milhões de ações ordinárias, equivalente a 100% do limite aprovado e a 2,9% do capital social da companhia. A empresa também anunciou a aprovação de um novo programa de recompra, com limite de mais 4,5 milhões de ações.",
     "Em dezembro de 2023, quando chegou à presidência da Argentina, Javier Milei rompeu a tradição e fez um discurso de posse na escadaria do Congresso, de costas para o plenário do Legislativo. Aos apoiadores que acompanhavam a cerimônia, o recém-empossado presidente avisou que a situação econômica do país pioraria antes de melhorar.",
-    "Ao incorporar as medidas Non-GAAP às demonstrações financeiras e submetê-las à auditoria independente, o CPC 51 inaugura uma nova etapa de transparência, com potenciais efeitos sobre valuation, covenants e remuneração de executivos"
+    "Ao incorporar as medidas Non-GAAP às demonstrações financeiras e submetê-las à auditoria independente, o CPC 51 inaugura uma nova etapa de transparência, com potenciais efeitos sobre valuation, covenants e remuneração de executivos",
+    "O dólar à vista opera com alta ante o real nesta quarta-feira (25), acompanhando o avanço da moeda norte-americana ante outras divisas de emergentes no exterior, com os investidores à espera da divulgação de novos dados sobre a economia dos Estados Unidos."
   ],
   "eventos_recentes": [
     {
@@ -2659,10 +2660,13 @@
     {
       "chave": "equatorial::GERAL_ATIVO",
       "ts": 1795608478.469119
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795609600.68111
     }
   ],
   "hashes_imagens": [
-    "879112f9b03944fc",
     "32c9444c1d7b101e",
     "26471d65bccd41e7",
     "4939fc89c69fa407",
@@ -2961,6 +2965,7 @@
     "c590c98a0366364c",
     "07d5061007488357",
     "51c29cfd97cde694",
-    "1e5dd8ad6a294028"
+    "1e5dd8ad6a294028",
+    "1c7a15b8a4f68e36"
   ]
 }
