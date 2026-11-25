@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/minhas-financas/vendas-de-imoveis-para-a-classe-media-perdem-folego-no-ano-e-2027-nao-anima/",
-    "33f9cb9cbd9cb9b1",
-    "36167c705f88fc40",
-    "82c8470f59dda060",
-    "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-24112026/",
-    "7774d9ce13d5dadb",
     "39f03a1a3659285a",
     "f16522df3d71235a",
     "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bitcoin-cai-abaixo-de-60-mil-com-recuo-do-rali-de-ia/",
@@ -799,11 +793,15 @@
     "https://www.estadao.com.br/economia/entrevista-marcio-garcia-nao-vejo-senso-urgencia-governo-lula/",
     "76e4d4a4b2f5a8ed",
     "https://www.spacemoney.com.br/investimentos/acoes/anvisa-glp1-manipulado-farmacias-acoes/",
-    "9c99e9b1c267e43c"
+    "9c99e9b1c267e43c",
+    "ccf5a99494c154e8",
+    "d861dd40ea690f47",
+    "https://www.poder360.com.br/poder-economia/bc-injeta-us-2-bilhoes-no-mercado-com-leilao-de-dolares/",
+    "a7cf485bccf2abd5",
+    "https://www.spacemoney.com.br/politica/pf-stf-pgr-banco-master/",
+    "f46ca0ae38ba2698"
   ],
   "titulos": [
-    "Em meio a polêmicas, Nvidia (NVDA) ‘não trai’ confiança de investidores e supera expectativas; veja números do resultado",
-    "Ibovespa recupera fôlego e encerra sessão no azul em meio à alta do petróleo",
     "EUA suspendem instalação de roteadores que levaram à paralisação de voos no país",
     "56% dos profissionais acreditam que podem precisar mudar de carreira nos próximos anos, aponta HP",
     "Dólar hoje passa de R$ 5,80 e recua; por que o real não reage?",
@@ -1601,11 +1599,11 @@
     "EUA propõem tarifa de 10% sobre aeronaves brasileiras e novas cobranças sobre açúcar",
     "Banco Central vende US$ 2 bilhões em leilão em meio à pressão sobre o dólar",
     "‘Falta senso de urgência ao governo; acho que vamos mesmo para a crise’, diz economista da PUC-Rio",
-    "Anvisa mira GLP-1 manipulado e pode favorecer farmácias"
+    "Anvisa mira GLP-1 manipulado e pode favorecer farmácias",
+    "BC injeta US$ 2 bilhões no mercado com leilão de dólares",
+    "PF afirma que STF e PGR têm material sobre Banco Master"
   ],
   "leads": [
-    "Os preços de aluguel de salas e conjuntos comerciais subiram 12,04% nos 12 meses encerrados em outubro de 2026, quase três vezes a inflação oficial de 4,63% registrada no mesmo período. O resultado, divulgado pelo Índice FipeZAP nesta terça-feira (24), mostra que o custo de ocupação de imóveis comerciais continua avançando acima dos preços gerais d",
-    "Dez anos depois de votar pela saída da União Europeia (UE), o Reino Unido começa a rever, na prática, os termos econômicos de sua separação. A decisão de deixar o bloco devolveu ao governo britânico liberdade para definir suas próprias regras comerciais e regulatórias, mas também criou obstáculos para empresas que dependiam do mercado europeu, redu",
     "O colapso das negociações climáticas das Nações Unidas na Turquia representou um duro golpe para o esforço global de impedir o superaquecimento do planeta, deixando em aberto como — ou mesmo se — será possível reparar os danos.",
     "As lojas físicas de shopping centers são o canal de venda preferido das pessoas para realizar as compras de final de ano, segundo pesquisa conduzida pela SYN, empresa responsável pelos shoppings Cidade São Paulo, Tietê Plaza, Grand Plaza e Metropolitano Barra. Há uma diferença de mais de dez pontos percentuais da segunda resposta.",
     "Osinvestidores estrangeiros retiraram R$ 5,86 bilhões da Bolsa brasileiraem novembro, até o dia 18, revertendo parte dos R$ 8,17 bilhões aplicados no mercado acionário em outubro.",
@@ -1853,7 +1851,9 @@
     "No caso das aeronaves, a proposta prevê encerrar a isenção que atualmente beneficia os aviões acabados brasileiros e aplicar uma tarifa adicional de 10% sobre as importações desses produtos. A medida pode afetar especialmente a Embraer, uma das principais fabricantes brasileiras do setor.",
     "O Banco Central vendeu nesta manhã de quarta-feira o total de US$ 2 bilhões em dois leilões de linha (venda de dólares com compromisso de recompra) realizados simultaneamente.",
     "BRASÍLIA - O economista Márcio Garcia, professor titular do departamento de economia da PUC-Rio e PhD pela Universidade de Stanford, nos Estados Unidos, não enxerga senso de urgência no presidente Luiz Inácio Lula da Silva para tentar superar a crise de confiança que atinge o mercado sobre as contas públicas.",
-    "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti"
+    "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti",
+    "Autoridade monetária vendeu a moeda com compromisso de recompra para ampliar a oferta e dar liquidez ao mercado cambial",
+    "Segundo Andréia Sadi, em seu blog no g1, Andrei Passos Rodrigues, diretor-geral da PF, declarou que o STF e a PGR já possuem o material exigido para dar seguimento às apurações sobre o Banco Master conforme a lei."
   ],
   "eventos_recentes": [
     {
@@ -2666,8 +2666,6 @@
     }
   ],
   "hashes_imagens": [
-    "f1d6f4ea61e42e4c",
-    "ded9c41d2eb5847b",
     "f290d56353a2d485",
     "5e854881656d22b7",
     "8968c24885efbf68",
@@ -2965,6 +2963,8 @@
     "4e0ad79ad3c9295d",
     "2bb59310a07d5016",
     "43f752f4b06b219d",
-    "8ea2f804400578f5"
+    "8ea2f804400578f5",
+    "d1d2a4c1161b307b",
+    "a145d45ec69a0ec6"
   ]
 }
