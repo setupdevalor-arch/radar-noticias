@@ -1,12 +1,5 @@
 {
   "links": [
-    "ada4d8fd8712215e",
-    "https://www.infomoney.com.br/mercados/bdr-da-anthropic-anth34-recua-apos-estreia-positiva-na-bolsa-brasileira/",
-    "c671c32e7d8195f8",
-    "https://megawhat.uol.com.br/economia-e-politica/empresas/cemig-restringe-injecao-de-energia-solar-a-noite-e-caso-vai-parar-na-aneel/",
-    "151f7ceef7e106d8",
-    "511ef7dbf7757d11",
-    "https://www.moneytimes.com.br/capitalizacao-da-raizen-deve-fechar-na-faixa-superior-da-meta-dizem-fontes/",
     "6ec2d54875d60ad2",
     "https://megawhat.uol.com.br/destaques-do-diario/equatorial-recebe-nova-multa-por-favorecer-comercializadora-do-grupo/",
     "c1849c873960ac00",
@@ -799,7 +792,14 @@
     "5f0b9956d30a3168",
     "120b67688447768c",
     "395d7cfd86f11cc2",
-    "6c136b1fea0da87b"
+    "6c136b1fea0da87b",
+    "ffa82d20e43f8eee",
+    "96858dc93acf6487",
+    "bdbae38b08249b0e",
+    "522aab889db7168f",
+    "d9825b48c13906df",
+    "https://www.spacemoney.com.br/investimentos/acoes/norse-atlantic-acoes-queda-alerta-financeiro/",
+    "0116e25f7528c50b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1576,10 +1576,10 @@
     "Lula tem reuniões com ministro da Justiça e com ministra da Casa Civil nesta quarta",
     "Houthis dizem ter atacado refinaria de petróleo na Arábia Saudita",
     "Três cidades de Rondônia devem ter máximas de até 37 °C",
-    "Braskem avança em reestruturação de dívida, mas acordo ainda não é vinculante"
+    "Braskem avança em reestruturação de dívida, mas acordo ainda não é vinculante",
+    "Norse Atlantic afunda 81% com alerta de caixa crítico"
   ],
   "leads": [
-    "O plano de capitalização da Raízen (RAIZ55) deve atingir a faixa superior da meta da empresa, mas é improvável que consiga atrair novos recursos do cofundador Rubens Ometto nas atuais condições de mercado, o que aumenta a possibilidade de uma maior diluição de sua participação, disseram à Reuters três pessoas a par do negócio.",
     "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor.",
     "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso.",
     "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027",
@@ -1828,13 +1828,10 @@
     "O presidente Luiz Inácio Lula da Silva reúne-se com o ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, nesta quarta-feira, 25, às 10h30, no Palácio da Alvorada. Às 15h, a agenda prevê reunião com a ministra da Casa Civil, Miriam Belchior, também no Alvorada.",
     "Os Houthis do Iêmen, apoiados pelo Irã, afirmaram nesta quarta-feira (25) que atacaram a refinaria de petróleo de Ras Tanura, na Arábia Saudita.",
     "Cujubim deve registrar 37 °C na sexta-feira (27), patamar previsto para três dias em sequência. A máxima fica 6,3 °C acima da referência climatológica local, de 30,7 °C, segundo a Climatempo.",
-    "A Braskem (BRKM5) confirmou ter chegado a um acordo preliminar com credores para avançar na reestruturação de sua dívida, com apoio de seus principais acionistas, Petrobras (PETR3; PETR4) e Shine I FIP, fundo ligado à gestora IG4. O entendimento, alcançado em 23 de novembro, envolve os principais termos e condições comerciais de um plano atualizado"
+    "A Braskem (BRKM5) confirmou ter chegado a um acordo preliminar com credores para avançar na reestruturação de sua dívida, com apoio de seus principais acionistas, Petrobras (PETR3; PETR4) e Shine I FIP, fundo ligado à gestora IG4. O entendimento, alcançado em 23 de novembro, envolve os principais termos e condições comerciais de um plano atualizado",
+    "As ações da Norse Atlantic caíram nesta quarta-feira depois que a companhia norueguesa de baixo custo disse estar em uma “situação financeira crítica”, segundo a CNBC. Os papéis eram negociados com queda de 81,4%, e a empresa condicionou sua continuidade à obtenção de financiamento para necessidades de liquidez de curto prazo."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795434835.606939
-    },
     {
       "chave": "ltbx11::GERAL_ATIVO",
       "ts": 1795435505.57897
@@ -2661,7 +2658,6 @@
     }
   ],
   "hashes_imagens": [
-    "b6c151cd25d6b8c6",
     "28295beb5c6a88e6",
     "2f9bd9a7c1db5789",
     "f195a95a0438174b",
@@ -2960,6 +2956,7 @@
     "a1e912a2b75c7396",
     "85a305e2ea2013ba",
     "62fc542cc615f556",
-    "fb996e2f273fa85f"
+    "fb996e2f273fa85f",
+    "81fc9d28e1c38750"
   ]
 }
