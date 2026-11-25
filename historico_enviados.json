@@ -1,10 +1,5 @@
 {
   "links": [
-    "33f3cdacaa840060",
-    "70f8fb1e9fbced3f",
-    "dceef971958b22df",
-    "9fd0d2279ef14db2",
-    "https://www.infomoney.com.br/politica/instituto-alerta-para-risco-de-fuga-de-capital-com-regra-para-empresas-estrangeiras/",
     "6b0d13a281cec299",
     "efbadbc3c0372788",
     "dc6ef41df12d19ed",
@@ -799,7 +794,12 @@
     "https://www.infomoney.com.br/economia/dolar-a-6-reais-impacto-inflacao-precos/",
     "2a159468e557ef37",
     "https://www.infomoney.com.br/business/global/gasolina-nos-eua-ficou-mais-barata-apos-meses-veja-os-fatores-por-tras-da-queda/",
-    "7cc43cf0f64fed27"
+    "7cc43cf0f64fed27",
+    "af28fcd884970a39",
+    "28f80c3e4c66c3c8",
+    "47c12f6b235bb881",
+    "https://investnews.com.br/negocios/leilao-energia-dinheiro-equipamentos/",
+    "f371f7f35110ddfa"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1540,10 +1540,10 @@
     "Câmara e partidos promovem “ambientação” para eleitos em Brasília",
     "Como seria um imposto sobre a riqueza na era dos bilionários da IA?",
     "Entenda como o dólar ao redor de R$ 6 encarece comida, eletrônicos e passagens aéreas",
-    "Gasolina nos EUA ficou mais barata após meses: veja os fatores por trás da queda"
+    "Gasolina nos EUA ficou mais barata após meses: veja os fatores por trás da queda",
+    "Após megaleilão de energia, corrida por financiamentos bilionários e equipamentos ganha força"
   ],
   "leads": [
-    "Nenhuma das sete fintechs brasileiras listadas nos Estados Unidos fechou no azul entre segunda-feira (16) e sexta-feira (20). O PicPay (PICS) teve a pior semana: caiu 32,35% e terminou cotado a US$ 5,02.",
     "A ANTT (Agência Nacional de Transportes Terrestres) aprovou nesta segunda-feira (23) os procedimentos para a assinatura do contrato de compra e venda de 100% das ações da Régis Bittencourt pela EPR. A decisão representa uma das últimas etapas do processo competitivo realizado para transferir o controle da concessão, após a repactuação do contrato o",
     "As demissões por iniciativa dos próprios trabalhadores estão na máxima histórica, mas perdendo fôlego. Entre janeiro e setembro de 2026, os pedidos de demissão “por conta própria” registraram a menor taxa de crescimento dos últimos seis anos, isto é, desde o início do Novo Cadastro Geral de Empregados (Caged), que passou a medir o emprego formal no",
     "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra.",
@@ -1792,13 +1792,10 @@
     "A Câmara dos Deputados, partidos políticos e frentes temáticas têm aproveitado o final de ano para promover uma ambientação para parlamentares eleitos em Brasília. A ideia é apresentar os futuros deputados federais e senadores ao dia a dia do Congresso Nacional e aos processos legislativos com os quais terão de lidar pelos próximos anos.",
     "A oferta pública inicial da Anthropic criou milionários (e alguns bilionários) da noite para o dia, e o momento em que isso aconteceu é complexo.",
     "Os efeitos da escalada do dólar ao patamar de R$ 6, após acumular avanço de 14,6% entre 21 de outubro e 20 de novembro, não se restringem ao mercado financeiro e se estendem para a inflação nos próximos meses.",
-    "O preço médio da gasolina nos Estados Unidos caiu quase 90 centavos por galão em dois meses, atingindo o menor nível desde os primeiros dias da guerra com o Irã — bem a tempo para as viagens do feriado de Ação de Graças."
+    "O preço médio da gasolina nos Estados Unidos caiu quase 90 centavos por galão em dois meses, atingindo o menor nível desde os primeiros dias da guerra com o Irã — bem a tempo para as viagens do feriado de Ação de Graças.",
+    "Eneva, Petrobras e Âmbar Energia, do grupo J&F, foram as grandes vencedoras do leilão, concentrando juntas quase metade da potência contratada. Entre as geradoras com hidrelétricas, destacaram-se Copel, Axia (ex-Eletrobras), Engie e a chinesa SPIC."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_fundos::FUNDOS_EVENTO",
-      "ts": 1795421186.615183
-    },
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795421828.127607
@@ -2629,7 +2626,6 @@
     }
   ],
   "hashes_imagens": [
-    "2858539c9fd2c9d1",
     "939078d02967eebc",
     "0b063ef0bb04d174",
     "2d69737aece53c9b",
@@ -2928,6 +2924,7 @@
     "1377d14801b9b5ed",
     "f26b50cc4387f901",
     "6890ed314ab53a8f",
-    "0c85553693d6e314"
+    "0c85553693d6e314",
+    "c622ce995e697716"
   ]
 }
