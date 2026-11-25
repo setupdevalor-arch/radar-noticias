@@ -1,7 +1,5 @@
 {
   "links": [
-    "22c104434b6f64fa",
-    "36f5b481cd0ea257",
     "https://www.infomoney.com.br/mercados/jpmorgan-ve-alivio-no-caixa-do-gpa-pcar3-apos-renegociacao-de-divida-trabalhista/",
     "29a33c9d6874ae8a",
     "https://www.cnnbrasil.com.br/economia/investimentos/investir-em-ipos-pode-trazer-riscos-para-o-investidor-diz-economista/",
@@ -799,7 +797,9 @@
     "https://g1.globo.com/tecnologia/noticia/2026/11/24/apos-voltar-ao-comando-da-nvidia-jensen-huang-pede-desculpas-por-traicao-e-diz-fazer-terapia.ghtml",
     "ecb3c52a0b594b55",
     "87de185193e3ed21",
-    "c620c244bafb91c5"
+    "c620c244bafb91c5",
+    "https://www.estadao.com.br/economia/coluna-da-broad/com-melhora-do-setor-venda-de-fatia-da-ipiranga-pela-ultrapar-esfria/",
+    "da228556b4c9d4ae"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1521,10 +1521,10 @@
     "Boato de mais ajuste sobre contas públicas soa como música para bolsa, mas alívio não dura",
     "Câmara deve votar projeto de regulação das big techs em 1º de dezembro",
     "Ciberataque expõe dados não secretos de agências dos EUA",
-    "Após voltar ao comando da Nvidia, Jensen Huang pede desculpas por traição e diz fazer terapia"
+    "Após voltar ao comando da Nvidia, Jensen Huang pede desculpas por traição e diz fazer terapia",
+    "Com melhora do setor, venda de fatia da Ipiranga pela Ultrapar esfria"
   ],
   "leads": [
-    "A Climatempo prevê, para esta quarta-feira (25), máximas entre 35 °C e 37 °C em seis cidades rondonienses, com três dias consecutivos de calor acima da referência climatológica de cada local.",
     "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo.",
     "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021.",
     "O governo brasileiro planeja reduzir gradualmente o subsídio aos combustíveis a partir do próximo mês, apesar dos conflitos globais, como a guerra EUA-Irã. Criado em março para mitigar o impacto dos preços internacionais, o subsídio ao diesel, atualmente em R$ 2,12 por litro, visa conter a inflação e garantir o abastecimento. A medida, que já custo",
@@ -1773,7 +1773,8 @@
     "Saldo do Dia: Bolsa ensaiou ter um dia de glória com notícia de que o presidente Lula autorizou a equipe a mandar ao Congresso uma proposta para tratar do controle das despesas obrigatórias, mas os relatos ainda são boatos",
     "Novo parecer de Aliel Machado restringe enquadramento das plataformas digitais no regime especial de fiscalização e limita poderes do Cade",
     "A CIA e a Oficina do Diretor de Inteligência Nacional dos Estados Unidos detectaram uma invasão cibernética que expôs parte de informações não classificadas. O ataque atingiu uma rede usada para identificar dados de inteligência a partir de materiais públicos. Até o momento, não se sabe quais dados foram comprometidos nem a extensão do incidente, e",
-    "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana."
+    "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana.",
+    "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes."
   ],
   "eventos_recentes": [
     {
@@ -2587,10 +2588,13 @@
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795567968.658375
+    },
+    {
+      "chave": "ultrapar::GERAL_ATIVO",
+      "ts": 1795568958.394544
     }
   ],
   "hashes_imagens": [
-    "497e5801aa2b375c",
     "a2377665360772f6",
     "30fe4b6680fa3d92",
     "8c0ff647567a1cf1",
@@ -2889,6 +2893,7 @@
     "bef2aeefd45f2824",
     "1715654018118bd1",
     "c21b4642ffb14d4e",
-    "da507594c5b4c874"
+    "da507594c5b4c874",
+    "38d124910257783c"
   ]
 }
