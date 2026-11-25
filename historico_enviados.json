@@ -1,13 +1,5 @@
 {
   "links": [
-    "3ca202379bdc863e",
-    "6b37fe25e455c9df",
-    "ec9c6fdcc4939a04",
-    "fd2178d301f6e41c",
-    "https://investnews.com.br/investimentos/dolar-a-r-6-acende-alerta-sobre-inflacao-veja-como-a-alta-pode-elevar-o-ipca/",
-    "6df58f6e329f7439",
-    "3d2afaf7d4d2de34",
-    "b0d9893c72ac6ebc",
     "8100526b2a1c6562",
     "a83f1e3e8c7aff25",
     "https://bmcnews.com.br/mercados/bolsas-europeias-sobem-com-techs-e-mineradoras-apos-quatro-quedas/",
@@ -799,7 +791,15 @@
     "e9729a89b1160c99",
     "db494e4b98ebb55f",
     "https://www.spacemoney.com.br/economia/macroeconomia/ashmore-dois-caminhos-brasil-risco-fiscal/",
-    "659527aa781eb5fc"
+    "659527aa781eb5fc",
+    "https://www.moneytimes.com.br/bolsas-da-asia-fecham-em-baixa-com-duvidas-sobre-ia-e-temor-de-novas-tarifas-dos-eua-fets/",
+    "282f720907bee94d",
+    "https://investnews.com.br/investimentos/etfs-de-bitcoin-caminham-para-pior-mes-da-historia/",
+    "537ce1414c8dea05",
+    "https://telesintese.com.br/anatel-rejeita-recurso-da-tim-para-manter-ferramenta-antispam-em-operacao/",
+    "a668c003992f9b4b",
+    "https://www.infomoney.com.br/economia/governo-amplia-previsao-de-deficit-primario-para-2026/",
+    "0170abc6633c29dc"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1561,13 +1561,13 @@
     "Banco Inter demite mais de 200 funcionários, diz sindicato",
     "Mini-índice (WINZ26): abaixo das médias, ativo pode buscar novos suportes",
     "Dell eleva previsões de lucro e receita após trimestre impulsionado por IA",
-    "Gestor da Ashmore vê dois caminhos para o Brasil"
+    "Gestor da Ashmore vê dois caminhos para o Brasil",
+    "Bolsas da Ásia fecham em baixa com dúvidas sobre IA e temor de novas tarifas dos EUA",
+    "ETFs de bitcoin caminham para pior mês da história",
+    "Anatel rejeita recurso da TIM para manter ferramenta AntiSpam em operação",
+    "Governo amplia previsão de déficit primário para 2026"
   ],
   "leads": [
-    "A Comissão de Valores Mobiliários (CVM) suspendeu o registro do Banco de Brasília (BRB – BSLI3) como companhia aberta após a falta de um ano nos lançamentos de balanços trimestrais. Junto com o BRB, mais quatro companhias de capital aberto perderam seus registros.",
-    "A Advocacia-Geral da União (AGU) se manifestou contra a liminar do ministro do Supremo Tribunal Federal (STF) Flávio Dino que flexibilizou os prazos para folgas após o fim da escala 6×1. No documento enviado ao ministro nesta segunda-feira, 23, o braço jurídico do governo sustenta que as questões tratadas pela liminar são contempladas pelo decreto ",
-    "Neste fim de ano, podemos ter “uma surpresa muito boa” e, possivelmente, “um dos melhores Natais” para o varejo e para a venda de proteínas, na avaliação de Marcos Molina, presidente do conselho de administração da MBRF (MBRF3), gigante dona de marcas como Sadia, Perdigão e Bassi.",
-    "A projeção para o IPCA (Índice Nacional de Preços ao Consumidor Amplo), índice de inflação, deste ano subiu de 4,9% para 5,3%",
     "No Itaú, Milton Maluhy renovou toda a cúpula do banco e aposta em uma nova cultura de gestão, com menos hierarquia, mais autonomia e preparação de sucessores",
     "Em meio à volatilidade dos mercados presidente do BC afirma que postura conservadora adotada anteriormente permite ganhar tempo",
     "O etanol continua sendo a opção mais vantajosa para carros flex em 16 estados e no Distrito Federal, mesmo após a terceira alta consecutiva do combustível. Na primeira quinzena de novembro, o litro do etanol fechou a R$ 4,38, em média, avanço de 1,39%, enquanto a gasolina recuou 0,89%, para R$ 6,67. Os dados são do Índice de Preços Edenred Ticket L",
@@ -1813,7 +1813,11 @@
     "– O banco digital Inter demitiu ‌na manhã desta terça-feira mais de 200 funcionários, ‌afirmou o Sindicato dos Bancários de Belo Horizonte, em comunicado.",
     "Os contratos de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,58%, aos 165.305 pontos, após registrarem mínima de 165.180 pontos e máxima de 168.935 pontos. Apesar da lateralização observada nos últimos dois pregões, o ativo permanece em tendência de baixa no gráfico de 15 minutos.",
     "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial.",
-    "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi"
+    "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi",
+    "As bolsas asiáticas fecharam em baixa nesta quarta-feira (25), com a perda de força do alívio provocado pela volta de Jensen Huang ao comando da Nvidia e o aumento das dúvidas sobre as perspectivas para a inteligência artificial (IA). O temor de novas tarifas também voltou ao radar, após notícias de que os Estados Unidos poderiam elevar as alíquota",
+    "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
+    "O presidente da Agência Nacional de Telecomunicações (Anatel), Alexandre Freire, negou nesta terça-feira, 24, o pedido de efeito suspensivo apresentado pela TIM contra a medida cautelar que determinou a interrupção do funcionamento de sua ferramenta de combate às chamadas massivas, denominada AntiSpam. A agência identificou bloqueios indevidos de t",
+    "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro."
   ],
   "eventos_recentes": [
     {
@@ -2639,13 +2643,21 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795601299.115355
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795602384.415285
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795602384.415285
+    },
+    {
+      "chave": "tim::GERAL_ATIVO",
+      "ts": 1795602384.415285
     }
   ],
   "hashes_imagens": [
-    "0106e18b1d63d732",
-    "a3a804818270ff69",
-    "be2a7e9851d78548",
-    "5e38d005007ff3d1",
     "cc81d342fb9655aa",
     "81c20fde124b6327",
     "e047fc50459e6c4c",
@@ -2941,6 +2953,10 @@
     "51adc794aa4183da",
     "05748b4837700cbe",
     "f35351c05b33067b",
-    "b1582f7d6147d82b"
+    "b1582f7d6147d82b",
+    "8629c3ec1543ddbb",
+    "7e7e124a10fb4658",
+    "30ce5ccabccecf42",
+    "70ef74244428f58d"
   ]
 }
