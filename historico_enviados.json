@@ -1,7 +1,5 @@
 {
   "links": [
-    "2329e57b7d033a97",
-    "d3e1c0223dd8c014",
     "901ae9b2a1a974c7",
     "70f8c9007de7acfe",
     "https://www.cnnbrasil.com.br/internacional/cop31-geopolitica-e-agenda-desalinhada-ajudaram-no-fracasso-diz-diretora/",
@@ -799,10 +797,11 @@
     "019e71d933db0bbf",
     "f952e2f33e0bd5d7",
     "https://megawhat.uol.com.br/armazenamento/weg-habilita-sistema-de-baterias-para-leilao-de-reserva-de-capacidade/",
-    "97f9f96153a52601"
+    "97f9f96153a52601",
+    "https://telesintese.com.br/preco-das-memorias-dram-deve-subir-ate-22-em-2027-estima-abisemi/",
+    "626863e65bbf6f25"
   ],
   "titulos": [
-    "Iniciativa do governo Tump para destinar US$ 50 bilhões para a aviação enfrenta oposição nos EUA",
     "'Identidade e memória': entenda por que o STF agora tem uma escultura de Xangô no acesso ao plenário",
     "O sarampo voltou oficialmente aos Estados Unidos. E agora?",
     "Disney amplia investimentos em novas séries e filmes em meio à turbulência do setor",
@@ -1601,10 +1600,10 @@
     "Índice de Letras Financeiras lidera valorização da renda fixa na B3 em outubro",
     "Itaú (ITUB4) agenda provento de dezembro",
     "APTO11 revê locação e monitora CRI Gafisa",
-    "WEG habilita sistema de baterias para leilão de reserva de capacidade"
+    "WEG habilita sistema de baterias para leilão de reserva de capacidade",
+    "Preço das memórias DRAM deve subir até 22% em 2027, estima ABISEMI"
   ],
   "leads": [
-    "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
     "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos",
     "A Localiza Rent a Car S.A. (RENT3 e RENT4; OTCQX: LZRFY) informou, em comunicado ao mercado datado de 23 de novembro de 2026, ter recebido correspondência do Norges Bank sobre alteração em sua participação acionária.",
     "Apesar das guerras em curso no Oriente Médio e na Ucrânia, o mercado global de petróleo deverá voltar a conviver com um excesso de oferta nos próximos dois anos, pressionando os preços da commodity, segundo relatório de perspectivas para 2027 e 2028 de Natasha Kaneva, Lyuba Savinova e Artem Fakhretdinov, do JPMorgan.",
@@ -1853,7 +1852,8 @@
     "Os investimentos ligados a letras financeiras foram o destaque da renda fixa na B3 em outubro. Os índices que acompanham as debêntures e os títulos públicos atrelados à Selic também integram Top 5 do mês entre os indicadores calculados pela bolsa do Brasil.",
     "Segundo a Suno Notícias, o Itaú Unibanco (ITUB4) fará em 4 de janeiro de 2027, no Brasil, o pagamento dos proventos de dezembro. A instituição mantém o crédito mensal no primeiro dia útil seguinte ao mês de referência e usa como base a carteira registrada no fechamento do último pregão do mês precedente.",
     "O Vinci Residencial FII (APTO11), sob gestão da Vinci Compass, fechou novas condições para um contrato de locação em outubro e viu o aluguel recebido cair 20%, conforme a Suno Notícias. O acordo vale até fevereiro de 2027. Em setembro, a receita imobiliária foi de R$ 97,8 mil; em outubro, ficou perto de R$ 79 mil.",
-    "A WEG conseguiu o credenciamento de seu pack de baterias de lítio na rota 2 do Banco Nacional de Desenvolvimento Econômico e Social (BNDES). O registro posiciona a companhia para participar do primeiro leilão de reserva de capacidade (LRCap) com armazenamento do Brasil, marcado para começar na próxima quarta-feira, 2 de dezembro."
+    "A WEG conseguiu o credenciamento de seu pack de baterias de lítio na rota 2 do Banco Nacional de Desenvolvimento Econômico e Social (BNDES). O registro posiciona a companhia para participar do primeiro leilão de reserva de capacidade (LRCap) com armazenamento do Brasil, marcado para começar na próxima quarta-feira, 2 de dezembro.",
+    "Os preços das memórias DRAM devem registrar aumentos de 18% a 22% em 2027, mesmo com a expectativa de expansão da oferta mundial de memórias. Já os preços das memórias Flash devem apresentar variação de zero a 5%. As projeções foram apresentadas pelo presidente da Associação Brasileira da Indústria de Semicondutores (ABISEMI), Rogério Nunes, durant"
   ],
   "eventos_recentes": [
     {
@@ -2678,7 +2678,6 @@
     }
   ],
   "hashes_imagens": [
-    "28a353db9097bf96",
     "bdd749d3fe75e352",
     "30c57939798db84a",
     "e58afa94d96b2b71",
@@ -2977,6 +2976,7 @@
     "afbcb3710ae09f5d",
     "87d26cbdf8e96c5f",
     "fafc8fc631b6ec0b",
-    "3ab27176f9559940"
+    "3ab27176f9559940",
+    "864a2e118e97e841"
   ]
 }
