@@ -1,7 +1,5 @@
 {
   "links": [
-    "704b325505bd6b49",
-    "c93006a1bb070883",
     "e6d95de4c17f47a3",
     "55b801df623573e5",
     "6dbe2d288adb103b",
@@ -799,7 +797,9 @@
     "https://www.estadao.com.br/economia/preocupacao-fiscal-cresce-e-bancos-de-ny-a-faria-lima-reduzem-recomendacao-de-brasil-nas-carteiras/",
     "04d5243d4eaaa760",
     "https://www.spacemoney.com.br/economia/macroeconomia/treasuries-recuam-espera-inflacao-eua/",
-    "063553feab9c994c"
+    "063553feab9c994c",
+    "https://www.spacemoney.com.br/tecnologia/ue-fundo-ia-computacao-quantica/",
+    "be8a36fe5bc882ec"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1548,10 +1548,10 @@
     "Retorno de Huang à Nvidia traz à tona debate sobre IA de código aberto",
     "‘Brasil voltará a ser punido se cenário externo piorar’, diz economista-chefe do Barclays",
     "Preocupação fiscal cresce e bancos de NY à Faria Lima reduzem recomendação de Brasil nas carteiras",
-    "Treasuries recuam à espera de dados de inflação nos EUA"
+    "Treasuries recuam à espera de dados de inflação nos EUA",
+    "UE articula fundo de €50 bi para IA e computação quântica"
   ],
   "leads": [
-    "– O crescimento da atividade empresarial nos Estados Unidos desacelerou ainda mais em novembro uma vez que os preços elevados frearam novos pedidos e as restrições de capacidade limitaram a produção, mostrou uma pesquisa divulgada nesta segunda-feira.",
     "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
     "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês",
     "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente.",
@@ -1800,13 +1800,10 @@
     "A crise de liderança na Nvidia trouxe à tona uma disputa sobre modelos de inteligência artificial de código aberto, na qual o presidente-executivo, Jensen Huang, se tornou uma das vozes mais influentes em Washington a favor do desenvolvimento, pelos Estados Unidos, de uma tecnologia atualmente dominada por empresas chinesas.",
     "A pergunta que Roberto Secemski, economista-chefe do Barclays para o Brasil, mais ouviu durante um evento do banco para mais de 100 investidores locais, na semana passada, em São Paulo, foi quando os estrangeiros mudarão de humor em relação ao Brasil. Historicamente, eles têm sido menos céticos do que os investidores domésticos. Enquanto ainda dão ",
     "'Não é o sistema financeiro que que vai me ensinar a dirigir o País', diz Lula",
-    "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças."
+    "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças.",
+    "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795424354.150907
-    },
     {
       "chave": "btg_pactual::GERAL_ATIVO",
       "ts": 1795424996.028502
@@ -2649,7 +2646,6 @@
     }
   ],
   "hashes_imagens": [
-    "b6c6fa5035d7297a",
     "c3cbdfb79b0859d8",
     "bebc0a65cd096d45",
     "f8965016d9913c99",
@@ -2948,6 +2944,7 @@
     "b4388341e3202d5e",
     "9d5fc9a9ad7c7faa",
     "646ba821021dee93",
-    "96ff04cf499bf9f6"
+    "96ff04cf499bf9f6",
+    "18c8d278b3a1a42a"
   ]
 }
