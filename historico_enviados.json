@@ -1,7 +1,5 @@
 {
   "links": [
-    "96c988ae0831a5e4",
-    "d199309fe0eb8ecb",
     "5b7bbeafd2f7ee0d",
     "15b767dcfdb9bf0e",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/bgrj11-segunda-emissao-cotas/",
@@ -799,10 +797,11 @@
     "https://www.moneytimes.com.br/irb-irbr3-o-que-fez-o-btg-elevar-o-preco-alvo-da-acao-e-enxergar-potencial-de-alta-de-54-lmrs/",
     "c1958c57fc3fcdd9",
     "https://www.moneytimes.com.br/ouro-fecha-em-queda-com-perspectiva-de-alta-dos-juros-nos-eua-apos-pce-davs/",
-    "6416da07fcdb4990"
+    "6416da07fcdb4990",
+    "https://www.moneytimes.com.br/livro-bege-precos-sobem-moderadamente-nos-eua-emprego-e-economia-mostram-avanco-leve-ccgg/",
+    "82ba626e89cd2ca3"
   ],
   "titulos": [
-    "Banco Central anuncia leilões de linha no total de US$ 1 bilhão para manhã de hoje",
     "Os filhos que lutam na Justiça para apagar nomes de pais ausentes ou abusivos dos documentos",
     "Governo publica decreto que simplifica exportação de cosméticos para América Latina",
     "Por que 'humano' foi escolhida como a palavra do ano pelo Dicionário de Cambridge",
@@ -1601,10 +1600,10 @@
     "Reforma tributária não muda rota da Amazon, que ampliará centros logísticos em 2027",
     "Self storage cresce e atrai atenção de FIIs",
     "IRB (IRBR3): o que fez o BTG elevar o preço-alvo da ação e enxergar potencial de alta de 54%?",
-    "Ouro fecha em queda com perspectiva de alta dos juros nos EUA após PCE"
+    "Ouro fecha em queda com perspectiva de alta dos juros nos EUA após PCE",
+    "Livro Bege: preços sobem moderadamente nos EUA; emprego e economia mostram avanço leve"
   ],
   "leads": [
-    "O Google e a Adobe revelaram uma expansão de sua parceria que coloca o Acrobat dentro do Drive e do Gmail e adiciona funções do Photoshop ao Gemini. O anúncio foi feito em 10 de novembro, no Adobe MAX.",
     "Bancos de alimentos dos Estados Unidos estão registrando procura superior aos níveis observados no auge da pandemia de Covid-19, e boa parte das pessoas atendidas atualmente tem emprego formal, segundo reportagem da CNBC. O quadro é descrito por entidades que atuam em Nova York, Los Angeles e Atlanta.",
     "O pacote combina o bloqueio de gastos com iniciativas para aumentar a arrecadação, como redução de renúncias tributárias.",
     "A Vale adquiriu a participação de 33,33% detida pela Coteminas, em recuperação judicial, no consórcio da hidrelétrica Porto Estrela, localizada entre os municípios de Braúnas, Joanésia e Açucena, em Minas Gerais. A operação envolve a transferência integral da fatia da Coteminas no empreendimento para a mineradora e foi aprovada pelo Conselho Admini",
@@ -1853,13 +1852,10 @@
     "A Reforma Tributária, que deve alterar a lógica histórica de localização de centros de distribuição no Brasil ao reduzir a relevância dos incentivos fiscais estaduais, não deve provocar mudanças na estratégia logística da Amazon (AMZO34) no país. Pelo contrário: a companhia pretende expandir sua rede de operações, aumentar o número de centros logís",
     "A Suno Notícias informou que o avanço de apartamentos compactos em grandes centros urbanos tem ampliado a procura por self storage, serviço de locação para guardar móveis, itens pessoais e mercadorias. O segmento começa a ser observado como possível alternativa de diversificação para fundos imobiliários focados em renda.",
     "O BTG Pactual elevou o preço-alvo do IRB (IRBR3) de R$ 75 para R$ 90, reiterando a recomendação de compra. O novo preço implica um potencial de alta de 54,2%. O banco atualizou as estimativas para incorporar os resultados da resseguradora no terceiro trimestre de 2026 e o impacto da Lei 15.525/2026, que altera regras tributárias para resseguradoras",
-    "O ouro entendeu as perdas da véspera e fechou em queda nesta quarta-feira (25). O metal segue sob pressão das expectativas de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), após a divulgação de dados de inflação dos Estados Unidos."
+    "O ouro entendeu as perdas da véspera e fechou em queda nesta quarta-feira (25). O metal segue sob pressão das expectativas de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), após a divulgação de dados de inflação dos Estados Unidos.",
+    "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado."
   ],
   "eventos_recentes": [
-    {
-      "chave": "raizen::GERAL_ATIVO",
-      "ts": 1795461855.513999
-    },
     {
       "chave": "equatorial::GERAL_ATIVO",
       "ts": 1795463033.661648
@@ -2691,10 +2687,13 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795634298.059259
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795635320.236499
     }
   ],
   "hashes_imagens": [
-    "bc63738617ea4806",
     "137464607073a10e",
     "97c138d4eec39b1d",
     "2edba1359d1736c1",
@@ -2993,6 +2992,7 @@
     "3d707c741402562d",
     "182ce856eb35ed6d",
     "81fce3ed060dcc71",
-    "d63b0cd8f178da64"
+    "d63b0cd8f178da64",
+    "af5d2c257265eb07"
   ]
 }
