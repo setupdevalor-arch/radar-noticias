@@ -1,9 +1,5 @@
 {
   "links": [
-    "e6d95de4c17f47a3",
-    "55b801df623573e5",
-    "6dbe2d288adb103b",
-    "1e62c0276bfaf6b2",
     "50bbc86488030b2f",
     "https://www.poder360.com.br/poder-economia/carteira-de-credito-no-brasil-deve-crescer-04-em-outubro-diz-febraban/",
     "168f3afe38dccfcb",
@@ -799,7 +795,11 @@
     "https://www.spacemoney.com.br/economia/macroeconomia/treasuries-recuam-espera-inflacao-eua/",
     "063553feab9c994c",
     "https://www.spacemoney.com.br/tecnologia/ue-fundo-ia-computacao-quantica/",
-    "be8a36fe5bc882ec"
+    "be8a36fe5bc882ec",
+    "1f5b049df0bba489",
+    "24fb064161667681",
+    "https://www.bloomberglinea.com.br/negocios/ceo-da-latam-ve-demanda-estavel-e-mantem-planos-com-jatos-da-embraer-no-brasil/",
+    "c5185144d5cbb3ea"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1549,10 +1549,10 @@
     "‘Brasil voltará a ser punido se cenário externo piorar’, diz economista-chefe do Barclays",
     "Preocupação fiscal cresce e bancos de NY à Faria Lima reduzem recomendação de Brasil nas carteiras",
     "Treasuries recuam à espera de dados de inflação nos EUA",
-    "UE articula fundo de €50 bi para IA e computação quântica"
+    "UE articula fundo de €50 bi para IA e computação quântica",
+    "CEO da Latam vê demanda estável e mantém planos com jatos da Embraer no Brasil"
   ],
   "leads": [
-    "A MBRF (MBRF3) avalia que as vendas de proteínas na campanha de Natal e final de ano devem ter um impulso adicional do fim das “bets” no Brasil, proporcionando mais recursos para consumidores investirem em produtos para a ceia, disse o presidente do conselho de administração da empresa de alimentos, Marcos Molina, nesta segunda-feira.",
     "Pesquisa indica desaceleração do crescimento anual de 8,6% para 8%; crédito às famílias deve avançar 0,7% no mês",
     "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente.",
     "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões.",
@@ -1801,7 +1801,8 @@
     "A pergunta que Roberto Secemski, economista-chefe do Barclays para o Brasil, mais ouviu durante um evento do banco para mais de 100 investidores locais, na semana passada, em São Paulo, foi quando os estrangeiros mudarão de humor em relação ao Brasil. Historicamente, eles têm sido menos céticos do que os investidores domésticos. Enquanto ainda dão ",
     "'Não é o sistema financeiro que que vai me ensinar a dirigir o País', diz Lula",
     "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças.",
-    "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times."
+    "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
+    "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo."
   ],
   "eventos_recentes": [
     {
@@ -2643,10 +2644,13 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795597009.913837
+    },
+    {
+      "chave": "embraer::GERAL_ATIVO",
+      "ts": 1795597706.063165
     }
   ],
   "hashes_imagens": [
-    "c3cbdfb79b0859d8",
     "bebc0a65cd096d45",
     "f8965016d9913c99",
     "6f00daf056a50911",
@@ -2945,6 +2949,7 @@
     "9d5fc9a9ad7c7faa",
     "646ba821021dee93",
     "96ff04cf499bf9f6",
-    "18c8d278b3a1a42a"
+    "18c8d278b3a1a42a",
+    "c983109ec3c37c92"
   ]
 }
