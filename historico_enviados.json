@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.estadao.com.br/economia/coluna-da-broad/metade-dos-executivos-preve-retorno-de-investimentos-em-ia-em-ate-12-meses/",
-    "8c6af80406dcfc40",
-    "https://www.spacemoney.com.br/politica/damares-alves-fachin-vorcaro-depoimento-senado/",
     "00cf7c8d4581eea1",
     "https://www.spacemoney.com.br/tecnologia/crowdstrike-zscaler-aquisicao-44-bilhoes/",
     "878bcfc8c9c1ae7d",
@@ -799,10 +796,12 @@
     "https://www.spacemoney.com.br/economia/exterior/risco-tarifario-pce-mercados-globais/",
     "c1272cb18c3f47da",
     "https://www.spacemoney.com.br/economia/exterior/tempestade-thanksgiving-viagens-eua/",
-    "66fa3439041bbaec"
+    "66fa3439041bbaec",
+    "50a30ea6be577904",
+    "https://www.cnnbrasil.com.br/politica/fux-nega-prorrogacao-de-contrato-entre-brb-e-tj-ba-sobre-precatorios/",
+    "9c36fc10735765c4"
   ],
   "titulos": [
-    "Eco Invest, o cartão de visita da política climática brasileira",
     "Serviço Geológico do Brasil prepara a maior campanha de sua história",
     "“Seja um benfeitor para alguém.” Warren Buffett e o ROI da bondade",
     "Como acabar com a jabuticaba dos juros. Sem truque",
@@ -1601,10 +1600,10 @@
     "Black Friday amplia espaço para bebidas, cosméticos e itens para casa",
     "Com US$ 41 bi, Sanofi faz maior M&A em 20 anos e mira medicamentos respiratórios",
     "Risco tarifário e PCE pressionam mercados globais",
-    "Ventos e chuva ameaçam viagens de Thanksgiving nos EUA"
+    "Ventos e chuva ameaçam viagens de Thanksgiving nos EUA",
+    "Fux nega prorrogação de contrato entre BRB e TJ-BA sobre precatórios"
   ],
   "leads": [
-    "Embora tenha como alvo as grandes plataformas digitais, o PL 4675/2025 preocupa entidades empresariais pelos possíveis efeitos sobre negócios que dependem desses ecossistemas. As associações ouvidas por Mobile Time, Abes e Amobitec, alertam para riscos de aumento de custos, insegurança jurídica e impactos sobre investimentos, serviços e empresas de",
     "O BRB informou que mantém o atendimento a clientes e o pagamento de compromissos com depositantes e fornecedores, apesar de a CVM ter suspendido seu registro de companhia aberta, segundo o g1. A decisão foi divulgada nesta segunda-feira (23).",
     "O ministério do Trabalho publicou, nesta segunda-feira (23), uma portaria com regras complementares ao decreto assinado na última quinta-feira (19), que regulamentou a jornada de trabalho 5x2, com cinco dias de trabalho e dois de descanso, a partir de 16 de dezembro.",
     "O Movimento Brasil Competitivo (MBC), entidade que completa 25 anos e que foi criada por um industrial, Jorge Gerdau, da Gerdau, agora muda de mãos. O comando passa para o banqueiro Luiz Carlos Trabuco, presidente do Conselho do Bradesco.",
@@ -1853,13 +1852,10 @@
     "A Black Friday deixou de ser uma data concentrada na compra de televisores, celulares e grandes eletrodomésticos. Ao longo dos últimos anos, produtos de consumo recorrente, como bebidas, alimentos, cosméticos e itens de higiene e beleza, passaram a ganhar espaço nas promoções de novembro.",
     "A Sanofi comprará a farmacêutica norte-americana Insmed por US$ 41 bilhões em dinheiro, informou a empresa nesta terça-feira. Trata-se de sua maior transação em duas décadas, em ‌um momento em que a CEO Belen Garijo busca reestruturar a empresa francesa e encontrar novas fontes de crescimento além do medicamento de grande sucesso ‌Dupixent.",
     "Os mercados globais operam sob pressão nesta quarta-feira, 25, à espera do índice de preços de gastos com consumo pessoal (PCE) de outubro dos Estados Unidos e diante da possibilidade de uma nova rodada de tarifas comerciais do governo de Donald Trump. O cenário de aversão ao risco derruba bolsas na Ásia, mantém os futuros de Nova York no vermelho ",
-    "Uma combinação de tempestades nas duas costas dos Estados Unidos ameaça as viagens de Thanksgiving, feriado celebrado nesta quinta-feira, 26 de novembro, com chuva forte, rajadas que podem superar 60 mph e risco de enchentes costeiras. Mais de 81 milhões de pessoas devem se deslocar no período, segundo projeção da AAA, enquanto companhias aéreas já"
+    "Uma combinação de tempestades nas duas costas dos Estados Unidos ameaça as viagens de Thanksgiving, feriado celebrado nesta quinta-feira, 26 de novembro, com chuva forte, rajadas que podem superar 60 mph e risco de enchentes costeiras. Mais de 81 milhões de pessoas devem se deslocar no período, segundo projeção da AAA, enquanto companhias aéreas já",
+    "O ministro Luiz Fux, do STF (Supremo Tribunal Federal), negou um pedido do BRB (Banco Regional de Brasília) para prorrogar um contrato da instituição com o TJ-BA (Tribunal de Justiça da Bahia) sobre a custódia de cerca de R$ 2 bilhões em recursos de precatórios."
   ],
   "eventos_recentes": [
-    {
-      "chave": "totvs::GERAL_ATIVO",
-      "ts": 1795441411.405437
-    },
     {
       "chave": "apple::GERAL_ATIVO",
       "ts": 1795442207.593635
@@ -2698,7 +2694,6 @@
     }
   ],
   "hashes_imagens": [
-    "dbf7fbc5d532f695",
     "c5ddbcdbd9b6682e",
     "b6c4fa4150e41043",
     "a1e93b92a6167101",
@@ -2997,6 +2992,7 @@
     "bc0e5eb6908decdf",
     "11283ea198b0d7fe",
     "2e85951eeb057abc",
-    "bee328d6db4d40fb"
+    "bee328d6db4d40fb",
+    "6b29610d3d131f96"
   ]
 }
