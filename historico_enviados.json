@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/acoes/sanofi-compra-insmed-41-bilhoes/",
-    "2803dfe58815e320",
-    "https://www.infomoney.com.br/mercados/rd-saude-radl3-aprova-recompra-de-ate-r-600-milhoes-de-acoes/",
-    "055276f7601ed72d",
-    "https://www.infomoney.com.br/mercados/prio-aprova-cisao-parcial-com-transferencia-de-r-5438-milhoes-em-patrimonio/",
-    "ee13b7e9fc93432a",
-    "https://agenciainfra.com/blog/energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil/?utm_source=rss&utm_medium=rss&utm_campaign=energia-que-conecta-o-futuro-a-trajetoria-da-edp-em-tres-decadas-de-brasil",
     "ae9f575b6c310936",
     "a02162128b60d4a0",
     "055571aacdd0c391",
@@ -799,11 +792,16 @@
     "a0bf3d0354c66a02",
     "82cae68e2b844169",
     "https://www.spacemoney.com.br/economia/macroeconomia/crescimento-pib-2026-guyana-kuwait/",
-    "2e3cd4926c2eb32d"
+    "2e3cd4926c2eb32d",
+    "ea8da398f2f89783",
+    "68a5001a144c075a",
+    "c437f28abe6f7540",
+    "https://www.moneytimes.com.br/ajuste-fiscal-nao-e-sobre-cortar-beneficios-sociais-diz-economista-chefe-da-itau-asset-mlim/",
+    "be580d736155d205",
+    "https://www.spacemoney.com.br/tecnologia/kalshi-moratorias-data-centers-eua/",
+    "94381e69ef9d6178"
   ],
   "titulos": [
-    "IA ajuda a achar falha crítica no Java, plataforma de software vital para a internet",
-    "Banco do Brasil (BBAS3) nega empréstimos a ‘fazendas fantasmas’ e CPFs inexistentes",
     "Senado aprova R$ 13,5 bilhões em crédito a exportadores afetados por tarifas e guerras",
     "Erros em atualizações estão por trás de falhas tecnológicas, diz inteligência dos EUA",
     "O que é o ajuste fiscal que o mercado cobra de Lula? Entenda por que ele desagrada muita gente e divide economistas",
@@ -1601,11 +1599,11 @@
     "Governo prevê arrecadar R$ 175 bi com petróleo e mais R$ 12 bi para subsídios a combustíveis",
     "Lojistas enfrentam ameaça de ataques com IA às vésperas da Black Friday",
     "Subsídios a combustíveis podem chegar a R$ 85 bilhões",
-    "Guyana no topo, Golfo em queda: o PIB de 2026"
+    "Guyana no topo, Golfo em queda: o PIB de 2026",
+    "Ajuste fiscal não é sobre cortar benefícios sociais, diz economista-chefe da Itaú Asset",
+    "Kalshi vê chance maior de moratória para data centers"
   ],
   "leads": [
-    "Carros elétricos serão maioria nas ruas antes do que você pensa",
-    "Bloomberg Línea — O capital estrangeiro de longo prazo continua a buscar negócios no Brasil, apesar da volatilidade externa e da incerteza fiscal.",
     "Executivo vê mandatos híbridos como próximo passo da indústria e projeta elevar a participação do setor imobiliário para até 25% dos negócios",
     "Uma operação coordenada de perfis falsos turbinados por inteligência artificial está sendo mobilizada para tentar influenciar as eleições locais de Taiwan, marcadas para 28 de novembro, quando os eleitores da ilha vão escolher mais de 11 mil ocupantes de cargos em cidades e condados. Pesquisadores identificaram personas sintéticas que, segundo as e",
     "O Brasil parece condenado a conviver com a expressão eternizada por Stefan Zweig: o país do futuro. Uma nação de extraordinárias riquezas naturais e oportunidades que raramente conseguimos transformar em prosperidade. No setor energético, corremos o risco de acrescentar uma palavra à frase de Zweig: “perdido”.",
@@ -1853,13 +1851,11 @@
     "O governo elevou para R$ 174,7 bilhões a previsão de receitas da União com royalties, participação especial e venda de óleo em 2026, R$ 14,6 bilhões a mais que há dois meses. O número está no relatório de avaliação de receitas e despesas do 5º bimestre, divulgado pelo Ministério do Planejamento na terça (24/11).",
     "Os varejistas que se preparam para o período de compras da Black Friday enfrentam crescentes ameaças cibernéticas à medida que a inteligência artificial torna os ataques mais rápidos e potentes.",
     "Os subsídios federais a combustíveis somam aproximadamente R$ 75 bilhões em 2026, conforme informou o g1. O balanço foi apresentado nesta quarta-feira (25) por Bruno Moretti, ministro do Planejamento. A maior parte do apoio vai para o diesel; etanol e gasolina recebem uma fatia menor.",
-    "De acordo com dados compilados pelo Visual Capitalist a partir do World Economic Outlook de outubro de 2026 do Fundo Monetário Internacional (FMI), as 191 economias com projeção disponível devem crescer 3,1% em termos reais no ano. O número agregado, porém, esconde uma dispersão acentuada: o ranking de crescimento para 2026 é desenhado por dois vet"
+    "De acordo com dados compilados pelo Visual Capitalist a partir do World Economic Outlook de outubro de 2026 do Fundo Monetário Internacional (FMI), as 191 economias com projeção disponível devem crescer 3,1% em termos reais no ano. O número agregado, porém, esconde uma dispersão acentuada: o ranking de crescimento para 2026 é desenhado por dois vet",
+    "Para o economista-chefe da Itaú Asset, Thomas Wu, há muito ruído na discussão atual sobre o ajuste fiscal que o país precisa, e isso está inviabilizando o debate adequado sobre o assunto.",
+    "Operadores da plataforma de previsões Kalshi calculam em mais de 55% a chance de pelo menos quatro estados dos EUA adotarem moratórias para data centers neste ano, segundo a CNBC. O contrato pergunta quantos estados vão suspender a construção dessas estruturas e será verificado junto aos governos estaduais."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795449725.00988
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795453436.468141
@@ -2663,11 +2659,13 @@
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795622132.176499
+    },
+    {
+      "chave": "itau::GERAL_ATIVO",
+      "ts": 1795622756.308441
     }
   ],
   "hashes_imagens": [
-    "0d5ba4da09c90b5a",
-    "ecc5ef775dbe7589",
     "07e63feacdb5791b",
     "7f586bdb881ddfa4",
     "97a9854467b979bc",
@@ -2965,6 +2963,8 @@
     "0f50a1094526777b",
     "4bf06544f6d1ca46",
     "72eeb1c5ad93010a",
-    "318b1e5fd4f1d4f5"
+    "318b1e5fd4f1d4f5",
+    "d57e41be3c4da51d",
+    "e7f7daf3f70376ae"
   ]
 }
