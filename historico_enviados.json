@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/china-estende-ate-janeiro-a-suspensao-de-restricoes-a-materiais-criticos-para-os-eua/",
-    "c8825ea48e38821e",
-    "5f6bae21adb031a7",
-    "b9f028bb1d90b166",
     "https://www.infomoney.com.br/mercados/gerdau-ggbr4-alta-29-por-cento-ano-analise-tecnica/",
     "be5333501ead86e6",
     "c4156db317b2ebc3",
@@ -799,11 +795,13 @@
     "https://www.spacemoney.com.br/tecnologia/apple-samsung-xiaomi-metas-celulares-2027/",
     "45c15a1a880de4e6",
     "https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/indices/indice-de-letras-financeiras-lidera-valorizacao-da-renda-fixa-na-b3-em-outubro/",
-    "d9fa1b5581d4b4dc"
+    "d9fa1b5581d4b4dc",
+    "https://www.spacemoney.com.br/investimentos/itau-itub4-calendario-provento/",
+    "9c4532d7922bd124",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/apto11-renegocia-locacao-cri-gafisa/",
+    "019e71d933db0bbf"
   ],
   "titulos": [
-    "Correios, Banco do Brasil e Petrobras: a saúde financeira das estatais - O Assunto #1848",
-    "Democrata vence no Alasca e amplia maioria do partido no Senado dos EUA",
     "Exportação de milho do Brasil em novembro deve atingir maior nível em mais de 3 anos, diz Anec",
     "Iniciativa do governo Tump para destinar US$ 50 bilhões para a aviação enfrenta oposição nos EUA",
     "'Identidade e memória': entenda por que o STF agora tem uma escultura de Xangô no acesso ao plenário",
@@ -1601,11 +1599,11 @@
     "Ford leva Bronco híbrido chinês ao Brasil em 2027",
     "Wall Street cai com tarifas propostas e fuga da IA",
     "Fabricantes de celulares reduzem metas para 2027",
-    "Índice de Letras Financeiras lidera valorização da renda fixa na B3 em outubro"
+    "Índice de Letras Financeiras lidera valorização da renda fixa na B3 em outubro",
+    "Itaú (ITUB4) agenda provento de dezembro",
+    "APTO11 revê locação e monitora CRI Gafisa"
   ],
   "leads": [
-    "Os Estados Unidos bloquearam nesta terça-feira (24) a abertura de um painel na Organização Mundial do Comércio (OMC) para investigar as tarifas adicionais impostas pelo governo Donald Trump a produtos brasileiros. A decisão adia o início do julgamento solicitado pelo Brasil, que pretende reapresentar o pedido em dezembro.",
-    "A península da Crimeia, no Mar Negro, passará por 10 dias de restrições no fornecimento de energia elétrica devido a trabalhos de \"resposta a emergências\", informou nesta terça-feira (24) o governador nomeado pela Rússia.",
     "O ex-diretor do Banco Central Luiz Fernando Figueiredo alertou que o Brasil poderá enfrentar uma recessão no próximo ano, acompanhada de um aumento significativo da inflação, caso o governo não reaja de forma concreta à atual deterioração do cenário econômico.",
     "Depois de liderar as perdas entre as principais moedas de mercados emergentes desde o fim de outubro, o real voltou a se desvalorizar nesta segunda-feira (23/11) chegando a um patamar simbólico: o dólar atingiu R$ 6 pela primeira vez desde abril de 2025.",
     "Saldo inadimplente de famílias e empresas cresce 26,7% em 1 ano; juros elevados e demanda fraca dificultam pagamentos",
@@ -1853,25 +1851,11 @@
     "A Ford programou para 2027 a chegada de três novidades em SUVs ao Brasil, entre elas o Bronco com motorização híbrida — a primeira da linha. O anúncio ocorreu nesta quarta-feira (25) e foi noticiado pelo g1.",
     "O g1 informou nesta quarta-feira (25) que as bolsas de Nova York enfrentavam um dia de perdas expressivas, afetadas por uma nova proposta tarifária do governo dos Estados Unidos e por uma liquidação de ações de empresas de inteligência artificial.",
     "As metas de remessas para 2027 foram revistas para baixo por fabricantes como Apple, Samsung e Xiaomi, além de outras empresas do setor. O movimento ocorre em meio à alta no preço de chips de memória e à expectativa de retração nas vendas globais.",
-    "Os investimentos ligados a letras financeiras foram o destaque da renda fixa na B3 em outubro. Os índices que acompanham as debêntures e os títulos públicos atrelados à Selic também integram Top 5 do mês entre os indicadores calculados pela bolsa do Brasil."
+    "Os investimentos ligados a letras financeiras foram o destaque da renda fixa na B3 em outubro. Os índices que acompanham as debêntures e os títulos públicos atrelados à Selic também integram Top 5 do mês entre os indicadores calculados pela bolsa do Brasil.",
+    "Segundo a Suno Notícias, o Itaú Unibanco (ITUB4) fará em 4 de janeiro de 2027, no Brasil, o pagamento dos proventos de dezembro. A instituição mantém o crédito mensal no primeiro dia útil seguinte ao mês de referência e usa como base a carteira registrada no fechamento do último pregão do mês precedente.",
+    "O Vinci Residencial FII (APTO11), sob gestão da Vinci Compass, fechou novas condições para um contrato de locação em outubro e viu o aluguel recebido cair 20%, conforme a Suno Notícias. O acordo vale até fevereiro de 2027. Em setembro, a receita imobiliária foi de R$ 97,8 mil; em outubro, ficou perto de R$ 79 mil."
   ],
   "eventos_recentes": [
-    {
-      "chave": "mbrf3::GERAL_ATIVO",
-      "ts": 1795457370.487432
-    },
-    {
-      "chave": "gerdau::GERAL_ATIVO",
-      "ts": 1795457370.487432
-    },
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795457370.487432
-    },
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795457370.487432
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795457901.925214
@@ -2687,11 +2671,17 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795630080.664028
+    },
+    {
+      "chave": "itau::PROVENTOS",
+      "ts": 1795630457.435597
+    },
+    {
+      "chave": "apto11::GERAL_ATIVO",
+      "ts": 1795630457.435597
     }
   ],
   "hashes_imagens": [
-    "ef94999dcd48f62b",
-    "e85c07d96b3cef31",
     "1a5014d760bcc4f6",
     "28a353db9097bf96",
     "bdd749d3fe75e352",
@@ -2989,6 +2979,8 @@
     "8b69e2a35c87bd01",
     "87384f505a04b4d7",
     "09c3c79899018f7c",
-    "afbcb3710ae09f5d"
+    "afbcb3710ae09f5d",
+    "87d26cbdf8e96c5f",
+    "fafc8fc631b6ec0b"
   ]
 }
