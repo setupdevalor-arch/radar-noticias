@@ -1,9 +1,5 @@
 {
   "links": [
-    "40803433849eb8de",
-    "6f476b6d87dbbbc9",
-    "b9463797f37e8f4b",
-    "ffe0372dfa99ed21",
     "https://agenciainfra.com/blog/antt-aprova-avanco-da-transferencia-da-regis-bittencourt-a-epr/?utm_source=rss&utm_medium=rss&utm_campaign=antt-aprova-avanco-da-transferencia-da-regis-bittencourt-a-epr",
     "83ce8c90638641ee",
     "1291afe21b721b6f",
@@ -799,7 +795,11 @@
     "79c453b37a1b4ceb",
     "https://www.spacemoney.com.br/commodities/japao-forca-tarefa-petroleo-asia/",
     "0c9ffd89dc722e17",
-    "989e96cca12760cf"
+    "989e96cca12760cf",
+    "https://www.spacemoney.com.br/tecnologia/divida-ia-big-techs-credores/",
+    "f6f2c8d67546c704",
+    "https://www.poder360.com.br/poder-economia/itau-bv-e-inter-demitem-cerca-de-600-funcionarios/",
+    "d0d8cc043fd7b5e9"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1533,11 +1533,11 @@
     "BC tcheco não revela preço do Bitcoin em carteira de teste",
     "Inscrições para concurso do IBGE com 27 mil vagas terminam nesta quarta; veja como participar",
     "EUA abandonam plano de acordos com Rússia para encerrar guerra, diz jornal",
-    "Golfo em risco leva Japão a coordenar reservas de petróleo"
+    "Golfo em risco leva Japão a coordenar reservas de petróleo",
+    "Custo da IA pressiona dívida das big techs, aponta CNBC",
+    "Itaú, BV e Inter demitem cerca de 600 funcionários"
   ],
   "leads": [
-    "As taxas dos títulos prefixados de 2029 e 2032 do Tesouro Direto abriram nesta segunda-feira (23) nos maiores níveis do ano, na volta do feriado da Consciência Negra. O Tesouro Prefixado 2032 subiu 4 pontos-base, de 15,60% no fechamento de quinta-feira (19) para 15,64%, e o Prefixado 2029 avançou 4 pontos-base, de 15,33% para 15,37%. Os dois papéis",
-    "O GPA (PCAR3) informou que o Tribunal Regional do Trabalho da 2ª Região (TRT-2) aprovou seu Plano Especial de Pagamento Trabalhista (PEPT), prorrogando o prazo para quitar R$ 140 milhões em passivos trabalhistas que venceriam até o fim de 2027. Com as novas condições, a companhia poderá pagar o montante em até 72 parcelas mensais, ao longo de seis ",
     "Quando uma empresa estreia na Bolsa de Valores do seu país ela faz um IPO, sigla em inglês para oferta pública inicial de ações. Nessa ação os investidores conseguem comprar ações da companhia e garantir um pedacinho dela para si.",
     "A Moura obteve o credenciamento do Banco Nacional de Desenvolvimento Econômico e Social (BNDES) na rota 2 do regulamento setorial do CFI-Finame para um sistema de armazenamento de energia em baterias (BESS) destinado ao leilão de reserva de capacidade na forma de potência (LRCap).",
     "Segundo o Cointelegraph, a OKXICE — empresa formada pela OKX com a ICE, dona da Bolsa de Nova York — passou a operar uma plataforma de negociação contínua de títulos dos EUA representados por tokens. O projeto começou na segunda-feira com 113 produtos previstos para entrar em etapas, incluindo ações, ETFs e outros papéis negociados em bolsa.",
@@ -1785,7 +1785,9 @@
     "O Banco Central da República Tcheca (CNB) mantém sob sigilo o preço pago, a quantidade adquirida e o valor atual do Bitcoin que integra sua carteira de teste de US$ 1 milhão, lançada em 13 de novembro do ano passado.",
     "As inscrições para o processo seletivo temporário do Instituto Brasileiro de Geografia e Estatística (IBGE), que vai contratar profissionais para atuar no 12º Censo Agropecuário, Florestal e Aquícola de 2027, terminam nesta quarta-feira (25), às 23h59.",
     "O governo Trump deixou discretamente de lado propostas de utilizar acordos comerciais como incentivo para que a Rússia encerre a guerra na Ucrânia, depois que Moscou demonstrou pouco interesse nos projetos sugeridos para os setores de energia e aviação, informou o jornal Financial Times nesta quarta-feira (25).",
-    "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As"
+    "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As",
+    "Os credores que compram dívida corporativa estão mais seletivos, e as grandes empresas de tecnologia podem ter dificuldade crescente para financiar a expansão da inteligência artificial nos mercados de crédito, segundo reportagem da CNBC. A emissora americana aponta que os investidores passaram a cobrar evidências de que os gastos bilionários com I",
+    "Pelo menos 107 bancários do Itaú ainda aguardam definição, segundo sindicato"
   ],
   "eventos_recentes": [
     {
@@ -2607,11 +2609,17 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795589141.52098
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795593371.773868
+    },
+    {
+      "chave": "itau::GERAL_ATIVO",
+      "ts": 1795593371.773868
     }
   ],
   "hashes_imagens": [
-    "e4bf98f84603f2ff",
-    "b0db26a83a278535",
     "f97f520214cc4bf0",
     "a5db412086d97a8c",
     "dc33a6226cd85103",
@@ -2909,6 +2917,8 @@
     "b8e4e78ee6aad6be",
     "5e4dca745927dc72",
     "611bbdfa6f744c31",
-    "c9aa8bb68fb5b4bc"
+    "c9aa8bb68fb5b4bc",
+    "7b4c4fd6c0f6867b",
+    "d025ae11b85bae91"
   ]
 }
