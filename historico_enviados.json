@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/vibra-vbbr3-e-ultra-ugpa3-ficam-mais-atrativas-apos-queda-das-acoes-avalia-bbi/",
-    "4cd00a282b12d769",
-    "https://www.poder360.com.br/poder-economia/e-possivel-manter-programas-sociais-e-rever-regras-fiscais-diz-galipolo/",
     "e224f4e2f41e101e",
     "https://www.moneytimes.com.br/dolar-sustenta-alta-e-atinge-r-600-com-cautela-fiscal-e-exterior-davs/",
     "488b2a366de3a358",
@@ -799,7 +796,10 @@
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/atividade-economica-da-argentina-cai-12-em-setembro-diz-governo/",
     "57a8178b5ea87226",
     "https://www.mobiletime.com.br/noticias/24/11/2026/temu-mastercard-acordo/",
-    "04b5e20cfd7dc748"
+    "04b5e20cfd7dc748",
+    "74e2b291c65b4a79",
+    "https://g1.globo.com/tecnologia/noticia/2026/11/24/chinesa-huawei-e-condenada-nos-eua.ghtml",
+    "5e1c389ccf95f962"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1515,10 +1515,10 @@
     "Banco do Brasil (BBAS3) nega decisão sobre IPOs de empresas do grupo após questionamento da CVM",
     "Senado dos EUA investiga papel de JD Vance em contrato de petróleo da Venezuela",
     "Atividade econômica da Argentina cai 1,2% em setembro, diz governo",
-    "Temu fecha acordo com Mastercard para testar Click to Pay e agentes"
+    "Temu fecha acordo com Mastercard para testar Click to Pay e agentes",
+    "Chinesa Huawei é condenada nos EUA por negócios no Irã e roubo de segredos comerciais; entenda"
   ],
   "leads": [
-    "O presidente dos EUA, Donald Trump, voltou a manifestar apoio ao ex-CEO da Nvidia Jensen Huang em uma publicação na rede Truth Social na noite do domingo (22).",
     "– Os contratos futuros de minério de ferro caíram na bolsa de Dalian nesta segunda-feira, pressionados pela demanda persistentemente baixa e pelas margens cada vez menores do setor siderúrgico na China, enquanto a referência do minério na bolsa Cingapura se estabilizou após atingir a menor cotação em quatro anos na semana passada.",
     "Juros x Inflação: Entenda a relação entre eles",
     "A Central Geradora Fotovoltaica Barrinhas SPE solicitou a revogação da outorga da UFV Solar Barrinhas, por falta de margem de escoamento. O projeto previa uma planta de 80 MW localizada no município de Ouricuri, em Pernambuco, com conexão à subestação Ouricuri 138/69 kV, da Neoenergia Pernambuco.",
@@ -1767,7 +1767,8 @@
     "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado.",
     "Uma senadora dos Estados Unidos está investigando o papel desempenhado pelo vice-presidente JD Vance na concessão de um lucrativo contrato de petróleo da Venezuela a um doador político e então executivo da comerciante de commodities Vitol Group.",
     "A atividade econômica da Argentina, o Emae, recuou 1,2% em setembro em relação ao mesmo período do ano passado, informou nesta terça-feira (24) o Indec (Instituto Nacional de Estatística e Censos), um dado pior do que o esperado pelos analistas privados, o que coloca o país em recessão.",
-    "A Temu (Android, iOS) firmou um memorando de entendimento (MoU) com a Mastercard para avançar no desenvolvimento de soluções que facilitem a intermediação de pagamentos entre vendedores e consumidores. O acordo prevê o estudo de duas soluções:"
+    "A Temu (Android, iOS) firmou um memorando de entendimento (MoU) com a Mastercard para avançar no desenvolvimento de soluções que facilitem a intermediação de pagamentos entre vendedores e consumidores. O acordo prevê o estudo de duas soluções:",
+    "A chinesa Huawei foi condenada nesta terça-feira (24) em um amplo processo criminal nos Estados Unidos. A gigante de tecnologia e equipamentos de telecomunicações foi acusada de enganar bancos sobre seus negócios no Irã e roubar segredos comerciais de empresas americanas."
   ],
   "eventos_recentes": [
     {
@@ -2568,7 +2569,6 @@
     }
   ],
   "hashes_imagens": [
-    "5c918f14f01e5ee1",
     "e03ef5d293fe4791",
     "ec7bb0fa3eccbf53",
     "74b92e184e1fa947",
@@ -2867,6 +2867,7 @@
     "5691b8c79931a5f1",
     "d5008432bcc0ceb3",
     "de5516225885c64a",
-    "8ba010958694cdc4"
+    "8ba010958694cdc4",
+    "ba0e89e0d06ca222"
   ]
 }
