@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/agro/acucar-fecha-em-alta-de-341-em-nova-york-apos-minima-de-tres-meses/",
-    "94aea44e1a288fa2",
-    "https://www.poder360.com.br/poder-economia/durigan-projeta-resolucao-sobre-aliquota-da-cbs-em-duas-semanas/",
-    "bcb601242035df36",
-    "f894bbb8b8501fa4",
-    "https://www.infomoney.com.br/politica/tarcisio-defende-discussao-de-limites-de-decisoes-monocraticas-e-competencia-do-stf/",
-    "baa9500748a837b6",
     "https://forbes.com.br/forbes-tech/2026/11/ferramentas-de-ia-ajudam-marcas-a-otimizar-promocoes-de-black-friday/",
     "bad90bc0e8c6e037",
     "https://www.infomoney.com.br/mercados/taxas-dos-dis-caem-em-meio-a-especulacoes-sobre-nomes-de-lula-para-a-area-economica/",
@@ -799,7 +792,14 @@
     "0116e25f7528c50b",
     "6edc9b199aee2ee8",
     "72852d549541ca93",
-    "ff1c7f4cfda6cb24"
+    "ff1c7f4cfda6cb24",
+    "4fa11d1e3d81201f",
+    "d14632305e544d29",
+    "736cf110ea4cf74d",
+    "https://www.cnnbrasil.com.br/infra/vamos-ter-que-repetir-o-pre-sal-na-margem-equatorial-diz-magda/",
+    "bdd6731282262913",
+    "https://www.cnnbrasil.com.br/agro/vittia-conclui-recompra-de-45-milhoes-de-acoes-e-anuncia-novo-programa/",
+    "ec2f8693b018bf41"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1577,11 +1577,11 @@
     "Houthis dizem ter atacado refinaria de petróleo na Arábia Saudita",
     "Três cidades de Rondônia devem ter máximas de até 37 °C",
     "Braskem avança em reestruturação de dívida, mas acordo ainda não é vinculante",
-    "Norse Atlantic afunda 81% com alerta de caixa crítico"
+    "Norse Atlantic afunda 81% com alerta de caixa crítico",
+    "Vamos ter que repetir o pré-sal na Margem Equatorial, diz Magda",
+    "Vittia conclui recompra de 4,5 milhões de ações e anuncia novo programa"
   ],
   "leads": [
-    "A Equatorial Energia recebeu uma nova penalidade da Agência Nacional de Energia Elétrica (Aneel) por favorecimento à comercializadora Echoenergia no mercado livre de energia. Desta vez, a penalidade de R$ 757 mil envolve a CEEE-D, no Rio Grande do Sul, após a agência identificar vantagem concorrencial indevida na prospecção de um consumidor.",
-    "Os contratos futuros do açúcar encerraram a sessão desta segunda-feira (23) em alta na Bolsa de Nova York, em um movimento de recuperação após as perdas recentes. O vencimento para março avançou 3,41%, negociado a 17,61 centavos de dólar por libra-peso.",
     "Senado tem até 15 de dezembro para definir percentual, calculado pelo TCU em 11,3% para 2027",
     "O governador de São Paulo, Tarcísio de Freitas (Republicanos), defendeu nesta segunda-feira, 23, que o novo Congresso discuta limites para as decisões monocráticas do Judiciário e as competências do Supremo Tribunal Federal (STF). Em painel no Itaú BBA Macro Vision 2026, na capital paulista, ele afirmou que o sistema de freios e contrapesos não fun",
     "As marcas de consumo estão recorrendo cada vez mais à inteligência artificial para ajudar a definir preços, na esperança de reduzir descontos e elevar margens de lucro.",
@@ -1829,13 +1829,11 @@
     "Os Houthis do Iêmen, apoiados pelo Irã, afirmaram nesta quarta-feira (25) que atacaram a refinaria de petróleo de Ras Tanura, na Arábia Saudita.",
     "Cujubim deve registrar 37 °C na sexta-feira (27), patamar previsto para três dias em sequência. A máxima fica 6,3 °C acima da referência climatológica local, de 30,7 °C, segundo a Climatempo.",
     "A Braskem (BRKM5) confirmou ter chegado a um acordo preliminar com credores para avançar na reestruturação de sua dívida, com apoio de seus principais acionistas, Petrobras (PETR3; PETR4) e Shine I FIP, fundo ligado à gestora IG4. O entendimento, alcançado em 23 de novembro, envolve os principais termos e condições comerciais de um plano atualizado",
-    "As ações da Norse Atlantic caíram nesta quarta-feira depois que a companhia norueguesa de baixo custo disse estar em uma “situação financeira crítica”, segundo a CNBC. Os papéis eram negociados com queda de 81,4%, e a empresa condicionou sua continuidade à obtenção de financiamento para necessidades de liquidez de curto prazo."
+    "As ações da Norse Atlantic caíram nesta quarta-feira depois que a companhia norueguesa de baixo custo disse estar em uma “situação financeira crítica”, segundo a CNBC. Os papéis eram negociados com queda de 81,4%, e a empresa condicionou sua continuidade à obtenção de financiamento para necessidades de liquidez de curto prazo.",
+    "Magda Chambriard, presidente da Petrobras, afirmou nesta terça-feira (24) que enxerga para a Margem Equatorial uma trajetória semelhante à do desenvolvimento do pré-sal, durante coletiva de imprensa realizada para comentar o plano de negócios divulgado pela companhia na noite desta segunda-feira (23).",
+    "A Vittia concluiu seu sexto programa de recompra de ações, com a aquisição de 4,5 milhões de ações ordinárias, equivalente a 100% do limite aprovado e a 2,9% do capital social da companhia. A empresa também anunciou a aprovação de um novo programa de recompra, com limite de mais 4,5 milhões de ações."
   ],
   "eventos_recentes": [
-    {
-      "chave": "ltbx11::GERAL_ATIVO",
-      "ts": 1795435505.57897
-    },
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795437128.460143
@@ -2655,11 +2653,13 @@
     {
       "chave": "braskem::GERAL_ATIVO",
       "ts": 1795606725.921048
+    },
+    {
+      "chave": "equatorial::GERAL_ATIVO",
+      "ts": 1795608478.469119
     }
   ],
   "hashes_imagens": [
-    "28295beb5c6a88e6",
-    "2f9bd9a7c1db5789",
     "f195a95a0438174b",
     "c2ac4c3d9998b910",
     "879112f9b03944fc",
@@ -2957,6 +2957,8 @@
     "85a305e2ea2013ba",
     "62fc542cc615f556",
     "fb996e2f273fa85f",
-    "81fc9d28e1c38750"
+    "81fc9d28e1c38750",
+    "c590c98a0366364c",
+    "07d5061007488357"
   ]
 }
