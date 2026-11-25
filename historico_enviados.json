@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/jpmorgan-ve-alivio-no-caixa-do-gpa-pcar3-apos-renegociacao-de-divida-trabalhista/",
-    "29a33c9d6874ae8a",
     "https://www.cnnbrasil.com.br/economia/investimentos/investir-em-ipos-pode-trazer-riscos-para-o-investidor-diz-economista/",
     "c718e083782f6642",
     "8b11b052cabafd3e",
@@ -799,7 +797,9 @@
     "87de185193e3ed21",
     "c620c244bafb91c5",
     "https://www.estadao.com.br/economia/coluna-da-broad/com-melhora-do-setor-venda-de-fatia-da-ipiranga-pela-ultrapar-esfria/",
-    "da228556b4c9d4ae"
+    "da228556b4c9d4ae",
+    "https://www.estadao.com.br/economia/coluna-da-broad/transmissoras-se-afastam-de-leilao-de-baterias-por-compartilhamento-de-receita-com-consumidor/",
+    "b3f10e1a4e07d260"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1522,10 +1522,10 @@
     "Câmara deve votar projeto de regulação das big techs em 1º de dezembro",
     "Ciberataque expõe dados não secretos de agências dos EUA",
     "Após voltar ao comando da Nvidia, Jensen Huang pede desculpas por traição e diz fazer terapia",
-    "Com melhora do setor, venda de fatia da Ipiranga pela Ultrapar esfria"
+    "Com melhora do setor, venda de fatia da Ipiranga pela Ultrapar esfria",
+    "Transmissoras se afastam de leilão de baterias por compartilhamento de receita com consumidor"
   ],
   "leads": [
-    "– Analistas do UBS BB cortaram a recomendação das ações da B3 para neutra ante compra, bem como reduziram o preço-alvo para R$ 16 ante R$ 26,50, conforme relatório a clientes com data de domingo.",
     "A TOTVS S.A. (TOTS3) informou, em comunicado ao mercado divulgado em 20 de novembro de 2026, que recebeu correspondência da BlackRock, Inc. comunicando sua posição acionária na companhia, em cumprimento ao disposto na Resolução CVM n.º 44/2021.",
     "O governo brasileiro planeja reduzir gradualmente o subsídio aos combustíveis a partir do próximo mês, apesar dos conflitos globais, como a guerra EUA-Irã. Criado em março para mitigar o impacto dos preços internacionais, o subsídio ao diesel, atualmente em R$ 2,12 por litro, visa conter a inflação e garantir o abastecimento. A medida, que já custo",
     "De acordo com o TecMundo, a Samsung estuda não apresentar uma nova geração do Galaxy Watch em 2027. A informação, divulgada pelo site sul-coreano ETNews, indica que a linha teria seu próximo modelo apenas no ano seguinte, com lançamentos a cada dois anos. A Samsung não confirmou o rumor.",
@@ -1774,7 +1774,8 @@
     "Novo parecer de Aliel Machado restringe enquadramento das plataformas digitais no regime especial de fiscalização e limita poderes do Cade",
     "A CIA e a Oficina do Diretor de Inteligência Nacional dos Estados Unidos detectaram uma invasão cibernética que expôs parte de informações não classificadas. O ataque atingiu uma rede usada para identificar dados de inteligência a partir de materiais públicos. Até o momento, não se sabe quais dados foram comprometidos nem a extensão do incidente, e",
     "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana.",
-    "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes."
+    "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes.",
+    "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas "
   ],
   "eventos_recentes": [
     {
@@ -2595,7 +2596,6 @@
     }
   ],
   "hashes_imagens": [
-    "a2377665360772f6",
     "30fe4b6680fa3d92",
     "8c0ff647567a1cf1",
     "1e209e8a2973b7d6",
@@ -2894,6 +2894,7 @@
     "1715654018118bd1",
     "c21b4642ffb14d4e",
     "da507594c5b4c874",
-    "38d124910257783c"
+    "38d124910257783c",
+    "2bf6a6a68741727c"
   ]
 }
