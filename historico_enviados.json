@@ -1,11 +1,5 @@
 {
   "links": [
-    "444fe58611b25401",
-    "135b4ad5e9d4dcca",
-    "140cd22b2c16ca9a",
-    "4810e99ad02e08c4",
-    "19cc9b72b4698192",
-    "b149f8552e9d48bd",
     "https://www.spacemoney.com.br/investimentos/acoes/sanofi-compra-insmed-41-bilhoes/",
     "2803dfe58815e320",
     "https://www.infomoney.com.br/mercados/rd-saude-radl3-aprova-recompra-de-ate-r-600-milhoes-de-acoes/",
@@ -799,10 +793,15 @@
     "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/lojistas-enfrentam-ameaca-de-ataques-com-ia-as-vesperas-da-black-friday/",
     "d3615a01d71ea391",
     "https://www.spacemoney.com.br/economia/macroeconomia/subsidios-combustiveis-85-bilhoes/",
-    "536ef41ca820a13d"
+    "536ef41ca820a13d",
+    "005ec6d993ea2e54",
+    "268165d6c2790cf3",
+    "a0bf3d0354c66a02",
+    "82cae68e2b844169",
+    "https://www.spacemoney.com.br/economia/macroeconomia/crescimento-pib-2026-guyana-kuwait/",
+    "2e3cd4926c2eb32d"
   ],
   "titulos": [
-    "Wall Street fecha em queda com expectativa de alta dos juros nos EUA e pressão tech",
     "IA ajuda a achar falha crítica no Java, plataforma de software vital para a internet",
     "Banco do Brasil (BBAS3) nega empréstimos a ‘fazendas fantasmas’ e CPFs inexistentes",
     "Senado aprova R$ 13,5 bilhões em crédito a exportadores afetados por tarifas e guerras",
@@ -1601,10 +1600,10 @@
     "Alerta da NOAA aponta El Niño e risco para alimentos em 2027",
     "Governo prevê arrecadar R$ 175 bi com petróleo e mais R$ 12 bi para subsídios a combustíveis",
     "Lojistas enfrentam ameaça de ataques com IA às vésperas da Black Friday",
-    "Subsídios a combustíveis podem chegar a R$ 85 bilhões"
+    "Subsídios a combustíveis podem chegar a R$ 85 bilhões",
+    "Guyana no topo, Golfo em queda: o PIB de 2026"
   ],
   "leads": [
-    "Tesouro divulga relatório sobre receitas e despesas primárias; Receita Federal publica arrecadação de outubro",
     "Carros elétricos serão maioria nas ruas antes do que você pensa",
     "Bloomberg Línea — O capital estrangeiro de longo prazo continua a buscar negócios no Brasil, apesar da volatilidade externa e da incerteza fiscal.",
     "Executivo vê mandatos híbridos como próximo passo da indústria e projeta elevar a participação do setor imobiliário para até 25% dos negócios",
@@ -1853,7 +1852,8 @@
     "O Climate Prediction Center, da NOAA, agência climática dos Estados Unidos, informou que há “condições de El Niño presentes” e que o fenômeno pode encarecer alimentos em 2027, com efeitos sobre a produção de leite e o regime de chuvas na Amazônia, segundo o Monitor do Mercado.",
     "O governo elevou para R$ 174,7 bilhões a previsão de receitas da União com royalties, participação especial e venda de óleo em 2026, R$ 14,6 bilhões a mais que há dois meses. O número está no relatório de avaliação de receitas e despesas do 5º bimestre, divulgado pelo Ministério do Planejamento na terça (24/11).",
     "Os varejistas que se preparam para o período de compras da Black Friday enfrentam crescentes ameaças cibernéticas à medida que a inteligência artificial torna os ataques mais rápidos e potentes.",
-    "Os subsídios federais a combustíveis somam aproximadamente R$ 75 bilhões em 2026, conforme informou o g1. O balanço foi apresentado nesta quarta-feira (25) por Bruno Moretti, ministro do Planejamento. A maior parte do apoio vai para o diesel; etanol e gasolina recebem uma fatia menor."
+    "Os subsídios federais a combustíveis somam aproximadamente R$ 75 bilhões em 2026, conforme informou o g1. O balanço foi apresentado nesta quarta-feira (25) por Bruno Moretti, ministro do Planejamento. A maior parte do apoio vai para o diesel; etanol e gasolina recebem uma fatia menor.",
+    "De acordo com dados compilados pelo Visual Capitalist a partir do World Economic Outlook de outubro de 2026 do Fundo Monetário Internacional (FMI), as 191 economias com projeção disponível devem crescer 3,1% em termos reais no ano. O número agregado, porém, esconde uma dispersão acentuada: o ranking de crescimento para 2026 é desenhado por dois vet"
   ],
   "eventos_recentes": [
     {
@@ -2659,10 +2659,13 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795621642.974417
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795622132.176499
     }
   ],
   "hashes_imagens": [
-    "91534925a586a1ec",
     "0d5ba4da09c90b5a",
     "ecc5ef775dbe7589",
     "07e63feacdb5791b",
@@ -2961,6 +2964,7 @@
     "0e5a10bd58d95c23",
     "0f50a1094526777b",
     "4bf06544f6d1ca46",
-    "72eeb1c5ad93010a"
+    "72eeb1c5ad93010a",
+    "318b1e5fd4f1d4f5"
   ]
 }
