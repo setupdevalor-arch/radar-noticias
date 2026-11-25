@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.estadao.com.br/economia/gerdau-juro-e-definido-no-mercado-nao-ha-governo-que-consiga-comandar-esse-processo/",
-    "962fc57a775038ac",
-    "https://www.poder360.com.br/poder-economia/fazenda-reduz-estimativa-do-pib-de-2026-de-20-para-19/",
     "e0b3dafb2012c0f5",
     "https://www.seudinheiro.com/2026/carreiras/uma-empresa-bem-sucedida-erra-ao-confiar-demais-na-propria-formula-ceo-do-itau-revela-o-que-aprendeu-sobre-lideranca-miql/",
     "169e545a681c44d8",
@@ -799,7 +796,10 @@
     "177f0f7deded8045",
     "7bb2202841c82037",
     "959effc134b53a00",
-    "06693f00b3ad952d"
+    "06693f00b3ad952d",
+    "cbf529bc8812911f",
+    "https://www.bloomberglinea.com.br/tech/aws-amplia-infraestrutura-na-america-latina-e-mantem-planos-de-expansao-no-brasil/",
+    "57839c0a34a8376b"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1569,10 +1569,10 @@
     "Shadow AI: a ameaça que desafia CEOs e conselhos de administração",
     "China diz que excesso de capacidade não existe, em resposta a plano tarifário dos EUA",
     "“Não vou pagar essa conta”, diz CEO da Allos sobre o fim da escala 6×1",
-    "Ajuste fiscal abre espaço para renovar subvenção do diesel"
+    "Ajuste fiscal abre espaço para renovar subvenção do diesel",
+    "AWS amplia infraestrutura na América Latina e mantém planos de expansão no Brasil"
   ],
   "leads": [
-    "A comercializadora de gás natural da Pan American Energy (PAE) e a Companhia Siderúrgica Nacional (CSN) firmaram um contrato para o fornecimento de gás natural de Vaca Muerta, na Argentina, às operações industriais da siderúrgica no estado do Rio de Janeiro. O acordo tem vigência de 12 meses e as entregas de gás já foram iniciadas.",
     "As ações da Unifique (FIQE3) dispararam nesta segunda-feira (23), após uma mudança importante nas condições da oferta pública de aquisição de ações (OPA) da companhia. Os papéis chegaram a avançar 17,10%, negociados a R$ 6,71, às 12h20, depois que a Unitá Participações elevou de R$ 6 para R$ 7 o valor oferecido por ação, um aumento de aproximadamen",
     "O dólar chegou a superar a marca de R$ 6,00 nesta manhã de segunda-feira, com as cotações novamente refletindo o mal-estar do mercado com a política fiscal do governo Lula, enquanto no exterior a moeda norte-americana tinha sinais mistos ante as divisas de países emergentes.",
     "O VGHF11, fundo imobiliário Valora Hedge Fund administrado pelo Banco Daycoval, divulgou em 19 de novembro suas demonstrações financeiras auditadas pela PricewaterhouseCoopers referentes ao exercício encerrado em junho. O documento mostra recuo patrimonial, alta no lucro líquido e mudanças na composição da carteira de investimentos.",
@@ -1821,13 +1821,10 @@
     "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, ",
     "– As tarifas e as guerras comerciais não atendem aos interesses de ninguém, e a questão do chamado “excesso de capacidade” não existe de fato, afirmou o Ministério das Relações Exteriores da China nesta quarta-feira, antes do anúncio previsto de novas tarifas comerciais pelos Estados Unidos.",
     "A menos de um mês do início do período de transição do fim da escala 6x1, a Allos, maior administradora de shopping centers do Brasil, já faz as contas para entender o impacto da nova jornada de trabalho.",
-    "A LCP 239/2026 foi sancionada sem vetos e publicada em edição extra do Diário Oficial na terça (24/11). A lei autoriza tirar da meta de resultado primário de 2026 até R$ 10,5 bilhões gastos com a subvenção a produtores e importadores criada pela MP 1391/2026."
+    "A LCP 239/2026 foi sancionada sem vetos e publicada em edição extra do Diário Oficial na terça (24/11). A lei autoriza tirar da meta de resultado primário de 2026 até R$ 10,5 bilhões gastos com a subvenção a produtores e importadores criada pela MP 1391/2026.",
+    "Bloomberg Línea — A Amazon Web Services (AWS) colocou em funcionamento nesta sexta-feira (20), em Bogotá, uma infraestrutura que permite armazenar e processar dados dentro da Colômbia. O projeto é parte de uma ampliação dos investimentos da empresa na América Latina, incluindo projetos de longo prazo na Colômbia, no Chile e no Brasil."
   ],
   "eventos_recentes": [
-    {
-      "chave": "raia_drogasil::EVENTO_CORP",
-      "ts": 1795432784.523787
-    },
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795433113.525872
@@ -2646,7 +2643,6 @@
     }
   ],
   "hashes_imagens": [
-    "ef4cb657d8948899",
     "7a23374886dab4b7",
     "48603b934267e5dc",
     "4b8306a657181ed1",
@@ -2945,6 +2941,7 @@
     "20279c2e14a14655",
     "3ee4fd39ed72184f",
     "4073b46b67e8a533",
-    "9f596780f2f08b87"
+    "9f596780f2f08b87",
+    "f0da3489e702c1e5"
   ]
 }
