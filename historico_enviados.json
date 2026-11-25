@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://cqcs.com.br/noticia/fenacor-detalha-impactos-da-reforma-tributaria-para-corretores/",
-    "4aac4fc1bc5bc9c7",
     "10e627be188616f7",
     "3402c68936f2319d",
     "43b2f2fa24914af7",
@@ -799,7 +797,9 @@
     "f371f7f35110ddfa",
     "6c0f7528b8a48129",
     "https://www.cnnbrasil.com.br/infra/pl-das-baterias-pode-aumentar-conta-de-luz-em-r-62-bi-diz-consumidores/",
-    "e5d729c154d45a5f"
+    "e5d729c154d45a5f",
+    "https://www.poder360.com.br/poder-economia/pib-da-alemanha-cresce-01-no-3o-tri-abaixo-da-estimativa-inicial/",
+    "d2a1325523f32b65"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1542,10 +1542,10 @@
     "Entenda como o dólar ao redor de R$ 6 encarece comida, eletrônicos e passagens aéreas",
     "Gasolina nos EUA ficou mais barata após meses: veja os fatores por trás da queda",
     "Após megaleilão de energia, corrida por financiamentos bilionários e equipamentos ganha força",
-    "PL das baterias pode aumentar conta de luz em R$ 6,2 bi, diz entidade"
+    "PL das baterias pode aumentar conta de luz em R$ 6,2 bi, diz entidade",
+    "PIB da Alemanha cresce 0,1% no 3º tri, abaixo da estimativa inicial"
   ],
   "leads": [
-    "As demissões por iniciativa dos próprios trabalhadores estão na máxima histórica, mas perdendo fôlego. Entre janeiro e setembro de 2026, os pedidos de demissão “por conta própria” registraram a menor taxa de crescimento dos últimos seis anos, isto é, desde o início do Novo Cadastro Geral de Empregados (Caged), que passou a medir o emprego formal no",
     "Após os resultados do terceiro trimestre de 2026 (3T26), o Citi elevou os preços-alvo de Vivo (VIVT3) e TIM (TIMS3) para R$ 38 e R$ 27, respectivamente, e melhorando a recomendação para ambas as ações de neutra para compra.",
     "A EZ Tec Empreendimentos e Participações comunicou ao mercado, em fato relevante conjunto enviado à CVM, que os conselhos de administração da EZ Tec e da EZ Inc Incorporações aprovaram submeter a uma assembleia geral extraordinária uma reorganização societária que prevê a incorporação da EZ Inc e da Itajubá pela companhia e a cisão parcial da Mairi",
     "O Projeto de Lei 1.051/2025, em tramitação na Câmara dos Deputados, prevê que o governo federal poderá barrar ou impor condições à compra de empresas brasileiras por investidores estrangeiros em setores estratégicos.",
@@ -1794,13 +1794,10 @@
     "Os efeitos da escalada do dólar ao patamar de R$ 6, após acumular avanço de 14,6% entre 21 de outubro e 20 de novembro, não se restringem ao mercado financeiro e se estendem para a inflação nos próximos meses.",
     "O preço médio da gasolina nos Estados Unidos caiu quase 90 centavos por galão em dois meses, atingindo o menor nível desde os primeiros dias da guerra com o Irã — bem a tempo para as viagens do feriado de Ação de Graças.",
     "Eneva, Petrobras e Âmbar Energia, do grupo J&F, foram as grandes vencedoras do leilão, concentrando juntas quase metade da potência contratada. Entre as geradoras com hidrelétricas, destacaram-se Copel, Axia (ex-Eletrobras), Engie e a chinesa SPIC.",
-    "O projeto de lei das baterias poderá acrescentar até R$ 6,26 bilhões por ano à conta de luz dos consumidores, segundo estimativa da FNCE (Frente Nacional dos Consumidores de Energia). O PL 3.716/2026 tramita em regime de urgência na Câmara dos Deputados e propõe mudar a divisão dos custos da contratação de sistemas de armazenamento de energia."
+    "O projeto de lei das baterias poderá acrescentar até R$ 6,26 bilhões por ano à conta de luz dos consumidores, segundo estimativa da FNCE (Frente Nacional dos Consumidores de Energia). O PL 3.716/2026 tramita em regime de urgência na Câmara dos Deputados e propõe mudar a divisão dos custos da contratação de sistemas de armazenamento de energia.",
+    "Resultado representa desaceleração em relação ao 1º semestre; exportações e investimentos em máquinas recuaram no período"
   ],
   "eventos_recentes": [
-    {
-      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
-      "ts": 1795421828.127607
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795424354.150907
@@ -2624,10 +2621,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795593778.240265
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795594770.535198
     }
   ],
   "hashes_imagens": [
-    "0b063ef0bb04d174",
     "2d69737aece53c9b",
     "dcc1204490ad4c52",
     "8abece8e7ff7df88",
@@ -2926,6 +2926,7 @@
     "6890ed314ab53a8f",
     "0c85553693d6e314",
     "c622ce995e697716",
-    "f3352579da7abf5d"
+    "f3352579da7abf5d",
+    "7cbf96906e83131b"
   ]
 }
