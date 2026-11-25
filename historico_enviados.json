@@ -1,12 +1,5 @@
 {
   "links": [
-    "0c98149962fcb634",
-    "0b19e08f2f382aed",
-    "7ad8466cc4c98cba",
-    "5687f630e79e57f4",
-    "f7371db2ab0a60f3",
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/ue-abre-investigacao-antitruste-contra-coca-cola-europacific-partners/",
-    "92b5774faed850a8",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/bill-ackman-diz-que-fed-pode-gerar-recessao-com-alta-de-juros/",
     "49fd2c62cedd3b1c",
     "https://www.cnnbrasil.com.br/agro/plantio-de-soja-no-8/",
@@ -799,7 +792,14 @@
     "https://www.infomoney.com.br/mercados/taurus-faz-acordo-de-cooperacao-com-imbel-para-sistemas-de-defesa-e-seguranca/",
     "f1aa1603f90ca51f",
     "https://www.infomoney.com.br/mercados/politica-de-precos-da-petrobras-segue-adequada-mas-empresa-ainda-avalia-ajuste/",
-    "ad8e1cce0a74af4f"
+    "ad8e1cce0a74af4f",
+    "a9e14e55f01629d2",
+    "https://www.infomoney.com.br/mercados/banco-inter-demite-mais-de-200-funcionarios-diz-sindicato/",
+    "f8d0ae651d2a35ef",
+    "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-25112026/",
+    "e49e639490685dcf",
+    "https://www.infomoney.com.br/mercados/dell-eleva-previsoes-de-lucro-e-receita-apos-trimestre-impulsionado-por-ia/",
+    "a39e8b92a52de889"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1557,12 +1557,12 @@
     "Do trading científico à inteligência artificial: os destaques do Profit Summit 2026",
     "Prosus injeta US$ 344 mi em iFood e JET, vê receita saltar 59%, mas aEBITDA cai 7%",
     "Taurus faz acordo de cooperação com Imbel para sistemas de defesa e segurança",
-    "Política de preços da Petrobras segue adequada, mas empresa ainda avalia ajuste"
+    "Política de preços da Petrobras segue adequada, mas empresa ainda avalia ajuste",
+    "Banco Inter demite mais de 200 funcionários, diz sindicato",
+    "Mini-índice (WINZ26): abaixo das médias, ativo pode buscar novos suportes",
+    "Dell eleva previsões de lucro e receita após trimestre impulsionado por IA"
   ],
   "leads": [
-    "As bolsas europeias fecharam em alta nesta 2ª feira, interrompendo uma sequência de quatro sessões consecutivas de perdas, com ações de tecnologia e de mineração à frente dos ganhos e recuperação mais ampla dos índices do continente.",
-    "O fundo imobiliário Patria Malls (PMLL11), do segmento de shopping centers, entrou na cobertura do BTG Pactual com recomendação de compra e preço-alvo de R$ 112 para as cotas, o que representa potencial de alta (upside) de 16% frente ao valor atual, de R$ 96.",
-    "A cotação comercial do dólar testou nesta segunda-feira (23) a fronteira psicológica dos R$ 6, alcançado R$ 6,005 pouco antes das 10h30, voltando a um patamar um pouco inferior depois disso. Para o mercado de commodities, o efeito dessa depreciação do real foi considerado “heterogêneo” pela consultoria StoneX.",
     "Para a MBRF (MBRF3), o Natal começa já em janeiro. A principal operação do grupo, que conta com marcas como Sadia, Perdigão e Bassi em seu portfólio, passa por diversos setores ao longo dos meses para ter seu pontapé inicial oficialmente em novembro.",
     "A Comissão de Valores Mobiliários (CVM) suspendeu o registro do Banco de Brasília (BRB – BSLI3) como companhia aberta após a falta de um ano nos lançamentos de balanços trimestrais. Junto com o BRB, mais quatro companhias de capital aberto perderam seus registros.",
     "A Advocacia-Geral da União (AGU) se manifestou contra a liminar do ministro do Supremo Tribunal Federal (STF) Flávio Dino que flexibilizou os prazos para folgas após o fim da escala 6×1. No documento enviado ao ministro nesta segunda-feira, 23, o braço jurídico do governo sustenta que as questões tratadas pela liminar são contempladas pelo decreto ",
@@ -1809,17 +1809,12 @@
     "Com mais de 4 mil participantes, o Profit Summit 2026 registrou recorde de público, segundo dados divulgados pela Nelogica.",
     "Bloomberg Línea — O acirramento da disputa no mercado brasileiro de entregas levou a gigante holandesa Prosus a pisar no acelerador dos investimentos no iFood.",
     "– A Taurus ‌(TASA4) anunciou nesta terça-feira assinatura de ‌memorando de entendimento com a Indústria de Material Bélico ‌do Brasil (Imbel) para desenvolvimento, fabricação e comercialização de sistemas de defesa e segurança.",
-    "– A política de preços de combustíveis da Petrobras (PETR4) permanece ‌válida e adequada, embora a companhia continue acompanhando a forte volatilidade dos preços ‌internacionais para avaliar se serão necessários ajustes conjunturais, disse nesta terça-feira a diretora executiva de Logística, Comercialização e Mercados, Angélica Laureano."
+    "– A política de preços de combustíveis da Petrobras (PETR4) permanece ‌válida e adequada, embora a companhia continue acompanhando a forte volatilidade dos preços ‌internacionais para avaliar se serão necessários ajustes conjunturais, disse nesta terça-feira a diretora executiva de Logística, Comercialização e Mercados, Angélica Laureano.",
+    "– O banco digital Inter demitiu ‌na manhã desta terça-feira mais de 200 funcionários, ‌afirmou o Sindicato dos Bancários de Belo Horizonte, em comunicado.",
+    "Os contratos de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,58%, aos 165.305 pontos, após registrarem mínima de 165.180 pontos e máxima de 168.935 pontos. Apesar da lateralização observada nos últimos dois pregões, o ativo permanece em tendência de baixa no gráfico de 15 minutos.",
+    "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795428211.119736
-    },
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795428263.112012
-    },
     {
       "chave": "hapvida::GERAL_ATIVO",
       "ts": 1795430484.131092
@@ -2635,12 +2630,17 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795600949.347854
+    },
+    {
+      "chave": "banco_inter::GERAL_ATIVO",
+      "ts": 1795601299.115355
+    },
+    {
+      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
+      "ts": 1795601299.115355
     }
   ],
   "hashes_imagens": [
-    "e77b2269bc582829",
-    "3a3771d0f1d73a76",
-    "21d7a37c2516550a",
     "969be40105ee1f9f",
     "0106e18b1d63d732",
     "a3a804818270ff69",
@@ -2937,6 +2937,9 @@
     "ded2b3afb79bd0f3",
     "d7bcda211e13ab23",
     "dcd50402a87745ad",
-    "da3f6d22c75ee1b3"
+    "da3f6d22c75ee1b3",
+    "51adc794aa4183da",
+    "05748b4837700cbe",
+    "f35351c05b33067b"
   ]
 }
