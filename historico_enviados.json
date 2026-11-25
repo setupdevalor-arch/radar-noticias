@@ -1,7 +1,5 @@
 {
   "links": [
-    "07ad36a673897df6",
-    "a81a0c537974fd41",
     "5be3be8099a2b7bd",
     "d78390badc00067e",
     "d0410a840ab80716",
@@ -799,7 +797,9 @@
     "aefccc4c1e1cd0b4",
     "63a1d8c7aa061979",
     "https://www.seudinheiro.com/2026/empresas/ninguem-investe-na-sequoia-para-receber-dividendo-ceo-diz-por-que-nao-esta-com-pressa-para-voltar-a-dar-lucro-miql/",
-    "84764e467b4fabec"
+    "84764e467b4fabec",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/dow-futuro-pce-tarifas-eua/",
+    "8775bc8acce8995c"
   ],
   "titulos": [
     "Senado abre licitação de R$ 3,4 milhões para trocar carpete do plenário",
@@ -1551,10 +1551,10 @@
     "Treasuries recuam à espera de dados de inflação nos EUA",
     "UE articula fundo de €50 bi para IA e computação quântica",
     "CEO da Latam vê demanda estável e mantém planos com jatos da Embraer no Brasil",
-    "“Ninguém investe na Sequoia para receber dividendo”: CEO diz por que não está com pressa para voltar a dar lucro"
+    "“Ninguém investe na Sequoia para receber dividendo”: CEO diz por que não está com pressa para voltar a dar lucro",
+    "Dow futuro recua com PCE no radar e temor de tarifas"
   ],
   "leads": [
-    "O Cross River Bank, dos Estados Unidos, passou a oferecer empréstimos com Bitcoin como garantia em parceria com a LendingUSA, segundo o Cointelegraph. As operações vão de US$ 10 mil a US$ 250 mil e dispensam a venda das moedas pelo cliente.",
     "A Suno Notícias informou que a Itaúsa (ITSA4) apresentou os números do 9M26 em material institucional. O lucro recorrente alcançou R$ 13,9 bilhões, com avanço de 16% sobre o 9M25. O resultado total ficou em R$ 14,6 bilhões, 21% maior, influenciado por ganhos não recorrentes de R$ 750 milhões.",
     "A Comissão Europeia, braço executivo da UE (União Europeia), abriu uma investigação antitruste formal para apurar se a CCEP (Coca-Cola Europacific Partners) violou as regras de concorrência do bloco.",
     "O bilionário e investidor Bill Ackman afirmou que o Federal Reserve (Fed, o banco central norte-americano) corre o risco de cometer \"outro erro\" na decisão de juros de 9 de dezembro, diante do forte aperto das condições financeiras.",
@@ -1803,21 +1803,10 @@
     "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças.",
     "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
     "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo.",
-    "Ao Seu Dinheiro, Leopoldo de Bruggen e Silva detalha os planos para a nova fase da companhia, que deixou as grandes encomendas do e-commerce para apostar em cartões, maquininhas e transporte B2B"
+    "Ao Seu Dinheiro, Leopoldo de Bruggen e Silva detalha os planos para a nova fase da companhia, que deixou as grandes encomendas do e-commerce para apostar em cartões, maquininhas e transporte B2B",
+    "Os futuros de Wall Street iniciaram a sessão desta quarta-feira, 25, em território negativo, com investidores concentrados no índice PCE de outubro e na expectativa de que o governo dos Estados Unidos anuncie uma nova rodada de tarifas sobre parceiros comerciais, conforme apurou o InfoMoney. A combinação de inflação ainda elevada e risco de escalad"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795425650.353822
-    },
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795425650.353822
-    },
-    {
-      "chave": "petrobras::GERAL_ATIVO",
-      "ts": 1795425981.01454
-    },
     {
       "chave": "smft3::GERAL_ATIVO",
       "ts": 1795426302.585655
@@ -2641,10 +2630,13 @@
     {
       "chave": "embraer::GERAL_ATIVO",
       "ts": 1795597706.063165
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795599027.065632
     }
   ],
   "hashes_imagens": [
-    "f8965016d9913c99",
     "6f00daf056a50911",
     "1360a4e281138ff8",
     "cf6863f26007dde9",
@@ -2943,6 +2935,7 @@
     "96ff04cf499bf9f6",
     "18c8d278b3a1a42a",
     "c983109ec3c37c92",
-    "1f533b0f2a15aa95"
+    "1f533b0f2a15aa95",
+    "efdcd987972cef77"
   ]
 }
