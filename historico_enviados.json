@@ -1,11 +1,5 @@
 {
   "links": [
-    "a7b1e9847f8f46d8",
-    "2a54e36f9cc7ff10",
-    "https://braziljournal.com/e-possivel-reverter-rapidamente-esse-pessimismo-diz-gestor-da-ashmore",
-    "43b0fae79c649f08",
-    "https://www.infomoney.com.br/mercados/do-trading-cientifico-inteligencia-artificial-os-destaques-do-profit-summit-2026/",
-    "895399c957ad85fe",
     "https://www.bloomberglinea.com.br/tech/prosus-injeta-us-344-mi-em-ifood-e-jet-ve-receita-saltar-59-mas-aebitda-cai-7/",
     "646cd62d895fff32",
     "https://www.infomoney.com.br/mercados/taurus-faz-acordo-de-cooperacao-com-imbel-para-sistemas-de-defesa-e-seguranca/",
@@ -799,10 +793,15 @@
     "7085a0b7cad17f54",
     "0b3631bb6ccf9797",
     "https://www.estadao.com.br/economia/brasileiros-vida-sem-bets-presidente-abras/",
-    "b729de7ef7358be2"
+    "b729de7ef7358be2",
+    "5d4bf5a30a7b174f",
+    "f593b29449087125",
+    "594f4736efa5c99f",
+    "48e7404631d22954",
+    "https://www.infomoney.com.br/mundo/israel-ameaca-deslocar-um-milhao-de-palestinos-se-hamas-nao-entregar-as-armas/",
+    "acb11f2946bfe99a"
   ],
   "titulos": [
-    "A WeWork valia US$ 47 bilhões e devia outros 47 em aluguel: o que a queda ensina sobre valuation",
     "Monitor do PIB medido pela FGV aponta queda de 0,2% no 3º trimestre ante 2º trimestre",
     "Maioria dos trabalhadores não está engajada; veja motivos e quais jornadas têm piores índices",
     "Após punição dos EUA, MEXC encerra seu cartão de criptomoedas",
@@ -1601,10 +1600,10 @@
     "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos",
     "Chips superam petróleo pela 1ª vez nas exportações globais",
     "Acordo assegura nomeação de Pablo Hernández de Cos como futuro presidente do BCE",
-    "Brasileiros estão se dando conta de que existe vida sem bets, diz presidente da Abras"
+    "Brasileiros estão se dando conta de que existe vida sem bets, diz presidente da Abras",
+    "Israel ameaça deslocar um milhão de palestinos se Hamas não entregar as armas"
   ],
   "leads": [
-    "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
     "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo.",
     "Segundo o g1, economistas apontam que a troca do sistema de tributos sobre o consumo e o encerramento do regime 6×1 podem tornar a inflação brasileira mais desafiadora no começo de 2027. A primeira mudança deve mexer com os preços de alguns itens, sobretudo serviços; a segunda tende a encarecer a folha de parte das empresas e pode ser repassada ao ",
     "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. ",
@@ -1853,7 +1852,8 @@
     "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos.",
     "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre.",
     "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida.",
-    "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan"
+    "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan",
+    "O ministro da Defesa, Israel Katz, ameaçou deslocar um milhão de palestinos caso o Hamas não se desarme voluntariamente. A ameaça foi feita em postagem no X nesta quinta-feira, 26. Katz afirmou que, se o grupo não entregar as armas e Gaza não for desmilitarizada conforme o plano do presidente dos Estados Unidos, Donald Trump, as Forças de Defesa de"
   ],
   "eventos_recentes": [
     {
@@ -2558,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "8b317a287717e568",
     "67acd07f6e9653d5",
     "9244c57d21832f05",
     "af33d7ce28884670",
@@ -2857,6 +2856,7 @@
     "f7d4a325050bf2d0",
     "3a3771d0f1d73a76",
     "2885a1b954f7caff",
-    "7b7d34222f5b4610"
+    "7b7d34222f5b4610",
+    "f6ffbb37f136d5d1"
   ]
 }
