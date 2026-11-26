@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://telesintese.com.br/fcc-autoriza-spacex-a-lancar-1-milhao-de-satelites-para-data-centers/",
-    "1bf2ee628e8491fb",
     "d3967f2b44b7ec59",
     "3493b154b31c7f86",
     "217faad4112bdc0e",
@@ -799,10 +797,11 @@
     "9de6ca1cdc1428e3",
     "https://www.moneytimes.com.br/cmn-limite-de-credito-para-estados-df-e-municipios-e-elevado-em-r-1-bi-para-r-31625-bi/",
     "588e6d32e94af010",
-    "90fdc6e43adadf15"
+    "90fdc6e43adadf15",
+    "https://eixos.com.br/energias-renovaveis/tecnologia-reaproveita-baterias-de-carros-eletricos-para-armazenar-energia-solar/",
+    "258f6dc64d83a5a8"
   ],
   "titulos": [
-    "É tarde demais para a Vale (VALE3)? Por que o BTG ainda não rebaixou a recomendação para o papel",
     "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
     "Copel prepara 9 GW em hidrelétricas reversíveis para leilões",
     "CAIXA Seguridade registra lucro de R$ 1,2 bilhão no terceiro trimestre",
@@ -1601,10 +1600,10 @@
     "CMN reduz taxa do Fundo Clima para leilão de baterias a 3% ao ano",
     "Justiça suspende exclusão de sócio da Brasil Bitcoin",
     "HGLG11 fecha aquisição da última fatia do G400",
-    "CMN: Limite de crédito para Estados, DF e municípios sobe em R$ 1 bilhão, para R$ 31,625 bilhões"
+    "CMN: Limite de crédito para Estados, DF e municípios sobe em R$ 1 bilhão, para R$ 31,625 bilhões",
+    "Tecnologia reaproveita baterias de carros elétricos para armazenar energia solar"
   ],
   "leads": [
-    "O CEO da Nvidia, Jensen Huang, declarou no ano passado que o apoio dos membros de longa data do conselho, Tench Coxe, Mark Stevens e Harvey Jones, foi crucial para ajudá-lo a navegar por três décadas à frente da empresa.",
     "O governo federal deve estender por mais um mês o pagamento do subsídio de R$ 2,12 por litro de diesel vendido no país. A prorrogação poderá elevar entre R$ 8 bilhões e R$ 10,5 bilhões o custo das medidas adotadas neste ano para conter a alta dos combustíveis.",
     "Chris Rondeau defende que a Panobianco tem semelhanças com a Planet Fitness e vê horizonte para chegar à bolsa no longo prazo",
     "A Justiça Federal do Distrito Federal negou nesta quarta-feira (25) um pedido de tutela de urgência que buscava suspender a realização do primeiro leilão para contratação de baterias para o setor elétrico brasileiro, marcado para a próxima semana.",
@@ -1853,7 +1852,8 @@
     "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%.",
     "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
-    "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026."
+    "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
+    "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências."
   ],
   "eventos_recentes": [
     {
@@ -2578,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "8545939ecdb7262b",
     "ab15d04d69fc7fc8",
     "5bd0624d125dc917",
     "c3e962af2743afa2",
@@ -2877,6 +2876,7 @@
     "44382dd9277b90da",
     "61f8bf457f791b4a",
     "4ff990e240b13f42",
-    "6469c2f822a196ff"
+    "6469c2f822a196ff",
+    "88619c4583900752"
   ]
 }
