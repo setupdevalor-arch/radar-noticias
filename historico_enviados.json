@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/business/global/bill-ackman-buscar-meta-de-inflacao-de-2-levara-a-economia-dos-eua-a-outra-recessao/",
-    "5bb8b89985624b77",
-    "https://www.infomoney.com.br/business/krispy-kreme-na-estacao-4-pinheiros-expande-presenca-de-grandes-marcas-no-metro/",
-    "047d34d0ff56f8c0",
     "https://megawhat.uol.com.br/regulacao/concentracao-no-mercado-livre-de-energia-pode-levar-a-intervencoes-da-aneel/",
     "39446359e2e10de6",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/lvbi11-provento-extra-fusao-hglg11/",
@@ -799,10 +795,13 @@
     "e34f9d9c41887741",
     "3623b8db4c1644fd",
     "https://valorinveste.globo.com/mercados/renda-variavel/noticia/2026/11/26/mulheres-entram-na-bolsa-investindo-50percent-mais-que-homens-veja-quais-acoes-elas-mais-compram.ghtml",
-    "68b4948a45046208"
+    "68b4948a45046208",
+    "44d56aa68a5ebfcd",
+    "789fff48e102b245",
+    "https://www.poder360.com.br/poder-economia/regulacao-da-tributaria-sai-em-breve-diz-secretario-da-receita/",
+    "5da38b9a2cbd490b"
   ],
   "titulos": [
-    "Por que Robert Pattinson foi escolhido como James Bond? Jeff Bezos explica",
     "Axia, Simpar, Unifique, Iguatemi e mais ações para acompanhar nesta quarta-feira",
     "PF investiga apoio de rede ligada a JD Vance à campanha de Flávio, diz jornal",
     "Por que o mesmo celular aparece várias vezes na conta Google?",
@@ -1601,10 +1600,10 @@
     "Smart Fit (SMFT3) pagará R$ 545 milhões em JCP aos acionistas e anuncia aumento de capital; veja as condições",
     "Índice de confiança da Indústria sobe 0,4 ponto em novembro, a 91,4 pontos, diz FGV",
     "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são",
-    "Mulheres entram na bolsa investindo 50% mais que homens; veja quais ações elas mais compram"
+    "Mulheres entram na bolsa investindo 50% mais que homens; veja quais ações elas mais compram",
+    "Regulação da tributária sai em breve, diz secretário da Receita"
   ],
   "leads": [
-    "As principais divergências da conferência envolveram o futuro dos combustíveis fósseis, o financiamento climático e os caminhos para a transição energética",
     "Os Estados Unidos preparam a inclusão da Megaspeed, fabricante de chips sediada em Cingapura, em sua relação de restrições comerciais. A informação é atribuída a uma fonte. Com isso, fornecedores dos EUA passariam a precisar de licença para entregar produtos, softwares ou tecnologia à companhia. Na prática, porém, essas autorizações são pouco conce",
     "– As ações da Petrobras (PETR3;PETR4) subiam nesta terça-feira após a companhia publicar na véspera seu plano de negócios ‌para o período de 2027 a 2031 com investimentos mais elevados do que esperado nos primeiros anos, enquanto inesperados dividendos extraordinários trouxeram algum alívio ao ‌mercado.",
     "BRASÍLIA - A arrecadação de impostos e contribuições federais somou R$ 293,975 bilhões em outubro, informou a Receita Federal nesta terça-feira, 24.",
@@ -1853,7 +1852,8 @@
     "O conselho de administração da Smart Fit (SMFT3) aprovou a distribuição de juros sobre o capital próprio (JCP) aos acionistas e um aumento de capital da companhia.",
     "O Índice de Confiança da Indústria (ICI) da Fundação Getulio Vargas (FGV) subiu 0,4 ponto em novembro em comparação a outubro, para 91,4 pontos. Esta foi a primeira alta após quatro meses consecutivos de queda do indicador. Em médias móveis trimestrais, o ICI caiu 0,8 ponto, a 91,2 pontos.",
     "Analistas veem papéis de boas empresas como oportunidades, mas alertam que juros altos e incerteza fiscal devem pesar sobre a bolsa",
-    "Na ponta mais jovem, 26,7 mil meninas de 0 a 17 anos já têm CPF na bolsa."
+    "Na ponta mais jovem, 26,7 mil meninas de 0 a 17 anos já têm CPF na bolsa.",
+    "Confederações empresariais pediram ao STF o adiamento da reforma, que deve entrar em vigor em 1º de janeiro de 2027"
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "2404d220ace67c05",
     "1c97b6e850e795d6",
     "3b4204d34b3778e4",
     "53a914172191caed",
@@ -2861,6 +2860,7 @@
     "40d12822f716dea2",
     "a4a8c7b184f00fe0",
     "673cd62b0ac24fce",
-    "ee1f6975071d1120"
+    "ee1f6975071d1120",
+    "c30fa2e1c6725df7"
   ]
 }
