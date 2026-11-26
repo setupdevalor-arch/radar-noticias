@@ -1,12 +1,5 @@
 {
   "links": [
-    "49addf3d5f6b27dc",
-    "7c0687b660afe322",
-    "0dca7fb57e3918a8",
-    "322ad9fcddc467d8",
-    "https://www.infomoney.com.br/mercados/suzano-suzb3-sobe-30-em-meio-queda-do-ibovespa-ainda-ha-espaco-para-alta/",
-    "7e5c97a225cb9ce9",
-    "https://bmcnews.com.br/economia/incc-m-sobe-0-30-em-novembro-e-confianca-da-construcao-cai-a-85-8/",
     "a5d245efe507d6b7",
     "83f61baef1a420c2",
     "698904b24f4aa0ce",
@@ -799,10 +792,16 @@
     "92c7bad2f9bc590c",
     "https://www.moneytimes.com.br/musk-promete-duas-acoes-da-spacex-para-cada-crianca-dos-eua-em-ofensiva-de-us18-bilhoes-por-apoio-a-ia-pads/",
     "d11e9d1eb266b056",
-    "d9da842a6ca78daf"
+    "d9da842a6ca78daf",
+    "1cf3112c33888ca5",
+    "4a8a84cb361e623f",
+    "e9551fa486bed3ee",
+    "3ba5fd761b4098d2",
+    "cc8d9dfa1b0f63f5",
+    "https://www.cnnbrasil.com.br/agro/corteva-investe-us-32-mi-em-unidade-de-sp-para-producao-de-novo-fungicida/",
+    "a906f6235b1bf50e"
   ],
   "titulos": [
-    "Tencent diz que novas restrições dos EUA não afetarão receita de nuvem, mas podem desacelerar treinamento de modelos",
     "Boato de 'apagão mundial' e onda de ataques hackers: o que aconteceu no mundo nas últimas semanas",
     "Durigan diz que Reforma Tributária não deve gerar arrecadação extra para o governo",
     "Quem são os sete jovens fundadores da Anthropic que estão prestes a se tornarem multibilionários",
@@ -1601,10 +1600,10 @@
     "A inteligência artificial vai substituir o investidor de criptomoedas?",
     "Trump exige investigação sobre dados do PIB divulgados antes de midterms",
     "Juro real perto de 8,7% põe pós-fixados em evidência",
-    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$18 bilhões por apoio à IA"
+    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$18 bilhões por apoio à IA",
+    "Corteva investe US$ 3,2 mi em unidade de SP para produção de novo fungicida"
   ],
   "leads": [
-    "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças.",
     "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
     "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo.",
     "Ao Seu Dinheiro, Leopoldo de Bruggen e Silva detalha os planos para a nova fase da companhia, que deixou as grandes encomendas do e-commerce para apostar em cartões, maquininhas e transporte B2B",
@@ -1853,7 +1852,8 @@
     "As ferramentas de IA para criptomoedas já leem gráficos, resumem notícias, acompanham carteiras de grandes investidores e até enviam ordens sozinhas, então a pergunta do título deixou de ser ficção. A resposta curta é que a IA já supera as pessoas em algumas tarefas, mas substituir o investidor é outra história, porque a decisão sobre risco e objet",
     "– O presidente dos Estados Unidos, Donald Trump, exigiu nesta quinta-feira uma investigação imediata sobre o que ele alegou ‌ser uma decisão deliberada de divulgar números “falsos” de crescimento econômico antes das eleições de meio de mandato deste ‌mês.",
     "Com a taxa básica em 13,75% ao ano e o IPCA acumulado em 4,64% nos últimos 12 meses, o Brasil opera com juro real na casa de 8,7%. Segundo a Suno Notícias, esse patamar recoloca as aplicações pós-fixadas e os ETFs de renda fixa negociados na B3 na mesa do investidor.",
-    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA"
+    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA",
+    "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a"
   ],
   "eventos_recentes": [
     {
@@ -2574,7 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "398599525494f300",
     "d79d49ce4fa8c21a",
     "913daf7a839c60e8",
     "bc5bca2674a99259",
@@ -2873,6 +2872,7 @@
     "34559191ca56ffe3",
     "e480cdcd0177a7a0",
     "71242ce2d20727bc",
-    "450c69f45f228ba3"
+    "450c69f45f228ba3",
+    "dc13024c98014ab8"
   ]
 }
