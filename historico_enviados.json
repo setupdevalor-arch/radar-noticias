@@ -1,6 +1,5 @@
 {
   "links": [
-    "a5d245efe507d6b7",
     "83f61baef1a420c2",
     "698904b24f4aa0ce",
     "d67c938a136f2e1e",
@@ -799,7 +798,8 @@
     "3ba5fd761b4098d2",
     "cc8d9dfa1b0f63f5",
     "https://www.cnnbrasil.com.br/agro/corteva-investe-us-32-mi-em-unidade-de-sp-para-producao-de-novo-fungicida/",
-    "a906f6235b1bf50e"
+    "a906f6235b1bf50e",
+    "0f46547b529c4195"
   ],
   "titulos": [
     "Boato de 'apagão mundial' e onda de ataques hackers: o que aconteceu no mundo nas últimas semanas",
@@ -1856,10 +1856,6 @@
     "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a"
   ],
   "eventos_recentes": [
-    {
-      "chave": "btg_pactual::GERAL_ATIVO",
-      "ts": 1795541597.42203
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795542289.276424
