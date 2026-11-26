@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/agronegocio/rondonia-maximas-37-graus/",
-    "9ee13fbc1b199b53",
     "https://www.infomoney.com.br/mercados/braskem-avanca-em-reestruturacao-de-divida-mas-acordo-ainda-nao-e-vinculante/",
     "2a6cdaa264b11cbd",
     "849754148161e10b",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/economia/compras-supermercados-abras-novembro/",
     "ed6fe4417c383cb5",
     "https://www.poder360.com.br/poder-economia/novas-regras-do-bc-para-credito-podem-atingir-20-milhoes/",
-    "6ee079a781605539"
+    "6ee079a781605539",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/durigan-defende-agilizar-proibicao-definitiva-de-bets-e-cassinos-online/",
+    "4132b3360e1e3e0b"
   ],
   "titulos": [
-    "Dona da Zara e Berksha quer levar outras marcas aos shoppings da Multiplan, diz CEO",
     "Conservar para não precisar reconstruir: o investimento inteligente na proteção das florestas",
     "Mercado de capitais soma R$ 71,4 bi em outubro, com forte captação de Fiagros",
     "Quem são os 7 fundadores da Anthropic que vão ficar com US$ 18 bilhões cada na estreia da bolsa",
@@ -1601,10 +1600,10 @@
     "Argentina alcança 171 milhões de t de grãos no ciclo 2025/26",
     "Letras Financeiras superam retorno do Tesouro Selic e lideram ranking de renda fixa da B3",
     "Compras em supermercados crescem 8% em novembro, diz Abras",
-    "Novas regras do BC para crédito podem atingir 20 milhões"
+    "Novas regras do BC para crédito podem atingir 20 milhões",
+    "Durigan defende agilizar proibição definitiva de bets e cassinos online"
   ],
   "leads": [
-    "O preço médio da gasolina nos Estados Unidos caiu quase 90 centavos por galão em dois meses, atingindo o menor nível desde os primeiros dias da guerra com o Irã — bem a tempo para as viagens do feriado de Ação de Graças.",
     "Eneva, Petrobras e Âmbar Energia, do grupo J&F, foram as grandes vencedoras do leilão, concentrando juntas quase metade da potência contratada. Entre as geradoras com hidrelétricas, destacaram-se Copel, Axia (ex-Eletrobras), Engie e a chinesa SPIC.",
     "O projeto de lei das baterias poderá acrescentar até R$ 6,26 bilhões por ano à conta de luz dos consumidores, segundo estimativa da FNCE (Frente Nacional dos Consumidores de Energia). O PL 3.716/2026 tramita em regime de urgência na Câmara dos Deputados e propõe mudar a divisão dos custos da contratação de sistemas de armazenamento de energia.",
     "Resultado representa desaceleração em relação ao 1º semestre; exportações e investimentos em máquinas recuaram no período",
@@ -1853,7 +1852,8 @@
     "A colheita argentina de grãos encerrou a safra 2025/26 em 171 milhões de toneladas, novo recorde nacional. A superfície destinada ao plantio chegou a 44,6 milhões de hectares, também um máximo histórico, informou a Secretaria de Agricultura, Pecuária e Pesca do Ministério da Economia.",
     "As Letras Financeiras deixaram os títulos públicos para trás no ranking de renda fixa da B3 de outubro. O Índice de Letra Financeira S1 DI B3 (ILFB) liderou a lista de desempenho do mês passado, com valorização de 1,08%. O indicador superou o Índice Tesouro Selic B3 (TSLC), que teve valorização de 0,99%, além do Índice Tesouro Selic Low Turnover (T",
     "As compras nos supermercados cresceram 8% entre 9 e 15 de novembro, na comparação anual, segundo monitoramento da Associação Brasileira de Supermercados (Abras). A entidade credita ao encerramento das bets uma folga orçamentária das famílias, mas afirma que o avanço das compras tem outros vetores.",
-    "Medidas restringem empréstimos a inadimplentes e limitam cartões usados frequentemente no rotativo; objetivo é diminuir o endividamento"
+    "Medidas restringem empréstimos a inadimplentes e limitam cartões usados frequentemente no rotativo; objetivo é diminuir o endividamento",
+    "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo."
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "24a126b00872754c",
     "725e7bae50e914d3",
     "30ebb7a59a22e831",
     "290d1a66d7223d49",
@@ -2861,6 +2860,7 @@
     "e6e318b98c09e2af",
     "d0f44f7742b01dc8",
     "8d99149e1a37bb30",
-    "ae4021f079a2a035"
+    "ae4021f079a2a035",
+    "0ec3418914f04a92"
   ]
 }
