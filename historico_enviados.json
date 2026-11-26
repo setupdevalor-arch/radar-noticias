@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.bloomberglinea.com.br/negocios/ceo-da-latam-ve-demanda-estavel-e-mantem-planos-com-jatos-da-embraer-no-brasil/",
-    "c5185144d5cbb3ea",
-    "aefccc4c1e1cd0b4",
-    "63a1d8c7aa061979",
-    "https://www.seudinheiro.com/2026/empresas/ninguem-investe-na-sequoia-para-receber-dividendo-ceo-diz-por-que-nao-esta-com-pressa-para-voltar-a-dar-lucro-miql/",
     "84764e467b4fabec",
     "https://www.spacemoney.com.br/economia/indicadores-economicos/dow-futuro-pce-tarifas-eua/",
     "8775bc8acce8995c",
@@ -799,7 +794,12 @@
     "6ee41721997eaa3d",
     "6532674e7436fb0e",
     "https://investnews.com.br/economia/acordo-assegura-nomeacao-de-pablo-hernandez-de-cos-como-futuro-presidente-do-bce/",
-    "b383d2b42f512fd0"
+    "b383d2b42f512fd0",
+    "d45aeefd5dc1e14f",
+    "baa3dc11df445dd9",
+    "9f43eda07e2d884a",
+    "b173cb26cbaae858",
+    "c4afd85ad36646ba"
   ],
   "titulos": [
     "Risco de derrota no ajuste fiscal mostra que Lula terá de ceder mais espaço ao Centrão e partidos da Frente Ampla",
@@ -1856,10 +1856,6 @@
     "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida."
   ],
   "eventos_recentes": [
-    {
-      "chave": "fiis_geral::FIIS_GERAL",
-      "ts": 1795533342.911868
-    },
     {
       "chave": "mxrf11::GERAL_ATIVO",
       "ts": 1795534465.665304
