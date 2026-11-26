@@ -1,7 +1,5 @@
 {
   "links": [
-    "c5b036260574b5f1",
-    "9bf7bde9046a72b5",
     "2e50aa21fe2118bf",
     "dc6394192ab13b37",
     "b78c8d5ad1f6815c",
@@ -799,7 +797,9 @@
     "f6b3dd6496359f4e",
     "73d45e51353f8824",
     "49460f05774e72c2",
-    "4cc1d052b24a77a2"
+    "4cc1d052b24a77a2",
+    "05ed15ead5d4ed1e",
+    "ec4eeb9526743b30"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,10 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "petrobras::GERAL_ATIVO",
-      "ts": 1795515860.849037
-    },
     {
       "chave": "petroreconcavo::PROVENTOS",
       "ts": 1795517139.641587
