@@ -1,15 +1,5 @@
 {
   "links": [
-    "a097ae708dcdccd9",
-    "53d84b689b4372b8",
-    "425d6de2bc1d5e5b",
-    "https://investnews.com.br/economia/restricoes-eua-chips-de-ia-data-centers/",
-    "521389079ad34f1f",
-    "92e59d746732fd75",
-    "https://bmcnews.com.br/programas-bmc/money-report/brasil-em-2027-o-que-esperar-da-economia-no-quarto-mandato-de-lula/",
-    "a87af12775844b21",
-    "cff512c8cbed554d",
-    "3260e60f99024599",
     "cece8001493c5fa1",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/ue-cobra-respeito-dos-eua-ao-limite-de-15-para-tarifas/",
     "41e62506a0c45820",
@@ -799,13 +789,19 @@
     "https://www.poder360.com.br/poder-tech/anthropic-paga-autores-que-tiveram-obras-usadas-ilegalmente-por-ia/",
     "906e1ae2549bace6",
     "https://www.suno.com.br/noticias/totvs-tots3-acoes-disparam-bolsa-hoje/",
-    "e8c116d19317ebdd"
+    "e8c116d19317ebdd",
+    "cb94146c4b965205",
+    "dbc15108bc04d1f1",
+    "https://www.spacemoney.com.br/investimentos/nvidia-alerta-credito-sp/",
+    "0a7e5f0edc1bd656",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/ggrc11-hglg11-rendimento-contratos-ocupacao/",
+    "24d1fe2a47d76608",
+    "https://neofeed.com.br/economia/mecanismo-aprovado-pelo-tcu-deve-destravar-bilhoes-em-financiamento-de-infraestrutura/",
+    "b4618362d87c64ab",
+    "https://www.poder360.com.br/poder-governo/cotado-para-a-fazenda-trabuco-se-reune-com-lula-no-alvorada/",
+    "137df4b9038882d9"
   ],
   "titulos": [
-    "Ibovespa perde os 168 mil pontos com incertezas fiscais e juros dos EUA no radar",
-    "Ibovespa fecha em queda com receios sobre cenário fiscal e juro maior nos EUA",
-    "Vitória do governo: Senado rejeita destaques e mantem plano fiscal; projeto segue para Câmara",
-    "Custo Brasil chega a 27,5% do PIB, ainda maior do que se imaginava",
     "Dona do Claude cobra US$ 83 por ação, acima do previsto, em IPO de US$ 68 bilhões",
     "Ajuste fiscal: entenda ponto a ponto o texto do pacote após Senado rejeitar destaques",
     "A empresa que fez a Dinamarca mais que dobrar a previsão de crescimento do PIB",
@@ -1601,13 +1597,13 @@
     "Governo Lula propõe diversificar exportações de aviões a Embraer",
     "Guilherme Boulos trabalha em contraponto ao pacote de ajuste fiscal",
     "Anthropic paga autores que tiveram obras usadas ilegalmente por IA",
-    "TOTVS (TOTS3) dispara mais de 8% e entra na festa da Bolsa; veja o que está no radar"
+    "TOTVS (TOTS3) dispara mais de 8% e entra na festa da Bolsa; veja o que está no radar",
+    "S&P põe Nvidia em alerta de crédito",
+    "GGRC11 e HGLG11: rendimento, contratos e ocupação",
+    "Mecanismo aprovado pelo TCU deve destravar bilhões em financiamento de infraestrutura",
+    "Cotado para a Fazenda, Trabuco se reúne com Lula no Alvorada"
   ],
   "leads": [
-    "A Tecto Data Centers anunciou hoje (25) a implantação de seu primeiro data center em Pernambuco. Batizado de TREC1, o empreendimento terá capacidade inicial de 1 MW, expansível a 6 MW, e previsão de entrada em operação no primeiro trimestre de 2027. O projeto integra o plano de investimentos de US$ 2 bilhões anunciado pela companhia em abril deste ",
-    "O Banco Genial intermediou a venda de R$ 92,25 milhões em títulos do Banco Master a institutos de previdência de servidores de seis municípios entre março e maio de 2024. As operações constam de mensagens e de uma planilha apreendidas pela Polícia Federal (PF).",
-    "A avaliação sobre a capacidade das empresas públicas que administram portos no Brasil pode mudar para ampliar a autonomia dessas estatais. É o que propõe a consulta pública lançada pelo MPor (Ministério de Portos e Aeroportos), que pretende alterar índices econômicos de medição que atualmente dificultam a autonomia dessas companhias.",
-    "O Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC) defendeu que todos os geradores de energia elétrica participem do rateio dos custos de contratação de baterias para reserva de capacidade, com descontos proporcionais à flexibilidade que cada usina oferece ao Sistema Interligado Nacional (SIN).",
     "O MCRE11 iniciou uma consulta formal aos cotistas para aprovar mudanças no regulamento do fundo imobiliário, incluindo autorização para recomprar cotas com o objetivo exclusivo de cancelamento. A proposta foi enviada pela administradora BTG Pactual Serviços Financeiros em 5 de novembro de 2026, com prazo de votação até 8 de dezembro de 2026.",
     "A empresa americana trabalha com varejistas na escolha das categorias que ganham destaque, na definição dos estoques e na divulgação dos atributos dos produtos. O objetivo é chegar ao consumidor enquanto ele ainda pesquisa o que comprar, disse Alexandre Costa, CEO da Newell Brands no Brasil, em entrevista ao InvestNews.",
     "O presidente Donald Trump se reunirá com o secretário-geral da OTAN (Organização do Tratado do Atlântico Norte), Mark Rutte, nesta quarta-feira (25) à tarde, em seu resort de Mar-a-Lago, em Palm Beach, na Flórida. Os dois líderes devem discutir investimentos em defesa e os esforços para encerrar a guerra na Ucrânia.",
@@ -1853,13 +1849,13 @@
     "Chanceler Mauro Vieira se reuniu com presidente da empresa após anúncio de novas tarifas dos EUA",
     "O ministro-chefe da Secretaria-Geral da Presidência, Guilherme Boulos (PSOL-SP), tem atuado como contraponto às propostas de ajuste fiscal defendidas por agentes do mercado financeiro.",
     "Indenizações são parte de acordo de US$ 1,5 bilhão fechado pela dona do Claude em 2025 para encerrar uma ação por violação de direitos autorais",
-    "A Bolsa brasileira resolveu acelerar nesta quinta-feira (26), e a TOTVS (TOTS3) pegou carona no movimento com uma das maiores valorizações do Ibovespa. As ações da empresa brasileira de tecnologia, especializada em softwares de gestão empresarial, chegaram a subir 8,49% por volta das 14h40, em um pregão marcado pelo otimismo dos investidores após a"
+    "A Bolsa brasileira resolveu acelerar nesta quinta-feira (26), e a TOTVS (TOTS3) pegou carona no movimento com uma das maiores valorizações do Ibovespa. As ações da empresa brasileira de tecnologia, especializada em softwares de gestão empresarial, chegaram a subir 8,49% por volta das 14h40, em um pregão marcado pelo otimismo dos investidores após a",
+    "Segundo a Suno Notícias, a S&P Global Ratings colocou a Nvidia (NVDC34) no CreditWatch negativo, abrindo espaço para cortar as notas da fabricante de chips nos próximos 90 dias. A agência manteve a avaliação “AA”, mas quer respostas sobre a supervisão do conselho, os controles internos e a concentração de poder em Jensen Huang.",
+    "A comparação entre GGRC11 e HGLG11 feita pela Suno Notícias mostra diferenças de porte, rendimento, contratos e ocupação. Os dois fundos imobiliários têm patrimônio líquido somado superior a R$ 11 bilhões e estão entre os principais nomes do segmento logístico e industrial listados na B3, conforme a reportagem.",
+    "A decisão do Tribunal de Contas da União (TCU) de autorizar o uso de contas vinculadas em contratos de infraestrutura pode se tornar um dos marcos mais importantes da política de concessões da atual gestão.",
+    "Nome do presidente do Conselho de Administração do Bradesco ganhou força para chefiar a equipe econômica"
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_credito_juros::RF_EVENTO",
-      "ts": 1795554477.713189
-    },
     {
       "chave": "trxf11::PROVENTOS",
       "ts": 1795554841.953438
@@ -2579,13 +2575,21 @@
     {
       "chave": "totvs::GERAL_ATIVO",
       "ts": 1795727180.542525
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795727578.807245
+    },
+    {
+      "chave": "ggrc11::GERAL_ATIVO",
+      "ts": 1795727578.807245
+    },
+    {
+      "chave": "hglg11::GERAL_ATIVO",
+      "ts": 1795727578.807245
     }
   ],
   "hashes_imagens": [
-    "30ce5ccabccecf42",
-    "70ef74244428f58d",
-    "20279c2e14a14655",
-    "3ee4fd39ed72184f",
     "4073b46b67e8a533",
     "9f596780f2f08b87",
     "f0da3489e702c1e5",
@@ -2881,6 +2885,10 @@
     "8a7ae5d7d227e648",
     "592861fa5ca26001",
     "547ff77cae11a467",
-    "23a9bf508d3d944e"
+    "23a9bf508d3d944e",
+    "9a57c3a5fb5ac70a",
+    "9285ca8caf46f8a6",
+    "ae10fb7dc1e54e97",
+    "c10183e000fb1475"
   ]
 }
