@@ -1,14 +1,5 @@
 {
   "links": [
-    "5c57bc2b8ffe7078",
-    "e01fa84c94d02f26",
-    "1a5839d72472d9e7",
-    "7123b6f184402310",
-    "7c29bd8c9e552bf6",
-    "bfdd6409621076da",
-    "3f89452168980d24",
-    "b05e9e2b313b38fd",
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/atividade-economica-da-argentina-cai-12-em-setembro-diz-governo/",
     "57a8178b5ea87226",
     "https://www.mobiletime.com.br/noticias/24/11/2026/temu-mastercard-acordo/",
     "04b5e20cfd7dc748",
@@ -799,13 +790,18 @@
     "https://www.cnnbrasil.com.br/agro/abiove-eleva-projecao-de-exportacao-de-oleo-de-soja-em-103-para-2026/",
     "6d279c99f14f47d2",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/btlg11-compra-7985-mi-cotistas/",
-    "a069b500e94d73ac"
+    "a069b500e94d73ac",
+    "770260401bc102f7",
+    "https://www.suno.com.br/noticias/a-taesa-taee11-agenda-dividendos-26112026/",
+    "5302ae4661ca1834",
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/porto-do-acu-negocia-nova-termica-e-avanca-na-atracao-de-data-centers/",
+    "a5d21fd7f64cbc02",
+    "https://www.spacemoney.com.br/economia/exterior/video-suposto-ataque-airbus-a319/",
+    "2ab67ffeee379d77",
+    "https://www.infomoney.com.br/mercados/sao-martinho-jpmorgan-corta-recomendacao-para-venda-apos-balanco-acao-cai/",
+    "0a1e7a44d311c5d3"
   ],
   "titulos": [
-    "Mercado Bitcoin anuncia retomada da negociação de criptomoedas após ataque hacker; veja as datas",
-    "WACC: fórmula, como calcular, exemplo com Selic e prêmio de risco",
-    "EBITDA: o que é, como calcular e quando não usar?",
-    "Dirigente do Fed cita ataque hacker à Binance em alerta sobre finanças tokenizadas",
     "SPXI11 ou SPXR11: qual o melhor ETF de S&P 500 da Itaú Asset?",
     "Banco do Brasil (BBAS3), B3 (B3SA3), Americanas (AMER3) e outros destaques desta quarta-feira (18)",
     "Minério de ferro na China se estabiliza com produção maior de ferro-gusa e estocagem",
@@ -1601,13 +1597,13 @@
     "HAPV3: Hapvida recompra debêntures com desconto médio de 32%",
     "Comissário da UE rejeita nova proposta tarifária dos EUA e cobra acordo",
     "Abiove eleva projeção de exportação de óleo de soja em 10,3% para 2026",
-    "BTLG11 submete compra de R$ 798,5 mi a cotistas"
+    "BTLG11 submete compra de R$ 798,5 mi a cotistas",
+    "Taesa (TAEE11) paga dividendos nesta quinta-feira; veja detalhes",
+    "Porto do Açu negocia nova térmica e avança na atração de data centers",
+    "Vídeo iraniano mostra suposto ataque a Airbus A319",
+    "São Martinho: JPMorgan corta recomendação para venda após balanço; ação cai"
   ],
   "leads": [
-    "A Agência Nacional de Telecomunicações (Anatel) identificou um estabelecimento comercial em Guarulhos (SP) como a origem das interferências nos sinais de GPS que afetaram operações aéreas no Aeroporto Internacional de São Paulo entre outubro e novembro de 2026. A agência encaminhará proposta de abertura de processo administrativo e representação cr",
-    "Após ultrapassar os R$ 6,00 na véspera, o dólar passou toda a sessão desta terça-feira (24) em queda e recuou para o nível dos R$ 5,90. A moeda norte-americana fechou em queda de 0,26%, a R$ 5,9107, no mercado à vista.",
-    "Ricardo Pagani, diretor de operações da Amazon Brasil, chamou atenção para o foco da companhia no cliente em entrevista para o Seu Dinheiro",
-    "A Hapvida Participações e Investimentos S.A. (HAPV3) divulgou comunicado ao mercado em resposta ao Ofício nº 272/2026/CVM/SEP/GEA-2, da Comissão de Valores Mobiliários, em continuidade ao comunicado já divulgado em 19 de novembro de 2026.",
     "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico.",
     "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05.",
     "O ouro deixou de se comportar como ativo de proteção neste ano e passou a oscilar de forma parecida com um índice de mercado, segundo reportagem da CNBC. Na semana passada, temores relacionados à inteligência artificial, um Federal Reserve mais duro e um dólar mais forte levaram muitos investidores a levantar caixa, e o metal foi vendido junto com ",
@@ -1853,7 +1849,11 @@
     "A Hapvida Participações e Investimentos (HAPV3) informou ao mercado que, até 24 de novembro de 2026, adquiriu diretamente e por meio de suas controladas 203.099 debêntures de diferentes emissões próprias.",
     "O comissário de Comércio da UE (União Europeia), Maros Sefcovic, afirmou nesta quinta-feira (26) que rejeita \"fortemente\" a nova proposta dos EUA sobre tarifas contra o bloco europeu e enfatizou a importância de respeitar a tarifa de 15% acordada com Washington no ano passado.",
     "A Abiove (Associação Brasileira das Indústrias de Óleos Vegetais) revisou para cima as projeções de oferta e demanda do complexo soja para 2026 e 2027. O principal ajuste foi na estimativa de exportação de óleo de soja neste ano, que passou para 2,15 milhões de toneladas, um aumento de 10,3% em relação à previsão anterior.",
-    "O BTLG11 submeteu aos cotistas consulta eletrônica que se encerra em 28 de dezembro de 2026 para avaliar a aquisição de dois galpões logísticos de padrão AAA, localizados em Guarulhos (SP) e Londrina (PR), por R$ 798,5 milhões, conforme a Suno Notícias. A proposta inclui alterações no regulamento e depende do aval dos investidores; a parte vendedor"
+    "O BTLG11 submeteu aos cotistas consulta eletrônica que se encerra em 28 de dezembro de 2026 para avaliar a aquisição de dois galpões logísticos de padrão AAA, localizados em Guarulhos (SP) e Londrina (PR), por R$ 798,5 milhões, conforme a Suno Notícias. A proposta inclui alterações no regulamento e depende do aval dos investidores; a parte vendedor",
+    "A Taesa (TAEE11) vai pagar dividendos aos seus acionistas nesta quinta-feira (26).",
+    "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
+    "A imprensa iraniana apresentou na terça-feira (24) um vídeo que, conforme os veículos que o publicaram, exibiria um ataque dos Estados Unidos e de Israel contra um avião comercial no começo do conflito. A ação é atribuída a forças americanas e israelenses, e a aeronave — identificada por sites especializados em aviação como um Airbus A319 da Iran A",
+    "Após resultados no terceiro trimestre considerados um tanto decepcionantes, o JPMorgan rebaixou a recomendação para ações da São Martinho (SMTO3) de neutra para venda, com preço-alvo de R$ 16 ao fim do exercício fiscal de 2028. O banco estima que o Ebitda (lucro antes de juros, impostos, depreciação e amortização) projetado pelo consenso esteja 17%"
   ],
   "eventos_recentes": [
     {
@@ -2563,13 +2563,13 @@
     {
       "chave": "btlg11::EVENTO_CORP",
       "ts": 1795698604.846749
+    },
+    {
+      "chave": "taesa::PROVENTOS",
+      "ts": 1795698983.793324
     }
   ],
   "hashes_imagens": [
-    "b2616f0753d32ccd",
-    "88db50089c66543d",
-    "f50d7e854c6608ec",
-    "5cd585917e161486",
     "2e8ca3d95e792e20",
     "9fb1d31354878b29",
     "ecc8b85639df8e41",
@@ -2865,6 +2865,10 @@
     "2404d220ace67c05",
     "2df04a8bdf979cb8",
     "7ae0f2f8978c2dc7",
-    "6072d8d0b2504c25"
+    "6072d8d0b2504c25",
+    "08092064c962c90c",
+    "5ce6945d8fdde4e7",
+    "bd7fb43bb76088ca",
+    "a3ac7f4955af0177"
   ]
 }
