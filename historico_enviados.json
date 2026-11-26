@@ -1,15 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/politica/boulos-ajuste-fiscal-emendas-supersalarios/",
-    "d414c2be892b1266",
-    "https://www.infomoney.com.br/economia/inflacao-vai-piorar-antes-de-melhorar-alerta-jp-morgan-em-relatorio-sobre-2027/",
-    "aaa55d47901f8a52",
-    "7c0fffa4508a162f",
-    "7ce88df3daf2bc41",
-    "a23d6bdefb307b1d",
-    "https://www.spacemoney.com.br/politica/auxiliares-lula-sessao-extra-congresso/",
-    "2e04bb2c90f49a73",
-    "https://www.spacemoney.com.br/agronegocio/ucrania-colheita-graos-85-area/",
     "e82fddbfc3284c2d",
     "https://www.cnnbrasil.com.br/agro/estados-unidos-propoem-novas-tarifas-sobre-acucar-brasileiro/",
     "182a9e6f35d8d4b7",
@@ -799,13 +789,19 @@
     "adfeb427b143d3a8",
     "https://finsidersbrasil.com.br/noticias-sobre-fintechs/resultados-financeiros/xp-procura-um-novo-amor-so-que-o-varejo-ainda-sustenta-a-relacao/",
     "5f496fe880d21433",
-    "ddbcd7ff5c0c088c"
+    "ddbcd7ff5c0c088c",
+    "6eca36bb659e1644",
+    "c8f6e9522114cd07",
+    "https://www.estadao.com.br/economia/liquidante-do-master-diz-ao-stf-nao-se-opor-a-liberar-r-316-milhoes-ao-brb/",
+    "58e23c959848e1ab",
+    "https://www.spacemoney.com.br/agronegocio/india-safra-acucar-2026-27/",
+    "96d6faa380cf27a8",
+    "https://www.infomoney.com.br/business/cvm-intima-americanas-ex-ceo-e-mais-29-ex-executivos-sobre-rombo-contabil/",
+    "9d911981068b4233",
+    "https://telesintese.com.br/gsma-projeta-5-bilhoes-de-usuarios-de-6g-ate-2040/",
+    "312b72cb378e26ca"
   ],
   "titulos": [
-    "Klabin (KLBN11) suspende operações em unidade de SC após incidente; 10 funcionários são hospitalizados",
-    "Dividendos mensais: estas 6 empresas da B3 colocam dinheiro na conta todo mês",
-    "Dólar rompe os R$ 5,84 hoje: até onde a moeda ainda pode subir?",
-    "Grupo do Tocantins entra com pedido de proteção bilionário contra credores e atinge BB (BBAS3) e mais bancos; veja lista",
     "Mercado exige o maior prêmio contra inflação desde Dilma e cobra mais para financiar o Brasil",
     "Robô vestível: pesquisadores do ES criam exoesqueleto portátil para reabilitação após AVC",
     "Durigan sinaliza medidas fiscais adicionais no curto prazo",
@@ -1601,13 +1597,13 @@
     "RBRR11: entenda o prazo para declarar custo médio e evitar mais IR",
     "Rumo vê espaço para investir mais no Brasil, mas pede ambiente favorável",
     "Azzas 2154 chega a subir 12%, mas reduz alta com notícia sobre negociação da FARM Rio",
-    "XP procura um novo amor, só que o varejo ainda sustenta a relação"
+    "XP procura um novo amor, só que o varejo ainda sustenta a relação",
+    "Liquidante do Master diz ao STF não se opor a liberar R$ 316 milhões ao BRB",
+    "Isma projeta safra de açúcar da Índia 5,2% menor em 2026/27",
+    "CVM intima Americanas, ex-CEO e mais 29 ex-executivos sobre rombo contábil",
+    "GSMA projeta 5 bilhões de usuários de 6G até 2040"
   ],
   "leads": [
-    "A LCP 239/2026 foi sancionada sem vetos e publicada em edição extra do Diário Oficial na terça (24/11). A lei autoriza tirar da meta de resultado primário de 2026 até R$ 10,5 bilhões gastos com a subvenção a produtores e importadores criada pela MP 1391/2026.",
-    "Bloomberg Línea — A Amazon Web Services (AWS) colocou em funcionamento nesta sexta-feira (20), em Bogotá, uma infraestrutura que permite armazenar e processar dados dentro da Colômbia. O projeto é parte de uma ampliação dos investimentos da empresa na América Latina, incluindo projetos de longo prazo na Colômbia, no Chile e no Brasil.",
-    "A Índia se consolidou como o principal destino dos recursos que deixaram, em novembro, os mercados mais expostos à inteligência artificial. O índice NSE Nifty 50 avançou 1,9% na quarta-feira, sessão em que as bolsas asiáticas recuaram em bloco, e a rupia registrou sua cotação mais forte em oito meses frente ao dólar, conforme dados compilados pela ",
-    "O Banco do Brasil (BBAS3) esclareceu à Comissão de Valores Mobiliários (CVM) que nenhuma deliberação foi tomada por seus órgãos de governança sobre abertura de capital de empresas do conglomerado ou sobre a alienação da fatia que detém na BB Seguridade (BBSE3), conforme apurou o InfoMoney. O comunicado veio depois de questionamento do regulador e t",
     "O presidente Luiz Inácio Lula da Silva reúne-se com o ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, nesta quarta-feira, 25, às 10h30, no Palácio da Alvorada. Às 15h, a agenda prevê reunião com a ministra da Casa Civil, Miriam Belchior, também no Alvorada.",
     "Os Houthis do Iêmen, apoiados pelo Irã, afirmaram nesta quarta-feira (25) que atacaram a refinaria de petróleo de Ras Tanura, na Arábia Saudita.",
     "Cujubim deve registrar 37 °C na sexta-feira (27), patamar previsto para três dias em sequência. A máxima fica 6,3 °C acima da referência climatológica local, de 30,7 °C, segundo a Climatempo.",
@@ -1853,7 +1849,11 @@
     "Cotistas do RBRR11 (Pátria Rendimento High Grade) têm até a próxima segunda-feira (30) para informar à gestora o custo médio de aquisição das cotas, evitando pagar mais Imposto de Renda na liquidação do fundo. A medida ocorre após a venda de todos os ativos do FII ao PCIP11 (Pátria Crédito Imobiliário IPCA), concluída no início de novembro, que mar",
     "O CEO da Rumo, Daniel Rockenbach, afirmou nesta quinta-feira (26) que a companhia tem apetite para ampliar seus investimentos em infraestrutura ferroviária no Brasil, mas que a expansão passa pela melhora do ambiente de negócios no país.",
     "– As ações da Azzas 2154 (AZZA3) chegaram a disparar ‌mais de 12% nesta quinta-feira, mas reduziram o fôlego após notícia ‌sobre as negociações envolvendo a FARM Rio.",
-    "Há um número no balanço da XP que a empresa faria questão de pendurar na vitrine: 55%, o salto da receita com clientes corporativos em um ano. E há outro que, provavelmente, gostaria de esconder debaixo do tapete: 26%, a queda do dinheiro novo que entrou na plataforma no mesmo período, segundo dados de relatório do BTG Pactual. Entre um e outro cab"
+    "Há um número no balanço da XP que a empresa faria questão de pendurar na vitrine: 55%, o salto da receita com clientes corporativos em um ano. E há outro que, provavelmente, gostaria de esconder debaixo do tapete: 26%, a queda do dinheiro novo que entrou na plataforma no mesmo período, segundo dados de relatório do BTG Pactual. Entre um e outro cab",
+    "BRASÍLIA – A empresa responsável pela liquidação extrajudicial do Banco Master concordou em liberar para o Banco de Brasília (BRB) R$ 316,5 milhões em valores bloqueados no âmbito da Operação Compliance Zero. A manifestação foi enviada ao presidente do Supremo Tribunal Federal (STF), Edson Fachin, nesta quinta-feira, 26.",
+    "A safra 2026/27 de açúcar da Índia deve alcançar 26,52 milhões de toneladas, recuo de 5,2% ante as 27,97 milhões de toneladas de 2025/26, segundo estimativa preliminar da Associação Indiana de Usinas de Açúcar (Isma).",
+    "A Comissão de Valores Mobiliários (CVM) está intimando 31 acusados em processo relativo ao rombo divulgado pela Americanas em janeiro de 2023, quando a companhia informou ter identificado inconsistências contábeis estimadas inicialmente em R$ 20 bilhões. O processo foi aberto em 2023, e a intimação foi assinada no último dia 24.",
+    "As redes de sexta geração deverão alcançar 5 bilhões de usuários no mundo até 2040, segundo projeção da GSMA apresentada nesta quinta-feira, 26, em Brasília, durante o 1º Fórum Brasileiro de Espectro."
   ],
   "eventos_recentes": [
     {
@@ -2574,10 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "1715654018118bd1",
-    "c21b4642ffb14d4e",
-    "da507594c5b4c874",
-    "38d124910257783c",
     "2bf6a6a68741727c",
     "b279810e1bdec259",
     "0b2d93bd06337d7a",
@@ -2873,6 +2869,10 @@
     "3cbf85f093d45d80",
     "56b282a38d4adf23",
     "3fddac88fbda9c79",
-    "646879d8f6cbc423"
+    "646879d8f6cbc423",
+    "b520c7a552f63af5",
+    "79bd6c616c6cfae5",
+    "daf7d30b1ba0b669",
+    "82fd8beeb0345913"
   ]
 }
