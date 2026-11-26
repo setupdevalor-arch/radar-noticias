@@ -1,15 +1,5 @@
 {
   "links": [
-    "477252f927421d77",
-    "8eda2e7307a9c9fa",
-    "f9bffcd78174e276",
-    "https://www.cnnbrasil.com.br/agro/jbs-preve-alta-de-15-nas-vendas-de-itens-para-churrasco-no-fim-do-ano/",
-    "b7b2f5a659a38dd1",
-    "https://www.spacemoney.com.br/economia/legislacao/eba-comissao-europeia-regras-defi-stablecoins/",
-    "1dca08a5bf3ccf50",
-    "2b804b9d90044639",
-    "98352bc3e8282c5d",
-    "e95ccdf931a8402b",
     "https://investnews.com.br/economia/vai-viajar-exterior-como-economizar-dolar/",
     "26125b811fa49dce",
     "https://www.infomoney.com.br/onde-investir/fiis-alzr11-snel11-e-xpml11-pagam-dividendos-hoje-veja-valores-e-yields/",
@@ -799,14 +789,19 @@
     "https://eixos.com.br/politica/entidades-do-setor-eletrico-e-de-telecomunicacoes-pedem-sancao-integral-do-projeto-de-lei-que-organiza-postes/",
     "db9686ff3f908660",
     "https://www.poder360.com.br/poder-congresso/comissao-aprova-parecer-preliminar-do-orcamento-de-2027/",
-    "7ecaf0a075a48b7b"
+    "7ecaf0a075a48b7b",
+    "https://www.cnnbrasil.com.br/infra/sp-amplia-carteira-de-investimentos-em-infraestrutura-e-mira-r-500-bilhoes/",
+    "e03a804be0eadae8",
+    "https://www.infomoney.com.br/mercados/dolar-futuro-cai-mais-de-2-apos-noticia-encontro-entre-trabuco-e-lula-em-brasilia/",
+    "7af81363d94d2005",
+    "https://agenciainfra.com/blog/silveira-escolhe-tres-diretores-substitutos-para-a-anm/?utm_source=rss&utm_medium=rss&utm_campaign=silveira-escolhe-tres-diretores-substitutos-para-a-anm",
+    "e86db156634a4c41",
+    "https://www.spacemoney.com.br/economia/legislacao/japao-regulacao-defi-carteiras-autocustodia/",
+    "8e753a98099cd20e",
+    "https://www.seudinheiro.com/2026/economia/agu-derruba-liminar-que-isentava-grandes-operadoras-de-cumprir-normas-do-vale-alimentacao-cbcb/",
+    "e64100d9c1a376c8"
   ],
   "titulos": [
-    "Trump vai baixar a guarda? Derrota eleitoral pode mudar relação com Lula, China e Rússia, avalia professor",
-    "Taxas dos DIs sobem em meio a preocupações com o ajuste fiscal",
-    "Atenção, clientes do Banco do Brasil: BB identifica vazamento de dados e alerta para risco de novos golpes",
-    "Reforma tributária: alíquota de 11,3% da CBS pode valer só em 2027 e mudar depois; entenda",
-    "IPO da Anthropic deve criar milhares de milionários",
     "Claude passa o ChatGPT e fica com 56% do gasto com IA nos cartões corporativos, diz Clara",
     "IFIX recua e termina pregão perto da mínima do ano",
     "Pessoa física impulsiona compras de FIIs e supera estrangeiros",
@@ -1601,14 +1596,14 @@
     "IBTD e Frente Parlamentar defendem sanção da Lei dos Postes sem vetos",
     "OpenAI prepara cota única para ChatGPT e Codex em dezembro",
     "Entidades do setor elétrico e de telecomunicações pedem sanção integral do projeto de lei que organiza postes",
-    "Comissão aprova parecer preliminar do Orçamento de 2027"
+    "Comissão aprova parecer preliminar do Orçamento de 2027",
+    "SP amplia carteira de investimentos em infraestrutura e mira R$ 500 bilhões",
+    "Dólar futuro cai mais de 2% após notícia de encontro entre Trabuco e Lula em Brasília",
+    "Silveira escolhe três diretores substitutos para a ANM",
+    "Japão mira DeFi e carteiras de autocustódia",
+    "AGU derruba liminar que isentava grandes operadoras de cumprir normas do vale-alimentação"
   ],
   "leads": [
-    "Segundo o g1, 1.414 municípios brasileiros — o equivalente a 26,1% das 5.424 prefeituras que informaram ao IBGE oferecer serviço de drenagem — declararam ter procedimentos de contingência para cheias, alagamentos e outros desastres. Os números são da Pesquisa Nacional de Saneamento Básico (PNSB) 2024, que o instituto apresentou nesta quarta-feira (",
-    "Quase três em cada dez municípios brasileiros ainda mandavam o lixo coletado para lixões a céu aberto em 2024, mesmo ano em que venceu o último prazo legal para dar destinação ambientalmente adequada aos resíduos. Os números fazem parte da Pesquisa Nacional de Saneamento Básico (PNSB) 2024, que o IBGE apresentou nesta quarta-feira (25), segundo o g",
-    "Encontrar um plano de saúde individual tem se tornado um desafio para os brasileiros, especialmente para aqueles que chegam à terceira idade sem acesso a um convênio empresarial.",
-    "A Black Friday deixou de ser uma data concentrada na compra de televisores, celulares e grandes eletrodomésticos. Ao longo dos últimos anos, produtos de consumo recorrente, como bebidas, alimentos, cosméticos e itens de higiene e beleza, passaram a ganhar espaço nas promoções de novembro.",
-    "A Sanofi comprará a farmacêutica norte-americana Insmed por US$ 41 bilhões em dinheiro, informou a empresa nesta terça-feira. Trata-se de sua maior transação em duas décadas, em ‌um momento em que a CEO Belen Garijo busca reestruturar a empresa francesa e encontrar novas fontes de crescimento além do medicamento de grande sucesso ‌Dupixent.",
     "Os mercados globais operam sob pressão nesta quarta-feira, 25, à espera do índice de preços de gastos com consumo pessoal (PCE) de outubro dos Estados Unidos e diante da possibilidade de uma nova rodada de tarifas comerciais do governo de Donald Trump. O cenário de aversão ao risco derruba bolsas na Ásia, mantém os futuros de Nova York no vermelho ",
     "Uma combinação de tempestades nas duas costas dos Estados Unidos ameaça as viagens de Thanksgiving, feriado celebrado nesta quinta-feira, 26 de novembro, com chuva forte, rajadas que podem superar 60 mph e risco de enchentes costeiras. Mais de 81 milhões de pessoas devem se deslocar no período, segundo projeção da AAA, enquanto companhias aéreas já",
     "O ministro Luiz Fux, do STF (Supremo Tribunal Federal), negou um pedido do BRB (Banco Regional de Brasília) para prorrogar um contrato da instituição com o TJ-BA (Tribunal de Justiça da Bahia) sobre a custódia de cerca de R$ 2 bilhões em recursos de precatórios.",
@@ -1853,13 +1848,14 @@
     "O Instituto Brasileiro de Telecomunicações e Soluções Digitais (IBTD) e a Frente Parlamentar Mista de Telecomunicações e Soluções Digitais divulgaram, nessa quarta-feira, 25, manifesto em defesa da sanção integral do Projeto de Lei (PL) 3.220/2019, conhecido como Lei dos Postes. As entidades argumentam que eventuais vetos presidenciais podem reabri",
     "Segundo o TecMundo, a OpenAI liberou na terça-feira, 24, para um grupo pequeno de assinantes Pro uma experiência que reúne o ChatGPT e o agente Work. A companhia também prepara para dezembro um limite único de uso para ChatGPT e Codex nos planos Plus, Pro e Business.",
     "Entidades do setor elétrico e de telecomunicações pediram ao presidente Lula (PT) que sancione integralmente o projeto de lei 3.220/2019, que organiza o compartilhamento de postes.",
-    "Texto estima superavit primário de R$ 18,6 bilhões e aponta necessidade de até R$ 24,9 bilhões a mais para o Bolsa Família"
+    "Texto estima superavit primário de R$ 18,6 bilhões e aponta necessidade de até R$ 24,9 bilhões a mais para o Bolsa Família",
+    "O estado de São Paulo encerra o ano com R$ 394 bilhões em investimentos contratados em seu programa de parcerias e concessões e mira meio trilhão de reais para o futuro.",
+    "O contrato de dólar futuro (WDOF27) recua mais de 2% na tarde desta quinta-feira (26) após notícia do jornal O Estado de S. Paulo de que o presidente do conselho de administração do Bradesco, Luiz Carlos Trabuco Cappi, chegou a Brasília para se encontrar com Lula no Palácio da Alvorada. A queda se intensificou por volta das 17h30 (horário de Brasíl",
+    "O ministro de Minas e Energia, Alexandre Silveira, definiu os nomes dos três superintendentes da ANM (Agência Nacional de Mineração) que vão assumir cadeiras de diretores substitutos na Diretoria Colegiada. São eles: Inara Oliveira Barbosa, André Elias Marques e Aline Fernandes das Chagas.",
+    "O Japão avalia novas regras para finanças descentralizadas (DeFi) e carteiras de autocustódia, segundo o Cointelegraph. A Agência de Serviços Financeiros (FSA) busca reduzir riscos de financiamento ilícito no ambiente on-chain.",
+    "TRF1 mantém regras do PAT para empresas de VA e VR, com teto de taxas, prazo de repasse e interoperabilidade"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_global::MACRO_EVENTO",
-      "ts": 1795553715.19109
-    },
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795554477.713189
@@ -2571,14 +2567,13 @@
     {
       "chave": "banco_do_brasil::BALANCO",
       "ts": 1795725643.994476
+    },
+    {
+      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
+      "ts": 1795726796.977134
     }
   ],
   "hashes_imagens": [
-    "d7bcda211e13ab23",
-    "dcd50402a87745ad",
-    "da3f6d22c75ee1b3",
-    "51adc794aa4183da",
-    "05748b4837700cbe",
     "f35351c05b33067b",
     "b1582f7d6147d82b",
     "8629c3ec1543ddbb",
@@ -2873,6 +2868,11 @@
     "54f64ead640069c2",
     "2bf6acebfdabba13",
     "78fbc98a5c4c0c86",
-    "8b0daa5441ff7e48"
+    "8b0daa5441ff7e48",
+    "51019b22f3169d23",
+    "3b2e8df89527cd84",
+    "098f487b5d70c2e0",
+    "ef14982e2a0f8b08",
+    "c7fdc40f8626ffed"
   ]
 }
