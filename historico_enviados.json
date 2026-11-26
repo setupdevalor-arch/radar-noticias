@@ -1,10 +1,5 @@
 {
   "links": [
-    "24b193b09f7d5639",
-    "https://www.suno.com.br/noticias/hlog11-fundo-imobiliario-renegocia-contratos-ocupacao/",
-    "ed00cc81733fd726",
-    "af966323eb8c1a8d",
-    "6aa984a4baef1a81",
     "https://eixos.com.br/gas-natural/proposta-da-tag-para-tarifas-promete-economia-de-r-55-bi-mas-erro-em-planilha-reduz-valor-a-r-130-milhoes/",
     "ba5d53f972584499",
     "https://www.moneytimes.com.br/em-crise-diplomatica-governo-lula-decide-que-embaixador-nao-deve-voltar-a-argentina-mlem/",
@@ -799,10 +794,14 @@
     "https://www.suno.com.br/noticias/ifix-alta-cacr11-fundos-imobiliarios-quinta/",
     "c09c1d986b3c8073",
     "https://agenciainfra.com/blog/camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169/?utm_source=rss&utm_medium=rss&utm_campaign=camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169",
-    "7c36014be600c826"
+    "7c36014be600c826",
+    "279fcc1e8cc5a1d0",
+    "2728bd9b5fa7b05f",
+    "0a4e1ab43e07adee",
+    "https://megawhat.uol.com.br/transmissao/apagao-atinge-manaus-e-roraima-apos-falha-em-transmissao/",
+    "9f8570d0739b04e5"
   ],
   "titulos": [
-    "Vazamento de documentos expõe relações do Deutsche Bank com Epstein, Trump e oligarcas russos",
     "Ibovespa abre portas para Nubank (ROXO34) e JBS (JBSS32); veja o que muda",
     "Fiagros captam R$ 12,2 bi em outubro e têm melhor mês em cinco anos; mercado de capitais movimenta R$ 71,4 bi",
     "Fundo imobiliário vende agência e processa Caixa seis vezes",
@@ -1601,10 +1600,10 @@
     "Ceia de Ação de Graças custa diferente em 50 cidades",
     "A estratégia anticlimática de um fundo de pensão",
     "IFIX fecha em alta de 1,07%, com CACR11 em destaque na B3",
-    "Câmara recebe proposta de regulamentação das consultas da OIT 169"
+    "Câmara recebe proposta de regulamentação das consultas da OIT 169",
+    "Apagão atinge Manaus e Roraima após falha em transmissão"
   ],
   "leads": [
-    "BRASÍLIA - O economista Márcio Garcia, professor titular do departamento de economia da PUC-Rio e PhD pela Universidade de Stanford, nos Estados Unidos, não enxerga senso de urgência no presidente Luiz Inácio Lula da Silva para tentar superar a crise de confiança que atinge o mercado sobre as contas públicas.",
     "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti",
     "Autoridade monetária vendeu a moeda com compromisso de recompra para ampliar a oferta e dar liquidez ao mercado cambial",
     "Segundo Andréia Sadi, em seu blog no g1, Andrei Passos Rodrigues, diretor-geral da PF, declarou que o STF e a PGR já possuem o material exigido para dar seguimento às apurações sobre o Banco Master conforme a lei.",
@@ -1853,7 +1852,8 @@
     "Em novembro de 2026, o custo de uma ceia de Ação de Graças para 8 a 10 pessoas nos Estados Unidos variava bastante conforme a cidade, segundo dados reunidos pelo Visual Capitalist a partir de um comunicado da BC.Game divulgado por RFD-TV e EURweb. O levantamento compara 50 cidades, uma por estado, e usa uma cesta padronizada que inclui um peru padr",
     "“Vários estudos mostram que mexer muito na carteira prejudica o resultado de longo prazo,” Patrícia Queiroz, a diretora de investimentos da Real Grandeza, disse ao Brazil Journal. “Nossa estratégia é ter uma carteira diversificada, mas com a alocação estratégica mantida ao longo do tempo.”",
     "O IFIX fechou o pregão desta quinta-feira (26) em alta de 1,07%, aos 3.578,98 pontos, impulsionado pelo salto de 13,01% das cotas do CACR11 (Cartesia Recebíveis Imobiliários) na B3, enquanto outros fundos imobiliários registraram movimentos distintos ao longo da sessão.",
-    "O deputado federal Júnior Ferrari (PSD-PA) protocolou nesta quarta-feira (25) o PL (Projeto de Lei) 5.964/2026, que regulamenta a realização de consultas a povos indígenas e tribais, previstas na Convenção 169 da OIT (Organização Internacional do Trabalho). A ausência de regras para as consultas está paralisando a execução de projetos de infraestru"
+    "O deputado federal Júnior Ferrari (PSD-PA) protocolou nesta quarta-feira (25) o PL (Projeto de Lei) 5.964/2026, que regulamenta a realização de consultas a povos indígenas e tribais, previstas na Convenção 169 da OIT (Organização Internacional do Trabalho). A ausência de regras para as consultas está paralisando a execução de projetos de infraestru",
+    "O desligamento de duas linhas de transmissão de 500 kV Jurupari–Oriximiná, que pertencem à Linhas de Macapá Transmissora de Energia (LMTE), do grupo Energisa, provocou a interrupção total do fornecimento de energia nas áreas de Manaus, no Amazonas, alcançando o estado de Roraima na tarde desta quinta-feira, 26 de novembro."
   ],
   "eventos_recentes": [
     {
@@ -2574,7 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "cb83aca0bc31b1a8",
     "8262f3142cde3f1d",
     "2c16e66efbe01a0c",
     "84a565c3aa496c2e",
@@ -2873,6 +2872,7 @@
     "13075f0749c3dfda",
     "7ceeecd71fb64a3d",
     "37806db1e7953c60",
-    "5901287fe359d212"
+    "5901287fe359d212",
+    "7c5618623f8acfbb"
   ]
 }
