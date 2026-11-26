@@ -1,12 +1,5 @@
 {
   "links": [
-    "eff4f56e6215458d",
-    "7b238fa51c58b810",
-    "db5703c79bb078e7",
-    "https://www.infomoney.com.br/mercados/dolar-hoje-abertura-fechamento-comercial-turismo-25112026/",
-    "8f3238b31b40c6d5",
-    "175e1ca9ac1cbcec",
-    "8c75702b70d6668b",
     "https://www.spacemoney.com.br/investimentos/renda-fixa/taxacao-lca-lci-credito-rural/",
     "49addf3d5f6b27dc",
     "7c0687b660afe322",
@@ -799,11 +792,16 @@
     "f4552a2a5553ea75",
     "645817252db26ee1",
     "https://www.infomoney.com.br/economia/trump-exige-investigacao-sobre-dados-do-pib-divulgados-antes-de-midterms/",
-    "e68e8ef585ea29d8"
+    "e68e8ef585ea29d8",
+    "25f882384d44abdd",
+    "4069993b493040a8",
+    "30051bc64d4d7daa",
+    "https://www.spacemoney.com.br/investimentos/juro-real-8-7-etfs-renda-fixa/",
+    "92c7bad2f9bc590c",
+    "https://www.moneytimes.com.br/musk-promete-duas-acoes-da-spacex-para-cada-crianca-dos-eua-em-ofensiva-de-us18-bilhoes-por-apoio-a-ia-pads/",
+    "d11e9d1eb266b056"
   ],
   "titulos": [
-    "‘Quadro fiscal não é esse desastre que a Faria Lima acha’, diz Salto, da Warren",
-    "Dividend yield do ALZC11 avança sem mudança nos dividendos",
     "Tencent diz que novas restrições dos EUA não afetarão receita de nuvem, mas podem desacelerar treinamento de modelos",
     "Boato de 'apagão mundial' e onda de ataques hackers: o que aconteceu no mundo nas últimas semanas",
     "Durigan diz que Reforma Tributária não deve gerar arrecadação extra para o governo",
@@ -1601,11 +1599,11 @@
     "Durigan diz que discutirá medidas fiscais com Lula nesta quinta-feira",
     "Vivo, TIM e Claro apostam em bônus de Internet e combos na Black Friday",
     "A inteligência artificial vai substituir o investidor de criptomoedas?",
-    "Trump exige investigação sobre dados do PIB divulgados antes de midterms"
+    "Trump exige investigação sobre dados do PIB divulgados antes de midterms",
+    "Juro real perto de 8,7% põe pós-fixados em evidência",
+    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$18 bilhões por apoio à IA"
   ],
   "leads": [
-    "A pergunta que Roberto Secemski, economista-chefe do Barclays para o Brasil, mais ouviu durante um evento do banco para mais de 100 investidores locais, na semana passada, em São Paulo, foi quando os estrangeiros mudarão de humor em relação ao Brasil. Historicamente, eles têm sido menos céticos do que os investidores domésticos. Enquanto ainda dão ",
-    "'Não é o sistema financeiro que que vai me ensinar a dirigir o País', diz Lula",
     "Os rendimentos dos Treasuries recuaram nesta quarta-feira, enquanto investidores aguardam novos dados de inflação e de gastos nos Estados Unidos, segundo a CNBC. O movimento ocorre em uma semana de negociação encurtada pelo feriado de Ação de Graças.",
     "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
     "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo.",
@@ -1853,13 +1851,11 @@
     "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas.",
     "Vivo, TIM e Claro estão apostando em bônus de Internet nos planos móveis e em pacotes que combinam conectividade, entretenimento e aparelhos na Black Friday de 2026. Em materiais encaminhados ao TELETIME, as operadoras detalharam campanhas que incluem franquias adicionais de dados, ofertas de serviços de banda larga e condições especiais para a com",
     "As ferramentas de IA para criptomoedas já leem gráficos, resumem notícias, acompanham carteiras de grandes investidores e até enviam ordens sozinhas, então a pergunta do título deixou de ser ficção. A resposta curta é que a IA já supera as pessoas em algumas tarefas, mas substituir o investidor é outra história, porque a decisão sobre risco e objet",
-    "– O presidente dos Estados Unidos, Donald Trump, exigiu nesta quinta-feira uma investigação imediata sobre o que ele alegou ‌ser uma decisão deliberada de divulgar números “falsos” de crescimento econômico antes das eleições de meio de mandato deste ‌mês."
+    "– O presidente dos Estados Unidos, Donald Trump, exigiu nesta quinta-feira uma investigação imediata sobre o que ele alegou ‌ser uma decisão deliberada de divulgar números “falsos” de crescimento econômico antes das eleições de meio de mandato deste ‌mês.",
+    "Com a taxa básica em 13,75% ao ano e o IPCA acumulado em 4,64% nos últimos 12 meses, o Brasil opera com juro real na casa de 8,7%. Segundo a Suno Notícias, esse patamar recoloca as aplicações pós-fixadas e os ETFs de renda fixa negociados na B3 na mesa do investidor.",
+    "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA"
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdvd39::PROVENTOS",
-      "ts": 1795540541.63056
-    },
     {
       "chave": "btg_pactual::GERAL_ATIVO",
       "ts": 1795541597.42203
@@ -2571,11 +2567,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795713120.809318
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795713459.297395
     }
   ],
   "hashes_imagens": [
-    "ec9754883c470a23",
-    "29359e5ac0b7fb09",
     "398599525494f300",
     "d79d49ce4fa8c21a",
     "913daf7a839c60e8",
@@ -2873,6 +2871,8 @@
     "4127dc4cb43c196c",
     "7a5cc2cf218c23dd",
     "34559191ca56ffe3",
-    "e480cdcd0177a7a0"
+    "e480cdcd0177a7a0",
+    "71242ce2d20727bc",
+    "450c69f45f228ba3"
   ]
 }
