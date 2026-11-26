@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://eixos.com.br/gas-natural/proposta-da-tag-para-tarifas-promete-economia-de-r-55-bi-mas-erro-em-planilha-reduz-valor-a-r-130-milhoes/",
-    "ba5d53f972584499",
-    "https://www.moneytimes.com.br/em-crise-diplomatica-governo-lula-decide-que-embaixador-nao-deve-voltar-a-argentina-mlem/",
-    "cbc9fd940264529a",
     "2a9433d23d5b9196",
     "cc9cc82822e36258",
     "c7248f3e221f8abf",
@@ -799,10 +795,13 @@
     "2728bd9b5fa7b05f",
     "0a4e1ab43e07adee",
     "https://megawhat.uol.com.br/transmissao/apagao-atinge-manaus-e-roraima-apos-falha-em-transmissao/",
-    "9f8570d0739b04e5"
+    "9f8570d0739b04e5",
+    "83463e5014f1ca0c",
+    "32b7f682a880092d",
+    "https://valorinveste.globo.com/produtos/credito/noticia/2026/11/26/bc-altera-regras-para-cartao-de-credito-e-emprestimos-veja-o-que-muda-para-voce.ghtml",
+    "47bed8b862e82bc9"
   ],
   "titulos": [
-    "Ibovespa abre portas para Nubank (ROXO34) e JBS (JBSS32); veja o que muda",
     "Fiagros captam R$ 12,2 bi em outubro e têm melhor mês em cinco anos; mercado de capitais movimenta R$ 71,4 bi",
     "Fundo imobiliário vende agência e processa Caixa seis vezes",
     "Fundo imobiliário LOTS11 adquire imóveis do Lotus Tower em Brasília",
@@ -1601,10 +1600,10 @@
     "A estratégia anticlimática de um fundo de pensão",
     "IFIX fecha em alta de 1,07%, com CACR11 em destaque na B3",
     "Câmara recebe proposta de regulamentação das consultas da OIT 169",
-    "Apagão atinge Manaus e Roraima após falha em transmissão"
+    "Apagão atinge Manaus e Roraima após falha em transmissão",
+    "BC altera regras para cartão de crédito e empréstimos; veja o que muda para você"
   ],
   "leads": [
-    "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti",
     "Autoridade monetária vendeu a moeda com compromisso de recompra para ampliar a oferta e dar liquidez ao mercado cambial",
     "Segundo Andréia Sadi, em seu blog no g1, Andrei Passos Rodrigues, diretor-geral da PF, declarou que o STF e a PGR já possuem o material exigido para dar seguimento às apurações sobre o Banco Master conforme a lei.",
     "O Climate Prediction Center, da NOAA, agência climática dos Estados Unidos, informou que há “condições de El Niño presentes” e que o fenômeno pode encarecer alimentos em 2027, com efeitos sobre a produção de leite e o regime de chuvas na Amazônia, segundo o Monitor do Mercado.",
@@ -1853,7 +1852,8 @@
     "“Vários estudos mostram que mexer muito na carteira prejudica o resultado de longo prazo,” Patrícia Queiroz, a diretora de investimentos da Real Grandeza, disse ao Brazil Journal. “Nossa estratégia é ter uma carteira diversificada, mas com a alocação estratégica mantida ao longo do tempo.”",
     "O IFIX fechou o pregão desta quinta-feira (26) em alta de 1,07%, aos 3.578,98 pontos, impulsionado pelo salto de 13,01% das cotas do CACR11 (Cartesia Recebíveis Imobiliários) na B3, enquanto outros fundos imobiliários registraram movimentos distintos ao longo da sessão.",
     "O deputado federal Júnior Ferrari (PSD-PA) protocolou nesta quarta-feira (25) o PL (Projeto de Lei) 5.964/2026, que regulamenta a realização de consultas a povos indígenas e tribais, previstas na Convenção 169 da OIT (Organização Internacional do Trabalho). A ausência de regras para as consultas está paralisando a execução de projetos de infraestru",
-    "O desligamento de duas linhas de transmissão de 500 kV Jurupari–Oriximiná, que pertencem à Linhas de Macapá Transmissora de Energia (LMTE), do grupo Energisa, provocou a interrupção total do fornecimento de energia nas áreas de Manaus, no Amazonas, alcançando o estado de Roraima na tarde desta quinta-feira, 26 de novembro."
+    "O desligamento de duas linhas de transmissão de 500 kV Jurupari–Oriximiná, que pertencem à Linhas de Macapá Transmissora de Energia (LMTE), do grupo Energisa, provocou a interrupção total do fornecimento de energia nas áreas de Manaus, no Amazonas, alcançando o estado de Roraima na tarde desta quinta-feira, 26 de novembro.",
+    "Bancos terão de reduzir o limite do cartão de quem recorre com frequência ao rotativo e restringir a concessão de empréstimos sem garantia a clientes com dificuldades financeiras; medidas passam a valer em 2027"
   ],
   "eventos_recentes": [
     {
@@ -2574,7 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "8262f3142cde3f1d",
     "2c16e66efbe01a0c",
     "84a565c3aa496c2e",
     "588542fe8a75390c",
@@ -2873,6 +2872,7 @@
     "7ceeecd71fb64a3d",
     "37806db1e7953c60",
     "5901287fe359d212",
-    "7c5618623f8acfbb"
+    "7c5618623f8acfbb",
+    "47cad65210ebce9e"
   ]
 }
