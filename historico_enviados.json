@@ -1,11 +1,5 @@
 {
   "links": [
-    "b6361a9fb6b4f1b5",
-    "https://www.spacemoney.com.br/carreiras/fim-escala-6x1-hora-extra/",
-    "57f458eda4567f62",
-    "https://www.cnnbrasil.com.br/politica/camara-e-partidos-promovem-ambientacao-para-eleitos-em-brasilia/",
-    "ff7ca0eeecabbc22",
-    "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/como-seria-um-imposto-sobre-a-riqueza-na-era-dos-bilionarios-da-ia/",
     "15d1f0d26d87be4c",
     "https://www.infomoney.com.br/economia/dolar-a-6-reais-impacto-inflacao-precos/",
     "2a159468e557ef37",
@@ -799,11 +793,15 @@
     "ad5bb51940451b27",
     "9fc06046bfd0c9ef",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/mxrf11-retorno-desde-estreia/",
-    "7a397c5908422710"
+    "7a397c5908422710",
+    "6db3f66e99698442",
+    "43c7e244484b053f",
+    "https://www.moneytimes.com.br/conab-cenoura-banana-e-batata-tem-queda-de-precos-em-outubro-tomate-cebola-e-alface-sobem/",
+    "9748e1a4e11122d9",
+    "https://www.infomoney.com.br/mercados/sabesp-sbsp3-tem-dois-catalisadores-no-radar-e-bbi-reitera-recomendacao-de-compra/",
+    "2ab387f259bc65e3"
   ],
   "titulos": [
-    "EUA, China e Rússia: o que será tratado em encontro histórico entre potências?",
-    "Como a Cielo usa agentes de IA para transformar reclamações de clientes em produtos em 12 dias",
     "Líder do governo no Congresso apresenta projeto para taxar big techs",
     "Portal do Bitcoin é o veículo que mais fala sobre criptomoedas nas redes sociais, aponta Anbima",
     "Quadro icônico passa décadas esquecido em armário e alcança R$ 28 milhões em leilão",
@@ -1601,11 +1599,11 @@
     "Alckmin diz que tarifa ao setor aeronáutico é “totalmente descabida”",
     "PACC11: mesmo com surpresa do IPCA-15, títulos indexados à inflação seguem interessantes",
     "Marinho critica CNI por ação no STF contra regulamentação sobre 6 X 1",
-    "MXRF11: retorno desde a estreia e o efeito do reinvestimento"
+    "MXRF11: retorno desde a estreia e o efeito do reinvestimento",
+    "Conab: cenoura, banana e batata têm queda de preços em outubro; tomate, cebola e alface sobem",
+    "Sabesp (SBSP3) tem dois catalisadores no radar e BBI reitera recomendação de compra"
   ],
   "leads": [
-    "A Temu (Android, iOS) firmou um memorando de entendimento (MoU) com a Mastercard para avançar no desenvolvimento de soluções que facilitem a intermediação de pagamentos entre vendedores e consumidores. O acordo prevê o estudo de duas soluções:",
-    "A chinesa Huawei foi condenada nesta terça-feira (24) em um amplo processo criminal nos Estados Unidos. A gigante de tecnologia e equipamentos de telecomunicações foi acusada de enganar bancos sobre seus negócios no Irã e roubar segredos comerciais de empresas americanas.",
     "| Mobile Time Latinoamérica | O Tribunal Administrativo de Cundinamarca confirmou a validade das determinações da Superintendência de Indústria e Comércio (SIC) para que o Google LLC adeque suas práticas de tratamento de dados pessoais de menores de idade na Colômbia. A decisão judicial também respalda a competência das autoridades colombianas para",
     "Saldo do Dia: Bolsa ensaiou ter um dia de glória com notícia de que o presidente Lula autorizou a equipe a mandar ao Congresso uma proposta para tratar do controle das despesas obrigatórias, mas os relatos ainda são boatos",
     "Novo parecer de Aliel Machado restringe enquadramento das plataformas digitais no regime especial de fiscalização e limita poderes do Cade",
@@ -1853,13 +1851,11 @@
     "O vice-presidente Geraldo Alckmin (PSB) afirmou que a proposta dos Estados Unidos de impor novas tarifas à importações de aeronaves brasileiras é \"totalmente descabida\". As aeronaves prontas, atualmente isentas de tarifas dos EUA para o Brasil, são o quarto maior item de exportação do país.",
     "Mesmo depois da surpresa positiva do IPCA-15, seguimos vendo uma combinação interessante nos títulos indexados à inflação de prazo mais curto.",
     "Ministro do Trabalho e Emprego disse que presidente da confederação não o procurou para conversas",
-    "Conforme a Suno Notícias, o Maxi Renda (MXRF11), administrado pela XP Asset, começou a ser negociado na B3 em 13/04/2012, com cota inicial de R$ 100. O fundo reúne 1.617.116 cotistas, a maior base entre os FIIs do país."
+    "Conforme a Suno Notícias, o Maxi Renda (MXRF11), administrado pela XP Asset, começou a ser negociado na B3 em 13/04/2012, com cota inicial de R$ 100. O fundo reúne 1.617.116 cotistas, a maior base entre os FIIs do país.",
+    "Os preços da cenoura comercializada nas principais Centrais de Abastecimento (Ceasas) do País recuaram 19,21% em outubro, na comparação com setembro, considerando a média ponderada.",
+    "Após os resultados sólidos do terceiro trimestre de 2026, que mostraram controle das despesas operacionais mesmo diante dos custos não recorrentes anunciados no trimestre anterior, o Bradesco BBI destaca dois próximos catalisadores para a Sabesp (SBSP3)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "icdi11::GERAL_ATIVO",
-      "ts": 1795530052.478671
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795530449.55248
@@ -2559,11 +2555,13 @@
     {
       "chave": "mxrf11::GERAL_ATIVO",
       "ts": 1795702640.800475
+    },
+    {
+      "chave": "sabesp::GERAL_ATIVO",
+      "ts": 1795702984.334542
     }
   ],
   "hashes_imagens": [
-    "90c69c5d3751badf",
-    "78c9dd9d3a77cce9",
     "8a8a4015ffec3387",
     "52f9374ef47c41d1",
     "a7be86fab6bb1e06",
@@ -2861,6 +2859,8 @@
     "3a245185775bbbac",
     "1a0110cc673ae5cf",
     "a18af77c2ea1fc7a",
-    "b0d322ffaaa848c1"
+    "b0d322ffaaa848c1",
+    "9f2fb4540d230315",
+    "07ede6246bee8d9d"
   ]
 }
