@@ -1,7 +1,5 @@
 {
   "links": [
-    "d74a09219d12a99f",
-    "84d3a726439e0c25",
     "29b1424aa1289fac",
     "d0041d536a8840c8",
     "https://www.spacemoney.com.br/economia/exterior/eua-tarifas-14-parceiros-comerciais/",
@@ -799,10 +797,11 @@
     "81616d87e9a00ec1",
     "c49cb3053a8d0497",
     "https://megawhat.uol.com.br/economia-e-politica/receita-com-descomissionamento-aumenta-dez-vezes-no-porto-do-acu/",
-    "3f3ba90b44adc222"
+    "3f3ba90b44adc222",
+    "https://agenciainfra.com/blog/exxonmobil-arremata-1-milhao-de-barris-de-oleo-no-11o-leilao-spot-da-uniao/?utm_source=rss&utm_medium=rss&utm_campaign=exxonmobil-arremata-1-milhao-de-barris-de-oleo-no-11o-leilao-spot-da-uniao",
+    "07861d053d14b307"
   ],
   "titulos": [
-    "Idoso de 89 anos perde R$ 17 mil em golpe após criminoso trocar cartões",
     "Sheinbaum diz que reunião com Trump foi ‘muito boa’ e negociações estão avançadas",
     "Deterioração no crédito afeta grandes bancos no 3º tri; BB tem pior resultado",
     "Corporate Venture Capital: o que empresas precisam saber antes de investir em startups",
@@ -1601,10 +1600,10 @@
     "Incerteza sobre espectro limita ambição de investimentos, diz Ericsson",
     "Após rali da IA, Mirabaud pisa no freio e faz alerta: “quem não agir, vai ficar para trás”",
     "Trabuco “pode não ser a melhor opção” para a Fazenda, diz Uczai",
-    "Receita com descomissionamento aumenta dez vezes no Porto do Açu"
+    "Receita com descomissionamento aumenta dez vezes no Porto do Açu",
+    "ExxonMobil arremata 1 milhão de barris de óleo no 11º Leilão Spot da União"
   ],
   "leads": [
-    "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi",
     "As bolsas asiáticas fecharam em baixa nesta quarta-feira (25), com a perda de força do alívio provocado pela volta de Jensen Huang ao comando da Nvidia e o aumento das dúvidas sobre as perspectivas para a inteligência artificial (IA). O temor de novas tarifas também voltou ao radar, após notícias de que os Estados Unidos poderiam elevar as alíquota",
     "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
     "O presidente da Agência Nacional de Telecomunicações (Anatel), Alexandre Freire, negou nesta terça-feira, 24, o pedido de efeito suspensivo apresentado pela TIM contra a medida cautelar que determinou a interrupção do funcionamento de sua ferramenta de combate às chamadas massivas, denominada AntiSpam. A agência identificou bloqueios indevidos de t",
@@ -1853,13 +1852,10 @@
     "A incerteza sobre a disponibilidade de radiofrequências e o calendário de investimentos das operadoras de telecomunicações afeta o planejamento industrial da Ericsson no Brasil. A fabricante de equipamentos de redes móveis considera que a ausência de previsibilidade regulatória pode resultar em planos de investimento menos ambiciosos, com reflexos ",
     "A inteligência artificial continua sendo uma das principais forças por trás do crescimento da economia americana, mas os sinais de que o ciclo pode estar perdendo fôlego levaram o grupo Mirabaud a rever gradualmente sua exposição ao setor.",
     "Líder do governo na Câmara critica defensores da política monetária atual; executivo é cotado para assumir o órgão",
-    "O descomissionamento de plataformas de petróleo, que há três anos respondia por cerca de 5% da receita do Porto do Açu relacionada a serviços, atualmente corresponde à metade da geração de caixa da companhia relacionada a serviços. A informação é de Eugênio Figueiredo, CEO do Porto do Açu."
+    "O descomissionamento de plataformas de petróleo, que há três anos respondia por cerca de 5% da receita do Porto do Açu relacionada a serviços, atualmente corresponde à metade da geração de caixa da companhia relacionada a serviços. A informação é de Eugênio Figueiredo, CEO do Porto do Açu.",
+    "A ExxonMobil arrematou duas cargas de 500 mil barris de petróleo cada, do campo de Búzios, no 11º Leilão Spot de Petróleo da União, realizado pela PPSA (Pré-Sal Petróleo S.A.) na quarta-feira (25). As cargas têm previsão de carregamento para o início de janeiro de 2027."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795546860.773873
-    },
     {
       "chave": "xp_inc::GERAL_ATIVO",
       "ts": 1795548243.369572
@@ -2571,10 +2567,13 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795719339.985318
+    },
+    {
+      "chave": "exxon::EVENTO_CORP",
+      "ts": 1795719682.463946
     }
   ],
   "hashes_imagens": [
-    "c71fac4742300b43",
     "5691b8c79931a5f1",
     "d5008432bcc0ceb3",
     "de5516225885c64a",
@@ -2873,6 +2872,7 @@
     "7c271bcc67ac1a27",
     "747f58081e7d66c0",
     "e38f24fd2db451d4",
-    "2567709071083f3c"
+    "2567709071083f3c",
+    "2e0bd16451f31d29"
   ]
 }
