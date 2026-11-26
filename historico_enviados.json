@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/economia/blog/ana-flor/post/2026/11/24/governo-prepara-pec-com-medidas-de-para-dar-potencia-fiscal-e-assegurar-cumprimento-de-meta.ghtml",
-    "291bf64b03ee8e69",
-    "https://www.spacemoney.com.br/commodities/petroleo-fecha-alta-ataques-ormuz/",
-    "dcc78fbd6341617d",
     "https://www.spacemoney.com.br/commodities/ouro-correlacao-sp500-opcoes-gld/",
     "d3dd96342118a2be",
     "https://www.cnnbrasil.com.br/economia/money/mercado/juros-futuros-caem-com-sinalizacao-do-governo-sobre-pec-para-limitar-gastos/",
@@ -799,10 +795,13 @@
     "https://agenciainfra.com/blog/senado-aprova-urgencia-de-pl-que-libera-indicacao-de-politicos-a-agencias/?utm_source=rss&utm_medium=rss&utm_campaign=senado-aprova-urgencia-de-pl-que-libera-indicacao-de-politicos-a-agencias",
     "d0ee4aa11dd964ed",
     "https://www.moneytimes.com.br/cosan-csan3-jbs-jbss32-grupo-fictor-e-outros-destaques-desta-quinta-feira-mlem/",
-    "1ee8a33cb3942f6a"
+    "1ee8a33cb3942f6a",
+    "514f5881e8d81553",
+    "40e9bd38269a1419",
+    "https://valorinveste.globo.com/conteudo-de-marca/banco-abc-brasil/noticia/2026/11/26/renda-mensal-isenta-planeje-seu-futuro-com-as-novas-lcas-e-lcis-do-abc-personal.ghtml",
+    "413f374a775d1da9"
   ],
   "titulos": [
-    "Mesmo insatisfeitos com o trabalho, brasileiros evitam pedir demissão em meio aos juros altos",
     "Quem leva mais de 2 horas para chegar ao trabalho pensa quase 3 vezes mais em pedir demissão",
     "Após conceder R$ 1 bilhão em crédito, Olist amplia aposta em serviços financeiros",
     "Ele ia deixar o comando da própria empresa — mas a IA o fez ficar e agora vai faturar R$ 850 milhões",
@@ -1601,10 +1600,10 @@
     "Banco do Brasil leiloa mais de 200 imóveis sem valor mínimo para lances",
     "Lula quer nova pasta da Segurança com mais autonomia",
     "Senado aprova urgência de PL que libera indicação de políticos a agências",
-    "Cosan (CSAN3), JBS (JBSS32), Grupo Fictor e outros destaques desta quinta-feira (26)"
+    "Cosan (CSAN3), JBS (JBSS32), Grupo Fictor e outros destaques desta quinta-feira (26)",
+    "Renda mensal isenta: planeje seu futuro com as novas LCAs e LCIs do ABC Personal"
   ],
   "leads": [
-    "Conforme a Suno Notícias, o LVBI11, cuja gestão cabe à VBI Log, sinalizou um provento extraordinário aos cotistas antes de sua absorção pelo HGLG11, administrado pela Pátria Log. O relatório gerencial de outubro associa o pagamento ao desinvestimento de uma propriedade logística em Itapevi (SP), cuja primeira tranche acrescentou R$ 0,26 por cota ao",
     "Uma coalizão de empresas de tecnologia, associações empresariais e organizações da sociedade civil pediu à Comissão Europeia a abertura imediata de uma investigação contra a Apple por suposto descumprimento da Lei dos Mercados Digitais (Digital Markets Act – DMA). O grupo acusa a fabricante do iPhone de impor barreiras técnicas e contratuais que in",
     "A Petrobras deverá buscar aquisições de outras participações de usinas de etanol de milho, à medida que quer expandir sua atuação em renováveis e vê sinergias em matérias-primas para a produção de outros combustíveis sustentáveis, como o SAF para o setor de aviação, disseram três fontes com conhecimento do assunto nesta terça-feira.",
     "Crescimento da receita com serviços em nuvem deverá desacelerar para 30% a 45% em 2027, ante 53% no 3º trimestre de 2026",
@@ -1853,13 +1852,10 @@
     "Nessa modalidade, o bem é ofertado pela instituição financeira sem valor mínimo declarado para negociação.",
     "Segundo Gerson Camarotti, em seu blog no g1, Luiz Inácio Lula da Silva, do PT, quer reforçar a futura pasta da Segurança Pública. Interlocutores de Wellington Lima e Silva, ministro da Justiça, relataram que o presidente considerou insuficiente o formato inicialmente proposto para a nova estrutura.",
     "O Senado Federal aprovou, nesta quarta-feira (25), o requerimento de urgência para o PL (Projeto de Lei) 2.896/2022, que permite a indicação de políticos que tenham exercido mandato nos últimos 36 meses para agências reguladoras.",
-    "Avanço nas negociações de venda de participações em três empresas pela Cosan (CSAN3), parceria na Indonésia como porta de entrada da JBS (JBSS32) no Sudeste Asiático e operação por suspeita de fraude do Grupo Fictor são alguns dos destaques corporativos desta quinta-feira (26)."
+    "Avanço nas negociações de venda de participações em três empresas pela Cosan (CSAN3), parceria na Indonésia como porta de entrada da JBS (JBSS32) no Sudeste Asiático e operação por suspeita de fraude do Grupo Fictor são alguns dos destaques corporativos desta quinta-feira (26).",
+    "Plataforma própria reúne títulos emitidos pelo banco, incluindo LCI e LCA com fluxo mensal de pagamentos e isenção de imposto de renda, ideais para quem busca previsibilidade"
   ],
   "eventos_recentes": [
-    {
-      "chave": "gerdau::GERAL_ATIVO",
-      "ts": 1795524320.716011
-    },
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795525081.518932
@@ -2559,10 +2555,13 @@
     {
       "chave": "jbs::GERAL_ATIVO",
       "ts": 1795696502.173912
+    },
+    {
+      "chave": "rf_credito_juros::RF_EVENTO",
+      "ts": 1795697176.505382
     }
   ],
   "hashes_imagens": [
-    "d8b363627807a9bb",
     "bd0e7246c5330c7c",
     "8addd5cc69c8287d",
     "a0d91f9f5e39eef7",
@@ -2861,6 +2860,7 @@
     "8a34178637c5f082",
     "b8391ca34557796b",
     "65ef96cdbc516da1",
-    "b49c46794e26c734"
+    "b49c46794e26c734",
+    "66a6bce8fe8eccc9"
   ]
 }
