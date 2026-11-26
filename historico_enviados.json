@@ -1,6 +1,5 @@
 {
   "links": [
-    "a9d8f1d87e196073",
     "https://www.spacemoney.com.br/politica/boulos-ajuste-fiscal-emendas-supersalarios/",
     "d414c2be892b1266",
     "https://www.infomoney.com.br/economia/inflacao-vai-piorar-antes-de-melhorar-alerta-jp-morgan-em-relatorio-sobre-2027/",
@@ -799,7 +798,8 @@
     "https://www.infomoney.com.br/mercados/azzas-2154-azza3-chega-a-subir-12-mas-reduz-alta-com-noticia-sobre-negociacao-da-farm-rio/",
     "adfeb427b143d3a8",
     "https://finsidersbrasil.com.br/noticias-sobre-fintechs/resultados-financeiros/xp-procura-um-novo-amor-so-que-o-varejo-ainda-sustenta-a-relacao/",
-    "5f496fe880d21433"
+    "5f496fe880d21433",
+    "ddbcd7ff5c0c088c"
   ],
   "titulos": [
     "Klabin (KLBN11) suspende operações em unidade de SC após incidente; 10 funcionários são hospitalizados",
@@ -1856,10 +1856,6 @@
     "Há um número no balanço da XP que a empresa faria questão de pendurar na vitrine: 55%, o salto da receita com clientes corporativos em um ano. E há outro que, provavelmente, gostaria de esconder debaixo do tapete: 26%, a queda do dinheiro novo que entrou na plataforma no mesmo período, segundo dados de relatório do BTG Pactual. Entre um e outro cab"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795548607.56983
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795549317.224126
