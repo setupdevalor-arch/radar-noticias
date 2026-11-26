@@ -1,9 +1,5 @@
 {
   "links": [
-    "29b1424aa1289fac",
-    "d0041d536a8840c8",
-    "https://www.spacemoney.com.br/economia/exterior/eua-tarifas-14-parceiros-comerciais/",
-    "2621758ed7d22631",
     "https://telesintese.com.br/tecto-anuncia-data-center-expansivel-a-6-mw-no-recife/",
     "32ce19a34249a0fd",
     "https://bmcnews.com.br/caso-master/banco-genial-intermediou-r-92-25-milhoes-em-titulos-do-banco-master/",
@@ -799,10 +795,13 @@
     "https://megawhat.uol.com.br/economia-e-politica/receita-com-descomissionamento-aumenta-dez-vezes-no-porto-do-acu/",
     "3f3ba90b44adc222",
     "https://agenciainfra.com/blog/exxonmobil-arremata-1-milhao-de-barris-de-oleo-no-11o-leilao-spot-da-uniao/?utm_source=rss&utm_medium=rss&utm_campaign=exxonmobil-arremata-1-milhao-de-barris-de-oleo-no-11o-leilao-spot-da-uniao",
-    "07861d053d14b307"
+    "07861d053d14b307",
+    "bde9a3778a4bae68",
+    "e8fc67a3845449ed",
+    "https://valorinveste.globo.com/produtos/fundos/noticia/2026/11/26/com-apoio-do-bndes-bradesco-lanca-etf-de-acoes-brasileiras-essenciais-para-economia.ghtml",
+    "154475bef1f81770"
   ],
   "titulos": [
-    "Sheinbaum diz que reunião com Trump foi ‘muito boa’ e negociações estão avançadas",
     "Deterioração no crédito afeta grandes bancos no 3º tri; BB tem pior resultado",
     "Corporate Venture Capital: o que empresas precisam saber antes de investir em startups",
     "Nome de Alckmin para Fazenda é elogiado por economistas e analistas em evento",
@@ -1601,10 +1600,10 @@
     "Após rali da IA, Mirabaud pisa no freio e faz alerta: “quem não agir, vai ficar para trás”",
     "Trabuco “pode não ser a melhor opção” para a Fazenda, diz Uczai",
     "Receita com descomissionamento aumenta dez vezes no Porto do Açu",
-    "ExxonMobil arremata 1 milhão de barris de óleo no 11º Leilão Spot da União"
+    "ExxonMobil arremata 1 milhão de barris de óleo no 11º Leilão Spot da União",
+    "Com apoio do BNDES, Bradesco lança ETF de ações brasileiras essenciais para economia"
   ],
   "leads": [
-    "As bolsas asiáticas fecharam em baixa nesta quarta-feira (25), com a perda de força do alívio provocado pela volta de Jensen Huang ao comando da Nvidia e o aumento das dúvidas sobre as perspectivas para a inteligência artificial (IA). O temor de novas tarifas também voltou ao radar, após notícias de que os Estados Unidos poderiam elevar as alíquota",
     "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
     "O presidente da Agência Nacional de Telecomunicações (Anatel), Alexandre Freire, negou nesta terça-feira, 24, o pedido de efeito suspensivo apresentado pela TIM contra a medida cautelar que determinou a interrupção do funcionamento de sua ferramenta de combate às chamadas massivas, denominada AntiSpam. A agência identificou bloqueios indevidos de t",
     "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro.",
@@ -1853,7 +1852,8 @@
     "A inteligência artificial continua sendo uma das principais forças por trás do crescimento da economia americana, mas os sinais de que o ciclo pode estar perdendo fôlego levaram o grupo Mirabaud a rever gradualmente sua exposição ao setor.",
     "Líder do governo na Câmara critica defensores da política monetária atual; executivo é cotado para assumir o órgão",
     "O descomissionamento de plataformas de petróleo, que há três anos respondia por cerca de 5% da receita do Porto do Açu relacionada a serviços, atualmente corresponde à metade da geração de caixa da companhia relacionada a serviços. A informação é de Eugênio Figueiredo, CEO do Porto do Açu.",
-    "A ExxonMobil arrematou duas cargas de 500 mil barris de petróleo cada, do campo de Búzios, no 11º Leilão Spot de Petróleo da União, realizado pela PPSA (Pré-Sal Petróleo S.A.) na quarta-feira (25). As cargas têm previsão de carregamento para o início de janeiro de 2027."
+    "A ExxonMobil arrematou duas cargas de 500 mil barris de petróleo cada, do campo de Búzios, no 11º Leilão Spot de Petróleo da União, realizado pela PPSA (Pré-Sal Petróleo S.A.) na quarta-feira (25). As cargas têm previsão de carregamento para o início de janeiro de 2027.",
+    "O BDEV11 foi escolhido em um edital para estimular os fundos negociados em bolsa locais"
   ],
   "eventos_recentes": [
     {
@@ -2571,10 +2571,13 @@
     {
       "chave": "exxon::EVENTO_CORP",
       "ts": 1795719682.463946
+    },
+    {
+      "chave": "bradesco::GERAL_ATIVO",
+      "ts": 1795720034.761477
     }
   ],
   "hashes_imagens": [
-    "5691b8c79931a5f1",
     "d5008432bcc0ceb3",
     "de5516225885c64a",
     "8ba010958694cdc4",
@@ -2873,6 +2876,7 @@
     "747f58081e7d66c0",
     "e38f24fd2db451d4",
     "2567709071083f3c",
-    "2e0bd16451f31d29"
+    "2e0bd16451f31d29",
+    "0922a1247bf96152"
   ]
 }
