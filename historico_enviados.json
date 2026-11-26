@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/banco-inter-demite-mais-de-200-funcionarios-diz-sindicato/",
-    "f8d0ae651d2a35ef",
-    "https://www.infomoney.com.br/mercados/mini-indice-hoje-futuro-ibovespa-winz26-25112026/",
-    "e49e639490685dcf",
-    "https://www.infomoney.com.br/mercados/dell-eleva-previsoes-de-lucro-e-receita-apos-trimestre-impulsionado-por-ia/",
     "a39e8b92a52de889",
     "192c30f14b8babe9",
     "e9729a89b1160c99",
@@ -799,10 +794,14 @@
     "https://g1.globo.com/economia/noticia/2026/11/26/investimento-estrangeiro-atinge-marca-us-14-trilhao-em-2025-quase-metade-do-pib-aplicacoes-no-exterior-superam-reservas.ghtml",
     "67a3e18a3d66d5d6",
     "https://www.moneytimes.com.br/ibovespa-dispara-mais-de-4-e-dolar-recua-a-r-571-o-que-anima-o-mercado-hoje-davs/",
-    "a73bcef7a7fca241"
+    "a73bcef7a7fca241",
+    "3e1d2a33d4fec3a0",
+    "ca21daea7a0164d2",
+    "8563eca3ba0a5989",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/ipca-15-novembro-alimentos-inflacao/",
+    "8d9b5bb19061d740"
   ],
   "titulos": [
-    "Após punição dos EUA, MEXC encerra seu cartão de criptomoedas",
     "Dólar opera em alta e bate R$ 5,82, de olho em ajuste fiscal e ata do Fed; Ibovespa cai",
     "Selic parada em 13,75% até metade de 2027 é certeza, diz Padovani, do BV",
     "Shopee e Connect Car: clientes da ShopeeVIP têm 18 meses de isenção na tag; veja como",
@@ -1601,10 +1600,10 @@
     "Brasileiros estão se dando conta de que existe vida sem bets, diz presidente da Abras",
     "Israel ameaça deslocar um milhão de palestinos se Hamas não entregar as armas",
     "Investimento estrangeiro atinge marca US$ 1,4 trilhão em 2025, quase metade do PIB, diz BC",
-    "Ibovespa sobe mais de 4% e dólar recua a R$ 5,71 com otimismo no mercado"
+    "Ibovespa sobe mais de 4% e dólar recua a R$ 5,71 com otimismo no mercado",
+    "IPCA-15 sobe 0,22%, abaixo das estimativas; alimentos pesam"
   ],
   "leads": [
-    "Em compilação do Visual Capitalist com dados de Eurostat, Office for National Statistics e Swiss Federal Finance Administration, a dívida pública bruta europeia no segundo trimestre de 2026 expõe realidades fiscais distintas. A Grécia aparece com 140,8% do PIB e a Itália com 139,9%, enquanto a Suíça registra 23,4%, estimativa de ano cheio de 2025. ",
     "Bloomberg Línea — Para o CEO da Kepler Weber (KEPL3), Bernardo Nogueira, o agronegócio é cíclico, com crises recorrentes, mas o crescimento no Brasil continua, com a demanda por armazenagem em alta.",
     "A Justiça acolheu um recurso apresentado pelo governo federal e voltou a validar as novas normas de vale-refeição e vale-alimentação, conforme o g1. A decisão, divulgada na terça-feira (24), anula os efeitos de uma liminar de novembro que havia beneficiado empresas associadas à Associação Brasileira das Empresas de Benefícios ao Trabalhador (ABBT).",
     "O Banco Central da República Tcheca (CNB) mantém sob sigilo o preço pago, a quantidade adquirida e o valor atual do Bitcoin que integra sua carteira de teste de US$ 1 milhão, lançada em 13 de novembro do ano passado.",
@@ -1853,7 +1852,8 @@
     "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan",
     "O ministro da Defesa, Israel Katz, ameaçou deslocar um milhão de palestinos caso o Hamas não se desarme voluntariamente. A ameaça foi feita em postagem no X nesta quinta-feira, 26. Katz afirmou que, se o grupo não entregar as armas e Gaza não for desmilitarizada conforme o plano do presidente dos Estados Unidos, Donald Trump, as Forças de Defesa de",
     "O Banco Central informou nesta quinta-feira (26) que o investimento direto no país, ou seja, o valor acumulado dos investimentos de estrangeiros em empresas e negócios no Brasil, atingiu a marca de R$ 1,41 trilhão no fim de 2025. O montante equivale a 49,3% do Produto Interno Bruto (PIB), recorde da série histórica.",
-    "A bolsa brasileira amanheceu hoje com um salto de 6 mil pontos, estendendo os ganhos da véspera. O Ibovespa abriu a sessão desta quinta-feira (26) em forte alta, recuperando os 173 mil pontos já nos primeiros minutos do pregão."
+    "A bolsa brasileira amanheceu hoje com um salto de 6 mil pontos, estendendo os ganhos da véspera. O Ibovespa abriu a sessão desta quinta-feira (26) em forte alta, recuperando os 173 mil pontos já nos primeiros minutos do pregão.",
+    "O IPCA-15 subiu 0,22% em novembro, após avanço de 0,32% em outubro, e ficou abaixo do piso das estimativas do mercado, de 0,27%. A prévia da inflação foi divulgada nesta quinta-feira (26) pelo IBGE e mostra desaceleração na comparação mensal."
   ],
   "eventos_recentes": [
     {
@@ -2559,10 +2559,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795707432.244645
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795707794.743239
     }
   ],
   "hashes_imagens": [
-    "af33d7ce28884670",
     "745da96a0c1e0b6d",
     "9328899d5dff804f",
     "4a3abfe6802be601",
@@ -2861,6 +2864,7 @@
     "7b7d34222f5b4610",
     "f6ffbb37f136d5d1",
     "110e8945235df3bd",
-    "9ee91da22c6afee0"
+    "9ee91da22c6afee0",
+    "cf6863f26007dde9"
   ]
 }
