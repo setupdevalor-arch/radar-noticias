@@ -1,6 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/economia/preco-dos-alimentos-inflacao/",
     "a2eb279936b5587d",
     "https://www.mobiletime.com.br/noticias/25/11/2026/daycoval-eua-temenos/",
     "697d70a210472ddd",
@@ -799,7 +798,8 @@
     "https://www.spacemoney.com.br/investimentos/criptomoedas/justica-suspende-exclusao-socio-brasil-bitcoin/",
     "54395991fe4b4024",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hglg11-fecha-aquisicao-ultima-fatia-g400/",
-    "597277de320ff8d1"
+    "597277de320ff8d1",
+    "9de6ca1cdc1428e3"
   ],
   "titulos": [
     "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?",
@@ -1856,14 +1856,6 @@
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rect11::GERAL_ATIVO",
-      "ts": 1795562019.437562
-    },
-    {
-      "chave": "banco_do_brasil::GERAL_ATIVO",
-      "ts": 1795562019.437562
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795563077.881692
