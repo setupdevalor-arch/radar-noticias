@@ -1,8 +1,5 @@
 {
   "links": [
-    "614b152f5486c7d1",
-    "b2d970423124fea4",
-    "1a8946cbc9f4cc64",
     "462b44af391e6ad3",
     "https://www.bloomberglinea.com.br/agro/kepler-weber-processa-70-mais-aco-e-ve-demanda-por-armazenagem-em-alta-diz-ceo/",
     "aded2db8e2614203",
@@ -799,10 +796,12 @@
     "https://www.infomoney.com.br/politica/alckmin-ganha-forca-para-assumir-ministerio-da-seguranca-publica/",
     "9eec96350debfa22",
     "https://www.spacemoney.com.br/investimentos/acoes/ibovespa-hoje/ibovespa-alta-bancos-petrobras-dolar/",
-    "e4ba08068ab5471e"
+    "e4ba08068ab5471e",
+    "9676a35deab4e4dd",
+    "https://bmcnews.com.br/empresas-e-negocios/motiva-anuncia-renuncia-de-andre-salcedo-e-eduardo-camargo-assume-divisao-de-trilhos/",
+    "69efaf42ddd754b2"
   ],
   "titulos": [
-    "Irã ataca instalações de drones e mísseis dos EUA no Kuwait",
     "Quem é o favorito para o Ministério da Fazenda, segundo a Eurasia",
     "Entre a venda negociada e a rescisão inédita: entenda o que pode acontecer a Enel",
     "Itaú BBA reduz preço-alvo da Direcional (DIRR3), mas mantém confiança na construtora",
@@ -1601,10 +1600,10 @@
     "Artigo | O ajuste fiscal e a conta da infraestrutura",
     "Contas externas têm déficit de US$ 4 bilhões em outubro",
     "Alckmin ganha força para assumir Ministério da Segurança Pública",
-    "Bancos e Petrobras levam Ibovespa a 171 mil pontos"
+    "Bancos e Petrobras levam Ibovespa a 171 mil pontos",
+    "Motiva anuncia renúncia de André Salcedo, e Eduardo Camargo assume divisão de trilhos"
   ],
   "leads": [
-    "A JBS vai propor aos acionistas a nomeação de Wesley Batista Filho como administrador executivo da companhia. A indicação será submetida à votação durante uma AGE (Assembleia Geral Extraordinária), convocada para 15 de dezembro de 2026, às 9h (horário da Europa Central), em Amsterdã, nos Países Baixos.",
     "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
     "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
     "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
@@ -1853,7 +1852,8 @@
     "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit",
     "Pedro Peduzzi – Repórter da Agência Brasil",
     "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
-    "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56."
+    "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56.",
+    "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias."
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "a1e196c7a2308beb",
     "e2f1122be176e736",
     "d4e9c94aa9abde55",
     "3ac8e047102c2151",
@@ -2861,6 +2860,7 @@
     "d79797c1b2123820",
     "1b7292b3dc1a2ce6",
     "5b81ea77a6aecfbd",
-    "9b4af56bcb5ce324"
+    "9b4af56bcb5ce324",
+    "22b513d823a1a2eb"
   ]
 }
