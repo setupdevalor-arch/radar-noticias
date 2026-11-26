@@ -1,7 +1,5 @@
 {
   "links": [
-    "57a8178b5ea87226",
-    "https://www.mobiletime.com.br/noticias/24/11/2026/temu-mastercard-acordo/",
     "04b5e20cfd7dc748",
     "74e2b291c65b4a79",
     "https://g1.globo.com/tecnologia/noticia/2026/11/24/chinesa-huawei-e-condenada-nos-eua.ghtml",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/economia/exterior/video-suposto-ataque-airbus-a319/",
     "2ab67ffeee379d77",
     "https://www.infomoney.com.br/mercados/sao-martinho-jpmorgan-corta-recomendacao-para-venda-apos-balanco-acao-cai/",
-    "0a1e7a44d311c5d3"
+    "0a1e7a44d311c5d3",
+    "https://megawhat.uol.com.br/noticias/aneel-cobra-respostas-sobre-energia-de-itaipu-em-meio-a-risco-de-alta-de-precos/",
+    "205dea1730f27208"
   ],
   "titulos": [
-    "SPXI11 ou SPXR11: qual o melhor ETF de S&P 500 da Itaú Asset?",
     "Banco do Brasil (BBAS3), B3 (B3SA3), Americanas (AMER3) e outros destaques desta quarta-feira (18)",
     "Minério de ferro na China se estabiliza com produção maior de ferro-gusa e estocagem",
     "Trump afirma que os EUA têm ‘mais energia do que qualquer outro país’ e descreve a Venezuela como sua ‘nova aquisição’",
@@ -1601,10 +1600,10 @@
     "Taesa (TAEE11) paga dividendos nesta quinta-feira; veja detalhes",
     "Porto do Açu negocia nova térmica e avança na atração de data centers",
     "Vídeo iraniano mostra suposto ataque a Airbus A319",
-    "São Martinho: JPMorgan corta recomendação para venda após balanço; ação cai"
+    "São Martinho: JPMorgan corta recomendação para venda após balanço; ação cai",
+    "Aneel cobra respostas sobre energia de Itaipu em meio a risco de alta de preços"
   ],
   "leads": [
-    "O ministro do Planejamento, Bruno Moretti, afirmou ao blog nesta terça-feira (24) que o governo prepara o texto de uma Proposta de Emenda à Constituição (PEC) com mais medidas de ajuste econômico.",
     "No mercado de investimentos, os preços do petróleo subiram no encerramento desta terça-feira (24), após abrirem no patamar mais baixo em três meses. O Brent para janeiro, negociado em Londres, avançou 2,27%, para US$ 91,40 o barril. Na Nymex, o WTI do mesmo vencimento subiu 2,35%, a US$ 82,05.",
     "O ouro deixou de se comportar como ativo de proteção neste ano e passou a oscilar de forma parecida com um índice de mercado, segundo reportagem da CNBC. Na semana passada, temores relacionados à inteligência artificial, um Federal Reserve mais duro e um dólar mais forte levaram muitos investidores a levantar caixa, e o metal foi vendido junto com ",
     "As taxas dos DIs fecharam a terça-feira (24) com baixas após notícias de que o presidente Luiz Inácio Lula da Silva (PT) autorizou a equipe econômica a enviar ao Congresso uma proposta de emenda à Constituição que tratará das despesas obrigatórias.",
@@ -1853,7 +1852,8 @@
     "A Taesa (TAEE11) vai pagar dividendos aos seus acionistas nesta quinta-feira (26).",
     "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
     "A imprensa iraniana apresentou na terça-feira (24) um vídeo que, conforme os veículos que o publicaram, exibiria um ataque dos Estados Unidos e de Israel contra um avião comercial no começo do conflito. A ação é atribuída a forças americanas e israelenses, e a aeronave — identificada por sites especializados em aviação como um Airbus A319 da Iran A",
-    "Após resultados no terceiro trimestre considerados um tanto decepcionantes, o JPMorgan rebaixou a recomendação para ações da São Martinho (SMTO3) de neutra para venda, com preço-alvo de R$ 16 ao fim do exercício fiscal de 2028. O banco estima que o Ebitda (lucro antes de juros, impostos, depreciação e amortização) projetado pelo consenso esteja 17%"
+    "Após resultados no terceiro trimestre considerados um tanto decepcionantes, o JPMorgan rebaixou a recomendação para ações da São Martinho (SMTO3) de neutra para venda, com preço-alvo de R$ 16 ao fim do exercício fiscal de 2028. O banco estima que o Ebitda (lucro antes de juros, impostos, depreciação e amortização) projetado pelo consenso esteja 17%",
+    "A mudança na metodologia de projeção do suprimento de energia de Itaipu ao Paraguai colocou geradores e grandes consumidores em oposição e levou a Agência Nacional de Energia Elétrica (Aneel) a cobrar, na terça-feira, 24 de novembro, um posicionamento da Empresa Brasileira de Participações em Energia Nuclear e Binacional (ENBPar) sobre a necessidad"
   ],
   "eventos_recentes": [
     {
@@ -2570,7 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "2e8ca3d95e792e20",
     "9fb1d31354878b29",
     "ecc8b85639df8e41",
     "73dc2960c5c5efdf",
@@ -2869,6 +2868,7 @@
     "08092064c962c90c",
     "5ce6945d8fdde4e7",
     "bd7fb43bb76088ca",
-    "a3ac7f4955af0177"
+    "a3ac7f4955af0177",
+    "ca02e4721d2951b4"
   ]
 }
