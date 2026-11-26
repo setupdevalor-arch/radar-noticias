@@ -1,8 +1,5 @@
 {
   "links": [
-    "462b44af391e6ad3",
-    "https://www.bloomberglinea.com.br/agro/kepler-weber-processa-70-mais-aco-e-ve-demanda-por-armazenagem-em-alta-diz-ceo/",
-    "aded2db8e2614203",
     "https://www.spacemoney.com.br/economia/legislacao/justica-reativa-regras-vale-alimentacao/",
     "70603fbb69ab3804",
     "2815a939340bb0bc",
@@ -799,10 +796,12 @@
     "e4ba08068ab5471e",
     "9676a35deab4e4dd",
     "https://bmcnews.com.br/empresas-e-negocios/motiva-anuncia-renuncia-de-andre-salcedo-e-eduardo-camargo-assume-divisao-de-trilhos/",
-    "69efaf42ddd754b2"
+    "69efaf42ddd754b2",
+    "98551b064ba6a6e1",
+    "https://www.poder360.com.br/poder-governo/tarifa-dos-eua-sobre-aeronaves-sao-descabidas-diz-alckmin/",
+    "376a9bb939267347"
   ],
   "titulos": [
-    "Quem é o favorito para o Ministério da Fazenda, segundo a Eurasia",
     "Entre a venda negociada e a rescisão inédita: entenda o que pode acontecer a Enel",
     "Itaú BBA reduz preço-alvo da Direcional (DIRR3), mas mantém confiança na construtora",
     "Moretti e Lindbergh se reconciliam após trocas de farpas sobre pacote fiscal",
@@ -1601,10 +1600,10 @@
     "Contas externas têm déficit de US$ 4 bilhões em outubro",
     "Alckmin ganha força para assumir Ministério da Segurança Pública",
     "Bancos e Petrobras levam Ibovespa a 171 mil pontos",
-    "Motiva anuncia renúncia de André Salcedo, e Eduardo Camargo assume divisão de trilhos"
+    "Motiva anuncia renúncia de André Salcedo, e Eduardo Camargo assume divisão de trilhos",
+    "Tarifa dos EUA sobre aeronaves são “descabidas”, diz Alckmin"
   ],
   "leads": [
-    "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
     "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
     "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
     "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado.",
@@ -1853,17 +1852,10 @@
     "Pedro Peduzzi – Repórter da Agência Brasil",
     "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
     "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56.",
-    "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias."
+    "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias.",
+    "Vice-presidente criticou nova taxa avaliada pelo governo Trump e disse que Brasil trabalhará para revertê-la"
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795528650.961963
-    },
-    {
-      "chave": "rf_credito_juros::RF_EVENTO",
-      "ts": 1795528650.961963
-    },
     {
       "chave": "icdi11::GERAL_ATIVO",
       "ts": 1795530052.478671
@@ -2562,7 +2554,6 @@
     }
   ],
   "hashes_imagens": [
-    "e2f1122be176e736",
     "d4e9c94aa9abde55",
     "3ac8e047102c2151",
     "72c3215b203999ca",
@@ -2861,6 +2852,7 @@
     "1b7292b3dc1a2ce6",
     "5b81ea77a6aecfbd",
     "9b4af56bcb5ce324",
-    "22b513d823a1a2eb"
+    "22b513d823a1a2eb",
+    "7a69490d20e13f69"
   ]
 }
