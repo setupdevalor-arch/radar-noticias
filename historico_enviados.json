@@ -1,17 +1,5 @@
 {
   "links": [
-    "da228556b4c9d4ae",
-    "https://www.estadao.com.br/economia/coluna-da-broad/transmissoras-se-afastam-de-leilao-de-baterias-por-compartilhamento-de-receita-com-consumidor/",
-    "b3f10e1a4e07d260",
-    "29b3616918054e84",
-    "https://www.bloomberglinea.com.br/agro/temos-sido-bastante-criteriosos-na-concessao-do-credito-diz-diretor-de-agro-do-bb/",
-    "da05b3e99cba2334",
-    "https://www.bloomberglinea.com.br/agro/3tentos-usa-barter-e-alienacao-fiduciaria-de-graos-para-reduzir-risco-com-produtores/",
-    "aaab912153fad576",
-    "https://www.spacemoney.com.br/economia/macroeconomia/cbs-fim-6x1-inflacao-2027/",
-    "918d424456cf052b",
-    "https://www.spacemoney.com.br/economia/macroeconomia/divida-publica-europa-2026-2/",
-    "142b313adf59526b",
     "614b152f5486c7d1",
     "b2d970423124fea4",
     "1a8946cbc9f4cc64",
@@ -799,12 +787,21 @@
     "https://eixos.com.br/combustiveis-e-bioenergia/biocombustiveis/mme-diz-que-nao-falta-etanol-anidro-na-entressafra-mesmo-se-e32-for-prorrogado/",
     "be07bbdd94e7bc19",
     "https://agenciainfra.com/blog/artigo-o-ajuste-fiscal-e-a-conta-da-infraestrutura/?utm_source=rss&utm_medium=rss&utm_campaign=artigo-o-ajuste-fiscal-e-a-conta-da-infraestrutura",
-    "5c8c0c4eccddc20c"
+    "5c8c0c4eccddc20c",
+    "f956d7cd63c10d55",
+    "8557ec0ae3056b90",
+    "8130ad10b41cf03e",
+    "b066f5e942672b58",
+    "2918ded2aa1cc0f1",
+    "e12b6e9eb94c4ca3",
+    "https://bmcnews.com.br/economia/contas-externas-tem-deficit-de-us-4-bilhoes-em-outubro/",
+    "1d06da4a6e57c272",
+    "https://www.infomoney.com.br/politica/alckmin-ganha-forca-para-assumir-ministerio-da-seguranca-publica/",
+    "9eec96350debfa22",
+    "https://www.spacemoney.com.br/investimentos/acoes/ibovespa-hoje/ibovespa-alta-bancos-petrobras-dolar/",
+    "e4ba08068ab5471e"
   ],
   "titulos": [
-    "Com juro da casa própria a 15%, BofA corta previsão de lançamentos de incorporadoras",
-    "Track & Field (TFCO4): exposição diferenciada ao consumo doméstico com crescimento e rentabilidade",
-    "Ações da Nvidia (NVDA) em alta: balanço forte prepara empresa para disputa entre EUA e China; veja números",
     "Irã ataca instalações de drones e mísseis dos EUA no Kuwait",
     "Quem é o favorito para o Ministério da Fazenda, segundo a Eurasia",
     "Entre a venda negociada e a rescisão inédita: entenda o que pode acontecer a Enel",
@@ -1601,12 +1598,12 @@
     "Macron critica carne do Brasil e Abiec rebate acusação",
     "TCU alerta governo sobre risco de superestimação de R$ 8,43 bilhões",
     "MME diz que não falta etanol anidro na entressafra, mesmo se E32 for prorrogado",
-    "Artigo | O ajuste fiscal e a conta da infraestrutura"
+    "Artigo | O ajuste fiscal e a conta da infraestrutura",
+    "Contas externas têm déficit de US$ 4 bilhões em outubro",
+    "Alckmin ganha força para assumir Ministério da Segurança Pública",
+    "Bancos e Petrobras levam Ibovespa a 171 mil pontos"
   ],
   "leads": [
-    "As ações da Vale (VALE3) encerraram o pregão desta terça-feira com desvalorização de 5,43%, cotadas a R$ 55,24, sob o peso de um conjunto de vetores que atinge pilares centrais da tese de investimento da mineradora — do enfraquecimento do minério de ferro a custos operacionais mais elevados, passando por incertezas sobre geração de caixa, política ",
-    "As ações da Braskem (BRKM5) recuaram nesta terça-feira (24), devolvendo parte da forte valorização da sessão anterior, quando subiram quase 12% com a perspectiva de um acordo para reestruturar as dívidas da companhia. Apesar do avanço nas negociações com credores, a avaliação do Bradesco BBI aponta um possível custo elevado para os atuais acionista",
-    "Entre 1996 e 2025, o salário médio nos Estados Unidos cresceu acima da inflação em 22 dos 30 anos analisados, segundo compilação do Visual Capitalist com base no National Average Wage Index da Social Security Administration e em dados de inflação do Federal Reserve Bank de Minneapolis. A vantagem máxima da série ocorreu em 2021, com ganho de 4,2 po",
     "A JBS vai propor aos acionistas a nomeação de Wesley Batista Filho como administrador executivo da companhia. A indicação será submetida à votação durante uma AGE (Assembleia Geral Extraordinária), convocada para 15 de dezembro de 2026, às 9h (horário da Europa Central), em Amsterdã, nos Países Baixos.",
     "O Itaú Unibanco confirmou à Broadcast (sistema de notícias em tempo real do Grupo Estado) que começará a financiar imóveis pelo Minha Casa, Minha Vida (MCMV), em um movimento que marca a entrada em um mercado dominado pela Caixa Econômica Federal. O interesse do banco privado no programa já havia sido adiantado em agosto em reportagem da Coluna do ",
     "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
@@ -1853,13 +1850,12 @@
     "O francês Emmanuel Macron voltou a questionar a carne de boi produzida no Brasil e, em reunião com lideranças rurais da França na quarta-feira (25), no Eliseu, em Paris, chamou o produto de “dopado” e celebrou as barreiras sanitárias impostas pela União Europeia. A Associação Brasileira das Indústrias Exportadoras de Carnes (Abiec) rebateu a acusaç",
     "O Tribunal de Contas da União (TCU) decidiu na quarta-feira (25) alertar o governo federal sobre o risco de superestimação de R$ 8,43 bilhões em receitas extraordinárias previstas para 2026 com o Programa de Transição Integral (PTI). Por unanimidade, os ministros avaliaram como baixa a probabilidade de essa arrecadação ocorrer ainda neste ano.",
     "O Ministério de Minas e Energia (MME) voltou a afirmar nesta quinta (26/11) que não vê risco de faltar etanol anidro, o etanol misturado à gasolina, durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta (25/11), na reunião de monitoramento do abastecimento de etanol da safra 2026/2027, com representantes do governo e da cad",
-    "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit"
+    "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit",
+    "Pedro Peduzzi – Repórter da Agência Brasil",
+    "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
+    "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56."
   ],
   "eventos_recentes": [
-    {
-      "chave": "knip11::PROVENTOS",
-      "ts": 1795527914.198134
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795528650.961963
@@ -2559,12 +2555,13 @@
     {
       "chave": "taesa::PROVENTOS",
       "ts": 1795698983.793324
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795700848.226541
     }
   ],
   "hashes_imagens": [
-    "17967a4937fd3bd4",
-    "954bf87427e9329f",
-    "73c22ff9a04ca978",
     "a1e196c7a2308beb",
     "e2f1122be176e736",
     "d4e9c94aa9abde55",
@@ -2861,6 +2858,9 @@
     "8c9eefc09e92fdec",
     "58abfd34c434a633",
     "41e662cc78294bd7",
-    "d79797c1b2123820"
+    "d79797c1b2123820",
+    "1b7292b3dc1a2ce6",
+    "5b81ea77a6aecfbd",
+    "9b4af56bcb5ce324"
   ]
 }
