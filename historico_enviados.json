@@ -1,8 +1,5 @@
 {
   "links": [
-    "54a1a1992b88e19d",
-    "https://investnews.com.br/investimentos/etf-terras-raras-rara11/",
-    "2caf403c124cd73b",
     "92e466f7ff16782b",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/tether-aporte-lemon-usdt-xaut/",
     "0563103e0318b11f",
@@ -799,10 +796,12 @@
     "https://www.spacemoney.com.br/agronegocio/churrasco-ceias-consumo-carnes/",
     "2bc3e0429785b897",
     "https://agenciainfra.com/blog/entidades-divulgam-manifesto-contra-pl-que-amplia-politicos-em-agencias/?utm_source=rss&utm_medium=rss&utm_campaign=entidades-divulgam-manifesto-contra-pl-que-amplia-politicos-em-agencias",
-    "16ed2830786b9600"
+    "16ed2830786b9600",
+    "b0d89c98abb2fc8f",
+    "https://www.moneytimes.com.br/dexco-dxco3-levanta-r-200-milhoes-com-venda-de-acoes-de-subsidiaria-florestal/",
+    "b43f10209c9685f3"
   ],
   "titulos": [
-    "Nem o Itaú passou ileso, mas Banco do Brasil paga conta bem mais salgada. Afinal, qual banco consegue atravessar a piora do crédito?",
     "Bolsa opera amanhã (20)? Veja o funcionamento da B3, bancos e outros serviços no feriado",
     "O jogo GTA VI soma US$ 1,65 bi em vendas e atrai ações de marketing",
     "Ata do Fed pressiona Treasuries e ações em NY",
@@ -1601,10 +1600,10 @@
     "Trabuco aceita convite para comandar a Fazenda",
     "Macron condiciona aval a orçamento da UE à preservação da PAC",
     "Churrasco avança nas ceias e move R$ 10 bilhões",
-    "Entidades divulgam manifesto contra PL que amplia políticos em agências"
+    "Entidades divulgam manifesto contra PL que amplia políticos em agências",
+    "Dexco (DXCO3) levanta R$ 200 milhões com venda de ações de subsidiária florestal"
   ],
   "leads": [
-    "A Confederação Nacional da Indústria (CNI) pediu ao Supremo Tribunal Federal (STF), em 24 de novembro de 2026, a suspensão do decreto do governo Lula e da portaria do Ministério do Trabalho e Emprego que regulamentaram o fim da escala 6×1 e a redução gradual da jornada de trabalho.",
     "A Dell Technologies encerrou o terceiro trimestre do exercício fiscal de 2027 com uma carteira de US$ 132,3 bilhões em pedidos de servidores de inteligência artificial (IA) ainda não convertidos em receita. Nos últimos 12 meses, a fabricante recebeu US$ 180 bilhões em encomendas desses equipamentos, em meio à expansão dos investimentos em infraestr",
     "O Escritório do Representante Comercial dos Estados Unidos (USTR, na sigla em inglês) propôs nesta quarta-feira, 25, a aplicação de tarifas sobre produtos de economias como Brasil, China, União Europeia (UE), Japão e Índia, após concluir que as práticas relacionadas ao excesso estrutural de capacidade produtiva industrial prejudicam o comércio amer",
     "O ministro do Planejamento e Orçamento, Bruno Moretti, confirmou nesta quarta-feira (25) que a equipe econômica elabora um \"cardápio\" de novas medidas de ajuste fiscal. Segundo o chefe da pasta, o conjunto de proposta deve promover uma contenção das despesas obrigatórias.",
@@ -1853,7 +1852,8 @@
     "O banqueiro Luiz Carlos Trabuco aceitou nesta quinta-feira (26) comandar a Fazenda. Será ministro no quarto mandato presidencial de Lula (PT), conforme informou o g1. Ele preside o conselho de administração do Bradesco e é um dos executivos do setor financeiro mais próximos do presidente, de acordo com a publicação.",
     "Em Bruxelas, o chefe de Estado francês, Emmanuel Macron, classificou como erro estratégico a proposta de corte no orçamento comunitário para a janela 2028-2034. Depois do encontro do Conselho da UE, na quinta-feira, 26, ele afirmou que não endossará um texto desequilibrado e listou como prioridade a preservação dos aportes à agricultura da França.",
     "A cesta de cortes para churrasco movimentou acima de R$ 10 bilhões em nove semanas nos dois últimos meses de 2025, segundo levantamento da Scantalk. O volume avançou mais de 8%, enquanto a receita cresceu 11%, com acréscimo superior a R$ 1 bilhão sobre 2024. Os números foram apresentados em evento da JBS com executivos e imprensa, que debateu tendê",
-    "Um grupo com mais de 100 entidades de diversos setores divulgou manifesto conjunto nesta quinta-feira (26) em defesa da independência das agências reguladoras federais e contra o avanço do Projeto de Lei 2.896/2022, que amplia o espaço para indicações de nomes políticos para as diretorias. A reação se dá após o texto ter regime de urgência aprovado"
+    "Um grupo com mais de 100 entidades de diversos setores divulgou manifesto conjunto nesta quinta-feira (26) em defesa da independência das agências reguladoras federais e contra o avanço do Projeto de Lei 2.896/2022, que amplia o espaço para indicações de nomes políticos para as diretorias. A reação se dá após o texto ter regime de urgência aprovado",
+    "A Dexco (DXCO3) captou R$ 200 milhões com a venda de ações preferenciais da Araucária Florestal. Um investidor institucional subscreveu 100% dos papéis novos da controlada indireta, que explora e comercializa ativos florestais e arrenda terras."
   ],
   "eventos_recentes": [
     {
@@ -2571,10 +2571,13 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795731892.751942
+    },
+    {
+      "chave": "dxco3::GERAL_ATIVO",
+      "ts": 1795732967.168425
     }
   ],
   "hashes_imagens": [
-    "d217a878152a7b16",
     "bf325cb87c9b5e94",
     "19b65bbb8e5a929e",
     "a98cbcecc5d3b5e0",
@@ -2873,6 +2876,7 @@
     "3f1869908053b91d",
     "7b249a858e50a315",
     "3c3fcde9b2d7d021",
-    "3ca1cda3cc1a3645"
+    "3ca1cda3cc1a3645",
+    "c82804bbf30e0a30"
   ]
 }
