@@ -1,10 +1,5 @@
 {
   "links": [
-    "b299058ce399ad2c",
-    "ab57a1984eb66562",
-    "274ddc3e995a4f4b",
-    "a60c1c0acde93719",
-    "a692487bf3501130",
     "https://www.spacemoney.com.br/investimentos/acoes/hbr-realty-opa-helbor-27-janeiro/",
     "dd3276cabe3dfa27",
     "https://www.infomoney.com.br/mercados/fim-da-escala-6x1-traz-alivio-para-educacionais-e-bbi-reitera-preferencia-por-yduqs/",
@@ -799,7 +794,12 @@
     "3a5f6975a4554360",
     "a02d27f038e43e25",
     "8b3460e8909b5a58",
-    "adc0652746cb651d"
+    "adc0652746cb651d",
+    "e9121f03ad5be394",
+    "6f6a53617c5f732c",
+    "7e926766799cf299",
+    "2a36ac181169da59",
+    "c60ba3b638a73303"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,10 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "braskem::GERAL_ATIVO",
-      "ts": 1795518851.615215
-    },
     {
       "chave": "raizen::GERAL_ATIVO",
       "ts": 1795519198.348225
