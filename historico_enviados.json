@@ -1,15 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/itau-itub4-calendario-provento/",
-    "9c4532d7922bd124",
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/apto11-renegocia-locacao-cri-gafisa/",
-    "019e71d933db0bbf",
-    "f952e2f33e0bd5d7",
-    "https://megawhat.uol.com.br/armazenamento/weg-habilita-sistema-de-baterias-para-leilao-de-reserva-de-capacidade/",
-    "97f9f96153a52601",
-    "https://telesintese.com.br/preco-das-memorias-dram-deve-subir-ate-22-em-2027-estima-abisemi/",
-    "626863e65bbf6f25",
-    "https://www.mobiletime.com.br/noticias/25/11/2026/anatel-nega-recurso-tim/",
     "24b193b09f7d5639",
     "https://www.suno.com.br/noticias/hlog11-fundo-imobiliario-renegocia-contratos-ocupacao/",
     "ed00cc81733fd726",
@@ -799,14 +789,19 @@
     "d2e505924faf399f",
     "a3a3cabf3c113ea8",
     "https://www.cnnbrasil.com.br/infra/recurso-publico-sera-essencial-para-novas-concessoes-diz-secretario/",
-    "8eed9ba092c20873"
+    "8eed9ba092c20873",
+    "https://www.spacemoney.com.br/economia/macroeconomia/pib-nova-york-economia-global/",
+    "b0bc20ffcfb6ac33",
+    "https://www.spacemoney.com.br/economia/exterior/ceia-acao-de-gracas-custo-cidades/",
+    "b634abc1cfbbd289",
+    "https://braziljournal.com/a-estrategia-anticlimatica-de-um-fundo-de-pensao",
+    "ca4d02fa2f348f7b",
+    "https://www.suno.com.br/noticias/ifix-alta-cacr11-fundos-imobiliarios-quinta/",
+    "c09c1d986b3c8073",
+    "https://agenciainfra.com/blog/camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169/?utm_source=rss&utm_medium=rss&utm_campaign=camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169",
+    "7c36014be600c826"
   ],
   "titulos": [
-    "Petróleo fecha em queda em meio à alta do dólar e recuperação da oferta",
-    "PETR3: Petrobras recolhe R$ 251,3 bilhões em tributos até setembro",
-    "Ministro da Fazenda defende equilíbrio entre políticas sociais e trajetória fiscal",
-    "Dólar à vista supera os R$ 5,85 e fecha na maior cotação em 19 meses",
-    "Um pouco mais devagar do que a rotação da Terra",
     "Vazamento de documentos expõe relações do Deutsche Bank com Epstein, Trump e oligarcas russos",
     "Ibovespa abre portas para Nubank (ROXO34) e JBS (JBSS32); veja o que muda",
     "Fiagros captam R$ 12,2 bi em outubro e têm melhor mês em cinco anos; mercado de capitais movimenta R$ 71,4 bi",
@@ -1601,14 +1596,14 @@
     "MME descarta risco de desabastecimento de etanol anidro na entressafra",
     "Pix terá novas regras de segurança e melhorias em 2027",
     "Ataque via Azure atingiu empresas de energia na Noruega",
-    "Recurso público será essencial para novas concessões, diz secretário"
+    "Recurso público será essencial para novas concessões, diz secretário",
+    "Nova York como potência econômica global",
+    "Ceia de Ação de Graças custa diferente em 50 cidades",
+    "A estratégia anticlimática de um fundo de pensão",
+    "IFIX fecha em alta de 1,07%, com CACR11 em destaque na B3",
+    "Câmara recebe proposta de regulamentação das consultas da OIT 169"
   ],
   "leads": [
-    "O financiamento de veículos elétricos e híbridos mais que dobrou no Brasil em 2026. De janeiro a outubro, foram financiadas 392.111 unidades, crescimento de 142,5% em relação às 161.700 registradas no mesmo período de 2025. Os dados são da Trillia, linha de negócios da B3 dedicada a Dados, Analytics e Inteligência Artificial. Com o avanço, os eletr",
-    "Nesta quarta, os prefixados recuaram mais alguns centésimos, e o vencimento de 2029 seguiu abaixo de 15%.",
-    "Segundo o g1, os Estados Unidos propuseram nesta quarta-feira (25) tarifas contra 14 grandes parceiros comerciais, com foco no que Washington classifica como excesso estrutural de capacidade na indústria. A China deve responder pela maior cobrança entre os alvos.",
-    "No caso das aeronaves, a proposta prevê encerrar a isenção que atualmente beneficia os aviões acabados brasileiros e aplicar uma tarifa adicional de 10% sobre as importações desses produtos. A medida pode afetar especialmente a Embraer, uma das principais fabricantes brasileiras do setor.",
-    "O Banco Central vendeu nesta manhã de quarta-feira o total de US$ 2 bilhões em dois leilões de linha (venda de dólares com compromisso de recompra) realizados simultaneamente.",
     "BRASÍLIA - O economista Márcio Garcia, professor titular do departamento de economia da PUC-Rio e PhD pela Universidade de Stanford, nos Estados Unidos, não enxerga senso de urgência no presidente Luiz Inácio Lula da Silva para tentar superar a crise de confiança que atinge o mercado sobre as contas públicas.",
     "Uma ofensiva regulatória da Anvisa sobre remédios manipulados para emagrecer com GLP-1 pode alterar a distribuição de um mercado bilionário no Brasil e favorecer as grandes redes farmacêuticas, conforme análise do Itaú BBA apurada pelo InfoMoney. A agência discute restrições ao papel das farmácias manipuladoras na fabricação e na distribuição da ti",
     "Autoridade monetária vendeu a moeda com compromisso de recompra para ampliar a oferta e dar liquidez ao mercado cambial",
@@ -1853,13 +1848,14 @@
     "O MME (Ministério de Minas e Energia) informou, nesta quinta-feira (26), que não identificou riscos de desabastecimento de etanol anidro durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta-feira (25), durante a sexta reunião de monitoramento do abastecimento de etanol da safra 2026/2027.",
     "O Pix terá novas funcionalidades e mecanismos de segurança em 2027.",
     "Cibercriminosos usaram uma brecha crítica no Azure API Management (Apim), da Microsoft, para obter credenciais e comandar sistemas de companhias norueguesas do setor elétrico, segundo o TecMundo. A Microsoft confirmou ter aplicado uma correção automática para interromper o acesso indevido, mas orienta os clientes a checarem se houve invasões antes ",
-    "O próximo ciclo de investimentos em infraestrutura no Brasil deve exigir maior participação de recursos públicos para garantir a viabilidade de concessões e PPPs (parcerias público-privadas), segundo avaliou o secretário especial do PPI (Programa de Parcerias de Investimentos), Marcus Cavalcanti."
+    "O próximo ciclo de investimentos em infraestrutura no Brasil deve exigir maior participação de recursos públicos para garantir a viabilidade de concessões e PPPs (parcerias público-privadas), segundo avaliou o secretário especial do PPI (Programa de Parcerias de Investimentos), Marcus Cavalcanti.",
+    "Segundo dados reunidos pelo Visual Capitalist com base no World Economic Outlook, do International Monetary Fund, e em pesquisas da New York City Economic Development Corporation, a região metropolitana de Nova York gerou cerca de US$ 2.600 bilhões em PIB nominal em 2025, o que a colocaria na oitava posição entre as maiores economias do mundo caso ",
+    "Em novembro de 2026, o custo de uma ceia de Ação de Graças para 8 a 10 pessoas nos Estados Unidos variava bastante conforme a cidade, segundo dados reunidos pelo Visual Capitalist a partir de um comunicado da BC.Game divulgado por RFD-TV e EURweb. O levantamento compara 50 cidades, uma por estado, e usa uma cesta padronizada que inclui um peru padr",
+    "“Vários estudos mostram que mexer muito na carteira prejudica o resultado de longo prazo,” Patrícia Queiroz, a diretora de investimentos da Real Grandeza, disse ao Brazil Journal. “Nossa estratégia é ter uma carteira diversificada, mas com a alocação estratégica mantida ao longo do tempo.”",
+    "O IFIX fechou o pregão desta quinta-feira (26) em alta de 1,07%, aos 3.578,98 pontos, impulsionado pelo salto de 13,01% das cotas do CACR11 (Cartesia Recebíveis Imobiliários) na B3, enquanto outros fundos imobiliários registraram movimentos distintos ao longo da sessão.",
+    "O deputado federal Júnior Ferrari (PSD-PA) protocolou nesta quarta-feira (25) o PL (Projeto de Lei) 5.964/2026, que regulamenta a realização de consultas a povos indígenas e tribais, previstas na Convenção 169 da OIT (Organização Internacional do Trabalho). A ausência de regras para as consultas está paralisando a execução de projetos de infraestru"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795557698.029009
-    },
     {
       "chave": "jbs::GERAL_ATIVO",
       "ts": 1795558425.730858
@@ -2567,14 +2563,17 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795727953.58384
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795730500.564404
+    },
+    {
+      "chave": "cacr11::GERAL_ATIVO",
+      "ts": 1795730500.564404
     }
   ],
   "hashes_imagens": [
-    "07d5061007488357",
-    "51c29cfd97cde694",
-    "1e5dd8ad6a294028",
-    "1c7a15b8a4f68e36",
-    "127fe074965288c0",
     "cb83aca0bc31b1a8",
     "8262f3142cde3f1d",
     "2c16e66efbe01a0c",
@@ -2869,6 +2868,11 @@
     "dbfdd0fe77b30f79",
     "fbe23082af89c11e",
     "b0c3ad71e547beac",
-    "5f2557349e87b53b"
+    "5f2557349e87b53b",
+    "890fae3a3000e547",
+    "13075f0749c3dfda",
+    "7ceeecd71fb64a3d",
+    "37806db1e7953c60",
+    "5901287fe359d212"
   ]
 }
