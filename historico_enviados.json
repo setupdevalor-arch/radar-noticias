@@ -1,9 +1,5 @@
 {
   "links": [
-    "606c8f43fa845967",
-    "https://agenciainfra.com/blog/inseguranca-aumenta-custos-da-infraestrutura-aponta-moveinfra/?utm_source=rss&utm_medium=rss&utm_campaign=inseguranca-aumenta-custos-da-infraestrutura-aponta-moveinfra",
-    "0330e9ac2b73ac74",
-    "https://www.infomoney.com.br/economia/vendas-de-novas-moradias-nos-eua-atingem-em-outubro-maior-nivel-em-10-meses/",
     "38a7a0fb1660079f",
     "d2c1c8438c7e49b7",
     "https://www.cnnbrasil.com.br/economia/money/tecnologia/por-dentro-do-conselho-da-nvidia-que-demitiu-e-recontratou-jensen-huang/",
@@ -799,10 +795,13 @@
     "https://www.moneytimes.com.br/petroleo-fecha-em-alta-em-meio-a-temor-com-oferta-diante-de-escalada-de-tensao-no-oriente-medio-davs/",
     "5c59986584fe7e59",
     "https://www.poder360.com.br/poder-congresso/nos-eua-flavio-indica-r-79-mi-em-emendas-para-2027/",
-    "a828fc140844efca"
+    "a828fc140844efca",
+    "fc6dd1100a7a38f9",
+    "84088f0e0cbaf571",
+    "https://www.cnnbrasil.com.br/agro/safra-de-arroz-da/",
+    "494f0766b306c9f3"
   ],
   "titulos": [
-    "A empresa que fez a Dinamarca mais que dobrar a previsão de crescimento do PIB",
     "Saúde: Planos de saúde ficam mistos e hospitais têm bons resultados no 3º tri",
     "Dólar na máxima em 20 meses coroa aversão ao risco e aprofunda divisão na bolsa",
     "TCU mantém Correios em lista de estatais da administração federal com riscos fiscais",
@@ -1601,10 +1600,10 @@
     "Mecanismo aprovado pelo TCU deve destravar bilhões em financiamento de infraestrutura",
     "Cotado para a Fazenda, Trabuco se reúne com Lula no Alvorada",
     "Petróleo fecha em alta em meio a escalada das tensões no Oriente Médio",
-    "Nos EUA, Flávio indica R$ 79 mi em emendas para 2027"
+    "Nos EUA, Flávio indica R$ 79 mi em emendas para 2027",
+    "Produção de arroz na Índia deve cair pela primeira vez em dez anos"
   ],
   "leads": [
-    "O presidente Donald Trump se reunirá com o secretário-geral da OTAN (Organização do Tratado do Atlântico Norte), Mark Rutte, nesta quarta-feira (25) à tarde, em seu resort de Mar-a-Lago, em Palm Beach, na Flórida. Os dois líderes devem discutir investimentos em defesa e os esforços para encerrar a guerra na Ucrânia.",
     "Em entrevista ao WW, o ex-secretário de Comércio Exterior do Brasil, Welber Barral, avaliou que as tarifas impostas pelos Estados Unidos para outros países também criam desvantagens competitivas para os produtos brasileiros no mercado norte-americano.",
     "Segundo a Agência Brasil, a Comissão de Constituição e Justiça do Senado aprovou, em sessão nesta quarta-feira (25), um projeto que tipifica a fraude contábil. A proposta, protocolada em 2023, é da senadora Augusta Brito (PT-CE) e surgiu no escândalo das Lojas Americanas, com fraudes estimadas em R$ 54 bilhões pela Polícia Federal.",
     "O governo dos Estados Unidos marcou, para janeiro de 2027, uma audiência para debater a proposta de mudanças tarifárias ao Brasil.",
@@ -1853,13 +1852,10 @@
     "A decisão do Tribunal de Contas da União (TCU) de autorizar o uso de contas vinculadas em contratos de infraestrutura pode se tornar um dos marcos mais importantes da política de concessões da atual gestão.",
     "Nome do presidente do Conselho de Administração do Bradesco ganhou força para chefiar a equipe econômica",
     "O petróleo fechou em alta pelo terceiro pregão consecutivo nesta quinta-feira (26), à medida que a escalada das tensões no Oriente Médio amplia os temores de interrupções na oferta da commodity. A liquidez reduzida pelo feriado de Ação de Graças nos Estados Unidos também pode intensificar os movimentos dos preços.",
-    "Logo depois de perder as eleições presidenciais, senador deixou o país contra ordem do STF"
+    "Logo depois de perder as eleições presidenciais, senador deixou o país contra ordem do STF",
+    "A produção de arroz da Índia deve cair 2,3% na safra de verão 2026/27, para 121,91 milhões de toneladas, afirmou nesta quinta-feira o ministro da Agricultura, Shivraj Singh Chouhan, colocando a colheita de arroz do país a caminho de sua primeira queda em uma década."
   ],
   "eventos_recentes": [
-    {
-      "chave": "fiis_geral::FIIS_GERAL",
-      "ts": 1795555218.205199
-    },
     {
       "chave": "vale::PROVENTOS",
       "ts": 1795555573.034678
@@ -2582,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "f0da3489e702c1e5",
     "353c7e0d9feed373",
     "4f944c646a494e51",
     "a1e912a2b75c7396",
@@ -2881,6 +2876,7 @@
     "ae10fb7dc1e54e97",
     "c10183e000fb1475",
     "6b8ee7577eadb357",
-    "be69faf2221d8422"
+    "be69faf2221d8422",
+    "fb7409cebbb0b920"
   ]
 }
