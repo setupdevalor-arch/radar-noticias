@@ -1,9 +1,5 @@
 {
   "links": [
-    "6f9643553c77dd02",
-    "https://www.infomoney.com.br/economia/china-diz-que-excesso-de-capacidade-nao-existe-em-resposta-a-plano-tarifario-dos-eua/",
-    "ecdc02ba7b46fd9f",
-    "https://neofeed.com.br/negocios/nao-vou-pagar-essa-conta-diz-ceo-da-allos-sobre-o-fim-da-escala-6x1/",
     "925f688feb2e2c50",
     "0b3bf9ae312c4974",
     "15f1b3cb3a8eb8d1",
@@ -799,10 +795,13 @@
     "0b320e98e8912023",
     "f30d54cf4c109c5f",
     "https://investnews.com.br/economia/lula-sonda-trabuco-bradesco-para-governo/",
-    "4e02d973956f09e9"
+    "4e02d973956f09e9",
+    "673ed6146ffa8cd0",
+    "cf2b54ebfad23f5f",
+    "https://www.infomoney.com.br/mercados/usiminas-usim5-bba-ve-4t-mais-dificil-mas-companhia-mantem-plano-de-investimentos/",
+    "331c79557e7cd6bb"
   ],
   "titulos": [
-    "CCJ do Senado aprova projeto que endurece punições para fraudes financeiras",
     "Trabalhador branco pode ganhar cerca de 70% a mais que o negro no Brasil, aponta IBGE",
     "Banco Mundial estuda uso de stablecoins para modernizar pagamentos",
     "Um ano depois, fraude do Banco Master deixou prejuízo de R$ 76 bilhões",
@@ -1601,10 +1600,10 @@
     "Por que o mercado se anima tanto com a possibilidade de Trabuco na Fazenda?",
     "Quem domina os US$ 15 trilhões da indústria de chips",
     "Macron diz que carne brasileira é 'dopada' e comemora bloqueio da UE ao produto",
-    "Por que a possível nomeação de Luiz Carlos Trabuco para a Fazenda é tão bem vista no mercado"
+    "Por que a possível nomeação de Luiz Carlos Trabuco para a Fazenda é tão bem vista no mercado",
+    "Usiminas (USIM5): BBA vê 4T mais difícil, mas companhia mantém plano de investimentos"
   ],
   "leads": [
-    "O governo Trump deixou discretamente de lado propostas de utilizar acordos comerciais como incentivo para que a Rússia encerre a guerra na Ucrânia, depois que Moscou demonstrou pouco interesse nos projetos sugeridos para os setores de energia e aviação, informou o jornal Financial Times nesta quarta-feira (25).",
     "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As",
     "Os credores que compram dívida corporativa estão mais seletivos, e as grandes empresas de tecnologia podem ter dificuldade crescente para financiar a expansão da inteligência artificial nos mercados de crédito, segundo reportagem da CNBC. A emissora americana aponta que os investidores passaram a cobrar evidências de que os gastos bilionários com I",
     "Pelo menos 107 bancários do Itaú ainda aguardam definição, segundo sindicato",
@@ -1853,7 +1852,8 @@
     "Bastou ganhar força a informação de que o presidente Luiz Inácio Lula da Silva sondou Luiz Carlos Trabuco para o Ministério da Fazenda para os mercados brasileiros dispararem. Em apenas dois pregões, o movimento foi expressivo: na quarta-feira (25) o Ibovespa avançou 1,58% e o dólar caiu 1,53%, para R$ 5,81. Nesta quinta-feira (26), com o noticiári",
     "O mercado de semicondutores movimenta mais de US$ 15 trilhões em valor de mercado combinado, mas a distribuição desse montante revela uma indústria muito mais hierarquizada do que a variedade de produtos sugere. Segundo dados referentes a novembro de 2026 reunidos pelo Visual Capitalist a partir da plataforma CompaniesMarketCap, poucas companhias c",
     "O presidente da França, Emmanuel Macron, chamou a carne brasileira de \"dopada\" e comemorou a suspensão das importações de produtos de origem animal do Brasil pela União Europeia, que está em vigor desde 3 de setembro.",
-    "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo."
+    "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo.",
+    "O Itaú BBA avalia que a Usiminas (USIM5) deve enfrentar um quarto trimestre mais desafiador, com a alta dos custos de produção pressionando os resultados antes que os reajustes de preços sejam integralmente repassados. Apesar do cenário adverso, a companhia não pretende rever seu plano de investimentos, segundo comentários da administração durante "
   ],
   "eventos_recentes": [
     {
@@ -2551,10 +2551,13 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795708503.364068
+    },
+    {
+      "chave": "usiminas::GERAL_ATIVO",
+      "ts": 1795709896.333422
     }
   ],
   "hashes_imagens": [
-    "2b2a7cf78aae5c69",
     "ebdd57b0dc6e4eee",
     "17286e74fb4f4f14",
     "a1569b6f2cffbffa",
@@ -2853,6 +2856,7 @@
     "afb36018a046c473",
     "bb5068a61ad82cfc",
     "94029bba884cb46d",
-    "3a26472d4d2e22f4"
+    "3a26472d4d2e22f4",
+    "159db2ab90a0bfb5"
   ]
 }
