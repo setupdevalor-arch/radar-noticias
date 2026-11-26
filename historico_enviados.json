@@ -1,9 +1,5 @@
 {
   "links": [
-    "84764e467b4fabec",
-    "https://www.spacemoney.com.br/economia/indicadores-economicos/dow-futuro-pce-tarifas-eua/",
-    "8775bc8acce8995c",
-    "6319f4b3e3fc8417",
     "a7b1e9847f8f46d8",
     "2a54e36f9cc7ff10",
     "https://braziljournal.com/e-possivel-reverter-rapidamente-esse-pessimismo-diz-gestor-da-ashmore",
@@ -799,10 +795,13 @@
     "baa3dc11df445dd9",
     "9f43eda07e2d884a",
     "b173cb26cbaae858",
-    "c4afd85ad36646ba"
+    "c4afd85ad36646ba",
+    "7085a0b7cad17f54",
+    "0b3631bb6ccf9797",
+    "https://www.estadao.com.br/economia/brasileiros-vida-sem-bets-presidente-abras/",
+    "b729de7ef7358be2"
   ],
   "titulos": [
-    "Risco de derrota no ajuste fiscal mostra que Lula terá de ceder mais espaço ao Centrão e partidos da Frente Ampla",
     "A WeWork valia US$ 47 bilhões e devia outros 47 em aluguel: o que a queda ensina sobre valuation",
     "Monitor do PIB medido pela FGV aponta queda de 0,2% no 3º trimestre ante 2º trimestre",
     "Maioria dos trabalhadores não está engajada; veja motivos e quais jornadas têm piores índices",
@@ -1601,10 +1600,10 @@
     "Déficit de armazéns em MT deve crescer 53% até 2035/36",
     "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos",
     "Chips superam petróleo pela 1ª vez nas exportações globais",
-    "Acordo assegura nomeação de Pablo Hernández de Cos como futuro presidente do BCE"
+    "Acordo assegura nomeação de Pablo Hernández de Cos como futuro presidente do BCE",
+    "Brasileiros estão se dando conta de que existe vida sem bets, diz presidente da Abras"
   ],
   "leads": [
-    "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
     "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
     "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo.",
     "Segundo o g1, economistas apontam que a troca do sistema de tributos sobre o consumo e o encerramento do regime 6×1 podem tornar a inflação brasileira mais desafiadora no começo de 2027. A primeira mudança deve mexer com os preços de alguns itens, sobretudo serviços; a segunda tende a encarecer a folha de parte das empresas e pode ser repassada ao ",
@@ -1853,7 +1852,8 @@
     "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década.",
     "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos.",
     "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre.",
-    "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida."
+    "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida.",
+    "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan"
   ],
   "eventos_recentes": [
     {
@@ -2558,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "ac03f63bd592d33e",
     "8b317a287717e568",
     "67acd07f6e9653d5",
     "9244c57d21832f05",
@@ -2857,6 +2856,7 @@
     "e67a7dc18de6cbd9",
     "f7d4a325050bf2d0",
     "3a3771d0f1d73a76",
-    "2885a1b954f7caff"
+    "2885a1b954f7caff",
+    "7b7d34222f5b4610"
   ]
 }
