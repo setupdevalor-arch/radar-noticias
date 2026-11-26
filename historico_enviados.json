@@ -1,6 +1,5 @@
 {
   "links": [
-    "b6c98fbb7db18922",
     "https://g1.globo.com/economia/noticia/2026/11/24/fim-da-escala-6-por-1-ministro-recomenda-que-setor-da-economia-feche-acordo-coletivo-ate-dia-16-se-quiser-escala-diferente.ghtml",
     "2f5a9fcf0518932d",
     "50b1bad2d000fa18",
@@ -799,7 +798,8 @@
     "8a2015e1bb65aa25",
     "7d9a99679939f0f9",
     "3610f9a109404d3f",
-    "0248599be1a473aa"
+    "0248599be1a473aa",
+    "c8928a9418042a57"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,14 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795507342.313254
-    },
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795507342.313254
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795508062.906368
