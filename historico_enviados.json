@@ -1,8 +1,5 @@
 {
   "links": [
-    "97394d56b6000048",
-    "458fa93fafa6f5b8",
-    "https://eixos.com.br/petroleo-e-gas/governo-preve-arrecadar-r-175-bi-com-petroleo-e-mais-r-12-bi-para-subsidios-a-combustiveis/",
     "8d0a06cd734a707a",
     "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/lojistas-enfrentam-ameaca-de-ataques-com-ia-as-vesperas-da-black-friday/",
     "d3615a01d71ea391",
@@ -799,10 +796,12 @@
     "https://investnews.com.br/negocios/relacao-subordinada-custa-cargo-ceos-menos-jensen-huang/",
     "2ab80f5f1e7d430d",
     "https://www.infomoney.com.br/mercados/ibovespa-180-mil-pontos-traders-fluxo-estrangeiro/",
-    "d7ec1be88778eff3"
+    "d7ec1be88778eff3",
+    "8890af4eda09b142",
+    "https://bmcnews.com.br/economia/cmo-aprova-relatorio-do-orcamento-de-2027-com-corte-de-r-209-bilhoes/",
+    "2e155ed4ca977063"
   ],
   "titulos": [
-    "Por que o real caiu mais que outras moedas? Commodities explicam só parte",
     "Sony resgata fone do Walkman com USB-C na onda retrô da geração Z",
     "IPO da Anthropic: veja como investir na criadora do Claude por meio de BDRs no Brasil",
     "'A Anthropic não é uma empresa de IA segura': a carta contra a dona do Claude na véspera do IPO",
@@ -1601,7 +1600,8 @@
     "Veja no Boletim TELETIME: TCU vs. 850 MHz; Postes; e Internet aberta",
     "Fust abre credenciamento de agentes para financiamentos e garantias em telecom",
     "Relação com subordinada custa o cargo de CEOs. Menos o de Jensen Huang",
-    "Repique ou reversão? Com gringos na compra, traders veem Ibovespa aos 180 mil pontos"
+    "Repique ou reversão? Com gringos na compra, traders veem Ibovespa aos 180 mil pontos",
+    "CMO aprova relatório do Orçamento de 2027 com corte de R$ 2,09 bilhões"
   ],
   "leads": [
     "Com base nas regras atuais, os papéis da JBS, Nubank, XP e Inter já estariam aptos a fazer parte da carteira do índice",
@@ -1856,10 +1856,6 @@
     "O Ibovespa voltou a ganhar fôlego nesta quinta-feira (26), após semanas de forte pressão vendedora. Às 17h03, o principal índice da Bolsa brasileira subia 4,29%, aos 173.831 pontos, depois de alcançar a máxima de 174.332 pontos."
   ],
   "eventos_recentes": [
-    {
-      "chave": "localiza::GERAL_ATIVO",
-      "ts": 1795551473.442766
-    },
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795552194.431046
@@ -2586,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "0c85553693d6e314",
     "c622ce995e697716",
     "f3352579da7abf5d",
     "7cbf96906e83131b",
@@ -2885,6 +2880,7 @@
     "fa708b433b1112ee",
     "db38361aeba6e517",
     "e80e35fc06727f5b",
-    "f5fc2fd71373b9ae"
+    "f5fc2fd71373b9ae",
+    "8e0ba42020ee0c10"
   ]
 }
