@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.suno.com.br/noticias/mcre11-consulta-cotistas-sobre-recompra-cotas/",
-    "d9b0f2d4e195f67a",
-    "0648fdf638eb5f25",
-    "https://investnews.com.br/negocios/black-friday-dona-oster-alem-do-desconto/",
-    "80418e99c01759a1",
-    "https://www.cnnbrasil.com.br/internacional/trump-discutira-ucrania-e-investimentos-em-defesa-com-chefe-da-otan/",
-    "8f509a69209cc375",
     "https://www.cnnbrasil.com.br/economia/tarifas-dos-eua-criam-desvantagens-para-produtos-do-brasil-diz-barral/",
     "e67e4cf5b06af327",
     "https://www.spacemoney.com.br/politica/senado-aprova-projeto-fraude-contabil/",
@@ -799,10 +792,16 @@
     "https://investnews.com.br/negocios/stellantis-fabricas-europa-chinesas/",
     "930672311e0051bf",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/tvri11-vende-imovel-ganho-por-cota/",
-    "2f1004cc14811666"
+    "2f1004cc14811666",
+    "5d864e348fa82b4b",
+    "6d46be3de81e58d8",
+    "ea245e57a057bf9b",
+    "680cc8422b3fa8c7",
+    "ce36ea1c6b67ab84",
+    "https://www.suno.com.br/noticias/rbrr11-custo-medio-imposto-de-renda-liquidacao/",
+    "095be2a6c6a03d9f"
   ],
   "titulos": [
-    "Nome de Alckmin para Fazenda é elogiado por economistas e analistas em evento",
     "Memecoins de GTA 6 sobem até 21.000% com o lançamento do jogo",
     "GTA 6: memecoin inspirada no jogo rende lucro de 66.000% a investidor",
     "Arthur Hayes prevê forte valorização para o Bitcoin e outras quatro criptomoedas",
@@ -1601,10 +1600,10 @@
     "ExxonMobil arremata 1 milhão de barris de óleo no 11º Leilão Spot da União",
     "Com apoio do BNDES, Bradesco lança ETF de ações brasileiras essenciais para economia",
     "Stellantis vai parar mais fábricas na Europa sob pressão de rivais chinesas",
-    "TVRI11 vende imóvel e estima ganho de R$ 0,234 por cota"
+    "TVRI11 vende imóvel e estima ganho de R$ 0,234 por cota",
+    "RBRR11: entenda o prazo para declarar custo médio e evitar mais IR"
   ],
   "leads": [
-    "– O governo ‌brasileiro ampliou na terça-feira sua projeção ‌para o déficit primário deste ano para R$ 89,3 bilhões, ante ‌R$ 80,9 bilhões projetados em setembro.",
     "A corrida das empresas pela inteligência artificial está produzindo um efeito colateral: o crescimento de vazamentos de informações sensíveis das companhias. O uso de ferramentas de IA sem autorização das companhias, fenômeno conhecido como Shadow AI, esteve presente em 43% dos incidentes analisados no relatório Cost of a Data Breach 2026, da IBM, ",
     "– As tarifas e as guerras comerciais não atendem aos interesses de ninguém, e a questão do chamado “excesso de capacidade” não existe de fato, afirmou o Ministério das Relações Exteriores da China nesta quarta-feira, antes do anúncio previsto de novas tarifas comerciais pelos Estados Unidos.",
     "A menos de um mês do início do período de transição do fim da escala 6x1, a Allos, maior administradora de shopping centers do Brasil, já faz as contas para entender o impacto da nova jornada de trabalho.",
@@ -1853,7 +1852,8 @@
     "A ExxonMobil arrematou duas cargas de 500 mil barris de petróleo cada, do campo de Búzios, no 11º Leilão Spot de Petróleo da União, realizado pela PPSA (Pré-Sal Petróleo S.A.) na quarta-feira (25). As cargas têm previsão de carregamento para o início de janeiro de 2027.",
     "O BDEV11 foi escolhido em um edital para estimular os fundos negociados em bolsa locais",
     "O CEO Antonio Filosa está sob pressão crescente para mostrar que os esforços da Stellantis para lançar novos produtos e resolver problemas de qualidade começam a dar resultado. Como parte de seu plano, o executivo busca cortar custos enquanto lida com despesas maiores com matérias-primas e chips.",
-    "A Suno Notícias informou nesta quinta-feira (26) que o TVRI11 (Tivio Renda Imobiliária) acertou a venda da Agência Vila Carrão, na Avenida Conselheiro Carrão, 2.411, em São Paulo, por R$ 14 milhões. O ativo está locado e tem área bruta locável de 2.483 m². Segundo o fato relevante, o negócio pode gerar ganho de aproximadamente R$ 3,99 milhões, ou R"
+    "A Suno Notícias informou nesta quinta-feira (26) que o TVRI11 (Tivio Renda Imobiliária) acertou a venda da Agência Vila Carrão, na Avenida Conselheiro Carrão, 2.411, em São Paulo, por R$ 14 milhões. O ativo está locado e tem área bruta locável de 2.483 m². Segundo o fato relevante, o negócio pode gerar ganho de aproximadamente R$ 3,99 milhões, ou R",
+    "Cotistas do RBRR11 (Pátria Rendimento High Grade) têm até a próxima segunda-feira (30) para informar à gestora o custo médio de aquisição das cotas, evitando pagar mais Imposto de Renda na liquidação do fundo. A medida ocorre após a venda de todos os ativos do FII ao PCIP11 (Pátria Crédito Imobiliário IPCA), concluída no início de novembro, que mar"
   ],
   "eventos_recentes": [
     {
@@ -2579,10 +2579,13 @@
     {
       "chave": "tvri11::GERAL_ATIVO",
       "ts": 1795720390.737303
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795720755.062291
     }
   ],
   "hashes_imagens": [
-    "8ba010958694cdc4",
     "ba0e89e0d06ca222",
     "a2f1db261e18ac8f",
     "bef2aeefd45f2824",
@@ -2881,6 +2884,7 @@
     "2e0bd16451f31d29",
     "0922a1247bf96152",
     "f1f9a109c64d946e",
-    "8ff10dd2b7342f23"
+    "8ff10dd2b7342f23",
+    "3cbf85f093d45d80"
   ]
 }
