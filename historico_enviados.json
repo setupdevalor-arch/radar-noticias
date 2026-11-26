@@ -1,10 +1,5 @@
 {
   "links": [
-    "8f741f55ef318b2c",
-    "https://www.spacemoney.com.br/tecnologia/apple-samsung-xiaomi-metas-celulares-2027/",
-    "45c15a1a880de4e6",
-    "https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/indices/indice-de-letras-financeiras-lidera-valorizacao-da-renda-fixa-na-b3-em-outubro/",
-    "d9fa1b5581d4b4dc",
     "https://www.spacemoney.com.br/investimentos/itau-itub4-calendario-provento/",
     "9c4532d7922bd124",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/apto11-renegocia-locacao-cri-gafisa/",
@@ -799,10 +794,14 @@
     "73f8b81d290ca77c",
     "e89d2cbfde4b14e9",
     "https://www.spacemoney.com.br/tecnologia/falha-azure-energia-noruega/",
-    "954390db7e16d165"
+    "954390db7e16d165",
+    "f280ae4e7cefaf75",
+    "d2e505924faf399f",
+    "a3a3cabf3c113ea8",
+    "https://www.cnnbrasil.com.br/infra/recurso-publico-sera-essencial-para-novas-concessoes-diz-secretario/",
+    "8eed9ba092c20873"
   ],
   "titulos": [
-    "Senado aprova projeto de ajuste fiscal do governo, com mudanças acatadas pelo relator",
     "Petróleo fecha em queda em meio à alta do dólar e recuperação da oferta",
     "PETR3: Petrobras recolhe R$ 251,3 bilhões em tributos até setembro",
     "Ministro da Fazenda defende equilíbrio entre políticas sociais e trajetória fiscal",
@@ -1601,10 +1600,10 @@
     "TI do Mapa chega aos 50 anos com digitalização no agro",
     "MME descarta risco de desabastecimento de etanol anidro na entressafra",
     "Pix terá novas regras de segurança e melhorias em 2027",
-    "Ataque via Azure atingiu empresas de energia na Noruega"
+    "Ataque via Azure atingiu empresas de energia na Noruega",
+    "Recurso público será essencial para novas concessões, diz secretário"
   ],
   "leads": [
-    "O governo dos Estados Unidos anunciou nesta quarta-feira (25) uma proposta de elevação das tarifas de importação de açúcar bruto e refinado como parte da estratégia para ampliar a pressão sobre o Brasil nas negociações comerciais entre os dois países.",
     "O financiamento de veículos elétricos e híbridos mais que dobrou no Brasil em 2026. De janeiro a outubro, foram financiadas 392.111 unidades, crescimento de 142,5% em relação às 161.700 registradas no mesmo período de 2025. Os dados são da Trillia, linha de negócios da B3 dedicada a Dados, Analytics e Inteligência Artificial. Com o avanço, os eletr",
     "Nesta quarta, os prefixados recuaram mais alguns centésimos, e o vencimento de 2029 seguiu abaixo de 15%.",
     "Segundo o g1, os Estados Unidos propuseram nesta quarta-feira (25) tarifas contra 14 grandes parceiros comerciais, com foco no que Washington classifica como excesso estrutural de capacidade na indústria. A China deve responder pela maior cobrança entre os alvos.",
@@ -1853,7 +1852,8 @@
     "A Subsecretaria de Tecnologia da Informação (STI) do Ministério da Agricultura e Pecuária (Mapa) chegou aos 50 anos nesta quinta (26), em evento na sede da pasta. A estrutura vigente foi definida em 2023 pelo Decreto nº 11.332, que converteu o antigo Departamento de Tecnologia da Informação (DTI) na subsecretaria. Hoje, a STI concentra a governança",
     "O MME (Ministério de Minas e Energia) informou, nesta quinta-feira (26), que não identificou riscos de desabastecimento de etanol anidro durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta-feira (25), durante a sexta reunião de monitoramento do abastecimento de etanol da safra 2026/2027.",
     "O Pix terá novas funcionalidades e mecanismos de segurança em 2027.",
-    "Cibercriminosos usaram uma brecha crítica no Azure API Management (Apim), da Microsoft, para obter credenciais e comandar sistemas de companhias norueguesas do setor elétrico, segundo o TecMundo. A Microsoft confirmou ter aplicado uma correção automática para interromper o acesso indevido, mas orienta os clientes a checarem se houve invasões antes "
+    "Cibercriminosos usaram uma brecha crítica no Azure API Management (Apim), da Microsoft, para obter credenciais e comandar sistemas de companhias norueguesas do setor elétrico, segundo o TecMundo. A Microsoft confirmou ter aplicado uma correção automática para interromper o acesso indevido, mas orienta os clientes a checarem se houve invasões antes ",
+    "O próximo ciclo de investimentos em infraestrutura no Brasil deve exigir maior participação de recursos públicos para garantir a viabilidade de concessões e PPPs (parcerias público-privadas), segundo avaliou o secretário especial do PPI (Programa de Parcerias de Investimentos), Marcus Cavalcanti."
   ],
   "eventos_recentes": [
     {
@@ -2570,7 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "c590c98a0366364c",
     "07d5061007488357",
     "51c29cfd97cde694",
     "1e5dd8ad6a294028",
@@ -2869,6 +2868,7 @@
     "fde1015787372f9e",
     "dbfdd0fe77b30f79",
     "fbe23082af89c11e",
-    "b0c3ad71e547beac"
+    "b0c3ad71e547beac",
+    "5f2557349e87b53b"
   ]
 }
