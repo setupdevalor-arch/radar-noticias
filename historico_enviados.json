@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://braziljournal.com/a-cop31-fracassou-e-isso-e-uma-otima-noticia-diz-este-dinamarques",
-    "9fbbba0c83b093f1",
     "https://telesintese.com.br/ia-pode-responder-por-35-do-trafego-das-redes-em-2030/",
     "7030d67891f68bab",
     "https://www.spacemoney.com.br/investimentos/acoes/petrobras-compra-neomille-etanol-de-milho/",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/tecnologia/ray-ban-meta-acao-holanda-privacidade/",
     "07dd9d8cdac7bed9",
     "https://www.poder360.com.br/poder-justica/toffoli-mantem-protecao-do-rj-contra-sancoes-por-divida-com-a-uniao/",
-    "53ec676bd414a0f9"
+    "53ec676bd414a0f9",
+    "https://www.sonhoseguro.com.br/2026/11/santander-integra-seguros-a-todas-as-jornadas-do-banco-para-ampliar-base-de-segurados/",
+    "4777ba8f9ef47a32"
   ],
   "titulos": [
-    "O que faz a diferença: investidores repercutem ajuste fiscal, estreia da Anthopic e encontro Xi-Trump-Putin",
     "Copel vê oportunidade para crescer em geração",
     "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
     "São Paulo negocia naming rights do Morumbi com o Bradesco",
@@ -1601,10 +1600,10 @@
     "Black Friday em meio a celulares mais caros",
     "Google insere patrocínio em conteúdo de IA no Brasil",
     "Tribunal holandês avalia suspender venda dos Ray-Ban Meta",
-    "Toffoli mantém proteção do RJ contra sanções por dívida com a União"
+    "Toffoli mantém proteção do RJ contra sanções por dívida com a União",
+    "Santander integra seguros a todas as jornadas do banco para ampliar base de segurados"
   ],
   "leads": [
-    "A Comissão Europeia espera que quaisquer medidas impostas pelos Estados Unidos respeitem o teto tarifário de 15% para as importações de mercadorias da UE, afirmou um porta-voz da Comissão nesta quarta-feira (25), após a proposta do governo do presidente norte-americano, Donald Trump, de novas tarifas sob a Seção 301 da legislação comercial dos EUA.",
     "Os dados de inflação e de atividade dos Estados Unidos divulgados nesta quarta-feira (25) levaram o mercado a reforçar a aposta em juros altos por mais tempo no país. O PCE, indicador de preços acompanhado pelo Federal Reserve, subiu 3,8% em 12 meses, acima do esperado. Na margem mensal, o avanço foi de 0,3%, em linha com as projeções. O núcleo do ",
     "A Embraer afirmou que está analisando o relatório publicado nesta quarta-feira, 25, pelo governo dos Estados Unidos sobre a investigação aberta contra o Brasil com base na Seção 301. O documento indica que os americanos consideram aplicar uma nova tarifa de 10% sobre a importação de aeronaves acabadas vindas do Brasil.",
     "O avanço do crime organizado no Brasil está tornando a operação dos serviços concedidos nas áreas de transporte mais cara e insegura, aumentando os custos para os usuários e impactando o resultado das empresas.",
@@ -1853,13 +1852,10 @@
     "O TecMundo informa que a Black Friday de 2026 ocorre em um cenário de custos elevados para celulares, mas Samsung e Motorola ainda tratam a data como uma janela comercial importante. A pressão vem principalmente da escassez de memórias usadas por data centers de inteligência artificial, que encareceu componentes e chegou ao preço final.",
     "O Google iniciou a inserção de patrocínio em respostas criadas por IA no Brasil. A liberação, inicialmente restrita a uma fatia pequena de usuários, alcança o Modo IA e as Visões gerais. No primeiro, o anúncio surge no encerramento da resposta; na busca convencional, aparece depois que o resumo é expandido.",
     "Duas entidades holandesas de defesa do consumidor e dos direitos digitais acionaram judicialmente a Meta e a EssilorLuxottica para tentar impedir a venda dos óculos Ray-Ban Meta no país. A Consumentenbond e a Offlimits alegam que os dispositivos facilitam registros de pessoas sem consentimento e pedem a suspensão comercial até que sejam adotadas sa",
-    "Decisão estende até 31 de março de 2027 a suspensão de sanções e da cobrança de garantias ligadas a empréstimos federais do RJ"
+    "Decisão estende até 31 de março de 2027 a suspensão de sanções e da cobrança de garantias ligadas a empréstimos federais do RJ",
+    "A compra de um ingresso para um show, a contratação de um serviço de limpeza de ar-condicionado, a aquisição de um imóvel ou de um automóvel e a necessidade de proteger financeiramente uma família são algumas das oportunidades identificadas pelo Santander para ampliar sua base de segurados. Quando a inteligência artificial detecta um pagamento pela"
   ],
   "eventos_recentes": [
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795560958.256648
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795561306.969999
@@ -2579,10 +2575,13 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795733718.281372
+    },
+    {
+      "chave": "santander::EVENTO_CORP",
+      "ts": 1795734071.256146
     }
   ],
   "hashes_imagens": [
-    "2e85951eeb057abc",
     "bee328d6db4d40fb",
     "6b29610d3d131f96",
     "795c52fe936b93d3",
@@ -2881,6 +2880,7 @@
     "aa5c998efb3e6f98",
     "fd67e4d4d1c02ffa",
     "7cc25e4db81aba97",
-    "b5bc0390f8a6678a"
+    "b5bc0390f8a6678a",
+    "d6f1f42bee179883"
   ]
 }
