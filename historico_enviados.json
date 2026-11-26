@@ -1,11 +1,5 @@
 {
   "links": [
-    "c1272cb18c3f47da",
-    "https://www.spacemoney.com.br/economia/exterior/tempestade-thanksgiving-viagens-eua/",
-    "66fa3439041bbaec",
-    "50a30ea6be577904",
-    "https://www.cnnbrasil.com.br/politica/fux-nega-prorrogacao-de-contrato-entre-brb-e-tj-ba-sobre-precatorios/",
-    "9c36fc10735765c4",
     "d74a09219d12a99f",
     "84d3a726439e0c25",
     "29b1424aa1289fac",
@@ -799,10 +793,15 @@
     "10f4aec6d59080d6",
     "1536c5620228a4c7",
     "https://www.poder360.com.br/poder-congresso/trabuco-pode-nao-ser-a-melhor-opcao-para-a-fazenda-diz-uczai/",
-    "8678d197c9db02ba"
+    "8678d197c9db02ba",
+    "2ef32c6315a65d9c",
+    "8b515dcb8d271521",
+    "81616d87e9a00ec1",
+    "c49cb3053a8d0497",
+    "https://megawhat.uol.com.br/economia-e-politica/receita-com-descomissionamento-aumenta-dez-vezes-no-porto-do-acu/",
+    "3f3ba90b44adc222"
   ],
   "titulos": [
-    "Bolsas da Europa caem com pressão de mineradoras, techs buscando fôlego e olho no Fed",
     "Idoso de 89 anos perde R$ 17 mil em golpe após criminoso trocar cartões",
     "Sheinbaum diz que reunião com Trump foi ‘muito boa’ e negociações estão avançadas",
     "Deterioração no crédito afeta grandes bancos no 3º tri; BB tem pior resultado",
@@ -1601,10 +1600,10 @@
     "CAIXA Seguridade divulga resultados do 3º trimestre com destaque para lucro e dividendos, impulsionados pelas atividades das joint ventures",
     "Incerteza sobre espectro limita ambição de investimentos, diz Ericsson",
     "Após rali da IA, Mirabaud pisa no freio e faz alerta: “quem não agir, vai ficar para trás”",
-    "Trabuco “pode não ser a melhor opção” para a Fazenda, diz Uczai"
+    "Trabuco “pode não ser a melhor opção” para a Fazenda, diz Uczai",
+    "Receita com descomissionamento aumenta dez vezes no Porto do Açu"
   ],
   "leads": [
-    "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial.",
     "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi",
     "As bolsas asiáticas fecharam em baixa nesta quarta-feira (25), com a perda de força do alívio provocado pela volta de Jensen Huang ao comando da Nvidia e o aumento das dúvidas sobre as perspectivas para a inteligência artificial (IA). O temor de novas tarifas também voltou ao radar, após notícias de que os Estados Unidos poderiam elevar as alíquota",
     "O IBIT, maior ETF de bitcoin do mercado, da gestora BlackRock, respondeu sozinho por US$ 4,17 bilhões em saídas neste mês, também o pior resultado desde seu lançamento.",
@@ -1853,13 +1852,10 @@
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
     "A incerteza sobre a disponibilidade de radiofrequências e o calendário de investimentos das operadoras de telecomunicações afeta o planejamento industrial da Ericsson no Brasil. A fabricante de equipamentos de redes móveis considera que a ausência de previsibilidade regulatória pode resultar em planos de investimento menos ambiciosos, com reflexos ",
     "A inteligência artificial continua sendo uma das principais forças por trás do crescimento da economia americana, mas os sinais de que o ciclo pode estar perdendo fôlego levaram o grupo Mirabaud a rever gradualmente sua exposição ao setor.",
-    "Líder do governo na Câmara critica defensores da política monetária atual; executivo é cotado para assumir o órgão"
+    "Líder do governo na Câmara critica defensores da política monetária atual; executivo é cotado para assumir o órgão",
+    "O descomissionamento de plataformas de petróleo, que há três anos respondia por cerca de 5% da receita do Porto do Açu relacionada a serviços, atualmente corresponde à metade da geração de caixa da companhia relacionada a serviços. A informação é de Eugênio Figueiredo, CEO do Porto do Açu."
   ],
   "eventos_recentes": [
-    {
-      "chave": "alibaba::GERAL_ATIVO",
-      "ts": 1795546440.321404
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795546860.773873
@@ -2571,10 +2567,13 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795718231.600839
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795719339.985318
     }
   ],
   "hashes_imagens": [
-    "00b2cdea913bc599",
     "c71fac4742300b43",
     "5691b8c79931a5f1",
     "d5008432bcc0ceb3",
@@ -2873,6 +2872,7 @@
     "fcd463639f982cb6",
     "7c271bcc67ac1a27",
     "747f58081e7d66c0",
-    "e38f24fd2db451d4"
+    "e38f24fd2db451d4",
+    "2567709071083f3c"
   ]
 }
