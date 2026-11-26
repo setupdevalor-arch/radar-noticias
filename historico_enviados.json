@@ -1,10 +1,5 @@
 {
   "links": [
-    "80c6852efdd44ca1",
-    "0e32a8f6cebc56f9",
-    "d2f757ccc86965ee",
-    "https://megawhat.uol.com.br/regulacao/renovaveis-beneficiadas-por-mp-terao-15-dias-para-adiar-contratos-de-transmissao-sem-onus/",
-    "46945e0ccf20d817",
     "https://www.spacemoney.com.br/politica/ibge-drenagem-protocolos-desastre/",
     "56ae9d72aa1b8625",
     "https://www.spacemoney.com.br/noticias/ibge-lixoes-municipios-2024/",
@@ -799,10 +794,14 @@
     "05242e8457aeeee7",
     "5d0c7a9dbbfefd12",
     "https://telesintese.com.br/incerteza-sobre-espectro-limita-ambicao-de-investimentos-diz-ericsson/",
-    "b0c7bd1f3c9c2b5b"
+    "b0c7bd1f3c9c2b5b",
+    "9c64b567c51e7d5a",
+    "6777b913b005f0fa",
+    "33953548340f457c",
+    "https://neofeed.com.br/wealth-management/apos-rali-da-ia-mirabaud-pisa-no-freio-e-faz-alerta-quem-nao-agir-vai-ficar-para-tras/",
+    "326791622b529c12"
   ],
   "titulos": [
-    "'Não podíamos pagar uma casa para nossa família, então decidimos comprar uma junto com desconhecidos'",
     "CCJ aprova punição a crime de fraude no mercado de capitais para evitar ‘caso Americanas’",
     "Bolsas da Europa caem com pressão de mineradoras, techs buscando fôlego e olho no Fed",
     "Idoso de 89 anos perde R$ 17 mil em golpe após criminoso trocar cartões",
@@ -1601,10 +1600,10 @@
     "Consumo de energia cresce 5,1% na Energisa, enquanto gás para térmicas cai 72,7%",
     "Carl Icahn vê fortuna encolher e dívida da IEP pressionar",
     "CAIXA Seguridade divulga resultados do 3º trimestre com destaque para lucro e dividendos, impulsionados pelas atividades das joint ventures",
-    "Incerteza sobre espectro limita ambição de investimentos, diz Ericsson"
+    "Incerteza sobre espectro limita ambição de investimentos, diz Ericsson",
+    "Após rali da IA, Mirabaud pisa no freio e faz alerta: “quem não agir, vai ficar para trás”"
   ],
   "leads": [
-    "– O banco digital Inter demitiu ‌na manhã desta terça-feira mais de 200 funcionários, ‌afirmou o Sindicato dos Bancários de Belo Horizonte, em comunicado.",
     "Os contratos de mini-índice (WINZ26), com vencimento em dezembro, encerraram a última sessão em queda de 0,58%, aos 165.305 pontos, após registrarem mínima de 165.180 pontos e máxima de 168.935 pontos. Apesar da lateralização observada nos últimos dois pregões, o ativo permanece em tendência de baixa no gráfico de 15 minutos.",
     "– A Dell Technologies elevou nesta terça-feira previsões anuais de receita e lucro pela terceira vez neste ano, após resultado trimestral recorde, ‌impulsionados pela crescente demanda corporativa por infraestrutura de inteligência artificial.",
     "Segundo reportagem de Giuliano Guandalini no Brazil Journal, um documento da Ashmore sobre a economia brasileira descreve dois cenários para o país: um com ajustes fiscais capazes de recuperar credibilidade e outro marcado por heterodoxia monetária e aprofundamento da crise. O material ganhou repercussão ao projetar que, sem mudanças na política fi",
@@ -1853,7 +1852,8 @@
     "O consumo consolidado de energia elétrica do grupo Energisa alcançou 4.046 GWh em outubro, volume 5,1% superior ao registrado no mesmo período de 2025. Por outro lado, o volume de gás natural destinado às usinas termelétricas recuou 72,7% no mesmo período.",
     "O investidor Carl Icahn, um dos nomes mais conhecidos do ativismo acionário nos Estados Unidos, atravessa uma crise financeira que reduziu sua fortuna de US$ 26 bilhões para US$ 1,3 bilhão, conforme números da Bloomberg reunidos em reportagem de Matheus Prado no Brazil Journal. A holding Icahn Enterprises (IEP) está endividada e admitiu não ter cer",
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
-    "A incerteza sobre a disponibilidade de radiofrequências e o calendário de investimentos das operadoras de telecomunicações afeta o planejamento industrial da Ericsson no Brasil. A fabricante de equipamentos de redes móveis considera que a ausência de previsibilidade regulatória pode resultar em planos de investimento menos ambiciosos, com reflexos "
+    "A incerteza sobre a disponibilidade de radiofrequências e o calendário de investimentos das operadoras de telecomunicações afeta o planejamento industrial da Ericsson no Brasil. A fabricante de equipamentos de redes móveis considera que a ausência de previsibilidade regulatória pode resultar em planos de investimento menos ambiciosos, com reflexos ",
+    "A inteligência artificial continua sendo uma das principais forças por trás do crescimento da economia americana, mas os sinais de que o ciclo pode estar perdendo fôlego levaram o grupo Mirabaud a rever gradualmente sua exposição ao setor."
   ],
   "eventos_recentes": [
     {
@@ -2567,10 +2567,13 @@
     {
       "chave": "caixa_seguridade::PROVENTOS",
       "ts": 1795717180.970532
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795718231.600839
     }
   ],
   "hashes_imagens": [
-    "001f2eb02cf815ff",
     "103463d092267450",
     "00b2cdea913bc599",
     "c71fac4742300b43",
@@ -2869,6 +2872,7 @@
     "54200c343e4f4104",
     "add796e1f8584362",
     "fcd463639f982cb6",
-    "7c271bcc67ac1a27"
+    "7c271bcc67ac1a27",
+    "747f58081e7d66c0"
   ]
 }
