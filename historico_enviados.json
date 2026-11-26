@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-economia/itau-bv-e-inter-demitem-cerca-de-600-funcionarios/",
-    "d0d8cc043fd7b5e9",
-    "52b7289f1228214e",
-    "ba8005f0bd098e0a",
     "b6361a9fb6b4f1b5",
     "https://www.spacemoney.com.br/carreiras/fim-escala-6x1-hora-extra/",
     "57f458eda4567f62",
@@ -799,10 +795,13 @@
     "https://www.moneytimes.com.br/pacc11-mesmo-com-surpresa-do-ipca-15-titulos-indexados-a-inflacao-seguem-interessantes/",
     "6fb50fe24ef61374",
     "https://www.poder360.com.br/poder-economia/marinho-critica-cni-por-acao-no-stf-contra-regulamentacao-sobre-6-x-1/",
-    "209130fee273d7e5"
+    "209130fee273d7e5",
+    "ad5bb51940451b27",
+    "9fc06046bfd0c9ef",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/mxrf11-retorno-desde-estreia/",
+    "7a397c5908422710"
   ],
   "titulos": [
-    "Eles começaram lendo o Orkut. Hoje, faturam R$ 200 milhões com dados das redes sociais",
     "EUA, China e Rússia: o que será tratado em encontro histórico entre potências?",
     "Como a Cielo usa agentes de IA para transformar reclamações de clientes em produtos em 12 dias",
     "Líder do governo no Congresso apresenta projeto para taxar big techs",
@@ -1601,10 +1600,10 @@
     "Governo mantém confiança em leilão de baterias após decisão judicial",
     "Alckmin diz que tarifa ao setor aeronáutico é “totalmente descabida”",
     "PACC11: mesmo com surpresa do IPCA-15, títulos indexados à inflação seguem interessantes",
-    "Marinho critica CNI por ação no STF contra regulamentação sobre 6 X 1"
+    "Marinho critica CNI por ação no STF contra regulamentação sobre 6 X 1",
+    "MXRF11: retorno desde a estreia e o efeito do reinvestimento"
   ],
   "leads": [
-    "A atividade econômica da Argentina, o Emae, recuou 1,2% em setembro em relação ao mesmo período do ano passado, informou nesta terça-feira (24) o Indec (Instituto Nacional de Estatística e Censos), um dado pior do que o esperado pelos analistas privados, o que coloca o país em recessão.",
     "A Temu (Android, iOS) firmou um memorando de entendimento (MoU) com a Mastercard para avançar no desenvolvimento de soluções que facilitem a intermediação de pagamentos entre vendedores e consumidores. O acordo prevê o estudo de duas soluções:",
     "A chinesa Huawei foi condenada nesta terça-feira (24) em um amplo processo criminal nos Estados Unidos. A gigante de tecnologia e equipamentos de telecomunicações foi acusada de enganar bancos sobre seus negócios no Irã e roubar segredos comerciais de empresas americanas.",
     "| Mobile Time Latinoamérica | O Tribunal Administrativo de Cundinamarca confirmou a validade das determinações da Superintendência de Indústria e Comércio (SIC) para que o Google LLC adeque suas práticas de tratamento de dados pessoais de menores de idade na Colômbia. A decisão judicial também respalda a competência das autoridades colombianas para",
@@ -1853,7 +1852,8 @@
     "Geraldo Campos Jr. e Lais Carregosa, da Agência iNFRA",
     "O vice-presidente Geraldo Alckmin (PSB) afirmou que a proposta dos Estados Unidos de impor novas tarifas à importações de aeronaves brasileiras é \"totalmente descabida\". As aeronaves prontas, atualmente isentas de tarifas dos EUA para o Brasil, são o quarto maior item de exportação do país.",
     "Mesmo depois da surpresa positiva do IPCA-15, seguimos vendo uma combinação interessante nos títulos indexados à inflação de prazo mais curto.",
-    "Ministro do Trabalho e Emprego disse que presidente da confederação não o procurou para conversas"
+    "Ministro do Trabalho e Emprego disse que presidente da confederação não o procurou para conversas",
+    "Conforme a Suno Notícias, o Maxi Renda (MXRF11), administrado pela XP Asset, começou a ser negociado na B3 em 13/04/2012, com cota inicial de R$ 100. O fundo reúne 1.617.116 cotistas, a maior base entre os FIIs do país."
   ],
   "eventos_recentes": [
     {
@@ -2555,10 +2555,13 @@
     {
       "chave": "pacc11::GERAL_ATIVO",
       "ts": 1795702286.832427
+    },
+    {
+      "chave": "mxrf11::GERAL_ATIVO",
+      "ts": 1795702640.800475
     }
   ],
   "hashes_imagens": [
-    "0a252914ea1327ff",
     "90c69c5d3751badf",
     "78c9dd9d3a77cce9",
     "8a8a4015ffec3387",
@@ -2857,6 +2860,7 @@
     "4a6354cfad15663b",
     "3a245185775bbbac",
     "1a0110cc673ae5cf",
-    "a18af77c2ea1fc7a"
+    "a18af77c2ea1fc7a",
+    "b0d322ffaaa848c1"
   ]
 }
