@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://megawhat.uol.com.br/regulacao/concentracao-no-mercado-livre-de-energia-pode-levar-a-intervencoes-da-aneel/",
-    "39446359e2e10de6",
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/lvbi11-provento-extra-fusao-hglg11/",
     "3bbe1754da993d48",
     "https://telesintese.com.br/coalizao-cobra-investigacao-da-ue-contra-apple-no-ios/",
     "c01532fc675d2ecd",
@@ -799,10 +796,12 @@
     "44d56aa68a5ebfcd",
     "789fff48e102b245",
     "https://www.poder360.com.br/poder-economia/regulacao-da-tributaria-sai-em-breve-diz-secretario-da-receita/",
-    "5da38b9a2cbd490b"
+    "5da38b9a2cbd490b",
+    "8fd7d1939a124361",
+    "https://www.spacemoney.com.br/investimentos/analise-de-balanco-antes-de-investir/",
+    "d174d9f33eef72a2"
   ],
   "titulos": [
-    "Axia, Simpar, Unifique, Iguatemi e mais ações para acompanhar nesta quarta-feira",
     "PF investiga apoio de rede ligada a JD Vance à campanha de Flávio, diz jornal",
     "Por que o mesmo celular aparece várias vezes na conta Google?",
     "O que ela fez para faturar R$ 3 milhões em um único mês apenas com o TikTok Shop",
@@ -1601,10 +1600,10 @@
     "Índice de confiança da Indústria sobe 0,4 ponto em novembro, a 91,4 pontos, diz FGV",
     "Um mês depois da eleição, Ibovespa acumula queda de 19% e algumas ações ficaram baratas. Veja quais são",
     "Mulheres entram na bolsa investindo 50% mais que homens; veja quais ações elas mais compram",
-    "Regulação da tributária sai em breve, diz secretário da Receita"
+    "Regulação da tributária sai em breve, diz secretário da Receita",
+    "Análise de balanço: o que avaliar antes de investir"
   ],
   "leads": [
-    "Os Estados Unidos preparam a inclusão da Megaspeed, fabricante de chips sediada em Cingapura, em sua relação de restrições comerciais. A informação é atribuída a uma fonte. Com isso, fornecedores dos EUA passariam a precisar de licença para entregar produtos, softwares ou tecnologia à companhia. Na prática, porém, essas autorizações são pouco conce",
     "– As ações da Petrobras (PETR3;PETR4) subiam nesta terça-feira após a companhia publicar na véspera seu plano de negócios ‌para o período de 2027 a 2031 com investimentos mais elevados do que esperado nos primeiros anos, enquanto inesperados dividendos extraordinários trouxeram algum alívio ao ‌mercado.",
     "BRASÍLIA - A arrecadação de impostos e contribuições federais somou R$ 293,975 bilhões em outubro, informou a Receita Federal nesta terça-feira, 24.",
     "As exportações do setor brasileiro de árvores cultivadas para fins industriais somaram US$ 11,6 bilhões entre janeiro e setembro de 2026, alta de 2,4% em relação ao mesmo período do ano passado.",
@@ -1853,13 +1852,10 @@
     "O Índice de Confiança da Indústria (ICI) da Fundação Getulio Vargas (FGV) subiu 0,4 ponto em novembro em comparação a outubro, para 91,4 pontos. Esta foi a primeira alta após quatro meses consecutivos de queda do indicador. Em médias móveis trimestrais, o ICI caiu 0,8 ponto, a 91,2 pontos.",
     "Analistas veem papéis de boas empresas como oportunidades, mas alertam que juros altos e incerteza fiscal devem pesar sobre a bolsa",
     "Na ponta mais jovem, 26,7 mil meninas de 0 a 17 anos já têm CPF na bolsa.",
-    "Confederações empresariais pediram ao STF o adiamento da reforma, que deve entrar em vigor em 1º de janeiro de 2027"
+    "Confederações empresariais pediram ao STF o adiamento da reforma, que deve entrar em vigor em 1º de janeiro de 2027",
+    "Antes de colocar dinheiro em uma ação, é preciso entender se a companhia consegue gerar caixa no futuro a partir da situação financeira que apresenta hoje. É o que mostra a Suno Notícias ao explicar como a análise de balanço funciona e quais documentos servem de base para esse trabalho. Segundo a publicação, crescer sobre a mesma base de ativos ou "
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795521958.693367
-    },
     {
       "chave": "localiza::GERAL_ATIVO",
       "ts": 1795522374.133599
@@ -2562,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "1c97b6e850e795d6",
     "3b4204d34b3778e4",
     "53a914172191caed",
     "4b72cd5871627419",
@@ -2861,6 +2856,7 @@
     "a4a8c7b184f00fe0",
     "673cd62b0ac24fce",
     "ee1f6975071d1120",
-    "c30fa2e1c6725df7"
+    "c30fa2e1c6725df7",
+    "99826c6a8d97bf7c"
   ]
 }
