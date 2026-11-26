@@ -1,6 +1,5 @@
 {
   "links": [
-    "04b5e20cfd7dc748",
     "74e2b291c65b4a79",
     "https://g1.globo.com/tecnologia/noticia/2026/11/24/chinesa-huawei-e-condenada-nos-eua.ghtml",
     "5e1c389ccf95f962",
@@ -799,7 +798,8 @@
     "https://www.infomoney.com.br/mercados/sao-martinho-jpmorgan-corta-recomendacao-para-venda-apos-balanco-acao-cai/",
     "0a1e7a44d311c5d3",
     "https://megawhat.uol.com.br/noticias/aneel-cobra-respostas-sobre-energia-de-itaipu-em-meio-a-risco-de-alta-de-precos/",
-    "205dea1730f27208"
+    "205dea1730f27208",
+    "876213e89a689f42"
   ],
   "titulos": [
     "Banco do Brasil (BBAS3), B3 (B3SA3), Americanas (AMER3) e outros destaques desta quarta-feira (18)",
@@ -1856,10 +1856,6 @@
     "A mudança na metodologia de projeção do suprimento de energia de Itaipu ao Paraguai colocou geradores e grandes consumidores em oposição e levou a Agência Nacional de Energia Elétrica (Aneel) a cobrar, na terça-feira, 24 de novembro, um posicionamento da Empresa Brasileira de Participações em Energia Nuclear e Binacional (ENBPar) sobre a necessidad"
   ],
   "eventos_recentes": [
-    {
-      "chave": "bgrj11::EVENTO_CORP",
-      "ts": 1795526684.210684
-    },
     {
       "chave": "mdia3::GERAL_ATIVO",
       "ts": 1795527078.390068
