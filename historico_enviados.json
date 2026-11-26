@@ -1,9 +1,5 @@
 {
   "links": [
-    "83f61baef1a420c2",
-    "698904b24f4aa0ce",
-    "d67c938a136f2e1e",
-    "https://www.infomoney.com.br/mundo/ira-diz-que-navios-colidiram-com-minas-em-ormuz-e-alerta-para-passagem-coordenada/",
     "62824803e4c1bb44",
     "https://bmcnews.com.br/petroleo-e-energia/confaz-atualiza-pmpf-de-combustiveis-e-define-novos-valores-para-icms/",
     "506edf1335dfc7e7",
@@ -799,10 +795,13 @@
     "cc8d9dfa1b0f63f5",
     "https://www.cnnbrasil.com.br/agro/corteva-investe-us-32-mi-em-unidade-de-sp-para-producao-de-novo-fungicida/",
     "a906f6235b1bf50e",
-    "0f46547b529c4195"
+    "0f46547b529c4195",
+    "3ea11c56c26a3ab3",
+    "74a0d578bd60a87c",
+    "https://valorinveste.globo.com/produtos/imoveis/noticia/2026/11/26/depois-do-itau-santander-avalia-entrar-no-minha-casa-minha-vida.ghtml",
+    "f1cd2c32ae091e51"
   ],
   "titulos": [
-    "Boato de 'apagão mundial' e onda de ataques hackers: o que aconteceu no mundo nas últimas semanas",
     "Durigan diz que Reforma Tributária não deve gerar arrecadação extra para o governo",
     "Quem são os sete jovens fundadores da Anthropic que estão prestes a se tornarem multibilionários",
     "Sinal de alerta para a renda fixa: mercado teme inflação como na época de Dilma",
@@ -1601,10 +1600,10 @@
     "Trump exige investigação sobre dados do PIB divulgados antes de midterms",
     "Juro real perto de 8,7% põe pós-fixados em evidência",
     "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$18 bilhões por apoio à IA",
-    "Corteva investe US$ 3,2 mi em unidade de SP para produção de novo fungicida"
+    "Corteva investe US$ 3,2 mi em unidade de SP para produção de novo fungicida",
+    "Depois do Itaú, Santander avalia entrar no Minha Casa Minha Vida"
   ],
   "leads": [
-    "Segundo o Cointelegraph, a União Europeia está estruturando um fundo com potencial de chegar a €50 bilhões, o equivalente a US$ 54,7 bilhões, voltado a companhias de inteligência artificial e de computação quântica. A informação é do Financial Times.",
     "Bloomberg Línea — A Latam Airlines (LTM) vê o Brasil com otimismo e mantém, por ora, os planos para os jatos regionais da Embraer (EMBJ3) no país, apesar da depreciação do real e do ruído fiscal posterior às eleições, segundo o CEO da companhia, Roberto Alvo.",
     "Ao Seu Dinheiro, Leopoldo de Bruggen e Silva detalha os planos para a nova fase da companhia, que deixou as grandes encomendas do e-commerce para apostar em cartões, maquininhas e transporte B2B",
     "Os futuros de Wall Street iniciaram a sessão desta quarta-feira, 25, em território negativo, com investidores concentrados no índice PCE de outubro e na expectativa de que o governo dos Estados Unidos anuncie uma nova rodada de tarifas sobre parceiros comerciais, conforme apurou o InfoMoney. A combinação de inflação ainda elevada e risco de escalad",
@@ -1853,13 +1852,10 @@
     "– O presidente dos Estados Unidos, Donald Trump, exigiu nesta quinta-feira uma investigação imediata sobre o que ele alegou ‌ser uma decisão deliberada de divulgar números “falsos” de crescimento econômico antes das eleições de meio de mandato deste ‌mês.",
     "Com a taxa básica em 13,75% ao ano e o IPCA acumulado em 4,64% nos últimos 12 meses, o Brasil opera com juro real na casa de 8,7%. Segundo a Suno Notícias, esse patamar recoloca as aplicações pós-fixadas e os ETFs de renda fixa negociados na B3 na mesa do investidor.",
     "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA",
-    "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a"
+    "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a",
+    "Banco confirmou que estuda operar linhas do programa habitacional; movimento ocorre uma semana após o Itaú anunciar entrada nas faixas de renda média e no Pró-Cotista."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795542289.276424
-    },
     {
       "chave": "mercado_livre::EVENTO_CORP",
       "ts": 1795543672.863521
@@ -2567,10 +2563,17 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795713459.297395
+    },
+    {
+      "chave": "itau::GERAL_ATIVO",
+      "ts": 1795715117.528277
+    },
+    {
+      "chave": "santander::GERAL_ATIVO",
+      "ts": 1795715117.528277
     }
   ],
   "hashes_imagens": [
-    "d79d49ce4fa8c21a",
     "913daf7a839c60e8",
     "bc5bca2674a99259",
     "816d9d2a7adc4e71",
@@ -2869,6 +2872,7 @@
     "e480cdcd0177a7a0",
     "71242ce2d20727bc",
     "450c69f45f228ba3",
-    "dc13024c98014ab8"
+    "dc13024c98014ab8",
+    "6f4ac65569a6ca54"
   ]
 }
