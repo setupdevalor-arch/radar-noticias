@@ -1,17 +1,5 @@
 {
   "links": [
-    "72a407a3362dafb7",
-    "cc18728a9ff9a9ac",
-    "0093de762cfbe868",
-    "fa1888281497137d",
-    "28832e8f23b1ea73",
-    "https://investnews.com.br/investimentos/o-tempo-fechou-para-2027-economia/",
-    "10e81e27735481e8",
-    "https://www.cnnbrasil.com.br/agro/bndes-preve-liberar-recorde-de-r-4-bi-para-setor-de-fertilizantes-em-2026/",
-    "0b6a0a0a8889972b",
-    "https://www.spacemoney.com.br/economia/exterior/vw-protesto-alemanha-greve-janeiro/",
-    "bb8ba5de4d4e16bd",
-    "f4347355ce094f26",
     "4da66df692721153",
     "63ea0c1c02c976c6",
     "https://g1.globo.com/economia/noticia/2026/11/24/dolar-ibovespa.ghtml",
@@ -799,14 +787,21 @@
     "https://www.moneytimes.com.br/oncoclinicas-onco3-recebe-pedido-de-assembleia-para-eleger-conselho-e-definir-presidencia-veja/",
     "288cd06186120941",
     "https://cqcs.com.br/noticia/previdencia-privada-mantem-vantagem-tributaria-mas-disputa-espaco-com-tesouro/",
-    "c7f07973fb27c748"
+    "c7f07973fb27c748",
+    "83019f9dc3081e4f",
+    "518e31beb22d25f0",
+    "https://www.spacemoney.com.br/tecnologia/zcash-sapling-migracao-ironwood/",
+    "a12031dc1b21df43",
+    "https://www.cnnbrasil.com.br/infra/quanto-custa-a-falta-de-previsibilidade-no-setor-logistico/",
+    "bd187b5dd9ae953e",
+    "https://www.infomoney.com.br/mercados/xp-ve-pessimismo-extremo-na-bolsa-e-aponta-chance-de-recuperacao-do-ibovespa/",
+    "960f972dd12ecf00",
+    "https://www.infomoney.com.br/mercados/yduqs-yduq3-aprova-incorporacao-da-afya-afya3-e-aumento-de-capital-de-r-25-bi/",
+    "d3e7461d80129e46",
+    "https://www.spacemoney.com.br/agronegocio/tirso-meirelles-tributos-custos-campo/",
+    "9ca2d3b9065c5db6"
   ],
   "titulos": [
-    "'Sociedade se sente traída por Suzane von Richthofen' porque se vê nela, diz criminóloga Ilana Casoy",
-    "'A gente não tem cara de panaca': como samba-enredo inspirado na Constituinte de 1988 virou último sucesso de Gonzaguinha",
-    "Após validar uma anistia, STF julga outro perdão concedido a partidos; entenda",
-    "Aliados de Lula veem Camilo como favorito para a Casa Civil após missões",
-    "Bitcoin hoje: BTC trava nos US$ 64 mil com saída de investidores e expectativa pelo Fed",
     "Master: Oposição vai pedir esclarecimentos de ministro sobre delegados afastados",
     "Axia (AXIA3) aprova 15ª emissão de debêntures simples no valor de até R$ 1,2 bi",
     "Com bitcoin (BTC) abaixo dos US$ 65 mil, liquidações superam US$ 1 bilhão em 24h; criptomoedas aceleram perdas",
@@ -1601,14 +1596,14 @@
     "Kim, da Coreia do Norte, defende implantação mais ampla de armas nucleares táticas",
     "MME estuda janela de três a quatro horas para cobrança de reserva de capacidade",
     "Oncoclínicas (ONCO3) recebe pedido de AGE para eleger todos os membros do conselho",
-    "Previdência privada mantém vantagem tributária, mas disputa espaço com Tesouro"
+    "Previdência privada mantém vantagem tributária, mas disputa espaço com Tesouro",
+    "Zcash quer aposentar Sapling após alerta criptográfico",
+    "Quanto custa a falta de previsibilidade no setor logístico?",
+    "XP vê pessimismo extremo na Bolsa e aponta chance de recuperação do Ibovespa",
+    "Yduqs (YDUQ3) aprova incorporação da Afya (AFYA3) e aumento de capital de R$ 2,5 bi",
+    "Meirelles vê custo alto com tributos e mão de obra escassa"
   ],
   "leads": [
-    "Entre 2023 e 2025, o Brasil ficou em quinto lugar nas importações totais da União Europeia dentro de um grupo de 11 nações estratégicas comparadas, somando 264,4 bilhões de euros. Ainda assim, um estudo elaborado pela Kreab Consultoria Global, junto à Smart, sua representante no Brasil, aponta que o desafio brasileiro agora é transformar capacidade",
-    "Entenda o que é a PEC do fim da escala 6x1",
-    "A Comissão de Serviços Financeiros (FSC) da Coreia do Sul propôs nesta terça-feira liberar ofertas iniciais de moedas (ICOs) no país pela primeira vez desde 2017, informou o Chosun Biz. A medida integra o Digital Asset Act e exige divulgação detalhada antes da venda de tokens.",
-    "O Maxi Renda (MXRF11) optou por não acelerar a aplicação dos R$ 1 bilhão captados em sua emissão mais recente, conforme informação do InfoMoney. A gestão do fundo imobiliário prefere selecionar operações de crédito com garantias robustas e retornos condizentes com o risco, em vez de alocar recursos apenas para reduzir o caixa. Em um ambiente de jur",
-    "A HBR Realty ampliou de 30 para 90 dias o prazo para que os acionistas remanescentes da Helbor (HBOR3) vendam suas participações na oferta pública de aquisição de ações (OPA) estruturada como permuta para assumir o controle da incorporadora. Segundo o Monitor do Mercado, o anúncio foi feito nesta terça-feira (24).",
     "A publicação da Portaria nº 2.041 pelo Ministério do Trabalho, que regulamenta a emenda constitucional que pôs fim à escala 6×1, foi avaliada como positiva pelo Bradesco BBI para as empresas de educação, especialmente aquelas com maior exposição a cursos presenciais, excluindo medicina.",
     "O Banco Central (BC) decidiu que observar de longe o avanço das dívidas das famílias brasileiras já não basta. Agora, o regulador quer mexer na maneira como bancos e financeiras oferecem dinheiro aos clientes. Durante o “16º Congresso de Prevenção à Lavagem de Dinheiro e ao Financiamento do Terrorismo (PLD/FT)“, na última quarta-feira (18), o diret",
     "– Os Estados Unidos estão se preparando para anunciar já nesta terça-feira que aumentarão as tarifas sobre produtos da China, da União Europeia e de mais de uma dúzia de outras economias, de acordo com uma pessoa familiarizada com o assunto, enquanto o governo Trump busca substituir as taxas que foram derrubadas pela Suprema Corte.",
@@ -1853,7 +1848,12 @@
     "O líder norte-coreano Kim Jong Un afirmou que seu país deve se concentrar na implantação de armas ‌nucleares táticas em diversos domínios e que sua capacidade de produção de material nuclear está sendo sistematicamente ampliada, ‌informou a agência de notícias estatal KCNA na quinta-feira (horário local, ainda quarta-feira em Brasília).",
     "O Ministério de Minas e Energia (MME) pretende estabelecer uma janela horária mínima de três ou quatro horas como referência para o rateio do Encargo de Reserva de Capacidade (ERCap), atribuindo uma parcela maior dos custos aos consumidores que mais demandam energia nos horários críticos do sistema elétrico. A proposta também deverá dar flexibilida",
     "A Oncoclínicas (ONCO3) recebeu em 24 de novembro de 2026 uma correspondência de acionistas ligados à Latache Gestão de Recursos pedindo a convocação de uma Assembleia Geral Extraordinária para deliberar sobre mudanças no conselho de administração.",
-    "Com a alta de juros, planos de previdência privada disputam espaço com investimentos como o Tesouro Direto, com produtos voltados para quem poupa para a aposentadoria."
+    "Com a alta de juros, planos de previdência privada disputam espaço com investimentos como o Tesouro Direto, com produtos voltados para quem poupa para a aposentadoria.",
+    "Segundo o Cointelegraph, a equipe Zakura, que desenvolve a Zcash, pediu à comunidade que comece a retirar recursos do Sapling, pool de transações protegidas que reúne quase 2% da oferta de ZEC, o equivalente a cerca de US$ 302 milhões.",
+    "Os custos logísticos brasileiros atingiram R$ 1,96 trilhão em 2025, o equivalente a 15,5% do Produto Interno Bruto (PIB), segundo levantamento do Instituto de Logística e Supply Chain (ILOS). Em 2014, essa participação era de 10,4%. O aumento ocorre em meio a deficiências históricas da infraestrutura e dificuldades de planejamento em um país de rea",
+    "O sentimento dos investidores em relação à Bolsa brasileira atingiu um dos níveis mais negativos da série histórica, mas isso pode representar uma oportunidade para quem aposta em uma recuperação do mercado no curto prazo.",
+    "A Yduqs (YDUQ3) aprovou a incorporação da Afya (AFYA3) pela companhia, em Assembleia Geral Extraordinária (AGE) realizada nesta quarta-feira (25). A operação prevê o aumento do capital social da Yduqs em R$ 2,54 bilhões, mediante a emissão de 569,65 milhões de novas ações ordinárias.",
+    "O presidente da Federação da Agricultura e Pecuária do Estado de São Paulo (Faesp) e do Serviço Nacional de Aprendizagem Rural (Senar), Tirso Meirelles, criticou a possibilidade de novos impostos e alertou para o encarecimento da atividade rural. Ele também mencionou a escassez de mão de obra."
   ],
   "eventos_recentes": [
     {
@@ -2523,14 +2523,25 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795692368.627838
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795692801.565921
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795692801.565921
+    },
+    {
+      "chave": "yduq3::GERAL_ATIVO",
+      "ts": 1795692801.565921
+    },
+    {
+      "chave": "afya3::GERAL_ATIVO",
+      "ts": 1795692801.565921
     }
   ],
   "hashes_imagens": [
-    "797a50d35023496d",
-    "8f1bf488d82a79c3",
-    "d4e189785dd0713c",
-    "30922a397fd8f1ee",
-    "57380fb98ef8d9a3",
     "e51d36ee609b7595",
     "029686419f6174c8",
     "8ce180b787e27480",
@@ -2825,6 +2836,11 @@
     "9e396060ac9ad8ca",
     "c7664be2dc191376",
     "ee2161dc110b75cb",
-    "baee54770d2b19f0"
+    "baee54770d2b19f0",
+    "481aa8c80c14be31",
+    "30892d5db31bec3d",
+    "85c316a841ce6f80",
+    "311bfc36f9ca2392",
+    "f93163ebcc943990"
   ]
 }
