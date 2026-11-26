@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/economia/legislacao/justica-reativa-regras-vale-alimentacao/",
-    "70603fbb69ab3804",
-    "2815a939340bb0bc",
-    "c5eb972a7298aa79",
-    "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/bc-tcheco-bitcoin-carteira-teste-sigilo/",
     "79ed6f1aa8d57195",
     "https://g1.globo.com/trabalho-e-carreira/concursos/noticia/2026/11/25/inscricoes-concurso-do-ibge-com-27-mil-vagas.ghtml",
     "6dcbf007175dac5c",
@@ -799,10 +794,14 @@
     "69efaf42ddd754b2",
     "98551b064ba6a6e1",
     "https://www.poder360.com.br/poder-governo/tarifa-dos-eua-sobre-aeronaves-sao-descabidas-diz-alckmin/",
-    "376a9bb939267347"
+    "376a9bb939267347",
+    "8b2b81dcaf5a5711",
+    "6540d4d67a700615",
+    "eebc1bbce7e09d88",
+    "https://agenciainfra.com/blog/governo-mantem-confianca-em-leilao-de-baterias-apos-decisao-judicial/?utm_source=rss&utm_medium=rss&utm_campaign=governo-mantem-confianca-em-leilao-de-baterias-apos-decisao-judicial",
+    "23fa142fd0d17986"
   ],
   "titulos": [
-    "Entre a venda negociada e a rescisão inédita: entenda o que pode acontecer a Enel",
     "Itaú BBA reduz preço-alvo da Direcional (DIRR3), mas mantém confiança na construtora",
     "Moretti e Lindbergh se reconciliam após trocas de farpas sobre pacote fiscal",
     "México suspende leilão de obra de Frida Kahlo nos Estados Unidos",
@@ -1601,10 +1600,10 @@
     "Alckmin ganha força para assumir Ministério da Segurança Pública",
     "Bancos e Petrobras levam Ibovespa a 171 mil pontos",
     "Motiva anuncia renúncia de André Salcedo, e Eduardo Camargo assume divisão de trilhos",
-    "Tarifa dos EUA sobre aeronaves são “descabidas”, diz Alckmin"
+    "Tarifa dos EUA sobre aeronaves são “descabidas”, diz Alckmin",
+    "Governo mantém confiança em leilão de baterias após decisão judicial"
   ],
   "leads": [
-    "O Banco Central autorizou a Foxbit a atuar como distribuidora de investimentos e a Binance a operar no mercado de câmbio, em decisões divulgadas nesta terça-feira (24) que valem para empresas dos dois grupos no Brasil.",
     "O RECT11 assegurou a continuidade de um inquilino relevante, conforme noticiado pela Suno Notícias. A Elo Participações continuará no imóvel Evolution Corporate, situado em Alphaville, Barueri, por 36 meses, com início em 20/11/2026 e término em novembro de 2029. A informação consta de comunicado da Apex Group, administradora do RECT11.",
     "O Banco do Brasil (BBAS3) informou nesta terça-feira (24) que não há, até o momento, qualquer decisão de seus órgãos de governança sobre a realização de ofertas públicas iniciais de ações (IPOs) de empresas do conglomerado.",
     "Uma senadora dos Estados Unidos está investigando o papel desempenhado pelo vice-presidente JD Vance na concessão de um lucrativo contrato de petróleo da Venezuela a um doador político e então executivo da comerciante de commodities Vitol Group.",
@@ -1853,7 +1852,8 @@
     "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
     "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56.",
     "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias.",
-    "Vice-presidente criticou nova taxa avaliada pelo governo Trump e disse que Brasil trabalhará para revertê-la"
+    "Vice-presidente criticou nova taxa avaliada pelo governo Trump e disse que Brasil trabalhará para revertê-la",
+    "Geraldo Campos Jr. e Lais Carregosa, da Agência iNFRA"
   ],
   "eventos_recentes": [
     {
@@ -2554,7 +2554,6 @@
     }
   ],
   "hashes_imagens": [
-    "d4e9c94aa9abde55",
     "3ac8e047102c2151",
     "72c3215b203999ca",
     "085265416263351c",
@@ -2853,6 +2852,7 @@
     "5b81ea77a6aecfbd",
     "9b4af56bcb5ce324",
     "22b513d823a1a2eb",
-    "7a69490d20e13f69"
+    "7a69490d20e13f69",
+    "4a6354cfad15663b"
   ]
 }
