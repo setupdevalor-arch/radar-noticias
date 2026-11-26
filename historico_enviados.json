@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/acoes/hbr-realty-opa-helbor-27-janeiro/",
-    "dd3276cabe3dfa27",
     "https://www.infomoney.com.br/mercados/fim-da-escala-6x1-traz-alivio-para-educacionais-e-bbi-reitera-preferencia-por-yduqs/",
     "9098752b2547b831",
     "9d8bda826d45c52b",
@@ -799,7 +797,9 @@
     "6f6a53617c5f732c",
     "7e926766799cf299",
     "2a36ac181169da59",
-    "c60ba3b638a73303"
+    "c60ba3b638a73303",
+    "d2e19f9752411437",
+    "6664b3f95349789b"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,14 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "raizen::GERAL_ATIVO",
-      "ts": 1795519198.348225
-    },
-    {
-      "chave": "microsoft::GERAL_ATIVO",
-      "ts": 1795519198.348225
-    },
     {
       "chave": "nvidia::BALANCO",
       "ts": 1795519583.205036
