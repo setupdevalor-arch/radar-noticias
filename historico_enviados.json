@@ -1,15 +1,5 @@
 {
   "links": [
-    "2a6cdaa264b11cbd",
-    "849754148161e10b",
-    "5f0b9956d30a3168",
-    "120b67688447768c",
-    "395d7cfd86f11cc2",
-    "6c136b1fea0da87b",
-    "ffa82d20e43f8eee",
-    "96858dc93acf6487",
-    "bdbae38b08249b0e",
-    "522aab889db7168f",
     "d9825b48c13906df",
     "https://www.spacemoney.com.br/investimentos/acoes/norse-atlantic-acoes-queda-alerta-financeiro/",
     "0116e25f7528c50b",
@@ -799,11 +789,19 @@
     "6ee079a781605539",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/durigan-defende-agilizar-proibicao-definitiva-de-bets-e-cassinos-online/",
     "4132b3360e1e3e0b",
-    "29fe17abac99213d"
+    "29fe17abac99213d",
+    "cb824e29e466a6a3",
+    "a6e3202f2daf2ee8",
+    "7457af5b7bd2250f",
+    "ce71d87a6d9a21e4",
+    "af4331070058630f",
+    "3358fc1541a975ba",
+    "https://www.infomoney.com.br/mercados/peso-mexicano-se-destaca-entre-piores-moedas-da-america-latina-com-menor-carry-trade/",
+    "da22a45dae8655e0",
+    "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/11/26/durigan-diz-que-discutir-medidas-fiscais-com-lula-nesta-quinta-feira.ghtml",
+    "bbd51c88c02ae112"
   ],
   "titulos": [
-    "Conservar para não precisar reconstruir: o investimento inteligente na proteção das florestas",
-    "Mercado de capitais soma R$ 71,4 bi em outubro, com forte captação de Fiagros",
     "Quem são os 7 fundadores da Anthropic que vão ficar com US$ 18 bilhões cada na estreia da bolsa",
     "Braga nega que haja acordo com oposição de trecho do PLP que trata de Lei Kandir",
     "Dólar a R$ 5,80 é oportunidade? Goldman vê real rendendo mais que a bolsa em 2027",
@@ -1601,11 +1599,11 @@
     "Letras Financeiras superam retorno do Tesouro Selic e lideram ranking de renda fixa da B3",
     "Compras em supermercados crescem 8% em novembro, diz Abras",
     "Novas regras do BC para crédito podem atingir 20 milhões",
-    "Durigan defende agilizar proibição definitiva de bets e cassinos online"
+    "Durigan defende agilizar proibição definitiva de bets e cassinos online",
+    "Peso mexicano se destaca entre piores moedas da América Latina com menor carry trade",
+    "Durigan diz que discutirá medidas fiscais com Lula nesta quinta-feira"
   ],
   "leads": [
-    "Eneva, Petrobras e Âmbar Energia, do grupo J&F, foram as grandes vencedoras do leilão, concentrando juntas quase metade da potência contratada. Entre as geradoras com hidrelétricas, destacaram-se Copel, Axia (ex-Eletrobras), Engie e a chinesa SPIC.",
-    "O projeto de lei das baterias poderá acrescentar até R$ 6,26 bilhões por ano à conta de luz dos consumidores, segundo estimativa da FNCE (Frente Nacional dos Consumidores de Energia). O PL 3.716/2026 tramita em regime de urgência na Câmara dos Deputados e propõe mudar a divisão dos custos da contratação de sistemas de armazenamento de energia.",
     "Resultado representa desaceleração em relação ao 1º semestre; exportações e investimentos em máquinas recuaram no período",
     "A missão da Amazon Leo é oferecer internet de alta velocidade a regiões remotas por meio de uma rede de milhares de satélites.",
     "A crise de liderança na Nvidia trouxe à tona uma disputa sobre modelos de inteligência artificial de código aberto, na qual o presidente-executivo, Jensen Huang, se tornou uma das vozes mais influentes em Washington a favor do desenvolvimento, pelos Estados Unidos, de uma tecnologia atualmente dominada por empresas chinesas.",
@@ -1853,7 +1851,9 @@
     "As Letras Financeiras deixaram os títulos públicos para trás no ranking de renda fixa da B3 de outubro. O Índice de Letra Financeira S1 DI B3 (ILFB) liderou a lista de desempenho do mês passado, com valorização de 1,08%. O indicador superou o Índice Tesouro Selic B3 (TSLC), que teve valorização de 0,99%, além do Índice Tesouro Selic Low Turnover (T",
     "As compras nos supermercados cresceram 8% entre 9 e 15 de novembro, na comparação anual, segundo monitoramento da Associação Brasileira de Supermercados (Abras). A entidade credita ao encerramento das bets uma folga orçamentária das famílias, mas afirma que o avanço das compras tem outros vetores.",
     "Medidas restringem empréstimos a inadimplentes e limitam cartões usados frequentemente no rotativo; objetivo é diminuir o endividamento",
-    "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo."
+    "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo.",
+    "O peso mexicano caminha para sua maior sequência de desvalorizações em cinco anos, à medida que os investidores fogem para ativos de refúgio e a popular estratégia de carry trade se desfaz.",
+    "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas."
   ],
   "eventos_recentes": [
     {
@@ -2562,8 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "725e7bae50e914d3",
-    "30ebb7a59a22e831",
     "290d1a66d7223d49",
     "9106ffc97f22c2db",
     "8cb501c7f911dad7",
@@ -2861,6 +2859,8 @@
     "d0f44f7742b01dc8",
     "8d99149e1a37bb30",
     "ae4021f079a2a035",
-    "0ec3418914f04a92"
+    "0ec3418914f04a92",
+    "de8dba5502eb1217",
+    "4127dc4cb43c196c"
   ]
 }
