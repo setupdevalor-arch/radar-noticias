@@ -1,9 +1,5 @@
 {
   "links": [
-    "3d1a4273fa5aa8b1",
-    "d1dcd7f19dd700d5",
-    "d263f0f6a43fd893",
-    "https://neofeed.com.br/videos/revolucao-ia/shadow-ai-a-ameaca-que-desafia-ceos-e-conselhos-de-administracao/",
     "6f9643553c77dd02",
     "https://www.infomoney.com.br/economia/china-diz-que-excesso-de-capacidade-nao-existe-em-resposta-a-plano-tarifario-dos-eua/",
     "ecdc02ba7b46fd9f",
@@ -799,10 +795,13 @@
     "33718acae05c7ab4",
     "724c63cfd93f3ed4",
     "0e8afb73d04b8b30",
-    "54cd4f8ac09d9282"
+    "54cd4f8ac09d9282",
+    "0b320e98e8912023",
+    "f30d54cf4c109c5f",
+    "https://investnews.com.br/economia/lula-sonda-trabuco-bradesco-para-governo/",
+    "4e02d973956f09e9"
   ],
   "titulos": [
-    "Transmissão da política monetária é maior no crédito rotativo e ao consumo, diz BC",
     "CCJ do Senado aprova projeto que endurece punições para fraudes financeiras",
     "Trabalhador branco pode ganhar cerca de 70% a mais que o negro no Brasil, aponta IBGE",
     "Banco Mundial estuda uso de stablecoins para modernizar pagamentos",
@@ -1601,10 +1600,10 @@
     "IPCA-15 sobe 0,22%, abaixo das estimativas; alimentos pesam",
     "Por que o mercado se anima tanto com a possibilidade de Trabuco na Fazenda?",
     "Quem domina os US$ 15 trilhões da indústria de chips",
-    "Macron diz que carne brasileira é 'dopada' e comemora bloqueio da UE ao produto"
+    "Macron diz que carne brasileira é 'dopada' e comemora bloqueio da UE ao produto",
+    "Por que a possível nomeação de Luiz Carlos Trabuco para a Fazenda é tão bem vista no mercado"
   ],
   "leads": [
-    "As inscrições para o processo seletivo temporário do Instituto Brasileiro de Geografia e Estatística (IBGE), que vai contratar profissionais para atuar no 12º Censo Agropecuário, Florestal e Aquícola de 2027, terminam nesta quarta-feira (25), às 23h59.",
     "O governo Trump deixou discretamente de lado propostas de utilizar acordos comerciais como incentivo para que a Rússia encerre a guerra na Ucrânia, depois que Moscou demonstrou pouco interesse nos projetos sugeridos para os setores de energia e aviação, informou o jornal Financial Times nesta quarta-feira (25).",
     "O Japão criou uma força-tarefa regional para ajudar países asiáticos a montar e ampliar reservas emergenciais de petróleo e a coordenar respostas conjuntas a eventual escassez. O anúncio foi feito pela primeira-ministra Sanae Takaichi em Manila, durante reunião de líderes da Comunidade Asiática de Emissões Zero, realizada em paralelo à cúpula da As",
     "Os credores que compram dívida corporativa estão mais seletivos, e as grandes empresas de tecnologia podem ter dificuldade crescente para financiar a expansão da inteligência artificial nos mercados de crédito, segundo reportagem da CNBC. A emissora americana aponta que os investidores passaram a cobrar evidências de que os gastos bilionários com I",
@@ -1853,13 +1852,10 @@
     "O IPCA-15 subiu 0,22% em novembro, após avanço de 0,32% em outubro, e ficou abaixo do piso das estimativas do mercado, de 0,27%. A prévia da inflação foi divulgada nesta quinta-feira (26) pelo IBGE e mostra desaceleração na comparação mensal.",
     "Bastou ganhar força a informação de que o presidente Luiz Inácio Lula da Silva sondou Luiz Carlos Trabuco para o Ministério da Fazenda para os mercados brasileiros dispararem. Em apenas dois pregões, o movimento foi expressivo: na quarta-feira (25) o Ibovespa avançou 1,58% e o dólar caiu 1,53%, para R$ 5,81. Nesta quinta-feira (26), com o noticiári",
     "O mercado de semicondutores movimenta mais de US$ 15 trilhões em valor de mercado combinado, mas a distribuição desse montante revela uma indústria muito mais hierarquizada do que a variedade de produtos sugere. Segundo dados referentes a novembro de 2026 reunidos pelo Visual Capitalist a partir da plataforma CompaniesMarketCap, poucas companhias c",
-    "O presidente da França, Emmanuel Macron, chamou a carne brasileira de \"dopada\" e comemorou a suspensão das importações de produtos de origem animal do Brasil pela União Europeia, que está em vigor desde 3 de setembro."
+    "O presidente da França, Emmanuel Macron, chamou a carne brasileira de \"dopada\" e comemorou a suspensão das importações de produtos de origem animal do Brasil pela União Europeia, que está em vigor desde 3 de setembro.",
+    "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795536634.76429
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795537567.368014
@@ -2558,7 +2554,6 @@
     }
   ],
   "hashes_imagens": [
-    "400d3d2221d59366",
     "2b2a7cf78aae5c69",
     "ebdd57b0dc6e4eee",
     "17286e74fb4f4f14",
@@ -2857,6 +2852,7 @@
     "cf6863f26007dde9",
     "afb36018a046c473",
     "bb5068a61ad82cfc",
-    "94029bba884cb46d"
+    "94029bba884cb46d",
+    "3a26472d4d2e22f4"
   ]
 }
