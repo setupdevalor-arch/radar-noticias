@@ -1,11 +1,5 @@
 {
   "links": [
-    "e101199af7342a01",
-    "966dd761f15c70ca",
-    "58e61edada21c344",
-    "81a9dba9d55f7c37",
-    "ae84260cca597009",
-    "fdff0844ab53e26f",
     "https://www.estadao.com.br/economia/fim-escala-6x1-marinho-ninguem-vai-morrer-comercio-nao-abrir-todos-os-dias/",
     "2d206d4309da72b1",
     "https://www.spacemoney.com.br/economia/legislacao/coreia-do-sul-propoe-liberar-icos/",
@@ -799,7 +793,13 @@
     "ec4eeb9526743b30",
     "aaa9010e16e753bf",
     "8b032120375f88b1",
-    "dc4b52d1c09648d9"
+    "dc4b52d1c09648d9",
+    "045e503d0ab58c06",
+    "8b65e5a86517227e",
+    "52891a89ca0d0a31",
+    "d5d549023d11cfa2",
+    "77969696e2733b61",
+    "6a04fafbaf00a0d6"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,10 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "petroreconcavo::PROVENTOS",
-      "ts": 1795517139.641587
-    },
     {
       "chave": "raia_drogasil::EVENTO_CORP",
       "ts": 1795517832.37808
