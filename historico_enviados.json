@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/acoes/petrobras-compra-neomille-etanol-de-milho/",
-    "578368e178fdd2eb",
-    "https://investnews.com.br/investimentos/tombo-das-bolsas-abala-carry-trade/",
-    "2c7d9708f252df52",
     "https://investnews.com.br/economia/preco-dos-alimentos-inflacao/",
     "a2eb279936b5587d",
     "https://www.mobiletime.com.br/noticias/25/11/2026/daycoval-eua-temenos/",
@@ -799,11 +795,13 @@
     "https://www.sonhoseguro.com.br/2026/11/santander-integra-seguros-a-todas-as-jornadas-do-banco-para-ampliar-base-de-segurados/",
     "4777ba8f9ef47a32",
     "https://megawhat.uol.com.br/armazenamento/cmn-reduz-taxa-do-fundo-clima-para-leilao-de-baterias-a-3-ao-ano/",
-    "eef20fd188a2bf28"
+    "eef20fd188a2bf28",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/justica-suspende-exclusao-socio-brasil-bitcoin/",
+    "54395991fe4b4024",
+    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/hglg11-fecha-aquisicao-ultima-fatia-g400/",
+    "597277de320ff8d1"
   ],
   "titulos": [
-    "A bolsa caiu, mas o risco ficou: BTG rebaixa Brasil para neutro e tira Itaú, XP e Assaí da carteira",
-    "São Paulo negocia naming rights do Morumbi com o Bradesco",
     "BB Seguridade (BBSE3) cai 11% em novembro após balanço; ação pode recuar mais?",
     "É tarde demais para a Vale (VALE3)? Por que o BTG ainda não rebaixou a recomendação para o papel",
     "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
@@ -1601,11 +1599,11 @@
     "Tribunal holandês avalia suspender venda dos Ray-Ban Meta",
     "Toffoli mantém proteção do RJ contra sanções por dívida com a União",
     "Santander integra seguros a todas as jornadas do banco para ampliar base de segurados",
-    "CMN reduz taxa do Fundo Clima para leilão de baterias a 3% ao ano"
+    "CMN reduz taxa do Fundo Clima para leilão de baterias a 3% ao ano",
+    "Justiça suspende exclusão de sócio da Brasil Bitcoin",
+    "HGLG11 fecha aquisição da última fatia do G400"
   ],
   "leads": [
-    "A Embraer afirmou que está analisando o relatório publicado nesta quarta-feira, 25, pelo governo dos Estados Unidos sobre a investigação aberta contra o Brasil com base na Seção 301. O documento indica que os americanos consideram aplicar uma nova tarifa de 10% sobre a importação de aeronaves acabadas vindas do Brasil.",
-    "O avanço do crime organizado no Brasil está tornando a operação dos serviços concedidos nas áreas de transporte mais cara e insegura, aumentando os custos para os usuários e impactando o resultado das empresas.",
     "– As vendas de novas moradias unifamiliares nos EUA dispararam em outubro, à medida que as construtoras reduziram os preços para atrair compradores, mas o aumento das taxas de ‌hipotecas continua sendo um obstáculo para a atividade geral do mercado imobiliário.",
     "O CEO da Nvidia, Jensen Huang, declarou no ano passado que o apoio dos membros de longa data do conselho, Tench Coxe, Mark Stevens e Harvey Jones, foi crucial para ajudá-lo a navegar por três décadas à frente da empresa.",
     "O governo federal deve estender por mais um mês o pagamento do subsídio de R$ 2,12 por litro de diesel vendido no país. A prorrogação poderá elevar entre R$ 8 bilhões e R$ 10,5 bilhões o custo das medidas adotadas neste ano para conter a alta dos combustíveis.",
@@ -1853,7 +1851,9 @@
     "Duas entidades holandesas de defesa do consumidor e dos direitos digitais acionaram judicialmente a Meta e a EssilorLuxottica para tentar impedir a venda dos óculos Ray-Ban Meta no país. A Consumentenbond e a Offlimits alegam que os dispositivos facilitam registros de pessoas sem consentimento e pedem a suspensão comercial até que sejam adotadas sa",
     "Decisão estende até 31 de março de 2027 a suspensão de sanções e da cobrança de garantias ligadas a empréstimos federais do RJ",
     "A compra de um ingresso para um show, a contratação de um serviço de limpeza de ar-condicionado, a aquisição de um imóvel ou de um automóvel e a necessidade de proteger financeiramente uma família são algumas das oportunidades identificadas pelo Santander para ampliar sua base de segurados. Quando a inteligência artificial detecta um pagamento pela",
-    "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%."
+    "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%.",
+    "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
+    "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência."
   ],
   "eventos_recentes": [
     {
@@ -2575,11 +2575,17 @@
     {
       "chave": "santander::EVENTO_CORP",
       "ts": 1795734071.256146
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795734733.091584
+    },
+    {
+      "chave": "hglg11::EVENTO_CORP",
+      "ts": 1795734733.091584
     }
   ],
   "hashes_imagens": [
-    "6b29610d3d131f96",
-    "795c52fe936b93d3",
     "332c893b3e68c5a1",
     "8545939ecdb7262b",
     "ab15d04d69fc7fc8",
@@ -2877,6 +2883,8 @@
     "7cc25e4db81aba97",
     "b5bc0390f8a6678a",
     "d6f1f42bee179883",
-    "44382dd9277b90da"
+    "44382dd9277b90da",
+    "61f8bf457f791b4a",
+    "4ff990e240b13f42"
   ]
 }
