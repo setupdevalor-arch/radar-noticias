@@ -1,13 +1,5 @@
 {
   "links": [
-    "ff1c7f4cfda6cb24",
-    "4fa11d1e3d81201f",
-    "d14632305e544d29",
-    "736cf110ea4cf74d",
-    "https://www.cnnbrasil.com.br/infra/vamos-ter-que-repetir-o-pre-sal-na-margem-equatorial-diz-magda/",
-    "bdd6731282262913",
-    "https://www.cnnbrasil.com.br/agro/vittia-conclui-recompra-de-45-milhoes-de-acoes-e-anuncia-novo-programa/",
-    "ec2f8693b018bf41",
     "3343feb6b712e48b",
     "https://www.infomoney.com.br/mundo/a-argentina-depois-da-motosserra-o-que-os-numeros-dizem-sobre-milei/",
     "dd8356089ed1a33f",
@@ -799,11 +791,17 @@
     "dfeff979bfb307ee",
     "57ec07d0178427f6",
     "3dd6a7a42011254a",
-    "eb93fd5d8cd0df10"
+    "eb93fd5d8cd0df10",
+    "39e037039eedb73e",
+    "99de1c71258aa9d6",
+    "644876f2291b23db",
+    "4acbd927b327a518",
+    "https://teletime.com.br/26/11/2026/vivo-tim-claro-black-friday/",
+    "8a92887010a7eb3a",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/inteligencia-artificial-vai-substituir-investidor-de-criptomoedas/",
+    "5a4c7e23f767a8b2"
   ],
   "titulos": [
-    "Quem são os 7 fundadores da Anthropic que vão ficar com US$ 18 bilhões cada na estreia da bolsa",
-    "Braga nega que haja acordo com oposição de trecho do PLP que trata de Lei Kandir",
     "Dólar a R$ 5,80 é oportunidade? Goldman vê real rendendo mais que a bolsa em 2027",
     "‘Quadro fiscal não é esse desastre que a Faria Lima acha’, diz Salto, da Warren",
     "Dividend yield do ALZC11 avança sem mudança nos dividendos",
@@ -1601,11 +1599,11 @@
     "Novas regras do BC para crédito podem atingir 20 milhões",
     "Durigan defende agilizar proibição definitiva de bets e cassinos online",
     "Peso mexicano se destaca entre piores moedas da América Latina com menor carry trade",
-    "Durigan diz que discutirá medidas fiscais com Lula nesta quinta-feira"
+    "Durigan diz que discutirá medidas fiscais com Lula nesta quinta-feira",
+    "Vivo, TIM e Claro apostam em bônus de Internet e combos na Black Friday",
+    "A inteligência artificial vai substituir o investidor de criptomoedas?"
   ],
   "leads": [
-    "Resultado representa desaceleração em relação ao 1º semestre; exportações e investimentos em máquinas recuaram no período",
-    "A missão da Amazon Leo é oferecer internet de alta velocidade a regiões remotas por meio de uma rede de milhares de satélites.",
     "A crise de liderança na Nvidia trouxe à tona uma disputa sobre modelos de inteligência artificial de código aberto, na qual o presidente-executivo, Jensen Huang, se tornou uma das vozes mais influentes em Washington a favor do desenvolvimento, pelos Estados Unidos, de uma tecnologia atualmente dominada por empresas chinesas.",
     "A pergunta que Roberto Secemski, economista-chefe do Barclays para o Brasil, mais ouviu durante um evento do banco para mais de 100 investidores locais, na semana passada, em São Paulo, foi quando os estrangeiros mudarão de humor em relação ao Brasil. Historicamente, eles têm sido menos céticos do que os investidores domésticos. Enquanto ainda dão ",
     "'Não é o sistema financeiro que que vai me ensinar a dirigir o País', diz Lula",
@@ -1853,7 +1851,9 @@
     "Medidas restringem empréstimos a inadimplentes e limitam cartões usados frequentemente no rotativo; objetivo é diminuir o endividamento",
     "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo.",
     "O peso mexicano caminha para sua maior sequência de desvalorizações em cinco anos, à medida que os investidores fogem para ativos de refúgio e a popular estratégia de carry trade se desfaz.",
-    "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas."
+    "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas.",
+    "Vivo, TIM e Claro estão apostando em bônus de Internet nos planos móveis e em pacotes que combinam conectividade, entretenimento e aparelhos na Black Friday de 2026. Em materiais encaminhados ao TELETIME, as operadoras detalharam campanhas que incluem franquias adicionais de dados, ofertas de serviços de banda larga e condições especiais para a com",
+    "As ferramentas de IA para criptomoedas já leem gráficos, resumem notícias, acompanham carteiras de grandes investidores e até enviam ordens sozinhas, então a pergunta do título deixou de ser ficção. A resposta curta é que a IA já supera as pessoas em algumas tarefas, mas substituir o investidor é outra história, porque a decisão sobre risco e objet"
   ],
   "eventos_recentes": [
     {
@@ -2555,11 +2555,21 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795711001.143721
+    },
+    {
+      "chave": "vivo::GERAL_ATIVO",
+      "ts": 1795712784.259408
+    },
+    {
+      "chave": "tim::GERAL_ATIVO",
+      "ts": 1795712784.259408
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795712784.259408
     }
   ],
   "hashes_imagens": [
-    "290d1a66d7223d49",
-    "9106ffc97f22c2db",
     "8cb501c7f911dad7",
     "ec9754883c470a23",
     "29359e5ac0b7fb09",
@@ -2857,6 +2867,8 @@
     "ae4021f079a2a035",
     "0ec3418914f04a92",
     "de8dba5502eb1217",
-    "4127dc4cb43c196c"
+    "4127dc4cb43c196c",
+    "7a5cc2cf218c23dd",
+    "34559191ca56ffe3"
   ]
 }
