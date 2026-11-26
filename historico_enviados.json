@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/infra/pl-das-baterias-pode-aumentar-conta-de-luz-em-r-62-bi-diz-consumidores/",
-    "e5d729c154d45a5f",
-    "https://www.poder360.com.br/poder-economia/pib-da-alemanha-cresce-01-no-3o-tri-abaixo-da-estimativa-inicial/",
-    "d2a1325523f32b65",
-    "554d46e62dfc3a10",
-    "https://investnews.com.br/the-wall-street-journal/amazon-enfrenta-dificuldades-para-tirar-do-papel-rival-da-starlink/",
     "cb7fa8cc9522bc54",
     "0d679e239f5f61bb",
     "d737a90ca84a657a",
@@ -799,10 +793,15 @@
     "https://www.spacemoney.com.br/agronegocio/deficit-armazenagem-mato-grosso/",
     "c8965a8357eb0ff1",
     "af7736edee618e50",
-    "9873c23ab3ca2c1b"
+    "9873c23ab3ca2c1b",
+    "7d2acb07b097f661",
+    "3166793de7b46c90",
+    "c3971ec5a354ad13",
+    "7676e9bf8d1dd11a",
+    "https://www.cnnbrasil.com.br/infra/infraestrutura-ve-desafios-regulatorios-para-novo-ciclo-de-investimentos/",
+    "53b8b47718b677f6"
   ],
   "titulos": [
-    "Construções de moradias iniciadas nos EUA avançam 9,9% em outubro ante setembro",
     "Renda Fixa Hoje: confira as taxas de CDBs, LCIs e LCAs na XP nesta quarta-feira (18)",
     "CDI alto mudou o jogo: por que gestor abandonou os fundos de CRI e mira tijolo?",
     "Risco de derrota no ajuste fiscal mostra que Lula terá de ceder mais espaço ao Centrão e partidos da Frente Ampla",
@@ -1601,10 +1600,10 @@
     "Sabesp (SBSP3) tem dois catalisadores no radar e BBI reitera recomendação de compra",
     "Brasil bate recorde de demanda de energia pelo terceiro dia consecutivo",
     "Disney derrota Trump na Justiça em disputa que ameaça a rede ABC",
-    "Déficit de armazéns em MT deve crescer 53% até 2035/36"
+    "Déficit de armazéns em MT deve crescer 53% até 2035/36",
+    "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos"
   ],
   "leads": [
-    "A CIA e a Oficina do Diretor de Inteligência Nacional dos Estados Unidos detectaram uma invasão cibernética que expôs parte de informações não classificadas. O ataque atingiu uma rede usada para identificar dados de inteligência a partir de materiais públicos. Até o momento, não se sabe quais dados foram comprometidos nem a extensão do incidente, e",
     "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana.",
     "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes.",
     "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
@@ -1853,7 +1852,8 @@
     "Após os resultados sólidos do terceiro trimestre de 2026, que mostraram controle das despesas operacionais mesmo diante dos custos não recorrentes anunciados no trimestre anterior, o Bradesco BBI destaca dois próximos catalisadores para a Sabesp (SBSP3).",
     "O Sistema Interligado Nacional (SIN) registrou, nesta quarta-feira, 25 de novembro, um novo recorde de carga instantânea de energia pelo terceiro dia consecutivo, atingindo 108.189 MW às 11h29, segundo dados do Operador Nacional do Sistema Elétrico (ONS).",
     "A Walt Disney conquistou uma importante vitória preliminar na Justiça em sua disputa com o governo Donald Trump, centrada em liberdade de expressão.",
-    "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década."
+    "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década.",
+    "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos."
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "2c0f0e8b231ef5dd",
     "4d21022723933b6c",
     "07c1a506cfd25994",
     "ac03f63bd592d33e",
@@ -2861,6 +2860,7 @@
     "07ede6246bee8d9d",
     "77268374bcfbc702",
     "6118fce95526c748",
-    "e67a7dc18de6cbd9"
+    "e67a7dc18de6cbd9",
+    "f7d4a325050bf2d0"
   ]
 }
