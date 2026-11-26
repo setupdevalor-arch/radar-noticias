@@ -1,9 +1,5 @@
 {
   "links": [
-    "ba5393683b19ad46",
-    "https://telesintese.com.br/aprovado-o-pl-dos-postes-a-disputa-passa-a-ser-o-que-entra-no-preco/",
-    "ba3d8dbe0b1c1aee",
-    "https://www.suno.com.br/noticias/hglg11-lucro-outubro-dividendos-incorporacao-lvbi11/",
     "0df64fe3b18130d1",
     "63ddcc8f8cd64c2f",
     "a231246d73545375",
@@ -799,10 +795,13 @@
     "71c9e1307b0dc65a",
     "9426dbb29bc04b43",
     "https://www.estadao.com.br/economia/negocios/amazon-que-investiu-r-75-bi-no-brasil-ve-o-pais-com-potencial-quase-ilimitado-diz-ceo/",
-    "6a78ff7196b3e87d"
+    "6a78ff7196b3e87d",
+    "f92ad86692638251",
+    "9a1bee2e1c11c0fe",
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/consumo-de-energia-cresce-51-na-energisa-enquanto-gas-para-termicas-cai-727/",
+    "062873025a58d972"
   ],
   "titulos": [
-    "COP31: 'Se você acha que as mudanças climáticas não são nada, venha ao Nepal', diz ministra",
     "Por que a picanha se tornou a protagonista da churrasqueira brasileira (e mundial)",
     "Não é só a Caixa: CEO da Direcional (DIRR3) aponta outro motivo por trás da aceleração dos distratos nas construtoras do Minha Casa Minha Vida",
     "Binance revela como agiu após ataque de US$ 6,3 bilhões e faz recomendações de segurança para investidores",
@@ -1601,10 +1600,10 @@
     "BNDES prevê mais três emissões de debêntures de infraestrutura até dezembro",
     "Com novo sócio, Hilton de Copacabana busca R$ 100 milhões no mercado para bancar reforma",
     "Chip de memória da Huawei para IA pressiona ações de Samsung, SK Hynix e Micron",
-    "Amazon, que investiu R$ 75 bi no Brasil, vê o País com potencial ‘quase ilimitado’, diz CEO"
+    "Amazon, que investiu R$ 75 bi no Brasil, vê o País com potencial ‘quase ilimitado’, diz CEO",
+    "Consumo de energia cresce 5,1% na Energisa, enquanto gás para térmicas cai 72,7%"
   ],
   "leads": [
-    "Com mais de 4 mil participantes, o Profit Summit 2026 registrou recorde de público, segundo dados divulgados pela Nelogica.",
     "Bloomberg Línea — O acirramento da disputa no mercado brasileiro de entregas levou a gigante holandesa Prosus a pisar no acelerador dos investimentos no iFood.",
     "– A Taurus ‌(TASA4) anunciou nesta terça-feira assinatura de ‌memorando de entendimento com a Indústria de Material Bélico ‌do Brasil (Imbel) para desenvolvimento, fabricação e comercialização de sistemas de defesa e segurança.",
     "– A política de preços de combustíveis da Petrobras (PETR4) permanece ‌válida e adequada, embora a companhia continue acompanhando a forte volatilidade dos preços ‌internacionais para avaliar se serão necessários ajustes conjunturais, disse nesta terça-feira a diretora executiva de Logística, Comercialização e Mercados, Angélica Laureano.",
@@ -1853,7 +1852,8 @@
     "Segundo Borim, as emissões estão sendo feitas, contemplando quatro títulos desse tipo até o momento.",
     "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
     "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA.",
-    "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. "
+    "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. ",
+    "O consumo consolidado de energia elétrica do grupo Energisa alcançou 4.046 GWh em outubro, volume 5,1% superior ao registrado no mesmo período de 2025. Por outro lado, o volume de gás natural destinado às usinas termelétricas recuou 72,7% no mesmo período."
   ],
   "eventos_recentes": [
     {
@@ -2579,10 +2579,13 @@
     {
       "chave": "amazon::GERAL_ATIVO",
       "ts": 1795716130.933674
+    },
+    {
+      "chave": "energisa::GERAL_ATIVO",
+      "ts": 1795716463.239064
     }
   ],
   "hashes_imagens": [
-    "edccccd59b95a6d4",
     "b5ebba9ef9d3ac38",
     "ace08cf6d3cdb461",
     "6b61ad3fcd1a00cf",
@@ -2881,6 +2884,7 @@
     "cde465365e789d95",
     "2df79377f3ac4a79",
     "b6445cc8fa9c3add",
-    "975a9cdcb2314926"
+    "975a9cdcb2314926",
+    "54200c343e4f4104"
   ]
 }
