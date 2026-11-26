@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/politica/ajuste-fiscal-de-r-50-bi-foi-aprovado-por-que-lula-ja-prepara-outro/",
-    "b97fde33c813388f",
-    "https://borainvestir.b3.com.br/noticias/mercado/mercados-hoje-ajuste-fiscal-e-inflacao-nos-eua-ficam-no-radar-nesta-quarta-feira/",
-    "41fd7eab7246651b",
-    "https://bmcnews.com.br/empresas-e-negocios/caixa-analisa-ativos-do-brb-para-possivel-aquisicao-apos-crise-do-caso-master/",
-    "9c3604bb8361501f",
-    "https://cqcs.com.br/noticia/seguro-de-carros-eletricos-e-hibridos-segue-mais-caro-o-que-explica-a-diferenca-e-o-que-muda-para-o-corretor/",
     "ba5393683b19ad46",
     "https://telesintese.com.br/aprovado-o-pl-dos-postes-a-disputa-passa-a-ser-o-que-entra-no-preco/",
     "ba3d8dbe0b1c1aee",
@@ -799,10 +792,16 @@
     "96f808073fde0aaf",
     "9493055ffe2d2160",
     "e4b3a049c9fb0718",
-    "83463807190596d4"
+    "83463807190596d4",
+    "d9bbcd79e0ee8b6d",
+    "bf99212991d41ddf",
+    "f427ef0940fb2e89",
+    "71c9e1307b0dc65a",
+    "9426dbb29bc04b43",
+    "https://www.estadao.com.br/economia/negocios/amazon-que-investiu-r-75-bi-no-brasil-ve-o-pais-com-potencial-quase-ilimitado-diz-ceo/",
+    "6a78ff7196b3e87d"
   ],
   "titulos": [
-    "Durigan: governo aproveitou oportunidade para aprovar PLP, mas ajuste não para por aí",
     "COP31: 'Se você acha que as mudanças climáticas não são nada, venha ao Nepal', diz ministra",
     "Por que a picanha se tornou a protagonista da churrasqueira brasileira (e mundial)",
     "Não é só a Caixa: CEO da Direcional (DIRR3) aponta outro motivo por trás da aceleração dos distratos nas construtoras do Minha Casa Minha Vida",
@@ -1601,10 +1600,10 @@
     "Depois do Itaú, Santander avalia entrar no Minha Casa Minha Vida",
     "BNDES prevê mais três emissões de debêntures de infraestrutura até dezembro",
     "Com novo sócio, Hilton de Copacabana busca R$ 100 milhões no mercado para bancar reforma",
-    "Chip de memória da Huawei para IA pressiona ações de Samsung, SK Hynix e Micron"
+    "Chip de memória da Huawei para IA pressiona ações de Samsung, SK Hynix e Micron",
+    "Amazon, que investiu R$ 75 bi no Brasil, vê o País com potencial ‘quase ilimitado’, diz CEO"
   ],
   "leads": [
-    "Um relatório da Ashmore, uma das maiores gestoras internacionais especializadas em mercados emergentes, viralizou nos últimos dias ao traçar um cenário sombrio para a economia brasileira.",
     "Com mais de 4 mil participantes, o Profit Summit 2026 registrou recorde de público, segundo dados divulgados pela Nelogica.",
     "Bloomberg Línea — O acirramento da disputa no mercado brasileiro de entregas levou a gigante holandesa Prosus a pisar no acelerador dos investimentos no iFood.",
     "– A Taurus ‌(TASA4) anunciou nesta terça-feira assinatura de ‌memorando de entendimento com a Indústria de Material Bélico ‌do Brasil (Imbel) para desenvolvimento, fabricação e comercialização de sistemas de defesa e segurança.",
@@ -1853,7 +1852,8 @@
     "Banco confirmou que estuda operar linhas do programa habitacional; movimento ocorre uma semana após o Itaú anunciar entrada nas faixas de renda média e no Pró-Cotista.",
     "Segundo Borim, as emissões estão sendo feitas, contemplando quatro títulos desse tipo até o momento.",
     "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
-    "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA."
+    "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA.",
+    "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. "
   ],
   "eventos_recentes": [
     {
@@ -2575,10 +2575,13 @@
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795715462.792742
+    },
+    {
+      "chave": "amazon::GERAL_ATIVO",
+      "ts": 1795716130.933674
     }
   ],
   "hashes_imagens": [
-    "b7cd3466ed744532",
     "edccccd59b95a6d4",
     "b5ebba9ef9d3ac38",
     "ace08cf6d3cdb461",
@@ -2877,6 +2880,7 @@
     "6f4ac65569a6ca54",
     "cde465365e789d95",
     "2df79377f3ac4a79",
-    "b6445cc8fa9c3add"
+    "b6445cc8fa9c3add",
+    "975a9cdcb2314926"
   ]
 }
