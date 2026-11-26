@@ -1,11 +1,5 @@
 {
   "links": [
-    "3060df80b14d8136",
-    "17bc0ec4363a6d7c",
-    "3e8888adc6e49471",
-    "77ce41d84293be87",
-    "1f6e66aa632a6af0",
-    "7286264a6ab41168",
     "https://www.cnnbrasil.com.br/infra/justica-federal-nega-pedido-de-suspensao-do-leilao-de-baterias/",
     "c9c58b72e841aa42",
     "https://www.spacemoney.com.br/economia/ford-bronco-hibrido-brasil-2027/",
@@ -799,11 +793,15 @@
     "b0433172a6bfd836",
     "https://www.spacemoney.com.br/tecnologia/ti-mapa-50-anos-digitalizacao/",
     "c63811f1b580ac80",
-    "942e4ca5e7372306"
+    "942e4ca5e7372306",
+    "2d6dd639b1a1e921",
+    "373ddbcd270ee214",
+    "https://agenciainfra.com/blog/mme-descarta-risco-de-desabastecimento-de-etanol-anidro-na-entressafra/?utm_source=rss&utm_medium=rss&utm_campaign=mme-descarta-risco-de-desabastecimento-de-etanol-anidro-na-entressafra",
+    "e8227a21f82c9579",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/pix-tera-novas-regras-de-seguranca-e-melhorias-em-2027",
+    "a3b895f9a1b214f8"
   ],
   "titulos": [
-    "Senado aprova pacote fiscal apresentado pelo governo Lula; texto vai à Câmara",
-    "Bolsas de NY fecham sem direção única com balanço da Nvidia e ata do Fed",
     "O que é a Lei Kandir, que motivou acordo no Senado e quase travou ajuste fiscal",
     "Senado aprova projeto de ajuste fiscal do governo, com mudanças acatadas pelo relator",
     "Petróleo fecha em queda em meio à alta do dólar e recuperação da oferta",
@@ -1601,11 +1599,11 @@
     "STF: piso de professores fica restrito ao vencimento inicial",
     "Seguro rural mira 2027 com previsibilidade orçamentária",
     "CNA rebate Macron e vê protecionismo em crítica à carne",
-    "TI do Mapa chega aos 50 anos com digitalização no agro"
+    "TI do Mapa chega aos 50 anos com digitalização no agro",
+    "MME descarta risco de desabastecimento de etanol anidro na entressafra",
+    "Pix terá novas regras de segurança e melhorias em 2027"
   ],
   "leads": [
-    "A economia brasileira vai manter a tendência de desaceleração no próximo ano, com uma expectativa de crescimento do PIB de cerca de 0,6% em 2027, mas esse esfriamento não deve provocar uma desinflação imediata, projeta o banco de investimentos JP Morgan. “Nosso cenário-base incorpora parte desses efeitos e prevê que a inflação cheia se aproxime de ",
-    "Segundo Valdo Cruz, em seu blog no g1, auxiliares do presidente Lula avaliam a possibilidade de pedir aos presidentes da Câmara e do Senado uma sessão legislativa extra em janeiro para votar a proposta de emenda à Constituição com a segunda fase do ajuste fiscal.",
     "Até a terça-feira (25), a Ucrânia havia colhido 52,3 milhões de t de grãos, volume que cobre 85% dos 9,86 milhões de ha semeados, segundo o Ministério da Política Agrária e Alimentação. O rendimento médio dos cereais e leguminosas ficou em 5,24 t/ha.",
     "O governo dos Estados Unidos anunciou nesta quarta-feira (25) uma proposta de elevação das tarifas de importação de açúcar bruto e refinado como parte da estratégia para ampliar a pressão sobre o Brasil nas negociações comerciais entre os dois países.",
     "O financiamento de veículos elétricos e híbridos mais que dobrou no Brasil em 2026. De janeiro a outubro, foram financiadas 392.111 unidades, crescimento de 142,5% em relação às 161.700 registradas no mesmo período de 2025. Os dados são da Trillia, linha de negócios da B3 dedicada a Dados, Analytics e Inteligência Artificial. Com o avanço, os eletr",
@@ -1853,13 +1851,11 @@
     "O Supremo Tribunal Federal (STF) decidiu nesta quinta-feira (26) que o piso nacional do magistério da educação básica corresponde ao vencimento inicial da carreira e que os efeitos sobre os demais patamares salariais dependem de norma editada por cada ente federativo, segundo o g1. A decisão tem repercussão geral e serve de referência para os tribu",
     "O Ministério da Agricultura e Pecuária (Mapa) promoveu na quinta-feira (26) um workshop para avaliar o desempenho do seguro rural em 2026 e discutir as perspectivas do Programa de Subvenção ao Prêmio do Seguro Rural (PSR) para 2027. Com o tema “Resultados de 2026, Interfaces e Perspectivas para 2027”, o encontro foi organizado pela Secretaria de Po",
     "A Confederação da Agricultura e Pecuária do Brasil (CNA) manifestou indignação nesta quinta-feira, 26, com a fala de Emmanuel Macron, presidente da França, que tratou como “dopada” a carne brasileira. A entidade classificou a declaração como protecionismo comercial e sem base técnica.",
-    "A Subsecretaria de Tecnologia da Informação (STI) do Ministério da Agricultura e Pecuária (Mapa) chegou aos 50 anos nesta quinta (26), em evento na sede da pasta. A estrutura vigente foi definida em 2023 pelo Decreto nº 11.332, que converteu o antigo Departamento de Tecnologia da Informação (DTI) na subsecretaria. Hoje, a STI concentra a governança"
+    "A Subsecretaria de Tecnologia da Informação (STI) do Ministério da Agricultura e Pecuária (Mapa) chegou aos 50 anos nesta quinta (26), em evento na sede da pasta. A estrutura vigente foi definida em 2023 pelo Decreto nº 11.332, que converteu o antigo Departamento de Tecnologia da Informação (DTI) na subsecretaria. Hoje, a STI concentra a governança",
+    "O MME (Ministério de Minas e Energia) informou, nesta quinta-feira (26), que não identificou riscos de desabastecimento de etanol anidro durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta-feira (25), durante a sexta reunião de monitoramento do abastecimento de etanol da safra 2026/2027.",
+    "O Pix terá novas funcionalidades e mecanismos de segurança em 2027."
   ],
   "eventos_recentes": [
-    {
-      "chave": "braskem::GERAL_ATIVO",
-      "ts": 1795556298.089843
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795557698.029009
@@ -2574,8 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "62fc542cc615f556",
-    "fb996e2f273fa85f",
     "81fc9d28e1c38750",
     "c590c98a0366364c",
     "07d5061007488357",
@@ -2873,6 +2867,8 @@
     "cf0d49ef14609dff",
     "5f8820f49e362b40",
     "ad5ef701f6568951",
-    "fde1015787372f9e"
+    "fde1015787372f9e",
+    "dbfdd0fe77b30f79",
+    "fbe23082af89c11e"
   ]
 }
