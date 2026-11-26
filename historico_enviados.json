@@ -1,10 +1,5 @@
 {
   "links": [
-    "31313544a4c7fadb",
-    "a9d01aa99216a055",
-    "adacb27e63c8019f",
-    "d10450b14d3b49e7",
-    "299ce38a9a474f29",
     "8a2015e1bb65aa25",
     "7d9a99679939f0f9",
     "3610f9a109404d3f",
@@ -799,11 +794,14 @@
     "https://www.moneytimes.com.br/governo-lula-reage-a-declaracoes-de-macron-sobre-carne-brasileira/",
     "70ffcd1701874c02",
     "https://neofeed.com.br/negocios/o-cashback-de-us-35-bilhoes-da-citadel/",
-    "1958b5b321861889"
+    "1958b5b321861889",
+    "4269a211ad29cc5f",
+    "https://www.moneytimes.com.br/csn-elege-ex-presidente-da-cosan-como-novo-diretor-de-financas/",
+    "c580bc2712496ff9",
+    "https://www.poder360.com.br/poder-economia/relembre-quais-ministros-da-fazenda-vieram-do-mercado-financeiro/",
+    "cce7b0c9e7d68d2e"
   ],
   "titulos": [
-    "CAIXA Seguridade registra lucro de R$ 1,2 bilhão no terceiro trimestre",
-    "NOVO11: ETF reúne Nubank, Itaú, Petrobras e Mercado Livre em uma só cota",
     "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio",
     "AXIA3: Axia Energia divulga rating e cronograma da 15ª emissão",
     "Assembleia sobre a OPA da Unifique segue em aberto e será retomada no dia 23",
@@ -1601,11 +1599,11 @@
     "CMN: Limite de crédito para Estados, DF e municípios sobe em R$ 1 bilhão, para R$ 31,625 bilhões",
     "Tecnologia reaproveita baterias de carros elétricos para armazenar energia solar",
     "Governo Lula responde Macron após declarações sobre a carne brasileira",
-    "O “cashback” de US$ 3,5 bilhões da Citadel"
+    "O “cashback” de US$ 3,5 bilhões da Citadel",
+    "CSN elege ex-presidente da Cosan como novo diretor de finanças",
+    "Relembre quais ministros da Fazenda vieram do mercado financeiro"
   ],
   "leads": [
-    "A Justiça Federal do Distrito Federal negou nesta quarta-feira (25) um pedido de tutela de urgência que buscava suspender a realização do primeiro leilão para contratação de baterias para o setor elétrico brasileiro, marcado para a próxima semana.",
-    "A Ford programou para 2027 a chegada de três novidades em SUVs ao Brasil, entre elas o Bronco com motorização híbrida — a primeira da linha. O anúncio ocorreu nesta quarta-feira (25) e foi noticiado pelo g1.",
     "O g1 informou nesta quarta-feira (25) que as bolsas de Nova York enfrentavam um dia de perdas expressivas, afetadas por uma nova proposta tarifária do governo dos Estados Unidos e por uma liquidação de ações de empresas de inteligência artificial.",
     "As metas de remessas para 2027 foram revistas para baixo por fabricantes como Apple, Samsung e Xiaomi, além de outras empresas do setor. O movimento ocorre em meio à alta no preço de chips de memória e à expectativa de retração nas vendas globais.",
     "Os investimentos ligados a letras financeiras foram o destaque da renda fixa na B3 em outubro. Os índices que acompanham as debêntures e os títulos públicos atrelados à Selic também integram Top 5 do mês entre os indicadores calculados pela bolsa do Brasil.",
@@ -1853,7 +1851,9 @@
     "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
     "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
     "O governo brasileiro lamentou nesta quinta-feira (26) declarações do presidente da França, Emmanuel Macron, que na véspera se referiu à carne brasileira como “dopada” ao celebrar restrições impostas pela União Europeia a produtos brasileiros.",
-    "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos."
+    "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos.",
+    "A CSN anunciou nesta quinta-feira (26) que seu conselho de administração elegeu o executivo Mario Augusto da Silva como o novo diretor financeiro da companhia, no lugar do presidente-executivo, Fabio Schvartsman, que ocupa o cargo interinamente.",
+    "Assim como Trabuco, Joaquim Levy fez carreira no Bradesco; Henrique Meirelles comandou o BankBoston e Guedes fundou o Pactual"
   ],
   "eventos_recentes": [
     {
@@ -2571,11 +2571,13 @@
     {
       "chave": "hglg11::EVENTO_CORP",
       "ts": 1795734733.091584
+    },
+    {
+      "chave": "cosan::GERAL_ATIVO",
+      "ts": 1795736475.189557
     }
   ],
   "hashes_imagens": [
-    "c3e962af2743afa2",
-    "9d77f9b07b184163",
     "cff3159a051386f4",
     "044513e1da654fb7",
     "1e89e9c68a94fdfc",
@@ -2873,6 +2875,8 @@
     "6469c2f822a196ff",
     "88619c4583900752",
     "a8fbcf3c3baf680d",
-    "c43eaee50ba69630"
+    "c43eaee50ba69630",
+    "08b96d2005c43701",
+    "2649dc73c3d51188"
   ]
 }
