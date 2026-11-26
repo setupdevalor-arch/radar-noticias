@@ -1,15 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/economia/vai-viajar-exterior-como-economizar-dolar/",
-    "26125b811fa49dce",
-    "https://www.infomoney.com.br/onde-investir/fiis-alzr11-snel11-e-xpml11-pagam-dividendos-hoje-veja-valores-e-yields/",
-    "a519a682e75ab6da",
-    "defaf5b53a06c5aa",
-    "5cd7cbbcaa0a783e",
-    "f79cb75bb80ed431",
-    "7015bfd74921fcd1",
-    "139a16cafe6b6d9e",
-    "8c589c7593261dc1",
     "a097ae708dcdccd9",
     "53d84b689b4372b8",
     "425d6de2bc1d5e5b",
@@ -799,13 +789,19 @@
     "https://www.spacemoney.com.br/economia/legislacao/japao-regulacao-defi-carteiras-autocustodia/",
     "8e753a98099cd20e",
     "https://www.seudinheiro.com/2026/economia/agu-derruba-liminar-que-isentava-grandes-operadoras-de-cumprir-normas-do-vale-alimentacao-cbcb/",
-    "e64100d9c1a376c8"
+    "e64100d9c1a376c8",
+    "9a7f3912228d1fe6",
+    "c75120a9937fccf9",
+    "https://www.poder360.com.br/poder-governo/governo-lula-propoe-diversificar-exportacoes-de-avioes-a-embraer/",
+    "4b80fee9a3914d4b",
+    "https://www.cnnbrasil.com.br/politica/guilherme-boulos-trabalha-em-contraponto-ao-pacote-de-ajuste-fiscal/",
+    "cd9d21155c38ce50",
+    "https://www.poder360.com.br/poder-tech/anthropic-paga-autores-que-tiveram-obras-usadas-ilegalmente-por-ia/",
+    "906e1ae2549bace6",
+    "https://www.suno.com.br/noticias/totvs-tots3-acoes-disparam-bolsa-hoje/",
+    "e8c116d19317ebdd"
   ],
   "titulos": [
-    "Claude passa o ChatGPT e fica com 56% do gasto com IA nos cartões corporativos, diz Clara",
-    "IFIX recua e termina pregão perto da mínima do ano",
-    "Pessoa física impulsiona compras de FIIs e supera estrangeiros",
-    "Ibovespa perde mais de 2 mil pontos, dólar chega a R$ 5,86 e Vale (VALE3) cai pela 7ª vez",
     "Ibovespa perde os 168 mil pontos com incertezas fiscais e juros dos EUA no radar",
     "Ibovespa fecha em queda com receios sobre cenário fiscal e juro maior nos EUA",
     "Vitória do governo: Senado rejeita destaques e mantem plano fiscal; projeto segue para Câmara",
@@ -1601,13 +1597,13 @@
     "Dólar futuro cai mais de 2% após notícia de encontro entre Trabuco e Lula em Brasília",
     "Silveira escolhe três diretores substitutos para a ANM",
     "Japão mira DeFi e carteiras de autocustódia",
-    "AGU derruba liminar que isentava grandes operadoras de cumprir normas do vale-alimentação"
+    "AGU derruba liminar que isentava grandes operadoras de cumprir normas do vale-alimentação",
+    "Governo Lula propõe diversificar exportações de aviões a Embraer",
+    "Guilherme Boulos trabalha em contraponto ao pacote de ajuste fiscal",
+    "Anthropic paga autores que tiveram obras usadas ilegalmente por IA",
+    "TOTVS (TOTS3) dispara mais de 8% e entra na festa da Bolsa; veja o que está no radar"
   ],
   "leads": [
-    "Os mercados globais operam sob pressão nesta quarta-feira, 25, à espera do índice de preços de gastos com consumo pessoal (PCE) de outubro dos Estados Unidos e diante da possibilidade de uma nova rodada de tarifas comerciais do governo de Donald Trump. O cenário de aversão ao risco derruba bolsas na Ásia, mantém os futuros de Nova York no vermelho ",
-    "Uma combinação de tempestades nas duas costas dos Estados Unidos ameaça as viagens de Thanksgiving, feriado celebrado nesta quinta-feira, 26 de novembro, com chuva forte, rajadas que podem superar 60 mph e risco de enchentes costeiras. Mais de 81 milhões de pessoas devem se deslocar no período, segundo projeção da AAA, enquanto companhias aéreas já",
-    "O ministro Luiz Fux, do STF (Supremo Tribunal Federal), negou um pedido do BRB (Banco Regional de Brasília) para prorrogar um contrato da instituição com o TJ-BA (Tribunal de Justiça da Bahia) sobre a custódia de cerca de R$ 2 bilhões em recursos de precatórios.",
-    "Os Estados Unidos propuseram novas tarifas sobre 14 parceiros comerciais, entre eles China, União Europeia, Japão e Índia, segundo a CNBC. A investida amplia a ofensiva tarifária do presidente Donald Trump mesmo depois de a Suprema Corte derrubar boa parte das sobretaxas anteriores.",
     "A Tecto Data Centers anunciou hoje (25) a implantação de seu primeiro data center em Pernambuco. Batizado de TREC1, o empreendimento terá capacidade inicial de 1 MW, expansível a 6 MW, e previsão de entrada em operação no primeiro trimestre de 2027. O projeto integra o plano de investimentos de US$ 2 bilhões anunciado pela companhia em abril deste ",
     "O Banco Genial intermediou a venda de R$ 92,25 milhões em títulos do Banco Master a institutos de previdência de servidores de seis municípios entre março e maio de 2024. As operações constam de mensagens e de uma planilha apreendidas pela Polícia Federal (PF).",
     "A avaliação sobre a capacidade das empresas públicas que administram portos no Brasil pode mudar para ampliar a autonomia dessas estatais. É o que propõe a consulta pública lançada pelo MPor (Ministério de Portos e Aeroportos), que pretende alterar índices econômicos de medição que atualmente dificultam a autonomia dessas companhias.",
@@ -1853,7 +1849,11 @@
     "O contrato de dólar futuro (WDOF27) recua mais de 2% na tarde desta quinta-feira (26) após notícia do jornal O Estado de S. Paulo de que o presidente do conselho de administração do Bradesco, Luiz Carlos Trabuco Cappi, chegou a Brasília para se encontrar com Lula no Palácio da Alvorada. A queda se intensificou por volta das 17h30 (horário de Brasíl",
     "O ministro de Minas e Energia, Alexandre Silveira, definiu os nomes dos três superintendentes da ANM (Agência Nacional de Mineração) que vão assumir cadeiras de diretores substitutos na Diretoria Colegiada. São eles: Inara Oliveira Barbosa, André Elias Marques e Aline Fernandes das Chagas.",
     "O Japão avalia novas regras para finanças descentralizadas (DeFi) e carteiras de autocustódia, segundo o Cointelegraph. A Agência de Serviços Financeiros (FSA) busca reduzir riscos de financiamento ilícito no ambiente on-chain.",
-    "TRF1 mantém regras do PAT para empresas de VA e VR, com teto de taxas, prazo de repasse e interoperabilidade"
+    "TRF1 mantém regras do PAT para empresas de VA e VR, com teto de taxas, prazo de repasse e interoperabilidade",
+    "Chanceler Mauro Vieira se reuniu com presidente da empresa após anúncio de novas tarifas dos EUA",
+    "O ministro-chefe da Secretaria-Geral da Presidência, Guilherme Boulos (PSOL-SP), tem atuado como contraponto às propostas de ajuste fiscal defendidas por agentes do mercado financeiro.",
+    "Indenizações são parte de acordo de US$ 1,5 bilhão fechado pela dona do Claude em 2025 para encerrar uma ação por violação de direitos autorais",
+    "A Bolsa brasileira resolveu acelerar nesta quinta-feira (26), e a TOTVS (TOTS3) pegou carona no movimento com uma das maiores valorizações do Ibovespa. As ações da empresa brasileira de tecnologia, especializada em softwares de gestão empresarial, chegaram a subir 8,49% por volta das 14h40, em um pregão marcado pelo otimismo dos investidores após a"
   ],
   "eventos_recentes": [
     {
@@ -2571,13 +2571,17 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795726796.977134
+    },
+    {
+      "chave": "embraer::GERAL_ATIVO",
+      "ts": 1795727180.542525
+    },
+    {
+      "chave": "totvs::GERAL_ATIVO",
+      "ts": 1795727180.542525
     }
   ],
   "hashes_imagens": [
-    "f35351c05b33067b",
-    "b1582f7d6147d82b",
-    "8629c3ec1543ddbb",
-    "7e7e124a10fb4658",
     "30ce5ccabccecf42",
     "70ef74244428f58d",
     "20279c2e14a14655",
@@ -2873,6 +2877,10 @@
     "3b2e8df89527cd84",
     "098f487b5d70c2e0",
     "ef14982e2a0f8b08",
-    "c7fdc40f8626ffed"
+    "c7fdc40f8626ffed",
+    "8a7ae5d7d227e648",
+    "592861fa5ca26001",
+    "547ff77cae11a467",
+    "23a9bf508d3d944e"
   ]
 }
