@@ -1,8 +1,5 @@
 {
   "links": [
-    "be8a36fe5bc882ec",
-    "1f5b049df0bba489",
-    "24fb064161667681",
     "https://www.bloomberglinea.com.br/negocios/ceo-da-latam-ve-demanda-estavel-e-mantem-planos-com-jatos-da-embraer-no-brasil/",
     "c5185144d5cbb3ea",
     "aefccc4c1e1cd0b4",
@@ -799,10 +796,12 @@
     "fbe8213c1066f7d0",
     "7cef5edf15e40a2a",
     "a5fc217e19a60fe1",
-    "6ee41721997eaa3d"
+    "6ee41721997eaa3d",
+    "6532674e7436fb0e",
+    "https://investnews.com.br/economia/acordo-assegura-nomeacao-de-pablo-hernandez-de-cos-como-futuro-presidente-do-bce/",
+    "b383d2b42f512fd0"
   ],
   "titulos": [
-    "CDI alto mudou o jogo: por que gestor abandonou os fundos de CRI e mira tijolo?",
     "Risco de derrota no ajuste fiscal mostra que Lula terá de ceder mais espaço ao Centrão e partidos da Frente Ampla",
     "A WeWork valia US$ 47 bilhões e devia outros 47 em aluguel: o que a queda ensina sobre valuation",
     "Monitor do PIB medido pela FGV aponta queda de 0,2% no 3º trimestre ante 2º trimestre",
@@ -1601,10 +1600,10 @@
     "Disney derrota Trump na Justiça em disputa que ameaça a rede ABC",
     "Déficit de armazéns em MT deve crescer 53% até 2035/36",
     "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos",
-    "Chips superam petróleo pela 1ª vez nas exportações globais"
+    "Chips superam petróleo pela 1ª vez nas exportações globais",
+    "Acordo assegura nomeação de Pablo Hernández de Cos como futuro presidente do BCE"
   ],
   "leads": [
-    "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes.",
     "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
     "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
     "Bloomberg Línea — O produtor de médio e grande porte demanda mecanização e armazenagem sofisticadas, mas com a elevação da taxa de juros nos últimos dois anos, os mais alavancados enfrentaram pressão sobre as margens, com os preços das commodities internacionais caindo e, dos insumos, subindo.",
@@ -1853,13 +1852,10 @@
     "A Walt Disney conquistou uma importante vitória preliminar na Justiça em sua disputa com o governo Donald Trump, centrada em liberdade de expressão.",
     "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década.",
     "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos.",
-    "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre."
+    "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre.",
+    "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida."
   ],
   "eventos_recentes": [
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795532906.333606
-    },
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795533342.911868
@@ -2566,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "07c1a506cfd25994",
     "ac03f63bd592d33e",
     "8b317a287717e568",
     "67acd07f6e9653d5",
@@ -2865,6 +2860,7 @@
     "6118fce95526c748",
     "e67a7dc18de6cbd9",
     "f7d4a325050bf2d0",
-    "3a3771d0f1d73a76"
+    "3a3771d0f1d73a76",
+    "2885a1b954f7caff"
   ]
 }
