@@ -1,12 +1,5 @@
 {
   "links": [
-    "1b2716b2f24f347e",
-    "36090b96d87a2f0a",
-    "eb42bbd15c7bb694",
-    "20184efee171c6e2",
-    "905b7dd283663ede",
-    "a8a1d40c340e6ddf",
-    "5ff1ee2415ad59b6",
     "ed938177b291732f",
     "c5e2d030dea626ec",
     "https://www.moneytimes.com.br/raizen-raiz55-esclarece-exercicio-de-preferencia-em-aumento-de-capital-de-ate-r-398-bilhoes-veja-lmrs/",
@@ -799,7 +792,14 @@
     "https://www.spacemoney.com.br/investimentos/acoes/carl-icahn-fortuna-iep-divida/",
     "ab3cacaa67a99cdf",
     "https://cqcs.com.br/noticia/caixa-seguridade-divulga-resultados-do-3o-trimestre-com-destaque-para-lucro-e-dividendos-impulsionados-pelas-atividades-das-joint-ventures/",
-    "6247099fc719cdb1"
+    "6247099fc719cdb1",
+    "0b252ff3c516246e",
+    "aad38cc63eacb41f",
+    "7338d068a2105381",
+    "b187c34b388ac46b",
+    "c1cd0813da61777a",
+    "ab695f2dee791800",
+    "7dc37eaae52835e8"
   ],
   "titulos": [
     "Binance revela como agiu após ataque de US$ 6,3 bilhões e faz recomendações de segurança para investidores",
@@ -1856,10 +1856,6 @@
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com"
   ],
   "eventos_recentes": [
-    {
-      "chave": "apple::GERAL_ATIVO",
-      "ts": 1795544396.730913
-    },
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795544736.683132
