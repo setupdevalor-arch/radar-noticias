@@ -1,10 +1,5 @@
 {
   "links": [
-    "d3967f2b44b7ec59",
-    "3493b154b31c7f86",
-    "217faad4112bdc0e",
-    "1814fdaf95778d41",
-    "15a5d77122cc82b3",
     "31313544a4c7fadb",
     "a9d01aa99216a055",
     "adacb27e63c8019f",
@@ -799,11 +794,14 @@
     "588e6d32e94af010",
     "90fdc6e43adadf15",
     "https://eixos.com.br/energias-renovaveis/tecnologia-reaproveita-baterias-de-carros-eletricos-para-armazenar-energia-solar/",
-    "258f6dc64d83a5a8"
+    "258f6dc64d83a5a8",
+    "483944d09a0c19ca",
+    "https://www.moneytimes.com.br/governo-lula-reage-a-declaracoes-de-macron-sobre-carne-brasileira/",
+    "70ffcd1701874c02",
+    "https://neofeed.com.br/negocios/o-cashback-de-us-35-bilhoes-da-citadel/",
+    "1958b5b321861889"
   ],
   "titulos": [
-    "Banco do Brasil (BBAS3): XP vê recuperação lenta, corta preço-alvo e tem visão neutra",
-    "Copel prepara 9 GW em hidrelétricas reversíveis para leilões",
     "CAIXA Seguridade registra lucro de R$ 1,2 bilhão no terceiro trimestre",
     "NOVO11: ETF reúne Nubank, Itaú, Petrobras e Mercado Livre em uma só cota",
     "Copel (CPLE3) aprova o pagamento de R$ 871 milhões em juros sobre capital próprio",
@@ -1601,11 +1599,11 @@
     "Justiça suspende exclusão de sócio da Brasil Bitcoin",
     "HGLG11 fecha aquisição da última fatia do G400",
     "CMN: Limite de crédito para Estados, DF e municípios sobe em R$ 1 bilhão, para R$ 31,625 bilhões",
-    "Tecnologia reaproveita baterias de carros elétricos para armazenar energia solar"
+    "Tecnologia reaproveita baterias de carros elétricos para armazenar energia solar",
+    "Governo Lula responde Macron após declarações sobre a carne brasileira",
+    "O “cashback” de US$ 3,5 bilhões da Citadel"
   ],
   "leads": [
-    "O governo federal deve estender por mais um mês o pagamento do subsídio de R$ 2,12 por litro de diesel vendido no país. A prorrogação poderá elevar entre R$ 8 bilhões e R$ 10,5 bilhões o custo das medidas adotadas neste ano para conter a alta dos combustíveis.",
-    "Chris Rondeau defende que a Panobianco tem semelhanças com a Planet Fitness e vê horizonte para chegar à bolsa no longo prazo",
     "A Justiça Federal do Distrito Federal negou nesta quarta-feira (25) um pedido de tutela de urgência que buscava suspender a realização do primeiro leilão para contratação de baterias para o setor elétrico brasileiro, marcado para a próxima semana.",
     "A Ford programou para 2027 a chegada de três novidades em SUVs ao Brasil, entre elas o Bronco com motorização híbrida — a primeira da linha. O anúncio ocorreu nesta quarta-feira (25) e foi noticiado pelo g1.",
     "O g1 informou nesta quarta-feira (25) que as bolsas de Nova York enfrentavam um dia de perdas expressivas, afetadas por uma nova proposta tarifária do governo dos Estados Unidos e por uma liquidação de ações de empresas de inteligência artificial.",
@@ -1853,13 +1851,11 @@
     "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
     "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
-    "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências."
+    "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
+    "O governo brasileiro lamentou nesta quinta-feira (26) declarações do presidente da França, Emmanuel Macron, que na véspera se referiu à carne brasileira como “dopada” ao celebrar restrições impostas pela União Europeia a produtos brasileiros.",
+    "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795563077.881692
-    },
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795565346.635182
@@ -2578,8 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "ab15d04d69fc7fc8",
-    "5bd0624d125dc917",
     "c3e962af2743afa2",
     "9d77f9b07b184163",
     "cff3159a051386f4",
@@ -2877,6 +2871,8 @@
     "61f8bf457f791b4a",
     "4ff990e240b13f42",
     "6469c2f822a196ff",
-    "88619c4583900752"
+    "88619c4583900752",
+    "a8fbcf3c3baf680d",
+    "c43eaee50ba69630"
   ]
 }
