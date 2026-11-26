@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://bmcnews.com.br/opiniao/renato-batista/o-que-esta-por-tras-dos-ataques-ciberneticos-que-marcaram-outubro-e-novembro/",
-    "c66b3a53708d4d09",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/icdi11-fecha-terceira-oferta-b3/",
     "5e9e1a2f3987e622",
     "68d3dbf5c8bb972f",
@@ -799,7 +797,9 @@
     "697d70a210472ddd",
     "https://telesintese.com.br/fcc-autoriza-spacex-a-lancar-1-milhao-de-satelites-para-data-centers/",
     "1bf2ee628e8491fb",
-    "d3967f2b44b7ec59"
+    "d3967f2b44b7ec59",
+    "3493b154b31c7f86",
+    "217faad4112bdc0e"
   ],
   "titulos": [
     "Huang prestará esclarecimentos ao Congresso sobre caso após demissão da Nvidia",
@@ -1856,66 +1856,6 @@
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA."
   ],
   "eventos_recentes": [
-    {
-      "chave": "nubank::GERAL_ATIVO",
-      "ts": 1795471746.529137
-    },
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795472099.098308
-    },
-    {
-      "chave": "xplg11::GERAL_ATIVO",
-      "ts": 1795472099.098308
-    },
-    {
-      "chave": "alzr11::GERAL_ATIVO",
-      "ts": 1795472099.098308
-    },
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795473462.346684
-    },
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795473810.980946
-    },
-    {
-      "chave": "petrobras::PROVENTOS",
-      "ts": 1795473810.980946
-    },
-    {
-      "chave": "petrobras::EVENTO_CORP",
-      "ts": 1795475194.920769
-    },
-    {
-      "chave": "magazine_luiza::GERAL_ATIVO",
-      "ts": 1795475541.49734
-    },
-    {
-      "chave": "hgre11::GERAL_ATIVO",
-      "ts": 1795475541.49734
-    },
-    {
-      "chave": "trco11::GERAL_ATIVO",
-      "ts": 1795475541.49734
-    },
-    {
-      "chave": "engie::GERAL_ATIVO",
-      "ts": 1795475901.954757
-    },
-    {
-      "chave": "hapvida::GERAL_ATIVO",
-      "ts": 1795477399.182074
-    },
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795479084.881142
-    },
-    {
-      "chave": "bradesco::GERAL_ATIVO",
-      "ts": 1795481336.437291
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795482651.847331
