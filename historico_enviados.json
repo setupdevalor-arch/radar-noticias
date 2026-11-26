@@ -1,13 +1,5 @@
 {
   "links": [
-    "0d679e239f5f61bb",
-    "d737a90ca84a657a",
-    "002cda9dbc5c160d",
-    "e0f27bbd05eb85e7",
-    "6bb369c85eaef611",
-    "https://www.moneytimes.com.br/retorno-de-huang-a-nvidia-traz-a-tona-debate-sobre-ia-de-codigo-aberto-fets/",
-    "bf33cb702221a513",
-    "https://www.estadao.com.br/economia/brasil-voltara-a-ser-punido-se-cenario-externo-piorar-diz-economista-chefe-do-barclays/",
     "7762e99518628e94",
     "https://www.estadao.com.br/economia/preocupacao-fiscal-cresce-e-bancos-de-ny-a-faria-lima-reduzem-recomendacao-de-brasil-nas-carteiras/",
     "04d5243d4eaaa760",
@@ -799,10 +791,17 @@
     "7676e9bf8d1dd11a",
     "https://www.cnnbrasil.com.br/infra/infraestrutura-ve-desafios-regulatorios-para-novo-ciclo-de-investimentos/",
     "53b8b47718b677f6",
-    "73882cbb334a3cda"
+    "73882cbb334a3cda",
+    "edd7cfba3e524ef7",
+    "5cfc7b82f640dec6",
+    "a70ff2166f8ef9ac",
+    "221082969cc6ca75",
+    "fc147c3c8767134d",
+    "fbf06622375e6f53",
+    "https://www.spacemoney.com.br/tecnologia/chips-superam-petroleo-exportacoes-globais/",
+    "68128627a4e5209d"
   ],
   "titulos": [
-    "Renda Fixa Hoje: confira as taxas de CDBs, LCIs e LCAs na XP nesta quarta-feira (18)",
     "CDI alto mudou o jogo: por que gestor abandonou os fundos de CRI e mira tijolo?",
     "Risco de derrota no ajuste fiscal mostra que Lula terá de ceder mais espaço ao Centrão e partidos da Frente Ampla",
     "A WeWork valia US$ 47 bilhões e devia outros 47 em aluguel: o que a queda ensina sobre valuation",
@@ -1601,10 +1600,10 @@
     "Brasil bate recorde de demanda de energia pelo terceiro dia consecutivo",
     "Disney derrota Trump na Justiça em disputa que ameaça a rede ABC",
     "Déficit de armazéns em MT deve crescer 53% até 2035/36",
-    "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos"
+    "Infraestrutura vê desafios regulatórios para novo ciclo de investimentos",
+    "Chips superam petróleo pela 1ª vez nas exportações globais"
   ],
   "leads": [
-    "A declaração ocorreu um dia após o conselho de administração aprovar seu retorno ao comando da companhia, segundo informações da imprensa americana.",
     "São Paulo e Nova York - A venda de uma fatia da cobiçada rede de postos Ipiranga pela Ultrapar esfriou. As negociações com a Alimentation Couche-Tard, um grupo canadense com mais de 27 mil pontos de combustível no mundo, interessado em entrar no Brasil, acabaram não evoluindo para uma oferta firme pelo ativo, de acordo com fontes.",
     "Transmissoras de energia sinalizam que não vão participar dos leilões de baterias marcados para os próximos dias 2 e 4 de dezembro, a despeito de terem se engajado há anos em estudos e projetos pioneiros de baterias instaladas na Rede Básica. O motivo é a possibilidade de terem de compartilhar com os consumidores a receita proveniente dos sistemas ",
     "Bloomberg Línea — Em um cenário de aumento da inadimplência no campo, o Banco do Brasil (BBAS3) tem sido mais criterioso na concessão de crédito, de acordo com o diretor de agronegócios e agricultura familiar, Alberto Martinhago.",
@@ -1853,7 +1852,8 @@
     "O Sistema Interligado Nacional (SIN) registrou, nesta quarta-feira, 25 de novembro, um novo recorde de carga instantânea de energia pelo terceiro dia consecutivo, atingindo 108.189 MW às 11h29, segundo dados do Operador Nacional do Sistema Elétrico (ONS).",
     "A Walt Disney conquistou uma importante vitória preliminar na Justiça em sua disputa com o governo Donald Trump, centrada em liberdade de expressão.",
     "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década.",
-    "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos."
+    "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos.",
+    "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre."
   ],
   "eventos_recentes": [
     {
@@ -2559,10 +2559,13 @@
     {
       "chave": "disney::GERAL_ATIVO",
       "ts": 1795703415.803793
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795704845.238924
     }
   ],
   "hashes_imagens": [
-    "4d21022723933b6c",
     "07c1a506cfd25994",
     "ac03f63bd592d33e",
     "8b317a287717e568",
@@ -2861,6 +2864,7 @@
     "77268374bcfbc702",
     "6118fce95526c748",
     "e67a7dc18de6cbd9",
-    "f7d4a325050bf2d0"
+    "f7d4a325050bf2d0",
+    "3a3771d0f1d73a76"
   ]
 }
