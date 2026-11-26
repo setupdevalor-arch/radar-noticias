@@ -1,8 +1,5 @@
 {
   "links": [
-    "0df64fe3b18130d1",
-    "63ddcc8f8cd64c2f",
-    "a231246d73545375",
     "756df2d419725a75",
     "https://www.seudinheiro.com/2026/colunistas/arvores-nao-crescem-ate-o-ceu-o-turnaround-da-sequoia-seql3-e-tudo-que-mexe-com-seu-bolso-hoje-julw/",
     "a59d785dd5cab86c",
@@ -799,7 +796,10 @@
     "f92ad86692638251",
     "9a1bee2e1c11c0fe",
     "https://megawhat.uol.com.br/economia-e-politica/empresas/consumo-de-energia-cresce-51-na-energisa-enquanto-gas-para-termicas-cai-727/",
-    "062873025a58d972"
+    "062873025a58d972",
+    "ce661ad189bda9a0",
+    "806b90d665e6796b",
+    "416d2e35b9d9e0e8"
   ],
   "titulos": [
     "Por que a picanha se tornou a protagonista da churrasqueira brasileira (e mundial)",
@@ -1856,10 +1856,6 @@
     "O consumo consolidado de energia elétrica do grupo Energisa alcançou 4.046 GWh em outubro, volume 5,1% superior ao registrado no mesmo período de 2025. Por outro lado, o volume de gás natural destinado às usinas termelétricas recuou 72,7% no mesmo período."
   ],
   "eventos_recentes": [
-    {
-      "chave": "mercado_livre::EVENTO_CORP",
-      "ts": 1795543672.863521
-    },
     {
       "chave": "lvbi11::EVENTO_CORP",
       "ts": 1795544051.757109
