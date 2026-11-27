@@ -1,7 +1,5 @@
 {
   "links": [
-    "16139512e82e19a9",
-    "3d5d0294e7657d07",
     "9e97dec9121c06a7",
     "e78afc68c76aae0e",
     "ae72c0f50d1d8ea1",
@@ -799,10 +797,11 @@
     "https://www.cnnbrasil.com.br/politica/de-itamar-a-cleitinho-lula-abre-nova-fase-na-relacao-de-mg-e-suas-dividas/",
     "0c352a16974d7439",
     "https://www.spacemoney.com.br/politica/oab-pb-falhas-brb-depositos-judiciais/",
-    "b81ab6005f41c06a"
+    "b81ab6005f41c06a",
+    "https://www.spacemoney.com.br/tecnologia/apple-black-friday-2026-vale-presente/",
+    "3147c121ef6296b8"
   ],
   "titulos": [
-    "Indústria de etanol acirra disputa pelo milho no mercado interno",
     "Investidores globais querem aumentar aplicações na China",
     "Bahrein intercepta ataques do Irã após bombardeio atingir unidade industrial",
     "Agro de SP tem superavit de US$ 17,6 bilhões até outubro de 2026",
@@ -1601,10 +1600,10 @@
     "Celulares lideram desconto no Pix; jovens voltam ao carnê",
     "Italianos morrem no Kuwait; Irã nega autoria de ataque",
     "De Itamar a Cleitinho: Lula abre nova fase na relação de MG e suas dívidas",
-    "OAB da Paraíba aponta falhas do BRB em depósitos judiciais"
+    "OAB da Paraíba aponta falhas do BRB em depósitos judiciais",
+    "Apple abre Black Friday com vale de até US$ 300"
   ],
   "leads": [
-    "O tráfego de dados associado à IA, atualmente inferior a 1% do total das redes de telecomunicações, poderá alcançar 35% em 2030. A projeção foi apresentada nesta quarta-feira, dia 25, por Wilson Cardoso, diretor da Área de Telecomunicações da Associação Brasileira da Indústria Elétrica e Eletrônica (Abinee), durante palestra sobre a evolução da age",
     "A Petrobras vai desembolsar R$ 2,8 bilhões por 42% da Neomille, que produz etanol de milho em usinas no Centro-Oeste, conforme reportagem de Luciano Costa no Brazil Journal. O movimento representa a volta da estatal ao segmento de etanol, do qual se afastou depois de perder dinheiro com a aposta na cana-de-açúcar.",
     "Mais recentemente, porém, o ambiente se tornou menos favorável. As rachaduras no tema de inteligência artificial reduziram o apetite por risco e alimentaram a volatilidade, corroendo os ganhos de uma estratégia que prospera em mercados tranquilos. Em outra frente, o choque eleitoral no Brasil serviu como um lembrete particularmente contundente dos ",
     "As causas vão do clima à pecuária, e os dados de novembro ainda não mostram alívio. O Ministério da Fazenda elevou as projeções de inflação para este ano e para 2027, e a comida está no centro da revisão.",
@@ -1853,13 +1852,10 @@
     "Na semana da Black Friday de 2026, os celulares ocupam o topo do ranking de descontos para pagamento no Pix no levantamento do g1, que monitora 74 produtos. Os 16 aparelhos acompanhados ficaram, em média, 7,36% mais baratos no Pix do que no cartão de crédito, a maior diferença entre as categorias analisadas. No recorte individual, o Samsung Galaxy ",
     "Duas pessoas de nacionalidade italiana morreram no Kuwait em consequência de ataques atribuídos ao Irã, segundo a CNBC. O Exército kuwaitiano informou em publicação no X que as vítimas foram atingidas por destroços de mísseis e que outras duas pessoas ficaram feridas.",
     "O governador eleito de Minas Gerais, Cleitinho Azevedo (PP-MG), reuniu-se nesta quinta-feira (26) com Lula em Brasília para tratar da dívida do estado com a União, que chega a quase R$ 190 bilhões.",
-    "Segundo o g1, advogados têm encontrado dificuldade para acessar depósitos judiciais administrados pelo Banco de Brasília (BRB), e a OAB da Paraíba avalia recorrer a órgãos de controle. O receio é que a instituição não tenha liquidez para cumprir compromissos em meio ao prejuízo associado ao Banco Master, de Daniel Vorcaro, alvo de liquidação pelo B"
+    "Segundo o g1, advogados têm encontrado dificuldade para acessar depósitos judiciais administrados pelo Banco de Brasília (BRB), e a OAB da Paraíba avalia recorrer a órgãos de controle. O receio é que a instituição não tenha liquidez para cumprir compromissos em meio ao prejuízo associado ao Banco Master, de Daniel Vorcaro, alvo de liquidação pelo B",
+    "A Apple iniciou sua campanha oficial de Black Friday 2026, que chega aos Estados Unidos nesta sexta-feira (27) e se estende até 30 de novembro, com vale-presente de até US$ 300 em produtos elegíveis. A promoção de quatro dias, que vai da Black Friday à Cyber Monday, começou a ser liberada em 26 de novembro na Austrália, Nova Zelândia e Tailândia e "
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795581259.879036
-    },
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795584138.544008
@@ -2583,10 +2579,13 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795752785.364981
+    },
+    {
+      "chave": "apple::GERAL_ATIVO",
+      "ts": 1795754659.14444
     }
   ],
   "hashes_imagens": [
-    "a13d19d4293b54c9",
     "58bb0c0f30ed0390",
     "1a403cfed2f29a75",
     "1d9fe4ced3a82264",
@@ -2885,6 +2884,7 @@
     "f2a934ec295ca033",
     "af27ca8c693edf76",
     "fd6829a7620d61d2",
-    "ec3588f16ef95607"
+    "ec3588f16ef95607",
+    "31b34f6aec087ac3"
   ]
 }
