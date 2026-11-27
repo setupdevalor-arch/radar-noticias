@@ -1,10 +1,5 @@
 {
   "links": [
-    "876213e89a689f42",
-    "13f65c2737552453",
-    "2c8089e94bf557a2",
-    "6bf53ca4f44c977b",
-    "https://www.cnnbrasil.com.br/agro/entidades-estimam-que-taxa-sobre-acucar-fora-da-cota-superara-200/",
     "3da441bbc54da966",
     "https://www.spacemoney.com.br/noticias/restauracao-florestal-brasil/",
     "535d3aa2b735c483",
@@ -799,11 +794,14 @@
     "fbb43454d580b33f",
     "https://www.spacemoney.com.br/agronegocio/black-friday-agro-custo-total/",
     "68f8108d0777bd4c",
-    "331f93d59bbc9a7f"
+    "331f93d59bbc9a7f",
+    "38bc566b45dda449",
+    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/expectativa-de-vida-no-brasil-sobe-para-769-anos-diz-ibge",
+    "e5781bbf49b2217a",
+    "https://www.infomoney.com.br/mercados/sabesp-diz-que-arsesp-aprova-base-de-ativos-11-maior-para-2025/",
+    "86f15c82cf458a9e"
   ],
   "titulos": [
-    "The Economist: O que está causando os recentes apagões nos Estados Unidos?",
-    "Produção de café da Colômbia deve se recuperar na nova safra, afirma USDA",
     "Ataque a navio comercial na Líbia leva guerra dos drones ao Mediterrâneo",
     "Juros do cartão a 10%: a proposta de Trump que une rivais e assusta bancos",
     "Conferência do clima na Turquia termina sem documento final",
@@ -1601,11 +1599,11 @@
     "Setores regulados se juntam contra o fim da quarentena para políticos nas agências",
     "Por que o Brasil corre o risco de enfrentar uma crise de crédito em 2027?",
     "Tokenização mundial supera US$ 40 bilhões com títulos do Tesouro americano no topo",
-    "Na Black Friday do agro, custo total supera o desconto"
+    "Na Black Friday do agro, custo total supera o desconto",
+    "Expectativa de vida no Brasil sobe para 76,9 anos, diz IBGE",
+    "Sabesp diz que Arsesp aprova base de ativos 11% maior para 2025"
   ],
   "leads": [
-    "Quase metade dos consumidores também aproveita todo o mês de novembro, e não apenas a data da Black, para fazer compras",
-    "O Senado da Argentina analisará nesta quinta-feira (26) um projeto de lei que suspenderia as eleições primárias, abrindo caminho para uma possível vitória do presidente Javier Milei antes da disputa presidencial do próximo ano, enquanto o país se encontra à beira de uma recessão.",
     "A área de infraestrutura do governo federal conseguiu uma vitória importante no TCU (Tribunal de Contas da União), nesta quarta-feira (25), com a liberação do uso das chamadas contas vinculadas e a classificação privada dos recursos que transitam por esses instrumentos. Ao evitar que os valores sejam rotulados como “públicos” e precisem passar pelo",
     "A Hapvida Participações e Investimentos (HAPV3) informou ao mercado que, até 24 de novembro de 2026, adquiriu diretamente e por meio de suas controladas 203.099 debêntures de diferentes emissões próprias.",
     "O comissário de Comércio da UE (União Europeia), Maros Sefcovic, afirmou nesta quinta-feira (26) que rejeita \"fortemente\" a nova proposta dos EUA sobre tarifas contra o bloco europeu e enfatizou a importância de respeitar a tarifa de 15% acordada com Washington no ano passado.",
@@ -1853,7 +1851,9 @@
     "NESTA EDIÇÃO. Mais de 100 entidades pedem ao Senado que rejeite o projeto que abre as agências a políticos.",
     "O elevado endividamento dos tomadores de empréstimos, o aumento da inadimplência e a deterioração da qualidade das carteiras de crédito podem levar os bancos a restringir a concessão de novos financiamentos em 2027. Na avaliação de especialistas do setor financeiro, a combinação desses fatores amplia o risco de uma crise de crédito no Brasil.",
     "Os títulos do Tesouro americano, conhecidos como Treasuries, lideram o mercado de ativos tokenizados. O total chega a US$ 14,1 bilhões, cerca de 34% do valor registrado.",
-    "Nesta sexta-feira, 27 de novembro, a edição 2026 da Black Friday coloca o produtor rural diante de uma decisão que vai além do percentual exibido na vitrine. Na compra de insumos e equipamentos, o desembolso final depende de frete, taxas, juros e da real necessidade da lavoura, fatores que podem reduzir o efeito do abatimento anunciado."
+    "Nesta sexta-feira, 27 de novembro, a edição 2026 da Black Friday coloca o produtor rural diante de uma decisão que vai além do percentual exibido na vitrine. Na compra de insumos e equipamentos, o desembolso final depende de frete, taxas, juros e da real necessidade da lavoura, fatores que podem reduzir o efeito do abatimento anunciado.",
+    "A expectativa de vida do brasileiro ao nascer, em 2025, era de 76,9 anos, de acordo com dados divulgados pelo Instituto Brasileiro de Geografia e Estatística (IBGE). Em 2024, a estimativa era de 76,6 anos.",
+    "– A Sabesp anunciou ‌nesta quinta-feira que a agência reguladora ‌Arsesp validou base de ativos regulatórios (BAR) 11% maior para o ano ‌de 2025."
   ],
   "eventos_recentes": [
     {
@@ -2583,11 +2583,13 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795774584.289637
+    },
+    {
+      "chave": "sabesp::GERAL_ATIVO",
+      "ts": 1795776230.404753
     }
   ],
   "hashes_imagens": [
-    "d388eee4d0accebd",
-    "4b05a9f91083cc78",
     "f36a0dd994d6ee86",
     "396098ffe880e360",
     "b629f626f638e108",
@@ -2885,6 +2887,8 @@
     "861a2b7aa83b4a9b",
     "6a021714e36f8e2d",
     "468ab4b0dea492df",
-    "8894950236fa453b"
+    "8894950236fa453b",
+    "e1f81f6a25501904",
+    "b90d1108e85e80f3"
   ]
 }
