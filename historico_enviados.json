@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-infra/latam-faz-1-voo-oficial-com-novo-aviao-da-embraer/",
-    "50c50d985e6ba863",
-    "5340167e06e32cc9",
-    "efae038e85e18aed",
-    "7638543483949f24",
     "e058ccdabd662da1",
     "https://valorinveste.globo.com/objetivo/gastar-bem/noticia/2026/11/26/brasileiros-aproveitam-black-friday-para-antecipar-compras-de-natal.ghtml",
     "4f8f2c527b15a821",
@@ -799,11 +794,14 @@
     "https://www.poder360.com.br/poder-economia/eua-compraram-mais-da-metade-dos-avioes-exportados-pelo-brasil-em-2026/",
     "3629d189cafc48a4",
     "1c7ea6c60b166546",
-    "a5c1746f2ea40305"
+    "a5c1746f2ea40305",
+    "9503138cd32d8691",
+    "https://www.poder360.com.br/poder-internacional/pib-da-franca-cai-02-no-3o-trimestre-de-2026/",
+    "30c98b77d417ba5e",
+    "https://www.moneytimes.com.br/bolsas-da-asia-fecham-em-forte-alta-com-salto-na-china-e-avanco-de-acoes-de-ia-fets/",
+    "a573be3a2275cd99"
   ],
   "titulos": [
-    "Fertilizantes: importação de 85% expõe risco ao agro",
-    "Espiões, chips e a Nvidia: a campanha secreta da China para driblar os EUA",
     "Ataques no Báltico ameaçam rota-chave do petróleo e dos grãos da Rússia",
     "Sabesp conclui manutenção, mas 5 regiões ainda têm abastecimento afetado",
     "Futuro das COPs: modelo que pede ‘consenso’ fracassa na Turquia e novas formas devem ser adotadas",
@@ -1601,11 +1599,11 @@
     "Technos cresce com alta de relógios no Brasil e fatura R$ 141,8 milhões no trimestre",
     "Black Friday é realizada nesta 6ª com consumidor mais cauteloso",
     "Saiba quais indicadores e balanços saem nesta 6ª feira",
-    "EUA compraram mais da metade dos aviões exportados pelo Brasil em 2026"
+    "EUA compraram mais da metade dos aviões exportados pelo Brasil em 2026",
+    "PIB da França cai 0,2% no 3º trimestre de 2026",
+    "Bolsas da Ásia fecham em forte alta, com salto na China e avanço de ações de IA"
   ],
   "leads": [
-    "Antes de colocar dinheiro em uma ação, é preciso entender se a companhia consegue gerar caixa no futuro a partir da situação financeira que apresenta hoje. É o que mostra a Suno Notícias ao explicar como a análise de balanço funciona e quais documentos servem de base para esse trabalho. Segundo a publicação, crescer sobre a mesma base de ativos ou ",
-    "O Ibovespa Futuro opera em alta nesta quinta-feira (26), ampliando a forte alta da véspera, em um pregão de liquidez reduzida pelo feriado de Ação de Graças nos Estados Unidos. Investidores avaliam que a mais recente ameaça tarifária de Washington pode ter efeitos menos prejudiciais do que o previsto inicialmente. Às 9h05 (horário de Brasília), o í",
     "A escolha do próximo ministro da Fazenda de Luiz Inácio Lula da Silva (PT) colocou um dos principais nomes do sistema financeiro brasileiro no centro das articulações políticas em Brasília. Luiz Carlos Trabuco Cappi, presidente do Conselho de Administração do Bradesco, ganhou força para assumir a Pasta após se reunir com o presidente na segunda-fei",
     "China e Estados Unidos devem resolver suas questões comerciais com consultas marcadas pela igualdade e pelo respeito mútuo, com reciprocidade, segundo a Agência Brasil. A declaração é do porta-voz do Ministério das Relações Exteriores chinês, Guo Jiakun, nesta quinta-feira (26), em resposta à nova rodada de tarifas do governo Trump.",
     "O Brasil fechou outubro com saldo negativo de US$ 3,966 bilhões nas transações correntes, resultado mais fraco do que a projeção de mercado captada pela Reuters, que apontava déficit de US$ 3,1 bilhões. O dado, divulgado nesta quinta-feira pelo Banco Central, mostrou ainda que o saldo negativo dos últimos 12 meses equivale a 2,34% do Produto Intern",
@@ -1853,7 +1851,9 @@
     "Bloomberg Línea — O mercado de relógios no Brasil passou os últimos dois anos na direção oposta à de boa parte do consumo. Enquanto os juros pressionam a economia e preocupam empresas no país, a produção de relógios na Zona Franca de Manaus, onde está concentrada a fabricação nacional, cresceu 26% em 2025, segundo dado citado pelo Grupo Technos (TE",
     "A data é importante para o comércio do país, mas os juros altos e o endividamento das famílias devem impactar nas compras",
     "Dados de desemprego, crédito e contas públicas, além do índice usado em aluguéis, movimentam o dia",
-    "Possível tarifa de Donald Trump ameaça superavit comercial do país com os Estados Unidos em um segmento de alto valor agregado"
+    "Possível tarifa de Donald Trump ameaça superavit comercial do país com os Estados Unidos em um segmento de alto valor agregado",
+    "Consumo das famílias teve aumento ligeiro e gastos do governo desaceleraram; exportações recuaram 1,6%",
+    "As bolsas asiáticas fecharam em forte alta nesta sexta-feira (27), acompanhando os ganhos dos futuros de ações dos Estados Unidos e o avanço expressivo dos mercados chineses. O sentimento em torno dos investimentos em inteligência artificial se estabilizou, após Wall Street permanecer fechada na quinta-feira pelo feriado de Ação de Graças."
   ],
   "eventos_recentes": [
     {
@@ -2579,11 +2579,17 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795770362.276638
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795771019.458168
+    },
+    {
+      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
+      "ts": 1795771019.458168
     }
   ],
   "hashes_imagens": [
-    "81e59a8920665f1e",
-    "0bb8363e2ef3e82b",
     "7d4ade074aaebc41",
     "3d707c741402562d",
     "182ce856eb35ed6d",
@@ -2881,6 +2887,8 @@
     "8a4d64b95b78c1e3",
     "c9abf05b71340b6e",
     "f22d7cccdbd8746c",
-    "3185f188f5abeafd"
+    "3185f188f5abeafd",
+    "9a25cbdb14299747",
+    "4ed3ff128884ac25"
   ]
 }
