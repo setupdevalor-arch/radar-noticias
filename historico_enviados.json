@@ -1,6 +1,5 @@
 {
   "links": [
-    "7cef5edf15e40a2a",
     "a5fc217e19a60fe1",
     "6ee41721997eaa3d",
     "6532674e7436fb0e",
@@ -799,7 +798,8 @@
     "https://investnews.com.br/investimentos/tesouro-direto-taxas-rendimento-hoje-trabuco-fazenda-27112026/",
     "6945d71b72ce6dbb",
     "https://agenciainfra.com/blog/ppi-defende-aportes-publicos-e-mudanca-na-lrf-para-destravar-obras/?utm_source=rss&utm_medium=rss&utm_campaign=ppi-defende-aportes-publicos-e-mudanca-na-lrf-para-destravar-obras",
-    "bdc5040cbf6cfc6c"
+    "bdc5040cbf6cfc6c",
+    "6ea51b17366d9958"
   ],
   "titulos": [
     "Preços do petróleo caem com mercado volátil nesta segunda-feira",
@@ -1856,18 +1856,6 @@
     "O esgotamento da carteira de projetos viáveis por meio de concessões comuns, sustentadas exclusivamente por receitas privadas, deverá impor uma série de desafios ao próximo ciclo de investimentos em infraestrutura no país, especialmente no setor de transportes. O secretário especial para o PPI (Programa de Parcerias de Investimentos) da Casa Civil,"
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795611520.797164
-    },
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795611520.797164
-    },
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795611520.797164
-    },
     {
       "chave": "hglg11::PROVENTOS",
       "ts": 1795611883.584353
