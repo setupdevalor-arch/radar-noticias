@@ -1,7 +1,5 @@
 {
   "links": [
-    "73de771887a24d03",
-    "https://www.infomoney.com.br/mercados/yduqs-afya-tim-smart-fit-cosan-e-mais-acoes-para-acompanhar-hoje/",
     "0f2170d89823bb6d",
     "38272a2520f2a1e0",
     "16139512e82e19a9",
@@ -799,10 +797,11 @@
     "c5d2ffb134db6a80",
     "https://www.spacemoney.com.br/economia/exterior/italianos-mortos-kuwait-ira/",
     "9f5c58124e95612d",
-    "19a9951c8a2aba6b"
+    "19a9951c8a2aba6b",
+    "https://www.cnnbrasil.com.br/politica/de-itamar-a-cleitinho-lula-abre-nova-fase-na-relacao-de-mg-e-suas-dividas/",
+    "0c352a16974d7439"
   ],
   "titulos": [
-    "Por que a América Latina precisa de conexões globais para inovar?",
     "FIIs ainda valem a pena? Conheça as vantagens e os riscos antes de investir",
     "Indústria de etanol acirra disputa pelo milho no mercado interno",
     "Investidores globais querem aumentar aplicações na China",
@@ -1601,10 +1600,10 @@
     "Inflação de Tóquio vai a 2,9%, maior alta em 16 meses",
     "Magalu lista iPhone 16e com 128 GB a R$ 2.899 via Pix",
     "Celulares lideram desconto no Pix; jovens voltam ao carnê",
-    "Italianos morrem no Kuwait; Irã nega autoria de ataque"
+    "Italianos morrem no Kuwait; Irã nega autoria de ataque",
+    "De Itamar a Cleitinho: Lula abre nova fase na relação de MG e suas dívidas"
   ],
   "leads": [
-    "A Gerdau anunciou a assinatura de dois Termos de Compromisso, um Ambiental (TCA) e outro Social (TCS), para a região da Praia de São Tomé de Paripe, em Salvador (BA).",
     "O fracasso da COP31, na Turquia, pode ser bom para o planeta. Quem defende essa tese é Bjørn Lomborg, um cientista político dinamarquês e uma das vozes mais controversas do debate internacional sobre mudanças climáticas.",
     "O tráfego de dados associado à IA, atualmente inferior a 1% do total das redes de telecomunicações, poderá alcançar 35% em 2030. A projeção foi apresentada nesta quarta-feira, dia 25, por Wilson Cardoso, diretor da Área de Telecomunicações da Associação Brasileira da Indústria Elétrica e Eletrônica (Abinee), durante palestra sobre a evolução da age",
     "A Petrobras vai desembolsar R$ 2,8 bilhões por 42% da Neomille, que produz etanol de milho em usinas no Centro-Oeste, conforme reportagem de Luciano Costa no Brazil Journal. O movimento representa a volta da estatal ao segmento de etanol, do qual se afastou depois de perder dinheiro com a aposta na cana-de-açúcar.",
@@ -1853,7 +1852,8 @@
     "Indicador básico acumula 3 meses acima da meta de 2% do Banco do Japão",
     "A versão de 128 GB do iPhone 16e aparece no Magazine Luiza por R$ 2.899, desde que o pagamento seja feito via Pix e o cupom CUPOMALO200 seja aplicado no aplicativo da rede varejista.",
     "Na semana da Black Friday de 2026, os celulares ocupam o topo do ranking de descontos para pagamento no Pix no levantamento do g1, que monitora 74 produtos. Os 16 aparelhos acompanhados ficaram, em média, 7,36% mais baratos no Pix do que no cartão de crédito, a maior diferença entre as categorias analisadas. No recorte individual, o Samsung Galaxy ",
-    "Duas pessoas de nacionalidade italiana morreram no Kuwait em consequência de ataques atribuídos ao Irã, segundo a CNBC. O Exército kuwaitiano informou em publicação no X que as vítimas foram atingidas por destroços de mísseis e que outras duas pessoas ficaram feridas."
+    "Duas pessoas de nacionalidade italiana morreram no Kuwait em consequência de ataques atribuídos ao Irã, segundo a CNBC. O Exército kuwaitiano informou em publicação no X que as vítimas foram atingidas por destroços de mísseis e que outras duas pessoas ficaram feridas.",
+    "O governador eleito de Minas Gerais, Cleitinho Azevedo (PP-MG), reuniu-se nesta quinta-feira (26) com Lula em Brasília para tratar da dívida do estado com a União, que chega a quase R$ 190 bilhões."
   ],
   "eventos_recentes": [
     {
@@ -2579,10 +2579,13 @@
     {
       "chave": "magazine_luiza::GERAL_ATIVO",
       "ts": 1795751468.707825
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795752785.364981
     }
   ],
   "hashes_imagens": [
-    "5abeeeee3d4596b6",
     "84d28a712070aafe",
     "a13d19d4293b54c9",
     "58bb0c0f30ed0390",
@@ -2881,6 +2884,7 @@
     "441b027c33107494",
     "220e94393d658cc6",
     "f2a934ec295ca033",
-    "af27ca8c693edf76"
+    "af27ca8c693edf76",
+    "fd6829a7620d61d2"
   ]
 }
