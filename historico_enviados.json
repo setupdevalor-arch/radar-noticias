@@ -1,8 +1,5 @@
 {
   "links": [
-    "dc4b52d1c09648d9",
-    "045e503d0ab58c06",
-    "8b65e5a86517227e",
     "52891a89ca0d0a31",
     "d5d549023d11cfa2",
     "77969696e2733b61",
@@ -799,7 +796,10 @@
     "https://www.cnnbrasil.com.br/infra/santos-brasil-planeja-investir-r-35-bi-em-4-anos-diz-sepulveda/",
     "750d1e27932c3105",
     "https://www.cnnbrasil.com.br/politica/guimaraes-elogia-trabuco-e-diz-que-futuro-ministro-e-parceiro-de-dialogo/",
-    "8b5a6fcd2de6e003"
+    "8b5a6fcd2de6e003",
+    "89a5f551fbcac4df",
+    "bd3e6ae94021772a",
+    "4ab67ae275557dbe"
   ],
   "titulos": [
     "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
@@ -1856,10 +1856,6 @@
     "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta."
   ],
   "eventos_recentes": [
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795567968.658375
-    },
     {
       "chave": "ultrapar::GERAL_ATIVO",
       "ts": 1795568958.394544
