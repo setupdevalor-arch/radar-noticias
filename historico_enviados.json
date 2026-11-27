@@ -1,8 +1,5 @@
 {
   "links": [
-    "926819c83271308d",
-    "522af7085ac7eea7",
-    "72af277c2441fcaf",
     "4d161e798926974a",
     "https://www.spacemoney.com.br/investimentos/acoes/carl-icahn-fortuna-iep-divida/",
     "ab3cacaa67a99cdf",
@@ -799,10 +796,12 @@
     "81452242a9334606",
     "9e82ba2e7865ee25",
     "https://investnews.com.br/negocios/black-friday-do-papel-higienico-no-meli/",
-    "6b010867b8100c55"
+    "6b010867b8100c55",
+    "93d7282697341068",
+    "https://www.moneytimes.com.br/trabuco-na-fazenda-pode-blindar-banco-central-veja-os-3-pontos-que-o-mercado-vai-monitorar-segundo-ubs-gwm/",
+    "1df1df3c14da7ea0"
   ],
   "titulos": [
-    "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro",
     "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul",
     "Leilões de baterias têm inscrições prorrogadas até esta segunda",
     "Como funciona o LTBX11, ETF de renda fixa da XP?",
@@ -1601,10 +1600,10 @@
     "Por que Petrobras (PETR4) recua em dia de altas no Ibovespa?",
     "Inadimplência de pessoa física no crédito sobe para perto do recorde em outubro",
     "Contas do governo têm superávit de R$ 52,3 bilhões em outubro",
-    "A Black Friday do papel higiênico: o que o Mercado Livre vê no consumo"
+    "A Black Friday do papel higiênico: o que o Mercado Livre vê no consumo",
+    "Trabuco na Fazenda pode blindar Banco Central; veja os 3 pontos que o mercado vai monitorar, segundo UBS GWM"
   ],
   "leads": [
-    "Banco confirmou que estuda operar linhas do programa habitacional; movimento ocorre uma semana após o Itaú anunciar entrada nas faixas de renda média e no Pró-Cotista.",
     "Segundo Borim, as emissões estão sendo feitas, contemplando quatro títulos desse tipo até o momento.",
     "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
     "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA.",
@@ -1853,17 +1852,10 @@
     "As ações da Petrobras perdem mais de 3% na tarde desta sexta-feira (27), na contramão da euforia observada em outros setores do Ibovespa. Os papéis da petroleira recuam 4,10% para PETR3, a R$ 47,08, e 3,13% para PETR4, a R$ 41,82, às 12h54 (horário de Brasília).",
     "A inadimplência do crédito rural para pessoas físicas com recursos direcionados subiu para 9,6% em outubro, de 8,6% em setembro. O resultado está apenas 0,1 ponto porcentual abaixo do recorde da série, de 9,7%, registrado em agosto.",
     "Pedro Peduzzi – Repórter da Agência Brasil",
-    "“Está sendo a Black Friday do papel higiênico”, afirma Fernando Yunes, vice-presidente executivo de commerce do Mercado Livre na América Latina e líder da companhia no Brasil."
+    "“Está sendo a Black Friday do papel higiênico”, afirma Fernando Yunes, vice-presidente executivo de commerce do Mercado Livre na América Latina e líder da companhia no Brasil.",
+    "A escolha de Luiz Carlos Trabuco para o Ministério da Fazenda pode trazer benefícios não apenas para a condução da política fiscal brasileira, mas também para a atuação do Banco Central (BC), avalia o UBS GWM em relatório divulgado nesta sexta-feira (27)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "jbs::GERAL_ATIVO",
-      "ts": 1795623987.756497
-    },
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795623987.756497
-    },
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795624353.442477
@@ -2595,10 +2587,13 @@
     {
       "chave": "mercado_livre::GERAL_ATIVO",
       "ts": 1795796527.82558
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795796871.780381
     }
   ],
   "hashes_imagens": [
-    "8c9eefc09e92fdec",
     "58abfd34c434a633",
     "41e662cc78294bd7",
     "d79797c1b2123820",
@@ -2897,6 +2892,7 @@
     "f3214e10795af433",
     "d862bc90f7ce34bf",
     "9b692dd4f0384d40",
-    "fac010e7654c85d4"
+    "fac010e7654c85d4",
+    "fdbbf65a31b0d1ac"
   ]
 }
