@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/xp-ve-pessimismo-extremo-na-bolsa-e-aponta-chance-de-recuperacao-do-ibovespa/",
-    "960f972dd12ecf00",
     "https://www.infomoney.com.br/mercados/yduqs-yduq3-aprova-incorporacao-da-afya-afya3-e-aumento-de-capital-de-r-25-bi/",
     "d3e7461d80129e46",
     "https://www.spacemoney.com.br/agronegocio/tirso-meirelles-tributos-custos-campo/",
@@ -799,10 +797,11 @@
     "869ec32e2b2463a3",
     "bccf404a6a4b3ae6",
     "https://www.spacemoney.com.br/politica/relatora-agencias-reguladoras/",
-    "b506433e6839ae58"
+    "b506433e6839ae58",
+    "https://www.poder360.com.br/poder-economia/inflacao-de-toquio-vai-a-29-maior-alta-em-16-meses/",
+    "e7844c0b30855b5c"
   ],
   "titulos": [
-    "BV recebe aval da CVM e dá novo passo para abertura de capital na B3",
     "Fim de benefício fiscal nos Estados faz empresas repensarem localização de fábricas e galpões",
     "Novo teto do MEI: economia pode chegar a R$ 9,5 mil",
     "GTA VI expõe desafio: tecnologia avançada leva a videogames mais caros",
@@ -1601,10 +1600,10 @@
     "Latam tem voos nacionais a partir de R$ 267 na Black Friday",
     "Lucro industrial da China sobe 20,1% em outubro",
     "Bradesco, de Trabuco, tem 3º maior juro dentre os 5 bancões",
-    "Relatora restringe mudança a agências reguladoras"
+    "Relatora restringe mudança a agências reguladoras",
+    "Inflação de Tóquio vai a 2,9%, maior alta em 16 meses"
   ],
   "leads": [
-    "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio.",
     "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas.",
     "A Comissão de Infraestrutura do Senado Federal aprovou nesta quarta-feira (25) a convocação do ministro dos Transportes, George Santoro, para prestar esclarecimentos sobre a concessão do trecho rodoviário entre Vilhena (RO) e Cuiabá (MT).",
     "A Petrobras está retornando ao mercado de etanol com uma aquisição bilionária – anos depois de ter perdido dinheiro com seus investimentos no setor.",
@@ -1853,7 +1852,8 @@
     "A Latam iniciou nesta quinta-feira (26) sua Mega Promo de Black Friday, com descontos de até 40% em passagens nacionais e internacionais. No mercado doméstico, a companhia oferece bilhetes de ida e volta a partir de R$ 267, com opções para 58 destinos, segundo levantamento do Melhores Destinos. Gol e Azul também deram início a campanhas promocionai",
     "O lucro industrial da China cresceu 20,1% em outubro na comparação com o mesmo mês do ano anterior, o ritmo mais forte desde maio, segundo a CNBC. Os dados foram divulgados pelo Escritório Nacional de Estatísticas do país. No acumulado dos dez primeiros meses do ano, o avanço foi de 16%, acima dos 15,5% registrados até setembro.",
     "Entre 31 instituições financeiras, banco do futuro ministro da Fazenda está em 8º lugar no ranking das maiores taxas de juros",
-    "A senadora e relatora Eliziane Gama apresentou nesta quarta-feira (25) parecer que exclui a Lei das Estatais de um projeto aprovado pelos deputados em dezembro de 2022, conforme noticiou o g1. Com isso, a proposta passa a tratar apenas das agências reguladoras."
+    "A senadora e relatora Eliziane Gama apresentou nesta quarta-feira (25) parecer que exclui a Lei das Estatais de um projeto aprovado pelos deputados em dezembro de 2022, conforme noticiou o g1. Com isso, a proposta passa a tratar apenas das agências reguladoras.",
+    "Indicador básico acumula 3 meses acima da meta de 2% do Banco do Japão"
   ],
   "eventos_recentes": [
     {
@@ -2575,10 +2575,13 @@
     {
       "chave": "bradesco::GERAL_ATIVO",
       "ts": 1795749058.042136
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795751044.228379
     }
   ],
   "hashes_imagens": [
-    "c3b08d90f14b6841",
     "c188033763d68e2b",
     "6482313a437a2e29",
     "e486eb5bb6e8de34",
@@ -2877,6 +2880,7 @@
     "068304d014ec9d76",
     "977c7ec955c6d938",
     "dd6d3811e3f5caa0",
-    "c83747424e54e5b7"
+    "c83747424e54e5b7",
+    "441b027c33107494"
   ]
 }
