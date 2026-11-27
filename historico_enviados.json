@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/politica/alckmin-ganha-forca-para-assumir-ministerio-da-seguranca-publica/",
-    "9eec96350debfa22",
-    "https://www.spacemoney.com.br/investimentos/acoes/ibovespa-hoje/ibovespa-alta-bancos-petrobras-dolar/",
-    "e4ba08068ab5471e",
     "9676a35deab4e4dd",
     "https://bmcnews.com.br/empresas-e-negocios/motiva-anuncia-renuncia-de-andre-salcedo-e-eduardo-camargo-assume-divisao-de-trilhos/",
     "69efaf42ddd754b2",
@@ -799,10 +795,13 @@
     "78e242f39ec9e6b8",
     "bb6a620444e87ed1",
     "https://www.poder360.com.br/poder-economia/bradesco-confirma-ida-de-trabuco-para-a-fazenda/",
-    "9a13f54808a43a34"
+    "9a13f54808a43a34",
+    "5868d0dd777346f2",
+    "dd00cd8db5886bd1",
+    "https://www.infomoney.com.br/mercados/brava-brav3-inicia-producao-do-poco-ppt-53-no-campo-de-papa-terra/",
+    "c911778d1df472a4"
   ],
   "titulos": [
-    "O melhor programa social é o emprego",
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
     "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
     "Custo Brasil afasta empresas estrangeiras do mercado brasileiro",
@@ -1601,10 +1600,10 @@
     "Rheinmetall corta projeção de vendas e ação sobe 3,4%",
     "Sucateadas, paralisadas e “sem comando”: a dura realidade das agências reguladoras",
     "Fundo imobiliário amplia participação em complexo logístico em SP; IFIX emenda terceira alta",
-    "Bradesco confirma ida de Trabuco para a Fazenda"
+    "Bradesco confirma ida de Trabuco para a Fazenda",
+    "Brava (BRAV3) inicia produção do poço PPT-53 no campo de Papa-Terra"
   ],
   "leads": [
-    "A Taesa (TAEE11) vai pagar dividendos aos seus acionistas nesta quinta-feira (26).",
     "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
     "A imprensa iraniana apresentou na terça-feira (24) um vídeo que, conforme os veículos que o publicaram, exibiria um ataque dos Estados Unidos e de Israel contra um avião comercial no começo do conflito. A ação é atribuída a forças americanas e israelenses, e a aeronave — identificada por sites especializados em aviação como um Airbus A319 da Iran A",
     "Após resultados no terceiro trimestre considerados um tanto decepcionantes, o JPMorgan rebaixou a recomendação para ações da São Martinho (SMTO3) de neutra para venda, com preço-alvo de R$ 16 ao fim do exercício fiscal de 2028. O banco estima que o Ebitda (lucro antes de juros, impostos, depreciação e amortização) projetado pelo consenso esteja 17%",
@@ -1853,7 +1852,8 @@
     "As ações da Rheinmetall subiam 3,4% nesta sexta-feira, no meio da manhã, depois que investidores avaliaram a postura mais cautelosa da gigante alemã de defesa em seu Capital Markets Day, segundo a CNBC. O movimento ocorreu em um dia de alta generalizada no setor de defesa europeu.",
     "Brasília - O quadro geral das agências reguladoras federais, que já era preocupante, ganhou contornos dramáticos neste fim de ano, com 10 novas vagas de diretores abertas somente nos dois últimos meses, em um total de 46 até o fim de 2027. Esse cenário abre espaço para uma politização excessiva nesses cargos - que, via de regra, precisam ser técnic",
     "O fundo imobiliário Pátria Log (HGLG11) anunciou, por meio de fato relevante, que concluiu a aquisição de uma participação de 12,59% de um galpão logístico localizado em Itupeva, no interior de São Paulo, por R$ 31,3 milhões.",
-    "Banco diz que vai “informar, tempestivamente, seus acionistas e o mercado em geral sobre quaisquer desdobramentos relevantes”"
+    "Banco diz que vai “informar, tempestivamente, seus acionistas e o mercado em geral sobre quaisquer desdobramentos relevantes”",
+    "A Brava Energia (BRAV3) comunicou o início, nesta quinta-feira (26), da produção do poço PPT53, localizado no Campo de Papa-Terra, após a obtenção da autorização do Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama)."
   ],
   "eventos_recentes": [
     {
@@ -2595,10 +2595,13 @@
     {
       "chave": "bradesco::GERAL_ATIVO",
       "ts": 1795777975.15344
+    },
+    {
+      "chave": "brava::GERAL_ATIVO",
+      "ts": 1795778312.952822
     }
   ],
   "hashes_imagens": [
-    "ae72b4b6cd24b4ee",
     "612fe075b43a3f6b",
     "c78f7281baf140e5",
     "c20531ae6d0a48df",
@@ -2897,6 +2900,7 @@
     "d8a7d5df14d7c6a9",
     "3f1bbb6d8f82c1b5",
     "9c0c18e251cafe95",
-    "cb7a69e3ad79295b"
+    "cb7a69e3ad79295b",
+    "0b063ef0bb04d174"
   ]
 }
