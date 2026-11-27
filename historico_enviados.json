@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.seudinheiro.com/2026/economia/agu-derruba-liminar-que-isentava-grandes-operadoras-de-cumprir-normas-do-vale-alimentacao-cbcb/",
-    "e64100d9c1a376c8",
-    "9a7f3912228d1fe6",
     "c75120a9937fccf9",
     "https://www.poder360.com.br/poder-governo/governo-lula-propoe-diversificar-exportacoes-de-avioes-a-embraer/",
     "4b80fee9a3914d4b",
@@ -799,10 +796,12 @@
     "https://www.moneytimes.com.br/do-silo-ao-software-por-que-a-xp-ve-oportunidades-na-kepler-weber-kepl3-apesar-dos-desafios-do-agro-pads/",
     "9a1e762f5e1187ed",
     "https://www.suno.com.br/noticias/banco-do-brasil-bbas3-divivendos-pagamento-241126/",
-    "06013eb2987c51cd"
+    "06013eb2987c51cd",
+    "468b42e3b95ee691",
+    "https://www.estadao.com.br/economia/fux-prorroga-por-15-dias-contrato-do-brb-com-tribunal-da-bahia-e-evita-nova-crise-no-banco/",
+    "938b047c68477ea1"
   ],
   "titulos": [
-    "Fintechs brasileiras despencam em Nova York; PicPay perde 32% na semana",
     "ANTT aprova avanço da transferência da Régis Bittencourt à EPR",
     "Pedidos de demissão por conta própria perdem fôlego e confirmam arrefecimento do emprego formal",
     "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
@@ -1601,10 +1600,10 @@
     "Smart Fit (SMFT3) anuncia R$ 545 milhões em JCP e ações com desconto de 25%",
     "Eternit acelera diversificação após decisão do STF na extração de crisotila",
     "Do silo ao software: por que a XP vê oportunidades na Kepler Weber (KEPL3) apesar dos desafios do agro",
-    "Quando o Banco do Brasil (BBAS3) paga dividendos? Veja o calendário"
+    "Quando o Banco do Brasil (BBAS3) paga dividendos? Veja o calendário",
+    "Fux prorroga por 15 dias contrato do BRB com tribunal da Bahia e evita nova crise no banco"
   ],
   "leads": [
-    "Na última década, enquanto o movimento #MeToo tornava impossível ignorar o desequilíbrio de poder nas relações entre chefes e subordinados, esse tipo de relacionamento não declarado bastava para selar a saída de um CEO. Revelações semelhantes custaram o cargo de executivos da BP, da AIG, do McDonald’s e da Nestlé, provocaram turbulência nos conselh",
     "O Ibovespa voltou a ganhar fôlego nesta quinta-feira (26), após semanas de forte pressão vendedora. Às 17h03, o principal índice da Bolsa brasileira subia 4,29%, aos 173.831 pontos, depois de alcançar a máxima de 174.332 pontos.",
     "A votação de quinta-feira não alcançou a maioria de dois terços de que Milei precisava para restabelecer a redação original. Mesmo assim, a lei na prática proíbe o Banco Central de financiar gastos do governo no futuro.",
     "Lula passou a cobrar uma solução para a crise no Banco de Brasília (BRB), segundo apuração da analista de Política Larissa Rodrigues ao CNN 360°.",
@@ -1853,13 +1852,10 @@
     "A Smart Fit (SMFT3) anunciou uma distribuição milionária de proventos, mas trouxe uma novidade para os investidores que desejam ampliar sua participação na companhia. Além de aprovar R$ 545 milhões em juros sobre capital próprio (JCP), a rede de academias permitirá que os acionistas utilizem o dinheiro a receber para comprar novas ações, emitidas a",
     "A Eternit ajustou seu posicionamento estratégico para ampliar a participação da construção industrializada e da logística própria nos negócios. Ao mesmo tempo, a companhia enfrenta incertezas regulatórias em relação à crisotila, mineral que respondeu por R$ 221 milhões de receita nos nove primeiros meses de 2026, o equivalente a 25% da receita líqu",
     "A Kepler Weber (KEPL3) acredita que a próxima etapa de crescimento do agronegócio brasileiro passa menos pela expansão da área plantada e mais pela industrialização das operações no campo. Foi essa a principal mensagem apresentada pela companhia durante seu Investor Day 2026, evento que reforçou, na avaliação da XP Investimentos, o potencial de lon",
-    "Os investidores do Banco do Brasil (BBAS3) não terão um final de ano tão animador quanto o esperado. Quem aguarda os próximos dividendos do banco vai precisar de paciência. Neste momento, não há nenhum anúncio de proventos do banco no radar."
+    "Os investidores do Banco do Brasil (BBAS3) não terão um final de ano tão animador quanto o esperado. Quem aguarda os próximos dividendos do banco vai precisar de paciência. Neste momento, não há nenhum anúncio de proventos do banco no radar.",
+    "Caixa avalia comprar BRB e presidente cita federalização"
   ],
   "eventos_recentes": [
-    {
-      "chave": "nubank::GERAL_ATIVO",
-      "ts": 1795636424.30078
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795637149.790352
@@ -2574,7 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "0ec3418914f04a92",
     "de8dba5502eb1217",
     "4127dc4cb43c196c",
     "7a5cc2cf218c23dd",
@@ -2873,6 +2868,7 @@
     "8551d0251abed1d1",
     "3647584fc18aa026",
     "3fac6173debb0f38",
-    "6b83a5a2bc9704ae"
+    "6b83a5a2bc9704ae",
+    "f26a03747c46a4c0"
   ]
 }
