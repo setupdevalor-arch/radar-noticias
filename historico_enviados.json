@@ -1,11 +1,5 @@
 {
   "links": [
-    "b7c0802b78a3b291",
-    "1dbf77e7c5266964",
-    "https://www.moneytimes.com.br/letras-financeiras-superam-retorno-do-tesouro-selic-e-lideram-ranking-de-renda-fixa-da-b3-mlim/",
-    "fd04c74947f8afc1",
-    "https://www.spacemoney.com.br/economia/compras-supermercados-abras-novembro/",
-    "ed6fe4417c383cb5",
     "https://www.poder360.com.br/poder-economia/novas-regras-do-bc-para-credito-podem-atingir-20-milhoes/",
     "6ee079a781605539",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/durigan-defende-agilizar-proibicao-definitiva-de-bets-e-cassinos-online/",
@@ -799,7 +793,13 @@
     "https://megawhat.uol.com.br/economia-e-politica/empresas/cemig-supera-4-mil-clientes-no-varejo-e-mira-abertura-do-mercado/",
     "77c4d7607ca2bca4",
     "https://megawhat.uol.com.br/destaques-do-diario/petrobras-negocia-aquisicao-de-100-de-bloco-na-bacia-de-campos/",
-    "27b89e16e296cca3"
+    "27b89e16e296cca3",
+    "6fcaf168867d6931",
+    "9e84db06175257e3",
+    "65fdbcd8ba2a7523",
+    "23a7a6eb0ae7cd66",
+    "c43135146c2b2dca",
+    "778c7ce7ddcd588e"
   ],
   "titulos": [
     "OPINIÃO. Ainda dá para apostar tudo no CDI?",
@@ -1856,14 +1856,6 @@
     "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "jpmorgan::GERAL_ATIVO",
-      "ts": 1795616719.590079
-    },
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795617134.875984
-    },
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795617892.837835
