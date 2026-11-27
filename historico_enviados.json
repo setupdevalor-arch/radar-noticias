@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/infra/bndes-preve-mais-tres-emissoes-de-debentures-de-infraestrutura-ate-dezembro/",
-    "e9651cc4a1e5ec53",
-    "https://investnews.com.br/negocios/hilton-100-mi-reforma-copacabana/",
-    "1dd5950cec5d7719",
-    "https://investnews.com.br/negocios/chip-de-memoria-da-huawei/",
-    "199ca53c00e2049c",
     "82e67b47afbc4b08",
     "c410e8bff99365f4",
     "96f808073fde0aaf",
@@ -799,7 +793,13 @@
     "8d7422bf8406f7bb",
     "b197f1a2ca7c3673",
     "0c30b91f21902ea5",
-    "9ce2ee79fe6993e1"
+    "9ce2ee79fe6993e1",
+    "8e7bde16fa4abdd3",
+    "74e0489d89856bc0",
+    "5b3671b8eaa4b0f9",
+    "7fca5a716694dc40",
+    "f25cf7ed80f19f00",
+    "8161c0ea81f2b2f3"
   ],
   "titulos": [
     "A alegria do CLT: a estratégia do TotalPass e uma semana mais curta de aversão a risco",
@@ -1856,10 +1856,6 @@
     "Não previ. Começo por aí porque tenho cobrado coerência de outros analistas em público, e seria feio não reconhecer: Luiz Carlos Trabuco na Fazenda não estava no meu cenário, nem no rodapé dele, nem na lista das coisas improváveis. Para mim foi um cisne negro. E dos bons."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795621642.974417
-    },
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795622132.176499
