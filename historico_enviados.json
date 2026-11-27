@@ -1,14 +1,5 @@
 {
   "links": [
-    "58e23c959848e1ab",
-    "https://www.spacemoney.com.br/agronegocio/india-safra-acucar-2026-27/",
-    "96d6faa380cf27a8",
-    "https://www.infomoney.com.br/business/cvm-intima-americanas-ex-ceo-e-mais-29-ex-executivos-sobre-rombo-contabil/",
-    "9d911981068b4233",
-    "https://telesintese.com.br/gsma-projeta-5-bilhoes-de-usuarios-de-6g-ate-2040/",
-    "312b72cb378e26ca",
-    "9d83d16a79b0c43a",
-    "f95008e99048dd39",
     "4bbbaca6db47487e",
     "d6f31227430445ad",
     "https://investnews.com.br/financas/governo-planeja-emissao-panda-bonds/",
@@ -799,10 +790,18 @@
     "https://braziljournal.com/axia-vende-r-2-1-bilhoes-de-isa-energia-surfando-o-rali-trabuco",
     "f2d244c8d94897d5",
     "https://www.cnnbrasil.com.br/economia/money/negocios/amazon-mira-no-jeito-brasileiro-para-alavancar-vendas-na-black-friday/",
-    "75f3779d7f75ac6c"
+    "75f3779d7f75ac6c",
+    "b8f4e73133ba1995",
+    "26bab597cbccd941",
+    "8e88b9453ea9915f",
+    "04ec2aaf2c706352",
+    "21b7d08f71fb62f4",
+    "c9952d8fa07ee4b3",
+    "0f2c1b03613fd85a",
+    "https://www.spacemoney.com.br/economia/exterior/coreia-do-norte-corta-misseis-freia-tropas-russia/",
+    "0d2204173544f381"
   ],
   "titulos": [
-    "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia",
     "Minério cai com enfraquecimento da demanda chinesa e piora das margens siderúrgicas",
     "Mercado eleva projeção para inflação e dólar e prevê PIB menor em 2026",
     "Empresa desiste de 80 MW em geração solar em PE por falta de margem",
@@ -1601,10 +1600,10 @@
     "Bolsas da Europa fecham em alta com setor tech e expectativas sobre futuro do BCE",
     "Dividendo não é tudo: FIIs pagam todo mês, mas perdem para o CDI, diz estudo; entenda o que pesa contra os fundos na B3",
     "Axia vende R$ 2,1 bilhões de ISA Energia, surfando o rali Trabuco",
-    "Amazon mira no “jeito brasileiro” para alavancar vendas na Black Friday"
+    "Amazon mira no “jeito brasileiro” para alavancar vendas na Black Friday",
+    "Coreia do Norte corta mísseis e freia tropas à Rússia"
   ],
   "leads": [
-    "O CEO Antonio Filosa está sob pressão crescente para mostrar que os esforços da Stellantis para lançar novos produtos e resolver problemas de qualidade começam a dar resultado. Como parte de seu plano, o executivo busca cortar custos enquanto lida com despesas maiores com matérias-primas e chips.",
     "A Suno Notícias informou nesta quinta-feira (26) que o TVRI11 (Tivio Renda Imobiliária) acertou a venda da Agência Vila Carrão, na Avenida Conselheiro Carrão, 2.411, em São Paulo, por R$ 14 milhões. O ativo está locado e tem área bruta locável de 2.483 m². Segundo o fato relevante, o negócio pode gerar ganho de aproximadamente R$ 3,99 milhões, ou R",
     "Cotistas do RBRR11 (Pátria Rendimento High Grade) têm até a próxima segunda-feira (30) para informar à gestora o custo médio de aquisição das cotas, evitando pagar mais Imposto de Renda na liquidação do fundo. A medida ocorre após a venda de todos os ativos do FII ao PCIP11 (Pátria Crédito Imobiliário IPCA), concluída no início de novembro, que mar",
     "O CEO da Rumo, Daniel Rockenbach, afirmou nesta quinta-feira (26) que a companhia tem apetite para ampliar seus investimentos em infraestrutura ferroviária no Brasil, mas que a expansão passa pela melhora do ambiente de negócios no país.",
@@ -1853,7 +1852,8 @@
     "As bolsas da Europa fecharam em alta nesta sexta-feira (27), estendendo os ganhos da véspera, diante da retomada do apetite por ações de tecnologia.",
     "Levantamento da Nexa Finance mostra que o IFIX registrou retorno anualizado de 8,4% desde 2010, abaixo dos 9,9% do CDI",
     "A Axia Energia acaba de vender R$ 2,1 bilhões em ações da ISA Energia num block trade que movimentou cerca de 10% do capital da companhia de transmissão.",
-    "A Amazon Brasil vai apostar no \"jeito brasileiro\" para alavancar as vendas desta Black Friday, mirando em uma série de estratégias que se alinhem com o hábito de consumo para conquistar a confiança do público."
+    "A Amazon Brasil vai apostar no \"jeito brasileiro\" para alavancar as vendas desta Black Friday, mirando em uma série de estratégias que se alinhem com o hábito de consumo para conquistar a confiança do público.",
+    "A inteligência militar da Ucrânia afirma que a Coreia do Norte interrompeu o envio de mísseis balísticos e de munição de artilharia às forças russas e diminuiu o ritmo de novos deslocamentos de soldados para a guerra. A conclusão foi apresentada em 26 de novembro pela Direção Principal de Inteligência do Ministério da Defesa ucraniano (HUR), que at"
   ],
   "eventos_recentes": [
     {
@@ -2574,7 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "9f2fb4540d230315",
     "07ede6246bee8d9d",
     "77268374bcfbc702",
     "6118fce95526c748",
@@ -2873,6 +2872,7 @@
     "959b8362246b5395",
     "556c12eae82cd9ab",
     "3cd2015f755fe948",
-    "a6e674692099cce6"
+    "a6e674692099cce6",
+    "2a8f7f74afefd93e"
   ]
 }
