@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/mercados/renda-variavel/bolsas-e-indices/noticia/2026/11/26/um-mes-depois-da-eleicao-ibovespa-acumula-queda-de-19percent-e-algumas-acoes-ficaram-baratas-veja-quais-sao.ghtml",
-    "7187699c8fac93fd",
-    "e34f9d9c41887741",
     "3623b8db4c1644fd",
     "https://valorinveste.globo.com/mercados/renda-variavel/noticia/2026/11/26/mulheres-entram-na-bolsa-investindo-50percent-mais-que-homens-veja-quais-acoes-elas-mais-compram.ghtml",
     "68b4948a45046208",
@@ -799,10 +796,12 @@
     "https://www.poder360.com.br/poder-economia/ciro-possobom-deixara-comando-da-volkswagen-do-brasil/",
     "32d608530531afca",
     "https://www.moneytimes.com.br/gecex-aprova-minuta-para-grupo-de-trabalho-de-contramedidas-para-eua-fets/",
-    "5639c2c5461995e4"
+    "5639c2c5461995e4",
+    "0611165cbfa682a5",
+    "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/black-friday-ia-pode-mudar-precos-e-a-forma-como-clientes-fazem-compras/",
+    "a07abb69c8091941"
   ],
   "titulos": [
-    "Por que a Otan está montando uma rede de “táxis” para o espaço",
     "Otan lança rede Starlift para satélites com 11 países",
     "Projeto define regras para provedores de internet no Brasil",
     "Por que a cúpula do clima da ONU pode terminar sem acordo neste ano",
@@ -1601,10 +1600,10 @@
     "SAP prepara corte de ao menos 10 mil vagas em aposta em IA",
     "Fundo de ações brasileiras sobe mais de 9% nos EUA após confirmação de Trabuco na Fazenda",
     "Ciro Possobom deixará comando da Volkswagen do Brasil",
-    "Gecex aprova minuta para grupo de trabalho de contramedidas para EUA"
+    "Gecex aprova minuta para grupo de trabalho de contramedidas para EUA",
+    "Black Friday: IA pode mudar preços e forma como clientes fazem compras"
   ],
   "leads": [
-    "A Oncoclínicas (ONCO3) recebeu em 24 de novembro de 2026 uma correspondência de acionistas ligados à Latache Gestão de Recursos pedindo a convocação de uma Assembleia Geral Extraordinária para deliberar sobre mudanças no conselho de administração.",
     "Com a alta de juros, planos de previdência privada disputam espaço com investimentos como o Tesouro Direto, com produtos voltados para quem poupa para a aposentadoria.",
     "Segundo o Cointelegraph, a equipe Zakura, que desenvolve a Zcash, pediu à comunidade que comece a retirar recursos do Sapling, pool de transações protegidas que reúne quase 2% da oferta de ZEC, o equivalente a cerca de US$ 302 milhões.",
     "Os custos logísticos brasileiros atingiram R$ 1,96 trilhão em 2025, o equivalente a 15,5% do Produto Interno Bruto (PIB), segundo levantamento do Instituto de Logística e Supply Chain (ILOS). Em 2014, essa participação era de 10,4%. O aumento ocorre em meio a deficiências históricas da infraestrutura e dificuldades de planejamento em um país de rea",
@@ -1853,7 +1852,8 @@
     "A SAP prepara um plano para eliminar ao menos 10 mil postos de trabalho enquanto reorganiza o negócio de software para a era da inteligência artificial, segundo a CNBC, que citou reportagem da Bloomberg na quinta-feira com base em pessoas a par do assunto.",
     "O EWZ, fundo de investimento negociado nos Estados Unidos que acompanha o desempenho de ações brasileiras, registrava alta de 9,45% na madrugada desta sexta-feira (27), após a confirmação de Luiz Carlos Trabuco como ministro da Fazenda do quarto mandato do presidente Luiz Inácio Lula da Silva (PT).",
     "Executivo cita motivos pessoais e familiares; Alexander Seitz assumirá interinamente o cargo de CEO em janeiro de 2027",
-    "O Comitê-Executivo de Gestão (Gecex) da Câmara de Comércio Exterior aprovou nesta quinta-feira (26) minuta de resolução que regula o funcionamento do grupo que vai trabalhar em propostas de contramedidas a serem aplicadas contra sobretaxas comerciais aprovadas pelos Estados Unidos contra o Brasil, segundo comunicado do órgão."
+    "O Comitê-Executivo de Gestão (Gecex) da Câmara de Comércio Exterior aprovou nesta quinta-feira (26) minuta de resolução que regula o funcionamento do grupo que vai trabalhar em propostas de contramedidas a serem aplicadas contra sobretaxas comerciais aprovadas pelos Estados Unidos contra o Brasil, segundo comunicado do órgão.",
+    "Duas pessoas entram no mesmo site, procuram o mesmo produto e fazem a compra no mesmo momento. Ainda assim, podem encontrar preços ou condições comerciais diferentes. A situação pode virar tendência na Black Friday deste ano."
   ],
   "eventos_recentes": [
     {
@@ -2586,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "ef5bff0b6e123484",
     "22730691f0de2e02",
     "1794f00485518745",
     "09fd36626155f8d5",
@@ -2885,6 +2884,7 @@
     "7a535a533d8f0576",
     "258a4dfdf8dd20ac",
     "91728b14a7170010",
-    "6d73b021b8363d92"
+    "6d73b021b8363d92",
+    "7e133cfa21961436"
   ]
 }
