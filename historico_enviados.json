@@ -1,12 +1,5 @@
 {
   "links": [
-    "e68e8ef585ea29d8",
-    "25f882384d44abdd",
-    "4069993b493040a8",
-    "30051bc64d4d7daa",
-    "https://www.spacemoney.com.br/investimentos/juro-real-8-7-etfs-renda-fixa/",
-    "92c7bad2f9bc590c",
-    "https://www.moneytimes.com.br/musk-promete-duas-acoes-da-spacex-para-cada-crianca-dos-eua-em-ofensiva-de-us18-bilhoes-por-apoio-a-ia-pads/",
     "d11e9d1eb266b056",
     "d9da842a6ca78daf",
     "1cf3112c33888ca5",
@@ -799,11 +792,16 @@
     "https://www.spacemoney.com.br/investimentos/acoes/norse-atlantic-falencia-europa/",
     "3c800a3672fd8689",
     "b4ff2c6dd4f2c1fa",
-    "e039f4c8ef0903ae"
+    "e039f4c8ef0903ae",
+    "c984331977b34b07",
+    "a10ab8021715a6d8",
+    "78d5393996f820ef",
+    "https://www.estadao.com.br/economia/tarcisio-escolha-trabuco-acertada-quem-pode-atrapalhar-pt/",
+    "340f07e316599716",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/medidas-do-governo-para-frear-alta-de-combustiveis-ja-superam-r-74-bilhoes/",
+    "830c4e5808d5d010"
   ],
   "titulos": [
-    "Zelenskyy exalta afundamento de corveta russa na Líbia",
-    "Bradesco volta ao jogo do private equity e venture capital e já soma R$ 400 milhões em aportes",
     "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
     "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada",
     "Manifesto de juristas e economistas pede rejeição do PL das big techs",
@@ -1601,11 +1599,11 @@
     "Resultado primário positivo chega a R$ 52,3 bi em outubro",
     "Elon Musk é o maior beneficiado de uma possível fusão entre SpaceX e Tesla. Entenda",
     "UE trava em acordo sobre orçamento de €1,58 trilhão",
-    "Norse Atlantic pede falência após falhar em captar recursos"
+    "Norse Atlantic pede falência após falhar em captar recursos",
+    "Tarcísio diz que escolha por Trabuco foi acertada: ‘Quem pode atrapalhar é o PT’",
+    "Medidas do governo para frear alta de combustíveis já superam R$ 74 bilhões"
   ],
   "leads": [
-    "As compras nos supermercados cresceram 8% entre 9 e 15 de novembro, na comparação anual, segundo monitoramento da Associação Brasileira de Supermercados (Abras). A entidade credita ao encerramento das bets uma folga orçamentária das famílias, mas afirma que o avanço das compras tem outros vetores.",
-    "Medidas restringem empréstimos a inadimplentes e limitam cartões usados frequentemente no rotativo; objetivo é diminuir o endividamento",
     "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo.",
     "O peso mexicano caminha para sua maior sequência de desvalorizações em cinco anos, à medida que os investidores fogem para ativos de refúgio e a popular estratégia de carry trade se desfaz.",
     "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas.",
@@ -1853,7 +1851,9 @@
     "O g1 informou nesta sexta-feira (27) que as contas federais tiveram, em outubro, resultado primário positivo de R$ 52,3 bilhões, segundo dados do Tesouro Nacional. É o maior saldo para um mês de outubro desde 2016, quando o resultado positivo alcançou R$ 66,3 bilhões, em valores deflacionados. O desempenho também supera os R$ 38,3 bilhões do mesmo ",
     "Essas preocupações dificilmente serão suficientes para impedir o negócio. As duas companhias atraíram investidores que admiram Musk e provavelmente apoiarão sua visão de uma empresa combinada.",
     "Os líderes da União Europeia não conseguiram destravar o impasse em torno do próximo orçamento de longo prazo do bloco, segundo a CNBC, o que mantém os negociadores sob pressão para fechar um acordo até o fim do ano, antes que o ciclo eleitoral de 2027 complique ainda mais as conversas. O plano define prioridades e limites de gastos para o período ",
-    "Segundo a CNBC, a Norse Atlantic, companhia aérea de baixo custo norueguesa, protocolou nesta sexta-feira um pedido de falência na Europa depois de não conseguir levantar recursos suficientes para atender às suas necessidades de liquidez de curto prazo. A controladora Norse Atlantic ASA concluiu que a empresa não tem mais base para continuar operan"
+    "Segundo a CNBC, a Norse Atlantic, companhia aérea de baixo custo norueguesa, protocolou nesta sexta-feira um pedido de falência na Europa depois de não conseguir levantar recursos suficientes para atender às suas necessidades de liquidez de curto prazo. A controladora Norse Atlantic ASA concluiu que a empresa não tem mais base para continuar operan",
+    "Trabuco: 'Discutir o papel do Estado é crucial'",
+    "Desde março, o governo federal vem adotando uma série de ações para mitigar a alta dos combustíveis por conta do conflito no Irã. Cálculos do Tesouro Nacional divulgados nesta sexta-feira (27) mostram que as medidas já concedidas somam R$ 74,5 bilhões."
   ],
   "eventos_recentes": [
     {
@@ -2602,8 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "2404d220ace67c05",
-    "2df04a8bdf979cb8",
     "7ae0f2f8978c2dc7",
     "6072d8d0b2504c25",
     "08092064c962c90c",
@@ -2901,6 +2899,8 @@
     "bca618cc02c3e56f",
     "3fdfddeb19030817",
     "ad98d431991410d9",
-    "cee0b176cbc0eef4"
+    "cee0b176cbc0eef4",
+    "35d34e39de375f63",
+    "2ed0aeb514b6e2a4"
   ]
 }
