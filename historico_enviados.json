@@ -1,8 +1,5 @@
 {
   "links": [
-    "e4b3a049c9fb0718",
-    "83463807190596d4",
-    "d9bbcd79e0ee8b6d",
     "bf99212991d41ddf",
     "f427ef0940fb2e89",
     "71c9e1307b0dc65a",
@@ -799,10 +796,12 @@
     "4d043c86a3450b82",
     "e13b3b56719684da",
     "https://www.infomoney.com.br/mercados/por-que-petrobras-petr4-recua-em-dia-de-euforia-no-ibovespa/",
-    "91acfed9b15d4820"
+    "91acfed9b15d4820",
+    "4be2e2e430993238",
+    "https://www.infomoney.com.br/mercados/inadimplencia-de-pessoa-fisica-no-credito-sobe-para-perto-do-recorde-em-outubro/",
+    "2a0588c904c299f0"
   ],
   "titulos": [
-    "Seguro rural pode ser a salvação das lavouras gaúchas",
     "Tempestade perfeita? Goldman vê real atrativo, mas recomenda cautela no curto prazo",
     "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar",
     "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro",
@@ -1601,10 +1600,10 @@
     "Itaú BBA reduz moagem de cana-de-açúcar no Centro-Sul e vê menor estoque de etanol em 10 anos",
     "Carne suína do Brasil ganha novo mercado no Caribe",
     "OPINIÃO: O cisne negro em Brasília",
-    "Por que Petrobras (PETR4) recua em dia de altas no Ibovespa?"
+    "Por que Petrobras (PETR4) recua em dia de altas no Ibovespa?",
+    "Inadimplência de pessoa física no crédito sobe para perto do recorde em outubro"
   ],
   "leads": [
-    "Com a taxa básica em 13,75% ao ano e o IPCA acumulado em 4,64% nos últimos 12 meses, o Brasil opera com juro real na casa de 8,7%. Segundo a Suno Notícias, esse patamar recoloca as aplicações pós-fixadas e os ETFs de renda fixa negociados na B3 na mesa do investidor.",
     "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA",
     "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a",
     "Banco confirmou que estuda operar linhas do programa habitacional; movimento ocorre uma semana após o Itaú anunciar entrada nas faixas de renda média e no Pró-Cotista.",
@@ -1853,13 +1852,10 @@
     "A moagem de cana-de-açúcar do Centro-Sul do Brasil na safra 2026/27 deve totalizar algo entre 620 milhões e 640 milhões de toneladas, informou o banco de investimento Itaú BBA nesta sexta-feira, indicando redução ante as expectativas iniciais devido ao excesso de chuvas associadas ao fenômeno climático El Niño.",
     "O Ministério da Agricultura e Pecuária (Mapa) e a Associação Brasileira de Proteína Animal (ABPA) informaram que, na sexta-feira (27), São Cristóvão e Névis autorizou a importação de carne suína e miúdos do Brasil.",
     "Não previ. Começo por aí porque tenho cobrado coerência de outros analistas em público, e seria feio não reconhecer: Luiz Carlos Trabuco na Fazenda não estava no meu cenário, nem no rodapé dele, nem na lista das coisas improváveis. Para mim foi um cisne negro. E dos bons.",
-    "As ações da Petrobras perdem mais de 3% na tarde desta sexta-feira (27), na contramão da euforia observada em outros setores do Ibovespa. Os papéis da petroleira recuam 4,10% para PETR3, a R$ 47,08, e 3,13% para PETR4, a R$ 41,82, às 12h54 (horário de Brasília)."
+    "As ações da Petrobras perdem mais de 3% na tarde desta sexta-feira (27), na contramão da euforia observada em outros setores do Ibovespa. Os papéis da petroleira recuam 4,10% para PETR3, a R$ 47,08, e 3,13% para PETR4, a R$ 41,82, às 12h54 (horário de Brasília).",
+    "A inadimplência do crédito rural para pessoas físicas com recursos direcionados subiu para 9,6% em outubro, de 8,6% em setembro. O resultado está apenas 0,1 ponto porcentual abaixo do recorde da série, de 9,7%, registrado em agosto."
   ],
   "eventos_recentes": [
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795622756.308441
-    },
     {
       "chave": "jbs::GERAL_ATIVO",
       "ts": 1795623987.756497
@@ -2598,7 +2594,6 @@
     }
   ],
   "hashes_imagens": [
-    "ca02e4721d2951b4",
     "6fbf1cb5482bd8f8",
     "067946fdb880f92c",
     "8c9eefc09e92fdec",
@@ -2897,6 +2892,7 @@
     "2018bd1cdbd9b4a1",
     "9389d88abe6965a9",
     "a881d531bda05777",
-    "f3214e10795af433"
+    "f3214e10795af433",
+    "d862bc90f7ce34bf"
   ]
 }
