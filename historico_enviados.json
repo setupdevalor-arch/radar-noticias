@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://finsidersbrasil.com.br/regulamentacao/bc-manda-bancos-reduzir-limite-de-quem-financia-fatura-3-vezes-em-6-meses/",
-    "4c5ba7f6a0f5deb8",
-    "https://www.poder360.com.br/poder-governo/durigan-defende-envio-de-indicacoes-ao-stf-e-ao-bc-ainda-em-2026/",
-    "2f0c737bb0cf214a",
-    "d100d09d9b9ae30d",
-    "3c00ff5373b28857",
     "https://www.infomoney.com.br/mundo/trump-diz-que-gostaria-de-ver-putin-recuar-em-agressao-militar-na-europa/",
     "93bf1c0115d75257",
     "https://www.spacemoney.com.br/noticias/argentina-safra-recorde-graos-2025-26/",
@@ -799,10 +793,15 @@
     "9abb6ff582073263",
     "60b5e8714f30b18c",
     "https://www.moneytimes.com.br/black-friday-da-bolsa-acoes-brasileiras-voltaram-ao-radar-dos-investidores-mlem/",
-    "2f464b3b5a220cc2"
+    "2f464b3b5a220cc2",
+    "0ce9b960fbc16d24",
+    "72c5163840304acc",
+    "94bd0f5903a94d2b",
+    "80aed7eff6e77144",
+    "https://www.suno.com.br/noticias/bbas3-banco-do-brasil-agro-271126/",
+    "dbfceef4771e0cc6"
   ],
   "titulos": [
-    "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”",
     "El Niño leva Chile a alerta máximo de incêndios no verão",
     "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul",
     "OPINIÃO. Ainda dá para apostar tudo no CDI?",
@@ -1601,10 +1600,10 @@
     "Microsoft reduz consumo de RAM do Windows 11 em 860 MB",
     "EUA pressionaram Venezuela e Iraque a considerarem saída da Opep, dizem fontes",
     "S&P 500 entra em correção; recessão não é regra",
-    "Black Friday da Bolsa: ações brasileiras voltaram ao radar dos investidores"
+    "Black Friday da Bolsa: ações brasileiras voltaram ao radar dos investidores",
+    "Brasil do Brasil (BBAS3) presta novos esclarecimentos à CVM sobre agro"
   ],
   "leads": [
-    "Bastou ganhar força a informação de que o presidente Luiz Inácio Lula da Silva sondou Luiz Carlos Trabuco para o Ministério da Fazenda para os mercados brasileiros dispararem. Em apenas dois pregões, o movimento foi expressivo: na quarta-feira (25) o Ibovespa avançou 1,58% e o dólar caiu 1,53%, para R$ 5,81. Nesta quinta-feira (26), com o noticiári",
     "O mercado de semicondutores movimenta mais de US$ 15 trilhões em valor de mercado combinado, mas a distribuição desse montante revela uma indústria muito mais hierarquizada do que a variedade de produtos sugere. Segundo dados referentes a novembro de 2026 reunidos pelo Visual Capitalist a partir da plataforma CompaniesMarketCap, poucas companhias c",
     "O presidente da França, Emmanuel Macron, chamou a carne brasileira de \"dopada\" e comemorou a suspensão das importações de produtos de origem animal do Brasil pela União Europeia, que está em vigor desde 3 de setembro.",
     "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo.",
@@ -1853,13 +1852,10 @@
     "A Microsoft liberou acima de 860 MB de RAM no Windows 11 ao ajustar programas e serviços nativos do sistema. O balanço foi apresentado durante a conferência Ignite 2026 por Ian LeGrow, executivo responsável pela área de sistemas operacionais da companhia.",
     "Por Ahmad Ghaddar e Ahmed Rasheed e Marianna Parraga",
     "Segundo a CNBC, o S&P 500 entrou em correção em 20 de novembro, a primeira desde abril de 2025, após recuar com força dos recordes registrados em outubro. Uma correção é definida como uma queda de 10% ou mais em relação ao topo recente.",
-    "Embora a perspectiva de juros elevados continue sendo desafiadora, apenas a sinalização de uma política fiscal diligente já deve trazer um respiro significativo para o Ibovespa no curtíssimo prazo."
+    "Embora a perspectiva de juros elevados continue sendo desafiadora, apenas a sinalização de uma política fiscal diligente já deve trazer um respiro significativo para o Ibovespa no curtíssimo prazo.",
+    "O Banco do Brasil (BBAS3) divulgou, em 26 de novembro de 2026, comunicado ao mercado em atenção ao Ofício nº 328/2026/CVM/SEP/GEA-1, da Comissão de Valores Mobiliários (CVM)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "mcre11::GERAL_ATIVO",
-      "ts": 1795615677.474202
-    },
     {
       "chave": "jpmorgan::GERAL_ATIVO",
       "ts": 1795616719.590079
@@ -2595,10 +2591,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795788201.897342
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795788548.774363
     }
   ],
   "hashes_imagens": [
-    "8a34178637c5f082",
     "b8391ca34557796b",
     "65ef96cdbc516da1",
     "b49c46794e26c734",
@@ -2897,6 +2896,7 @@
     "6f1c8a5dbc084e77",
     "cd99f59ee321c9b5",
     "a3a804818270ff69",
-    "7b8672579cf3d5a5"
+    "7b8672579cf3d5a5",
+    "b1f6f14938e67593"
   ]
 }
