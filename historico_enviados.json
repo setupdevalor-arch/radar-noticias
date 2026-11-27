@@ -1,7 +1,5 @@
 {
   "links": [
-    "0a1e7a44d311c5d3",
-    "https://megawhat.uol.com.br/noticias/aneel-cobra-respostas-sobre-energia-de-itaipu-em-meio-a-risco-de-alta-de-precos/",
     "205dea1730f27208",
     "876213e89a689f42",
     "13f65c2737552453",
@@ -799,10 +797,11 @@
     "6064948a42464f1e",
     "https://investnews.com.br/investimentos/tokenizacao-mundial-supera-us-40-bilhoes-com-titulos-do-tesouro-americano-no-topo/",
     "4382b8160b3830f5",
-    "fbb43454d580b33f"
+    "fbb43454d580b33f",
+    "https://www.spacemoney.com.br/agronegocio/black-friday-agro-custo-total/",
+    "68f8108d0777bd4c"
   ],
   "titulos": [
-    "Dólar, ouro e até o real entram no jogo: onde o UBS vê oportunidades para ganhar dinheiro — e se proteger — em 2027",
     "The Economist: O que está causando os recentes apagões nos Estados Unidos?",
     "Produção de café da Colômbia deve se recuperar na nova safra, afirma USDA",
     "Ataque a navio comercial na Líbia leva guerra dos drones ao Mediterrâneo",
@@ -1601,10 +1600,10 @@
     "Onde Investir reúne XP e JPMorgan para discutir estratégias de alocação em 2027",
     "Setores regulados se juntam contra o fim da quarentena para políticos nas agências",
     "Por que o Brasil corre o risco de enfrentar uma crise de crédito em 2027?",
-    "Tokenização mundial supera US$ 40 bilhões com títulos do Tesouro americano no topo"
+    "Tokenização mundial supera US$ 40 bilhões com títulos do Tesouro americano no topo",
+    "Na Black Friday do agro, custo total supera o desconto"
   ],
   "leads": [
-    "Companhia reúne autoridades para lançar o E195-E2, que entra em operação em dezembro",
     "Quase metade dos consumidores também aproveita todo o mês de novembro, e não apenas a data da Black, para fazer compras",
     "O Senado da Argentina analisará nesta quinta-feira (26) um projeto de lei que suspenderia as eleições primárias, abrindo caminho para uma possível vitória do presidente Javier Milei antes da disputa presidencial do próximo ano, enquanto o país se encontra à beira de uma recessão.",
     "A área de infraestrutura do governo federal conseguiu uma vitória importante no TCU (Tribunal de Contas da União), nesta quarta-feira (25), com a liberação do uso das chamadas contas vinculadas e a classificação privada dos recursos que transitam por esses instrumentos. Ao evitar que os valores sejam rotulados como “públicos” e precisem passar pelo",
@@ -1853,7 +1852,8 @@
     "A forte reprecificação dos ativos brasileiros após as eleições presidenciais e as incertezas sobre a trajetória dos juros no país e no exterior tornam a diversificação um dos principais desafios para os investidores em 2027. A escolha entre renda fixa, ações e investimentos internacionais exige atenção não apenas ao potencial de retorno, mas também",
     "NESTA EDIÇÃO. Mais de 100 entidades pedem ao Senado que rejeite o projeto que abre as agências a políticos.",
     "O elevado endividamento dos tomadores de empréstimos, o aumento da inadimplência e a deterioração da qualidade das carteiras de crédito podem levar os bancos a restringir a concessão de novos financiamentos em 2027. Na avaliação de especialistas do setor financeiro, a combinação desses fatores amplia o risco de uma crise de crédito no Brasil.",
-    "Os títulos do Tesouro americano, conhecidos como Treasuries, lideram o mercado de ativos tokenizados. O total chega a US$ 14,1 bilhões, cerca de 34% do valor registrado."
+    "Os títulos do Tesouro americano, conhecidos como Treasuries, lideram o mercado de ativos tokenizados. O total chega a US$ 14,1 bilhões, cerca de 34% do valor registrado.",
+    "Nesta sexta-feira, 27 de novembro, a edição 2026 da Black Friday coloca o produtor rural diante de uma decisão que vai além do percentual exibido na vitrine. Na compra de insumos e equipamentos, o desembolso final depende de frete, taxas, juros e da real necessidade da lavoura, fatores que podem reduzir o efeito do abatimento anunciado."
   ],
   "eventos_recentes": [
     {
@@ -2586,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "60c9f6825e3a595e",
     "d388eee4d0accebd",
     "4b05a9f91083cc78",
     "f36a0dd994d6ee86",
@@ -2885,6 +2884,7 @@
     "4e9c9a52820f21d0",
     "861a2b7aa83b4a9b",
     "6a021714e36f8e2d",
-    "468ab4b0dea492df"
+    "468ab4b0dea492df",
+    "8894950236fa453b"
   ]
 }
