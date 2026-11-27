@@ -1,9 +1,5 @@
 {
   "links": [
-    "37454232c0b817be",
-    "https://www.mobiletime.com.br/noticias/26/11/2026/elife-ia-reduz-bmg/",
-    "99aa3e2ad17cd51f",
-    "https://agenciainfra.com/blog/amazonas-e-roraima-registram-apagao-apos-desligamento-de-linhas/?utm_source=rss&utm_medium=rss&utm_campaign=amazonas-e-roraima-registram-apagao-apos-desligamento-de-linhas",
     "fcf18186e38728ed",
     "90a56c949a49eeb4",
     "fc584bce8c184827",
@@ -799,11 +795,13 @@
     "ab71e1a84ec0e407",
     "8abd54e8175388f7",
     "https://www.cnnbrasil.com.br/infra/aneel-mantem-bandeira-verde-para-conta-de-luz-em-dezembro/",
-    "e66be9b92641022e"
+    "e66be9b92641022e",
+    "https://www.suno.com.br/noticias/ibovespa-hoje-27-novembro-trabuco-dolar-queda/",
+    "bdf97cf42c4deb73",
+    "https://agenciainfra.com/blog/ue-adia-para-2027-decisao-sobre-compra-de-ativos-de-nivel-no-brasil-para-chineses/?utm_source=rss&utm_medium=rss&utm_campaign=ue-adia-para-2027-decisao-sobre-compra-de-ativos-de-nivel-no-brasil-para-chineses",
+    "62a15bc77dd2a4ba"
   ],
   "titulos": [
-    "Natal mais magro? Para Molina, da MBRF (MBRF3), fim das bets pode trazer ‘surpresa muito boa’ para o varejo",
-    "Gerdau: Juro é definido no mercado; não há governo que consiga comandar esse processo",
     "Fazenda reduz estimativa do PIB de 2026 de 2,0% para 1,9%",
     "Uma empresa bem-sucedida erra ao confiar demais na própria fórmula: CEO do Itaú revela o que aprendeu sobre liderança",
     "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
@@ -1601,11 +1599,11 @@
     "TRXF11 lidera giro de FIIs na B3 pelo terceiro mês",
     "CVM começa testes de tokenização e pode estender prazo até fevereiro",
     "Um minueto: Lula e Trabuco terão de acertar o passo para harmonizar o governo",
-    "Aneel mantém bandeira verde para conta de luz em dezembro"
+    "Aneel mantém bandeira verde para conta de luz em dezembro",
+    "Dólar despenca 4%, Magalu (MGLU3) dispara e Ibovespa tem melhor semana desde o primeiro turno",
+    "UE adia para 2027 decisão sobre compra de ativos de nível no Brasil para chineses"
   ],
   "leads": [
-    "A Bolsa brasileira resolveu acelerar nesta quinta-feira (26), e a TOTVS (TOTS3) pegou carona no movimento com uma das maiores valorizações do Ibovespa. As ações da empresa brasileira de tecnologia, especializada em softwares de gestão empresarial, chegaram a subir 8,49% por volta das 14h40, em um pregão marcado pelo otimismo dos investidores após a",
-    "Segundo a Suno Notícias, a S&P Global Ratings colocou a Nvidia (NVDC34) no CreditWatch negativo, abrindo espaço para cortar as notas da fabricante de chips nos próximos 90 dias. A agência manteve a avaliação “AA”, mas quer respostas sobre a supervisão do conselho, os controles internos e a concentração de poder em Jensen Huang.",
     "A comparação entre GGRC11 e HGLG11 feita pela Suno Notícias mostra diferenças de porte, rendimento, contratos e ocupação. Os dois fundos imobiliários têm patrimônio líquido somado superior a R$ 11 bilhões e estão entre os principais nomes do segmento logístico e industrial listados na B3, conforme a reportagem.",
     "A decisão do Tribunal de Contas da União (TCU) de autorizar o uso de contas vinculadas em contratos de infraestrutura pode se tornar um dos marcos mais importantes da política de concessões da atual gestão.",
     "Nome do presidente do Conselho de Administração do Bradesco ganhou força para chefiar a equipe econômica",
@@ -1853,7 +1851,9 @@
     "O TRXF11, da TRX Real Estate, registrou o maior volume de negociação entre FIIs na B3 em outubro e manteve a ponta pelo terceiro mês, de acordo com a Suno Notícias. O recorte usa o DataWise+ e aponta alterações em veículos ligados a galpões logísticos e shopping centers.",
     "- CVM recebeu 11 propostas de projetos com ativos tokenizados e vai iniciar os testes do programa piloto de DLT.",
     "A questão-chave, embora não a única, do mandato do futuro ministro da Fazenda, Luiz Carlos Trabuco Cappi, será o grau de autonomia que terá para exercer seu cargo. Hoje, nem ele nem o presidente Lula têm clareza do que, na prática, será essa relação. Isso aí será um minueto que terá pisão no pé e algum falso volteio, até que a dupla consiga se harm",
-    "A Aneel (Agência Nacional de Energia Elétrica) manteve nesta sexta-feira (27) a bandeira tarifária verde para o mês de dezembro, ou seja, sem cobrança extra na conta de luz."
+    "A Aneel (Agência Nacional de Energia Elétrica) manteve nesta sexta-feira (27) a bandeira tarifária verde para o mês de dezembro, ou seja, sem cobrança extra na conta de luz.",
+    "O efeito Trabuco perdeu força na Bolsa, mas continuou fazendo preço no câmbio. Nesta sexta-feira (27), o Ibovespa encerrou o pregão em queda de 0,13%, aos 176.573,35 pontos, após alcançar a máxima de 183.625,66 pontos. Apesar de devolver mais de 7 mil pontos ao longo da sessão, o índice acumulou alta de 6,13% na semana, seu melhor desempenho desde ",
+    "A Direção-Geral da Concorrência da Comissão Europeia, órgão da UE (União Europeia), adiou para 2027 o prazo final de análise da compra de ativos de nível no Brasil, da Anglo American, pelos chineses da MMG Limited. Agora, a decisão deverá ser tomada até 27 de janeiro. Antes, a análise estava prevista para ser concluída no próximo dia 21 de dezembro"
   ],
   "eventos_recentes": [
     {
@@ -2567,11 +2567,13 @@
     {
       "chave": "trxf11::GERAL_ATIVO",
       "ts": 1795817858.180253
+    },
+    {
+      "chave": "magazine_luiza::GERAL_ATIVO",
+      "ts": 1795819163.816036
     }
   ],
   "hashes_imagens": [
-    "f1f9a109c64d946e",
-    "8ff10dd2b7342f23",
     "3cbf85f093d45d80",
     "56b282a38d4adf23",
     "3fddac88fbda9c79",
@@ -2869,6 +2871,8 @@
     "ecc8b85639df8e41",
     "9d009213431f8beb",
     "7b3c3ba24d5519fd",
-    "df72238c9c2bc209"
+    "df72238c9c2bc209",
+    "4e360f66f24a446d",
+    "9b2f245cc235855c"
   ]
 }
