@@ -1,8 +1,5 @@
 {
   "links": [
-    "52891a89ca0d0a31",
-    "d5d549023d11cfa2",
-    "77969696e2733b61",
     "6a04fafbaf00a0d6",
     "9ea6c204cdd612d4",
     "3a5f6975a4554360",
@@ -799,10 +796,12 @@
     "8b5a6fcd2de6e003",
     "89a5f551fbcac4df",
     "bd3e6ae94021772a",
-    "4ab67ae275557dbe"
+    "4ab67ae275557dbe",
+    "1f4f012bd3e64c69",
+    "https://www.mobiletime.com.br/noticias/26/11/2026/visa-esforcos-agenticos/",
+    "b15ac20e45c46787"
   ],
   "titulos": [
-    "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
     "Boi gordo renova recorde e futuro aponta dezembro mais alto",
     "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data",
     "Goldman Sachs: Brasil precisa de ajuste nas contas públicas de R$ 400 bi",
@@ -1601,10 +1600,10 @@
     "Infraestrutura vive “superciclo” de investimentos, diz Ronei Glanzmann",
     "Segurança é “valor inegociável” da Ultracargo, diz Fulvius Tomelin",
     "Santos Brasil planeja investir R$ 3,5 bi em 4 anos, diz Sepúlveda",
-    "Guimarães elogia Trabuco e diz que futuro ministro é “parceiro de diálogo”"
+    "Guimarães elogia Trabuco e diz que futuro ministro é “parceiro de diálogo”",
+    "Visa foca seus esforços em pagamentos agênticos, diz diretor"
   ],
   "leads": [
-    "Os fundos de debêntures incentivadas acumulam oito meses de saques e, no acumulado de 12 meses encerrado em meados de novembro, tiveram ganho médio de 6,93%, menos da metade do CDI, conforme números da Anbima reunidos pelo InvestNews. O índice IDA-IPCA Infraestrutura recuou 1,03% em novembro até o dia 24, quando o CDI subiu 0,76%; no ano, o indicad",
     "A Reforma Tributária, que deve alterar a lógica histórica de localização de centros de distribuição no Brasil ao reduzir a relevância dos incentivos fiscais estaduais, não deve provocar mudanças na estratégia logística da Amazon (AMZO34) no país. Pelo contrário: a companhia pretende expandir sua rede de operações, aumentar o número de centros logís",
     "A Suno Notícias informou que o avanço de apartamentos compactos em grandes centros urbanos tem ampliado a procura por self storage, serviço de locação para guardar móveis, itens pessoais e mercadorias. O segmento começa a ser observado como possível alternativa de diversificação para fundos imobiliários focados em renda.",
     "O BTG Pactual elevou o preço-alvo do IRB (IRBR3) de R$ 75 para R$ 90, reiterando a recomendação de compra. O novo preço implica um potencial de alta de 54,2%. O banco atualizou as estimativas para incorporar os resultados da resseguradora no terceiro trimestre de 2026 e o impacto da Lei 15.525/2026, que altera regras tributárias para resseguradoras",
@@ -1853,7 +1852,8 @@
     "O setor de infraestrutura brasileiro vive um superciclo de investimentos, mas enfrenta desafios significativos para manter o ritmo de crescimento nos próximos anos.",
     "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
     "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
-    "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta."
+    "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
+    "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra"
   ],
   "eventos_recentes": [
     {
@@ -2578,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "2bb59310a07d5016",
     "43f752f4b06b219d",
     "8ea2f804400578f5",
     "d1d2a4c1161b307b",
@@ -2877,6 +2876,7 @@
     "26ac8bdb8b581ca6",
     "35ee74ee71ae3945",
     "98d4dc4e283c1922",
-    "c809fc5e36185f3b"
+    "c809fc5e36185f3b",
+    "e740fae44b64def7"
   ]
 }
