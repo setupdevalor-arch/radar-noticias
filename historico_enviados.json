@@ -1,13 +1,5 @@
 {
   "links": [
-    "20232fb260d6d792",
-    "c3765482c81ea32c",
-    "22c3ef04ded879b1",
-    "f00a7235656fe81c",
-    "c3c43ca8571f1144",
-    "a8e1bf3b4ae70bd0",
-    "d78010d4ca32b84c",
-    "b84f7ce95d104d86",
     "941f170196a66ba8",
     "89ff3ce2ce771c20",
     "32df2955f7d9ed71",
@@ -799,12 +791,17 @@
     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bolsa-sobe-6-e-tem-maior-alta-desde-o-1o-turno-dolar-cai-r-574",
     "a7d5e65bfe45f5b3",
     "https://bmcnews.com.br/mercados/ibovespa-tem-2a-maior-alta-diaria-desde-2021-e-so-suzano-cai-no-pregao/",
-    "2aae6e25fb738540"
+    "2aae6e25fb738540",
+    "0a3ca7cd93a8aa55",
+    "244530eee1e524f5",
+    "https://www.moneytimes.com.br/governo-aprova-antidumping-para-aco-plano-laminado-a-quente-e-folha-metalica/",
+    "ea286f2cac2bd95d",
+    "https://www.cnnbrasil.com.br/politica/hugo-deseja-exito-a-trabuco-na-fazenda-e-prega-dialogo-por-agenda-economica/",
+    "5b276cb5c17e671f",
+    "https://www.poder360.com.br/poder-congresso/deputada-pede-bloqueio-de-14-emendas-de-flavio-ao-orcamento-de-2027/",
+    "d15263f17a1b9e4f"
   ],
   "titulos": [
-    "Copel mira leilão de 2027 para transformar hidrelétricas em baterias",
-    "Dividendos à vista: Porto Seguro (PSSA3) confirma pagamento de R$ 567 milhões; veja valor por ação",
-    "CEO do Bradesco afirma que é hora de ‘prudência’ nos bancos brasileiros",
     "Celesc restabelece 90% da luz em 48h após temporais em SC",
     "BTG desistiu de comprar Master por falta de garantias, diz Esteves",
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
@@ -1601,12 +1598,12 @@
     "Relembre quais ministros da Fazenda vieram do mercado financeiro",
     "Trabuco não será ‘Levy 2.0’, diz banqueiro; ‘outra estatura’",
     "Bolsa sobe 6% e tem maior alta desde o 1º turno; dólar cai a R$ 5,74",
-    "Ibovespa tem 2ª maior alta diária desde 2021 e só Suzano cai no pregão"
+    "Ibovespa tem 2ª maior alta diária desde 2021 e só Suzano cai no pregão",
+    "Governo aprova antidumping para alguns tipos de aço; Usiminas, Gerdau e CSN aguardavam a medida",
+    "Hugo deseja êxito a Trabuco na Fazenda e prega diálogo por agenda econômica",
+    "Deputada pede bloqueio de 14 emendas de Flávio ao Orçamento de 2027"
   ],
   "leads": [
-    "Segundo a Suno Notícias, o Itaú Unibanco (ITUB4) fará em 4 de janeiro de 2027, no Brasil, o pagamento dos proventos de dezembro. A instituição mantém o crédito mensal no primeiro dia útil seguinte ao mês de referência e usa como base a carteira registrada no fechamento do último pregão do mês precedente.",
-    "O Vinci Residencial FII (APTO11), sob gestão da Vinci Compass, fechou novas condições para um contrato de locação em outubro e viu o aluguel recebido cair 20%, conforme a Suno Notícias. O acordo vale até fevereiro de 2027. Em setembro, a receita imobiliária foi de R$ 97,8 mil; em outubro, ficou perto de R$ 79 mil.",
-    "A WEG conseguiu o credenciamento de seu pack de baterias de lítio na rota 2 do Banco Nacional de Desenvolvimento Econômico e Social (BNDES). O registro posiciona a companhia para participar do primeiro leilão de reserva de capacidade (LRCap) com armazenamento do Brasil, marcado para começar na próxima quarta-feira, 2 de dezembro.",
     "Os preços das memórias DRAM devem registrar aumentos de 18% a 22% em 2027, mesmo com a expectativa de expansão da oferta mundial de memórias. Já os preços das memórias Flash devem apresentar variação de zero a 5%. As projeções foram apresentadas pelo presidente da Associação Brasileira da Indústria de Semicondutores (ABISEMI), Rogério Nunes, durant",
     "A Anatel negou recurso administrativo apresentado pela TIM contra a suspensão de sua ferramenta de bloqueio de chamadas. A decisão foi tomada pelo presidente do Conselho Diretor da agência, Alexandre Freire. Na tentativa de reverter a medida, a operadora alegou ter adotado as providências solicitadas pela Anatel e afirmou que a suspensão poderia ex",
     "O fundo imobiliário HLOG11 (Hedge Logística FII) fechou outubro com ocupação total em seus galpões e avançou em tratativas para renovar contratos de locação com inquilinos como Unilever e Boticário. O patrimônio líquido do fundo soma cerca de R$ 507 milhões, distribuídos em dois empreendimentos logísticos que totalizam 205,2 mil metros quadrados de",
@@ -1853,7 +1850,10 @@
     "Assim como Trabuco, Joaquim Levy fez carreira no Bradesco; Henrique Meirelles comandou o BankBoston e Guedes fundou o Pactual",
     "A comparação é inevitável. Assim como Joaquim Levy em 2015, Luiz Carlos Trabuco chega ao Ministério da Fazenda com a missão de recuperar a confiança do mercado e ajudar o governo a controlar a deterioração das contas públicas.",
     "O mercado financeiro brasileiro teve um dia de forte valorização nesta quinta-feira (26). O Ibovespa disparou cerca de 6%, registrando a maior alta diária desde o primeiro turno das eleições de 2026. O dólar recuou para abaixo de R$ 5,80 pela primeira vez em quase duas semanas.",
-    "O Ibovespa tem 2ª maior alta diária desde 2021 em pregão de forte rali na Bolsa brasileira, no qual praticamente toda a carteira do índice subiu e apenas Suzano fechou no campo negativo, com queda de 0,96%."
+    "O Ibovespa tem 2ª maior alta diária desde 2021 em pregão de forte rali na Bolsa brasileira, no qual praticamente toda a carteira do índice subiu e apenas Suzano fechou no campo negativo, com queda de 0,96%.",
+    "O comitê-executivo da Câmara de Comércio Exterior (Gecex-Camex) aprovou nesta quinta-feira (26) aplicação de direito antidumping definitivo sobre aços planos laminados a quente originários da China e folha metálica da Alemanha, Holanda e Japão, segundo comunicado à imprensa do Ministério do Desenvolvimento (Mdic).",
+    "O presidente da Câmara, Hugo Motta (Republicanos-PB), desejou êxito ao próximo ministro da Fazenda, Luiz Carlos Trabuco, e afirmou estar à disposição para discutir a agenda econômica do país.",
+    "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos"
   ],
   "eventos_recentes": [
     {
@@ -2579,12 +2579,17 @@
     {
       "chave": "suzano::GERAL_ATIVO",
       "ts": 1795738447.88061
+    },
+    {
+      "chave": "gerdau::GERAL_ATIVO",
+      "ts": 1795738793.111975
+    },
+    {
+      "chave": "usiminas::GERAL_ATIVO",
+      "ts": 1795738793.111975
     }
   ],
   "hashes_imagens": [
-    "25f0a179556f2438",
-    "0690b4bcfde2b0f0",
-    "a5802f17d863f97a",
     "314609bc89a1074a",
     "9ad61632ea4c08be",
     "7a424ad0db4ccd10",
@@ -2881,6 +2886,9 @@
     "2649dc73c3d51188",
     "d29b335d214dfee2",
     "a160b8dce9236e05",
-    "74318b58089529de"
+    "74318b58089529de",
+    "b47677fc3d1b5102",
+    "6947739b8a339eb0",
+    "6c7ed79a485d52ff"
   ]
 }
