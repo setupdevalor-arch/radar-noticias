@@ -1,7 +1,5 @@
 {
   "links": [
-    "96f808073fde0aaf",
-    "9493055ffe2d2160",
     "e4b3a049c9fb0718",
     "83463807190596d4",
     "d9bbcd79e0ee8b6d",
@@ -799,10 +797,11 @@
     "f25cf7ed80f19f00",
     "8161c0ea81f2b2f3",
     "4d043c86a3450b82",
-    "e13b3b56719684da"
+    "e13b3b56719684da",
+    "https://www.infomoney.com.br/mercados/por-que-petrobras-petr4-recua-em-dia-de-euforia-no-ibovespa/",
+    "91acfed9b15d4820"
   ],
   "titulos": [
-    "A alegria do CLT: a estratégia do TotalPass e uma semana mais curta de aversão a risco",
     "Seguro rural pode ser a salvação das lavouras gaúchas",
     "Tempestade perfeita? Goldman vê real atrativo, mas recomenda cautela no curto prazo",
     "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar",
@@ -1601,10 +1600,10 @@
     "O ‘compliance’ de ativos virtuais pós-novembro",
     "Itaú BBA reduz moagem de cana-de-açúcar no Centro-Sul e vê menor estoque de etanol em 10 anos",
     "Carne suína do Brasil ganha novo mercado no Caribe",
-    "OPINIÃO: O cisne negro em Brasília"
+    "OPINIÃO: O cisne negro em Brasília",
+    "Por que Petrobras (PETR4) recua em dia de altas no Ibovespa?"
   ],
   "leads": [
-    "– O presidente dos Estados Unidos, Donald Trump, exigiu nesta quinta-feira uma investigação imediata sobre o que ele alegou ‌ser uma decisão deliberada de divulgar números “falsos” de crescimento econômico antes das eleições de meio de mandato deste ‌mês.",
     "Com a taxa básica em 13,75% ao ano e o IPCA acumulado em 4,64% nos últimos 12 meses, o Brasil opera com juro real na casa de 8,7%. Segundo a Suno Notícias, esse patamar recoloca as aplicações pós-fixadas e os ETFs de renda fixa negociados na B3 na mesa do investidor.",
     "Musk promete duas ações da SpaceX para cada criança dos EUA em ofensiva de US$ 18 bilhões por apoio à IA",
     "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a",
@@ -1853,7 +1852,8 @@
     "Há pouco mais de um ano, o mercado financeiro brasileiro voltava seus olhos para um complexo e oneroso conjunto de normas: o de ativos virtuais. As Resoluções BCB nº 519, 520 e 521, todas de 10 de novembro de 2025, trouxeram consigo diversas necessidades para prestadores de serviços de ativos virtuais. Isso tanto para as sociedades prestadoras de s",
     "A moagem de cana-de-açúcar do Centro-Sul do Brasil na safra 2026/27 deve totalizar algo entre 620 milhões e 640 milhões de toneladas, informou o banco de investimento Itaú BBA nesta sexta-feira, indicando redução ante as expectativas iniciais devido ao excesso de chuvas associadas ao fenômeno climático El Niño.",
     "O Ministério da Agricultura e Pecuária (Mapa) e a Associação Brasileira de Proteína Animal (ABPA) informaram que, na sexta-feira (27), São Cristóvão e Névis autorizou a importação de carne suína e miúdos do Brasil.",
-    "Não previ. Começo por aí porque tenho cobrado coerência de outros analistas em público, e seria feio não reconhecer: Luiz Carlos Trabuco na Fazenda não estava no meu cenário, nem no rodapé dele, nem na lista das coisas improváveis. Para mim foi um cisne negro. E dos bons."
+    "Não previ. Começo por aí porque tenho cobrado coerência de outros analistas em público, e seria feio não reconhecer: Luiz Carlos Trabuco na Fazenda não estava no meu cenário, nem no rodapé dele, nem na lista das coisas improváveis. Para mim foi um cisne negro. E dos bons.",
+    "As ações da Petrobras perdem mais de 3% na tarde desta sexta-feira (27), na contramão da euforia observada em outros setores do Ibovespa. Os papéis da petroleira recuam 4,10% para PETR3, a R$ 47,08, e 3,13% para PETR4, a R$ 41,82, às 12h54 (horário de Brasília)."
   ],
   "eventos_recentes": [
     {
@@ -2591,10 +2591,13 @@
     {
       "chave": "tesla::EVENTO_CORP",
       "ts": 1795791339.180129
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795795495.263528
     }
   ],
   "hashes_imagens": [
-    "a3ac7f4955af0177",
     "ca02e4721d2951b4",
     "6fbf1cb5482bd8f8",
     "067946fdb880f92c",
@@ -2893,6 +2896,7 @@
     "464be3ba870d9bff",
     "2018bd1cdbd9b4a1",
     "9389d88abe6965a9",
-    "a881d531bda05777"
+    "a881d531bda05777",
+    "f3214e10795af433"
   ]
 }
