@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/politica/alckmin-diz-que-tarifa-ao-setor-aeronautico-e-totalmente-descabida/",
-    "3e96ed034f69826e",
-    "https://www.moneytimes.com.br/pacc11-mesmo-com-surpresa-do-ipca-15-titulos-indexados-a-inflacao-seguem-interessantes/",
-    "6fb50fe24ef61374",
-    "https://www.poder360.com.br/poder-economia/marinho-critica-cni-por-acao-no-stf-contra-regulamentacao-sobre-6-x-1/",
-    "209130fee273d7e5",
     "ad5bb51940451b27",
     "9fc06046bfd0c9ef",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/mxrf11-retorno-desde-estreia/",
@@ -799,11 +793,15 @@
     "bc13273021c4fe4a",
     "73709b0ba5a821d7",
     "https://www.poder360.com.br/poder-economia/desemprego-cai-para-51-no-trimestre-encerrado-em-outubro-diz-ibge/",
-    "eac4d42a748dc533"
+    "eac4d42a748dc533",
+    "6f769d8c862d48af",
+    "c81d0e901fcf7b04",
+    "https://www.spacemoney.com.br/economia/macroeconomia/black-friday-eua-gasto-fim-de-ano-inflacao/",
+    "a0ecd702908c86b9",
+    "https://eixos.com.br/energia-eletrica/ia-intensifica-ataques-ciberneticos-ao-setor-eletrico-e-empresas-montam-grupo-de-defesa-no-brasil/",
+    "c467a3f31d3cbc09"
   ],
   "titulos": [
-    "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
-    "Dólar digital chega a R$ 6,15 em negociação neste domingo",
     "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
     "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
     "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
@@ -1601,11 +1599,11 @@
     "Injective defende order book em regra de ações tokenizadas",
     "Rússia afirma ter atacado embarcação que transportava carga militar no Mar Negro",
     "Rali de IA impulsiona mercados e EWZ salta 12% com Trabuco",
-    "Desemprego cai para 5,1% no trimestre encerrado em outubro, diz IBGE"
+    "Desemprego cai para 5,1% no trimestre encerrado em outubro, diz IBGE",
+    "Inflação pesa, mas gasto de fim de ano deve crescer nos EUA",
+    "IA intensifica ataques cibernéticos ao setor elétrico e empresas montam grupo de defesa no Brasil"
   ],
   "leads": [
-    "A proposta dos Estados Unidos de elevar as tarifas sobre as importações de açúcar fora das cotas preferenciais pode fazer a cobrança sobre o açúcar bruto de cana brasileiro superar 200% do valor do produto, aos preços atuais. A estimativa é da Bioenergia Brasil e da UNICA (União da Indústria de Cana-de-Açúcar e Bioenergia).",
-    "O Brasil tinha 262 mil hectares de vegetação nativa em recuperação em 2026, ante 79 mil hectares em 2021, alta de 231,6% em cinco anos, segundo o Observatório da Restauração, da Coalizão Brasil Clima, Florestas e Agricultura. Sobre 2025, o avanço é de 29%, com 58,3 mil hectares adicionados ao levantamento.",
     "O francês Emmanuel Macron voltou a questionar a carne de boi produzida no Brasil e, em reunião com lideranças rurais da França na quarta-feira (25), no Eliseu, em Paris, chamou o produto de “dopado” e celebrou as barreiras sanitárias impostas pela União Europeia. A Associação Brasileira das Indústrias Exportadoras de Carnes (Abiec) rebateu a acusaç",
     "O Tribunal de Contas da União (TCU) decidiu na quarta-feira (25) alertar o governo federal sobre o risco de superestimação de R$ 8,43 bilhões em receitas extraordinárias previstas para 2026 com o Programa de Transição Integral (PTI). Por unanimidade, os ministros avaliaram como baixa a probabilidade de essa arrecadação ocorrer ainda neste ano.",
     "O Ministério de Minas e Energia (MME) voltou a afirmar nesta quinta (26/11) que não vê risco de faltar etanol anidro, o etanol misturado à gasolina, durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta (25/11), na reunião de monitoramento do abastecimento de etanol da safra 2026/2027, com representantes do governo e da cad",
@@ -1853,13 +1851,11 @@
     "A Injective Labs enviou à SEC uma manifestação em 23 de novembro pedindo que a isenção de inovação de cinco anos, que permite a certas plataformas de blockchain negociar ações tokenizadas dos EUA sem registro como bolsas nacionais de valores, contemple também sistemas de order book, usados por bolsas tradicionais. A empresa argumenta que a regra at",
     "O ‌Ministério da Defesa da ‌Rússia informou nesta sexta-feira que atacou ‌uma embarcação que transportava carga militar no Mar Negro.",
     "Os mercados globais operavam em forte alta nesta sexta-feira (27), impulsionados pela volta das compras em ações de tecnologia e inteligência artificial e por sinais de novas medidas de Pequim para sustentar o mercado de capitais chinês. No pré-mercado de Nova York, o EWZ, ETF que replica o MSCI Brazil 25/50, disparava 12,04%, a US$ 33,79, às 7h47 ",
-    "Taxa recuou 0,3 ponto percentual ante o mesmo período de 2025, quando foi de 5,4%"
+    "Taxa recuou 0,3 ponto percentual ante o mesmo período de 2025, quando foi de 5,4%",
+    "Consumidores dos Estados Unidos chegam à Black Friday mais cautelosos por causa da inflação e das incertezas do mercado de trabalho, mas seguem dispostos a gastar nas festas de fim de ano — desde que encontrem descontos. É o que aponta reportagem da CNBC, segundo a qual dados recentes e relatos de varejistas indicam uma temporada de compras robusta",
+    "A inteligência artificial (IA) está tornando os ataques cibernéticos mais rápidos e convincentes, ao mesmo tempo em que crises geopolíticas elevam a pressão sobre infraestruturas críticas, na avaliação de Rolf Satake, gerente do Centro de Segurança Cibernética do Itaipu Parquetec."
   ],
   "eventos_recentes": [
-    {
-      "chave": "equatorial::GERAL_ATIVO",
-      "ts": 1795608478.469119
-    },
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795609600.68111
@@ -2583,11 +2579,13 @@
     {
       "chave": "brava::GERAL_ATIVO",
       "ts": 1795778312.952822
+    },
+    {
+      "chave": "macro_inflacao::MACRO_EVENTO",
+      "ts": 1795781304.528155
     }
   ],
   "hashes_imagens": [
-    "710f442e0b97ecbd",
-    "37015ce9c8a55659",
     "b9dca60726f98af0",
     "9e396060ac9ad8ca",
     "c7664be2dc191376",
@@ -2885,6 +2883,8 @@
     "346abf037dcbef2f",
     "10b71efd47bcd417",
     "2e85951eeb057abc",
-    "f03da4bcc0f89a19"
+    "f03da4bcc0f89a19",
+    "f788f706f4af5b1b",
+    "d22a6498b3b540a1"
   ]
 }
