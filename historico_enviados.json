@@ -1,9 +1,5 @@
 {
   "links": [
-    "17fd32f419c6432a",
-    "https://borainvestir.b3.com.br/objetivos-financeiros/organizar-as-contas/black-friday-2026-saiba-onde-ha-espaco-para-descontos-e-quais-setores-subiram-acima-da-inflacao/",
-    "7fb8c560d4af176a",
-    "https://www.poder360.com.br/poder-economia/latam-anuncia-voos-para-o-maior-municipio-do-brasil/",
     "37ae011c5bbf2ae0",
     "5b9d8fd8ec147d76",
     "1970f56c397366f0",
@@ -799,10 +795,13 @@
     "https://neofeed.com.br/negocios/a-positivo-ja-pensa-na-proxima-eleicao-mas-nao-esta-atras-de-voto/",
     "59b6ad9c14cc8886",
     "https://www.poder360.com.br/poder-economia/e-preciso-deixar-claro-onde-quer-chegar-diz-meirelles-sobre-trabuco/",
-    "86d1ed2b00213404"
+    "86d1ed2b00213404",
+    "17f28c7d01cab71c",
+    "d622e8128c620003",
+    "https://www.infomoney.com.br/onde-investir/tesouro-ipca-quanto-rende-efeito-trabuco/",
+    "bffc4f8ab1b927c7"
   ],
   "titulos": [
-    "CVM suspende registro de BRB, Refit, Ambipar e mais duas companhias abertas por falta de informações",
     "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear",
     "Rondônia terá máximas de até 37 °C na quarta-feira",
     "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais",
@@ -1601,10 +1600,10 @@
     "Coreia do Norte corta mísseis e freia tropas à Rússia",
     "Mais uma stablecoin de real vem aí. Com B3 e bancos por trás",
     "A Positivo já pensa na próxima eleição (mas não está atrás de voto)",
-    "É preciso “deixar claro onde quer chegar”, diz Meirelles sobre Trabuco"
+    "É preciso “deixar claro onde quer chegar”, diz Meirelles sobre Trabuco",
+    "Tesouro IPCA+ rende mais de 9% em menos de uma semana com “efeito Trabuco”"
   ],
   "leads": [
-    "– As ações da Azzas 2154 (AZZA3) chegaram a disparar ‌mais de 12% nesta quinta-feira, mas reduziram o fôlego após notícia ‌sobre as negociações envolvendo a FARM Rio.",
     "Há um número no balanço da XP que a empresa faria questão de pendurar na vitrine: 55%, o salto da receita com clientes corporativos em um ano. E há outro que, provavelmente, gostaria de esconder debaixo do tapete: 26%, a queda do dinheiro novo que entrou na plataforma no mesmo período, segundo dados de relatório do BTG Pactual. Entre um e outro cab",
     "BRASÍLIA – A empresa responsável pela liquidação extrajudicial do Banco Master concordou em liberar para o Banco de Brasília (BRB) R$ 316,5 milhões em valores bloqueados no âmbito da Operação Compliance Zero. A manifestação foi enviada ao presidente do Supremo Tribunal Federal (STF), Edson Fachin, nesta quinta-feira, 26.",
     "A safra 2026/27 de açúcar da Índia deve alcançar 26,52 milhões de toneladas, recuo de 5,2% ante as 27,97 milhões de toneladas de 2025/26, segundo estimativa preliminar da Associação Indiana de Usinas de Açúcar (Isma).",
@@ -1853,7 +1852,8 @@
     "A inteligência militar da Ucrânia afirma que a Coreia do Norte interrompeu o envio de mísseis balísticos e de munição de artilharia às forças russas e diminuiu o ritmo de novos deslocamentos de soldados para a guerra. A conclusão foi apresentada em 26 de novembro pela Direção Principal de Inteligência do Ministério da Defesa ucraniano (HUR), que at",
     "A Open BRL vai seguir o modelo tradicional das stablecoins. Ou seja, vai manter seu valor vinculado a uma moeda – neste caso, o real.",
     "Um mês após o segundo turno presidencial, com a vitória de Luiz Inácio Lula da Silva (PT) sobre Flávio Bolsonaro (PL), já há quem pense na próxima disputa eleitoral. E não é nenhum político. Principal fornecedora de urnas eletrônicas no País, a Positivo está de olho na tecnologia que envolvei o pleito municipal de 2028.",
-    "Ex-presidente do BC e ex-ministro da Fazenda, Meirelles afirmou que é necessário que o banqueiro mantenha o “diálogo aberto”"
+    "Ex-presidente do BC e ex-ministro da Fazenda, Meirelles afirmou que é necessário que o banqueiro mantenha o “diálogo aberto”",
+    "A forte queda das taxas do Tesouro Direto nesta semana se transformou em ganhos expressivos para quem já tinha títulos de longo prazo. O Tesouro IPCA+ 2050 acumulava valorização de 9,1% entre a abertura de segunda-feira (23) e o meio-dia desta sexta-feira (27), segundo cálculo do InfoMoney com base nos preços de compra divulgados pelo Tesouro Diret"
   ],
   "eventos_recentes": [
     {
@@ -2575,10 +2575,13 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795801886.487575
+    },
+    {
+      "chave": "rf_tesouro::RF_EVENTO",
+      "ts": 1795802219.95552
     }
   ],
   "hashes_imagens": [
-    "e67a7dc18de6cbd9",
     "f7d4a325050bf2d0",
     "3a3771d0f1d73a76",
     "2885a1b954f7caff",
@@ -2877,6 +2880,7 @@
     "2a8f7f74afefd93e",
     "16f976c5e65589a3",
     "ec1886d5229fd58f",
-    "51657c0670ef8470"
+    "51657c0670ef8470",
+    "d93646bcc3030005"
   ]
 }
