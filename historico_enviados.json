@@ -1,10 +1,5 @@
 {
   "links": [
-    "b066f5e942672b58",
-    "2918ded2aa1cc0f1",
-    "e12b6e9eb94c4ca3",
-    "https://bmcnews.com.br/economia/contas-externas-tem-deficit-de-us-4-bilhoes-em-outubro/",
-    "1d06da4a6e57c272",
     "https://www.infomoney.com.br/politica/alckmin-ganha-forca-para-assumir-ministerio-da-seguranca-publica/",
     "9eec96350debfa22",
     "https://www.spacemoney.com.br/investimentos/acoes/ibovespa-hoje/ibovespa-alta-bancos-petrobras-dolar/",
@@ -799,10 +794,14 @@
     "c66b9ca35cf3cfdb",
     "b8632d6d017a3cd3",
     "https://www.moneytimes.com.br/fundo-imobiliario-amplia-participacao-em-complexo-logistico-em-sp-ifix-emenda-terceira-alta-igdl/",
-    "60713b28ec89edc0"
+    "60713b28ec89edc0",
+    "31e1bb98aa89492f",
+    "78e242f39ec9e6b8",
+    "bb6a620444e87ed1",
+    "https://www.poder360.com.br/poder-economia/bradesco-confirma-ida-de-trabuco-para-a-fazenda/",
+    "9a13f54808a43a34"
   ],
   "titulos": [
-    "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%",
     "O melhor programa social é o emprego",
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
     "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
@@ -1601,10 +1600,10 @@
     "Axia Energia (AXIA3) aprova resgate de R$ 6 bilhões em ações preferenciais classe C; entenda o que muda",
     "Rheinmetall corta projeção de vendas e ação sobe 3,4%",
     "Sucateadas, paralisadas e “sem comando”: a dura realidade das agências reguladoras",
-    "Fundo imobiliário amplia participação em complexo logístico em SP; IFIX emenda terceira alta"
+    "Fundo imobiliário amplia participação em complexo logístico em SP; IFIX emenda terceira alta",
+    "Bradesco confirma ida de Trabuco para a Fazenda"
   ],
   "leads": [
-    "O BTLG11 submeteu aos cotistas consulta eletrônica que se encerra em 28 de dezembro de 2026 para avaliar a aquisição de dois galpões logísticos de padrão AAA, localizados em Guarulhos (SP) e Londrina (PR), por R$ 798,5 milhões, conforme a Suno Notícias. A proposta inclui alterações no regulamento e depende do aval dos investidores; a parte vendedor",
     "A Taesa (TAEE11) vai pagar dividendos aos seus acionistas nesta quinta-feira (26).",
     "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
     "A imprensa iraniana apresentou na terça-feira (24) um vídeo que, conforme os veículos que o publicaram, exibiria um ataque dos Estados Unidos e de Israel contra um avião comercial no começo do conflito. A ação é atribuída a forças americanas e israelenses, e a aeronave — identificada por sites especializados em aviação como um Airbus A319 da Iran A",
@@ -1853,7 +1852,8 @@
     "A Axia Energia (AXIA3) informou nesta quarta-feira (26) que o conselho de administração aprovou o resgate de 129.982.668 ações preferenciais classe C (PNC), em uma operação de R$ 6 bilhões que corresponde a 49,91% dos papéis remanescentes dessa classe.",
     "As ações da Rheinmetall subiam 3,4% nesta sexta-feira, no meio da manhã, depois que investidores avaliaram a postura mais cautelosa da gigante alemã de defesa em seu Capital Markets Day, segundo a CNBC. O movimento ocorreu em um dia de alta generalizada no setor de defesa europeu.",
     "Brasília - O quadro geral das agências reguladoras federais, que já era preocupante, ganhou contornos dramáticos neste fim de ano, com 10 novas vagas de diretores abertas somente nos dois últimos meses, em um total de 46 até o fim de 2027. Esse cenário abre espaço para uma politização excessiva nesses cargos - que, via de regra, precisam ser técnic",
-    "O fundo imobiliário Pátria Log (HGLG11) anunciou, por meio de fato relevante, que concluiu a aquisição de uma participação de 12,59% de um galpão logístico localizado em Itupeva, no interior de São Paulo, por R$ 31,3 milhões."
+    "O fundo imobiliário Pátria Log (HGLG11) anunciou, por meio de fato relevante, que concluiu a aquisição de uma participação de 12,59% de um galpão logístico localizado em Itupeva, no interior de São Paulo, por R$ 31,3 milhões.",
+    "Banco diz que vai “informar, tempestivamente, seus acionistas e o mercado em geral sobre quaisquer desdobramentos relevantes”"
   ],
   "eventos_recentes": [
     {
@@ -2591,10 +2591,13 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795777635.2126
+    },
+    {
+      "chave": "bradesco::GERAL_ATIVO",
+      "ts": 1795777975.15344
     }
   ],
   "hashes_imagens": [
-    "df7b998f5cb492e6",
     "ae72b4b6cd24b4ee",
     "612fe075b43a3f6b",
     "c78f7281baf140e5",
@@ -2893,6 +2896,7 @@
     "14341509f510fc76",
     "d8a7d5df14d7c6a9",
     "3f1bbb6d8f82c1b5",
-    "9c0c18e251cafe95"
+    "9c0c18e251cafe95",
+    "cb7a69e3ad79295b"
   ]
 }
