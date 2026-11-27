@@ -1,9 +1,5 @@
 {
   "links": [
-    "142069255c1d24b5",
-    "https://www.infomoney.com.br/mundo/kim-da-coreia-do-norte-defende-implantacao-mais-ampla-de-armas-nucleares-taticas/",
-    "4edb6e888fd9c75c",
-    "https://megawhat.uol.com.br/mercado-energetico/consumo/mme-estuda-janela-de-tres-a-quatro-horas-para-cobranca-de-reserva-de-capacidade/",
     "7c26039bb5f0cad6",
     "https://www.moneytimes.com.br/oncoclinicas-onco3-recebe-pedido-de-assembleia-para-eleger-conselho-e-definir-presidencia-veja/",
     "288cd06186120941",
@@ -799,11 +795,13 @@
     "https://www.spacemoney.com.br/economia/exterior/carne-de-pombo-argentina-acougues/",
     "b11ca9616dd37976",
     "https://www.spacemoney.com.br/politica/camilo-santana-casa-civil-lula/",
-    "8ec4d8df0d5fbb9d"
+    "8ec4d8df0d5fbb9d",
+    "https://www.cnnbrasil.com.br/infra/eventos-climaticos-extremos-exigem-nova-logica-de-investimentos-em-energia/",
+    "27f55e4e136b97b2",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/ipp-alta-outubro-industria/",
+    "f4ff544cbadc99a1"
   ],
   "titulos": [
-    "Ovelhas sob painéis solares ganham espaço nos EUA",
-    "Enquanto Brasil perde preferência dos bancões, México ganha espaço entre emergentes",
     "EUA dominam infraestrutura de IA, mas isso tem ajudado os modelos chineses",
     "Itaú Investe em Startup Uruguaia de IA Que Processa 2 Milhões de Pagamentos por Dia",
     "Fintech ‘copia’ modelo do Minha Casa, Minha vida para crédito imobiliário",
@@ -1601,11 +1599,11 @@
     "BNDES aprova R$ 2,6 bilhões para capital de giro da Latam Brasil",
     "Pix Automático começa a ganhar tração com novos públicos, diz head do Itaú",
     "Açougues da Argentina vendem carne de pombo em meio à crise",
-    "Lula escolhe Camilo Santana para a Casa Civil, diz SBT News"
+    "Lula escolhe Camilo Santana para a Casa Civil, diz SBT News",
+    "Eventos climáticos extremos exigem nova lógica de investimentos em energia",
+    "IPP sobe 0,98% em outubro e completa terceira alta"
   ],
   "leads": [
-    "A disputa pelo espaço no celular dos consumidores latino-americanos tem um brasileiro entre os protagonistas. O Nubank (ROXO34) conquistou a segunda posição entre os aplicativos financeiros mais baixados da América Latina no terceiro trimestre de 2026, ficando atrás apenas do Mercado Pago e à frente de concorrentes como PicPay, Santander e Inter.",
-    "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) certificou mais cinco plantas de biometano a emitir Certificados de Garantia de Origem do Biometano (CGobs), títulos que atestam os atributos ambientais do combustível renovável e asseguram sua rastreabilidade. Os CGobs podem ser utilizados por produtores e importadores de gás natu",
     "Por que o Brasil está no centro da disputa",
     "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
     "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
@@ -1853,7 +1851,9 @@
     "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) liberou financiamento de R$ 2,66 bilhões para capital de giro da operação brasileira da companhia aérea Latam Airlines, informou o banco de fomento nessa quinta-feira (26).",
     "A adesão das empresas ao Pix Automático está começando a ganhar tração, segundo Hagner Ferreira, head de produtos de recebimento para pessoa jurídica do Itaú. O método de pagamento de recorrência no arranjo de pagamento instantâneo tem avançado em players, como utilities, seguros e operadoras.",
     "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
-    "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27)."
+    "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
+    "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
+    "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação."
   ],
   "eventos_recentes": [
     {
@@ -2582,8 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "0f50a1094526777b",
-    "4bf06544f6d1ca46",
     "72eeb1c5ad93010a",
     "318b1e5fd4f1d4f5",
     "d57e41be3c4da51d",
@@ -2881,6 +2879,8 @@
     "8f778e6c49361a3f",
     "2e8b95c080cd7bc0",
     "b6bac15fc930ce15",
-    "95150d3bcc621c19"
+    "95150d3bcc621c19",
+    "27754ef4e6a14162",
+    "e9789b3de1fd9037"
   ]
 }
