@@ -1,11 +1,5 @@
 {
   "links": [
-    "9676a35deab4e4dd",
-    "https://bmcnews.com.br/empresas-e-negocios/motiva-anuncia-renuncia-de-andre-salcedo-e-eduardo-camargo-assume-divisao-de-trilhos/",
-    "69efaf42ddd754b2",
-    "98551b064ba6a6e1",
-    "https://www.poder360.com.br/poder-governo/tarifa-dos-eua-sobre-aeronaves-sao-descabidas-diz-alckmin/",
-    "376a9bb939267347",
     "8b2b81dcaf5a5711",
     "6540d4d67a700615",
     "eebc1bbce7e09d88",
@@ -799,11 +793,15 @@
     "5868d0dd777346f2",
     "dd00cd8db5886bd1",
     "https://www.infomoney.com.br/mercados/brava-brav3-inicia-producao-do-poco-ppt-53-no-campo-de-papa-terra/",
-    "c911778d1df472a4"
+    "c911778d1df472a4",
+    "83bce466b98122b0",
+    "e81ce1b0dba25b0c",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/injective-sec-acoes-tokenizadas/",
+    "0f5e7ddee435f8b6",
+    "https://www.infomoney.com.br/mundo/russia-afirma-ter-atacado-embarcacao-que-transportava-carga-militar-no-mar-negro/",
+    "f0f9a2f6f7478304"
   ],
   "titulos": [
-    "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
-    "Petrobras divulga plano de negócios sob expectativa de investimentos maiores e pressão no caixa",
     "Custo Brasil afasta empresas estrangeiras do mercado brasileiro",
     "Reforma tributária é positiva para nanoempreendedores, diz associação",
     "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
@@ -1601,11 +1599,11 @@
     "Sucateadas, paralisadas e “sem comando”: a dura realidade das agências reguladoras",
     "Fundo imobiliário amplia participação em complexo logístico em SP; IFIX emenda terceira alta",
     "Bradesco confirma ida de Trabuco para a Fazenda",
-    "Brava (BRAV3) inicia produção do poço PPT-53 no campo de Papa-Terra"
+    "Brava (BRAV3) inicia produção do poço PPT-53 no campo de Papa-Terra",
+    "Injective defende order book em regra de ações tokenizadas",
+    "Rússia afirma ter atacado embarcação que transportava carga militar no Mar Negro"
   ],
   "leads": [
-    "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
-    "A imprensa iraniana apresentou na terça-feira (24) um vídeo que, conforme os veículos que o publicaram, exibiria um ataque dos Estados Unidos e de Israel contra um avião comercial no começo do conflito. A ação é atribuída a forças americanas e israelenses, e a aeronave — identificada por sites especializados em aviação como um Airbus A319 da Iran A",
     "Após resultados no terceiro trimestre considerados um tanto decepcionantes, o JPMorgan rebaixou a recomendação para ações da São Martinho (SMTO3) de neutra para venda, com preço-alvo de R$ 16 ao fim do exercício fiscal de 2028. O banco estima que o Ebitda (lucro antes de juros, impostos, depreciação e amortização) projetado pelo consenso esteja 17%",
     "A mudança na metodologia de projeção do suprimento de energia de Itaipu ao Paraguai colocou geradores e grandes consumidores em oposição e levou a Agência Nacional de Energia Elétrica (Aneel) a cobrar, na terça-feira, 24 de novembro, um posicionamento da Empresa Brasileira de Participações em Energia Nuclear e Binacional (ENBPar) sobre a necessidad",
     "A proposta dos Estados Unidos de elevar as tarifas sobre as importações de açúcar fora das cotas preferenciais pode fazer a cobrança sobre o açúcar bruto de cana brasileiro superar 200% do valor do produto, aos preços atuais. A estimativa é da Bioenergia Brasil e da UNICA (União da Indústria de Cana-de-Açúcar e Bioenergia).",
@@ -1853,7 +1851,9 @@
     "Brasília - O quadro geral das agências reguladoras federais, que já era preocupante, ganhou contornos dramáticos neste fim de ano, com 10 novas vagas de diretores abertas somente nos dois últimos meses, em um total de 46 até o fim de 2027. Esse cenário abre espaço para uma politização excessiva nesses cargos - que, via de regra, precisam ser técnic",
     "O fundo imobiliário Pátria Log (HGLG11) anunciou, por meio de fato relevante, que concluiu a aquisição de uma participação de 12,59% de um galpão logístico localizado em Itupeva, no interior de São Paulo, por R$ 31,3 milhões.",
     "Banco diz que vai “informar, tempestivamente, seus acionistas e o mercado em geral sobre quaisquer desdobramentos relevantes”",
-    "A Brava Energia (BRAV3) comunicou o início, nesta quinta-feira (26), da produção do poço PPT53, localizado no Campo de Papa-Terra, após a obtenção da autorização do Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama)."
+    "A Brava Energia (BRAV3) comunicou o início, nesta quinta-feira (26), da produção do poço PPT53, localizado no Campo de Papa-Terra, após a obtenção da autorização do Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama).",
+    "A Injective Labs enviou à SEC uma manifestação em 23 de novembro pedindo que a isenção de inovação de cinco anos, que permite a certas plataformas de blockchain negociar ações tokenizadas dos EUA sem registro como bolsas nacionais de valores, contemple também sistemas de order book, usados por bolsas tradicionais. A empresa argumenta que a regra at",
+    "O ‌Ministério da Defesa da ‌Rússia informou nesta sexta-feira que atacou ‌uma embarcação que transportava carga militar no Mar Negro."
   ],
   "eventos_recentes": [
     {
@@ -2602,8 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "612fe075b43a3f6b",
-    "c78f7281baf140e5",
     "c20531ae6d0a48df",
     "a0c6d2620eaebcb3",
     "710f442e0b97ecbd",
@@ -2901,6 +2899,8 @@
     "3f1bbb6d8f82c1b5",
     "9c0c18e251cafe95",
     "cb7a69e3ad79295b",
-    "0b063ef0bb04d174"
+    "0b063ef0bb04d174",
+    "346abf037dcbef2f",
+    "10b71efd47bcd417"
   ]
 }
