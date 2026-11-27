@@ -1,9 +1,5 @@
 {
   "links": [
-    "3623b8db4c1644fd",
-    "https://valorinveste.globo.com/mercados/renda-variavel/noticia/2026/11/26/mulheres-entram-na-bolsa-investindo-50percent-mais-que-homens-veja-quais-acoes-elas-mais-compram.ghtml",
-    "68b4948a45046208",
-    "44d56aa68a5ebfcd",
     "789fff48e102b245",
     "https://www.poder360.com.br/poder-economia/regulacao-da-tributaria-sai-em-breve-diz-secretario-da-receita/",
     "5da38b9a2cbd490b",
@@ -799,11 +795,13 @@
     "5639c2c5461995e4",
     "0611165cbfa682a5",
     "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/black-friday-ia-pode-mudar-precos-e-a-forma-como-clientes-fazem-compras/",
-    "a07abb69c8091941"
+    "a07abb69c8091941",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/tron-acoes-tokenizadas-titulos-eua-2026/",
+    "ac6ac07469dc0fab",
+    "https://www.moneytimes.com.br/petroleo-sobe-e-caminha-para-interromper-sequencia-de-tres-semanas-de-perdas-fets/",
+    "34866f1bb1e6095d"
   ],
   "titulos": [
-    "Otan lança rede Starlift para satélites com 11 países",
-    "Projeto define regras para provedores de internet no Brasil",
     "Por que a cúpula do clima da ONU pode terminar sem acordo neste ano",
     "Por que o cobre, queridinho da era da IA, despencou 9% em uma semana",
     "Analistas de Wall Street elegem 3 ações de dividendos",
@@ -1601,11 +1599,11 @@
     "Fundo de ações brasileiras sobe mais de 9% nos EUA após confirmação de Trabuco na Fazenda",
     "Ciro Possobom deixará comando da Volkswagen do Brasil",
     "Gecex aprova minuta para grupo de trabalho de contramedidas para EUA",
-    "Black Friday: IA pode mudar preços e forma como clientes fazem compras"
+    "Black Friday: IA pode mudar preços e forma como clientes fazem compras",
+    "TRON mira ações tokenizadas e títulos dos EUA no 4º tri",
+    "Petróleo sobe e caminha para interromper sequência de três semanas de perdas"
   ],
   "leads": [
-    "Com a alta de juros, planos de previdência privada disputam espaço com investimentos como o Tesouro Direto, com produtos voltados para quem poupa para a aposentadoria.",
-    "Segundo o Cointelegraph, a equipe Zakura, que desenvolve a Zcash, pediu à comunidade que comece a retirar recursos do Sapling, pool de transações protegidas que reúne quase 2% da oferta de ZEC, o equivalente a cerca de US$ 302 milhões.",
     "Os custos logísticos brasileiros atingiram R$ 1,96 trilhão em 2025, o equivalente a 15,5% do Produto Interno Bruto (PIB), segundo levantamento do Instituto de Logística e Supply Chain (ILOS). Em 2014, essa participação era de 10,4%. O aumento ocorre em meio a deficiências históricas da infraestrutura e dificuldades de planejamento em um país de rea",
     "O sentimento dos investidores em relação à Bolsa brasileira atingiu um dos níveis mais negativos da série histórica, mas isso pode representar uma oportunidade para quem aposta em uma recuperação do mercado no curto prazo.",
     "A Yduqs (YDUQ3) aprovou a incorporação da Afya (AFYA3) pela companhia, em Assembleia Geral Extraordinária (AGE) realizada nesta quarta-feira (25). A operação prevê o aumento do capital social da Yduqs em R$ 2,54 bilhões, mediante a emissão de 569,65 milhões de novas ações ordinárias.",
@@ -1853,7 +1851,9 @@
     "O EWZ, fundo de investimento negociado nos Estados Unidos que acompanha o desempenho de ações brasileiras, registrava alta de 9,45% na madrugada desta sexta-feira (27), após a confirmação de Luiz Carlos Trabuco como ministro da Fazenda do quarto mandato do presidente Luiz Inácio Lula da Silva (PT).",
     "Executivo cita motivos pessoais e familiares; Alexander Seitz assumirá interinamente o cargo de CEO em janeiro de 2027",
     "O Comitê-Executivo de Gestão (Gecex) da Câmara de Comércio Exterior aprovou nesta quinta-feira (26) minuta de resolução que regula o funcionamento do grupo que vai trabalhar em propostas de contramedidas a serem aplicadas contra sobretaxas comerciais aprovadas pelos Estados Unidos contra o Brasil, segundo comunicado do órgão.",
-    "Duas pessoas entram no mesmo site, procuram o mesmo produto e fazem a compra no mesmo momento. Ainda assim, podem encontrar preços ou condições comerciais diferentes. A situação pode virar tendência na Black Friday deste ano."
+    "Duas pessoas entram no mesmo site, procuram o mesmo produto e fazem a compra no mesmo momento. Ainda assim, podem encontrar preços ou condições comerciais diferentes. A situação pode virar tendência na Black Friday deste ano.",
+    "A TRON planeja incluir ações tokenizadas e títulos dos Estados Unidos entre os produtos centrais de sua rede, com meta de lançamento no quarto trimestre de 2026. O movimento, apresentado por Justin Sun como parte da estratégia da blockchain, amplia a atuação da rede além das transferências de stablecoins. Em outubro de 2026, durante o evento TOKEN2",
+    "Os preços do petróleo sobem nesta sexta-feira (27) e caminham para interromper uma sequência de três semanas de perdas, à medida que os ataques contínuos a petroleiros no Estreito de Ormuz e à infraestrutura energética da Arábia Saudita intensificaram as preocupações com o abastecimento de petróleo proveniente do Oriente Médio, região afetada pelo "
   ],
   "eventos_recentes": [
     {
@@ -2583,11 +2583,13 @@
     {
       "chave": "rf_fundos::FUNDOS_EVENTO",
       "ts": 1795763178.647619
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795765145.545701
     }
   ],
   "hashes_imagens": [
-    "22730691f0de2e02",
-    "1794f00485518745",
     "09fd36626155f8d5",
     "00ba92f2fd72092a",
     "b030a54ad1f73fe6",
@@ -2885,6 +2887,8 @@
     "258a4dfdf8dd20ac",
     "91728b14a7170010",
     "6d73b021b8363d92",
-    "7e133cfa21961436"
+    "7e133cfa21961436",
+    "0a2be891c473e27a",
+    "d104b98e2319e484"
   ]
 }
