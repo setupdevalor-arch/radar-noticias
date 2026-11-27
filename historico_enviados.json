@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/smart-fit-smft3-pagara-r-545-milhoes-em-jcp-aos-acionistas-e-anuncia-aumento-de-capital-veja-as-condicoes-lmrs/",
-    "817cd45af305978d",
     "https://www.infomoney.com.br/economia/indice-de-confianca-da-industria-sobe-04-ponto-em-novembro-a-914-pontos-diz-fgv/",
     "ec463bb55695da3a",
     "https://valorinveste.globo.com/mercados/renda-variavel/bolsas-e-indices/noticia/2026/11/26/um-mes-depois-da-eleicao-ibovespa-acumula-queda-de-19percent-e-algumas-acoes-ficaram-baratas-veja-quais-sao.ghtml",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/tecnologia/sap-corte-vagas-ia/",
     "a879a16cb425ec32",
     "https://g1.globo.com/economia/noticia/2026/11/27/ewz-sobe-apos-confirmacao-de-trabuco-na-fazenda.ghtml",
-    "38f7a21d083401b8"
+    "38f7a21d083401b8",
+    "https://www.poder360.com.br/poder-economia/ciro-possobom-deixara-comando-da-volkswagen-do-brasil/",
+    "32d608530531afca"
   ],
   "titulos": [
-    "Black Friday pode ter melhor faturamento desde 2014, projeta CNC",
     "Impacto de custo de data centers ainda é dúvida, diz analista",
     "Por que a Otan está montando uma rede de “táxis” para o espaço",
     "Otan lança rede Starlift para satélites com 11 países",
@@ -1601,10 +1600,10 @@
     "Após EUA proporem taxar aviões brasileiros, Mauro Vieira oferece apoio à Embraer para buscar novos mercados",
     "Chamado de golpista por petistas, Temer elogia Trabuco na Fazenda",
     "SAP prepara corte de ao menos 10 mil vagas em aposta em IA",
-    "Fundo de ações brasileiras sobe mais de 9% nos EUA após confirmação de Trabuco na Fazenda"
+    "Fundo de ações brasileiras sobe mais de 9% nos EUA após confirmação de Trabuco na Fazenda",
+    "Ciro Possobom deixará comando da Volkswagen do Brasil"
   ],
   "leads": [
-    "O líder norte-coreano Kim Jong Un afirmou que seu país deve se concentrar na implantação de armas ‌nucleares táticas em diversos domínios e que sua capacidade de produção de material nuclear está sendo sistematicamente ampliada, ‌informou a agência de notícias estatal KCNA na quinta-feira (horário local, ainda quarta-feira em Brasília).",
     "O Ministério de Minas e Energia (MME) pretende estabelecer uma janela horária mínima de três ou quatro horas como referência para o rateio do Encargo de Reserva de Capacidade (ERCap), atribuindo uma parcela maior dos custos aos consumidores que mais demandam energia nos horários críticos do sistema elétrico. A proposta também deverá dar flexibilida",
     "A Oncoclínicas (ONCO3) recebeu em 24 de novembro de 2026 uma correspondência de acionistas ligados à Latache Gestão de Recursos pedindo a convocação de uma Assembleia Geral Extraordinária para deliberar sobre mudanças no conselho de administração.",
     "Com a alta de juros, planos de previdência privada disputam espaço com investimentos como o Tesouro Direto, com produtos voltados para quem poupa para a aposentadoria.",
@@ -1853,7 +1852,8 @@
     "O ministro das Relações Exteriores, Mauro Vieira, se reuniu com o presidente da Embraer, Francisco Gomes Neto, nesta quinta-feira (26) e afirmou a ele que a diplomacia brasileira poderá buscar novos mercados para as exportações do setor.",
     "Ex-presidente afirma que o nome escolhido por Lula “é a opção certa para o Brasil”",
     "A SAP prepara um plano para eliminar ao menos 10 mil postos de trabalho enquanto reorganiza o negócio de software para a era da inteligência artificial, segundo a CNBC, que citou reportagem da Bloomberg na quinta-feira com base em pessoas a par do assunto.",
-    "O EWZ, fundo de investimento negociado nos Estados Unidos que acompanha o desempenho de ações brasileiras, registrava alta de 9,45% na madrugada desta sexta-feira (27), após a confirmação de Luiz Carlos Trabuco como ministro da Fazenda do quarto mandato do presidente Luiz Inácio Lula da Silva (PT)."
+    "O EWZ, fundo de investimento negociado nos Estados Unidos que acompanha o desempenho de ações brasileiras, registrava alta de 9,45% na madrugada desta sexta-feira (27), após a confirmação de Luiz Carlos Trabuco como ministro da Fazenda do quarto mandato do presidente Luiz Inácio Lula da Silva (PT).",
+    "Executivo cita motivos pessoais e familiares; Alexander Seitz assumirá interinamente o cargo de CEO em janeiro de 2027"
   ],
   "eventos_recentes": [
     {
@@ -2586,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "0688d0206d2bca4c",
     "e6347a6eb0fc503e",
     "ef5bff0b6e123484",
     "22730691f0de2e02",
@@ -2885,6 +2884,7 @@
     "5ef629e654c0b53c",
     "71bbc01a6a72d421",
     "7a535a533d8f0576",
-    "258a4dfdf8dd20ac"
+    "258a4dfdf8dd20ac",
+    "91728b14a7170010"
   ]
 }
