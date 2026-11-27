@@ -1,8 +1,5 @@
 {
   "links": [
-    "32df2955f7d9ed71",
-    "d31214baa8815a32",
-    "0df5b8b6eaa192b7",
     "b3b1b71118b8e723",
     "484c892ed1244a6b",
     "f6b3dd6496359f4e",
@@ -799,10 +796,12 @@
     "https://www.poder360.com.br/poder-congresso/deputada-pede-bloqueio-de-14-emendas-de-flavio-ao-orcamento-de-2027/",
     "d15263f17a1b9e4f",
     "https://www.poder360.com.br/poder-congresso/motta-e-alcolumbre-recebem-com-otimismo-escolha-de-trabuco-para-fazenda/",
-    "1693cbe31fd2b8b0"
+    "1693cbe31fd2b8b0",
+    "7d4b9ec179f3d372",
+    "https://www.spacemoney.com.br/commodities/boi-gordo-consolidacao-mercado-paulista/",
+    "3ea1ba469f78ea6f"
   ],
   "titulos": [
-    "BTG desistiu de comprar Master por falta de garantias, diz Esteves",
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "Vivo comercializa 5G+ com picos de até 2 Gbps",
     "Telebras mira autonomia financeira e projeta fim de aportes do governo",
@@ -1601,10 +1600,10 @@
     "Governo aprova antidumping para alguns tipos de aço; Usiminas, Gerdau e CSN aguardavam a medida",
     "Hugo deseja êxito a Trabuco na Fazenda e prega diálogo por agenda econômica",
     "Deputada pede bloqueio de 14 emendas de Flávio ao Orçamento de 2027",
-    "Motta e Alcolumbre recebem com otimismo escolha de Trabuco para Fazenda"
+    "Motta e Alcolumbre recebem com otimismo escolha de Trabuco para Fazenda",
+    "Preço do boi gordo acomoda após avanço, aponta Datagro"
   ],
   "leads": [
-    "A Anatel negou recurso administrativo apresentado pela TIM contra a suspensão de sua ferramenta de bloqueio de chamadas. A decisão foi tomada pelo presidente do Conselho Diretor da agência, Alexandre Freire. Na tentativa de reverter a medida, a operadora alegou ter adotado as providências solicitadas pela Anatel e afirmou que a suspensão poderia ex",
     "O fundo imobiliário HLOG11 (Hedge Logística FII) fechou outubro com ocupação total em seus galpões e avançou em tratativas para renovar contratos de locação com inquilinos como Unilever e Boticário. O patrimônio líquido do fundo soma cerca de R$ 507 milhões, distribuídos em dois empreendimentos logísticos que totalizam 205,2 mil metros quadrados de",
     "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos.",
     "O governo brasileiro decidiu que o embaixador do Brasil na Argentina, Julio Bitelli, não deve retomar suas funções diplomáticas no país vizinho. Bitelli deve ir a Buenos Aires apenas para buscar pertences pessoais sem reassumir o posto que deixou em julho após atritos diplomáticos entre os dois governos.",
@@ -1853,13 +1852,10 @@
     "O comitê-executivo da Câmara de Comércio Exterior (Gecex-Camex) aprovou nesta quinta-feira (26) aplicação de direito antidumping definitivo sobre aços planos laminados a quente originários da China e folha metálica da Alemanha, Holanda e Japão, segundo comunicado à imprensa do Ministério do Desenvolvimento (Mdic).",
     "O presidente da Câmara, Hugo Motta (Republicanos-PB), desejou êxito ao próximo ministro da Fazenda, Luiz Carlos Trabuco, e afirmou estar à disposição para discutir a agenda econômica do país.",
     "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos",
-    "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo"
+    "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo",
+    "As negociações com boi gordo no mercado paulista ocorrem entre R$ 390 e R$ 400 por arroba, faixa que sinaliza acomodação após um período de valorização, de acordo com Guilherme Jank, da Datagro. O analista avalia que o avanço das cotações perdeu intensidade e encontrou resistência em escalas de abate mais longas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795566661.086063
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795567620.489896
@@ -2586,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "9ad61632ea4c08be",
     "7a424ad0db4ccd10",
     "61f5aab88123d5b1",
     "e3e71d6f6b7dd86d",
@@ -2885,6 +2880,7 @@
     "b47677fc3d1b5102",
     "6947739b8a339eb0",
     "6c7ed79a485d52ff",
-    "9ae40515fa311eb2"
+    "9ae40515fa311eb2",
+    "30c0eff1f506d3e7"
   ]
 }
