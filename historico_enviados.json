@@ -1,7 +1,5 @@
 {
   "links": [
-    "9e644dc0284cca3e",
-    "https://www.cnnbrasil.com.br/agro/abiove-eleva-projecao-de-exportacao-de-oleo-de-soja-em-103-para-2026/",
     "6d279c99f14f47d2",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/btlg11-compra-7985-mi-cotistas/",
     "a069b500e94d73ac",
@@ -799,10 +797,11 @@
     "53c6745695854609",
     "d80be03574e25425",
     "https://braziljournal.com/o-preco-da-energia-vai-subir-mesmo-com-sobreoferta-a-tese-da-auren",
-    "2039a38da4fad573"
+    "2039a38da4fad573",
+    "https://www.mobiletime.com.br/noticias/27/11/2026/central-de-faturas/",
+    "b26b2ad0b2d4a1a9"
   ],
   "titulos": [
-    "Clayton alerta para novos apagões tecnológicos nos EUA",
     "Mercado vê 100% de chance de alta dos juros nos EUA. Por que isso seria péssimo",
     "Brasil amplia espaço em data centers com foco em IA",
     "Assim como a SpaceX, Anthropic adota modelo incomum de IPO",
@@ -1601,10 +1600,10 @@
     "ESMA prepara novo registro cripto da UE para 2027",
     "Trabuco na Fazenda e a reaproximação com o mercado",
     "Agenda econômica: o que pode mexer com a Bolsa e o dólar nesta sexta-feira (27)",
-    "O preço da energia vai subir, mesmo com sobreoferta: a tese da Auren"
+    "O preço da energia vai subir, mesmo com sobreoferta: a tese da Auren",
+    "EzPay, Multipagamentos e BTG apresentam a Central de Faturas"
   ],
   "leads": [
-    "Segundo Gerson Camarotti, em seu blog no g1, Luiz Inácio Lula da Silva, do PT, quer reforçar a futura pasta da Segurança Pública. Interlocutores de Wellington Lima e Silva, ministro da Justiça, relataram que o presidente considerou insuficiente o formato inicialmente proposto para a nova estrutura.",
     "O Senado Federal aprovou, nesta quarta-feira (25), o requerimento de urgência para o PL (Projeto de Lei) 2.896/2022, que permite a indicação de políticos que tenham exercido mandato nos últimos 36 meses para agências reguladoras.",
     "Avanço nas negociações de venda de participações em três empresas pela Cosan (CSAN3), parceria na Indonésia como porta de entrada da JBS (JBSS32) no Sudeste Asiático e operação por suspeita de fraude do Grupo Fictor são alguns dos destaques corporativos desta quinta-feira (26).",
     "Plataforma própria reúne títulos emitidos pelo banco, incluindo LCI e LCA com fluxo mensal de pagamentos e isenção de imposto de renda, ideais para quem busca previsibilidade",
@@ -1853,7 +1852,8 @@
     "Segundo o Cointelegraph, a Autoridade Europeia de Valores Mobiliários e dos Mercados (ESMA) pretende substituir, por volta de meados de 2027, o registro provisório de criptoativos criado sob o MiCA por uma plataforma web com busca. A informação foi transmitida por um porta-voz da autarquia ao portal.",
     "A decisão de Luiz Carlos Trabuco Cappi de aceitar o convite de Lula para chefiar a Fazenda ao longo do quarto mandato do presidente passou a ser interpretada como uma tentativa de reconstruir pontes entre o Planalto e o empresariado. Na leitura de Cila Schulman, executiva-chefe do Instituto Ideia, o gesto pode representar uma guinada na relação do ",
     "A agenda econômica desta sexta-feira (27) encerra a semana com um dia de liquidez reduzida nos Estados Unidos, devido ao feriado de Ação de Graças e ao fechamento antecipado dos mercados norte-americanos. Por isso, os dados domésticos devem ganhar destaque.",
-    "O sistema elétrico do País vive um paradoxo."
+    "O sistema elétrico do País vive um paradoxo.",
+    "A EzPay e a Multipagamentos apresentaram ao mercado uma solução que facilita o gerenciamento e o pagamento de contas de serviços públicos (eletricidade, gás, telecom etc) através de apps e sites de bancos. A Central de Faturas agrega em um único lugar as faturas dessas concessionárias emitidas para o CPF do consumidor. O BTG será o primeiro banco a"
   ],
   "eventos_recentes": [
     {
@@ -2595,10 +2595,13 @@
     {
       "chave": "auren::GERAL_ATIVO",
       "ts": 1795773235.90081
+    },
+    {
+      "chave": "btg_pactual::GERAL_ATIVO",
+      "ts": 1795773555.710821
     }
   ],
   "hashes_imagens": [
-    "d63b0cd8f178da64",
     "af5d2c257265eb07",
     "3b4d9f8fa964ad1f",
     "45f4fb01876dae53",
@@ -2897,6 +2900,7 @@
     "fa6be70b621d630a",
     "f8cd978953591aac",
     "0579b9fc19247f23",
-    "437e6ac85fbc038e"
+    "437e6ac85fbc038e",
+    "7134e03fccb07606"
   ]
 }
