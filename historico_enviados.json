@@ -1,9 +1,5 @@
 {
   "links": [
-    "9536366dd1fa8bb8",
-    "1dcf0f1f08d5f738",
-    "8bc90eeffd8e3973",
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/comissario-da-ue-rejeita-nova-proposta-tarifaria-dos-eua-e-cobra-acordo/",
     "9e644dc0284cca3e",
     "https://www.cnnbrasil.com.br/agro/abiove-eleva-projecao-de-exportacao-de-oleo-de-soja-em-103-para-2026/",
     "6d279c99f14f47d2",
@@ -799,10 +795,13 @@
     "87309a84c569ff43",
     "https://www.moneytimes.com.br/agenda-economica-o-que-pode-mexer-com-a-bolsa-e-o-dolar-nesta-sexta-feira-mlem-2/",
     "1104e8c27381f8f9",
-    "bdaaecb14ef5e689"
+    "bdaaecb14ef5e689",
+    "53c6745695854609",
+    "d80be03574e25425",
+    "https://braziljournal.com/o-preco-da-energia-vai-subir-mesmo-com-sobreoferta-a-tese-da-auren",
+    "2039a38da4fad573"
   ],
   "titulos": [
-    "PF abre licitação de R$ 207,5 milhões para 225 blindados",
     "Clayton alerta para novos apagões tecnológicos nos EUA",
     "Mercado vê 100% de chance de alta dos juros nos EUA. Por que isso seria péssimo",
     "Brasil amplia espaço em data centers com foco em IA",
@@ -1601,10 +1600,10 @@
     "Bolsas da Ásia fecham em forte alta, com salto na China e avanço de ações de IA",
     "ESMA prepara novo registro cripto da UE para 2027",
     "Trabuco na Fazenda e a reaproximação com o mercado",
-    "Agenda econômica: o que pode mexer com a Bolsa e o dólar nesta sexta-feira (27)"
+    "Agenda econômica: o que pode mexer com a Bolsa e o dólar nesta sexta-feira (27)",
+    "O preço da energia vai subir, mesmo com sobreoferta: a tese da Auren"
   ],
   "leads": [
-    "Nessa modalidade, o bem é ofertado pela instituição financeira sem valor mínimo declarado para negociação.",
     "Segundo Gerson Camarotti, em seu blog no g1, Luiz Inácio Lula da Silva, do PT, quer reforçar a futura pasta da Segurança Pública. Interlocutores de Wellington Lima e Silva, ministro da Justiça, relataram que o presidente considerou insuficiente o formato inicialmente proposto para a nova estrutura.",
     "O Senado Federal aprovou, nesta quarta-feira (25), o requerimento de urgência para o PL (Projeto de Lei) 2.896/2022, que permite a indicação de políticos que tenham exercido mandato nos últimos 36 meses para agências reguladoras.",
     "Avanço nas negociações de venda de participações em três empresas pela Cosan (CSAN3), parceria na Indonésia como porta de entrada da JBS (JBSS32) no Sudeste Asiático e operação por suspeita de fraude do Grupo Fictor são alguns dos destaques corporativos desta quinta-feira (26).",
@@ -1853,7 +1852,8 @@
     "As bolsas asiáticas fecharam em forte alta nesta sexta-feira (27), acompanhando os ganhos dos futuros de ações dos Estados Unidos e o avanço expressivo dos mercados chineses. O sentimento em torno dos investimentos em inteligência artificial se estabilizou, após Wall Street permanecer fechada na quinta-feira pelo feriado de Ação de Graças.",
     "Segundo o Cointelegraph, a Autoridade Europeia de Valores Mobiliários e dos Mercados (ESMA) pretende substituir, por volta de meados de 2027, o registro provisório de criptoativos criado sob o MiCA por uma plataforma web com busca. A informação foi transmitida por um porta-voz da autarquia ao portal.",
     "A decisão de Luiz Carlos Trabuco Cappi de aceitar o convite de Lula para chefiar a Fazenda ao longo do quarto mandato do presidente passou a ser interpretada como uma tentativa de reconstruir pontes entre o Planalto e o empresariado. Na leitura de Cila Schulman, executiva-chefe do Instituto Ideia, o gesto pode representar uma guinada na relação do ",
-    "A agenda econômica desta sexta-feira (27) encerra a semana com um dia de liquidez reduzida nos Estados Unidos, devido ao feriado de Ação de Graças e ao fechamento antecipado dos mercados norte-americanos. Por isso, os dados domésticos devem ganhar destaque."
+    "A agenda econômica desta sexta-feira (27) encerra a semana com um dia de liquidez reduzida nos Estados Unidos, devido ao feriado de Ação de Graças e ao fechamento antecipado dos mercados norte-americanos. Por isso, os dados domésticos devem ganhar destaque.",
+    "O sistema elétrico do País vive um paradoxo."
   ],
   "eventos_recentes": [
     {
@@ -2591,10 +2591,13 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795772287.992408
+    },
+    {
+      "chave": "auren::GERAL_ATIVO",
+      "ts": 1795773235.90081
     }
   ],
   "hashes_imagens": [
-    "81fce3ed060dcc71",
     "d63b0cd8f178da64",
     "af5d2c257265eb07",
     "3b4d9f8fa964ad1f",
@@ -2893,6 +2896,7 @@
     "4ed3ff128884ac25",
     "fa6be70b621d630a",
     "f8cd978953591aac",
-    "0579b9fc19247f23"
+    "0579b9fc19247f23",
+    "437e6ac85fbc038e"
   ]
 }
