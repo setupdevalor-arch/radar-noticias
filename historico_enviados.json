@@ -1,8 +1,5 @@
 {
   "links": [
-    "5da38b9a2cbd490b",
-    "8fd7d1939a124361",
-    "https://www.spacemoney.com.br/investimentos/analise-de-balanco-antes-de-investir/",
     "d174d9f33eef72a2",
     "8a5a10b84ae3fda4",
     "1af1ea2362261b6e",
@@ -799,10 +796,12 @@
     "https://www.moneytimes.com.br/petroleo-sobe-e-caminha-para-interromper-sequencia-de-tres-semanas-de-perdas-fets/",
     "34866f1bb1e6095d",
     "https://www.spacemoney.com.br/agronegocio/carne-brasileira-auditoria-ue-macron/",
-    "0f9aec150eca16fa"
+    "0f9aec150eca16fa",
+    "e19be2e8ca91b5a9",
+    "https://www.infomoney.com.br/mercados/com-foco-em-baterias-petrobras-avalia-entrar-em-minerais-criticos-nos-proximos-anos/",
+    "6e4c24fd34b04672"
   ],
   "titulos": [
-    "Por que o cobre, queridinho da era da IA, despencou 9% em uma semana",
     "Analistas de Wall Street elegem 3 ações de dividendos",
     "CNBC destaca Amazon em meio à queda do Nasdaq",
     "Evolução da IA pode ampliar riscos à cibersegurança, diz especialista",
@@ -1601,10 +1600,10 @@
     "Black Friday: IA pode mudar preços e forma como clientes fazem compras",
     "TRON mira ações tokenizadas e títulos dos EUA no 4º tri",
     "Petróleo sobe e caminha para interromper sequência de três semanas de perdas",
-    "UE não vê base em fala de Macron sobre carne"
+    "UE não vê base em fala de Macron sobre carne",
+    "Com foco em baterias, Petrobras avalia entrar em minerais críticos nos próximos anos"
   ],
   "leads": [
-    "O sentimento dos investidores em relação à Bolsa brasileira atingiu um dos níveis mais negativos da série histórica, mas isso pode representar uma oportunidade para quem aposta em uma recuperação do mercado no curto prazo.",
     "A Yduqs (YDUQ3) aprovou a incorporação da Afya (AFYA3) pela companhia, em Assembleia Geral Extraordinária (AGE) realizada nesta quarta-feira (25). A operação prevê o aumento do capital social da Yduqs em R$ 2,54 bilhões, mediante a emissão de 569,65 milhões de novas ações ordinárias.",
     "O presidente da Federação da Agricultura e Pecuária do Estado de São Paulo (Faesp) e do Serviço Nacional de Aprendizagem Rural (Senar), Tirso Meirelles, criticou a possibilidade de novos impostos e alertou para o encarecimento da atividade rural. Ele também mencionou a escassez de mão de obra.",
     "Os investidores internacionais começam o dia sem a liquidez dos mercados norte-americanos em virtude do feriado local desta quinta-feira (26). Com isso, as atenções se voltam para a bateria de indicadores regionais.",
@@ -1853,17 +1852,10 @@
     "Duas pessoas entram no mesmo site, procuram o mesmo produto e fazem a compra no mesmo momento. Ainda assim, podem encontrar preços ou condições comerciais diferentes. A situação pode virar tendência na Black Friday deste ano.",
     "A TRON planeja incluir ações tokenizadas e títulos dos Estados Unidos entre os produtos centrais de sua rede, com meta de lançamento no quarto trimestre de 2026. O movimento, apresentado por Justin Sun como parte da estratégia da blockchain, amplia a atuação da rede além das transferências de stablecoins. Em outubro de 2026, durante o evento TOKEN2",
     "Os preços do petróleo sobem nesta sexta-feira (27) e caminham para interromper uma sequência de três semanas de perdas, à medida que os ataques contínuos a petroleiros no Estreito de Ormuz e à infraestrutura energética da Arábia Saudita intensificaram as preocupações com o abastecimento de petróleo proveniente do Oriente Médio, região afetada pelo ",
-    "Uma missão técnica da União Europeia que esteve no Brasil não corroborou a versão defendida por Emmanuel Macron, presidente da França, de que a proteína animal brasileira seria “dopada”, conforme o g1. A auditoria examinou órgãos públicos e unidades de frango e mel num intervalo que foi de 24 de agosto a 4 de setembro, e a Comissão Europeia conclui"
+    "Uma missão técnica da União Europeia que esteve no Brasil não corroborou a versão defendida por Emmanuel Macron, presidente da França, de que a proteína animal brasileira seria “dopada”, conforme o g1. A auditoria examinou órgãos públicos e unidades de frango e mel num intervalo que foi de 24 de agosto a 4 de setembro, e a Comissão Europeia conclui",
+    "A Petrobras avalia a possibilidade de entrar no setor de minerais críticos destinados à produção de baterias, com atuação que poderá incluir desde a prospecção e extração até o processamento e refino desses recursos. A iniciativa aparece no Plano de Negócios 2027-2031 da estatal, divulgado nesta semana, e integra sua estratégia de diversificação da"
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795593371.773868
-    },
-    {
-      "chave": "itau::GERAL_ATIVO",
-      "ts": 1795593371.773868
-    },
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795593778.240265
@@ -2587,10 +2579,13 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795765145.545701
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795766451.93871
     }
   ],
   "hashes_imagens": [
-    "00ba92f2fd72092a",
     "b030a54ad1f73fe6",
     "3bb713997fddf6bd",
     "8b69e2a35c87bd01",
@@ -2889,6 +2884,7 @@
     "7e133cfa21961436",
     "0a2be891c473e27a",
     "d104b98e2319e484",
-    "1779aaa7d24e30e3"
+    "1779aaa7d24e30e3",
+    "0fa9761bee85649b"
   ]
 }
