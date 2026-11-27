@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-economia/novas-regras-do-bc-para-credito-podem-atingir-20-milhoes/",
-    "6ee079a781605539",
-    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/durigan-defende-agilizar-proibicao-definitiva-de-bets-e-cassinos-online/",
-    "4132b3360e1e3e0b",
-    "29fe17abac99213d",
-    "cb824e29e466a6a3",
-    "a6e3202f2daf2ee8",
-    "7457af5b7bd2250f",
     "ce71d87a6d9a21e4",
     "af4331070058630f",
     "3358fc1541a975ba",
@@ -799,10 +791,17 @@
     "65fdbcd8ba2a7523",
     "23a7a6eb0ae7cd66",
     "c43135146c2b2dca",
-    "778c7ce7ddcd588e"
+    "778c7ce7ddcd588e",
+    "8ba3abc0e1c6dae0",
+    "e58cef73433e00ae",
+    "e5ea70199ce99169",
+    "7a6ec12bf1744be9",
+    "ddd7dbbdb0dcb081",
+    "f889dbb18a932a7e",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/franca-em-recessao-tecnica-apos-revisoes-trimestrais/",
+    "e0426a9c30363635"
   ],
   "titulos": [
-    "OPINIÃO. Ainda dá para apostar tudo no CDI?",
     "Empresas europeias alertam UE contra cortes que afetem competitividade",
     "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
     "Montadoras alemãs enfrentam tensão crescente com sindicatos",
@@ -1601,10 +1600,10 @@
     "Black Friday da Bolsa: ações brasileiras voltaram ao radar dos investidores",
     "Brasil do Brasil (BBAS3) presta novos esclarecimentos à CVM sobre agro",
     "Cemig supera 4 mil clientes no varejo e mira abertura do mercado",
-    "Petrobras negocia aquisição de 100% de bloco na Bacia de Campos"
+    "Petrobras negocia aquisição de 100% de bloco na Bacia de Campos",
+    "França em recessão técnica após revisões trimestrais"
   ],
   "leads": [
-    "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo.",
     "O Itaú BBA avalia que a Usiminas (USIM5) deve enfrentar um quarto trimestre mais desafiador, com a alta dos custos de produção pressionando os resultados antes que os reajustes de preços sejam integralmente repassados. Apesar do cenário adverso, a companhia não pretende rever seu plano de investimentos, segundo comentários da administração durante ",
     "O Banco Central (BC) decidiu frear o crédito de quem já está endividado, mas entregou aos bancos o controle do pedal. Em entrevista coletiva nesta quinta-feira (26), o diretor de Regulação do BC, Gilneu Vivan, explicou que o cliente que financiou a fatura do cartão três vezes ou mais nos últimos seis meses não poderá ter o limite ampliado e terá de",
     "Ministro da Fazenda também cita definição de nomes para a CVM e o Cade e diz que preenchimento das vagas dará mais previsibilidade ao empresariado",
@@ -1853,7 +1852,8 @@
     "Embora a perspectiva de juros elevados continue sendo desafiadora, apenas a sinalização de uma política fiscal diligente já deve trazer um respiro significativo para o Ibovespa no curtíssimo prazo.",
     "O Banco do Brasil (BBAS3) divulgou, em 26 de novembro de 2026, comunicado ao mercado em atenção ao Ofício nº 328/2026/CVM/SEP/GEA-1, da Comissão de Valores Mobiliários (CVM).",
     "A Cemig alcançou 4.016 unidades consumidoras no mercado livre varejista em setembro de 2026, tornando-se a primeira comercializadora do país a superar a marca de 4 mil pontos de consumo nessa modalidade, segundo dados da Câmara de Comercialização de Energia Elétrica (CCEE). A companhia agora foca na expansão dos negócios com a abertura do mercado l",
-    "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%)."
+    "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%).",
+    "A economia francesa contraiu mais do que o inicialmente previsto no terceiro trimestre, levando o país tecnicamente à recessão, segundo dados finais divulgados nesta sexta-feira (27) pelo Instituto Nacional de Estatística."
   ],
   "eventos_recentes": [
     {
@@ -2595,10 +2595,13 @@
     {
       "chave": "petrobras::EVENTO_CORP",
       "ts": 1795788902.816266
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795790278.339821
     }
   ],
   "hashes_imagens": [
-    "b49c46794e26c734",
     "66a6bce8fe8eccc9",
     "5990be9f967c2203",
     "ba99b1be51acc33b",
@@ -2897,6 +2900,7 @@
     "7b8672579cf3d5a5",
     "b1f6f14938e67593",
     "a3919263b1e4b663",
-    "f9ecc643387dc34f"
+    "f9ecc643387dc34f",
+    "69ad717c4ae58f05"
   ]
 }
