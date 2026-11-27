@@ -1,13 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/agronegocio/deficit-armazenagem-mato-grosso/",
-    "c8965a8357eb0ff1",
-    "af7736edee618e50",
-    "9873c23ab3ca2c1b",
-    "7d2acb07b097f661",
-    "3166793de7b46c90",
-    "c3971ec5a354ad13",
-    "7676e9bf8d1dd11a",
     "https://www.cnnbrasil.com.br/infra/infraestrutura-ve-desafios-regulatorios-para-novo-ciclo-de-investimentos/",
     "53b8b47718b677f6",
     "73882cbb334a3cda",
@@ -799,12 +791,17 @@
     "853db7f19cee097f",
     "c1f8522635a34dc3",
     "https://bmcnews.com.br/economia/inadimplencia-do-credito-total-bate-5-1-e-bc-restringe-rotativo-do-cartao/",
-    "c244c7a7a32e508b"
+    "c244c7a7a32e508b",
+    "92d56d3675270f6e",
+    "cfd31e5dc07171a0",
+    "https://www.cnnbrasil.com.br/agro/brasil-abre-novos-mercados-agropecuarios-no-ira-nicaragua-peru-e-caribe/",
+    "7e5f671c831c9070",
+    "https://www.seudinheiro.com/2026/bolsa-dolar/bradesco-bbi-aposta-no-efeito-trabuco-eleva-brasil-para-compra-e-revela-o-que-pode-destravar-uma-alta-de-30-da-bolsa-miql/",
+    "9ff2637982fcbf22",
+    "https://www.moneytimes.com.br/gpa-pcar3-diz-que-negocia-transacao-tributaria-com-receita-mas-nega-acordo-vinculante-miql/",
+    "59dc5fd1a9853714"
   ],
   "titulos": [
-    "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
-    "Houthis atacam refinaria saudita e Trump ameaça Teerã",
-    "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT",
     "Traders descartam alta de 0,50 ponto do Fed em dezembro",
     "Futuros de NY avançam após selloff global da IA",
     "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
@@ -1601,12 +1598,12 @@
     "IA intensifica ataques cibernéticos ao setor elétrico e empresas montam grupo de defesa no Brasil",
     "Futuro presidente do BCE prioriza depósitos tokenizados",
     "Cade aprova sociedade entre Itaú e Klabin em negócio de R$ 1,2 bilhão",
-    "Inadimplência do crédito total bate 5,1% e BC restringe rotativo do cartão"
+    "Inadimplência do crédito total bate 5,1% e BC restringe rotativo do cartão",
+    "Brasil abre novos mercados agropecuários no Irã, Nicarágua, Peru e Caribe",
+    "Bradesco BBI aposta no “efeito Trabuco”, eleva Brasil para compra e revela o que pode destravar uma alta de 30% da bolsa",
+    "GPA (PCAR3) diz que negocia acordo para passivos fiscais com a Receita, mas nega acordo vinculante"
   ],
   "leads": [
-    "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit",
-    "Pedro Peduzzi – Repórter da Agência Brasil",
-    "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
     "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56.",
     "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias.",
     "Vice-presidente criticou nova taxa avaliada pelo governo Trump e disse que Brasil trabalhará para revertê-la",
@@ -1853,13 +1850,12 @@
     "A inteligência artificial (IA) está tornando os ataques cibernéticos mais rápidos e convincentes, ao mesmo tempo em que crises geopolíticas elevam a pressão sobre infraestruturas críticas, na avaliação de Rolf Satake, gerente do Centro de Segurança Cibernética do Itaipu Parquetec.",
     "O Conselho Europeu anunciou em 26 de novembro a indicação de Pablo Hernandez de Cos, ex-governador do Banco da Espanha, para presidir o Banco Central Europeu (BCE). Ele seria o primeiro espanhol no cargo e deve suceder Christine Lagarde, que deixa o posto em 7 de fevereiro. O nome ainda precisa de consulta ao Parlamento Europeu e ao Conselho do BCE",
     "Banco terá participação na Bougainville Reflorestadora, empresa que reúne 37,3 mil hectares de ativos florestais",
-    "A inadimplência da carteira de crédito total do Sistema Financeiro Nacional subiu para 5,1% em outubro, novo recorde da série, enquanto no crédito livre às famílias a taxa atingiu 8,2%, alta de 1,3 ponto percentual em 12 meses."
+    "A inadimplência da carteira de crédito total do Sistema Financeiro Nacional subiu para 5,1% em outubro, novo recorde da série, enquanto no crédito livre às famílias a taxa atingiu 8,2%, alta de 1,3 ponto percentual em 12 meses.",
+    "O governo brasileiro concluiu negociações sanitárias e fitossanitárias que autorizam a exportação de novos produtos agropecuários para Irã, Nicarágua, Peru e São Cristóvão e Névis. As medidas ampliam o acesso de produtos nacionais a esses mercados e contemplam os setores de cereais, amendoim e proteínas de origem animal.",
+    "Para analistas, nomeação pode melhorar a percepção sobre a política fiscal e atrair investidores que ainda resistiam a aumentar a exposição ao Brasil",
+    "O Pão de Açúcar (GPA) (PCAR3) confirmou nesta sexta-feira (27) que negocia com a Procuradoria-Geral da Fazenda Nacional (PGFN) e a Receita Federal uma transação tributária envolvendo débitos e contingências fiscais."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_credito_juros::RF_EVENTO",
-      "ts": 1795609964.7834
-    },
     {
       "chave": "suzano::GERAL_ATIVO",
       "ts": 1795610339.517435
@@ -2591,12 +2587,17 @@
     {
       "chave": "klabin::GERAL_ATIVO",
       "ts": 1795782296.631148
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795782972.710358
+    },
+    {
+      "chave": "pcar3::GERAL_ATIVO",
+      "ts": 1795782972.710358
     }
   ],
   "hashes_imagens": [
-    "ee2161dc110b75cb",
-    "baee54770d2b19f0",
-    "481aa8c80c14be31",
     "30892d5db31bec3d",
     "85c316a841ce6f80",
     "311bfc36f9ca2392",
@@ -2893,6 +2894,9 @@
     "d22a6498b3b540a1",
     "7aeb3db519c4b810",
     "91228e6c864de26a",
-    "3423d09146b20c07"
+    "3423d09146b20c07",
+    "bb71bf6d17c0a198",
+    "2fb330196ca410f0",
+    "6b3f82f9caed48e1"
   ]
 }
