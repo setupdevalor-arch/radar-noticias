@@ -1,12 +1,5 @@
 {
   "links": [
-    "4d161e798926974a",
-    "https://www.spacemoney.com.br/investimentos/acoes/carl-icahn-fortuna-iep-divida/",
-    "ab3cacaa67a99cdf",
-    "https://cqcs.com.br/noticia/caixa-seguridade-divulga-resultados-do-3o-trimestre-com-destaque-para-lucro-e-dividendos-impulsionados-pelas-atividades-das-joint-ventures/",
-    "6247099fc719cdb1",
-    "0b252ff3c516246e",
-    "aad38cc63eacb41f",
     "7338d068a2105381",
     "b187c34b388ac46b",
     "c1cd0813da61777a",
@@ -799,10 +792,16 @@
     "6b010867b8100c55",
     "93d7282697341068",
     "https://www.moneytimes.com.br/trabuco-na-fazenda-pode-blindar-banco-central-veja-os-3-pontos-que-o-mercado-vai-monitorar-segundo-ubs-gwm/",
-    "1df1df3c14da7ea0"
+    "1df1df3c14da7ea0",
+    "98ffa1f47693e813",
+    "6c69790c65dc3861",
+    "bdf852299222e159",
+    "7225f3db682581e4",
+    "3b5b18b2126712f5",
+    "https://www.spacemoney.com.br/agronegocio/evento-adidos-agricolas-brasilia/",
+    "618d8e4672396650"
   ],
   "titulos": [
-    "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul",
     "Leilões de baterias têm inscrições prorrogadas até esta segunda",
     "Como funciona o LTBX11, ETF de renda fixa da XP?",
     "IPC-S mantém 0,38% na terceira leitura de novembro",
@@ -1601,10 +1600,10 @@
     "Inadimplência de pessoa física no crédito sobe para perto do recorde em outubro",
     "Contas do governo têm superávit de R$ 52,3 bilhões em outubro",
     "A Black Friday do papel higiênico: o que o Mercado Livre vê no consumo",
-    "Trabuco na Fazenda pode blindar Banco Central; veja os 3 pontos que o mercado vai monitorar, segundo UBS GWM"
+    "Trabuco na Fazenda pode blindar Banco Central; veja os 3 pontos que o mercado vai monitorar, segundo UBS GWM",
+    "Brasília sedia evento de promoção agroexportadora"
   ],
   "leads": [
-    "Segundo Borim, as emissões estão sendo feitas, contemplando quatro títulos desse tipo até o momento.",
     "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
     "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA.",
     "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. ",
@@ -1853,25 +1852,10 @@
     "A inadimplência do crédito rural para pessoas físicas com recursos direcionados subiu para 9,6% em outubro, de 8,6% em setembro. O resultado está apenas 0,1 ponto porcentual abaixo do recorde da série, de 9,7%, registrado em agosto.",
     "Pedro Peduzzi – Repórter da Agência Brasil",
     "“Está sendo a Black Friday do papel higiênico”, afirma Fernando Yunes, vice-presidente executivo de commerce do Mercado Livre na América Latina e líder da companhia no Brasil.",
-    "A escolha de Luiz Carlos Trabuco para o Ministério da Fazenda pode trazer benefícios não apenas para a condução da política fiscal brasileira, mas também para a atuação do Banco Central (BC), avalia o UBS GWM em relatório divulgado nesta sexta-feira (27)."
+    "A escolha de Luiz Carlos Trabuco para o Ministério da Fazenda pode trazer benefícios não apenas para a condução da política fiscal brasileira, mas também para a atuação do Banco Central (BC), avalia o UBS GWM em relatório divulgado nesta sexta-feira (27).",
+    "O Ministério da Agricultura e Pecuária (Mapa) e a ApexBrasil promovem, na primeira semana de dezembro, em Brasília, o Encontro Nacional do Agro e dos Adidos Agrícolas 2026. A abertura está prevista para 1º de dezembro, com encerramento em 4 de dezembro, e deve reunir autoridades do governo federal, adidos agrícolas e representantes da ApexBrasil lo"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795624353.442477
-    },
-    {
-      "chave": "alzr11::PROVENTOS",
-      "ts": 1795624353.442477
-    },
-    {
-      "chave": "snel11::PROVENTOS",
-      "ts": 1795624353.442477
-    },
-    {
-      "chave": "xpml11::PROVENTOS",
-      "ts": 1795624353.442477
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795626244.962995
@@ -2594,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "58abfd34c434a633",
     "41e662cc78294bd7",
     "d79797c1b2123820",
     "1b7292b3dc1a2ce6",
@@ -2893,6 +2876,7 @@
     "d862bc90f7ce34bf",
     "9b692dd4f0384d40",
     "fac010e7654c85d4",
-    "fdbbf65a31b0d1ac"
+    "fdbbf65a31b0d1ac",
+    "faa74654761eaf1d"
   ]
 }
