@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/11/26/durigan-diz-que-discutir-medidas-fiscais-com-lula-nesta-quinta-feira.ghtml",
-    "bbd51c88c02ae112",
-    "2a5c9cd94d6195ce",
-    "dfeff979bfb307ee",
-    "57ec07d0178427f6",
     "3dd6a7a42011254a",
     "eb93fd5d8cd0df10",
     "39e037039eedb73e",
@@ -799,10 +794,14 @@
     "https://www.infomoney.com.br/mercados/acoes-ibovespa-quedas-trabuco-27112026/",
     "a8feec607d32d187",
     "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/27/efeito-trabuco-faz-empresas-da-b3-ganharem-r-232-bi-em-1-dia.ghtml",
-    "0dcccc7f85873ff8"
+    "0dcccc7f85873ff8",
+    "3984b81800c20969",
+    "d49be9a8337c4744",
+    "c667f19f213dec5e",
+    "https://www.spacemoney.com.br/economia/macroeconomia/tesouro-superavit-outubro-2026/",
+    "3c0abe22e7143eb9"
   ],
   "titulos": [
-    "Montadoras alemãs enfrentam tensão crescente com sindicatos",
     "Diretor do BC, Nilton David, participa do Bloomberg Línea Summit nesta segunda; assista",
     "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain",
     "Mercado imobiliário dos EUA trava com salto dos juros",
@@ -1601,10 +1600,10 @@
     "Petrobras negocia aquisição de 100% de bloco na Bacia de Campos",
     "França em recessão técnica após revisões trimestrais",
     "Apenas 9 ações do Ibovespa caem nesta 6ª; Suzano lidera perdas",
-    "'Efeito Trabuco' faz empresas da B3 ganharem R$ 232 bi em 1 dia"
+    "'Efeito Trabuco' faz empresas da B3 ganharem R$ 232 bi em 1 dia",
+    "Resultado primário positivo chega a R$ 52,3 bi em outubro"
   ],
   "leads": [
-    "Ministro da Fazenda também cita definição de nomes para a CVM e o Cade e diz que preenchimento das vagas dará mais previsibilidade ao empresariado",
     "– O presidente dos EUA, ‌Donald Trump, postou nesta quinta-feira ‌que gostaria de ver o líder russo, Vladimir Putin, “recuar ‌de toda a agressão militar contra territórios em toda a Europa”, na esperança de que isso possa levar a uma rápida ‌resolução da guerra na Ucrânia.",
     "A colheita argentina de grãos encerrou a safra 2025/26 em 171 milhões de toneladas, novo recorde nacional. A superfície destinada ao plantio chegou a 44,6 milhões de hectares, também um máximo histórico, informou a Secretaria de Agricultura, Pecuária e Pesca do Ministério da Economia.",
     "As Letras Financeiras deixaram os títulos públicos para trás no ranking de renda fixa da B3 de outubro. O Índice de Letra Financeira S1 DI B3 (ILFB) liderou a lista de desempenho do mês passado, com valorização de 1,08%. O indicador superou o Índice Tesouro Selic B3 (TSLC), que teve valorização de 0,99%, além do Índice Tesouro Selic Low Turnover (T",
@@ -1853,13 +1852,10 @@
     "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%).",
     "A economia francesa contraiu mais do que o inicialmente previsto no terceiro trimestre, levando o país tecnicamente à recessão, segundo dados finais divulgados nesta sexta-feira (27) pelo Instituto Nacional de Estatística.",
     "A confirmação de Luiz Carlos Trabuco para o comando do Ministério da Fazenda desencadeou uma forte onda de otimismo nos mercados nesta sexta-feira, levando o Ibovespa a disparar quase 4% e ultrapassar os 183 mil pontos.",
-    "Expectativa é de nova alta na sessão desta sexta, com o nome já confirmado"
+    "Expectativa é de nova alta na sessão desta sexta, com o nome já confirmado",
+    "O g1 informou nesta sexta-feira (27) que as contas federais tiveram, em outubro, resultado primário positivo de R$ 52,3 bilhões, segundo dados do Tesouro Nacional. É o maior saldo para um mês de outubro desde 2016, quando o resultado positivo alcançou R$ 66,3 bilhões, em valores deflacionados. O desempenho também supera os R$ 38,3 bilhões do mesmo "
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_tesouro::RF_EVENTO",
-      "ts": 1795617892.837835
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795618354.702043
@@ -2606,7 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "ba99b1be51acc33b",
     "5b083c2879ae49ad",
     "57a422dbbdbf6099",
     "c95a582d1bad8ec9",
@@ -2905,6 +2900,7 @@
     "f9ecc643387dc34f",
     "69ad717c4ae58f05",
     "22f5b7769120393f",
-    "4f666b7a5776cf3d"
+    "4f666b7a5776cf3d",
+    "bca618cc02c3e56f"
   ]
 }
