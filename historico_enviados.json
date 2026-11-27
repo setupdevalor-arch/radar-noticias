@@ -1,11 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/nvidia-alerta-credito-sp/",
-    "0a7e5f0edc1bd656",
-    "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/ggrc11-hglg11-rendimento-contratos-ocupacao/",
-    "24d1fe2a47d76608",
-    "https://neofeed.com.br/economia/mecanismo-aprovado-pelo-tcu-deve-destravar-bilhoes-em-financiamento-de-infraestrutura/",
-    "b4618362d87c64ab",
     "https://www.poder360.com.br/poder-governo/cotado-para-a-fazenda-trabuco-se-reune-com-lula-no-alvorada/",
     "137df4b9038882d9",
     "0a6c97babf7cb7e7",
@@ -799,10 +793,15 @@
     "c0836fc307228961",
     "affb9f59d9e44f98",
     "https://www.infomoney.com.br/mundo/nem-os-aliados-escapam-xi-mira-possivel-sucessor-em-novo-expurgo-na-china/",
-    "8af480e83c8f88f9"
+    "8af480e83c8f88f9",
+    "44f1653f31198469",
+    "182ccd4d1a3cf360",
+    "c95150704d495608",
+    "7d1f8a90af1ae59e",
+    "https://www.infomoney.com.br/onde-investir/por-que-investir-no-exterior-deixou-de-ser-apenas-protecao-contra-riscos-do-brasil/",
+    "f397b943f7e62bba"
   ],
   "titulos": [
-    "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
     "EZ Tec aprova reorganização com incorporações e cisão",
     "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras",
     "Fenacor detalha impactos da Reforma Tributária para corretores",
@@ -1601,10 +1600,10 @@
     "Quando o Banco do Brasil (BBAS3) paga dividendos? Veja o calendário",
     "Fux prorroga por 15 dias contrato do BRB com tribunal da Bahia e evita nova crise no banco",
     "OpenAI processa Apple por roubo de segredos comerciais",
-    "Nem os aliados escapam: Xi mira possível sucessor em novo expurgo na China"
+    "Nem os aliados escapam: Xi mira possível sucessor em novo expurgo na China",
+    "Por que investir no exterior deixou de ser apenas proteção contra riscos do Brasil"
   ],
   "leads": [
-    "Lula passou a cobrar uma solução para a crise no Banco de Brasília (BRB), segundo apuração da analista de Política Larissa Rodrigues ao CNN 360°.",
     "Após a Defesa Civil recomendar a montagem de um kit de emergência para 72 horas no início de novembro, o faturamento de produtos incluídos nessa lista cresceu 13,3% em relação ao mesmo período do ano anterior, segundo levantamento da Scanntech, empresa de inteligência para o varejo, obtido pelo InfoMoney. O desempenho dessas categorias superou em 5",
     "A Federação da Agricultura e Pecuária do Estado de São Paulo (Faesp) divulgou uma nota de repúdio na quinta-feira (26) às falas do presidente francês, Emmanuel Macron, sobre a carne bovina do Mercosul. A entidade cobra do governo brasileiro uma reação formal, com retratação da França, questionamento na OMC e medidas de reciprocidade comercial.",
     "Um sistema de frente fria deve alterar a distribuição das chuvas no país, com risco de acumulados acima de 200 milímetros entre 2 e 6 de dezembro em áreas de São Paulo, Mato Grosso do Sul e Paraná. O cenário exige atenção em áreas de soja, sobretudo pelo risco de umidade excessiva e por eventuais entraves aos trabalhos no campo.",
@@ -1853,7 +1852,8 @@
     "Os investidores do Banco do Brasil (BBAS3) não terão um final de ano tão animador quanto o esperado. Quem aguarda os próximos dividendos do banco vai precisar de paciência. Neste momento, não há nenhum anúncio de proventos do banco no radar.",
     "Caixa avalia comprar BRB e presidente cita federalização",
     "A OpenAI processou a Apple nesta sexta-feira (27), acusando a gigante da tecnologia de roubar segredos comerciais e bloquear seu acesso a fornecedores de hardware.",
-    "O anúncio na última terça-feira, 24, da abertura de uma investigação de corrupção contra o líder do Partido Comunista Chinês em Xangai, Chen Jining, abalou o centro político da China. Chen era, até onde se sabe, muito bem quisto por Xi Jinping e era visto como uma potencial liderança. Até que a investigação relâmpago, e iminente expulsão do partido"
+    "O anúncio na última terça-feira, 24, da abertura de uma investigação de corrupção contra o líder do Partido Comunista Chinês em Xangai, Chen Jining, abalou o centro político da China. Chen era, até onde se sabe, muito bem quisto por Xi Jinping e era visto como uma potencial liderança. Até que a investigação relâmpago, e iminente expulsão do partido",
+    "A diversificação internacional deixou de ser apenas uma estratégia para proteger o patrimônio de crises no Brasil e passou a ser uma ferramenta para melhorar a relação entre risco e retorno das carteiras. Para gestores da XP Asset Management e da Pragma, a construção de portfólios globais deve ser uma decisão estrutural, que considere diferentes me"
   ],
   "eventos_recentes": [
     {
@@ -2566,7 +2566,6 @@
     }
   ],
   "hashes_imagens": [
-    "7a5cc2cf218c23dd",
     "34559191ca56ffe3",
     "e480cdcd0177a7a0",
     "71242ce2d20727bc",
@@ -2865,6 +2864,7 @@
     "6b83a5a2bc9704ae",
     "f26a03747c46a4c0",
     "501e193ae4c2e0aa",
-    "75f156e66a0499e0"
+    "75f156e66a0499e0",
+    "c590325b51ecc056"
   ]
 }
