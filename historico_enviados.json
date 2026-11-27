@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/negocios/relacao-subordinada-custa-cargo-ceos-menos-jensen-huang/",
-    "2ab80f5f1e7d430d",
-    "https://www.infomoney.com.br/mercados/ibovespa-180-mil-pontos-traders-fluxo-estrangeiro/",
-    "d7ec1be88778eff3",
     "8890af4eda09b142",
     "https://bmcnews.com.br/economia/cmo-aprova-relatorio-do-orcamento-de-2027-com-corte-de-r-209-bilhoes/",
     "2e155ed4ca977063",
@@ -799,10 +795,13 @@
     "a772874689f3ea7d",
     "f6a9074fe21e5084",
     "5ed533598db8ec4f",
-    "d7bdda4e4898a21e"
+    "d7bdda4e4898a21e",
+    "e1b2ccbf1f3f3695",
+    "9bb61020884d8f7c",
+    "https://www.infomoney.com.br/mercados/axia-axia3-pode-pagar-ate-15-em-dividendos-e-tem-acoes-descontadas-diz-bbi/",
+    "640275be15462fe6"
   ],
   "titulos": [
-    "Falhas em Microsoft, Apple e voos elevam suspeita de ataque",
     "Vibra (VBBR3) e Ultra (UGPA3) ficam mais atrativas após queda das ações, avalia BBI",
     "É possível manter programas sociais e rever regras fiscais, diz Galípolo",
     "Dólar sustenta alta e ultrapassa os R$ 6,00 com cautela fiscal",
@@ -1601,10 +1600,10 @@
     "Ambev acelera inovação para ampliar escolhas na categoria cervejeira",
     "Gestão de ativos: o diferencial competitivo que ainda separa as empresas de óleo e gás",
     "Safra: Seca no Norte e El Niño podem beneficiar Rumo e pressionar Hidrovias do Brasil",
-    "Moretti deve continuar no Planejamento, indicam aliados"
+    "Moretti deve continuar no Planejamento, indicam aliados",
+    "Axia (AXIA3) pode pagar até 15% em dividendos e tem ações descontadas, diz BBI"
   ],
   "leads": [
-    "Os Estados Unidos selecionaram o consórcio americano Frontier Minerals para desenvolver um projeto de mineração no Quênia em uma área com potencial para abrigar milhões de toneladas de nióbio e terras raras. Segundo o Monitor do Mercado, o secretário de Estado para Mineração e Economia Azul do Quênia anunciou que o Ministério da Mineração emitiu av",
     "O Decreto nº 13.173/2026, publicado na semana passada, trouxe ajustes pontuais para a redução da jornada de trabalho e para o fim da escala 6×1. Em análise publicada pelo Monitor do Mercado, o advogado Marcel Zangiácomo, sócio do escritório Galvão Villani, Navarro, Zangiácomo e Bardella Advogados, avalia que a norma ficou abaixo do esperado e deixo",
     "O Banco Safra atualizou as estimativas e preços-alvo para empresas do setor de varejo, especialmente para companhias focadas em consumo discricionário e vestuário. Entre as principais recomendações, o banco destacou Smart Fit (SMFT3) e Track & Field (TFCO4).",
     "Para entender o que esperar da Black Friday de 2026, que acontece em 27 de novembro, a Rico analisou a trajetória da inflação nas categorias relacionadas à data e os cuidados necessários para avaliar uma oferta. A resposta não é igual para todos os produtos: enquanto alguns segmentos chegam a novembro com queda acumulada de preços, outros apresenta",
@@ -1853,7 +1852,8 @@
     "A diversificação das preferências dos consumidores tem impulsionado a busca por novas opções no universo cervejeiro. Para acompanhar esse movimento, a indústria investe em novas receitas e tecnologias que ampliam a diversidade de produtos e experiências, sem abrir mão do sabor e do aroma característicos da cerveja.",
     "O Brasil opera uma das versões mais complexas do negócio de óleo e gás do mundo. O upstream brasileiro é, na prática, quase todo offshore, segundo a ANP, Agência Nacional do Petróleo, os campos marítimos respondem por mais de 95% da produção nacional de petróleo. São plataformas distantes da costa, em condições ambientais extremas, com POB limitado",
     "A atual seca no Arco Norte e a previsão de mais complicações climáticas vindas com o El Niño têm pesado forte sobre algumas companhias. De acordo com o Banco Safra, os impactos esperados exercem forte influência sobre a Rumo (RAIL3) e a Hidrovias do Brasil (HBSA3), mas em sentidos opostos.",
-    "O ministro Bruno Moretti é apontado por aliados do governo como o favorito para permanecer à frente do Planejamento no quarto mandato de Luiz Inácio Lula da Silva, segundo apurou o InfoMoney. A avaliação ocorre após a escolha do banqueiro Luiz Trabuco para a Fazenda, em substituição a Dario Durigan, movimento que, conforme a fonte, diminui a leitur"
+    "O ministro Bruno Moretti é apontado por aliados do governo como o favorito para permanecer à frente do Planejamento no quarto mandato de Luiz Inácio Lula da Silva, segundo apurou o InfoMoney. A avaliação ocorre após a escolha do banqueiro Luiz Trabuco para a Fazenda, em substituição a Dario Durigan, movimento que, conforme a fonte, diminui a leitur",
+    "O Bradesco BBI vê uma oportunidade de compra nas ações da Axia Energia (AXIA3), apesar da pressão sobre os resultados no curto prazo provocada pelo volume recorde de chuvas no Brasil. O banco reconhece que os preços mais baixos da energia devem levar a revisões negativas nas estimativas para o quarto trimestre de 2026 e 2027, mas avalia que a persp"
   ],
   "eventos_recentes": [
     {
@@ -2559,10 +2559,13 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795803253.875125
+    },
+    {
+      "chave": "eletrobras::PROVENTOS",
+      "ts": 1795805221.042601
     }
   ],
   "hashes_imagens": [
-    "9ee91da22c6afee0",
     "cf6863f26007dde9",
     "afb36018a046c473",
     "bb5068a61ad82cfc",
@@ -2861,6 +2864,7 @@
     "9d91acfcd79bdb0f",
     "ccfe730c1ff1faf1",
     "46c8fc8fd214ec8f",
-    "b078484b0446c145"
+    "b078484b0446c145",
+    "190dae71a87a4f97"
   ]
 }
