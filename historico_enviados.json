@@ -1,7 +1,5 @@
 {
   "links": [
-    "8d30b8d1dd4390ed",
-    "fbe8213c1066f7d0",
     "7cef5edf15e40a2a",
     "a5fc217e19a60fe1",
     "6ee41721997eaa3d",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/tecnologia/jensen-huang-nvidia-mercado-ia/",
     "c576b474dfaed6cd",
     "https://investnews.com.br/investimentos/tesouro-direto-taxas-rendimento-hoje-trabuco-fazenda-27112026/",
-    "6945d71b72ce6dbb"
+    "6945d71b72ce6dbb",
+    "https://agenciainfra.com/blog/ppi-defende-aportes-publicos-e-mudanca-na-lrf-para-destravar-obras/?utm_source=rss&utm_medium=rss&utm_campaign=ppi-defende-aportes-publicos-e-mudanca-na-lrf-para-destravar-obras",
+    "bdc5040cbf6cfc6c"
   ],
   "titulos": [
-    "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal",
     "Preços do petróleo caem com mercado volátil nesta segunda-feira",
     "UBS vê possibilidade de estagflação no Brasil em 2027; como balancear o portfólio?",
     "FIDCs em Alta: Nova Regra Pode Aumentar Concorrência no Crédito a Pequenas Empresas",
@@ -1601,10 +1600,10 @@
     "GPA (PCAR3) diz que negocia acordo para passivos fiscais com a Receita, mas nega acordo vinculante",
     "O que muda com a suspensão das eleições primárias na Argentina",
     "Volta de Huang dá alívio breve à Nvidia, diz CNBC",
-    "Tesouro Direto hoje: juros recuam; prefixado vai abaixo de 14% com Trabuco na Fazenda"
+    "Tesouro Direto hoje: juros recuam; prefixado vai abaixo de 14% com Trabuco na Fazenda",
+    "PPI defende aportes públicos e mudança na LRF para destravar obras"
   ],
   "leads": [
-    "Geraldo Campos Jr. e Lais Carregosa, da Agência iNFRA",
     "O vice-presidente Geraldo Alckmin (PSB) afirmou que a proposta dos Estados Unidos de impor novas tarifas à importações de aeronaves brasileiras é \"totalmente descabida\". As aeronaves prontas, atualmente isentas de tarifas dos EUA para o Brasil, são o quarto maior item de exportação do país.",
     "Mesmo depois da surpresa positiva do IPCA-15, seguimos vendo uma combinação interessante nos títulos indexados à inflação de prazo mais curto.",
     "Ministro do Trabalho e Emprego disse que presidente da confederação não o procurou para conversas",
@@ -1853,7 +1852,8 @@
     "O Pão de Açúcar (GPA) (PCAR3) confirmou nesta sexta-feira (27) que negocia com a Procuradoria-Geral da Fazenda Nacional (PGFN) e a Receita Federal uma transação tributária envolvendo débitos e contingências fiscais.",
     "O Senado argentino aprovou, por 43 votos a 29, um projeto de reforma eleitoral que suspende as PASO (Eleições Primárias, Abertas, Simultâneas e Obrigatórias) em 2027.",
     "A volta de Jensen Huang ao comando da Nvidia, após renúncia e retorno em menos de duas semanas, trouxe um alívio inicial ao mercado de inteligência artificial, mas a reação perdeu força rapidamente, segundo a CNBC. A emissora americana relata que a empresa perdeu mais de US$ 1 trilhão em valor de mercado e depois recuperou pouco menos de US$ 1 tril",
-    "O Tesouro acompanha o mercado de juros futuros, que mede quanto os investidores cobram para emprestar ao governo. No início da manhã, o contrato de DI para janeiro de 2031 caía 0,63 ponto, para 13,7% ao ano."
+    "O Tesouro acompanha o mercado de juros futuros, que mede quanto os investidores cobram para emprestar ao governo. No início da manhã, o contrato de DI para janeiro de 2031 caía 0,63 ponto, para 13,7% ao ano.",
+    "O esgotamento da carteira de projetos viáveis por meio de concessões comuns, sustentadas exclusivamente por receitas privadas, deverá impor uma série de desafios ao próximo ciclo de investimentos em infraestrutura no país, especialmente no setor de transportes. O secretário especial para o PPI (Programa de Parcerias de Investimentos) da Casa Civil,"
   ],
   "eventos_recentes": [
     {
@@ -2598,7 +2598,6 @@
     }
   ],
   "hashes_imagens": [
-    "f93163ebcc943990",
     "b9ca1a2a60d429c8",
     "fe303eb118b5ffe2",
     "16c215ae01d60d06",
@@ -2897,6 +2896,7 @@
     "6b3f82f9caed48e1",
     "ce1b473666652ca3",
     "91b8b1ba6866e88b",
-    "097ffb77ceeef6b1"
+    "097ffb77ceeef6b1",
+    "e6ce0f14a4a2b5c8"
   ]
 }
