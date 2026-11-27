@@ -1,9 +1,5 @@
 {
   "links": [
-    "4b80fee9a3914d4b",
-    "https://www.cnnbrasil.com.br/politica/guilherme-boulos-trabalha-em-contraponto-ao-pacote-de-ajuste-fiscal/",
-    "cd9d21155c38ce50",
-    "https://www.poder360.com.br/poder-tech/anthropic-paga-autores-que-tiveram-obras-usadas-ilegalmente-por-ia/",
     "906e1ae2549bace6",
     "https://www.suno.com.br/noticias/totvs-tots3-acoes-disparam-bolsa-hoje/",
     "e8c116d19317ebdd",
@@ -799,10 +795,13 @@
     "https://www.estadao.com.br/economia/fux-prorroga-por-15-dias-contrato-do-brb-com-tribunal-da-bahia-e-evita-nova-crise-no-banco/",
     "938b047c68477ea1",
     "43118ad41a601457",
-    "3d26f52488e2a7a7"
+    "3d26f52488e2a7a7",
+    "4a4b58696a957635",
+    "f7a281a886c93a4d",
+    "https://www.cnnbrasil.com.br/economia/money/tecnologia/openai-processa-a-apple-por-roubo-de-segredos-comerciais/",
+    "a55629a635a7a57a"
   ],
   "titulos": [
-    "ANTT aprova avanço da transferência da Régis Bittencourt à EPR",
     "Pedidos de demissão por conta própria perdem fôlego e confirmam arrefecimento do emprego formal",
     "Citi eleva Vivo (VIVT3) e TIM (TIMS3) para compra e destaca resiliência do setor",
     "EZ Tec aprova reorganização com incorporações e cisão",
@@ -1601,10 +1600,10 @@
     "Eternit acelera diversificação após decisão do STF na extração de crisotila",
     "Do silo ao software: por que a XP vê oportunidades na Kepler Weber (KEPL3) apesar dos desafios do agro",
     "Quando o Banco do Brasil (BBAS3) paga dividendos? Veja o calendário",
-    "Fux prorroga por 15 dias contrato do BRB com tribunal da Bahia e evita nova crise no banco"
+    "Fux prorroga por 15 dias contrato do BRB com tribunal da Bahia e evita nova crise no banco",
+    "OpenAI processa Apple por roubo de segredos comerciais"
   ],
   "leads": [
-    "O Ibovespa voltou a ganhar fôlego nesta quinta-feira (26), após semanas de forte pressão vendedora. Às 17h03, o principal índice da Bolsa brasileira subia 4,29%, aos 173.831 pontos, depois de alcançar a máxima de 174.332 pontos.",
     "A votação de quinta-feira não alcançou a maioria de dois terços de que Milei precisava para restabelecer a redação original. Mesmo assim, a lei na prática proíbe o Banco Central de financiar gastos do governo no futuro.",
     "Lula passou a cobrar uma solução para a crise no Banco de Brasília (BRB), segundo apuração da analista de Política Larissa Rodrigues ao CNN 360°.",
     "Após a Defesa Civil recomendar a montagem de um kit de emergência para 72 horas no início de novembro, o faturamento de produtos incluídos nessa lista cresceu 13,3% em relação ao mesmo período do ano anterior, segundo levantamento da Scanntech, empresa de inteligência para o varejo, obtido pelo InfoMoney. O desempenho dessas categorias superou em 5",
@@ -1853,13 +1852,10 @@
     "A Eternit ajustou seu posicionamento estratégico para ampliar a participação da construção industrializada e da logística própria nos negócios. Ao mesmo tempo, a companhia enfrenta incertezas regulatórias em relação à crisotila, mineral que respondeu por R$ 221 milhões de receita nos nove primeiros meses de 2026, o equivalente a 25% da receita líqu",
     "A Kepler Weber (KEPL3) acredita que a próxima etapa de crescimento do agronegócio brasileiro passa menos pela expansão da área plantada e mais pela industrialização das operações no campo. Foi essa a principal mensagem apresentada pela companhia durante seu Investor Day 2026, evento que reforçou, na avaliação da XP Investimentos, o potencial de lon",
     "Os investidores do Banco do Brasil (BBAS3) não terão um final de ano tão animador quanto o esperado. Quem aguarda os próximos dividendos do banco vai precisar de paciência. Neste momento, não há nenhum anúncio de proventos do banco no radar.",
-    "Caixa avalia comprar BRB e presidente cita federalização"
+    "Caixa avalia comprar BRB e presidente cita federalização",
+    "A OpenAI processou a Apple nesta sexta-feira (27), acusando a gigante da tecnologia de roubar segredos comerciais e bloquear seu acesso a fornecedores de hardware."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795637149.790352
-    },
     {
       "chave": "rara11::GERAL_ATIVO",
       "ts": 1795637508.16075
@@ -2567,10 +2563,13 @@
     {
       "chave": "banco_do_brasil::PROVENTOS",
       "ts": 1795808905.957683
+    },
+    {
+      "chave": "apple::GERAL_ATIVO",
+      "ts": 1795810200.368717
     }
   ],
   "hashes_imagens": [
-    "de8dba5502eb1217",
     "4127dc4cb43c196c",
     "7a5cc2cf218c23dd",
     "34559191ca56ffe3",
@@ -2869,6 +2868,7 @@
     "3647584fc18aa026",
     "3fac6173debb0f38",
     "6b83a5a2bc9704ae",
-    "f26a03747c46a4c0"
+    "f26a03747c46a4c0",
+    "501e193ae4c2e0aa"
   ]
 }
