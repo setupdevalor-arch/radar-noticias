@@ -1,13 +1,5 @@
 {
   "links": [
-    "7c36014be600c826",
-    "279fcc1e8cc5a1d0",
-    "2728bd9b5fa7b05f",
-    "0a4e1ab43e07adee",
-    "https://megawhat.uol.com.br/transmissao/apagao-atinge-manaus-e-roraima-apos-falha-em-transmissao/",
-    "9f8570d0739b04e5",
-    "83463e5014f1ca0c",
-    "32b7f682a880092d",
     "https://valorinveste.globo.com/produtos/credito/noticia/2026/11/26/bc-altera-regras-para-cartao-de-credito-e-emprestimos-veja-o-que-muda-para-voce.ghtml",
     "47bed8b862e82bc9",
     "https://www.spacemoney.com.br/investimentos/real-grandeza-mantem-estrategia-de-longo-prazo/",
@@ -799,11 +791,17 @@
     "https://investnews.com.br/economia/com-camilo-santana-e-alckmin-em-novos-ministerios-lula-reforca-visao-de-governo-pragmatico/",
     "82f4621e1f3c1b02",
     "https://www.estadao.com.br/economia/agronegocios/crise-de-inadimplencia-no-agro-deve-contribuir-para-enfraquecimento-do-pib-em-2027/",
-    "8ef860d6647af037"
+    "8ef860d6647af037",
+    "c88736631fc0fb57",
+    "dd034af6fd6ffde5",
+    "a40f8a5997c1d3cb",
+    "edc839be7ab75d9d",
+    "https://eixos.com.br/politica/brasil-pode-atrair-mais-de-r-147-bi-em-investimentos-na-transmissao-de-energia-diz-pde-2036/",
+    "28a90b9d821c1b0a",
+    "https://www.spacemoney.com.br/agronegocio/conab-fretes-agricolas-centro-oeste/",
+    "2e995593d5e28a64"
   ],
   "titulos": [
-    "Bill Ackman diz que Fed pode gerar recessão com alta de juros",
-    "Plantio de soja no Brasil avança para 86% com ajuda das chuvas, diz AgRural",
     "Dólar a R$ 6 acende alerta sobre inflação: veja como a alta pode elevar o IPCA",
     "Bolsas europeias sobem com techs e mineradoras após quatro quedas",
     "Dividendos de 11% e desconto na bolsa: por que este fundo imobiliário é compra para o BTG",
@@ -1601,11 +1599,11 @@
     "Reta final dos leilões de baterias, fósseis no TCU e o primeiro de muitos Super El Niños",
     "Mercosul discute aproximação com Caribe e América Central em cúpula no Uruguai",
     "Com Camilo Santana e Alckmin em novos ministérios, Lula reforça visão de governo pragmático",
-    "Crise de inadimplência no agro deve contribuir para enfraquecimento do PIB em 2027"
+    "Crise de inadimplência no agro deve contribuir para enfraquecimento do PIB em 2027",
+    "Brasil pode atrair mais de R$ 147 bi em investimentos na transmissão de energia, diz PDE 2036",
+    "Fretes sobem em quase todas as rotas no Centro-Oeste"
   ],
   "leads": [
-    "Texto estima superavit primário de R$ 18,6 bilhões e aponta necessidade de até R$ 24,9 bilhões a mais para o Bolsa Família",
-    "O estado de São Paulo encerra o ano com R$ 394 bilhões em investimentos contratados em seu programa de parcerias e concessões e mira meio trilhão de reais para o futuro.",
     "O contrato de dólar futuro (WDOF27) recua mais de 2% na tarde desta quinta-feira (26) após notícia do jornal O Estado de S. Paulo de que o presidente do conselho de administração do Bradesco, Luiz Carlos Trabuco Cappi, chegou a Brasília para se encontrar com Lula no Palácio da Alvorada. A queda se intensificou por volta das 17h30 (horário de Brasíl",
     "O ministro de Minas e Energia, Alexandre Silveira, definiu os nomes dos três superintendentes da ANM (Agência Nacional de Mineração) que vão assumir cadeiras de diretores substitutos na Diretoria Colegiada. São eles: Inara Oliveira Barbosa, André Elias Marques e Aline Fernandes das Chagas.",
     "O Japão avalia novas regras para finanças descentralizadas (DeFi) e carteiras de autocustódia, segundo o Cointelegraph. A Agência de Serviços Financeiros (FSA) busca reduzir riscos de financiamento ilícito no ambiente on-chain.",
@@ -1853,13 +1851,11 @@
     "NESTA EDIÇÃO. Tudo certo, nada resolvido: leilões de baterias previstos para a próxima semana com disputas sobre quem paga pelo armazenamento.",
     "Segundo a Agência Brasil, o Brasil usará a 69ª Cúpula do Mercosul, em 3 e 4 de dezembro, em Montevidéu, para ampliar a aproximação do bloco com Caribe e América Central. A presidência uruguaia será sucedida pela argentina, e o encontro deve ter os cinco chefes de Estado.",
     "Entre esses nomes está o senador Camilo Santana, ex-ministro da Educação, que agora assumirá a Casa Civil, disseram duas pessoas. Mais recentemente, Santana ajudou a arquitetar a volta por cima de Lula no segundo turno da eleição presidencial de outubro.",
-    "Agrishow: crédito insuficiente e juros altos pressionam o agro"
+    "Agrishow: crédito insuficiente e juros altos pressionam o agro",
+    "O Brasil pode receber até R$ 147,6 bilhões em investimentos em transmissão de energia até 2036, segundo o Caderno de Transmissão de Energia Elétrica do Plano Decenal de Expansão de Energia 2036 (PDE) 2036 (.pdf) divulgado nesta sexta-feira (27/11) pelo Ministério de Minas e Energia (MME) e pela Empresa de Pesquisa Energética (EPE).",
+    "A Conab identificou alta do frete agrícola em mais de 93% dos trajetos monitorados no Centro-Oeste em outubro de 2026, na comparação com igual mês de 2025, conforme relatório da estatal divulgado em 27 de novembro."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795642047.571828
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795692368.627838
@@ -2558,8 +2554,6 @@
     }
   ],
   "hashes_imagens": [
-    "54200c343e4f4104",
-    "add796e1f8584362",
     "fcd463639f982cb6",
     "7c271bcc67ac1a27",
     "747f58081e7d66c0",
@@ -2857,6 +2851,8 @@
     "bb29d8b4e23d41e9",
     "6ea3928429384a2f",
     "de64f615d3f3f683",
-    "28a5909d5e794423"
+    "28a5909d5e794423",
+    "b149c1780c240bba",
+    "10702a548f0415a2"
   ]
 }
