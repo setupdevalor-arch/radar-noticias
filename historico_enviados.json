@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://valorinveste.globo.com/produtos/fundos/noticia/2026/11/26/com-apoio-do-bndes-bradesco-lanca-etf-de-acoes-brasileiras-essenciais-para-economia.ghtml",
-    "154475bef1f81770",
-    "a62546eaf06a193e",
-    "2932d00aff7cd5a4",
-    "47cf9e953cce19f8",
     "92ca0bc75e3359de",
     "6851637d09c911f6",
     "https://investnews.com.br/negocios/stellantis-fabricas-europa-chinesas/",
@@ -799,10 +794,14 @@
     "https://www.spacemoney.com.br/politica/lula-defende-reavaliacao-beneficios-sociais/",
     "dd7bfdff11b03444",
     "https://bmcnews.com.br/economia/csn-nomeia-mario-augusto-da-silva-para-financas-e-relacoes-com-investidores/",
-    "8ee0277b93e9096d"
+    "8ee0277b93e9096d",
+    "6cd266c017e3dd75",
+    "2398fccab051ec2d",
+    "db0a3eab1394c03f",
+    "https://investnews.com.br/economia/soja-no-mato-grosso-escapa-do-pior-do-el-nino-com-chuvas-de-novembro/",
+    "a51b9de585adb11f"
   ],
   "titulos": [
-    "CrowdStrike reverte prejuízo, supera projeções e anuncia para compra de empresa",
     "Chip-dólar: comércio de chips supera petróleo pela 1ª vez",
     "Espiões usam vagas de trabalho falsas para conseguir informações dos EUA",
     "Crowdstrike aposta na segurança de rede em acordo de US$ 43 bi com Zscaler",
@@ -1601,10 +1600,10 @@
     "Aluguel consome quase 20% do orçamento das famílias de baixa renda, mostra IBGE",
     "Trabuco e Durigan irão juntos a almoço da Febraban sinalizar transição",
     "Lula diz que benefícios sociais precisam de ajustes",
-    "CSN nomeia Mario Augusto da Silva para Finanças e Relações com Investidores"
+    "CSN nomeia Mario Augusto da Silva para Finanças e Relações com Investidores",
+    "Soja no Mato Grosso escapa do pior do El Niño com chuvas de novembro"
   ],
   "leads": [
-    "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
     "A incerteza sobre a disponibilidade de radiofrequências e o calendário de investimentos das operadoras de telecomunicações afeta o planejamento industrial da Ericsson no Brasil. A fabricante de equipamentos de redes móveis considera que a ausência de previsibilidade regulatória pode resultar em planos de investimento menos ambiciosos, com reflexos ",
     "A inteligência artificial continua sendo uma das principais forças por trás do crescimento da economia americana, mas os sinais de que o ciclo pode estar perdendo fôlego levaram o grupo Mirabaud a rever gradualmente sua exposição ao setor.",
     "Líder do governo na Câmara critica defensores da política monetária atual; executivo é cotado para assumir o órgão",
@@ -1853,13 +1852,10 @@
     "Mais da metade das despesas das famílias brasileiras com renda de até dois salários mínimos vai para moradia e alimentação. Por outro lado, entre as famílias mais ricas, a divisão do orçamento é outra. Na faixa acima de 25 salários mínimos, moradia e alimentação somam pouco mais de um quarto das despesas, e o transporte ocupa o segundo lugar, atrás",
     "Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda a partir de 2027, e Dario Durigan, que está no cargo atualmente, irão juntos ao tradicional almoço da Febraban (Federação Brasileira de Bancos) na próxima terça-feira (1°).",
     "Segundo a Agência Brasil, o presidente Luiz Inácio Lula da Silva afirmou nesta sexta-feira (27) que os programas sociais federais precisam passar por uma reavaliação, pois há auxílios chegando a quem não cumpre os requisitos. Ele assegurou que os auxílios destinados à população de baixa renda e à área educacional não serão eliminados, mas admitiu a",
-    "A CSN nomeou Mario Augusto da Silva para os cargos de diretor executivo de Finanças e diretor executivo de Relações com Investidores. Ele entra em exercício em 1º de dezembro de 2026, substitui as gestões interinas das duas áreas e conclui a sucessão aberta pela renúncia de Antonio Marco Campos Rabello."
+    "A CSN nomeou Mario Augusto da Silva para os cargos de diretor executivo de Finanças e diretor executivo de Relações com Investidores. Ele entra em exercício em 1º de dezembro de 2026, substitui as gestões interinas das duas áreas e conclui a sucessão aberta pela renúncia de Antonio Marco Campos Rabello.",
+    "“A gente checava a previsão do tempo 16 vezes por dia”, disse o produtor Vidimar Siliprandi na quarta-feira (25). Ele estava no sindicato rural de Vera para o início de uma expedição pelas lavouras do médio-norte mato-grossense, região que responde por cerca de 8% da produção de soja do Brasil."
   ],
   "eventos_recentes": [
-    {
-      "chave": "smft3::GERAL_ATIVO",
-      "ts": 1795627377.379294
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795630080.664028
@@ -2566,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "22b513d823a1a2eb",
     "7a69490d20e13f69",
     "4a6354cfad15663b",
     "3a245185775bbbac",
@@ -2865,6 +2860,7 @@
     "e2cf144e9694cb13",
     "1a2ebdfafab0eb41",
     "64482ae89ee7b68a",
-    "dcd026dcbc3082c8"
+    "dcd026dcbc3082c8",
+    "f81269452f49c650"
   ]
 }
