@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://neofeed.com.br/inovacao/um-robo-humanoide-pelo-preco-de-um-carro-eletrico-essa-e-a-nova-aposta-da-chinesa-xpeng/",
-    "aefa3c1f3ccc2d37",
-    "https://agenciainfra.com/blog/bndes-quer-lancar-chamada-de-fundo-de-equity-de-infra-no-1o-semestre-de-2027/?utm_source=rss&utm_medium=rss&utm_campaign=bndes-quer-lancar-chamada-de-fundo-de-equity-de-infra-no-1o-semestre-de-2027",
     "40d15626b2b0abc8",
     "1c432a4f96eefa6a",
     "43394546bb58f834",
@@ -799,7 +796,10 @@
     "https://www.moneytimes.com.br/ouro-fecha-em-forte-alta-e-acumula-ganhos-de-mais-de-4-na-semana-davs/",
     "64f9379dc3919427",
     "https://www.infomoney.com.br/minhas-financas/black-friday-2026-tem-queda-de-34-nas-reclamacoes-veja-dicas-para-comprar/",
-    "edfe98438b03ea9f"
+    "edfe98438b03ea9f",
+    "a72cdea0063894ca",
+    "c71ebf47b0abc1f6",
+    "d4d6aa856b5d42f5"
   ],
   "titulos": [
     "Taxas de prefixados do Tesouro renovam máximas do ano na volta do feriado",
@@ -1856,22 +1856,6 @@
     "O volume de reclamações da Black Friday registrado até o início desta sexta-feira, entre às 12h de quarta-feira (25) e às 6h desta sexta-feira (27) ficou 34% abaixo do registrado no mesmo período do ano passado. Segundo o Reclame AQUI, foram contabilizados 5,7 mil reclamações, ante 8,6 mil no intervalo equivalente de 2025."
   ],
   "eventos_recentes": [
-    {
-      "chave": "fiis_geral::FIIS_GERAL",
-      "ts": 1795634298.059259
-    },
-    {
-      "chave": "irb::GERAL_ATIVO",
-      "ts": 1795634298.059259
-    },
-    {
-      "chave": "btg_pactual::GERAL_ATIVO",
-      "ts": 1795634298.059259
-    },
-    {
-      "chave": "macro_global::MACRO_EVENTO",
-      "ts": 1795634298.059259
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795635320.236499
