@@ -1,6 +1,5 @@
 {
   "links": [
-    "942e4ca5e7372306",
     "2d6dd639b1a1e921",
     "373ddbcd270ee214",
     "https://agenciainfra.com/blog/mme-descarta-risco-de-desabastecimento-de-etanol-anidro-na-entressafra/?utm_source=rss&utm_medium=rss&utm_campaign=mme-descarta-risco-de-desabastecimento-de-etanol-anidro-na-entressafra",
@@ -799,7 +798,8 @@
     "f2b88f71e6ec66a9",
     "2b7f89bc10b18a72",
     "2c03a3eda1583ddd",
-    "97c722bee24db8e1"
+    "97c722bee24db8e1",
+    "fe16694a9a4ac48d"
   ],
   "titulos": [
     "Fenacor detalha impactos da Reforma Tributária para corretores",
@@ -1856,14 +1856,6 @@
     "O mercado subitamente passou de \"ator bolsonarista\" para \"ator 'trabuquista'\", e de conspirador contra a democracia para apoiador do governo Lula. Ironias à parte, a grande melhora dos ativos brasileiros desde que despontou a possibilidade, seguida da confirmação, de Luiz Trabuco no Ministério da Fazenda indica o quão forte é a convicção dos invest"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795640693.134192
-    },
-    {
-      "chave": "petrobras::EVENTO_CORP",
-      "ts": 1795640693.134192
-    },
     {
       "chave": "gerdau::GERAL_ATIVO",
       "ts": 1795641423.401164
