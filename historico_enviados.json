@@ -1,11 +1,5 @@
 {
   "links": [
-    "7338d068a2105381",
-    "b187c34b388ac46b",
-    "c1cd0813da61777a",
-    "ab695f2dee791800",
-    "7dc37eaae52835e8",
-    "35d5d056ec53799a",
     "05242e8457aeeee7",
     "5d0c7a9dbbfefd12",
     "https://telesintese.com.br/incerteza-sobre-espectro-limita-ambicao-de-investimentos-diz-ericsson/",
@@ -799,10 +793,15 @@
     "7225f3db682581e4",
     "3b5b18b2126712f5",
     "https://www.spacemoney.com.br/agronegocio/evento-adidos-agricolas-brasilia/",
-    "618d8e4672396650"
+    "618d8e4672396650",
+    "847c718b85fb482f",
+    "778f7485209333f7",
+    "72890ed371dd19de",
+    "5c306da6fcc47938",
+    "https://www.bloomberglinea.com.br/brasil/trabuco-e-totalmente-diferente-de-joaquim-levy-diz-andrea-damico-da-bysidebrazil/",
+    "6cc960608809ad9e"
   ],
   "titulos": [
-    "Leilões de baterias têm inscrições prorrogadas até esta segunda",
     "Como funciona o LTBX11, ETF de renda fixa da XP?",
     "IPC-S mantém 0,38% na terceira leitura de novembro",
     "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França",
@@ -1601,10 +1600,10 @@
     "Contas do governo têm superávit de R$ 52,3 bilhões em outubro",
     "A Black Friday do papel higiênico: o que o Mercado Livre vê no consumo",
     "Trabuco na Fazenda pode blindar Banco Central; veja os 3 pontos que o mercado vai monitorar, segundo UBS GWM",
-    "Brasília sedia evento de promoção agroexportadora"
+    "Brasília sedia evento de promoção agroexportadora",
+    "Trabuco é ‘totalmente diferente’ de Joaquim Levy, diz Andréa Damico, da Bysidebrazil"
   ],
   "leads": [
-    "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
     "Em tese, isso permitiria uma largura de banda de memória muito maior para transferir enormes volumes de dados aos processadores e atender à carga de trabalho cada vez maior dos modelos de IA.",
     "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. ",
     "O consumo consolidado de energia elétrica do grupo Energisa alcançou 4.046 GWh em outubro, volume 5,1% superior ao registrado no mesmo período de 2025. Por outro lado, o volume de gás natural destinado às usinas termelétricas recuou 72,7% no mesmo período.",
@@ -1853,7 +1852,8 @@
     "Pedro Peduzzi – Repórter da Agência Brasil",
     "“Está sendo a Black Friday do papel higiênico”, afirma Fernando Yunes, vice-presidente executivo de commerce do Mercado Livre na América Latina e líder da companhia no Brasil.",
     "A escolha de Luiz Carlos Trabuco para o Ministério da Fazenda pode trazer benefícios não apenas para a condução da política fiscal brasileira, mas também para a atuação do Banco Central (BC), avalia o UBS GWM em relatório divulgado nesta sexta-feira (27).",
-    "O Ministério da Agricultura e Pecuária (Mapa) e a ApexBrasil promovem, na primeira semana de dezembro, em Brasília, o Encontro Nacional do Agro e dos Adidos Agrícolas 2026. A abertura está prevista para 1º de dezembro, com encerramento em 4 de dezembro, e deve reunir autoridades do governo federal, adidos agrícolas e representantes da ApexBrasil lo"
+    "O Ministério da Agricultura e Pecuária (Mapa) e a ApexBrasil promovem, na primeira semana de dezembro, em Brasília, o Encontro Nacional do Agro e dos Adidos Agrícolas 2026. A abertura está prevista para 1º de dezembro, com encerramento em 4 de dezembro, e deve reunir autoridades do governo federal, adidos agrícolas e representantes da ApexBrasil lo",
+    "Bloomberg Línea — O banqueiro Luiz Carlos Trabuco, escolhido pelo presidente Luiz Inácio Lula da Silva como ministro da Fazenda a partir de 2027, reúne experiências e características que o tornam muito diferente de Joaquim Levy, que ocupou o cargo durante o segundo governo Dilma Rousseff, em 2015, na avaliação da economista Andréa Bastos Damico, fu"
   ],
   "eventos_recentes": [
     {
@@ -2578,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "41e662cc78294bd7",
     "d79797c1b2123820",
     "1b7292b3dc1a2ce6",
     "5b81ea77a6aecfbd",
@@ -2877,6 +2876,7 @@
     "9b692dd4f0384d40",
     "fac010e7654c85d4",
     "fdbbf65a31b0d1ac",
-    "faa74654761eaf1d"
+    "faa74654761eaf1d",
+    "434ae743c389cdc9"
   ]
 }
