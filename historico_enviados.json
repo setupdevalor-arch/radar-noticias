@@ -1,7 +1,5 @@
 {
   "links": [
-    "0f2170d89823bb6d",
-    "38272a2520f2a1e0",
     "16139512e82e19a9",
     "3d5d0294e7657d07",
     "9e97dec9121c06a7",
@@ -799,10 +797,11 @@
     "9f5c58124e95612d",
     "19a9951c8a2aba6b",
     "https://www.cnnbrasil.com.br/politica/de-itamar-a-cleitinho-lula-abre-nova-fase-na-relacao-de-mg-e-suas-dividas/",
-    "0c352a16974d7439"
+    "0c352a16974d7439",
+    "https://www.spacemoney.com.br/politica/oab-pb-falhas-brb-depositos-judiciais/",
+    "b81ab6005f41c06a"
   ],
   "titulos": [
-    "FIIs ainda valem a pena? Conheça as vantagens e os riscos antes de investir",
     "Indústria de etanol acirra disputa pelo milho no mercado interno",
     "Investidores globais querem aumentar aplicações na China",
     "Bahrein intercepta ataques do Irã após bombardeio atingir unidade industrial",
@@ -1601,10 +1600,10 @@
     "Magalu lista iPhone 16e com 128 GB a R$ 2.899 via Pix",
     "Celulares lideram desconto no Pix; jovens voltam ao carnê",
     "Italianos morrem no Kuwait; Irã nega autoria de ataque",
-    "De Itamar a Cleitinho: Lula abre nova fase na relação de MG e suas dívidas"
+    "De Itamar a Cleitinho: Lula abre nova fase na relação de MG e suas dívidas",
+    "OAB da Paraíba aponta falhas do BRB em depósitos judiciais"
   ],
   "leads": [
-    "O fracasso da COP31, na Turquia, pode ser bom para o planeta. Quem defende essa tese é Bjørn Lomborg, um cientista político dinamarquês e uma das vozes mais controversas do debate internacional sobre mudanças climáticas.",
     "O tráfego de dados associado à IA, atualmente inferior a 1% do total das redes de telecomunicações, poderá alcançar 35% em 2030. A projeção foi apresentada nesta quarta-feira, dia 25, por Wilson Cardoso, diretor da Área de Telecomunicações da Associação Brasileira da Indústria Elétrica e Eletrônica (Abinee), durante palestra sobre a evolução da age",
     "A Petrobras vai desembolsar R$ 2,8 bilhões por 42% da Neomille, que produz etanol de milho em usinas no Centro-Oeste, conforme reportagem de Luciano Costa no Brazil Journal. O movimento representa a volta da estatal ao segmento de etanol, do qual se afastou depois de perder dinheiro com a aposta na cana-de-açúcar.",
     "Mais recentemente, porém, o ambiente se tornou menos favorável. As rachaduras no tema de inteligência artificial reduziram o apetite por risco e alimentaram a volatilidade, corroendo os ganhos de uma estratégia que prospera em mercados tranquilos. Em outra frente, o choque eleitoral no Brasil serviu como um lembrete particularmente contundente dos ",
@@ -1853,7 +1852,8 @@
     "A versão de 128 GB do iPhone 16e aparece no Magazine Luiza por R$ 2.899, desde que o pagamento seja feito via Pix e o cupom CUPOMALO200 seja aplicado no aplicativo da rede varejista.",
     "Na semana da Black Friday de 2026, os celulares ocupam o topo do ranking de descontos para pagamento no Pix no levantamento do g1, que monitora 74 produtos. Os 16 aparelhos acompanhados ficaram, em média, 7,36% mais baratos no Pix do que no cartão de crédito, a maior diferença entre as categorias analisadas. No recorte individual, o Samsung Galaxy ",
     "Duas pessoas de nacionalidade italiana morreram no Kuwait em consequência de ataques atribuídos ao Irã, segundo a CNBC. O Exército kuwaitiano informou em publicação no X que as vítimas foram atingidas por destroços de mísseis e que outras duas pessoas ficaram feridas.",
-    "O governador eleito de Minas Gerais, Cleitinho Azevedo (PP-MG), reuniu-se nesta quinta-feira (26) com Lula em Brasília para tratar da dívida do estado com a União, que chega a quase R$ 190 bilhões."
+    "O governador eleito de Minas Gerais, Cleitinho Azevedo (PP-MG), reuniu-se nesta quinta-feira (26) com Lula em Brasília para tratar da dívida do estado com a União, que chega a quase R$ 190 bilhões.",
+    "Segundo o g1, advogados têm encontrado dificuldade para acessar depósitos judiciais administrados pelo Banco de Brasília (BRB), e a OAB da Paraíba avalia recorrer a órgãos de controle. O receio é que a instituição não tenha liquidez para cumprir compromissos em meio ao prejuízo associado ao Banco Master, de Daniel Vorcaro, alvo de liquidação pelo B"
   ],
   "eventos_recentes": [
     {
@@ -2586,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "84d28a712070aafe",
     "a13d19d4293b54c9",
     "58bb0c0f30ed0390",
     "1a403cfed2f29a75",
@@ -2885,6 +2884,7 @@
     "220e94393d658cc6",
     "f2a934ec295ca033",
     "af27ca8c693edf76",
-    "fd6829a7620d61d2"
+    "fd6829a7620d61d2",
+    "ec3588f16ef95607"
   ]
 }
