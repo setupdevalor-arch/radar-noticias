@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/yduqs-yduq3-aprova-incorporacao-da-afya-afya3-e-aumento-de-capital-de-r-25-bi/",
-    "d3e7461d80129e46",
-    "https://www.spacemoney.com.br/agronegocio/tirso-meirelles-tributos-custos-campo/",
-    "9ca2d3b9065c5db6",
-    "dfeb81da578e6874",
     "https://www.moneytimes.com.br/feriado-nos-eua-reduz-liquidez-do-mercado-em-dia-de-inflacao-ibovespa-em-dolar-sobe-nesta-quinta-feira-26-rens/",
     "92c1b423d3b8d00e",
     "https://investnews.com.br/investimentos/criptomoedas-em-queda-comprar-na-baixa-ou-pular-do-barco-antes-que-afunde/",
@@ -799,10 +794,14 @@
     "https://www.spacemoney.com.br/politica/relatora-agencias-reguladoras/",
     "b506433e6839ae58",
     "https://www.poder360.com.br/poder-economia/inflacao-de-toquio-vai-a-29-maior-alta-em-16-meses/",
-    "e7844c0b30855b5c"
+    "e7844c0b30855b5c",
+    "292579ff4a9cc773",
+    "4ae216397b8e1050",
+    "5fee520146a01c3e",
+    "https://www.spacemoney.com.br/tecnologia/iphone-16e-128-gb-oferta-magalu/",
+    "00124229a609f7a9"
   ],
   "titulos": [
-    "Fim de benefício fiscal nos Estados faz empresas repensarem localização de fábricas e galpões",
     "Novo teto do MEI: economia pode chegar a R$ 9,5 mil",
     "GTA VI expõe desafio: tecnologia avançada leva a videogames mais caros",
     "Por que a América Latina precisa de conexões globais para inovar?",
@@ -1601,10 +1600,10 @@
     "Lucro industrial da China sobe 20,1% em outubro",
     "Bradesco, de Trabuco, tem 3º maior juro dentre os 5 bancões",
     "Relatora restringe mudança a agências reguladoras",
-    "Inflação de Tóquio vai a 2,9%, maior alta em 16 meses"
+    "Inflação de Tóquio vai a 2,9%, maior alta em 16 meses",
+    "Magalu lista iPhone 16e com 128 GB a R$ 2.899 via Pix"
   ],
   "leads": [
-    "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas.",
     "A Comissão de Infraestrutura do Senado Federal aprovou nesta quarta-feira (25) a convocação do ministro dos Transportes, George Santoro, para prestar esclarecimentos sobre a concessão do trecho rodoviário entre Vilhena (RO) e Cuiabá (MT).",
     "A Petrobras está retornando ao mercado de etanol com uma aquisição bilionária – anos depois de ter perdido dinheiro com seus investimentos no setor.",
     "A Gerdau anunciou a assinatura de dois Termos de Compromisso, um Ambiental (TCA) e outro Social (TCS), para a região da Praia de São Tomé de Paripe, em Salvador (BA).",
@@ -1853,13 +1852,10 @@
     "O lucro industrial da China cresceu 20,1% em outubro na comparação com o mesmo mês do ano anterior, o ritmo mais forte desde maio, segundo a CNBC. Os dados foram divulgados pelo Escritório Nacional de Estatísticas do país. No acumulado dos dez primeiros meses do ano, o avanço foi de 16%, acima dos 15,5% registrados até setembro.",
     "Entre 31 instituições financeiras, banco do futuro ministro da Fazenda está em 8º lugar no ranking das maiores taxas de juros",
     "A senadora e relatora Eliziane Gama apresentou nesta quarta-feira (25) parecer que exclui a Lei das Estatais de um projeto aprovado pelos deputados em dezembro de 2022, conforme noticiou o g1. Com isso, a proposta passa a tratar apenas das agências reguladoras.",
-    "Indicador básico acumula 3 meses acima da meta de 2% do Banco do Japão"
+    "Indicador básico acumula 3 meses acima da meta de 2% do Banco do Japão",
+    "A versão de 128 GB do iPhone 16e aparece no Magazine Luiza por R$ 2.899, desde que o pagamento seja feito via Pix e o cupom CUPOMALO200 seja aplicado no aplicativo da rede varejista."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795578374.463252
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795581259.879036
@@ -2579,10 +2575,13 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795751044.228379
+    },
+    {
+      "chave": "magazine_luiza::GERAL_ATIVO",
+      "ts": 1795751468.707825
     }
   ],
   "hashes_imagens": [
-    "c188033763d68e2b",
     "6482313a437a2e29",
     "e486eb5bb6e8de34",
     "5abeeeee3d4596b6",
@@ -2881,6 +2880,7 @@
     "977c7ec955c6d938",
     "dd6d3811e3f5caa0",
     "c83747424e54e5b7",
-    "441b027c33107494"
+    "441b027c33107494",
+    "220e94393d658cc6"
   ]
 }
