@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mundo/trump-diz-que-gostaria-de-ver-putin-recuar-em-agressao-militar-na-europa/",
-    "93bf1c0115d75257",
-    "https://www.spacemoney.com.br/noticias/argentina-safra-recorde-graos-2025-26/",
-    "2b49c77fdd6725fc",
-    "3d1ed25eafc81451",
-    "cad2704025e44e9e",
-    "b8a87ca27790af92",
     "b7c0802b78a3b291",
     "1dbf77e7c5266964",
     "https://www.moneytimes.com.br/letras-financeiras-superam-retorno-do-tesouro-selic-e-lideram-ranking-de-renda-fixa-da-b3-mlim/",
@@ -799,11 +792,16 @@
     "94bd0f5903a94d2b",
     "80aed7eff6e77144",
     "https://www.suno.com.br/noticias/bbas3-banco-do-brasil-agro-271126/",
-    "dbfceef4771e0cc6"
+    "dbfceef4771e0cc6",
+    "e3188d0ff7366b2b",
+    "b985bf8946349823",
+    "646af081fe48f1e8",
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/cemig-supera-4-mil-clientes-no-varejo-e-mira-abertura-do-mercado/",
+    "77c4d7607ca2bca4",
+    "https://megawhat.uol.com.br/destaques-do-diario/petrobras-negocia-aquisicao-de-100-de-bloco-na-bacia-de-campos/",
+    "27b89e16e296cca3"
   ],
   "titulos": [
-    "El Niño leva Chile a alerta máximo de incêndios no verão",
-    "BHP anuncia plano de US$ 17,4 bi para dobrar produção de cobre na Austrália do Sul",
     "OPINIÃO. Ainda dá para apostar tudo no CDI?",
     "Empresas europeias alertam UE contra cortes que afetem competitividade",
     "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
@@ -1601,11 +1599,11 @@
     "EUA pressionaram Venezuela e Iraque a considerarem saída da Opep, dizem fontes",
     "S&P 500 entra em correção; recessão não é regra",
     "Black Friday da Bolsa: ações brasileiras voltaram ao radar dos investidores",
-    "Brasil do Brasil (BBAS3) presta novos esclarecimentos à CVM sobre agro"
+    "Brasil do Brasil (BBAS3) presta novos esclarecimentos à CVM sobre agro",
+    "Cemig supera 4 mil clientes no varejo e mira abertura do mercado",
+    "Petrobras negocia aquisição de 100% de bloco na Bacia de Campos"
   ],
   "leads": [
-    "O mercado de semicondutores movimenta mais de US$ 15 trilhões em valor de mercado combinado, mas a distribuição desse montante revela uma indústria muito mais hierarquizada do que a variedade de produtos sugere. Segundo dados referentes a novembro de 2026 reunidos pelo Visual Capitalist a partir da plataforma CompaniesMarketCap, poucas companhias c",
-    "O presidente da França, Emmanuel Macron, chamou a carne brasileira de \"dopada\" e comemorou a suspensão das importações de produtos de origem animal do Brasil pela União Europeia, que está em vigor desde 3 de setembro.",
     "O presidente, em geral, evita formalizar convites a menos que tenha indícios de que serão aceitos, explicou uma das fontes. A informação foi divulgada inicialmente pelo jornal Folha de S.Paulo.",
     "O Itaú BBA avalia que a Usiminas (USIM5) deve enfrentar um quarto trimestre mais desafiador, com a alta dos custos de produção pressionando os resultados antes que os reajustes de preços sejam integralmente repassados. Apesar do cenário adverso, a companhia não pretende rever seu plano de investimentos, segundo comentários da administração durante ",
     "O Banco Central (BC) decidiu frear o crédito de quem já está endividado, mas entregou aos bancos o controle do pedal. Em entrevista coletiva nesta quinta-feira (26), o diretor de Regulação do BC, Gilneu Vivan, explicou que o cliente que financiou a fatura do cartão três vezes ou mais nos últimos seis meses não poderá ter o limite ampliado e terá de",
@@ -1853,7 +1851,9 @@
     "Por Ahmad Ghaddar e Ahmed Rasheed e Marianna Parraga",
     "Segundo a CNBC, o S&P 500 entrou em correção em 20 de novembro, a primeira desde abril de 2025, após recuar com força dos recordes registrados em outubro. Uma correção é definida como uma queda de 10% ou mais em relação ao topo recente.",
     "Embora a perspectiva de juros elevados continue sendo desafiadora, apenas a sinalização de uma política fiscal diligente já deve trazer um respiro significativo para o Ibovespa no curtíssimo prazo.",
-    "O Banco do Brasil (BBAS3) divulgou, em 26 de novembro de 2026, comunicado ao mercado em atenção ao Ofício nº 328/2026/CVM/SEP/GEA-1, da Comissão de Valores Mobiliários (CVM)."
+    "O Banco do Brasil (BBAS3) divulgou, em 26 de novembro de 2026, comunicado ao mercado em atenção ao Ofício nº 328/2026/CVM/SEP/GEA-1, da Comissão de Valores Mobiliários (CVM).",
+    "A Cemig alcançou 4.016 unidades consumidoras no mercado livre varejista em setembro de 2026, tornando-se a primeira comercializadora do país a superar a marca de 4 mil pontos de consumo nessa modalidade, segundo dados da Câmara de Comercialização de Energia Elétrica (CCEE). A companhia agora foca na expansão dos negócios com a abertura do mercado l",
+    "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%)."
   ],
   "eventos_recentes": [
     {
@@ -2595,11 +2595,17 @@
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795788548.774363
+    },
+    {
+      "chave": "cemig::GERAL_ATIVO",
+      "ts": 1795788902.816266
+    },
+    {
+      "chave": "petrobras::EVENTO_CORP",
+      "ts": 1795788902.816266
     }
   ],
   "hashes_imagens": [
-    "b8391ca34557796b",
-    "65ef96cdbc516da1",
     "b49c46794e26c734",
     "66a6bce8fe8eccc9",
     "5990be9f967c2203",
@@ -2897,6 +2903,8 @@
     "cd99f59ee321c9b5",
     "a3a804818270ff69",
     "7b8672579cf3d5a5",
-    "b1f6f14938e67593"
+    "b1f6f14938e67593",
+    "a3919263b1e4b663",
+    "f9ecc643387dc34f"
   ]
 }
