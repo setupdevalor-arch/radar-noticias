@@ -1,11 +1,5 @@
 {
   "links": [
-    "b634abc1cfbbd289",
-    "https://braziljournal.com/a-estrategia-anticlimatica-de-um-fundo-de-pensao",
-    "ca4d02fa2f348f7b",
-    "https://www.suno.com.br/noticias/ifix-alta-cacr11-fundos-imobiliarios-quinta/",
-    "c09c1d986b3c8073",
-    "https://agenciainfra.com/blog/camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169/?utm_source=rss&utm_medium=rss&utm_campaign=camara-recebe-proposta-de-regulamentacao-das-consultas-da-oit-169",
     "7c36014be600c826",
     "279fcc1e8cc5a1d0",
     "2728bd9b5fa7b05f",
@@ -799,11 +793,15 @@
     "5b24095167eeee51",
     "6e04126d97498880",
     "https://www.spacemoney.com.br/economia/exterior/mercosul-discute-aproximacao-caribe-america-central/",
-    "8abd999fb9696829"
+    "8abd999fb9696829",
+    "4735d400c0b2d068",
+    "b21fc8c9875d9982",
+    "https://investnews.com.br/economia/com-camilo-santana-e-alckmin-em-novos-ministerios-lula-reforca-visao-de-governo-pragmatico/",
+    "82f4621e1f3c1b02",
+    "https://www.estadao.com.br/economia/agronegocios/crise-de-inadimplencia-no-agro-deve-contribuir-para-enfraquecimento-do-pib-em-2027/",
+    "8ef860d6647af037"
   ],
   "titulos": [
-    "Itaúsa aponta avanço de 16% no lucro recorrente do 9M26",
-    "UE abre investigação antitruste contra Coca-Cola Europacific Partners",
     "Bill Ackman diz que Fed pode gerar recessão com alta de juros",
     "Plantio de soja no Brasil avança para 86% com ajuda das chuvas, diz AgRural",
     "Dólar a R$ 6 acende alerta sobre inflação: veja como a alta pode elevar o IPCA",
@@ -1601,11 +1599,11 @@
     "Telebras muda regras de contratação para desenvolver soluções de IA",
     "Empresas recorrem à Aneel para evitar exclusão de projetos em leilões de baterias",
     "Reta final dos leilões de baterias, fósseis no TCU e o primeiro de muitos Super El Niños",
-    "Mercosul discute aproximação com Caribe e América Central em cúpula no Uruguai"
+    "Mercosul discute aproximação com Caribe e América Central em cúpula no Uruguai",
+    "Com Camilo Santana e Alckmin em novos ministérios, Lula reforça visão de governo pragmático",
+    "Crise de inadimplência no agro deve contribuir para enfraquecimento do PIB em 2027"
   ],
   "leads": [
-    "Segundo o TecMundo, a OpenAI liberou na terça-feira, 24, para um grupo pequeno de assinantes Pro uma experiência que reúne o ChatGPT e o agente Work. A companhia também prepara para dezembro um limite único de uso para ChatGPT e Codex nos planos Plus, Pro e Business.",
-    "Entidades do setor elétrico e de telecomunicações pediram ao presidente Lula (PT) que sancione integralmente o projeto de lei 3.220/2019, que organiza o compartilhamento de postes.",
     "Texto estima superavit primário de R$ 18,6 bilhões e aponta necessidade de até R$ 24,9 bilhões a mais para o Bolsa Família",
     "O estado de São Paulo encerra o ano com R$ 394 bilhões em investimentos contratados em seu programa de parcerias e concessões e mira meio trilhão de reais para o futuro.",
     "O contrato de dólar futuro (WDOF27) recua mais de 2% na tarde desta quinta-feira (26) após notícia do jornal O Estado de S. Paulo de que o presidente do conselho de administração do Bradesco, Luiz Carlos Trabuco Cappi, chegou a Brasília para se encontrar com Lula no Palácio da Alvorada. A queda se intensificou por volta das 17h30 (horário de Brasíl",
@@ -1853,7 +1851,9 @@
     "A Telebras alterou seu Regulamento de Licitações e Contratos (RELIC) para incorporar regras destinadas à contratação de soluções inovadoras. A estatal pretende utilizar o novo mecanismo para incentivar o desenvolvimento de aplicações de inteligência artificial (IA) voltadas, inicialmente, às suas próprias necessidades.",
     "Pelo menos três empresas acionaram a Agência Nacional de Energia Elétrica (Aneel) após enfrentarem dificuldades para concluir o aporte das garantias de proposta dos leilões de baterias de 2026. Em documentos encaminhados à autarquia, aos quais a MegaWhat teve acesso, as companhias buscam assegurar a participação de seus empreendimentos nos certames",
     "NESTA EDIÇÃO. Tudo certo, nada resolvido: leilões de baterias previstos para a próxima semana com disputas sobre quem paga pelo armazenamento.",
-    "Segundo a Agência Brasil, o Brasil usará a 69ª Cúpula do Mercosul, em 3 e 4 de dezembro, em Montevidéu, para ampliar a aproximação do bloco com Caribe e América Central. A presidência uruguaia será sucedida pela argentina, e o encontro deve ter os cinco chefes de Estado."
+    "Segundo a Agência Brasil, o Brasil usará a 69ª Cúpula do Mercosul, em 3 e 4 de dezembro, em Montevidéu, para ampliar a aproximação do bloco com Caribe e América Central. A presidência uruguaia será sucedida pela argentina, e o encontro deve ter os cinco chefes de Estado.",
+    "Entre esses nomes está o senador Camilo Santana, ex-ministro da Educação, que agora assumirá a Casa Civil, disseram duas pessoas. Mais recentemente, Santana ajudou a arquitetar a volta por cima de Lula no segundo turno da eleição presidencial de outubro.",
+    "Agrishow: crédito insuficiente e juros altos pressionam o agro"
   ],
   "eventos_recentes": [
     {
@@ -2551,11 +2551,13 @@
     {
       "chave": "telebras::GERAL_ATIVO",
       "ts": 1795814079.319834
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795814802.441397
     }
   ],
   "hashes_imagens": [
-    "b6445cc8fa9c3add",
-    "975a9cdcb2314926",
     "54200c343e4f4104",
     "add796e1f8584362",
     "fcd463639f982cb6",
@@ -2853,6 +2855,8 @@
     "db067d1b9557b71e",
     "8d61397753d040f0",
     "bb29d8b4e23d41e9",
-    "6ea3928429384a2f"
+    "6ea3928429384a2f",
+    "de64f615d3f3f683",
+    "28a5909d5e794423"
   ]
 }
