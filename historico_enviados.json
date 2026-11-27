@@ -1,13 +1,5 @@
 {
   "links": [
-    "c318c3d211478863",
-    "b6c564428df3c528",
-    "556244951460c53a",
-    "4c0c9c938306623a",
-    "c43719274def3913",
-    "a37eaaf7fedf4c25",
-    "https://www.infomoney.com.br/mercados/por-que-o-mercado-se-anima-tanto-com-a-possibilidade-de-trabuco-na-fazenda/",
-    "a92fc95ef9293810",
     "https://www.spacemoney.com.br/tecnologia/valor-de-mercado-semicondutores/",
     "dda0dad02c3da655",
     "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/macron-diz-que-carne-brasileira-e-dopada-e-comemora-veto-da-ue-ao-produto.ghtml",
@@ -799,11 +791,17 @@
     "f421dc17dfd1fe26",
     "86d2a4982397142d",
     "https://www.moneytimes.com.br/raizen-avalia-venda-de-sua-divisao-de-distribuicao-de-combustiveis-diz-ometto-mlem/",
-    "f4be99cc95609f44"
+    "f4be99cc95609f44",
+    "8b512eb94ce6a15a",
+    "fcca8827c9130457",
+    "ff479ef1d2793c9a",
+    "05f77a16a11cfd6c",
+    "https://www.cnnbrasil.com.br/politica/pgr-defende-que-uniao-nao-e-obrigada-a-avalizar-emprestimo-para-salvar-brb/",
+    "050ca675d7d4e39a",
+    "https://www.moneytimes.com.br/entidades-defendem-renovacao-do-e32-e-continuidade-dos-testes-com-etanol-pads/",
+    "1b1ef35215030805"
   ],
   "titulos": [
-    "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual",
-    "JBS assume 80% de negócio de carnes em Omã com US$ 150 mi",
     "Lula não definiu ministro da Fazenda; anúncio fica para dezembro",
     "São os juros da dívida, não o BPC, mercadistas",
     "Bolsas da Ásia fecham mistas após novas medidas para conter turbulência ligada à IA",
@@ -1601,11 +1599,11 @@
     "MAXR11 fecha locação de dez anos em João Pessoa",
     "Desemprego bate mínima histórica e renda do trabalhador avança no Brasil",
     "Bolsa e bancos se unem para criar  ‘stablecoin’ em reais",
-    "Raízen (RAIZ4) avalia venda de sua divisão de distribuição de combustíveis, diz Ometto"
+    "Raízen (RAIZ4) avalia venda de sua divisão de distribuição de combustíveis, diz Ometto",
+    "PGR defende que União não é obrigada a avalizar empréstimo para salvar BRB",
+    "Entidades defendem renovação do E32 e continuidade dos testes com etanol"
   ],
   "leads": [
-    "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre.",
-    "Embora De Cos ainda precise passar por uma sabatina no Parlamento Europeu, o parecer da casa não é vinculativo, e o acordo político já em andamento significa que sua nomeação como presidente está praticamente garantida.",
     "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan",
     "O ministro da Defesa, Israel Katz, ameaçou deslocar um milhão de palestinos caso o Hamas não se desarme voluntariamente. A ameaça foi feita em postagem no X nesta quinta-feira, 26. Katz afirmou que, se o grupo não entregar as armas e Gaza não for desmilitarizada conforme o plano do presidente dos Estados Unidos, Donald Trump, as Forças de Defesa de",
     "O Banco Central informou nesta quinta-feira (26) que o investimento direto no país, ou seja, o valor acumulado dos investimentos de estrangeiros em empresas e negócios no Brasil, atingiu a marca de R$ 1,41 trilhão no fim de 2025. O montante equivale a 49,3% do Produto Interno Bruto (PIB), recorde da série histórica.",
@@ -1853,13 +1851,11 @@
     "O MAXR11 acertou, em 25/11/2026, o aluguel de um imóvel localizado em João Pessoa por dez anos, segundo a Suno Notícias. A administradora é a BTG Pactual Serviços Financeiros.",
     "A taxa de desemprego no Brasil teve um leve recuo em relação à divulgação anterior e ficou em 5,1% no trimestre até outubro de 2026. Trata-se do menor patamar para o intervalo na série histórica iniciada em 2012.",
     "Bolsa e bancos se unem para criar ‘stablecoin’ em reais",
-    "A Raízen (RAIZ4) avalia a venda de sua divisão de distribuição de combustíveis como parte de um plano mais amplo de desinvestimento, afirmou o acionista fundador Rubens Ometto à Reuters na manhã de sexta-feira (27)."
+    "A Raízen (RAIZ4) avalia a venda de sua divisão de distribuição de combustíveis como parte de um plano mais amplo de desinvestimento, afirmou o acionista fundador Rubens Ometto à Reuters na manhã de sexta-feira (27).",
+    "A PGR (Procuradoria-Geral da República) defendeu nessa quinta-feira (26) que a União não pode ser obrigada a avalizar um empréstimo ao governo do Distrito Federal para socorrer o BRB (Banco de Brasília).",
+    "A Bioenergia Brasil, a União Nacional do Etanol de Milho (Unem) e a União da Indústria de Cana-de-Açúcar e Bioenergia (Unica) defenderam a renovação da mistura de 32% de etanol na gasolina (E32) e a continuidade dos estudos e do acompanhamento da medida pelo governo."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_global::MACRO_EVENTO",
-      "ts": 1795613908.318869
-    },
     {
       "chave": "mcre11::GERAL_ATIVO",
       "ts": 1795615677.474202
@@ -2586,8 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "ee1f6975071d1120",
-    "c30fa2e1c6725df7",
     "99826c6a8d97bf7c",
     "48603b934267e5dc",
     "0685a78008456458",
@@ -2885,6 +2879,8 @@
     "0a42f1b29a0485d8",
     "9b8925ec55dd288c",
     "25dcdc4abcf0984a",
-    "db959e8a68f8e79b"
+    "db959e8a68f8e79b",
+    "0e4a4db9dc0dca64",
+    "6e140a05986fdec3"
   ]
 }
