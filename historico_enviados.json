@@ -1,7 +1,5 @@
 {
   "links": [
-    "0b31927b8b2d0888",
-    "895e7a51879bf6e1",
     "a513d1ee0678ac0b",
     "ebe12e1869575edf",
     "https://www.cnnbrasil.com.br/economia/money/negocios/fictor-tentou-comprar-banco-master-relembre-negociacao-que-foi-suspensa/",
@@ -799,10 +797,11 @@
     "d9385d040958ff02",
     "3175a29a0c8e52d8",
     "https://g1.globo.com/politica/noticia/2026/11/27/apos-eua-proporem-taxar-avioes-brasileiros-mauro-vieira-oferece-apoio-a-embraer-para-buscar-novos-mercados.ghtml",
-    "8df3f567b092ed43"
+    "8df3f567b092ed43",
+    "https://www.poder360.com.br/poder-economia/chamado-de-golpista-por-petistas-temer-elogia-trabuco-na-fazenda/",
+    "f26828780517a413"
   ],
   "titulos": [
-    "Aposta em IA azeda e ações de tecnologia da China perdem US$ 1,7 trilhão",
     "Minuta final da COP31 omite menções a combustíveis fósseis",
     "Brasil supera meta e recebe 7,5 milhões de turistas estrangeiros",
     "Black Friday pode ter melhor faturamento desde 2014, projeta CNC",
@@ -1601,10 +1600,10 @@
     "Apple abre Black Friday com vale de até US$ 300",
     "Plano de empréstimos da Ripple fica a um voto no XRP Ledger",
     "Binance libera saques após hack de US$ 6,3 bilhões",
-    "Após EUA proporem taxar aviões brasileiros, Mauro Vieira oferece apoio à Embraer para buscar novos mercados"
+    "Após EUA proporem taxar aviões brasileiros, Mauro Vieira oferece apoio à Embraer para buscar novos mercados",
+    "Chamado de golpista por petistas, Temer elogia Trabuco na Fazenda"
   ],
   "leads": [
-    "O Banco Daycoval, especializado em crédito corporativo, vai expandir para os Estados Unidos por meio da plataforma Temenos SaaS, para impulsionar o movimento.",
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA.",
     "As bolsas asiáticas fecharam majoritariamente em alta nesta quinta-feira (26), enquanto investidores deixaram de lado as novas propostas tarifárias dos EUA e Wall Street recuperou a maior parte das perdas da sessão anterior, às vésperas do feriado de Ação de Graças.",
     "O líder norte-coreano Kim Jong Un afirmou que seu país deve se concentrar na implantação de armas ‌nucleares táticas em diversos domínios e que sua capacidade de produção de material nuclear está sendo sistematicamente ampliada, ‌informou a agência de notícias estatal KCNA na quinta-feira (horário local, ainda quarta-feira em Brasília).",
@@ -1853,17 +1852,10 @@
     "A Apple iniciou sua campanha oficial de Black Friday 2026, que chega aos Estados Unidos nesta sexta-feira (27) e se estende até 30 de novembro, com vale-presente de até US$ 300 em produtos elegíveis. A promoção de quatro dias, que vai da Black Friday à Cyber Monday, começou a ser liberada em 26 de novembro na Austrália, Nova Zelândia e Tailândia e ",
     "O plano da Ripple de levar empréstimos no estilo bancário ao XRP Ledger está a um voto de validador da próxima etapa. A estrutura tem duas partes, cada uma com votação própria.",
     "A Binance informou que retirou integralmente a suspensão dos saques de clientes, medida adotada depois de um hack de US$ 6,3 bilhões no fim de outubro. O comunicado da exchange é datado de 26 de novembro.",
-    "O ministro das Relações Exteriores, Mauro Vieira, se reuniu com o presidente da Embraer, Francisco Gomes Neto, nesta quinta-feira (26) e afirmou a ele que a diplomacia brasileira poderá buscar novos mercados para as exportações do setor."
+    "O ministro das Relações Exteriores, Mauro Vieira, se reuniu com o presidente da Embraer, Francisco Gomes Neto, nesta quinta-feira (26) e afirmou a ele que a diplomacia brasileira poderá buscar novos mercados para as exportações do setor.",
+    "Ex-presidente afirma que o nome escolhido por Lula “é a opção certa para o Brasil”"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795587576.223143
-    },
-    {
-      "chave": "macro_commodities::MACRO_EVENTO",
-      "ts": 1795589141.52098
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795593371.773868
@@ -2590,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "f611ec11ff956d4d",
     "53f8ec4c47d22f3d",
     "40f4867181ce77e5",
     "0688d0206d2bca4c",
@@ -2889,6 +2880,7 @@
     "31b34f6aec087ac3",
     "01aaf22e8f806605",
     "f55353beb25d0678",
-    "5ef629e654c0b53c"
+    "5ef629e654c0b53c",
+    "71bbc01a6a72d421"
   ]
 }
