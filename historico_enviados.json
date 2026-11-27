@@ -1,10 +1,5 @@
 {
   "links": [
-    "5b9d8fd8ec147d76",
-    "1970f56c397366f0",
-    "9a8b11b69347dd6d",
-    "2ab40dc9a363e36d",
-    "634c52f4d44c9f88",
     "https://www.cnnbrasil.com.br/agro/j-macedo-ve-custos-maiores-e-risco-logistico-no-mercado-de-trigo/",
     "c00f8cbdd278fc57",
     "https://bmcnews.com.br/economia/governo-prorroga-subsidio-de-r-212-ao-diesel-por-mais-30-dias/",
@@ -799,11 +794,14 @@
     "d622e8128c620003",
     "https://www.infomoney.com.br/onde-investir/tesouro-ipca-quanto-rende-efeito-trabuco/",
     "bffc4f8ab1b927c7",
-    "34aa90adcd3ca9a9"
+    "34aa90adcd3ca9a9",
+    "06466d826329f04b",
+    "https://www.suno.com.br/noticias/ibovespa-desconto-acoes-perspectivas-2027/",
+    "72c2d24709d091d3",
+    "https://www.moneytimes.com.br/espanha-vai-as-urnas-no-domingo-e-eleicao-pode-derrubar-pedro-sanchez-desafeto-de-trump-ccgg/",
+    "49ad696649692150"
   ],
   "titulos": [
-    "Kremlin desmente mídia alemã sobre lançamento de satélite russo com armamento nuclear",
-    "Rondônia terá máximas de até 37 °C na quarta-feira",
     "UBS BB corta B3 para neutra com visão de cenário desafiador para mercado de capitais",
     "TOTVS (TOTS3): BlackRock informa participação acionária na companhia",
     "Governo pretende iniciar ‘desmame’ de subsídio de combustíveis em dezembro",
@@ -1601,11 +1599,11 @@
     "Mais uma stablecoin de real vem aí. Com B3 e bancos por trás",
     "A Positivo já pensa na próxima eleição (mas não está atrás de voto)",
     "É preciso “deixar claro onde quer chegar”, diz Meirelles sobre Trabuco",
-    "Tesouro IPCA+ rende mais de 9% em menos de uma semana com “efeito Trabuco”"
+    "Tesouro IPCA+ rende mais de 9% em menos de uma semana com “efeito Trabuco”",
+    "Ibovespa dispara, mas a conta dos 50% chama atenção para 2027",
+    "Espanha vai às urnas no domingo e eleição pode derrubar Pedro Sánchez, desafeto de Trump"
   ],
   "leads": [
-    "Há um número no balanço da XP que a empresa faria questão de pendurar na vitrine: 55%, o salto da receita com clientes corporativos em um ano. E há outro que, provavelmente, gostaria de esconder debaixo do tapete: 26%, a queda do dinheiro novo que entrou na plataforma no mesmo período, segundo dados de relatório do BTG Pactual. Entre um e outro cab",
-    "BRASÍLIA – A empresa responsável pela liquidação extrajudicial do Banco Master concordou em liberar para o Banco de Brasília (BRB) R$ 316,5 milhões em valores bloqueados no âmbito da Operação Compliance Zero. A manifestação foi enviada ao presidente do Supremo Tribunal Federal (STF), Edson Fachin, nesta quinta-feira, 26.",
     "A safra 2026/27 de açúcar da Índia deve alcançar 26,52 milhões de toneladas, recuo de 5,2% ante as 27,97 milhões de toneladas de 2025/26, segundo estimativa preliminar da Associação Indiana de Usinas de Açúcar (Isma).",
     "A Comissão de Valores Mobiliários (CVM) está intimando 31 acusados em processo relativo ao rombo divulgado pela Americanas em janeiro de 2023, quando a companhia informou ter identificado inconsistências contábeis estimadas inicialmente em R$ 20 bilhões. O processo foi aberto em 2023, e a intimação foi assinada no último dia 24.",
     "As redes de sexta geração deverão alcançar 5 bilhões de usuários no mundo até 2040, segundo projeção da GSMA apresentada nesta quinta-feira, 26, em Brasília, durante o 1º Fórum Brasileiro de Espectro.",
@@ -1853,7 +1851,9 @@
     "A Open BRL vai seguir o modelo tradicional das stablecoins. Ou seja, vai manter seu valor vinculado a uma moeda – neste caso, o real.",
     "Um mês após o segundo turno presidencial, com a vitória de Luiz Inácio Lula da Silva (PT) sobre Flávio Bolsonaro (PL), já há quem pense na próxima disputa eleitoral. E não é nenhum político. Principal fornecedora de urnas eletrônicas no País, a Positivo está de olho na tecnologia que envolvei o pleito municipal de 2028.",
     "Ex-presidente do BC e ex-ministro da Fazenda, Meirelles afirmou que é necessário que o banqueiro mantenha o “diálogo aberto”",
-    "A forte queda das taxas do Tesouro Direto nesta semana se transformou em ganhos expressivos para quem já tinha títulos de longo prazo. O Tesouro IPCA+ 2050 acumulava valorização de 9,1% entre a abertura de segunda-feira (23) e o meio-dia desta sexta-feira (27), segundo cálculo do InfoMoney com base nos preços de compra divulgados pelo Tesouro Diret"
+    "A forte queda das taxas do Tesouro Direto nesta semana se transformou em ganhos expressivos para quem já tinha títulos de longo prazo. O Tesouro IPCA+ 2050 acumulava valorização de 9,1% entre a abertura de segunda-feira (23) e o meio-dia desta sexta-feira (27), segundo cálculo do InfoMoney com base nos preços de compra divulgados pelo Tesouro Diret",
+    "A bolsa brasileira disparou mais de 6% em um único pregão, mas os preços das ações ainda podem estar refletindo um cenário econômico pior do que aquele que realmente se concretizará. Na avaliação de João Daronco, head de ações da Suno Research, o Ibovespa negocia a cerca de oito vezes o lucro das empresas, contra uma média histórica de 12 vezes, di",
+    "A Espanha realiza eleições antecipadas neste domingo (30). A votação pode derrubar o primeiro-ministro socialista Pedro Sánchez, que tem se desentendido com o presidente dos Estados Unidos, Donald Trump. O resultado também pode levar a extrema-direita ao governo pela primeira vez desde a redemocratização do país."
   ],
   "eventos_recentes": [
     {
@@ -2579,11 +2579,13 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795802219.95552
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795802863.808237
     }
   ],
   "hashes_imagens": [
-    "f7d4a325050bf2d0",
-    "3a3771d0f1d73a76",
     "2885a1b954f7caff",
     "7b7d34222f5b4610",
     "f6ffbb37f136d5d1",
@@ -2881,6 +2883,8 @@
     "16f976c5e65589a3",
     "ec1886d5229fd58f",
     "51657c0670ef8470",
-    "d93646bcc3030005"
+    "d93646bcc3030005",
+    "55b5c4bf05520f89",
+    "20c8f811d7eb4317"
   ]
 }
