@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/tecnologia/ray-ban-meta-acao-holanda-privacidade/",
-    "07dd9d8cdac7bed9",
-    "https://www.poder360.com.br/poder-justica/toffoli-mantem-protecao-do-rj-contra-sancoes-por-divida-com-a-uniao/",
-    "53ec676bd414a0f9",
-    "https://www.sonhoseguro.com.br/2026/11/santander-integra-seguros-a-todas-as-jornadas-do-banco-para-ampliar-base-de-segurados/",
     "4777ba8f9ef47a32",
     "https://megawhat.uol.com.br/armazenamento/cmn-reduz-taxa-do-fundo-clima-para-leilao-de-baterias-a-3-ao-ano/",
     "eef20fd188a2bf28",
@@ -799,11 +794,14 @@
     "c4d56063f6ebd65b",
     "1a9ab0ef7c95b5c9",
     "https://valorinveste.globo.com/produtos/renda-fixa/tesouro-direto/noticia/2026/11/27/tesouro-direto-prefixados-e-titulos-atrelados-a-inflacao-ganham-espaco-entre-investidores.ghtml",
-    "c9606f041e252754"
+    "c9606f041e252754",
+    "dc0ab3589ef026ae",
+    "https://www.cnnbrasil.com.br/economia/seu-bolso/meu-dinheiro/pedidos-na-black-friday-crescem-28-em-2026-mostra-pesquisa/",
+    "7952bbc7ea28ca59",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/btg-pactual-monta-fundo-de-r-15-bi-para-compra-de-consignados-do-brb/",
+    "c211a1de6c9c16fd"
   ],
   "titulos": [
-    "Mercado vive dias de incerteza, mas Galípolo vê uma vantagem para o BC: o tempo",
-    "Etanol compensa em 16 estados e no DF; gasolina cai",
     "Petrobras divulga hoje plano bilionário: o que investidores devem observar para PETR4",
     "Gás de Vaca Muerta vai abastecer operações de siderúrgica no Rio",
     "Unifique (FIQE3) dispara 17% após reviravolta em oferta de compra; entenda",
@@ -1601,11 +1599,11 @@
     "Dólar despenca 4%, Magalu (MGLU3) dispara e Ibovespa tem melhor semana desde o primeiro turno",
     "UE adia para 2027 decisão sobre compra de ativos de nível no Brasil para chineses",
     "Console da Sony repete topo do faturamento na Shopee",
-    "Tesouro Direto: Prefixados e títulos atrelados à inflação ganham espaço entre investidores"
+    "Tesouro Direto: Prefixados e títulos atrelados à inflação ganham espaço entre investidores",
+    "Pedidos na Black Friday crescem 28% em 2026, mostra pesquisa",
+    "BTG Pactual monta fundo de R$ 1,5 bi para compra de consignados do BRB"
   ],
   "leads": [
-    "Nome do presidente do Conselho de Administração do Bradesco ganhou força para chefiar a equipe econômica",
-    "O petróleo fechou em alta pelo terceiro pregão consecutivo nesta quinta-feira (26), à medida que a escalada das tensões no Oriente Médio amplia os temores de interrupções na oferta da commodity. A liquidez reduzida pelo feriado de Ação de Graças nos Estados Unidos também pode intensificar os movimentos dos preços.",
     "Logo depois de perder as eleições presidenciais, senador deixou o país contra ordem do STF",
     "A produção de arroz da Índia deve cair 2,3% na safra de verão 2026/27, para 121,91 milhões de toneladas, afirmou nesta quinta-feira o ministro da Agricultura, Shivraj Singh Chouhan, colocando a colheita de arroz do país a caminho de sua primeira queda em uma década.",
     "O Supremo Tribunal Federal (STF) decidiu nesta quinta-feira (26) que o piso nacional do magistério da educação básica corresponde ao vencimento inicial da carreira e que os efeitos sobre os demais patamares salariais dependem de norma editada por cada ente federativo, segundo o g1. A decisão tem repercussão geral e serve de referência para os tribu",
@@ -1853,7 +1851,9 @@
     "O efeito Trabuco perdeu força na Bolsa, mas continuou fazendo preço no câmbio. Nesta sexta-feira (27), o Ibovespa encerrou o pregão em queda de 0,13%, aos 176.573,35 pontos, após alcançar a máxima de 183.625,66 pontos. Apesar de devolver mais de 7 mil pontos ao longo da sessão, o índice acumulou alta de 6,13% na semana, seu melhor desempenho desde ",
     "A Direção-Geral da Concorrência da Comissão Europeia, órgão da UE (União Europeia), adiou para 2027 o prazo final de análise da compra de ativos de nível no Brasil, da Anglo American, pelos chineses da MMG Limited. Agora, a decisão deverá ser tomada até 27 de janeiro. Antes, a análise estava prevista para ser concluída no próximo dia 21 de dezembro",
     "O PlayStation 5 foi o produto que mais faturou na Black Friday de 2026 da Shopee, repetindo 2025, segundo balanço divulgado pela empresa nesta sexta-feira (27). Nas primeiras 12 horas da campanha, o gasto médio por item praticamente dobrou ante o ano anterior.",
-    "Aplicações em títulos com vencimento superior a dez anos saltam 82% em outubro; patrimônio investido no programa cresce 42% em um ano"
+    "Aplicações em títulos com vencimento superior a dez anos saltam 82% em outubro; patrimônio investido no programa cresce 42% em um ano",
+    "A quantidade de pedidos na Black Friday cresceu 28% em 2026, mostram dados da Totvs, divulgado nesta sexta-feira (27). Já o faturamento subiu 9%.",
+    "O BTG Pactual afirmou nesta sexta-feira (27) que criou um fundo com recursos de até R$ 1,5 bilhão para comprar créditos consignados originados pelo BRB junto a servidores públicos do Distrito Federal."
   ],
   "eventos_recentes": [
     {
@@ -2575,11 +2575,13 @@
     {
       "chave": "rf_tesouro::RF_EVENTO",
       "ts": 1795820478.570782
+    },
+    {
+      "chave": "btg_pactual::GERAL_ATIVO",
+      "ts": 1795821111.528262
     }
   ],
   "hashes_imagens": [
-    "3fddac88fbda9c79",
-    "646879d8f6cbc423",
     "b520c7a552f63af5",
     "79bd6c616c6cfae5",
     "daf7d30b1ba0b669",
@@ -2877,6 +2879,8 @@
     "4e360f66f24a446d",
     "9b2f245cc235855c",
     "c66e4aff50c71fb4",
-    "e02c46e5e1366414"
+    "e02c46e5e1366414",
+    "6531a75bc3e2dcf0",
+    "d76513458e31b0bf"
   ]
 }
