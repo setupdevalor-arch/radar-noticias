@@ -1,7 +1,5 @@
 {
   "links": [
-    "789fff48e102b245",
-    "https://www.poder360.com.br/poder-economia/regulacao-da-tributaria-sai-em-breve-diz-secretario-da-receita/",
     "5da38b9a2cbd490b",
     "8fd7d1939a124361",
     "https://www.spacemoney.com.br/investimentos/analise-de-balanco-antes-de-investir/",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/investimentos/criptomoedas/tron-acoes-tokenizadas-titulos-eua-2026/",
     "ac6ac07469dc0fab",
     "https://www.moneytimes.com.br/petroleo-sobe-e-caminha-para-interromper-sequencia-de-tres-semanas-de-perdas-fets/",
-    "34866f1bb1e6095d"
+    "34866f1bb1e6095d",
+    "https://www.spacemoney.com.br/agronegocio/carne-brasileira-auditoria-ue-macron/",
+    "0f9aec150eca16fa"
   ],
   "titulos": [
-    "Por que a cúpula do clima da ONU pode terminar sem acordo neste ano",
     "Por que o cobre, queridinho da era da IA, despencou 9% em uma semana",
     "Analistas de Wall Street elegem 3 ações de dividendos",
     "CNBC destaca Amazon em meio à queda do Nasdaq",
@@ -1601,10 +1600,10 @@
     "Gecex aprova minuta para grupo de trabalho de contramedidas para EUA",
     "Black Friday: IA pode mudar preços e forma como clientes fazem compras",
     "TRON mira ações tokenizadas e títulos dos EUA no 4º tri",
-    "Petróleo sobe e caminha para interromper sequência de três semanas de perdas"
+    "Petróleo sobe e caminha para interromper sequência de três semanas de perdas",
+    "UE não vê base em fala de Macron sobre carne"
   ],
   "leads": [
-    "Os custos logísticos brasileiros atingiram R$ 1,96 trilhão em 2025, o equivalente a 15,5% do Produto Interno Bruto (PIB), segundo levantamento do Instituto de Logística e Supply Chain (ILOS). Em 2014, essa participação era de 10,4%. O aumento ocorre em meio a deficiências históricas da infraestrutura e dificuldades de planejamento em um país de rea",
     "O sentimento dos investidores em relação à Bolsa brasileira atingiu um dos níveis mais negativos da série histórica, mas isso pode representar uma oportunidade para quem aposta em uma recuperação do mercado no curto prazo.",
     "A Yduqs (YDUQ3) aprovou a incorporação da Afya (AFYA3) pela companhia, em Assembleia Geral Extraordinária (AGE) realizada nesta quarta-feira (25). A operação prevê o aumento do capital social da Yduqs em R$ 2,54 bilhões, mediante a emissão de 569,65 milhões de novas ações ordinárias.",
     "O presidente da Federação da Agricultura e Pecuária do Estado de São Paulo (Faesp) e do Serviço Nacional de Aprendizagem Rural (Senar), Tirso Meirelles, criticou a possibilidade de novos impostos e alertou para o encarecimento da atividade rural. Ele também mencionou a escassez de mão de obra.",
@@ -1853,7 +1852,8 @@
     "O Comitê-Executivo de Gestão (Gecex) da Câmara de Comércio Exterior aprovou nesta quinta-feira (26) minuta de resolução que regula o funcionamento do grupo que vai trabalhar em propostas de contramedidas a serem aplicadas contra sobretaxas comerciais aprovadas pelos Estados Unidos contra o Brasil, segundo comunicado do órgão.",
     "Duas pessoas entram no mesmo site, procuram o mesmo produto e fazem a compra no mesmo momento. Ainda assim, podem encontrar preços ou condições comerciais diferentes. A situação pode virar tendência na Black Friday deste ano.",
     "A TRON planeja incluir ações tokenizadas e títulos dos Estados Unidos entre os produtos centrais de sua rede, com meta de lançamento no quarto trimestre de 2026. O movimento, apresentado por Justin Sun como parte da estratégia da blockchain, amplia a atuação da rede além das transferências de stablecoins. Em outubro de 2026, durante o evento TOKEN2",
-    "Os preços do petróleo sobem nesta sexta-feira (27) e caminham para interromper uma sequência de três semanas de perdas, à medida que os ataques contínuos a petroleiros no Estreito de Ormuz e à infraestrutura energética da Arábia Saudita intensificaram as preocupações com o abastecimento de petróleo proveniente do Oriente Médio, região afetada pelo "
+    "Os preços do petróleo sobem nesta sexta-feira (27) e caminham para interromper uma sequência de três semanas de perdas, à medida que os ataques contínuos a petroleiros no Estreito de Ormuz e à infraestrutura energética da Arábia Saudita intensificaram as preocupações com o abastecimento de petróleo proveniente do Oriente Médio, região afetada pelo ",
+    "Uma missão técnica da União Europeia que esteve no Brasil não corroborou a versão defendida por Emmanuel Macron, presidente da França, de que a proteína animal brasileira seria “dopada”, conforme o g1. A auditoria examinou órgãos públicos e unidades de frango e mel num intervalo que foi de 24 de agosto a 4 de setembro, e a Comissão Europeia conclui"
   ],
   "eventos_recentes": [
     {
@@ -2590,7 +2590,6 @@
     }
   ],
   "hashes_imagens": [
-    "09fd36626155f8d5",
     "00ba92f2fd72092a",
     "b030a54ad1f73fe6",
     "3bb713997fddf6bd",
@@ -2889,6 +2888,7 @@
     "6d73b021b8363d92",
     "7e133cfa21961436",
     "0a2be891c473e27a",
-    "d104b98e2319e484"
+    "d104b98e2319e484",
+    "1779aaa7d24e30e3"
   ]
 }
