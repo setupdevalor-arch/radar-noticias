@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/feriado-nos-eua-reduz-liquidez-do-mercado-em-dia-de-inflacao-ibovespa-em-dolar-sobe-nesta-quinta-feira-26-rens/",
-    "92c1b423d3b8d00e",
-    "https://investnews.com.br/investimentos/criptomoedas-em-queda-comprar-na-baixa-ou-pular-do-barco-antes-que-afunde/",
-    "46c82a8f65017fb7",
     "https://www.moneytimes.com.br/fundo-imobiliario-anuncia-nova-locacao-que-pode-elevar-receita-em-36-ifix-ensaia-recuperacao-igdl/",
     "73de771887a24d03",
     "https://www.infomoney.com.br/mercados/yduqs-afya-tim-smart-fit-cosan-e-mais-acoes-para-acompanhar-hoje/",
@@ -799,11 +795,13 @@
     "4ae216397b8e1050",
     "5fee520146a01c3e",
     "https://www.spacemoney.com.br/tecnologia/iphone-16e-128-gb-oferta-magalu/",
-    "00124229a609f7a9"
+    "00124229a609f7a9",
+    "https://www.spacemoney.com.br/educacao-financeira/dicas/black-friday-celulares-pix-carne/",
+    "c5d2ffb134db6a80",
+    "https://www.spacemoney.com.br/economia/exterior/italianos-mortos-kuwait-ira/",
+    "9f5c58124e95612d"
   ],
   "titulos": [
-    "Novo teto do MEI: economia pode chegar a R$ 9,5 mil",
-    "GTA VI expõe desafio: tecnologia avançada leva a videogames mais caros",
     "Por que a América Latina precisa de conexões globais para inovar?",
     "FIIs ainda valem a pena? Conheça as vantagens e os riscos antes de investir",
     "Indústria de etanol acirra disputa pelo milho no mercado interno",
@@ -1601,11 +1599,11 @@
     "Bradesco, de Trabuco, tem 3º maior juro dentre os 5 bancões",
     "Relatora restringe mudança a agências reguladoras",
     "Inflação de Tóquio vai a 2,9%, maior alta em 16 meses",
-    "Magalu lista iPhone 16e com 128 GB a R$ 2.899 via Pix"
+    "Magalu lista iPhone 16e com 128 GB a R$ 2.899 via Pix",
+    "Celulares lideram desconto no Pix; jovens voltam ao carnê",
+    "Italianos morrem no Kuwait; Irã nega autoria de ataque"
   ],
   "leads": [
-    "A Comissão de Infraestrutura do Senado Federal aprovou nesta quarta-feira (25) a convocação do ministro dos Transportes, George Santoro, para prestar esclarecimentos sobre a concessão do trecho rodoviário entre Vilhena (RO) e Cuiabá (MT).",
-    "A Petrobras está retornando ao mercado de etanol com uma aquisição bilionária – anos depois de ter perdido dinheiro com seus investimentos no setor.",
     "A Gerdau anunciou a assinatura de dois Termos de Compromisso, um Ambiental (TCA) e outro Social (TCS), para a região da Praia de São Tomé de Paripe, em Salvador (BA).",
     "O fracasso da COP31, na Turquia, pode ser bom para o planeta. Quem defende essa tese é Bjørn Lomborg, um cientista político dinamarquês e uma das vozes mais controversas do debate internacional sobre mudanças climáticas.",
     "O tráfego de dados associado à IA, atualmente inferior a 1% do total das redes de telecomunicações, poderá alcançar 35% em 2030. A projeção foi apresentada nesta quarta-feira, dia 25, por Wilson Cardoso, diretor da Área de Telecomunicações da Associação Brasileira da Indústria Elétrica e Eletrônica (Abinee), durante palestra sobre a evolução da age",
@@ -1853,7 +1851,9 @@
     "Entre 31 instituições financeiras, banco do futuro ministro da Fazenda está em 8º lugar no ranking das maiores taxas de juros",
     "A senadora e relatora Eliziane Gama apresentou nesta quarta-feira (25) parecer que exclui a Lei das Estatais de um projeto aprovado pelos deputados em dezembro de 2022, conforme noticiou o g1. Com isso, a proposta passa a tratar apenas das agências reguladoras.",
     "Indicador básico acumula 3 meses acima da meta de 2% do Banco do Japão",
-    "A versão de 128 GB do iPhone 16e aparece no Magazine Luiza por R$ 2.899, desde que o pagamento seja feito via Pix e o cupom CUPOMALO200 seja aplicado no aplicativo da rede varejista."
+    "A versão de 128 GB do iPhone 16e aparece no Magazine Luiza por R$ 2.899, desde que o pagamento seja feito via Pix e o cupom CUPOMALO200 seja aplicado no aplicativo da rede varejista.",
+    "Na semana da Black Friday de 2026, os celulares ocupam o topo do ranking de descontos para pagamento no Pix no levantamento do g1, que monitora 74 produtos. Os 16 aparelhos acompanhados ficaram, em média, 7,36% mais baratos no Pix do que no cartão de crédito, a maior diferença entre as categorias analisadas. No recorte individual, o Samsung Galaxy ",
+    "Duas pessoas de nacionalidade italiana morreram no Kuwait em consequência de ataques atribuídos ao Irã, segundo a CNBC. O Exército kuwaitiano informou em publicação no X que as vítimas foram atingidas por destroços de mísseis e que outras duas pessoas ficaram feridas."
   ],
   "eventos_recentes": [
     {
@@ -2582,8 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "6482313a437a2e29",
-    "e486eb5bb6e8de34",
     "5abeeeee3d4596b6",
     "84d28a712070aafe",
     "a13d19d4293b54c9",
@@ -2881,6 +2879,8 @@
     "dd6d3811e3f5caa0",
     "c83747424e54e5b7",
     "441b027c33107494",
-    "220e94393d658cc6"
+    "220e94393d658cc6",
+    "f2a934ec295ca033",
+    "af27ca8c693edf76"
   ]
 }
