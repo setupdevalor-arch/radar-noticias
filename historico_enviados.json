@@ -1,8 +1,5 @@
 {
   "links": [
-    "a5d21fd7f64cbc02",
-    "https://www.spacemoney.com.br/economia/exterior/video-suposto-ataque-airbus-a319/",
-    "2ab67ffeee379d77",
     "https://www.infomoney.com.br/mercados/sao-martinho-jpmorgan-corta-recomendacao-para-venda-apos-balanco-acao-cai/",
     "0a1e7a44d311c5d3",
     "https://megawhat.uol.com.br/noticias/aneel-cobra-respostas-sobre-energia-de-itaipu-em-meio-a-risco-de-alta-de-precos/",
@@ -799,10 +796,12 @@
     "https://eixos.com.br/newsletters/comece-seu-dia/setores-regulados-se-juntam-contra-o-fim-da-quarentena-para-politicos-nas-agencias/",
     "b91444b2a096578e",
     "https://www.infomoney.com.br/onde-investir/crise-de-credito-2027-riscos-brasil/",
-    "df341cdbdce55a7c"
+    "df341cdbdce55a7c",
+    "6064948a42464f1e",
+    "https://investnews.com.br/investimentos/tokenizacao-mundial-supera-us-40-bilhoes-com-titulos-do-tesouro-americano-no-topo/",
+    "4382b8160b3830f5"
   ],
   "titulos": [
-    "Mercado vê chance total de alta do Fed em dezembro",
     "Dólar, ouro e até o real entram no jogo: onde o UBS vê oportunidades para ganhar dinheiro — e se proteger — em 2027",
     "The Economist: O que está causando os recentes apagões nos Estados Unidos?",
     "Produção de café da Colômbia deve se recuperar na nova safra, afirma USDA",
@@ -1601,10 +1600,10 @@
     "EzPay, Multipagamentos e BTG apresentam a Central de Faturas",
     "Onde Investir reúne XP e JPMorgan para discutir estratégias de alocação em 2027",
     "Setores regulados se juntam contra o fim da quarentena para políticos nas agências",
-    "Por que o Brasil corre o risco de enfrentar uma crise de crédito em 2027?"
+    "Por que o Brasil corre o risco de enfrentar uma crise de crédito em 2027?",
+    "Tokenização mundial supera US$ 40 bilhões com títulos do Tesouro americano no topo"
   ],
   "leads": [
-    "Luiz Carlos Trabuco Cappi, que está à frente do conselho de administração do Bradesco, passou a ocupar o centro do debate sobre quem chefiará a Fazenda na quarta gestão de Lula. A movimentação ganhou impulso após uma conversa reservada entre os dois no Palácio da Alvorada, na segunda-feira (23), encontro que não estava na agenda oficial.",
     "Companhia reúne autoridades para lançar o E195-E2, que entra em operação em dezembro",
     "Quase metade dos consumidores também aproveita todo o mês de novembro, e não apenas a data da Black, para fazer compras",
     "O Senado da Argentina analisará nesta quinta-feira (26) um projeto de lei que suspenderia as eleições primárias, abrindo caminho para uma possível vitória do presidente Javier Milei antes da disputa presidencial do próximo ano, enquanto o país se encontra à beira de uma recessão.",
@@ -1853,17 +1852,10 @@
     "A EzPay e a Multipagamentos apresentaram ao mercado uma solução que facilita o gerenciamento e o pagamento de contas de serviços públicos (eletricidade, gás, telecom etc) através de apps e sites de bancos. A Central de Faturas agrega em um único lugar as faturas dessas concessionárias emitidas para o CPF do consumidor. O BTG será o primeiro banco a",
     "A forte reprecificação dos ativos brasileiros após as eleições presidenciais e as incertezas sobre a trajetória dos juros no país e no exterior tornam a diversificação um dos principais desafios para os investidores em 2027. A escolha entre renda fixa, ações e investimentos internacionais exige atenção não apenas ao potencial de retorno, mas também",
     "NESTA EDIÇÃO. Mais de 100 entidades pedem ao Senado que rejeite o projeto que abre as agências a políticos.",
-    "O elevado endividamento dos tomadores de empréstimos, o aumento da inadimplência e a deterioração da qualidade das carteiras de crédito podem levar os bancos a restringir a concessão de novos financiamentos em 2027. Na avaliação de especialistas do setor financeiro, a combinação desses fatores amplia o risco de uma crise de crédito no Brasil."
+    "O elevado endividamento dos tomadores de empréstimos, o aumento da inadimplência e a deterioração da qualidade das carteiras de crédito podem levar os bancos a restringir a concessão de novos financiamentos em 2027. Na avaliação de especialistas do setor financeiro, a combinação desses fatores amplia o risco de uma crise de crédito no Brasil.",
+    "Os títulos do Tesouro americano, conhecidos como Treasuries, lideram o mercado de ativos tokenizados. O total chega a US$ 14,1 bilhões, cerca de 34% do valor registrado."
   ],
   "eventos_recentes": [
-    {
-      "chave": "banco_inter::GERAL_ATIVO",
-      "ts": 1795601299.115355
-    },
-    {
-      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
-      "ts": 1795601299.115355
-    },
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795602384.415285
@@ -2599,10 +2591,13 @@
     {
       "chave": "jpmorgan::GERAL_ATIVO",
       "ts": 1795773885.693316
+    },
+    {
+      "chave": "macro_global::MACRO_EVENTO",
+      "ts": 1795774584.289637
     }
   ],
   "hashes_imagens": [
-    "b2c9097540f82b55",
     "60c9f6825e3a595e",
     "d388eee4d0accebd",
     "4b05a9f91083cc78",
@@ -2901,6 +2896,7 @@
     "7134e03fccb07606",
     "4e9c9a52820f21d0",
     "861a2b7aa83b4a9b",
-    "6a021714e36f8e2d"
+    "6a021714e36f8e2d",
+    "468ab4b0dea492df"
   ]
 }
