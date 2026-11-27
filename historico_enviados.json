@@ -1,6 +1,5 @@
 {
   "links": [
-    "40e9bd38269a1419",
     "https://valorinveste.globo.com/conteudo-de-marca/banco-abc-brasil/noticia/2026/11/26/renda-mensal-isenta-planeje-seu-futuro-com-as-novas-lcas-e-lcis-do-abc-personal.ghtml",
     "413f374a775d1da9",
     "7368ea785d8a916b",
@@ -799,7 +798,8 @@
     "https://www.spacemoney.com.br/investimentos/fundos-de-investimentos/private-markets-resgates-educacao-investidor/",
     "a6635324ae824bc8",
     "https://www.cnnbrasil.com.br/infra/azul-fala-em-desacelerar-investimentos-diante-de-incertezas-no-mercado/",
-    "af977f6f79ea52d8"
+    "af977f6f79ea52d8",
+    "02ffd97f58cc92f1"
   ],
   "titulos": [
     "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo",
@@ -1856,18 +1856,6 @@
     "A Azul Linhas Aéreas não pretende acelerar a expansão da companhia diante das incertezas do mercado e da alta dos custos operacionais. O CEO da empresa, John Rodgerson, afirmou que a estratégia neste momento é preservar a capacidade financeira e concentrar os investimentos nas operações em que a companhia já tem um volume maior de passageiros."
   ],
   "eventos_recentes": [
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795597009.913837
-    },
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795597009.913837
-    },
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795597009.913837
-    },
     {
       "chave": "embraer::GERAL_ATIVO",
       "ts": 1795597706.063165
