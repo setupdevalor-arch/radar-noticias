@@ -1,10 +1,5 @@
 {
   "links": [
-    "cff7a0411bd7dc68",
-    "bfb2ba5b9ba981ec",
-    "https://g1.globo.com/economia/noticia/2026/11/26/reforma-tributaria-sem-beneficios-a-produtos-e-setores-imposto-do-governo-cairia-de-113percent-para-7percent-em-2027-estima-orgao-do-senado.ghtml",
-    "84bcba64d4437aa3",
-    "https://www.suno.com.br/noticias/xpca11-dividendo-cai-outubro-2026/",
     "27cb1f41b08aeeb8",
     "https://teletime.com.br/26/11/2026/boletim-teletime-tcu-850-mhz/",
     "16bc748a6043eede",
@@ -799,10 +794,14 @@
     "https://www.infomoney.com.br/mercados/safra-seca-no-norte-e-el-nino-podem-beneficiar-rumo-e-pressionar-hidrovias-do-brasil/",
     "a3ce155ba044541a",
     "93cb4b8b261cccca",
-    "d89acf7ecd6c2708"
+    "d89acf7ecd6c2708",
+    "8217f4abeb619d6c",
+    "b24c9311c4a8303e",
+    "4a9c041c9ff3be00",
+    "https://www.spacemoney.com.br/politica/moretti-planejamento-continuidade-governo-lula/",
+    "922942e279cca7af"
   ],
   "titulos": [
-    "Samsung pode adiar Galaxy Watch e priorizar pulseira em 2027",
     "Falhas em Microsoft, Apple e voos elevam suspeita de ataque",
     "Vibra (VBBR3) e Ultra (UGPA3) ficam mais atrativas após queda das ações, avalia BBI",
     "É possível manter programas sociais e rever regras fiscais, diz Galípolo",
@@ -1601,10 +1600,10 @@
     "Espanha vai às urnas no domingo e eleição pode derrubar Pedro Sánchez, desafeto de Trump",
     "Ambev acelera inovação para ampliar escolhas na categoria cervejeira",
     "Gestão de ativos: o diferencial competitivo que ainda separa as empresas de óleo e gás",
-    "Safra: Seca no Norte e El Niño podem beneficiar Rumo e pressionar Hidrovias do Brasil"
+    "Safra: Seca no Norte e El Niño podem beneficiar Rumo e pressionar Hidrovias do Brasil",
+    "Moretti deve continuar no Planejamento, indicam aliados"
   ],
   "leads": [
-    "Se concretizar a captação, o Brasil será o primeiro governo na América Latina a acessar o mercado de dívida chinês com uma emissão soberana, ou seja, de um governo nacional. O que é diferente de uma emissão corporativa, que a Suzano já realizou há dois anos.",
     "Os Estados Unidos selecionaram o consórcio americano Frontier Minerals para desenvolver um projeto de mineração no Quênia em uma área com potencial para abrigar milhões de toneladas de nióbio e terras raras. Segundo o Monitor do Mercado, o secretário de Estado para Mineração e Economia Azul do Quênia anunciou que o Ministério da Mineração emitiu av",
     "O Decreto nº 13.173/2026, publicado na semana passada, trouxe ajustes pontuais para a redução da jornada de trabalho e para o fim da escala 6×1. Em análise publicada pelo Monitor do Mercado, o advogado Marcel Zangiácomo, sócio do escritório Galvão Villani, Navarro, Zangiácomo e Bardella Advogados, avalia que a norma ficou abaixo do esperado e deixo",
     "O Banco Safra atualizou as estimativas e preços-alvo para empresas do setor de varejo, especialmente para companhias focadas em consumo discricionário e vestuário. Entre as principais recomendações, o banco destacou Smart Fit (SMFT3) e Track & Field (TFCO4).",
@@ -1853,13 +1852,10 @@
     "A Espanha realiza eleições antecipadas neste domingo (30). A votação pode derrubar o primeiro-ministro socialista Pedro Sánchez, que tem se desentendido com o presidente dos Estados Unidos, Donald Trump. O resultado também pode levar a extrema-direita ao governo pela primeira vez desde a redemocratização do país.",
     "A diversificação das preferências dos consumidores tem impulsionado a busca por novas opções no universo cervejeiro. Para acompanhar esse movimento, a indústria investe em novas receitas e tecnologias que ampliam a diversidade de produtos e experiências, sem abrir mão do sabor e do aroma característicos da cerveja.",
     "O Brasil opera uma das versões mais complexas do negócio de óleo e gás do mundo. O upstream brasileiro é, na prática, quase todo offshore, segundo a ANP, Agência Nacional do Petróleo, os campos marítimos respondem por mais de 95% da produção nacional de petróleo. São plataformas distantes da costa, em condições ambientais extremas, com POB limitado",
-    "A atual seca no Arco Norte e a previsão de mais complicações climáticas vindas com o El Niño têm pesado forte sobre algumas companhias. De acordo com o Banco Safra, os impactos esperados exercem forte influência sobre a Rumo (RAIL3) e a Hidrovias do Brasil (HBSA3), mas em sentidos opostos."
+    "A atual seca no Arco Norte e a previsão de mais complicações climáticas vindas com o El Niño têm pesado forte sobre algumas companhias. De acordo com o Banco Safra, os impactos esperados exercem forte influência sobre a Rumo (RAIL3) e a Hidrovias do Brasil (HBSA3), mas em sentidos opostos.",
+    "O ministro Bruno Moretti é apontado por aliados do governo como o favorito para permanecer à frente do Planejamento no quarto mandato de Luiz Inácio Lula da Silva, segundo apurou o InfoMoney. A avaliação ocorre após a escolha do banqueiro Luiz Trabuco para a Fazenda, em substituição a Dario Durigan, movimento que, conforme a fonte, diminui a leitur"
   ],
   "eventos_recentes": [
-    {
-      "chave": "weg::EVENTO_CORP",
-      "ts": 1795630808.072339
-    },
     {
       "chave": "tim::GERAL_ATIVO",
       "ts": 1795631551.406101
@@ -2578,7 +2574,6 @@
     }
   ],
   "hashes_imagens": [
-    "110e8945235df3bd",
     "9ee91da22c6afee0",
     "cf6863f26007dde9",
     "afb36018a046c473",
@@ -2877,6 +2872,7 @@
     "20c8f811d7eb4317",
     "9d91acfcd79bdb0f",
     "ccfe730c1ff1faf1",
-    "46c8fc8fd214ec8f"
+    "46c8fc8fd214ec8f",
+    "b078484b0446c145"
   ]
 }
