@@ -1,8 +1,5 @@
 {
   "links": [
-    "aac92a07a498874d",
-    "a35b8407edefe37d",
-    "f5ca36243a8305bc",
     "4c5bc879fbc3f1b0",
     "a8cf392a08f57737",
     "41d48353b5732570",
@@ -799,7 +796,10 @@
     "e03b79a0af38b9ae",
     "04490a8cd08ef2b1",
     "https://www.infomoney.com.br/brasil/aluguel-consome-quase-20-do-orcamento-das-familias-de-baixa-renda-mostra-ibge/",
-    "52c4396633c0fc55"
+    "52c4396633c0fc55",
+    "c2bff0e459676bb7",
+    "88ed6e61a80f192d",
+    "f81ccb600c8227cf"
   ],
   "titulos": [
     "IPC-S mantém 0,38% na terceira leitura de novembro",
@@ -1856,10 +1856,6 @@
     "Mais da metade das despesas das famílias brasileiras com renda de até dois salários mínimos vai para moradia e alimentação. Por outro lado, entre as famílias mais ricas, a divisão do orçamento é outra. Na faixa acima de 25 salários mínimos, moradia e alimentação somam pouco mais de um quarto das despesas, e o transporte ocupa o segundo lugar, atrás"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795626244.962995
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795626638.980549
