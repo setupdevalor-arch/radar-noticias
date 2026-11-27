@@ -1,9 +1,5 @@
 {
   "links": [
-    "d9da842a6ca78daf",
-    "1cf3112c33888ca5",
-    "4a8a84cb361e623f",
-    "e9551fa486bed3ee",
     "3ba5fd761b4098d2",
     "cc8d9dfa1b0f63f5",
     "https://www.cnnbrasil.com.br/agro/corteva-investe-us-32-mi-em-unidade-de-sp-para-producao-de-novo-fungicida/",
@@ -799,10 +795,13 @@
     "340f07e316599716",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/medidas-do-governo-para-frear-alta-de-combustiveis-ja-superam-r-74-bilhoes/",
     "830c4e5808d5d010",
-    "e1b0b5ba45b872b5"
+    "e1b0b5ba45b872b5",
+    "5e62c59bb0555798",
+    "e8736c27e98d89ec",
+    "https://www.poder360.com.br/poder-energia/rateio-geral-das-baterias-pode-elevar-conta-de-luz-em-r-6-bi-por-ano/",
+    "d77fe78f76d1ce0b"
   ],
   "titulos": [
-    "Porto (PSSA3) fará pagamento de dividendos adicionais na sexta-feira",
     "Brava Energia (BRAV3) conclui aquisição de parcela complementar do Polo Pescada",
     "Manifesto de juristas e economistas pede rejeição do PL das big techs",
     "RD Saúde (RADL3) lança programa de recompra de ações de até R$ 600 milhões; veja os objetivos",
@@ -1601,10 +1600,10 @@
     "UE trava em acordo sobre orçamento de €1,58 trilhão",
     "Norse Atlantic pede falência após falhar em captar recursos",
     "Tarcísio diz que escolha por Trabuco foi acertada: ‘Quem pode atrapalhar é o PT’",
-    "Medidas do governo para frear alta de combustíveis já superam R$ 74 bilhões"
+    "Medidas do governo para frear alta de combustíveis já superam R$ 74 bilhões",
+    "Rateio geral das baterias pode elevar conta de luz em R$ 6 bi por ano"
   ],
   "leads": [
-    "O ministro da Fazenda, Dario Durigan, defendeu nesta quinta-feira (26) que o Congresso Nacional consolide a proibição das casas de apostas esportivas, as chamadas bets, e dos cassinos on-line no Brasil. Segundo ele, a restrição já apresenta efeitos positivos para setores da economia, incluindo o varejo.",
     "O peso mexicano caminha para sua maior sequência de desvalorizações em cinco anos, à medida que os investidores fogem para ativos de refúgio e a popular estratégia de carry trade se desfaz.",
     "Para Durigan, o governo deve aproveitar o bom relacionamento com o Congresso para ainda este ano aprovar proposta de emenda constitucional e mais medidas.",
     "Vivo, TIM e Claro estão apostando em bônus de Internet nos planos móveis e em pacotes que combinam conectividade, entretenimento e aparelhos na Black Friday de 2026. Em materiais encaminhados ao TELETIME, as operadoras detalharam campanhas que incluem franquias adicionais de dados, ofertas de serviços de banda larga e condições especiais para a com",
@@ -1853,7 +1852,8 @@
     "Os líderes da União Europeia não conseguiram destravar o impasse em torno do próximo orçamento de longo prazo do bloco, segundo a CNBC, o que mantém os negociadores sob pressão para fechar um acordo até o fim do ano, antes que o ciclo eleitoral de 2027 complique ainda mais as conversas. O plano define prioridades e limites de gastos para o período ",
     "Segundo a CNBC, a Norse Atlantic, companhia aérea de baixo custo norueguesa, protocolou nesta sexta-feira um pedido de falência na Europa depois de não conseguir levantar recursos suficientes para atender às suas necessidades de liquidez de curto prazo. A controladora Norse Atlantic ASA concluiu que a empresa não tem mais base para continuar operan",
     "Trabuco: 'Discutir o papel do Estado é crucial'",
-    "Desde março, o governo federal vem adotando uma série de ações para mitigar a alta dos combustíveis por conta do conflito no Irã. Cálculos do Tesouro Nacional divulgados nesta sexta-feira (27) mostram que as medidas já concedidas somam R$ 74,5 bilhões."
+    "Desde março, o governo federal vem adotando uma série de ações para mitigar a alta dos combustíveis por conta do conflito no Irã. Cálculos do Tesouro Nacional divulgados nesta sexta-feira (27) mostram que as medidas já concedidas somam R$ 74,5 bilhões.",
+    "Frente dos Consumidores é contra projeto de lei que transfere custos das contratações a todos os agentes do sistema"
   ],
   "eventos_recentes": [
     {
@@ -2602,7 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "7ae0f2f8978c2dc7",
     "6072d8d0b2504c25",
     "08092064c962c90c",
     "5ce6945d8fdde4e7",
@@ -2901,6 +2900,7 @@
     "ad98d431991410d9",
     "cee0b176cbc0eef4",
     "35d34e39de375f63",
-    "2ed0aeb514b6e2a4"
+    "2ed0aeb514b6e2a4",
+    "7eedc68eb8bf58ac"
   ]
 }
