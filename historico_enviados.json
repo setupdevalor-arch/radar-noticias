@@ -1,10 +1,5 @@
 {
   "links": [
-    "43c7e244484b053f",
-    "https://www.moneytimes.com.br/conab-cenoura-banana-e-batata-tem-queda-de-precos-em-outubro-tomate-cebola-e-alface-sobem/",
-    "9748e1a4e11122d9",
-    "https://www.infomoney.com.br/mercados/sabesp-sbsp3-tem-dois-catalisadores-no-radar-e-bbi-reitera-recomendacao-de-compra/",
-    "2ab387f259bc65e3",
     "9214eb123c5c2bfb",
     "bc363374a79a967b",
     "c3e9537a15b88adc",
@@ -799,11 +794,14 @@
     "74e0d1198f93512e",
     "c0c12a6a624b4689",
     "03d8c61e3a064b4f",
-    "ee4bd78ca88af8e8"
+    "ee4bd78ca88af8e8",
+    "9e1032caf767a640",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/futuro-presidente-bce-depositos-tokenizados/",
+    "b5b55eab35db854e",
+    "https://www.poder360.com.br/poder-economia/cade-aprova-sociedade-entre-itau-e-klabin-em-negocio-de-r-12-bilhao/",
+    "77c32bce88c0bc68"
   ],
   "titulos": [
-    "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
-    "Novo plano da Petrobras ronda os US$ 115 bilhões, com dividendos no radar",
     "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
     "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
     "Houthis atacam refinaria saudita e Trump ameaça Teerã",
@@ -1601,11 +1599,11 @@
     "Rali de IA impulsiona mercados e EWZ salta 12% com Trabuco",
     "Desemprego cai para 5,1% no trimestre encerrado em outubro, diz IBGE",
     "Inflação pesa, mas gasto de fim de ano deve crescer nos EUA",
-    "IA intensifica ataques cibernéticos ao setor elétrico e empresas montam grupo de defesa no Brasil"
+    "IA intensifica ataques cibernéticos ao setor elétrico e empresas montam grupo de defesa no Brasil",
+    "Futuro presidente do BCE prioriza depósitos tokenizados",
+    "Cade aprova sociedade entre Itaú e Klabin em negócio de R$ 1,2 bilhão"
   ],
   "leads": [
-    "O francês Emmanuel Macron voltou a questionar a carne de boi produzida no Brasil e, em reunião com lideranças rurais da França na quarta-feira (25), no Eliseu, em Paris, chamou o produto de “dopado” e celebrou as barreiras sanitárias impostas pela União Europeia. A Associação Brasileira das Indústrias Exportadoras de Carnes (Abiec) rebateu a acusaç",
-    "O Tribunal de Contas da União (TCU) decidiu na quarta-feira (25) alertar o governo federal sobre o risco de superestimação de R$ 8,43 bilhões em receitas extraordinárias previstas para 2026 com o Programa de Transição Integral (PTI). Por unanimidade, os ministros avaliaram como baixa a probabilidade de essa arrecadação ocorrer ainda neste ano.",
     "O Ministério de Minas e Energia (MME) voltou a afirmar nesta quinta (26/11) que não vê risco de faltar etanol anidro, o etanol misturado à gasolina, durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta (25/11), na reunião de monitoramento do abastecimento de etanol da safra 2026/2027, com representantes do governo e da cad",
     "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit",
     "Pedro Peduzzi – Repórter da Agência Brasil",
@@ -1853,7 +1851,9 @@
     "Os mercados globais operavam em forte alta nesta sexta-feira (27), impulsionados pela volta das compras em ações de tecnologia e inteligência artificial e por sinais de novas medidas de Pequim para sustentar o mercado de capitais chinês. No pré-mercado de Nova York, o EWZ, ETF que replica o MSCI Brazil 25/50, disparava 12,04%, a US$ 33,79, às 7h47 ",
     "Taxa recuou 0,3 ponto percentual ante o mesmo período de 2025, quando foi de 5,4%",
     "Consumidores dos Estados Unidos chegam à Black Friday mais cautelosos por causa da inflação e das incertezas do mercado de trabalho, mas seguem dispostos a gastar nas festas de fim de ano — desde que encontrem descontos. É o que aponta reportagem da CNBC, segundo a qual dados recentes e relatos de varejistas indicam uma temporada de compras robusta",
-    "A inteligência artificial (IA) está tornando os ataques cibernéticos mais rápidos e convincentes, ao mesmo tempo em que crises geopolíticas elevam a pressão sobre infraestruturas críticas, na avaliação de Rolf Satake, gerente do Centro de Segurança Cibernética do Itaipu Parquetec."
+    "A inteligência artificial (IA) está tornando os ataques cibernéticos mais rápidos e convincentes, ao mesmo tempo em que crises geopolíticas elevam a pressão sobre infraestruturas críticas, na avaliação de Rolf Satake, gerente do Centro de Segurança Cibernética do Itaipu Parquetec.",
+    "O Conselho Europeu anunciou em 26 de novembro a indicação de Pablo Hernandez de Cos, ex-governador do Banco da Espanha, para presidir o Banco Central Europeu (BCE). Ele seria o primeiro espanhol no cargo e deve suceder Christine Lagarde, que deixa o posto em 7 de fevereiro. O nome ainda precisa de consulta ao Parlamento Europeu e ao Conselho do BCE",
+    "Banco terá participação na Bougainville Reflorestadora, empresa que reúne 37,3 mil hectares de ativos florestais"
   ],
   "eventos_recentes": [
     {
@@ -2583,11 +2583,21 @@
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795781304.528155
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795782296.631148
+    },
+    {
+      "chave": "itau::GERAL_ATIVO",
+      "ts": 1795782296.631148
+    },
+    {
+      "chave": "klabin::GERAL_ATIVO",
+      "ts": 1795782296.631148
     }
   ],
   "hashes_imagens": [
-    "b9dca60726f98af0",
-    "9e396060ac9ad8ca",
     "c7664be2dc191376",
     "ee2161dc110b75cb",
     "baee54770d2b19f0",
@@ -2885,6 +2895,8 @@
     "2e85951eeb057abc",
     "f03da4bcc0f89a19",
     "f788f706f4af5b1b",
-    "d22a6498b3b540a1"
+    "d22a6498b3b540a1",
+    "7aeb3db519c4b810",
+    "91228e6c864de26a"
   ]
 }
