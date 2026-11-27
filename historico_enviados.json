@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-governo/cotado-para-a-fazenda-trabuco-se-reune-com-lula-no-alvorada/",
-    "137df4b9038882d9",
-    "0a6c97babf7cb7e7",
     "ba0daba419f54ed7",
     "https://www.moneytimes.com.br/petroleo-fecha-em-alta-em-meio-a-temor-com-oferta-diante-de-escalada-de-tensao-no-oriente-medio-davs/",
     "5c59986584fe7e59",
@@ -799,7 +796,10 @@
     "c95150704d495608",
     "7d1f8a90af1ae59e",
     "https://www.infomoney.com.br/onde-investir/por-que-investir-no-exterior-deixou-de-ser-apenas-protecao-contra-riscos-do-brasil/",
-    "f397b943f7e62bba"
+    "f397b943f7e62bba",
+    "c79eb56959820a77",
+    "2b2835b5e8bde10b",
+    "02c872c04c6fce1d"
   ],
   "titulos": [
     "EZ Tec aprova reorganização com incorporações e cisão",
@@ -1856,10 +1856,6 @@
     "A diversificação internacional deixou de ser apenas uma estratégia para proteger o patrimônio de crises no Brasil e passou a ser uma ferramenta para melhorar a relação entre risco e retorno das carteiras. Para gestores da XP Asset Management e da Pragma, a construção de portfólios globais deve ser uma decisão estrutural, que considere diferentes me"
   ],
   "eventos_recentes": [
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795638558.81176
-    },
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795638913.752705
