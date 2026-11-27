@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://megawhat.uol.com.br/economia-e-politica/empresas/consumo-de-energia-cresce-51-na-energisa-enquanto-gas-para-termicas-cai-727/",
-    "062873025a58d972",
-    "ce661ad189bda9a0",
-    "806b90d665e6796b",
-    "416d2e35b9d9e0e8",
     "926819c83271308d",
     "522af7085ac7eea7",
     "72af277c2441fcaf",
@@ -799,10 +794,14 @@
     "5b7d8cc42beb80f2",
     "1ea25d0dc9d7656f",
     "https://bmcnews.com.br/economia/contas-do-governo-tem-superavit-de-r-523-bilhoes-em-outubro/",
-    "253828ee79acc19a"
+    "253828ee79acc19a",
+    "9075a3e39a7c9899",
+    "81452242a9334606",
+    "9e82ba2e7865ee25",
+    "https://investnews.com.br/negocios/black-friday-do-papel-higienico-no-meli/",
+    "6b010867b8100c55"
   ],
   "titulos": [
-    "Mudanças em impostos de dividendos, investimentos isentos e fortunas entram no radar",
     "Além do pacote fiscal, veja pautas econômicas que governo tenta aprovar até dezembro",
     "13º salário vai cair na conta? Veja o que fazer com dinheiro para começar 2027 no azul",
     "Leilões de baterias têm inscrições prorrogadas até esta segunda",
@@ -1601,10 +1600,10 @@
     "OPINIÃO: O cisne negro em Brasília",
     "Por que Petrobras (PETR4) recua em dia de altas no Ibovespa?",
     "Inadimplência de pessoa física no crédito sobe para perto do recorde em outubro",
-    "Contas do governo têm superávit de R$ 52,3 bilhões em outubro"
+    "Contas do governo têm superávit de R$ 52,3 bilhões em outubro",
+    "A Black Friday do papel higiênico: o que o Mercado Livre vê no consumo"
   ],
   "leads": [
-    "A Corteva anunciou um investimento inicial de aproximadamente US$ 3,2 milhões, equivalente a cerca de R$ 17 milhões, em sua unidade industrial de Franco da Rocha (SP). Os recursos serão destinados à preparação da estrutura para formular um fungicida que, segundo a companhia, tem uma nova molécula criada especificamente para atender às demandas da a",
     "Banco confirmou que estuda operar linhas do programa habitacional; movimento ocorre uma semana após o Itaú anunciar entrada nas faixas de renda média e no Pró-Cotista.",
     "Segundo Borim, as emissões estão sendo feitas, contemplando quatro títulos desse tipo até o momento.",
     "O hotel tem 545 quartos e ocupa uma torre de 39 andares na esquina das avenidas Atlântica e Princesa Isabel. O escritório de arquitetura Triptyque foi escolhido pela HSI para projetar a modernização dos interiores do hotel.",
@@ -1853,7 +1852,8 @@
     "Não previ. Começo por aí porque tenho cobrado coerência de outros analistas em público, e seria feio não reconhecer: Luiz Carlos Trabuco na Fazenda não estava no meu cenário, nem no rodapé dele, nem na lista das coisas improváveis. Para mim foi um cisne negro. E dos bons.",
     "As ações da Petrobras perdem mais de 3% na tarde desta sexta-feira (27), na contramão da euforia observada em outros setores do Ibovespa. Os papéis da petroleira recuam 4,10% para PETR3, a R$ 47,08, e 3,13% para PETR4, a R$ 41,82, às 12h54 (horário de Brasília).",
     "A inadimplência do crédito rural para pessoas físicas com recursos direcionados subiu para 9,6% em outubro, de 8,6% em setembro. O resultado está apenas 0,1 ponto porcentual abaixo do recorde da série, de 9,7%, registrado em agosto.",
-    "Pedro Peduzzi – Repórter da Agência Brasil"
+    "Pedro Peduzzi – Repórter da Agência Brasil",
+    "“Está sendo a Black Friday do papel higiênico”, afirma Fernando Yunes, vice-presidente executivo de commerce do Mercado Livre na América Latina e líder da companhia no Brasil."
   ],
   "eventos_recentes": [
     {
@@ -2591,10 +2591,13 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795795495.263528
+    },
+    {
+      "chave": "mercado_livre::GERAL_ATIVO",
+      "ts": 1795796527.82558
     }
   ],
   "hashes_imagens": [
-    "067946fdb880f92c",
     "8c9eefc09e92fdec",
     "58abfd34c434a633",
     "41e662cc78294bd7",
@@ -2893,6 +2896,7 @@
     "a881d531bda05777",
     "f3214e10795af433",
     "d862bc90f7ce34bf",
-    "9b692dd4f0384d40"
+    "9b692dd4f0384d40",
+    "fac010e7654c85d4"
   ]
 }
