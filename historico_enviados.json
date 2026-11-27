@@ -1,9 +1,5 @@
 {
   "links": [
-    "6dc2f906ff43fab8",
-    "b55a52ff5746b1c4",
-    "https://www.spacemoney.com.br/politica/lula-ministerio-seguranca-autonomia/",
-    "0bbbcfb64332c844",
     "https://agenciainfra.com/blog/senado-aprova-urgencia-de-pl-que-libera-indicacao-de-politicos-a-agencias/?utm_source=rss&utm_medium=rss&utm_campaign=senado-aprova-urgencia-de-pl-que-libera-indicacao-de-politicos-a-agencias",
     "d0ee4aa11dd964ed",
     "https://www.moneytimes.com.br/cosan-csan3-jbs-jbss32-grupo-fictor-e-outros-destaques-desta-quinta-feira-mlem/",
@@ -799,10 +795,13 @@
     "065a587d1b874daf",
     "dd2baa936837e7ec",
     "https://investnews.com.br/negocios/black-friday-agentes-de-ia-varejo/",
-    "4b37a1593b165319"
+    "4b37a1593b165319",
+    "b9242a08f8647cb9",
+    "68b71d306b810568",
+    "https://www.moneytimes.com.br/o-espanhol-pablo-hernandez-de-cos-assumira-a-presidencia-do-bce-no-lugar-de-christine-lagarde-fets/",
+    "bd7e67e45fcdd4f9"
   ],
   "titulos": [
-    "OAB-SP estima perda de R$ 200 bilhões por ano com pejotização",
     "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
     "Social Security sobe 3,6% em 2027, mas impostos aumentam",
     "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo",
@@ -1601,10 +1600,10 @@
     "Azul mudou programação para próxima temporada diante da alta do QAV",
     "Após anos de bombardeios russos, maior siderúrgica da Ucrânia agora é alvo de tarifas",
     "Safra de soja do Brasil em 2026/27 deve cair 1,3%, prevê Agroconsult",
-    "Na Black Friday dos agentes de IA, varejo disputa quem escolhe o que você compra"
+    "Na Black Friday dos agentes de IA, varejo disputa quem escolhe o que você compra",
+    "O espanhol Pablo Hernández De Cos assumirá a presidência do BCE no lugar de Christine Lagarde"
   ],
   "leads": [
-    "A Companhia de Gás de Minas Gerais (Gasmig) atingiu a marca de 125 mil clientes ligados no mercado urbano. O número reflete o crescimento da distribuidora e a expansão da rede de distribuição de gás natural em Minas Gerais.",
     "Promotores de Justiça e policiais civis deflagraram, na manhã desta quinta-feira (26), a Operação Dinheiro Fictício, que mira o Grupo Fictor. A Justiça determinou o sequestro de bens e valores e o bloqueio de contas de 233 investigados, entre pessoas físicas e jurídicas, até o limite de aproximadamente R$ 4,3 bilhões.",
     "O conselho de administração da Smart Fit (SMFT3) aprovou a distribuição de juros sobre o capital próprio (JCP) aos acionistas e um aumento de capital da companhia.",
     "O Índice de Confiança da Indústria (ICI) da Fundação Getulio Vargas (FGV) subiu 0,4 ponto em novembro em comparação a outubro, para 91,4 pontos. Esta foi a primeira alta após quatro meses consecutivos de queda do indicador. Em médias móveis trimestrais, o ICI caiu 0,8 ponto, a 91,2 pontos.",
@@ -1853,13 +1852,10 @@
     "A Azul Linhas Aéreas vai remanejar frequências de voos em cidades específicas diante do aumento do preço do QAV (querosene de aviação). A companhia prepara ajustes na programação de inverno - verão no Hemisfério Sul - para reduzir a oferta em algumas rotas e adequar a operação à alta dos custos.",
     "Voltemos 14 anos no tempo: a Ucrânia era um país em uma trajetória diferente. O Campeonato Europeu da UEFA, coorganizado com a Polônia, havia proporcionado à Ucrânia uma importante vitrine internacional e reforçado suas ambições de se integrar mais estreitamente à comunidade política e econômica europeia. Um Acordo de Associação entre a União Europ",
     "A safra de soja do Brasil 2026/27 foi estimada nesta quinta-feira em 182,3 milhões de toneladas, queda de 1,3% no comparativo com o ciclo anterior, de acordo com análise da consultoria Agroconsult apresentada em evento da Associação Nacional dos Exportadores de Cereais (Anec).",
-    "O Google também passou a conectar suas ferramentas de inteligência artificial às lojas. Em outubro, a empresa começou a disponibilizar nos Estados Unidos o Universal Cart, carrinho que reúne produtos de diferentes varejistas no buscador e no aplicativo Gemini."
+    "O Google também passou a conectar suas ferramentas de inteligência artificial às lojas. Em outubro, a empresa começou a disponibilizar nos Estados Unidos o Universal Cart, carrinho que reúne produtos de diferentes varejistas no buscador e no aplicativo Gemini.",
+    "Pablo Hernández de Cos, veterano do sistema bancário central espanhol, foi escolhido pelos países da zona do euro nesta quinta-feira (26) como o próximo presidente do Banco Central Europeu, decisão que sugere continuidade nas políticas da instituição financeira mais poderosa da Europa."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795594770.535198
-    },
     {
       "chave": "amazon::GERAL_ATIVO",
       "ts": 1795596020.820224
@@ -2595,10 +2591,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795767125.933798
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795767800.607251
     }
   ],
   "hashes_imagens": [
-    "fafc8fc631b6ec0b",
     "3ab27176f9559940",
     "864a2e118e97e841",
     "683227ac9e99f6be",
@@ -2897,6 +2896,7 @@
     "fb21f4caa9e7649f",
     "ac9d42c87888bd1a",
     "62377b73c9c6a47a",
-    "7f3e66edd40da8c4"
+    "7f3e66edd40da8c4",
+    "fb197b3e0dd18db2"
   ]
 }
