@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/tecnologia/valor-de-mercado-semicondutores/",
-    "dda0dad02c3da655",
-    "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/macron-diz-que-carne-brasileira-e-dopada-e-comemora-veto-da-ue-ao-produto.ghtml",
-    "42825820dfe45ad0",
     "6ea942e7d3d13c8f",
     "33718acae05c7ab4",
     "724c63cfd93f3ed4",
@@ -799,10 +795,13 @@
     "https://www.cnnbrasil.com.br/politica/pgr-defende-que-uniao-nao-e-obrigada-a-avalizar-emprestimo-para-salvar-brb/",
     "050ca675d7d4e39a",
     "https://www.moneytimes.com.br/entidades-defendem-renovacao-do-e32-e-continuidade-dos-testes-com-etanol-pads/",
-    "1b1ef35215030805"
+    "1b1ef35215030805",
+    "023136b45681c3d6",
+    "64df1ca13a4e747d",
+    "https://www.infomoney.com.br/mundo/zelenskiy-compara-amizade-de-trump-com-putin-a-amizade-com-hitler/",
+    "7bc53deb7d669f07"
   ],
   "titulos": [
-    "Lula não definiu ministro da Fazenda; anúncio fica para dezembro",
     "São os juros da dívida, não o BPC, mercadistas",
     "Bolsas da Ásia fecham mistas após novas medidas para conter turbulência ligada à IA",
     "Ajuste fiscal e Petrobras ditam o ritmo do mercado",
@@ -1601,10 +1600,10 @@
     "Bolsa e bancos se unem para criar  ‘stablecoin’ em reais",
     "Raízen (RAIZ4) avalia venda de sua divisão de distribuição de combustíveis, diz Ometto",
     "PGR defende que União não é obrigada a avalizar empréstimo para salvar BRB",
-    "Entidades defendem renovação do E32 e continuidade dos testes com etanol"
+    "Entidades defendem renovação do E32 e continuidade dos testes com etanol",
+    "Zelenskiy compara amizade de Trump com Putin à amizade com Hitler"
   ],
   "leads": [
-    "A alta do consumo nos supermercados, observada em outubro, primeiro mês após a proibição das apostas online, ganhou força em novembro. Para a Associação Brasileira de Supermercados (Abras), o comportamento dos consumidores nas lojas já sinaliza que o fim das bets abriu espaço no orçamento das famílias, embora não seja o único fator por trás do avan",
     "O ministro da Defesa, Israel Katz, ameaçou deslocar um milhão de palestinos caso o Hamas não se desarme voluntariamente. A ameaça foi feita em postagem no X nesta quinta-feira, 26. Katz afirmou que, se o grupo não entregar as armas e Gaza não for desmilitarizada conforme o plano do presidente dos Estados Unidos, Donald Trump, as Forças de Defesa de",
     "O Banco Central informou nesta quinta-feira (26) que o investimento direto no país, ou seja, o valor acumulado dos investimentos de estrangeiros em empresas e negócios no Brasil, atingiu a marca de R$ 1,41 trilhão no fim de 2025. O montante equivale a 49,3% do Produto Interno Bruto (PIB), recorde da série histórica.",
     "A bolsa brasileira amanheceu hoje com um salto de 6 mil pontos, estendendo os ganhos da véspera. O Ibovespa abriu a sessão desta quinta-feira (26) em forte alta, recuperando os 173 mil pontos já nos primeiros minutos do pregão.",
@@ -1853,7 +1852,8 @@
     "Bolsa e bancos se unem para criar ‘stablecoin’ em reais",
     "A Raízen (RAIZ4) avalia a venda de sua divisão de distribuição de combustíveis como parte de um plano mais amplo de desinvestimento, afirmou o acionista fundador Rubens Ometto à Reuters na manhã de sexta-feira (27).",
     "A PGR (Procuradoria-Geral da República) defendeu nessa quinta-feira (26) que a União não pode ser obrigada a avalizar um empréstimo ao governo do Distrito Federal para socorrer o BRB (Banco de Brasília).",
-    "A Bioenergia Brasil, a União Nacional do Etanol de Milho (Unem) e a União da Indústria de Cana-de-Açúcar e Bioenergia (Unica) defenderam a renovação da mistura de 32% de etanol na gasolina (E32) e a continuidade dos estudos e do acompanhamento da medida pelo governo."
+    "A Bioenergia Brasil, a União Nacional do Etanol de Milho (Unem) e a União da Indústria de Cana-de-Açúcar e Bioenergia (Unica) defenderam a renovação da mistura de 32% de etanol na gasolina (E32) e a continuidade dos estudos e do acompanhamento da medida pelo governo.",
+    "– O presidente da Ucrânia, Volodymyr Zelenskiy, afirmou que é estranho o ‌presidente dos Estados Unidos, Donald Trump, chamar o presidente russo, Vladimir Putin, de ‘meu ‌amigo’ e comparou a declaração a alguém dizer o mesmo sobre Adolf Hitler durante a Segunda Guerra Mundial."
   ],
   "eventos_recentes": [
     {
@@ -2582,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "99826c6a8d97bf7c",
     "48603b934267e5dc",
     "0685a78008456458",
     "8b305e0186d7ac5d",
@@ -2881,6 +2880,7 @@
     "25dcdc4abcf0984a",
     "db959e8a68f8e79b",
     "0e4a4db9dc0dca64",
-    "6e140a05986fdec3"
+    "6e140a05986fdec3",
+    "51ce6c1059b3179b"
   ]
 }
