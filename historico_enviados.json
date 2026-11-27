@@ -1,13 +1,5 @@
 {
   "links": [
-    "f6b3dd6496359f4e",
-    "73d45e51353f8824",
-    "49460f05774e72c2",
-    "4cc1d052b24a77a2",
-    "05ed15ead5d4ed1e",
-    "ec4eeb9526743b30",
-    "aaa9010e16e753bf",
-    "8b032120375f88b1",
     "dc4b52d1c09648d9",
     "045e503d0ab58c06",
     "8b65e5a86517227e",
@@ -799,13 +791,17 @@
     "https://www.spacemoney.com.br/commodities/boi-gordo-consolidacao-mercado-paulista/",
     "3ea1ba469f78ea6f",
     "https://www.poder360.com.br/poder-economia/durigan-deseja-sucesso-a-trabuco-e-oferece-apoio-na-transicao/",
-    "83661067c8dbfe50"
+    "83661067c8dbfe50",
+    "https://www.cnnbrasil.com.br/infra/infraestrutura-vive-superciclo-de-investimentos-diz-ronei-glanzmann/",
+    "365df06009756588",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/seguranca-e-valor-inegociavel-da-ultracargo-diz-fulvius-tomelin/",
+    "726ffcf07b6daaae",
+    "https://www.cnnbrasil.com.br/infra/santos-brasil-planeja-investir-r-35-bi-em-4-anos-diz-sepulveda/",
+    "750d1e27932c3105",
+    "https://www.cnnbrasil.com.br/politica/guimaraes-elogia-trabuco-e-diz-que-futuro-ministro-e-parceiro-de-dialogo/",
+    "8b5a6fcd2de6e003"
   ],
   "titulos": [
-    "Vivo comercializa 5G+ com picos de até 2 Gbps",
-    "Telebras mira autonomia financeira e projeta fim de aportes do governo",
-    "Telebras estima iniciar operação de data center de IA em 1 ano",
-    "Copel não ampliará parque eólico até resolução do curtailment, diz CEO",
     "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
     "Boi gordo renova recorde e futuro aponta dezembro mais alto",
     "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data",
@@ -1601,13 +1597,13 @@
     "Deputada pede bloqueio de 14 emendas de Flávio ao Orçamento de 2027",
     "Motta e Alcolumbre recebem com otimismo escolha de Trabuco para Fazenda",
     "Preço do boi gordo acomoda após avanço, aponta Datagro",
-    "Durigan deseja sucesso a Trabuco e oferece apoio na transição"
+    "Durigan deseja sucesso a Trabuco e oferece apoio na transição",
+    "Infraestrutura vive “superciclo” de investimentos, diz Ronei Glanzmann",
+    "Segurança é “valor inegociável” da Ultracargo, diz Fulvius Tomelin",
+    "Santos Brasil planeja investir R$ 3,5 bi em 4 anos, diz Sepúlveda",
+    "Guimarães elogia Trabuco e diz que futuro ministro é “parceiro de diálogo”"
   ],
   "leads": [
-    "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos.",
-    "O governo brasileiro decidiu que o embaixador do Brasil na Argentina, Julio Bitelli, não deve retomar suas funções diplomáticas no país vizinho. Bitelli deve ir a Buenos Aires apenas para buscar pertences pessoais sem reassumir o posto que deixou em julho após atritos diplomáticos entre os dois governos.",
-    "De acordo com o TecMundo, uma investigação da Reuters apontou que empresas associadas a Alice Huang teriam usado equipamentos de data centers de IA como garantia para obter financiamentos na China. Alice ficou conhecida após o caso extraconjugal com Jensen Huang, CEO da Nvidia, que se afastou temporariamente do cargo.",
-    "O varejo alimentar brasileiro teve sua semana mais forte deste ano entre os dias 9 e 15 de novembro. Dados da Nielsen, empresa global de inteligência de mercado, mostram que as vendas em supermercados e hipermercados, lojas de atacarejo e farmácias tiveram alta de 12% em valor e de 6,7% na comparação anual.",
     "Os fundos de debêntures incentivadas acumulam oito meses de saques e, no acumulado de 12 meses encerrado em meados de novembro, tiveram ganho médio de 6,93%, menos da metade do CDI, conforme números da Anbima reunidos pelo InvestNews. O índice IDA-IPCA Infraestrutura recuou 1,03% em novembro até o dia 24, quando o CDI subiu 0,76%; no ano, o indicad",
     "A Reforma Tributária, que deve alterar a lógica histórica de localização de centros de distribuição no Brasil ao reduzir a relevância dos incentivos fiscais estaduais, não deve provocar mudanças na estratégia logística da Amazon (AMZO34) no país. Pelo contrário: a companhia pretende expandir sua rede de operações, aumentar o número de centros logís",
     "A Suno Notícias informou que o avanço de apartamentos compactos em grandes centros urbanos tem ampliado a procura por self storage, serviço de locação para guardar móveis, itens pessoais e mercadorias. O segmento começa a ser observado como possível alternativa de diversificação para fundos imobiliários focados em renda.",
@@ -1853,13 +1849,13 @@
     "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos",
     "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo",
     "As negociações com boi gordo no mercado paulista ocorrem entre R$ 390 e R$ 400 por arroba, faixa que sinaliza acomodação após um período de valorização, de acordo com Guilherme Jank, da Datagro. O analista avalia que o avanço das cotações perdeu intensidade e encontrou resistência em escalas de abate mais longas.",
-    "Ministro da Fazenda diz ter convicção de que seu sucessor conduzirá o país com seriedade e ética"
+    "Ministro da Fazenda diz ter convicção de que seu sucessor conduzirá o país com seriedade e ética",
+    "O setor de infraestrutura brasileiro vive um superciclo de investimentos, mas enfrenta desafios significativos para manter o ritmo de crescimento nos próximos anos.",
+    "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
+    "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
+    "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795567620.489896
-    },
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795567968.658375
@@ -2579,13 +2575,13 @@
     {
       "chave": "usiminas::GERAL_ATIVO",
       "ts": 1795738793.111975
+    },
+    {
+      "chave": "santos_brasil::GERAL_ATIVO",
+      "ts": 1795740432.061637
     }
   ],
   "hashes_imagens": [
-    "61f5aab88123d5b1",
-    "e3e71d6f6b7dd86d",
-    "4304d50a2cc538a4",
-    "4e0ad79ad3c9295d",
     "2bb59310a07d5016",
     "43f752f4b06b219d",
     "8ea2f804400578f5",
@@ -2881,6 +2877,10 @@
     "6c7ed79a485d52ff",
     "9ae40515fa311eb2",
     "30c0eff1f506d3e7",
-    "7186b33eb03e4adf"
+    "7186b33eb03e4adf",
+    "26ac8bdb8b581ca6",
+    "35ee74ee71ae3945",
+    "98d4dc4e283c1922",
+    "c809fc5e36185f3b"
   ]
 }
