@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/tecnologia/openai-cota-chatgpt-codex-dezembro/",
-    "53b51ce3c54470fd",
-    "8b1e7d25b64b2326",
-    "f1b665016952b65a",
-    "f6d9c00e8d2a60d5",
     "https://eixos.com.br/politica/entidades-do-setor-eletrico-e-de-telecomunicacoes-pedem-sancao-integral-do-projeto-de-lei-que-organiza-postes/",
     "db9686ff3f908660",
     "https://www.poder360.com.br/poder-congresso/comissao-aprova-parecer-preliminar-do-orcamento-de-2027/",
@@ -799,10 +794,14 @@
     "https://www.infomoney.com.br/mercados/banco-ve-beneficio-limitado-para-csn-gerdau-e-usiminas-com-novas-tarifas-antidumping/",
     "a68201ee2f50d219",
     "https://www.infomoney.com.br/mundo/ucrania-apresenta-proposta-de-tregua-no-mar-negro-e-aguarda-resposta-da-russia/",
-    "697ccbab4d5465f7"
+    "697ccbab4d5465f7",
+    "331dc3fcec5b4c4b",
+    "6fa961e95c8abba4",
+    "8b6ce9336ebc0b52",
+    "https://www.spacemoney.com.br/agronegocio/nottus-chuva-superior-media-dezembro/",
+    "272c466d4422af33"
   ],
   "titulos": [
-    "Investir em IPOs pode trazer riscos para o investidor, diz economista",
     "Moura obtém aval do BNDES para disputar leilão de baterias com conteúdo nacional",
     "OKXICE inicia negociação de títulos tokenizados nos EUA",
     "SUSEP lança estudo sobre educação securitária",
@@ -1601,10 +1600,10 @@
     "Ouro fecha em forte alta e acumula ganhos de mais de 4% na semana",
     "Black Friday 2026 tem queda de 34% nas reclamações; veja dicas para comprar",
     "Banco vê benefício limitado para CSN, Gerdau e Usiminas com novas tarifas antidumping",
-    "Ucrânia apresenta proposta de trégua no Mar Negro e aguarda resposta da Rússia"
+    "Ucrânia apresenta proposta de trégua no Mar Negro e aguarda resposta da Rússia",
+    "Chuva deve superar média em dezembro no Sul, SP e MS"
   ],
   "leads": [
-    "O Pix superou o cartão de crédito como meio de pagamento mais usado por pequenas e médias empresas digitais na largada da Black Week 2026. Nas primeiras horas do evento, o Pix respondeu por 48,88% dos pedidos, ante 47,55% do cartão, segundo dados da Nuvemshop compartilhados com a reportagem do InfoMoney com exclusividade. É a primeira vez que isso ",
     "A Instituição Fiscal Independente (IFI), órgão ligado ao Senado Federal, estimou que sem os benefícios concedidos a produtos e setores da sociedade durante a tramitação da reforma tributária sobre o consumo, a alíquota de referência estimada do futuro imposto do governo federal cairia para 7% em 2027.",
     "O XPCA11, fundo de investimento agrícola gerido pela XP, anunciou em novembro o pagamento de R$ 0,09 por cota referente a outubro, o menor valor distribuído em 2026. A redução reflete a queda do resultado contábil do fundo, impactada pela volatilidade do mercado financeiro após as eleições.",
     "Na edição de 26 de novembro do Boletim TELETIME, você vai entender por que o TCU negou a pactuação por consenso na renovação das faixas de 850 MHz. Sobre o PL dos Postes, o MCom não deve recomendar vetos ao projeto.",
@@ -1853,7 +1852,8 @@
     "O contrato futuro do ouro fechou em alta nesta sexta-feira (27), impulsionado por uma melhora no sentimento de mercado, à medida que as ações nas bolsas globais avançaram. O clima positivo nos mercados foi puxado pelo otimismo com o setor de inteligência artificial (IA).",
     "O volume de reclamações da Black Friday registrado até o início desta sexta-feira, entre às 12h de quarta-feira (25) e às 6h desta sexta-feira (27) ficou 34% abaixo do registrado no mesmo período do ano passado. Segundo o Reclame AQUI, foram contabilizados 5,7 mil reclamações, ante 8,6 mil no intervalo equivalente de 2025.",
     "O Morgan Stanley avalia que as novas tarifas antidumping aprovadas pelo governo brasileiro devem trazer apenas um alívio limitado à concorrência das importações no setor siderúrgico.",
-    "A Ucrânia propôs um cessar-fogo ‌no Mar Negro para viabilizar as exportações de ‌alimentos e transmitiu essa proposta aos aliados internacionais, afirmou nesta sexta-feira o ministro das ‌Relações Exteriores de Kiev, Andrii Sybiha."
+    "A Ucrânia propôs um cessar-fogo ‌no Mar Negro para viabilizar as exportações de ‌alimentos e transmitiu essa proposta aos aliados internacionais, afirmou nesta sexta-feira o ministro das ‌Relações Exteriores de Kiev, Andrii Sybiha.",
+    "A Nottus prevê volume de chuva superior à média para dezembro em Mato Grosso do Sul, São Paulo, Paraná, Santa Catarina e Rio Grande do Sul. O relatório divulgado em 27 de novembro também indica chuvas mais recorrentes e com maior volume do Sudeste ao Norte do Brasil, além de novo avanço dos acumulados em janeiro, ao longo do ciclo da soja e do milh"
   ],
   "eventos_recentes": [
     {
@@ -2566,7 +2566,6 @@
     }
   ],
   "hashes_imagens": [
-    "76899cc7a5780733",
     "e6e318b98c09e2af",
     "d0f44f7742b01dc8",
     "8d99149e1a37bb30",
@@ -2865,6 +2864,7 @@
     "3e185c8fc4af10f7",
     "2acfa32ea1b030b9",
     "722820a4d79db0ce",
-    "4223a46be78136f2"
+    "4223a46be78136f2",
+    "e1bb725443dfc4af"
   ]
 }
