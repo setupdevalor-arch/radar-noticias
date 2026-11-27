@@ -1,8 +1,5 @@
 {
   "links": [
-    "e9121f03ad5be394",
-    "6f6a53617c5f732c",
-    "7e926766799cf299",
     "2a36ac181169da59",
     "c60ba3b638a73303",
     "d2e19f9752411437",
@@ -799,10 +796,12 @@
     "d2923da8d5f2acd8",
     "9f579c0caebc23da",
     "https://www.spacemoney.com.br/economia/exterior/fundos-soberanos-private-equity-direto/",
-    "8c22cd9aba1290c9"
+    "8c22cd9aba1290c9",
+    "7f3f4dd2b2bef3da",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/bndes-aprova-r-26-bilhoes-para-capital-de-giro-da-latam-brasil/",
+    "b5f3c803307ca8fd"
   ],
   "titulos": [
-    "Quando a Itaúsa (ITSA4) paga dividendos? Veja próxima data",
     "Goldman Sachs: Brasil precisa de ajuste nas contas públicas de R$ 400 bi",
     "Por que EUA não querem que empresas construam data centers em outros países",
     "Brecha no Java acende alerta para bancos e governos",
@@ -1601,10 +1600,10 @@
     "Santos Brasil planeja investir R$ 3,5 bi em 4 anos, diz Sepúlveda",
     "Guimarães elogia Trabuco e diz que futuro ministro é “parceiro de diálogo”",
     "Visa foca seus esforços em pagamentos agênticos, diz diretor",
-    "Fundos soberanos assumem papel de gestoras de private equity"
+    "Fundos soberanos assumem papel de gestoras de private equity",
+    "BNDES aprova R$ 2,6 bilhões para capital de giro da Latam Brasil"
   ],
   "leads": [
-    "A Suno Notícias informou que o avanço de apartamentos compactos em grandes centros urbanos tem ampliado a procura por self storage, serviço de locação para guardar móveis, itens pessoais e mercadorias. O segmento começa a ser observado como possível alternativa de diversificação para fundos imobiliários focados em renda.",
     "O BTG Pactual elevou o preço-alvo do IRB (IRBR3) de R$ 75 para R$ 90, reiterando a recomendação de compra. O novo preço implica um potencial de alta de 54,2%. O banco atualizou as estimativas para incorporar os resultados da resseguradora no terceiro trimestre de 2026 e o impacto da Lei 15.525/2026, que altera regras tributárias para resseguradoras",
     "O ouro entendeu as perdas da véspera e fechou em queda nesta quarta-feira (25). O metal segue sob pressão das expectativas de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), após a divulgação de dados de inflação dos Estados Unidos.",
     "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado.",
@@ -1853,7 +1852,8 @@
     "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
     "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra",
-    "Os maiores fundos soberanos do mundo estão deixando de lado o papel de simples cotistas de private equity para fazer negócios por conta própria, assumindo funções típicas das grandes gestoras do setor, segundo reportagem da CNBC. Levantamento da consultoria PwC citado pela emissora americana aponta que esses investidores estatais passaram a origina"
+    "Os maiores fundos soberanos do mundo estão deixando de lado o papel de simples cotistas de private equity para fazer negócios por conta própria, assumindo funções típicas das grandes gestoras do setor, segundo reportagem da CNBC. Levantamento da consultoria PwC citado pela emissora americana aponta que esses investidores estatais passaram a origina",
+    "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) liberou financiamento de R$ 2,66 bilhões para capital de giro da operação brasileira da companhia aérea Latam Airlines, informou o banco de fomento nessa quinta-feira (26)."
   ],
   "eventos_recentes": [
     {
@@ -2578,7 +2578,6 @@
     }
   ],
   "hashes_imagens": [
-    "8ea2f804400578f5",
     "d1d2a4c1161b307b",
     "a145d45ec69a0ec6",
     "0e5a10bd58d95c23",
@@ -2877,6 +2876,7 @@
     "98d4dc4e283c1922",
     "c809fc5e36185f3b",
     "e740fae44b64def7",
-    "d3dea7f642ac07eb"
+    "d3dea7f642ac07eb",
+    "8f778e6c49361a3f"
   ]
 }
