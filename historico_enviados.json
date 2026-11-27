@@ -1,7 +1,5 @@
 {
   "links": [
-    "9ea0a5f13516bac6",
-    "ff45cfe24c3370ef",
     "https://www.cnnbrasil.com.br/politica/alckmin-diz-que-tarifa-ao-setor-aeronautico-e-totalmente-descabida/",
     "3e96ed034f69826e",
     "https://www.moneytimes.com.br/pacc11-mesmo-com-surpresa-do-ipca-15-titulos-indexados-a-inflacao-seguem-interessantes/",
@@ -799,10 +797,11 @@
     "81850dcbe019015d",
     "1e92bc5edaf298d9",
     "bc13273021c4fe4a",
-    "73709b0ba5a821d7"
+    "73709b0ba5a821d7",
+    "https://www.poder360.com.br/poder-economia/desemprego-cai-para-51-no-trimestre-encerrado-em-outubro-diz-ibge/",
+    "eac4d42a748dc533"
   ],
   "titulos": [
-    "Reforma tributária é positiva para nanoempreendedores, diz associação",
     "Cientista-chefe da OpenAI defende limites para o desenvolvimento de IA no setor",
     "Dólar digital chega a R$ 6,15 em negociação neste domingo",
     "Investidores hesitam em comprar na baixa com Nasdaq 100 perto de bear market",
@@ -1601,10 +1600,10 @@
     "Brava (BRAV3) inicia produção do poço PPT-53 no campo de Papa-Terra",
     "Injective defende order book em regra de ações tokenizadas",
     "Rússia afirma ter atacado embarcação que transportava carga militar no Mar Negro",
-    "Rali de IA impulsiona mercados e EWZ salta 12% com Trabuco"
+    "Rali de IA impulsiona mercados e EWZ salta 12% com Trabuco",
+    "Desemprego cai para 5,1% no trimestre encerrado em outubro, diz IBGE"
   ],
   "leads": [
-    "A mudança na metodologia de projeção do suprimento de energia de Itaipu ao Paraguai colocou geradores e grandes consumidores em oposição e levou a Agência Nacional de Energia Elétrica (Aneel) a cobrar, na terça-feira, 24 de novembro, um posicionamento da Empresa Brasileira de Participações em Energia Nuclear e Binacional (ENBPar) sobre a necessidad",
     "A proposta dos Estados Unidos de elevar as tarifas sobre as importações de açúcar fora das cotas preferenciais pode fazer a cobrança sobre o açúcar bruto de cana brasileiro superar 200% do valor do produto, aos preços atuais. A estimativa é da Bioenergia Brasil e da UNICA (União da Indústria de Cana-de-Açúcar e Bioenergia).",
     "O Brasil tinha 262 mil hectares de vegetação nativa em recuperação em 2026, ante 79 mil hectares em 2021, alta de 231,6% em cinco anos, segundo o Observatório da Restauração, da Coalizão Brasil Clima, Florestas e Agricultura. Sobre 2025, o avanço é de 29%, com 58,3 mil hectares adicionados ao levantamento.",
     "O francês Emmanuel Macron voltou a questionar a carne de boi produzida no Brasil e, em reunião com lideranças rurais da França na quarta-feira (25), no Eliseu, em Paris, chamou o produto de “dopado” e celebrou as barreiras sanitárias impostas pela União Europeia. A Associação Brasileira das Indústrias Exportadoras de Carnes (Abiec) rebateu a acusaç",
@@ -1853,7 +1852,8 @@
     "A Brava Energia (BRAV3) comunicou o início, nesta quinta-feira (26), da produção do poço PPT53, localizado no Campo de Papa-Terra, após a obtenção da autorização do Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama).",
     "A Injective Labs enviou à SEC uma manifestação em 23 de novembro pedindo que a isenção de inovação de cinco anos, que permite a certas plataformas de blockchain negociar ações tokenizadas dos EUA sem registro como bolsas nacionais de valores, contemple também sistemas de order book, usados por bolsas tradicionais. A empresa argumenta que a regra at",
     "O ‌Ministério da Defesa da ‌Rússia informou nesta sexta-feira que atacou ‌uma embarcação que transportava carga militar no Mar Negro.",
-    "Os mercados globais operavam em forte alta nesta sexta-feira (27), impulsionados pela volta das compras em ações de tecnologia e inteligência artificial e por sinais de novas medidas de Pequim para sustentar o mercado de capitais chinês. No pré-mercado de Nova York, o EWZ, ETF que replica o MSCI Brazil 25/50, disparava 12,04%, a US$ 33,79, às 7h47 "
+    "Os mercados globais operavam em forte alta nesta sexta-feira (27), impulsionados pela volta das compras em ações de tecnologia e inteligência artificial e por sinais de novas medidas de Pequim para sustentar o mercado de capitais chinês. No pré-mercado de Nova York, o EWZ, ETF que replica o MSCI Brazil 25/50, disparava 12,04%, a US$ 33,79, às 7h47 ",
+    "Taxa recuou 0,3 ponto percentual ante o mesmo período de 2025, quando foi de 5,4%"
   ],
   "eventos_recentes": [
     {
@@ -2586,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "a0c6d2620eaebcb3",
     "710f442e0b97ecbd",
     "37015ce9c8a55659",
     "b9dca60726f98af0",
@@ -2885,6 +2884,7 @@
     "0b063ef0bb04d174",
     "346abf037dcbef2f",
     "10b71efd47bcd417",
-    "2e85951eeb057abc"
+    "2e85951eeb057abc",
+    "f03da4bcc0f89a19"
   ]
 }
