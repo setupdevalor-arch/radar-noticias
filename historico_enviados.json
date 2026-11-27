@@ -1,7 +1,5 @@
 {
   "links": [
-    "941f170196a66ba8",
-    "89ff3ce2ce771c20",
     "32df2955f7d9ed71",
     "d31214baa8815a32",
     "0df5b8b6eaa192b7",
@@ -799,10 +797,11 @@
     "https://www.cnnbrasil.com.br/politica/hugo-deseja-exito-a-trabuco-na-fazenda-e-prega-dialogo-por-agenda-economica/",
     "5b276cb5c17e671f",
     "https://www.poder360.com.br/poder-congresso/deputada-pede-bloqueio-de-14-emendas-de-flavio-ao-orcamento-de-2027/",
-    "d15263f17a1b9e4f"
+    "d15263f17a1b9e4f",
+    "https://www.poder360.com.br/poder-congresso/motta-e-alcolumbre-recebem-com-otimismo-escolha-de-trabuco-para-fazenda/",
+    "1693cbe31fd2b8b0"
   ],
   "titulos": [
-    "Celesc restabelece 90% da luz em 48h após temporais em SC",
     "BTG desistiu de comprar Master por falta de garantias, diz Esteves",
     "Ouro não protege ninguém, cai a mínima em um ano e falha como porto seguro",
     "Vivo comercializa 5G+ com picos de até 2 Gbps",
@@ -1601,10 +1600,10 @@
     "Ibovespa tem 2ª maior alta diária desde 2021 e só Suzano cai no pregão",
     "Governo aprova antidumping para alguns tipos de aço; Usiminas, Gerdau e CSN aguardavam a medida",
     "Hugo deseja êxito a Trabuco na Fazenda e prega diálogo por agenda econômica",
-    "Deputada pede bloqueio de 14 emendas de Flávio ao Orçamento de 2027"
+    "Deputada pede bloqueio de 14 emendas de Flávio ao Orçamento de 2027",
+    "Motta e Alcolumbre recebem com otimismo escolha de Trabuco para Fazenda"
   ],
   "leads": [
-    "Os preços das memórias DRAM devem registrar aumentos de 18% a 22% em 2027, mesmo com a expectativa de expansão da oferta mundial de memórias. Já os preços das memórias Flash devem apresentar variação de zero a 5%. As projeções foram apresentadas pelo presidente da Associação Brasileira da Indústria de Semicondutores (ABISEMI), Rogério Nunes, durant",
     "A Anatel negou recurso administrativo apresentado pela TIM contra a suspensão de sua ferramenta de bloqueio de chamadas. A decisão foi tomada pelo presidente do Conselho Diretor da agência, Alexandre Freire. Na tentativa de reverter a medida, a operadora alegou ter adotado as providências solicitadas pela Anatel e afirmou que a suspensão poderia ex",
     "O fundo imobiliário HLOG11 (Hedge Logística FII) fechou outubro com ocupação total em seus galpões e avançou em tratativas para renovar contratos de locação com inquilinos como Unilever e Boticário. O patrimônio líquido do fundo soma cerca de R$ 507 milhões, distribuídos em dois empreendimentos logísticos que totalizam 205,2 mil metros quadrados de",
     "A TAG, dona da malha de gasodutos do Nordeste, propôs à Agência Nacional do Petróleo (ANP) reduzir à metade, a partir de 2027, a receita usada para calcular as tarifas que cobra pelo transporte de gás. Pelas contas da empresa, o mercado economizaria R$ 5,5 bilhões em 30 anos.",
@@ -1853,13 +1852,10 @@
     "O Ibovespa tem 2ª maior alta diária desde 2021 em pregão de forte rali na Bolsa brasileira, no qual praticamente toda a carteira do índice subiu e apenas Suzano fechou no campo negativo, com queda de 0,96%.",
     "O comitê-executivo da Câmara de Comércio Exterior (Gecex-Camex) aprovou nesta quinta-feira (26) aplicação de direito antidumping definitivo sobre aços planos laminados a quente originários da China e folha metálica da Alemanha, Holanda e Japão, segundo comunicado à imprensa do Ministério do Desenvolvimento (Mdic).",
     "O presidente da Câmara, Hugo Motta (Republicanos-PB), desejou êxito ao próximo ministro da Fazenda, Luiz Carlos Trabuco, e afirmou estar à disposição para discutir a agenda econômica do país.",
-    "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos"
+    "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos",
+    "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo"
   ],
   "eventos_recentes": [
-    {
-      "chave": "alphabet::GERAL_ATIVO",
-      "ts": 1795566030.524331
-    },
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795566661.086063
@@ -2590,7 +2586,6 @@
     }
   ],
   "hashes_imagens": [
-    "314609bc89a1074a",
     "9ad61632ea4c08be",
     "7a424ad0db4ccd10",
     "61f5aab88123d5b1",
@@ -2889,6 +2884,7 @@
     "74318b58089529de",
     "b47677fc3d1b5102",
     "6947739b8a339eb0",
-    "6c7ed79a485d52ff"
+    "6c7ed79a485d52ff",
+    "9ae40515fa311eb2"
   ]
 }
