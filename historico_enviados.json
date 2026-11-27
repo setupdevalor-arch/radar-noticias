@@ -1,14 +1,5 @@
 {
   "links": [
-    "6ea942e7d3d13c8f",
-    "33718acae05c7ab4",
-    "724c63cfd93f3ed4",
-    "0e8afb73d04b8b30",
-    "54cd4f8ac09d9282",
-    "0b320e98e8912023",
-    "f30d54cf4c109c5f",
-    "https://investnews.com.br/economia/lula-sonda-trabuco-bradesco-para-governo/",
-    "4e02d973956f09e9",
     "673ed6146ffa8cd0",
     "cf2b54ebfad23f5f",
     "https://www.infomoney.com.br/mercados/usiminas-usim5-bba-ve-4t-mais-dificil-mas-companhia-mantem-plano-de-investimentos/",
@@ -799,11 +790,18 @@
     "023136b45681c3d6",
     "64df1ca13a4e747d",
     "https://www.infomoney.com.br/mundo/zelenskiy-compara-amizade-de-trump-com-putin-a-amizade-com-hitler/",
-    "7bc53deb7d669f07"
+    "7bc53deb7d669f07",
+    "3f3d44ef9c16c9bb",
+    "b405e2ff57a6da18",
+    "de0dc1aeaa517ac0",
+    "71122af0545fb5d7",
+    "55e05b00c073ac74",
+    "https://www.spacemoney.com.br/noticias/microsoft-windows-11-reducao-consumo-ram/",
+    "9b81972ceb2794e5",
+    "https://www.infomoney.com.br/mundo/eua-pressionaram-venezuela-e-iraque-a-considerarem-saida-da-opep-dizem-fontes/",
+    "2a93525d9b04fa75"
   ],
   "titulos": [
-    "São os juros da dívida, não o BPC, mercadistas",
-    "Bolsas da Ásia fecham mistas após novas medidas para conter turbulência ligada à IA",
     "Ajuste fiscal e Petrobras ditam o ritmo do mercado",
     "Black Friday: planejar vale mais que qualquer desconto",
     "CEO da Smart Fit (SMFT3) revela a estratégia por trás do crescimento do TotalPass: “Foi uma decisão muito correta”",
@@ -1601,11 +1599,11 @@
     "Raízen (RAIZ4) avalia venda de sua divisão de distribuição de combustíveis, diz Ometto",
     "PGR defende que União não é obrigada a avalizar empréstimo para salvar BRB",
     "Entidades defendem renovação do E32 e continuidade dos testes com etanol",
-    "Zelenskiy compara amizade de Trump com Putin à amizade com Hitler"
+    "Zelenskiy compara amizade de Trump com Putin à amizade com Hitler",
+    "Microsoft reduz consumo de RAM do Windows 11 em 860 MB",
+    "EUA pressionaram Venezuela e Iraque a considerarem saída da Opep, dizem fontes"
   ],
   "leads": [
-    "O ministro da Defesa, Israel Katz, ameaçou deslocar um milhão de palestinos caso o Hamas não se desarme voluntariamente. A ameaça foi feita em postagem no X nesta quinta-feira, 26. Katz afirmou que, se o grupo não entregar as armas e Gaza não for desmilitarizada conforme o plano do presidente dos Estados Unidos, Donald Trump, as Forças de Defesa de",
-    "O Banco Central informou nesta quinta-feira (26) que o investimento direto no país, ou seja, o valor acumulado dos investimentos de estrangeiros em empresas e negócios no Brasil, atingiu a marca de R$ 1,41 trilhão no fim de 2025. O montante equivale a 49,3% do Produto Interno Bruto (PIB), recorde da série histórica.",
     "A bolsa brasileira amanheceu hoje com um salto de 6 mil pontos, estendendo os ganhos da véspera. O Ibovespa abriu a sessão desta quinta-feira (26) em forte alta, recuperando os 173 mil pontos já nos primeiros minutos do pregão.",
     "O IPCA-15 subiu 0,22% em novembro, após avanço de 0,32% em outubro, e ficou abaixo do piso das estimativas do mercado, de 0,27%. A prévia da inflação foi divulgada nesta quinta-feira (26) pelo IBGE e mostra desaceleração na comparação mensal.",
     "Bastou ganhar força a informação de que o presidente Luiz Inácio Lula da Silva sondou Luiz Carlos Trabuco para o Ministério da Fazenda para os mercados brasileiros dispararem. Em apenas dois pregões, o movimento foi expressivo: na quarta-feira (25) o Ibovespa avançou 1,58% e o dólar caiu 1,53%, para R$ 5,81. Nesta quinta-feira (26), com o noticiári",
@@ -1853,7 +1851,9 @@
     "A Raízen (RAIZ4) avalia a venda de sua divisão de distribuição de combustíveis como parte de um plano mais amplo de desinvestimento, afirmou o acionista fundador Rubens Ometto à Reuters na manhã de sexta-feira (27).",
     "A PGR (Procuradoria-Geral da República) defendeu nessa quinta-feira (26) que a União não pode ser obrigada a avalizar um empréstimo ao governo do Distrito Federal para socorrer o BRB (Banco de Brasília).",
     "A Bioenergia Brasil, a União Nacional do Etanol de Milho (Unem) e a União da Indústria de Cana-de-Açúcar e Bioenergia (Unica) defenderam a renovação da mistura de 32% de etanol na gasolina (E32) e a continuidade dos estudos e do acompanhamento da medida pelo governo.",
-    "– O presidente da Ucrânia, Volodymyr Zelenskiy, afirmou que é estranho o ‌presidente dos Estados Unidos, Donald Trump, chamar o presidente russo, Vladimir Putin, de ‘meu ‌amigo’ e comparou a declaração a alguém dizer o mesmo sobre Adolf Hitler durante a Segunda Guerra Mundial."
+    "– O presidente da Ucrânia, Volodymyr Zelenskiy, afirmou que é estranho o ‌presidente dos Estados Unidos, Donald Trump, chamar o presidente russo, Vladimir Putin, de ‘meu ‌amigo’ e comparou a declaração a alguém dizer o mesmo sobre Adolf Hitler durante a Segunda Guerra Mundial.",
+    "A Microsoft liberou acima de 860 MB de RAM no Windows 11 ao ajustar programas e serviços nativos do sistema. O balanço foi apresentado durante a conferência Ignite 2026 por Ian LeGrow, executivo responsável pela área de sistemas operacionais da companhia.",
+    "Por Ahmad Ghaddar e Ahmed Rasheed e Marianna Parraga"
   ],
   "eventos_recentes": [
     {
@@ -2579,11 +2579,17 @@
     {
       "chave": "raizen::GERAL_ATIVO",
       "ts": 1795786450.411579
+    },
+    {
+      "chave": "microsoft::BALANCO",
+      "ts": 1795787503.601748
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795787503.601748
     }
   ],
   "hashes_imagens": [
-    "48603b934267e5dc",
-    "0685a78008456458",
     "8b305e0186d7ac5d",
     "abc5e8d41abbee89",
     "8a34178637c5f082",
@@ -2881,6 +2887,8 @@
     "db959e8a68f8e79b",
     "0e4a4db9dc0dca64",
     "6e140a05986fdec3",
-    "51ce6c1059b3179b"
+    "51ce6c1059b3179b",
+    "6f1c8a5dbc084e77",
+    "cd99f59ee321c9b5"
   ]
 }
