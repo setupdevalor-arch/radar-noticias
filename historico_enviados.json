@@ -1,11 +1,5 @@
 {
   "links": [
-    "be07bbdd94e7bc19",
-    "https://agenciainfra.com/blog/artigo-o-ajuste-fiscal-e-a-conta-da-infraestrutura/?utm_source=rss&utm_medium=rss&utm_campaign=artigo-o-ajuste-fiscal-e-a-conta-da-infraestrutura",
-    "5c8c0c4eccddc20c",
-    "f956d7cd63c10d55",
-    "8557ec0ae3056b90",
-    "8130ad10b41cf03e",
     "b066f5e942672b58",
     "2918ded2aa1cc0f1",
     "e12b6e9eb94c4ca3",
@@ -799,10 +793,15 @@
     "0d40ce8fde0515fe",
     "2a23e89bbaa1bdd8",
     "https://neofeed.com.br/poder/sucateadas-paralisadas-e-sem-comando-a-dura-realidade-das-agencias-reguladoras/",
-    "71cec9a4edab251c"
+    "71cec9a4edab251c",
+    "0292ad0b85e7be40",
+    "b8f4e5f5a3e4378d",
+    "c66b9ca35cf3cfdb",
+    "b8632d6d017a3cd3",
+    "https://www.moneytimes.com.br/fundo-imobiliario-amplia-participacao-em-complexo-logistico-em-sp-ifix-emenda-terceira-alta-igdl/",
+    "60713b28ec89edc0"
   ],
   "titulos": [
-    "Etanol de milho deve usar 27 mi de toneladas em 2026",
     "Banco do Brasil apura lucro de R$ 8,6 bilhões, queda de 42%",
     "O melhor programa social é o emprego",
     "75 anos da CNseg: homenagem institucional reconhece atividade que presta relevantes serviços ao País",
@@ -1601,10 +1600,10 @@
     "Sabesp diz que Arsesp aprova base de ativos 11% maior para 2025",
     "Axia Energia (AXIA3) aprova resgate de R$ 6 bilhões em ações preferenciais classe C; entenda o que muda",
     "Rheinmetall corta projeção de vendas e ação sobe 3,4%",
-    "Sucateadas, paralisadas e “sem comando”: a dura realidade das agências reguladoras"
+    "Sucateadas, paralisadas e “sem comando”: a dura realidade das agências reguladoras",
+    "Fundo imobiliário amplia participação em complexo logístico em SP; IFIX emenda terceira alta"
   ],
   "leads": [
-    "A Abiove (Associação Brasileira das Indústrias de Óleos Vegetais) revisou para cima as projeções de oferta e demanda do complexo soja para 2026 e 2027. O principal ajuste foi na estimativa de exportação de óleo de soja neste ano, que passou para 2,15 milhões de toneladas, um aumento de 10,3% em relação à previsão anterior.",
     "O BTLG11 submeteu aos cotistas consulta eletrônica que se encerra em 28 de dezembro de 2026 para avaliar a aquisição de dois galpões logísticos de padrão AAA, localizados em Guarulhos (SP) e Londrina (PR), por R$ 798,5 milhões, conforme a Suno Notícias. A proposta inclui alterações no regulamento e depende do aval dos investidores; a parte vendedor",
     "A Taesa (TAEE11) vai pagar dividendos aos seus acionistas nesta quinta-feira (26).",
     "O Porto do Açu, que já abriga 3 GW em geração termelétrica a gás natural, negocia a instalação de uma terceira usina, vencedora do leilão de reserva de capacidade na forma de potência (LRCap) de março deste ano, e avança nas tratativas para receber projetos de data centers. O complexo portuário já acertou condições comerciais com duas ou três empre",
@@ -1853,7 +1852,8 @@
     "– A Sabesp anunciou ‌nesta quinta-feira que a agência reguladora ‌Arsesp validou base de ativos regulatórios (BAR) 11% maior para o ano ‌de 2025.",
     "A Axia Energia (AXIA3) informou nesta quarta-feira (26) que o conselho de administração aprovou o resgate de 129.982.668 ações preferenciais classe C (PNC), em uma operação de R$ 6 bilhões que corresponde a 49,91% dos papéis remanescentes dessa classe.",
     "As ações da Rheinmetall subiam 3,4% nesta sexta-feira, no meio da manhã, depois que investidores avaliaram a postura mais cautelosa da gigante alemã de defesa em seu Capital Markets Day, segundo a CNBC. O movimento ocorreu em um dia de alta generalizada no setor de defesa europeu.",
-    "Brasília - O quadro geral das agências reguladoras federais, que já era preocupante, ganhou contornos dramáticos neste fim de ano, com 10 novas vagas de diretores abertas somente nos dois últimos meses, em um total de 46 até o fim de 2027. Esse cenário abre espaço para uma politização excessiva nesses cargos - que, via de regra, precisam ser técnic"
+    "Brasília - O quadro geral das agências reguladoras federais, que já era preocupante, ganhou contornos dramáticos neste fim de ano, com 10 novas vagas de diretores abertas somente nos dois últimos meses, em um total de 46 até o fim de 2027. Esse cenário abre espaço para uma politização excessiva nesses cargos - que, via de regra, precisam ser técnic",
+    "O fundo imobiliário Pátria Log (HGLG11) anunciou, por meio de fato relevante, que concluiu a aquisição de uma participação de 12,59% de um galpão logístico localizado em Itupeva, no interior de São Paulo, por R$ 31,3 milhões."
   ],
   "eventos_recentes": [
     {
@@ -2587,10 +2587,13 @@
     {
       "chave": "eletrobras::GERAL_ATIVO",
       "ts": 1795776938.411578
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795777635.2126
     }
   ],
   "hashes_imagens": [
-    "6d8aea181ef61f2b",
     "df7b998f5cb492e6",
     "ae72b4b6cd24b4ee",
     "612fe075b43a3f6b",
@@ -2889,6 +2892,7 @@
     "b90d1108e85e80f3",
     "14341509f510fc76",
     "d8a7d5df14d7c6a9",
-    "3f1bbb6d8f82c1b5"
+    "3f1bbb6d8f82c1b5",
+    "9c0c18e251cafe95"
   ]
 }
