@@ -1,9 +1,5 @@
 {
   "links": [
-    "8a0bac458ac14020",
-    "26e88caa1ffa2a31",
-    "3aba8118784b7bae",
-    "https://www.cnnbrasil.com.br/economia/money/mercado/bolsas-da-asia-fecham-majoritariamente-em-alta-apesar-de-ameacas-tarifarias/",
     "142069255c1d24b5",
     "https://www.infomoney.com.br/mundo/kim-da-coreia-do-norte-defende-implantacao-mais-ampla-de-armas-nucleares-taticas/",
     "4edb6e888fd9c75c",
@@ -799,11 +795,13 @@
     "0854a4c89f4ef58e",
     "b52b7474aa90bf28",
     "21330ce9332c6549",
-    "1ca7b8a2cb02de32"
+    "1ca7b8a2cb02de32",
+    "https://www.spacemoney.com.br/economia/exterior/carne-de-pombo-argentina-acougues/",
+    "b11ca9616dd37976",
+    "https://www.spacemoney.com.br/politica/camilo-santana-casa-civil-lula/",
+    "8ec4d8df0d5fbb9d"
   ],
   "titulos": [
-    "Por que EUA não querem que empresas construam data centers em outros países",
-    "Brecha no Java acende alerta para bancos e governos",
     "Ovelhas sob painéis solares ganham espaço nos EUA",
     "Enquanto Brasil perde preferência dos bancões, México ganha espaço entre emergentes",
     "EUA dominam infraestrutura de IA, mas isso tem ajudado os modelos chineses",
@@ -1601,11 +1599,11 @@
     "Visa foca seus esforços em pagamentos agênticos, diz diretor",
     "Fundos soberanos assumem papel de gestoras de private equity",
     "BNDES aprova R$ 2,6 bilhões para capital de giro da Latam Brasil",
-    "Pix Automático começa a ganhar tração com novos públicos, diz head do Itaú"
+    "Pix Automático começa a ganhar tração com novos públicos, diz head do Itaú",
+    "Açougues da Argentina vendem carne de pombo em meio à crise",
+    "Lula escolhe Camilo Santana para a Casa Civil, diz SBT News"
   ],
   "leads": [
-    "O ouro entendeu as perdas da véspera e fechou em queda nesta quarta-feira (25). O metal segue sob pressão das expectativas de aperto monetário pelo Federal Reserve (Fed, banco central norte-americano), após a divulgação de dados de inflação dos Estados Unidos.",
-    "O Federal Reserve (Fed, banco central dos EUA) divulgou nesta quarta-feira (25) o Livro Bege — que resume a situação econômica das 12 principais regiões do país — e o relatório mostra preços em alta moderada, emprego com avanço leve e atividade econômica entre estável e em crescimento leve a moderado.",
     "A disputa pelo espaço no celular dos consumidores latino-americanos tem um brasileiro entre os protagonistas. O Nubank (ROXO34) conquistou a segunda posição entre os aplicativos financeiros mais baixados da América Latina no terceiro trimestre de 2026, ficando atrás apenas do Mercado Pago e à frente de concorrentes como PicPay, Santander e Inter.",
     "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) certificou mais cinco plantas de biometano a emitir Certificados de Garantia de Origem do Biometano (CGobs), títulos que atestam os atributos ambientais do combustível renovável e asseguram sua rastreabilidade. Os CGobs podem ser utilizados por produtores e importadores de gás natu",
     "Por que o Brasil está no centro da disputa",
@@ -1853,7 +1851,9 @@
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra",
     "Os maiores fundos soberanos do mundo estão deixando de lado o papel de simples cotistas de private equity para fazer negócios por conta própria, assumindo funções típicas das grandes gestoras do setor, segundo reportagem da CNBC. Levantamento da consultoria PwC citado pela emissora americana aponta que esses investidores estatais passaram a origina",
     "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) liberou financiamento de R$ 2,66 bilhões para capital de giro da operação brasileira da companhia aérea Latam Airlines, informou o banco de fomento nessa quinta-feira (26).",
-    "A adesão das empresas ao Pix Automático está começando a ganhar tração, segundo Hagner Ferreira, head de produtos de recebimento para pessoa jurídica do Itaú. O método de pagamento de recorrência no arranjo de pagamento instantâneo tem avançado em players, como utilities, seguros e operadoras."
+    "A adesão das empresas ao Pix Automático está começando a ganhar tração, segundo Hagner Ferreira, head de produtos de recebimento para pessoa jurídica do Itaú. O método de pagamento de recorrência no arranjo de pagamento instantâneo tem avançado em players, como utilities, seguros e operadoras.",
+    "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
+    "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27)."
   ],
   "eventos_recentes": [
     {
@@ -2582,8 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "a145d45ec69a0ec6",
-    "0e5a10bd58d95c23",
     "0f50a1094526777b",
     "4bf06544f6d1ca46",
     "72eeb1c5ad93010a",
@@ -2881,6 +2879,8 @@
     "e740fae44b64def7",
     "d3dea7f642ac07eb",
     "8f778e6c49361a3f",
-    "2e8b95c080cd7bc0"
+    "2e8b95c080cd7bc0",
+    "b6bac15fc930ce15",
+    "95150d3bcc621c19"
   ]
 }
