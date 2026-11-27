@@ -1,9 +1,5 @@
 {
   "links": [
-    "fa54a218316e21a8",
-    "https://www.spacemoney.com.br/agronegocio/faesp-cobra-retratacao-franca-carne-bovina/",
-    "63e97e42d56a9ec9",
-    "https://www.spacemoney.com.br/agronegocio/chuva-200-mm-ameaca-soja/",
     "89ca011a5540d114",
     "d7f14e2f7a9b5d07",
     "https://www.seudinheiro.com/2026/empresas/acao-do-btg-pactual-bpac11-perdeu-parte-do-encanto-ubs-bb-corta-preco-alvo-e-revela-os-riscos-no-caminho-miql/",
@@ -799,7 +795,11 @@
     "https://www.moneytimes.com.br/fii-btlg11-quer-investir-r-798-milhoes-em-galpoes-com-mercado-livre-entre-os-inquilinos-cotistas-decidem-igdl/",
     "782847f48126609a",
     "https://agenciainfra.com/blog/construcao-de-navios-da-transpetro-avanca-no-estaleiro-rio-grande/?utm_source=rss&utm_medium=rss&utm_campaign=construcao-de-navios-da-transpetro-avanca-no-estaleiro-rio-grande",
-    "ca233495eec41372"
+    "ca233495eec41372",
+    "abb6702ab4529171",
+    "57c869ca4e3937a5",
+    "879641bb4c6740c0",
+    "546a4d5a53185d49"
   ],
   "titulos": [
     "HGRU11 registra vacância de 0,8% e negocia imóveis em SP",
@@ -1856,14 +1856,6 @@
     "A Transpetro vistoria o avanço da construção das embarcações encomendadas ao Estaleiro Rio Grande, em Rio Grande (RS). Dois dos quatro navios Handy já têm blocos em construção, enquanto os cinco gaseiros avançaram para a etapa de finalização do projeto e aquisição de itens de grande porte. Ao todo, o estaleiro é responsável por 13 embarcações da Tr"
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_fundos::FUNDOS_EVENTO",
-      "ts": 1795633593.020607
-    },
-    {
-      "chave": "amazon::GERAL_ATIVO",
-      "ts": 1795633593.020607
-    },
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795634298.059259
