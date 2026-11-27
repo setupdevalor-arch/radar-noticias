@@ -1,11 +1,5 @@
 {
   "links": [
-    "40d15626b2b0abc8",
-    "1c432a4f96eefa6a",
-    "43394546bb58f834",
-    "494f443d8c32bab0",
-    "https://telesintese.com.br/ibtd-e-frente-parlamentar-defendem-sancao-da-lei-dos-postes-sem-vetos/",
-    "0c4934cc175b0299",
     "https://www.spacemoney.com.br/tecnologia/openai-cota-chatgpt-codex-dezembro/",
     "53b51ce3c54470fd",
     "8b1e7d25b64b2326",
@@ -799,11 +793,15 @@
     "edfe98438b03ea9f",
     "a72cdea0063894ca",
     "c71ebf47b0abc1f6",
-    "d4d6aa856b5d42f5"
+    "d4d6aa856b5d42f5",
+    "a7a806c70b5c003f",
+    "241461ede60fb6db",
+    "https://www.infomoney.com.br/mercados/banco-ve-beneficio-limitado-para-csn-gerdau-e-usiminas-com-novas-tarifas-antidumping/",
+    "a68201ee2f50d219",
+    "https://www.infomoney.com.br/mundo/ucrania-apresenta-proposta-de-tregua-no-mar-negro-e-aguarda-resposta-da-russia/",
+    "697ccbab4d5465f7"
   ],
   "titulos": [
-    "Taxas de prefixados do Tesouro renovam máximas do ano na volta do feriado",
-    "JPMorgan vê alívio no caixa do GPA (PCAR3) após renegociação de dívida trabalhista",
     "Investir em IPOs pode trazer riscos para o investidor, diz economista",
     "Moura obtém aval do BNDES para disputar leilão de baterias com conteúdo nacional",
     "OKXICE inicia negociação de títulos tokenizados nos EUA",
@@ -1601,11 +1599,11 @@
     "FII BTLG11 quer investir R$ 798 milhões em galpões com Mercado Livre entre os inquilinos; cotistas decidem",
     "Construção de navios da Transpetro avança no Estaleiro Rio Grande",
     "Ouro fecha em forte alta e acumula ganhos de mais de 4% na semana",
-    "Black Friday 2026 tem queda de 34% nas reclamações; veja dicas para comprar"
+    "Black Friday 2026 tem queda de 34% nas reclamações; veja dicas para comprar",
+    "Banco vê benefício limitado para CSN, Gerdau e Usiminas com novas tarifas antidumping",
+    "Ucrânia apresenta proposta de trégua no Mar Negro e aguarda resposta da Rússia"
   ],
   "leads": [
-    "A J. Macêdo tem intenção de ampliar os investimentos nos próximos cinco anos, mas o custo dos projetos e o cenário econômico têm dificultado a execução dos planos da companhia. Após desembolsar R$ 800 milhões em modernização e expansão industrial nos últimos três anos, a fabricante de alimentos está revisando seu planejamento estratégico e deve ado",
-    "Os investidores brasileiros passaram a contar com uma nova alternativa para investir em empresas ligadas ao desenvolvimento de longo prazo do país. A Bradesco Asset lançou o ETF Brasil Setores Estratégicos B3 (BDEV11), primeiro fundo de índice atrelado ao Índice Brasil Setores Estratégicos B3 e negociado na bolsa brasileira.",
     "O Pix superou o cartão de crédito como meio de pagamento mais usado por pequenas e médias empresas digitais na largada da Black Week 2026. Nas primeiras horas do evento, o Pix respondeu por 48,88% dos pedidos, ante 47,55% do cartão, segundo dados da Nuvemshop compartilhados com a reportagem do InfoMoney com exclusividade. É a primeira vez que isso ",
     "A Instituição Fiscal Independente (IFI), órgão ligado ao Senado Federal, estimou que sem os benefícios concedidos a produtos e setores da sociedade durante a tramitação da reforma tributária sobre o consumo, a alíquota de referência estimada do futuro imposto do governo federal cairia para 7% em 2027.",
     "O XPCA11, fundo de investimento agrícola gerido pela XP, anunciou em novembro o pagamento de R$ 0,09 por cota referente a outubro, o menor valor distribuído em 2026. A redução reflete a queda do resultado contábil do fundo, impactada pela volatilidade do mercado financeiro após as eleições.",
@@ -1853,7 +1851,9 @@
     "O fundo imobiliário BTG Pactual Logística (BTLG11) propôs aos cotistas a aquisição de participações em dois empreendimentos logísticos localizados em Guarulhos (SP) e Londrina (PR), por aproximadamente R$ 798,5 milhões, além de um aumento do limite de capital autorizado para R$ 30 bilhões.",
     "A Transpetro vistoria o avanço da construção das embarcações encomendadas ao Estaleiro Rio Grande, em Rio Grande (RS). Dois dos quatro navios Handy já têm blocos em construção, enquanto os cinco gaseiros avançaram para a etapa de finalização do projeto e aquisição de itens de grande porte. Ao todo, o estaleiro é responsável por 13 embarcações da Tr",
     "O contrato futuro do ouro fechou em alta nesta sexta-feira (27), impulsionado por uma melhora no sentimento de mercado, à medida que as ações nas bolsas globais avançaram. O clima positivo nos mercados foi puxado pelo otimismo com o setor de inteligência artificial (IA).",
-    "O volume de reclamações da Black Friday registrado até o início desta sexta-feira, entre às 12h de quarta-feira (25) e às 6h desta sexta-feira (27) ficou 34% abaixo do registrado no mesmo período do ano passado. Segundo o Reclame AQUI, foram contabilizados 5,7 mil reclamações, ante 8,6 mil no intervalo equivalente de 2025."
+    "O volume de reclamações da Black Friday registrado até o início desta sexta-feira, entre às 12h de quarta-feira (25) e às 6h desta sexta-feira (27) ficou 34% abaixo do registrado no mesmo período do ano passado. Segundo o Reclame AQUI, foram contabilizados 5,7 mil reclamações, ante 8,6 mil no intervalo equivalente de 2025.",
+    "O Morgan Stanley avalia que as novas tarifas antidumping aprovadas pelo governo brasileiro devem trazer apenas um alívio limitado à concorrência das importações no setor siderúrgico.",
+    "A Ucrânia propôs um cessar-fogo ‌no Mar Negro para viabilizar as exportações de ‌alimentos e transmitiu essa proposta aos aliados internacionais, afirmou nesta sexta-feira o ministro das ‌Relações Exteriores de Kiev, Andrii Sybiha."
   ],
   "eventos_recentes": [
     {
@@ -2555,11 +2555,17 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795806886.295048
+    },
+    {
+      "chave": "gerdau::GERAL_ATIVO",
+      "ts": 1795807559.895489
+    },
+    {
+      "chave": "usiminas::GERAL_ATIVO",
+      "ts": 1795807559.895489
     }
   ],
   "hashes_imagens": [
-    "a18466bb146a0355",
-    "c8734cb75c93af58",
     "76899cc7a5780733",
     "e6e318b98c09e2af",
     "d0f44f7742b01dc8",
@@ -2857,6 +2863,8 @@
     "1ae37d576d0f3caa",
     "392d5c44d07ac406",
     "3e185c8fc4af10f7",
-    "2acfa32ea1b030b9"
+    "2acfa32ea1b030b9",
+    "722820a4d79db0ce",
+    "4223a46be78136f2"
   ]
 }
