@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://teletime.com.br/26/11/2026/fust-agentes-credito-telecom/",
-    "f9cead1088013298",
     "https://investnews.com.br/negocios/relacao-subordinada-custa-cargo-ceos-menos-jensen-huang/",
     "2ab80f5f1e7d430d",
     "https://www.infomoney.com.br/mercados/ibovespa-180-mil-pontos-traders-fluxo-estrangeiro/",
@@ -799,7 +797,9 @@
     "922942e279cca7af",
     "75d2d80fd9616a3c",
     "a772874689f3ea7d",
-    "f6a9074fe21e5084"
+    "f6a9074fe21e5084",
+    "5ed533598db8ec4f",
+    "d7bdda4e4898a21e"
   ],
   "titulos": [
     "Falhas em Microsoft, Apple e voos elevam suspeita de ataque",
@@ -1856,18 +1856,6 @@
     "O ministro Bruno Moretti é apontado por aliados do governo como o favorito para permanecer à frente do Planejamento no quarto mandato de Luiz Inácio Lula da Silva, segundo apurou o InfoMoney. A avaliação ocorre após a escolha do banqueiro Luiz Trabuco para a Fazenda, em substituição a Dario Durigan, movimento que, conforme a fonte, diminui a leitur"
   ],
   "eventos_recentes": [
-    {
-      "chave": "tim::GERAL_ATIVO",
-      "ts": 1795631551.406101
-    },
-    {
-      "chave": "hlog11::GERAL_ATIVO",
-      "ts": 1795631551.406101
-    },
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795631937.239591
-    },
     {
       "chave": "assai::GERAL_ATIVO",
       "ts": 1795632854.896133
