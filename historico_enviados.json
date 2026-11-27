@@ -1,7 +1,5 @@
 {
   "links": [
-    "83019f9dc3081e4f",
-    "518e31beb22d25f0",
     "https://www.spacemoney.com.br/tecnologia/zcash-sapling-migracao-ironwood/",
     "a12031dc1b21df43",
     "https://www.cnnbrasil.com.br/infra/quanto-custa-a-falta-de-previsibilidade-no-setor-logistico/",
@@ -799,10 +797,11 @@
     "9aad87d3e55d4b67",
     "03d55b80004c0788",
     "https://www.spacemoney.com.br/economia/macroeconomia/lucro-industrial-china-outubro-20-1/",
-    "65b14cf3d2592a73"
+    "65b14cf3d2592a73",
+    "https://www.poder360.com.br/poder-economia/bradesco-de-trabuco-tem-3o-maior-juro-dentre-os-5-bancoes/",
+    "5995f649adde47d2"
   ],
   "titulos": [
-    "Fintech ‘copia’ modelo do Minha Casa, Minha vida para crédito imobiliário",
     "Bancões trocam Brasil por México nas carteiras para 2027",
     "BV recebe aval da CVM e dá novo passo para abertura de capital na B3",
     "Fim de benefício fiscal nos Estados faz empresas repensarem localização de fábricas e galpões",
@@ -1601,10 +1600,10 @@
     "Eventos climáticos extremos exigem nova lógica de investimentos em energia",
     "IPP sobe 0,98% em outubro e completa terceira alta",
     "Latam tem voos nacionais a partir de R$ 267 na Black Friday",
-    "Lucro industrial da China sobe 20,1% em outubro"
+    "Lucro industrial da China sobe 20,1% em outubro",
+    "Bradesco, de Trabuco, tem 3º maior juro dentre os 5 bancões"
   ],
   "leads": [
-    "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
     "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista.",
     "Os contratos futuros do café arábica encerraram a quarta-feira (25) em alta na Bolsa de Nova York. O vencimento para março avançou 2,82% e fechou negociado a US$ 2,70 por libra-peso, após ter registrado a menor cotação em cinco meses e meio.",
     "Desde 2020, a Ford investiu US$ 870 milhões em sua fábrica de General Pacheco, na Argentina, onde concentra a produção de veículos na América do Sul. Em dezembro deste ano, as linhas de montagem da unidade, dedicadas exclusivamente à fabricação da picape Ranger, ficarão paradas por oito semanas.",
@@ -1853,13 +1852,10 @@
     "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
     "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação.",
     "A Latam iniciou nesta quinta-feira (26) sua Mega Promo de Black Friday, com descontos de até 40% em passagens nacionais e internacionais. No mercado doméstico, a companhia oferece bilhetes de ida e volta a partir de R$ 267, com opções para 58 destinos, segundo levantamento do Melhores Destinos. Gol e Azul também deram início a campanhas promocionai",
-    "O lucro industrial da China cresceu 20,1% em outubro na comparação com o mesmo mês do ano anterior, o ritmo mais forte desde maio, segundo a CNBC. Os dados foram divulgados pelo Escritório Nacional de Estatísticas do país. No acumulado dos dez primeiros meses do ano, o avanço foi de 16%, acima dos 15,5% registrados até setembro."
+    "O lucro industrial da China cresceu 20,1% em outubro na comparação com o mesmo mês do ano anterior, o ritmo mais forte desde maio, segundo a CNBC. Os dados foram divulgados pelo Escritório Nacional de Estatísticas do país. No acumulado dos dez primeiros meses do ano, o avanço foi de 16%, acima dos 15,5% registrados até setembro.",
+    "Entre 31 instituições financeiras, banco do futuro ministro da Fazenda está em 8º lugar no ranking das maiores taxas de juros"
   ],
   "eventos_recentes": [
-    {
-      "chave": "banco_do_brasil::EVENTO_CORP",
-      "ts": 1795575737.195804
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795576748.309084
@@ -2579,10 +2575,13 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795743957.802928
+    },
+    {
+      "chave": "bradesco::GERAL_ATIVO",
+      "ts": 1795749058.042136
     }
   ],
   "hashes_imagens": [
-    "d57e41be3c4da51d",
     "e7f7daf3f70376ae",
     "c3b08d90f14b6841",
     "c188033763d68e2b",
@@ -2881,6 +2880,7 @@
     "27754ef4e6a14162",
     "e9789b3de1fd9037",
     "068304d014ec9d76",
-    "977c7ec955c6d938"
+    "977c7ec955c6d938",
+    "dd6d3811e3f5caa0"
   ]
 }
