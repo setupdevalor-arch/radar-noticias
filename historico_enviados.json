@@ -1,7 +1,5 @@
 {
   "links": [
-    "7c26039bb5f0cad6",
-    "https://www.moneytimes.com.br/oncoclinicas-onco3-recebe-pedido-de-assembleia-para-eleger-conselho-e-definir-presidencia-veja/",
     "288cd06186120941",
     "https://cqcs.com.br/noticia/previdencia-privada-mantem-vantagem-tributaria-mas-disputa-espaco-com-tesouro/",
     "c7f07973fb27c748",
@@ -799,10 +797,11 @@
     "https://www.cnnbrasil.com.br/infra/eventos-climaticos-extremos-exigem-nova-logica-de-investimentos-em-energia/",
     "27f55e4e136b97b2",
     "https://www.spacemoney.com.br/economia/indicadores-economicos/ipp-alta-outubro-industria/",
-    "f4ff544cbadc99a1"
+    "f4ff544cbadc99a1",
+    "https://www.spacemoney.com.br/educacao-financeira/dicas/latam-black-friday-voos-nacionais-267/",
+    "9aad87d3e55d4b67"
   ],
   "titulos": [
-    "EUA dominam infraestrutura de IA, mas isso tem ajudado os modelos chineses",
     "Itaú Investe em Startup Uruguaia de IA Que Processa 2 Milhões de Pagamentos por Dia",
     "Fintech ‘copia’ modelo do Minha Casa, Minha vida para crédito imobiliário",
     "Bancões trocam Brasil por México nas carteiras para 2027",
@@ -1601,10 +1600,10 @@
     "Açougues da Argentina vendem carne de pombo em meio à crise",
     "Lula escolhe Camilo Santana para a Casa Civil, diz SBT News",
     "Eventos climáticos extremos exigem nova lógica de investimentos em energia",
-    "IPP sobe 0,98% em outubro e completa terceira alta"
+    "IPP sobe 0,98% em outubro e completa terceira alta",
+    "Latam tem voos nacionais a partir de R$ 267 na Black Friday"
   ],
   "leads": [
-    "Por que o Brasil está no centro da disputa",
     "A emissora do USDT, Tether, informou nesta quarta-feira (25) um aporte na Lemon, empresa argentina de criptomoedas. Segundo a companhia, a medida pretende aumentar a adoção de USDT e XAUT, token vinculado ao ouro, na América Latina.",
     "O Ministério de Minas e Energia (MME) trabalha com a perspectiva de aportes anuais na Conta de Desenvolvimento Energético (CDE) até 2030, provenientes das concessões de geração de energia elétrica que chegam ao fim de seus contratos. A expectativa é que os recursos contribuam para conter os aumentos tarifários, independentemente da opção do governo",
     "O dólar passou toda a sessão desta quarta-feira (25) em queda e recuou para o nível dos R$ 5,80 em meio às expectativas de que Luiz Carlos Trabuco, do Bradesco, seja nomeado para o Ministério da Fazenda. A moeda norte-americana fechou em queda de 1,59%, a R$ 5,8168, no mercado à vista.",
@@ -1853,7 +1852,8 @@
     "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
     "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
     "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
-    "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação."
+    "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação.",
+    "A Latam iniciou nesta quinta-feira (26) sua Mega Promo de Black Friday, com descontos de até 40% em passagens nacionais e internacionais. No mercado doméstico, a companhia oferece bilhetes de ida e volta a partir de R$ 267, com opções para 58 destinos, segundo levantamento do Melhores Destinos. Gol e Azul também deram início a campanhas promocionai"
   ],
   "eventos_recentes": [
     {
@@ -2582,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "72eeb1c5ad93010a",
     "318b1e5fd4f1d4f5",
     "d57e41be3c4da51d",
     "e7f7daf3f70376ae",
@@ -2881,6 +2880,7 @@
     "b6bac15fc930ce15",
     "95150d3bcc621c19",
     "27754ef4e6a14162",
-    "e9789b3de1fd9037"
+    "e9789b3de1fd9037",
+    "068304d014ec9d76"
   ]
 }
