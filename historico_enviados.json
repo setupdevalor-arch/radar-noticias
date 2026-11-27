@@ -1,9 +1,5 @@
 {
   "links": [
-    "1597c4402d8941c1",
-    "427d63a29b4eb86b",
-    "d407cf4696cb0d34",
-    "699239c13ddedc59",
     "6dc2f906ff43fab8",
     "b55a52ff5746b1c4",
     "https://www.spacemoney.com.br/politica/lula-ministerio-seguranca-autonomia/",
@@ -799,10 +795,13 @@
     "https://www.infomoney.com.br/business/global/apos-anos-de-bombardeios-russos-maior-siderurgica-da-ucrania-agora-e-alvo-de-tarifas/",
     "5f446f8fcb5b31cf",
     "https://www.moneytimes.com.br/safra-de-soja-do-brasil-em-2026-27-deve-cair-13-preve-agroconsult-fets/",
-    "5129408515131760"
+    "5129408515131760",
+    "065a587d1b874daf",
+    "dd2baa936837e7ec",
+    "https://investnews.com.br/negocios/black-friday-agentes-de-ia-varejo/",
+    "4b37a1593b165319"
   ],
   "titulos": [
-    "Ameaça quântica ao Bitcoin esbarra em custódia e pontes",
     "OAB-SP estima perda de R$ 200 bilhões por ano com pejotização",
     "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
     "Social Security sobe 3,6% em 2027, mas impostos aumentam",
@@ -1601,10 +1600,10 @@
     "JBS amplia investimentos em colágeno e vê proteínas funcionais como negócio",
     "Azul mudou programação para próxima temporada diante da alta do QAV",
     "Após anos de bombardeios russos, maior siderúrgica da Ucrânia agora é alvo de tarifas",
-    "Safra de soja do Brasil em 2026/27 deve cair 1,3%, prevê Agroconsult"
+    "Safra de soja do Brasil em 2026/27 deve cair 1,3%, prevê Agroconsult",
+    "Na Black Friday dos agentes de IA, varejo disputa quem escolhe o que você compra"
   ],
   "leads": [
-    "A volta de Jensen Huang ao comando da Nvidia veio acompanhada de novos detalhes sobre até onde o governo Trump estaria disposto a ir para garantir seu retorno ao cargo.",
     "A Companhia de Gás de Minas Gerais (Gasmig) atingiu a marca de 125 mil clientes ligados no mercado urbano. O número reflete o crescimento da distribuidora e a expansão da rede de distribuição de gás natural em Minas Gerais.",
     "Promotores de Justiça e policiais civis deflagraram, na manhã desta quinta-feira (26), a Operação Dinheiro Fictício, que mira o Grupo Fictor. A Justiça determinou o sequestro de bens e valores e o bloqueio de contas de 233 investigados, entre pessoas físicas e jurídicas, até o limite de aproximadamente R$ 4,3 bilhões.",
     "O conselho de administração da Smart Fit (SMFT3) aprovou a distribuição de juros sobre o capital próprio (JCP) aos acionistas e um aumento de capital da companhia.",
@@ -1853,7 +1852,8 @@
     "A produção de proteínas funcionais e ingredientes voltados à saúde deve ganhar espaço na estratégia de crescimento da JBS. A companhia tem ampliado os investimentos em produtos de maior valor agregado, com destaque para os peptídeos de colágeno, segmento que o CEO global da nos Estados Unidos, Wesley Batista Filho, considera uma avenida importante ",
     "A Azul Linhas Aéreas vai remanejar frequências de voos em cidades específicas diante do aumento do preço do QAV (querosene de aviação). A companhia prepara ajustes na programação de inverno - verão no Hemisfério Sul - para reduzir a oferta em algumas rotas e adequar a operação à alta dos custos.",
     "Voltemos 14 anos no tempo: a Ucrânia era um país em uma trajetória diferente. O Campeonato Europeu da UEFA, coorganizado com a Polônia, havia proporcionado à Ucrânia uma importante vitrine internacional e reforçado suas ambições de se integrar mais estreitamente à comunidade política e econômica europeia. Um Acordo de Associação entre a União Europ",
-    "A safra de soja do Brasil 2026/27 foi estimada nesta quinta-feira em 182,3 milhões de toneladas, queda de 1,3% no comparativo com o ciclo anterior, de acordo com análise da consultoria Agroconsult apresentada em evento da Associação Nacional dos Exportadores de Cereais (Anec)."
+    "A safra de soja do Brasil 2026/27 foi estimada nesta quinta-feira em 182,3 milhões de toneladas, queda de 1,3% no comparativo com o ciclo anterior, de acordo com análise da consultoria Agroconsult apresentada em evento da Associação Nacional dos Exportadores de Cereais (Anec).",
+    "O Google também passou a conectar suas ferramentas de inteligência artificial às lojas. Em outubro, a empresa começou a disponibilizar nos Estados Unidos o Universal Cart, carrinho que reúne produtos de diferentes varejistas no buscador e no aplicativo Gemini."
   ],
   "eventos_recentes": [
     {
@@ -2598,7 +2598,6 @@
     }
   ],
   "hashes_imagens": [
-    "87d26cbdf8e96c5f",
     "fafc8fc631b6ec0b",
     "3ab27176f9559940",
     "864a2e118e97e841",
@@ -2897,6 +2896,7 @@
     "cdca98471cc28534",
     "fb21f4caa9e7649f",
     "ac9d42c87888bd1a",
-    "62377b73c9c6a47a"
+    "62377b73c9c6a47a",
+    "7f3e66edd40da8c4"
   ]
 }
