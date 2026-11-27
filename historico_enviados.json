@@ -1,10 +1,5 @@
 {
   "links": [
-    "e058ccdabd662da1",
-    "https://valorinveste.globo.com/objetivo/gastar-bem/noticia/2026/11/26/brasileiros-aproveitam-black-friday-para-antecipar-compras-de-natal.ghtml",
-    "4f8f2c527b15a821",
-    "https://www.moneytimes.com.br/senado-da-argentina-deve-suspender-primarias-o-que-fortalece-candidatura-de-milei-a-reeleicao-rens/",
-    "42f838a0f6303c8a",
     "https://agenciainfra.com/blog/tcu-libera-contas-vinculadas-e-exige-rastreabilidade-para-uso-de-recursos/?utm_source=rss&utm_medium=rss&utm_campaign=tcu-libera-contas-vinculadas-e-exige-rastreabilidade-para-uso-de-recursos",
     "3706c2a81661f81f",
     "https://www.suno.com.br/noticias/hapv3-hapvida-recompra-debentures-desconto/",
@@ -799,11 +794,14 @@
     "https://www.poder360.com.br/poder-internacional/pib-da-franca-cai-02-no-3o-trimestre-de-2026/",
     "30c98b77d417ba5e",
     "https://www.moneytimes.com.br/bolsas-da-asia-fecham-em-forte-alta-com-salto-na-china-e-avanco-de-acoes-de-ia-fets/",
-    "a573be3a2275cd99"
+    "a573be3a2275cd99",
+    "2b8092bd1f36e023",
+    "https://www.spacemoney.com.br/economia/legislacao/esma-registro-cripto-mica-2027/",
+    "48e216c3df3a97ca",
+    "https://www.spacemoney.com.br/politica/trabuco-fazenda-lula-mercado/",
+    "310c660450a66f03"
   ],
   "titulos": [
-    "Ataques no Báltico ameaçam rota-chave do petróleo e dos grãos da Rússia",
-    "Sabesp conclui manutenção, mas 5 regiões ainda têm abastecimento afetado",
     "Futuro das COPs: modelo que pede ‘consenso’ fracassa na Turquia e novas formas devem ser adotadas",
     "PF abre licitação de R$ 207,5 milhões para 225 blindados",
     "Clayton alerta para novos apagões tecnológicos nos EUA",
@@ -1601,11 +1599,11 @@
     "Saiba quais indicadores e balanços saem nesta 6ª feira",
     "EUA compraram mais da metade dos aviões exportados pelo Brasil em 2026",
     "PIB da França cai 0,2% no 3º trimestre de 2026",
-    "Bolsas da Ásia fecham em forte alta, com salto na China e avanço de ações de IA"
+    "Bolsas da Ásia fecham em forte alta, com salto na China e avanço de ações de IA",
+    "ESMA prepara novo registro cripto da UE para 2027",
+    "Trabuco na Fazenda e a reaproximação com o mercado"
   ],
   "leads": [
-    "A escolha do próximo ministro da Fazenda de Luiz Inácio Lula da Silva (PT) colocou um dos principais nomes do sistema financeiro brasileiro no centro das articulações políticas em Brasília. Luiz Carlos Trabuco Cappi, presidente do Conselho de Administração do Bradesco, ganhou força para assumir a Pasta após se reunir com o presidente na segunda-fei",
-    "China e Estados Unidos devem resolver suas questões comerciais com consultas marcadas pela igualdade e pelo respeito mútuo, com reciprocidade, segundo a Agência Brasil. A declaração é do porta-voz do Ministério das Relações Exteriores chinês, Guo Jiakun, nesta quinta-feira (26), em resposta à nova rodada de tarifas do governo Trump.",
     "O Brasil fechou outubro com saldo negativo de US$ 3,966 bilhões nas transações correntes, resultado mais fraco do que a projeção de mercado captada pela Reuters, que apontava déficit de US$ 3,1 bilhões. O dado, divulgado nesta quinta-feira pelo Banco Central, mostrou ainda que o saldo negativo dos últimos 12 meses equivale a 2,34% do Produto Intern",
     "Nessa modalidade, o bem é ofertado pela instituição financeira sem valor mínimo declarado para negociação.",
     "Segundo Gerson Camarotti, em seu blog no g1, Luiz Inácio Lula da Silva, do PT, quer reforçar a futura pasta da Segurança Pública. Interlocutores de Wellington Lima e Silva, ministro da Justiça, relataram que o presidente considerou insuficiente o formato inicialmente proposto para a nova estrutura.",
@@ -1853,7 +1851,9 @@
     "Dados de desemprego, crédito e contas públicas, além do índice usado em aluguéis, movimentam o dia",
     "Possível tarifa de Donald Trump ameaça superavit comercial do país com os Estados Unidos em um segmento de alto valor agregado",
     "Consumo das famílias teve aumento ligeiro e gastos do governo desaceleraram; exportações recuaram 1,6%",
-    "As bolsas asiáticas fecharam em forte alta nesta sexta-feira (27), acompanhando os ganhos dos futuros de ações dos Estados Unidos e o avanço expressivo dos mercados chineses. O sentimento em torno dos investimentos em inteligência artificial se estabilizou, após Wall Street permanecer fechada na quinta-feira pelo feriado de Ação de Graças."
+    "As bolsas asiáticas fecharam em forte alta nesta sexta-feira (27), acompanhando os ganhos dos futuros de ações dos Estados Unidos e o avanço expressivo dos mercados chineses. O sentimento em torno dos investimentos em inteligência artificial se estabilizou, após Wall Street permanecer fechada na quinta-feira pelo feriado de Ação de Graças.",
+    "Segundo o Cointelegraph, a Autoridade Europeia de Valores Mobiliários e dos Mercados (ESMA) pretende substituir, por volta de meados de 2027, o registro provisório de criptoativos criado sob o MiCA por uma plataforma web com busca. A informação foi transmitida por um porta-voz da autarquia ao portal.",
+    "A decisão de Luiz Carlos Trabuco Cappi de aceitar o convite de Lula para chefiar a Fazenda ao longo do quarto mandato do presidente passou a ser interpretada como uma tentativa de reconstruir pontes entre o Planalto e o empresariado. Na leitura de Cila Schulman, executiva-chefe do Instituto Ideia, o gesto pode representar uma guinada na relação do "
   ],
   "eventos_recentes": [
     {
@@ -2587,11 +2587,13 @@
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795771019.458168
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795771346.436478
     }
   ],
   "hashes_imagens": [
-    "7d4ade074aaebc41",
-    "3d707c741402562d",
     "182ce856eb35ed6d",
     "81fce3ed060dcc71",
     "d63b0cd8f178da64",
@@ -2889,6 +2891,8 @@
     "f22d7cccdbd8746c",
     "3185f188f5abeafd",
     "9a25cbdb14299747",
-    "4ed3ff128884ac25"
+    "4ed3ff128884ac25",
+    "fa6be70b621d630a",
+    "f8cd978953591aac"
   ]
 }
