@@ -1,15 +1,5 @@
 {
   "links": [
-    "https://www.cnnbrasil.com.br/infra/rumo-ve-espaco-para-investir-mais-no-brasil-mas-pede-ambiente-favoravel/",
-    "36951151b0557440",
-    "https://www.infomoney.com.br/mercados/azzas-2154-azza3-chega-a-subir-12-mas-reduz-alta-com-noticia-sobre-negociacao-da-farm-rio/",
-    "adfeb427b143d3a8",
-    "https://finsidersbrasil.com.br/noticias-sobre-fintechs/resultados-financeiros/xp-procura-um-novo-amor-so-que-o-varejo-ainda-sustenta-a-relacao/",
-    "5f496fe880d21433",
-    "ddbcd7ff5c0c088c",
-    "6eca36bb659e1644",
-    "c8f6e9522114cd07",
-    "https://www.estadao.com.br/economia/liquidante-do-master-diz-ao-stf-nao-se-opor-a-liberar-r-316-milhoes-ao-brb/",
     "58e23c959848e1ab",
     "https://www.spacemoney.com.br/agronegocio/india-safra-acucar-2026-27/",
     "96d6faa380cf27a8",
@@ -799,12 +789,19 @@
     "https://www.spacemoney.com.br/agronegocio/cna-contesta-macron-carne-brasileira/",
     "a7803d8c00ed4025",
     "https://www.moneytimes.com.br/bolsas-da-europa-fecham-em-alta-com-setor-tech-e-expectativas-sobre-futuro-do-bce-davs/",
-    "10419aff94dcc99f"
+    "10419aff94dcc99f",
+    "3bccc30725ffbe13",
+    "d17bf2e4d33d0799",
+    "7fdae75609eeca30",
+    "64e5d84dcaeb0236",
+    "https://www.seudinheiro.com/2026/bolsa-dolar/dividendo-nao-e-tudo-fiis-pagam-todo-mes-mas-perdem-para-o-cdi-entenda-o-que-pesa-contra-os-fundos-na-b3-igdl/",
+    "2567bda9d3b27624",
+    "https://braziljournal.com/axia-vende-r-2-1-bilhoes-de-isa-energia-surfando-o-rali-trabuco",
+    "f2d244c8d94897d5",
+    "https://www.cnnbrasil.com.br/economia/money/negocios/amazon-mira-no-jeito-brasileiro-para-alavancar-vendas-na-black-friday/",
+    "75f3779d7f75ac6c"
   ],
   "titulos": [
-    "“Se nada for feito, vamos para uma recessão”, diz Mendonça de Barros",
-    "Tokenização de ações estreia sob objeção de 90% das empresas",
-    "JBSS3: JBS conclui transação de joint venture em Omã",
     "Trump volta a defender restituição de Huang ao cargo de CEO da Nvidia",
     "Minério cai com enfraquecimento da demanda chinesa e piora das margens siderúrgicas",
     "Mercado eleva projeção para inflação e dólar e prevê PIB menor em 2026",
@@ -1601,12 +1598,12 @@
     "Soja no Mato Grosso escapa do pior do El Niño com chuvas de novembro",
     "Etanol avança 2,78% em novembro; diesel e gasolina recuam",
     "CNA contesta crítica de Macron e defende sanidade da carne",
-    "Bolsas da Europa fecham em alta com setor tech e expectativas sobre futuro do BCE"
+    "Bolsas da Europa fecham em alta com setor tech e expectativas sobre futuro do BCE",
+    "Dividendo não é tudo: FIIs pagam todo mês, mas perdem para o CDI, diz estudo; entenda o que pesa contra os fundos na B3",
+    "Axia vende R$ 2,1 bilhões de ISA Energia, surfando o rali Trabuco",
+    "Amazon mira no “jeito brasileiro” para alavancar vendas na Black Friday"
   ],
   "leads": [
-    "O descomissionamento de plataformas de petróleo, que há três anos respondia por cerca de 5% da receita do Porto do Açu relacionada a serviços, atualmente corresponde à metade da geração de caixa da companhia relacionada a serviços. A informação é de Eugênio Figueiredo, CEO do Porto do Açu.",
-    "A ExxonMobil arrematou duas cargas de 500 mil barris de petróleo cada, do campo de Búzios, no 11º Leilão Spot de Petróleo da União, realizado pela PPSA (Pré-Sal Petróleo S.A.) na quarta-feira (25). As cargas têm previsão de carregamento para o início de janeiro de 2027.",
-    "O BDEV11 foi escolhido em um edital para estimular os fundos negociados em bolsa locais",
     "O CEO Antonio Filosa está sob pressão crescente para mostrar que os esforços da Stellantis para lançar novos produtos e resolver problemas de qualidade começam a dar resultado. Como parte de seu plano, o executivo busca cortar custos enquanto lida com despesas maiores com matérias-primas e chips.",
     "A Suno Notícias informou nesta quinta-feira (26) que o TVRI11 (Tivio Renda Imobiliária) acertou a venda da Agência Vila Carrão, na Avenida Conselheiro Carrão, 2.411, em São Paulo, por R$ 14 milhões. O ativo está locado e tem área bruta locável de 2.483 m². Segundo o fato relevante, o negócio pode gerar ganho de aproximadamente R$ 3,99 milhões, ou R",
     "Cotistas do RBRR11 (Pátria Rendimento High Grade) têm até a próxima segunda-feira (30) para informar à gestora o custo médio de aquisição das cotas, evitando pagar mais Imposto de Renda na liquidação do fundo. A medida ocorre após a venda de todos os ativos do FII ao PCIP11 (Pátria Crédito Imobiliário IPCA), concluída no início de novembro, que mar",
@@ -1853,7 +1850,10 @@
     "“A gente checava a previsão do tempo 16 vezes por dia”, disse o produtor Vidimar Siliprandi na quarta-feira (25). Ele estava no sindicato rural de Vera para o início de uma expedição pelas lavouras do médio-norte mato-grossense, região que responde por cerca de 8% da produção de soja do Brasil.",
     "O etanol terminou novembro com média de R$ 4,43 por litro, ante R$ 4,31 em outubro, avanço de 2,78%, de acordo com o Índice de Preços Edenred Ticket Log (IPTL). No mesmo período, a gasolina recuou de R$ 6,71 para R$ 6,66; o diesel S-10 passou de R$ 7,44 para R$ 7,37; e o S-500 ficou em R$ 7,14, ante R$ 7,19.",
     "A Confederação da Agricultura e Pecuária do Brasil (CNA) rejeitou a crítica do presidente francês Emmanuel Macron, que classificou a carne exportada pelo país como “dopada”. Na sexta-feira (27), a entidade disse que a declaração não tem base técnica e prejudica a imagem do agro nacional em meio à negociação com a União Europeia.",
-    "As bolsas da Europa fecharam em alta nesta sexta-feira (27), estendendo os ganhos da véspera, diante da retomada do apetite por ações de tecnologia."
+    "As bolsas da Europa fecharam em alta nesta sexta-feira (27), estendendo os ganhos da véspera, diante da retomada do apetite por ações de tecnologia.",
+    "Levantamento da Nexa Finance mostra que o IFIX registrou retorno anualizado de 8,4% desde 2010, abaixo dos 9,9% do CDI",
+    "A Axia Energia acaba de vender R$ 2,1 bilhões em ações da ISA Energia num block trade que movimentou cerca de 10% do capital da companhia de transmissão.",
+    "A Amazon Brasil vai apostar no \"jeito brasileiro\" para alavancar as vendas desta Black Friday, mirando em uma série de estratégias que se alinhem com o hábito de consumo para conquistar a confiança do público."
   ],
   "eventos_recentes": [
     {
@@ -2559,12 +2559,21 @@
     {
       "chave": "macro_politica_econ::MACRO_EVENTO",
       "ts": 1795799550.138805
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795801205.978042
+    },
+    {
+      "chave": "isa_energia::GERAL_ATIVO",
+      "ts": 1795801205.978042
+    },
+    {
+      "chave": "amazon::GERAL_ATIVO",
+      "ts": 1795801205.978042
     }
   ],
   "hashes_imagens": [
-    "1a0110cc673ae5cf",
-    "a18af77c2ea1fc7a",
-    "b0d322ffaaa848c1",
     "9f2fb4540d230315",
     "07ede6246bee8d9d",
     "77268374bcfbc702",
@@ -2861,6 +2870,9 @@
     "f81269452f49c650",
     "72eeb1c5ad93010a",
     "f83cf9353b9036b1",
-    "959b8362246b5395"
+    "959b8362246b5395",
+    "556c12eae82cd9ab",
+    "3cd2015f755fe948",
+    "a6e674692099cce6"
   ]
 }
