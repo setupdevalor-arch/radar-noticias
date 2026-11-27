@@ -1,10 +1,5 @@
 {
   "links": [
-    "ce71d87a6d9a21e4",
-    "af4331070058630f",
-    "3358fc1541a975ba",
-    "https://www.infomoney.com.br/mercados/peso-mexicano-se-destaca-entre-piores-moedas-da-america-latina-com-menor-carry-trade/",
-    "da22a45dae8655e0",
     "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2026/11/26/durigan-diz-que-discutir-medidas-fiscais-com-lula-nesta-quinta-feira.ghtml",
     "bbd51c88c02ae112",
     "2a5c9cd94d6195ce",
@@ -799,11 +794,14 @@
     "ddd7dbbdb0dcb081",
     "f889dbb18a932a7e",
     "https://www.cnnbrasil.com.br/economia/money/macroeconomia/franca-em-recessao-tecnica-apos-revisoes-trimestrais/",
-    "e0426a9c30363635"
+    "e0426a9c30363635",
+    "feb6a6d574600bbe",
+    "https://www.infomoney.com.br/mercados/acoes-ibovespa-quedas-trabuco-27112026/",
+    "a8feec607d32d187",
+    "https://valorinveste.globo.com/mercados/renda-variavel/empresas/noticia/2026/11/27/efeito-trabuco-faz-empresas-da-b3-ganharem-r-232-bi-em-1-dia.ghtml",
+    "0dcccc7f85873ff8"
   ],
   "titulos": [
-    "Empresas europeias alertam UE contra cortes que afetem competitividade",
-    "Day Trade hoje (23): Ibovespa pressiona suporte e dólar se aproxima dos 6 mil pontos",
     "Montadoras alemãs enfrentam tensão crescente com sindicatos",
     "Diretor do BC, Nilton David, participa do Bloomberg Línea Summit nesta segunda; assista",
     "Hapvida (HAPV3) nega acordo para venda de ativos a Advent e Bain",
@@ -1601,11 +1599,11 @@
     "Brasil do Brasil (BBAS3) presta novos esclarecimentos à CVM sobre agro",
     "Cemig supera 4 mil clientes no varejo e mira abertura do mercado",
     "Petrobras negocia aquisição de 100% de bloco na Bacia de Campos",
-    "França em recessão técnica após revisões trimestrais"
+    "França em recessão técnica após revisões trimestrais",
+    "Apenas 9 ações do Ibovespa caem nesta 6ª; Suzano lidera perdas",
+    "'Efeito Trabuco' faz empresas da B3 ganharem R$ 232 bi em 1 dia"
   ],
   "leads": [
-    "O Itaú BBA avalia que a Usiminas (USIM5) deve enfrentar um quarto trimestre mais desafiador, com a alta dos custos de produção pressionando os resultados antes que os reajustes de preços sejam integralmente repassados. Apesar do cenário adverso, a companhia não pretende rever seu plano de investimentos, segundo comentários da administração durante ",
-    "O Banco Central (BC) decidiu frear o crédito de quem já está endividado, mas entregou aos bancos o controle do pedal. Em entrevista coletiva nesta quinta-feira (26), o diretor de Regulação do BC, Gilneu Vivan, explicou que o cliente que financiou a fatura do cartão três vezes ou mais nos últimos seis meses não poderá ter o limite ampliado e terá de",
     "Ministro da Fazenda também cita definição de nomes para a CVM e o Cade e diz que preenchimento das vagas dará mais previsibilidade ao empresariado",
     "– O presidente dos EUA, ‌Donald Trump, postou nesta quinta-feira ‌que gostaria de ver o líder russo, Vladimir Putin, “recuar ‌de toda a agressão militar contra territórios em toda a Europa”, na esperança de que isso possa levar a uma rápida ‌resolução da guerra na Ucrânia.",
     "A colheita argentina de grãos encerrou a safra 2025/26 em 171 milhões de toneladas, novo recorde nacional. A superfície destinada ao plantio chegou a 44,6 milhões de hectares, também um máximo histórico, informou a Secretaria de Agricultura, Pecuária e Pesca do Ministério da Economia.",
@@ -1853,7 +1851,9 @@
     "O Banco do Brasil (BBAS3) divulgou, em 26 de novembro de 2026, comunicado ao mercado em atenção ao Ofício nº 328/2026/CVM/SEP/GEA-1, da Comissão de Valores Mobiliários (CVM).",
     "A Cemig alcançou 4.016 unidades consumidoras no mercado livre varejista em setembro de 2026, tornando-se a primeira comercializadora do país a superar a marca de 4 mil pontos de consumo nessa modalidade, segundo dados da Câmara de Comercialização de Energia Elétrica (CCEE). A companhia agora foca na expansão dos negócios com a abertura do mercado l",
     "A Petrobras pretende assumir 100% de participação no bloco C-M-789, localizado na Bacia de Campos, por meio da compra das fatias atualmente detidas pela ExxonMobil (40%) e pela QatarEnergy Brasil (30%).",
-    "A economia francesa contraiu mais do que o inicialmente previsto no terceiro trimestre, levando o país tecnicamente à recessão, segundo dados finais divulgados nesta sexta-feira (27) pelo Instituto Nacional de Estatística."
+    "A economia francesa contraiu mais do que o inicialmente previsto no terceiro trimestre, levando o país tecnicamente à recessão, segundo dados finais divulgados nesta sexta-feira (27) pelo Instituto Nacional de Estatística.",
+    "A confirmação de Luiz Carlos Trabuco para o comando do Ministério da Fazenda desencadeou uma forte onda de otimismo nos mercados nesta sexta-feira, levando o Ibovespa a disparar quase 4% e ultrapassar os 183 mil pontos.",
+    "Expectativa é de nova alta na sessão desta sexta, com o nome já confirmado"
   ],
   "eventos_recentes": [
     {
@@ -2599,11 +2599,13 @@
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795790278.339821
+    },
+    {
+      "chave": "suzano::GERAL_ATIVO",
+      "ts": 1795790630.05327
     }
   ],
   "hashes_imagens": [
-    "66a6bce8fe8eccc9",
-    "5990be9f967c2203",
     "ba99b1be51acc33b",
     "5b083c2879ae49ad",
     "57a422dbbdbf6099",
@@ -2901,6 +2903,8 @@
     "b1f6f14938e67593",
     "a3919263b1e4b663",
     "f9ecc643387dc34f",
-    "69ad717c4ae58f05"
+    "69ad717c4ae58f05",
+    "22f5b7769120393f",
+    "4f666b7a5776cf3d"
   ]
 }
