@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/agronegocio/mapa-seguro-rural-psr-2027/",
-    "ab744b2bd47e5ed0",
     "https://www.spacemoney.com.br/agronegocio/cna-macron-carne-brasileira/",
     "b0433172a6bfd836",
     "https://www.spacemoney.com.br/tecnologia/ti-mapa-50-anos-digitalizacao/",
@@ -799,10 +797,11 @@
     "c9ed0033bb041d2b",
     "2631042c9978c2d7",
     "a8d3a39e9bf9e7b0",
-    "ff36d3ac83a5f6c9"
+    "ff36d3ac83a5f6c9",
+    "https://www.estadao.com.br/economia/fernando-dantas/trabuco-lula-e-o-deserto-antes-da-terra-prometida/",
+    "177b73b3fb487da3"
   ],
   "titulos": [
-    "Instituto alerta para risco de fuga de capital com regra para empresas estrangeiras",
     "Fenacor detalha impactos da Reforma Tributária para corretores",
     "Moretti e parlamentares discutirão mais medidas após 1ª rodada de ajuste",
     "Atividade empresarial nos EUA volta a mostrar perda de ritmo em novembro",
@@ -1601,10 +1600,10 @@
     "OpenAI processa Apple por roubo de segredos comerciais",
     "Nem os aliados escapam: Xi mira possível sucessor em novo expurgo na China",
     "Por que investir no exterior deixou de ser apenas proteção contra riscos do Brasil",
-    "Trabuco na Fazenda é escolha fora da caixa e muito positiva, diz Vale"
+    "Trabuco na Fazenda é escolha fora da caixa e muito positiva, diz Vale",
+    "Trabuco, Lula e o deserto antes da Terra Prometida"
   ],
   "leads": [
-    "A Federação da Agricultura e Pecuária do Estado de São Paulo (Faesp) divulgou uma nota de repúdio na quinta-feira (26) às falas do presidente francês, Emmanuel Macron, sobre a carne bovina do Mercosul. A entidade cobra do governo brasileiro uma reação formal, com retratação da França, questionamento na OMC e medidas de reciprocidade comercial.",
     "Um sistema de frente fria deve alterar a distribuição das chuvas no país, com risco de acumulados acima de 200 milímetros entre 2 e 6 de dezembro em áreas de São Paulo, Mato Grosso do Sul e Paraná. O cenário exige atenção em áreas de soja, sobretudo pelo risco de umidade excessiva e por eventuais entraves aos trabalhos no campo.",
     "Banco reduziu a estimativa para as units de R$ 81 para R$ 64 e cortou as projeções de lucro para 2027 e 2028",
     "A Justiça Federal de São Paulo deu prazo de cinco dias para que a Agência Nacional de Energia Elétrica (Aneel) esclareça os motivos do pedido de vista do diretor-geral Sandoval Feitosa, que adiou novamente a decisão sobre a recomendação de caducidade da concessão da Enel São Paulo, após quatro dos cinco integrantes da diretoria votarem a favor da m",
@@ -1853,7 +1852,8 @@
     "A OpenAI processou a Apple nesta sexta-feira (27), acusando a gigante da tecnologia de roubar segredos comerciais e bloquear seu acesso a fornecedores de hardware.",
     "O anúncio na última terça-feira, 24, da abertura de uma investigação de corrupção contra o líder do Partido Comunista Chinês em Xangai, Chen Jining, abalou o centro político da China. Chen era, até onde se sabe, muito bem quisto por Xi Jinping e era visto como uma potencial liderança. Até que a investigação relâmpago, e iminente expulsão do partido",
     "A diversificação internacional deixou de ser apenas uma estratégia para proteger o patrimônio de crises no Brasil e passou a ser uma ferramenta para melhorar a relação entre risco e retorno das carteiras. Para gestores da XP Asset Management e da Pragma, a construção de portfólios globais deve ser uma decisão estrutural, que considere diferentes me",
-    "A confirmação de Luiz Carlos Trabuco Cappi, do Bradesco, para comandar a Fazenda de Lula 4 foi comemorada pelo mercado, que vê no executivo um esforço maior do governo federal em promover o ajuste das contas públicas."
+    "A confirmação de Luiz Carlos Trabuco Cappi, do Bradesco, para comandar a Fazenda de Lula 4 foi comemorada pelo mercado, que vê no executivo um esforço maior do governo federal em promover o ajuste das contas públicas.",
+    "O mercado subitamente passou de \"ator bolsonarista\" para \"ator 'trabuquista'\", e de conspirador contra a democracia para apoiador do governo Lula. Ironias à parte, a grande melhora dos ativos brasileiros desde que despontou a possibilidade, seguida da confirmação, de Luiz Trabuco no Ministério da Fazenda indica o quão forte é a convicção dos invest"
   ],
   "eventos_recentes": [
     {
@@ -2558,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "e480cdcd0177a7a0",
     "71242ce2d20727bc",
     "450c69f45f228ba3",
     "dc13024c98014ab8",
@@ -2857,6 +2856,7 @@
     "501e193ae4c2e0aa",
     "75f156e66a0499e0",
     "c590325b51ecc056",
-    "a908c9f4e3ce8788"
+    "a908c9f4e3ce8788",
+    "d2536eead6f0882c"
   ]
 }
