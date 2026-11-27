@@ -1,7 +1,5 @@
 {
   "links": [
-    "67a3e18a3d66d5d6",
-    "https://www.moneytimes.com.br/ibovespa-dispara-mais-de-4-e-dolar-recua-a-r-571-o-que-anima-o-mercado-hoje-davs/",
     "a73bcef7a7fca241",
     "3e1d2a33d4fec3a0",
     "ca21daea7a0164d2",
@@ -799,10 +797,11 @@
     "https://www.spacemoney.com.br/investimentos/axia-alupar-descruzamento-participacoes/",
     "bb4175f894c70ac3",
     "https://www.spacemoney.com.br/investimentos/fundos-imobiliarios/maxr11-locacao-joao-pessoa/",
-    "df73c93e0f33e585"
+    "df73c93e0f33e585",
+    "https://www.moneytimes.com.br/taxa-de-desemprego-no-brasil-fica-em-51-no-trimestre-encerrado-em-outubro-em-linha-com-o-esperado-jcav/",
+    "823c31a43dd92e1a"
   ],
   "titulos": [
-    "Capim na lavoura vira aposta de expansão da Soesp",
     "ETFs de Bitcoin somam US$ 1,79 bilhão em resgates",
     "Risco-país da Argentina chega ao maior patamar de 2026",
     "Economia vai desacelerar mais e pesar nos balanços, diz chefe de research do BTG Pactual",
@@ -1601,10 +1600,10 @@
     "Mercados hoje: investidores repercutem anúncio de Luiz Carlos Trabuco como ministro da Fazenda",
     "Rendimento real do trabalhador cresceu 3,5% em um ano",
     "AXIA acerta troca de ativos com Alupar e assume TNE",
-    "MAXR11 fecha locação de dez anos em João Pessoa"
+    "MAXR11 fecha locação de dez anos em João Pessoa",
+    "Desemprego bate mínima histórica e renda do trabalhador avança no Brasil"
   ],
   "leads": [
-    "A Walt Disney conquistou uma importante vitória preliminar na Justiça em sua disputa com o governo Donald Trump, centrada em liberdade de expressão.",
     "O déficit de armazenagem de Mato Grosso deve alcançar 77,63 milhões de toneladas na safra 2035/36, ante 50,83 milhões no cenário atual, segundo projeção do Instituto Mato-Grossense de Economia Agropecuária (Imea). O avanço equivale a 52,72% em uma década.",
     "O setor de infraestrutura terá de enfrentar desafios regulatórios e institucionais para sustentar um novo ciclo de investimentos nos próximos anos.",
     "Segundo a CNBC, as exportações de semicondutores ultrapassaram as de petróleo e gás em valor no comércio global pela primeira vez, impulsionadas pela expansão da inteligência artificial. O dado faz parte de análise do Deutsche Bank baseada em estatísticas do International Trade Centre.",
@@ -1853,7 +1852,8 @@
     "Os mercados iniciam esta sexta-feira (27) com as atenções voltadas para a definição do comando da equipe econômica do próximo governo e a divulgação de novos indicadores no Brasil. O principal destaque é a confirmação de Luiz Carlos Trabuco, presidente do Conselho de Administração do Bradesco, como novo ministro da Fazenda a partir de 2027. Na agen",
     "Vitor Abdala – Repórter da Agência Brasil",
     "A Suno Notícias informou que a AXIA Energia (ELET3) e as subsidiárias AXIA Energia Norte e Nordeste firmaram, em 27 de novembro de 2026, acordos com a Alupar para desfazer o cruzamento de participações na Transnorte Energia (TNE) e na STN – Sistema de Transmissão Nordeste. Pelo arranjo, a AXIA Nordeste venderá 49% da STN à Alupar, e a AXIA Norte co",
-    "O MAXR11 acertou, em 25/11/2026, o aluguel de um imóvel localizado em João Pessoa por dez anos, segundo a Suno Notícias. A administradora é a BTG Pactual Serviços Financeiros."
+    "O MAXR11 acertou, em 25/11/2026, o aluguel de um imóvel localizado em João Pessoa por dez anos, segundo a Suno Notícias. A administradora é a BTG Pactual Serviços Financeiros.",
+    "A taxa de desemprego no Brasil teve um leve recuo em relação à divulgação anterior e ficou em 5,1% no trimestre até outubro de 2026. Trata-se do menor patamar para o intervalo na série histórica iniciada em 2012."
   ],
   "eventos_recentes": [
     {
@@ -2575,10 +2575,13 @@
     {
       "chave": "maxr11::GERAL_ATIVO",
       "ts": 1795785320.677134
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795785733.192288
     }
   ],
   "hashes_imagens": [
-    "40d12822f716dea2",
     "a4a8c7b184f00fe0",
     "673cd62b0ac24fce",
     "ee1f6975071d1120",
@@ -2877,6 +2880,7 @@
     "505e07f2b3deffc5",
     "238eeb8b4498426a",
     "8e1901485400110f",
-    "0a42f1b29a0485d8"
+    "0a42f1b29a0485d8",
+    "9b8925ec55dd288c"
   ]
 }
