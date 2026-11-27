@@ -1,7 +1,5 @@
 {
   "links": [
-    "e223c749f209d39d",
-    "8af7dcf72fe81b3c",
     "0b31927b8b2d0888",
     "895e7a51879bf6e1",
     "a513d1ee0678ac0b",
@@ -799,10 +797,11 @@
     "c0422ed1f74c04d6",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/binance-retoma-saques-apos-hack-2/",
     "d9385d040958ff02",
-    "3175a29a0c8e52d8"
+    "3175a29a0c8e52d8",
+    "https://g1.globo.com/politica/noticia/2026/11/27/apos-eua-proporem-taxar-avioes-brasileiros-mauro-vieira-oferece-apoio-a-embraer-para-buscar-novos-mercados.ghtml",
+    "8df3f567b092ed43"
   ],
   "titulos": [
-    "Agro de SP tem superavit de US$ 17,6 bilhões até outubro de 2026",
     "Aposta em IA azeda e ações de tecnologia da China perdem US$ 1,7 trilhão",
     "Minuta final da COP31 omite menções a combustíveis fósseis",
     "Brasil supera meta e recebe 7,5 milhões de turistas estrangeiros",
@@ -1601,10 +1600,10 @@
     "OAB da Paraíba aponta falhas do BRB em depósitos judiciais",
     "Apple abre Black Friday com vale de até US$ 300",
     "Plano de empréstimos da Ripple fica a um voto no XRP Ledger",
-    "Binance libera saques após hack de US$ 6,3 bilhões"
+    "Binance libera saques após hack de US$ 6,3 bilhões",
+    "Após EUA proporem taxar aviões brasileiros, Mauro Vieira oferece apoio à Embraer para buscar novos mercados"
   ],
   "leads": [
-    "As causas vão do clima à pecuária, e os dados de novembro ainda não mostram alívio. O Ministério da Fazenda elevou as projeções de inflação para este ano e para 2027, e a comida está no centro da revisão.",
     "O Banco Daycoval, especializado em crédito corporativo, vai expandir para os Estados Unidos por meio da plataforma Temenos SaaS, para impulsionar o movimento.",
     "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA.",
     "As bolsas asiáticas fecharam majoritariamente em alta nesta quinta-feira (26), enquanto investidores deixaram de lado as novas propostas tarifárias dos EUA e Wall Street recuperou a maior parte das perdas da sessão anterior, às vésperas do feriado de Ação de Graças.",
@@ -1853,7 +1852,8 @@
     "Segundo o g1, advogados têm encontrado dificuldade para acessar depósitos judiciais administrados pelo Banco de Brasília (BRB), e a OAB da Paraíba avalia recorrer a órgãos de controle. O receio é que a instituição não tenha liquidez para cumprir compromissos em meio ao prejuízo associado ao Banco Master, de Daniel Vorcaro, alvo de liquidação pelo B",
     "A Apple iniciou sua campanha oficial de Black Friday 2026, que chega aos Estados Unidos nesta sexta-feira (27) e se estende até 30 de novembro, com vale-presente de até US$ 300 em produtos elegíveis. A promoção de quatro dias, que vai da Black Friday à Cyber Monday, começou a ser liberada em 26 de novembro na Austrália, Nova Zelândia e Tailândia e ",
     "O plano da Ripple de levar empréstimos no estilo bancário ao XRP Ledger está a um voto de validador da próxima etapa. A estrutura tem duas partes, cada uma com votação própria.",
-    "A Binance informou que retirou integralmente a suspensão dos saques de clientes, medida adotada depois de um hack de US$ 6,3 bilhões no fim de outubro. O comunicado da exchange é datado de 26 de novembro."
+    "A Binance informou que retirou integralmente a suspensão dos saques de clientes, medida adotada depois de um hack de US$ 6,3 bilhões no fim de outubro. O comunicado da exchange é datado de 26 de novembro.",
+    "O ministro das Relações Exteriores, Mauro Vieira, se reuniu com o presidente da Embraer, Francisco Gomes Neto, nesta quinta-feira (26) e afirmou a ele que a diplomacia brasileira poderá buscar novos mercados para as exportações do setor."
   ],
   "eventos_recentes": [
     {
@@ -2583,10 +2583,13 @@
     {
       "chave": "cripto_mercado::CRIPTO_EVENTO",
       "ts": 1795756840.414431
+    },
+    {
+      "chave": "embraer::GERAL_ATIVO",
+      "ts": 1795758415.726277
     }
   ],
   "hashes_imagens": [
-    "1d9fe4ced3a82264",
     "f611ec11ff956d4d",
     "53f8ec4c47d22f3d",
     "40f4867181ce77e5",
@@ -2885,6 +2888,7 @@
     "ec3588f16ef95607",
     "31b34f6aec087ac3",
     "01aaf22e8f806605",
-    "f55353beb25d0678"
+    "f55353beb25d0678",
+    "5ef629e654c0b53c"
   ]
 }
