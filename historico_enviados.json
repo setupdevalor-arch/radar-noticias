@@ -1,6 +1,5 @@
 {
   "links": [
-    "a12031dc1b21df43",
     "https://www.cnnbrasil.com.br/infra/quanto-custa-a-falta-de-previsibilidade-no-setor-logistico/",
     "bd187b5dd9ae953e",
     "https://www.infomoney.com.br/mercados/xp-ve-pessimismo-extremo-na-bolsa-e-aponta-chance-de-recuperacao-do-ibovespa/",
@@ -799,7 +798,8 @@
     "65b14cf3d2592a73",
     "https://www.poder360.com.br/poder-economia/bradesco-de-trabuco-tem-3o-maior-juro-dentre-os-5-bancoes/",
     "5995f649adde47d2",
-    "869ec32e2b2463a3"
+    "869ec32e2b2463a3",
+    "bccf404a6a4b3ae6"
   ],
   "titulos": [
     "Bancões trocam Brasil por México nas carteiras para 2027",
@@ -1856,10 +1856,6 @@
     "Entre 31 instituições financeiras, banco do futuro ministro da Fazenda está em 8º lugar no ranking das maiores taxas de juros"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795576748.309084
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795578374.463252
