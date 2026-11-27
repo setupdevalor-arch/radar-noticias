@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/politica/trabuco-fazenda-convite-lula/",
-    "cbc590dea3579dcf",
     "https://www.poder360.com.br/poder-infra/latam-faz-1-voo-oficial-com-novo-aviao-da-embraer/",
     "50c50d985e6ba863",
     "5340167e06e32cc9",
@@ -799,7 +797,9 @@
     "https://www.poder360.com.br/poder-economia/saiba-quais-indicadores-e-balancos-saem-nesta-6a-feira-14/",
     "1262029c4f88323b",
     "https://www.poder360.com.br/poder-economia/eua-compraram-mais-da-metade-dos-avioes-exportados-pelo-brasil-em-2026/",
-    "3629d189cafc48a4"
+    "3629d189cafc48a4",
+    "1c7ea6c60b166546",
+    "a5c1746f2ea40305"
   ],
   "titulos": [
     "Fertilizantes: importação de 85% expõe risco ao agro",
@@ -1856,10 +1856,6 @@
     "Possível tarifa de Donald Trump ameaça superavit comercial do país com os Estados Unidos em um segmento de alto valor agregado"
   ],
   "eventos_recentes": [
-    {
-      "chave": "embraer::GERAL_ATIVO",
-      "ts": 1795597706.063165
-    },
     {
       "chave": "macro_global::MACRO_EVENTO",
       "ts": 1795599027.065632
