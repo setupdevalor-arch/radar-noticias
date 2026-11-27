@@ -1,8 +1,5 @@
 {
   "links": [
-    "ba0daba419f54ed7",
-    "https://www.moneytimes.com.br/petroleo-fecha-em-alta-em-meio-a-temor-com-oferta-diante-de-escalada-de-tensao-no-oriente-medio-davs/",
-    "5c59986584fe7e59",
     "https://www.poder360.com.br/poder-congresso/nos-eua-flavio-indica-r-79-mi-em-emendas-para-2027/",
     "a828fc140844efca",
     "fc6dd1100a7a38f9",
@@ -799,7 +796,10 @@
     "f397b943f7e62bba",
     "c79eb56959820a77",
     "2b2835b5e8bde10b",
-    "02c872c04c6fce1d"
+    "02c872c04c6fce1d",
+    "d790c1f8622a7814",
+    "ce3b0a8cef3d9ee7",
+    "48b74e09f56998fa"
   ],
   "titulos": [
     "EZ Tec aprova reorganização com incorporações e cisão",
@@ -1856,10 +1856,6 @@
     "A diversificação internacional deixou de ser apenas uma estratégia para proteger o patrimônio de crises no Brasil e passou a ser uma ferramenta para melhorar a relação entre risco e retorno das carteiras. Para gestores da XP Asset Management e da Pragma, a construção de portfólios globais deve ser uma decisão estrutural, que considere diferentes me"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795638913.752705
-    },
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795639307.539934
