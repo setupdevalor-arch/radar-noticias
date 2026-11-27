@@ -1,7 +1,5 @@
 {
   "links": [
-    "d0ee4aa11dd964ed",
-    "https://www.moneytimes.com.br/cosan-csan3-jbs-jbss32-grupo-fictor-e-outros-destaques-desta-quinta-feira-mlem/",
     "1ee8a33cb3942f6a",
     "514f5881e8d81553",
     "40e9bd38269a1419",
@@ -799,10 +797,11 @@
     "68b71d306b810568",
     "https://www.moneytimes.com.br/o-espanhol-pablo-hernandez-de-cos-assumira-a-presidencia-do-bce-no-lugar-de-christine-lagarde-fets/",
     "bd7e67e45fcdd4f9",
-    "74e6f06df9e7c55d"
+    "74e6f06df9e7c55d",
+    "https://www.spacemoney.com.br/investimentos/fundos-de-investimentos/private-markets-resgates-educacao-investidor/",
+    "a6635324ae824bc8"
   ],
   "titulos": [
-    "Vale a pena encarar a crise do Banco do Brasil (BBAS3) por uma alta de apenas 5%? XP diz o que fazer com as ações agora",
     "Social Security sobe 3,6% em 2027, mas impostos aumentam",
     "Negociações climáticas da COP31 fracassam, com União Europeia e outros países rejeitando acordo",
     "Inflação no Brasil e nos EUA movimentam a semana; veja a agenda de indicadores",
@@ -1601,10 +1600,10 @@
     "Após anos de bombardeios russos, maior siderúrgica da Ucrânia agora é alvo de tarifas",
     "Safra de soja do Brasil em 2026/27 deve cair 1,3%, prevê Agroconsult",
     "Na Black Friday dos agentes de IA, varejo disputa quem escolhe o que você compra",
-    "O espanhol Pablo Hernández De Cos assumirá a presidência do BCE no lugar de Christine Lagarde"
+    "O espanhol Pablo Hernández De Cos assumirá a presidência do BCE no lugar de Christine Lagarde",
+    "Investir em private markets é fácil; resgatar é o desafio"
   ],
   "leads": [
-    "Promotores de Justiça e policiais civis deflagraram, na manhã desta quinta-feira (26), a Operação Dinheiro Fictício, que mira o Grupo Fictor. A Justiça determinou o sequestro de bens e valores e o bloqueio de contas de 233 investigados, entre pessoas físicas e jurídicas, até o limite de aproximadamente R$ 4,3 bilhões.",
     "O conselho de administração da Smart Fit (SMFT3) aprovou a distribuição de juros sobre o capital próprio (JCP) aos acionistas e um aumento de capital da companhia.",
     "O Índice de Confiança da Indústria (ICI) da Fundação Getulio Vargas (FGV) subiu 0,4 ponto em novembro em comparação a outubro, para 91,4 pontos. Esta foi a primeira alta após quatro meses consecutivos de queda do indicador. Em médias móveis trimestrais, o ICI caiu 0,8 ponto, a 91,2 pontos.",
     "Analistas veem papéis de boas empresas como oportunidades, mas alertam que juros altos e incerteza fiscal devem pesar sobre a bolsa",
@@ -1853,13 +1852,10 @@
     "Voltemos 14 anos no tempo: a Ucrânia era um país em uma trajetória diferente. O Campeonato Europeu da UEFA, coorganizado com a Polônia, havia proporcionado à Ucrânia uma importante vitrine internacional e reforçado suas ambições de se integrar mais estreitamente à comunidade política e econômica europeia. Um Acordo de Associação entre a União Europ",
     "A safra de soja do Brasil 2026/27 foi estimada nesta quinta-feira em 182,3 milhões de toneladas, queda de 1,3% no comparativo com o ciclo anterior, de acordo com análise da consultoria Agroconsult apresentada em evento da Associação Nacional dos Exportadores de Cereais (Anec).",
     "O Google também passou a conectar suas ferramentas de inteligência artificial às lojas. Em outubro, a empresa começou a disponibilizar nos Estados Unidos o Universal Cart, carrinho que reúne produtos de diferentes varejistas no buscador e no aplicativo Gemini.",
-    "Pablo Hernández de Cos, veterano do sistema bancário central espanhol, foi escolhido pelos países da zona do euro nesta quinta-feira (26) como o próximo presidente do Banco Central Europeu, decisão que sugere continuidade nas políticas da instituição financeira mais poderosa da Europa."
+    "Pablo Hernández de Cos, veterano do sistema bancário central espanhol, foi escolhido pelos países da zona do euro nesta quinta-feira (26) como o próximo presidente do Banco Central Europeu, decisão que sugere continuidade nas políticas da instituição financeira mais poderosa da Europa.",
+    "O avanço dos fundos de private markets sobre o investidor de varejo ocorre mais rápido do que a compreensão sobre as travas para retirar o dinheiro dessas aplicações, segundo reportagem da CNBC. De acordo com a emissora, pesquisa da PwC aponta que 77% dos distribuidores de fundos ouvidos classificam o acesso a mercados privados como importante ou m"
   ],
   "eventos_recentes": [
-    {
-      "chave": "amazon::GERAL_ATIVO",
-      "ts": 1795596020.820224
-    },
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795597009.913837
@@ -2598,7 +2594,6 @@
     }
   ],
   "hashes_imagens": [
-    "3ab27176f9559940",
     "864a2e118e97e841",
     "683227ac9e99f6be",
     "c2adfe1897c77fa8",
@@ -2897,6 +2892,7 @@
     "ac9d42c87888bd1a",
     "62377b73c9c6a47a",
     "7f3e66edd40da8c4",
-    "fb197b3e0dd18db2"
+    "fb197b3e0dd18db2",
+    "807f05e654fd86bb"
   ]
 }
