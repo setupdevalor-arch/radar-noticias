@@ -1,16 +1,5 @@
 {
   "links": [
-    "53b8b47718b677f6",
-    "73882cbb334a3cda",
-    "edd7cfba3e524ef7",
-    "5cfc7b82f640dec6",
-    "a70ff2166f8ef9ac",
-    "221082969cc6ca75",
-    "fc147c3c8767134d",
-    "fbf06622375e6f53",
-    "https://www.spacemoney.com.br/tecnologia/chips-superam-petroleo-exportacoes-globais/",
-    "68128627a4e5209d",
-    "ab80753abe96cecb",
     "8d30b8d1dd4390ed",
     "fbe8213c1066f7d0",
     "7cef5edf15e40a2a",
@@ -799,12 +788,20 @@
     "9ff2637982fcbf22",
     "https://www.moneytimes.com.br/gpa-pcar3-diz-que-negocia-transacao-tributaria-com-receita-mas-nega-acordo-vinculante-miql/",
     "59dc5fd1a9853714",
-    "492c2719767fab82"
+    "492c2719767fab82",
+    "c12d869e5c0c8698",
+    "d2849c3e95b2a997",
+    "f29c904daf90123a",
+    "989c08916454c852",
+    "3dd44410fdb66c08",
+    "https://www.cnnbrasil.com.br/internacional/o-que-muda-com-a-suspensao-das-eleicoes-primarias-na-argentina/",
+    "4fd86191afac3d00",
+    "https://www.spacemoney.com.br/tecnologia/jensen-huang-nvidia-mercado-ia/",
+    "c576b474dfaed6cd",
+    "https://investnews.com.br/investimentos/tesouro-direto-taxas-rendimento-hoje-trabuco-fazenda-27112026/",
+    "6945d71b72ce6dbb"
   ],
   "titulos": [
-    "Traders descartam alta de 0,50 ponto do Fed em dezembro",
-    "Futuros de NY avançam após selloff global da IA",
-    "Alta dos gastos faz investidor exigir mais juros, diz pesquisadora da FGV",
     "Eduardo Braga defende mudança na Constituição para novo ajuste fiscal",
     "Preços do petróleo caem com mercado volátil nesta segunda-feira",
     "UBS vê possibilidade de estagflação no Brasil em 2027; como balancear o portfólio?",
@@ -1601,12 +1598,12 @@
     "Inadimplência do crédito total bate 5,1% e BC restringe rotativo do cartão",
     "Brasil abre novos mercados agropecuários no Irã, Nicarágua, Peru e Caribe",
     "Bradesco BBI aposta no “efeito Trabuco”, eleva Brasil para compra e revela o que pode destravar uma alta de 30% da bolsa",
-    "GPA (PCAR3) diz que negocia acordo para passivos fiscais com a Receita, mas nega acordo vinculante"
+    "GPA (PCAR3) diz que negocia acordo para passivos fiscais com a Receita, mas nega acordo vinculante",
+    "O que muda com a suspensão das eleições primárias na Argentina",
+    "Volta de Huang dá alívio breve à Nvidia, diz CNBC",
+    "Tesouro Direto hoje: juros recuam; prefixado vai abaixo de 14% com Trabuco na Fazenda"
   ],
   "leads": [
-    "O Ibovespa subia 2,67% às 10h11 de Brasília, aos 171.126,78 pontos, com o dólar comercial perto de R$ 5,77 e os juros futuros em baixa. O índice havia registrado 0,01% na abertura preliminar, aos 166.695,79 pontos. O SMLL abria com 0,04% de ganho, aos 2.037,93 pontos, enquanto o Ibovespa futuro marcava 171.515 pontos, alta de 2,23%, às 9h56.",
-    "A Motiva (MOTV3), antigo Grupo CCR, anunciou na quarta-feira (25) a renúncia de André Salcedo ao comando da divisão de transporte sobre trilhos. Eduardo Camargo, atual presidente da Motiva Rodovias, assumirá também as operações ferroviárias.",
-    "Vice-presidente criticou nova taxa avaliada pelo governo Trump e disse que Brasil trabalhará para revertê-la",
     "Geraldo Campos Jr. e Lais Carregosa, da Agência iNFRA",
     "O vice-presidente Geraldo Alckmin (PSB) afirmou que a proposta dos Estados Unidos de impor novas tarifas à importações de aeronaves brasileiras é \"totalmente descabida\". As aeronaves prontas, atualmente isentas de tarifas dos EUA para o Brasil, são o quarto maior item de exportação do país.",
     "Mesmo depois da surpresa positiva do IPCA-15, seguimos vendo uma combinação interessante nos títulos indexados à inflação de prazo mais curto.",
@@ -1853,13 +1850,12 @@
     "A inadimplência da carteira de crédito total do Sistema Financeiro Nacional subiu para 5,1% em outubro, novo recorde da série, enquanto no crédito livre às famílias a taxa atingiu 8,2%, alta de 1,3 ponto percentual em 12 meses.",
     "O governo brasileiro concluiu negociações sanitárias e fitossanitárias que autorizam a exportação de novos produtos agropecuários para Irã, Nicarágua, Peru e São Cristóvão e Névis. As medidas ampliam o acesso de produtos nacionais a esses mercados e contemplam os setores de cereais, amendoim e proteínas de origem animal.",
     "Para analistas, nomeação pode melhorar a percepção sobre a política fiscal e atrair investidores que ainda resistiam a aumentar a exposição ao Brasil",
-    "O Pão de Açúcar (GPA) (PCAR3) confirmou nesta sexta-feira (27) que negocia com a Procuradoria-Geral da Fazenda Nacional (PGFN) e a Receita Federal uma transação tributária envolvendo débitos e contingências fiscais."
+    "O Pão de Açúcar (GPA) (PCAR3) confirmou nesta sexta-feira (27) que negocia com a Procuradoria-Geral da Fazenda Nacional (PGFN) e a Receita Federal uma transação tributária envolvendo débitos e contingências fiscais.",
+    "O Senado argentino aprovou, por 43 votos a 29, um projeto de reforma eleitoral que suspende as PASO (Eleições Primárias, Abertas, Simultâneas e Obrigatórias) em 2027.",
+    "A volta de Jensen Huang ao comando da Nvidia, após renúncia e retorno em menos de duas semanas, trouxe um alívio inicial ao mercado de inteligência artificial, mas a reação perdeu força rapidamente, segundo a CNBC. A emissora americana relata que a empresa perdeu mais de US$ 1 trilhão em valor de mercado e depois recuperou pouco menos de US$ 1 tril",
+    "O Tesouro acompanha o mercado de juros futuros, que mede quanto os investidores cobram para emprestar ao governo. No início da manhã, o contrato de DI para janeiro de 2031 caía 0,63 ponto, para 13,7% ao ano."
   ],
   "eventos_recentes": [
-    {
-      "chave": "gerdau::GERAL_ATIVO",
-      "ts": 1795611106.491049
-    },
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795611520.797164
@@ -2591,12 +2587,17 @@
     {
       "chave": "pcar3::GERAL_ATIVO",
       "ts": 1795782972.710358
+    },
+    {
+      "chave": "nvidia::GERAL_ATIVO",
+      "ts": 1795783966.72459
+    },
+    {
+      "chave": "rf_tesouro::RF_EVENTO",
+      "ts": 1795783966.72459
     }
   ],
   "hashes_imagens": [
-    "30892d5db31bec3d",
-    "85c316a841ce6f80",
-    "311bfc36f9ca2392",
     "f93163ebcc943990",
     "b9ca1a2a60d429c8",
     "fe303eb118b5ffe2",
@@ -2893,6 +2894,9 @@
     "3423d09146b20c07",
     "bb71bf6d17c0a198",
     "2fb330196ca410f0",
-    "6b3f82f9caed48e1"
+    "6b3f82f9caed48e1",
+    "ce1b473666652ca3",
+    "91b8b1ba6866e88b",
+    "097ffb77ceeef6b1"
   ]
 }
