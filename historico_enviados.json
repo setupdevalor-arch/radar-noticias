@@ -1,8 +1,5 @@
 {
   "links": [
-    "6a04fafbaf00a0d6",
-    "9ea6c204cdd612d4",
-    "3a5f6975a4554360",
     "a02d27f038e43e25",
     "8b3460e8909b5a58",
     "adc0652746cb651d",
@@ -799,7 +796,10 @@
     "4ab67ae275557dbe",
     "1f4f012bd3e64c69",
     "https://www.mobiletime.com.br/noticias/26/11/2026/visa-esforcos-agenticos/",
-    "b15ac20e45c46787"
+    "b15ac20e45c46787",
+    "a6c08bc060d4783e",
+    "b4fa5f73f88d1873",
+    "d2923da8d5f2acd8"
   ],
   "titulos": [
     "Boi gordo renova recorde e futuro aponta dezembro mais alto",
@@ -1856,10 +1856,6 @@
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra"
   ],
   "eventos_recentes": [
-    {
-      "chave": "ultrapar::GERAL_ATIVO",
-      "ts": 1795568958.394544
-    },
     {
       "chave": "banco_do_brasil::EVENTO_CORP",
       "ts": 1795575737.195804
