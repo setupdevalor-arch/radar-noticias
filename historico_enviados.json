@@ -1,8 +1,5 @@
 {
   "links": [
-    "b0d89c98abb2fc8f",
-    "https://www.moneytimes.com.br/dexco-dxco3-levanta-r-200-milhoes-com-venda-de-acoes-de-subsidiaria-florestal/",
-    "b43f10209c9685f3",
     "c55e289e248692ad",
     "f7e97bbd2b168c7a",
     "https://www.poder360.com.br/poder-economia/saiba-quem-e-luiz-carlos-trabuco-novo-ministro-da-fazenda/",
@@ -799,10 +796,12 @@
     "https://finsidersbrasil.com.br/criptoativos/cvm-inicia-testes-de-tokenizacao-com-11-propostas/",
     "7476fd59acdc7653",
     "3219f7218b782020",
-    "72c97e66f7d55347"
+    "72c97e66f7d55347",
+    "e4af33c4c1d5a5b4",
+    "https://www.estadao.com.br/economia/celso-ming/um-minueto-lula-e-trabuco-terao-de-acertar-o-passo-para-harmonizar-o-governo/",
+    "fce54963c70cf2ef"
   ],
   "titulos": [
-    "CVM suspende registro do BRB e instituição fica impedida de negociar ações na Bolsa",
     "AGU se manifesta contra liminar de Dino sobre fim da escala 6×1",
     "Natal mais magro? Para Molina, da MBRF (MBRF3), fim das bets pode trazer ‘surpresa muito boa’ para o varejo",
     "Gerdau: Juro é definido no mercado; não há governo que consiga comandar esse processo",
@@ -1601,10 +1600,10 @@
     "11 ações do Ibovespa subiram mais de 6% nesta sexta após anúncio de Trabuco",
     "Petróleo registra primeiro ganho semanal no mês por temores sobre oferta",
     "TRXF11 lidera giro de FIIs na B3 pelo terceiro mês",
-    "CVM começa testes de tokenização e pode estender prazo até fevereiro"
+    "CVM começa testes de tokenização e pode estender prazo até fevereiro",
+    "Um minueto: Lula e Trabuco terão de acertar o passo para harmonizar o governo"
   ],
   "leads": [
-    "O ministro-chefe da Secretaria-Geral da Presidência, Guilherme Boulos (PSOL-SP), tem atuado como contraponto às propostas de ajuste fiscal defendidas por agentes do mercado financeiro.",
     "Indenizações são parte de acordo de US$ 1,5 bilhão fechado pela dona do Claude em 2025 para encerrar uma ação por violação de direitos autorais",
     "A Bolsa brasileira resolveu acelerar nesta quinta-feira (26), e a TOTVS (TOTS3) pegou carona no movimento com uma das maiores valorizações do Ibovespa. As ações da empresa brasileira de tecnologia, especializada em softwares de gestão empresarial, chegaram a subir 8,49% por volta das 14h40, em um pregão marcado pelo otimismo dos investidores após a",
     "Segundo a Suno Notícias, a S&P Global Ratings colocou a Nvidia (NVDC34) no CreditWatch negativo, abrindo espaço para cortar as notas da fabricante de chips nos próximos 90 dias. A agência manteve a avaliação “AA”, mas quer respostas sobre a supervisão do conselho, os controles internos e a concentração de poder em Jensen Huang.",
@@ -1853,7 +1852,8 @@
     "O forte rali da Bolsa brasileira nesta sexta-feira (27) impulsionou uma ampla lista de ações do Ibovespa, embora os ganhos tenham desacelerado em relação aos picos observados mais cedo.",
     "O petróleo Brent registrou uma ligeira queda nesta sexta-feira (27), mas interrompeu uma sequência de três semanas de perdas para registrar seu primeiro ganho semanal em novembro, à medida que os ataques a petroleiros no Estreito de Ormuz e à infraestrutura energética saudita alimentaram preocupações com o abastecimento no Oriente Médio.",
     "O TRXF11, da TRX Real Estate, registrou o maior volume de negociação entre FIIs na B3 em outubro e manteve a ponta pelo terceiro mês, de acordo com a Suno Notícias. O recorte usa o DataWise+ e aponta alterações em veículos ligados a galpões logísticos e shopping centers.",
-    "- CVM recebeu 11 propostas de projetos com ativos tokenizados e vai iniciar os testes do programa piloto de DLT."
+    "- CVM recebeu 11 propostas de projetos com ativos tokenizados e vai iniciar os testes do programa piloto de DLT.",
+    "A questão-chave, embora não a única, do mandato do futuro ministro da Fazenda, Luiz Carlos Trabuco Cappi, será o grau de autonomia que terá para exercer seu cargo. Hoje, nem ele nem o presidente Lula têm clareza do que, na prática, será essa relação. Isso aí será um minueto que terá pisão no pé e algum falso volteio, até que a dupla consiga se harm"
   ],
   "eventos_recentes": [
     {
@@ -2570,7 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "2e0bd16451f31d29",
     "0922a1247bf96152",
     "f1f9a109c64d946e",
     "8ff10dd2b7342f23",
@@ -2869,6 +2868,7 @@
     "df983397f769d4ea",
     "163934ee28fca47a",
     "ecc8b85639df8e41",
-    "9d009213431f8beb"
+    "9d009213431f8beb",
+    "7b3c3ba24d5519fd"
   ]
 }
