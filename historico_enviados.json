@@ -1,12 +1,5 @@
 {
   "links": [
-    "9214eb123c5c2bfb",
-    "bc363374a79a967b",
-    "c3e9537a15b88adc",
-    "https://megawhat.uol.com.br/noticias/brasil-bate-recorde-de-demanda-de-energia-pelo-terceiro-dia-consecutivo/",
-    "a677732c57e0034b",
-    "https://www.infomoney.com.br/mundo/disney-derrota-trump-na-justica-em-disputa-que-ameaca-a-rede-abc/",
-    "51b57177d83ae299",
     "https://www.spacemoney.com.br/agronegocio/deficit-armazenagem-mato-grosso/",
     "c8965a8357eb0ff1",
     "af7736edee618e50",
@@ -799,10 +792,16 @@
     "https://www.spacemoney.com.br/investimentos/criptomoedas/futuro-presidente-bce-depositos-tokenizados/",
     "b5b55eab35db854e",
     "https://www.poder360.com.br/poder-economia/cade-aprova-sociedade-entre-itau-e-klabin-em-negocio-de-r-12-bilhao/",
-    "77c32bce88c0bc68"
+    "77c32bce88c0bc68",
+    "bb8cb4ca551bc9eb",
+    "b6a50e0a5cc3e9f7",
+    "a5a2141a3c595968",
+    "853db7f19cee097f",
+    "c1f8522635a34dc3",
+    "https://bmcnews.com.br/economia/inadimplencia-do-credito-total-bate-5-1-e-bc-restringe-rotativo-do-cartao/",
+    "c244c7a7a32e508b"
   ],
   "titulos": [
-    "Bolsas chinesas anunciam medidas para apoiar os mercados acionários",
     "Deputados analisam pacote fiscal com estimativa de R$ 50 bi",
     "Houthis atacam refinaria saudita e Trump ameaça Teerã",
     "Amante de ex-CEO da Nvidia manteve contato com agente chinês, diz NYT",
@@ -1601,10 +1600,10 @@
     "Inflação pesa, mas gasto de fim de ano deve crescer nos EUA",
     "IA intensifica ataques cibernéticos ao setor elétrico e empresas montam grupo de defesa no Brasil",
     "Futuro presidente do BCE prioriza depósitos tokenizados",
-    "Cade aprova sociedade entre Itaú e Klabin em negócio de R$ 1,2 bilhão"
+    "Cade aprova sociedade entre Itaú e Klabin em negócio de R$ 1,2 bilhão",
+    "Inadimplência do crédito total bate 5,1% e BC restringe rotativo do cartão"
   ],
   "leads": [
-    "O Ministério de Minas e Energia (MME) voltou a afirmar nesta quinta (26/11) que não vê risco de faltar etanol anidro, o etanol misturado à gasolina, durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta (25/11), na reunião de monitoramento do abastecimento de etanol da safra 2026/2027, com representantes do governo e da cad",
     "A sanção da LC (Lei Complementar) 239/2026 (antigo PLP 299/2026), publicada em edição extra do DOU (Diário Oficial da União) nesta terça-feira (24), encerra a tramitação do pacote de ajuste fiscal com a promessa de reforçar o caixa da União em cerca de R$ 50 bilhões em 2027. Enquanto o noticiário econômico concentra as atenções na meta de superávit",
     "Pedro Peduzzi – Repórter da Agência Brasil",
     "O vice-presidente Geraldo Alckmin (PSB) tem sido cotado para assumir o Ministério da Segurança Pública, que será criado pelo governo Lula (PT). As informações foram divulgadas pelo jornal Folha de S. Paulo na última quarta-feira (25).",
@@ -1853,13 +1852,10 @@
     "Consumidores dos Estados Unidos chegam à Black Friday mais cautelosos por causa da inflação e das incertezas do mercado de trabalho, mas seguem dispostos a gastar nas festas de fim de ano — desde que encontrem descontos. É o que aponta reportagem da CNBC, segundo a qual dados recentes e relatos de varejistas indicam uma temporada de compras robusta",
     "A inteligência artificial (IA) está tornando os ataques cibernéticos mais rápidos e convincentes, ao mesmo tempo em que crises geopolíticas elevam a pressão sobre infraestruturas críticas, na avaliação de Rolf Satake, gerente do Centro de Segurança Cibernética do Itaipu Parquetec.",
     "O Conselho Europeu anunciou em 26 de novembro a indicação de Pablo Hernandez de Cos, ex-governador do Banco da Espanha, para presidir o Banco Central Europeu (BCE). Ele seria o primeiro espanhol no cargo e deve suceder Christine Lagarde, que deixa o posto em 7 de fevereiro. O nome ainda precisa de consulta ao Parlamento Europeu e ao Conselho do BCE",
-    "Banco terá participação na Bougainville Reflorestadora, empresa que reúne 37,3 mil hectares de ativos florestais"
+    "Banco terá participação na Bougainville Reflorestadora, empresa que reúne 37,3 mil hectares de ativos florestais",
+    "A inadimplência da carteira de crédito total do Sistema Financeiro Nacional subiu para 5,1% em outubro, novo recorde da série, enquanto no crédito livre às famílias a taxa atingiu 8,2%, alta de 1,3 ponto percentual em 12 meses."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795609600.68111
-    },
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795609964.7834
@@ -2598,7 +2594,6 @@
     }
   ],
   "hashes_imagens": [
-    "c7664be2dc191376",
     "ee2161dc110b75cb",
     "baee54770d2b19f0",
     "481aa8c80c14be31",
@@ -2897,6 +2892,7 @@
     "f788f706f4af5b1b",
     "d22a6498b3b540a1",
     "7aeb3db519c4b810",
-    "91228e6c864de26a"
+    "91228e6c864de26a",
+    "3423d09146b20c07"
   ]
 }
