@@ -1,7 +1,5 @@
 {
   "links": [
-    "a513d1ee0678ac0b",
-    "ebe12e1869575edf",
     "https://www.cnnbrasil.com.br/economia/money/negocios/fictor-tentou-comprar-banco-master-relembre-negociacao-que-foi-suspensa/",
     "ffa8ddd67f60560b",
     "https://www.moneytimes.com.br/smart-fit-smft3-pagara-r-545-milhoes-em-jcp-aos-acionistas-e-anuncia-aumento-de-capital-veja-as-condicoes-lmrs/",
@@ -799,10 +797,11 @@
     "https://g1.globo.com/politica/noticia/2026/11/27/apos-eua-proporem-taxar-avioes-brasileiros-mauro-vieira-oferece-apoio-a-embraer-para-buscar-novos-mercados.ghtml",
     "8df3f567b092ed43",
     "https://www.poder360.com.br/poder-economia/chamado-de-golpista-por-petistas-temer-elogia-trabuco-na-fazenda/",
-    "f26828780517a413"
+    "f26828780517a413",
+    "https://www.spacemoney.com.br/tecnologia/sap-corte-vagas-ia/",
+    "a879a16cb425ec32"
   ],
   "titulos": [
-    "Minuta final da COP31 omite menções a combustíveis fósseis",
     "Brasil supera meta e recebe 7,5 milhões de turistas estrangeiros",
     "Black Friday pode ter melhor faturamento desde 2014, projeta CNC",
     "Impacto de custo de data centers ainda é dúvida, diz analista",
@@ -1601,10 +1600,10 @@
     "Plano de empréstimos da Ripple fica a um voto no XRP Ledger",
     "Binance libera saques após hack de US$ 6,3 bilhões",
     "Após EUA proporem taxar aviões brasileiros, Mauro Vieira oferece apoio à Embraer para buscar novos mercados",
-    "Chamado de golpista por petistas, Temer elogia Trabuco na Fazenda"
+    "Chamado de golpista por petistas, Temer elogia Trabuco na Fazenda",
+    "SAP prepara corte de ao menos 10 mil vagas em aposta em IA"
   ],
   "leads": [
-    "A Comissão Federal de Comunicações dos Estados Unidos (FCC) autorizou hoje (25) a SpaceX, de Elon Musk, a implantar uma constelação de até 1 milhão de satélites destinados ao processamento de dados no espaço. Denominado Starmind, o projeto é voltado ao atendimento da demanda por capacidade computacional para aplicações de IA.",
     "As bolsas asiáticas fecharam majoritariamente em alta nesta quinta-feira (26), enquanto investidores deixaram de lado as novas propostas tarifárias dos EUA e Wall Street recuperou a maior parte das perdas da sessão anterior, às vésperas do feriado de Ação de Graças.",
     "O líder norte-coreano Kim Jong Un afirmou que seu país deve se concentrar na implantação de armas ‌nucleares táticas em diversos domínios e que sua capacidade de produção de material nuclear está sendo sistematicamente ampliada, ‌informou a agência de notícias estatal KCNA na quinta-feira (horário local, ainda quarta-feira em Brasília).",
     "O Ministério de Minas e Energia (MME) pretende estabelecer uma janela horária mínima de três ou quatro horas como referência para o rateio do Encargo de Reserva de Capacidade (ERCap), atribuindo uma parcela maior dos custos aos consumidores que mais demandam energia nos horários críticos do sistema elétrico. A proposta também deverá dar flexibilida",
@@ -1853,7 +1852,8 @@
     "O plano da Ripple de levar empréstimos no estilo bancário ao XRP Ledger está a um voto de validador da próxima etapa. A estrutura tem duas partes, cada uma com votação própria.",
     "A Binance informou que retirou integralmente a suspensão dos saques de clientes, medida adotada depois de um hack de US$ 6,3 bilhões no fim de outubro. O comunicado da exchange é datado de 26 de novembro.",
     "O ministro das Relações Exteriores, Mauro Vieira, se reuniu com o presidente da Embraer, Francisco Gomes Neto, nesta quinta-feira (26) e afirmou a ele que a diplomacia brasileira poderá buscar novos mercados para as exportações do setor.",
-    "Ex-presidente afirma que o nome escolhido por Lula “é a opção certa para o Brasil”"
+    "Ex-presidente afirma que o nome escolhido por Lula “é a opção certa para o Brasil”",
+    "A SAP prepara um plano para eliminar ao menos 10 mil postos de trabalho enquanto reorganiza o negócio de software para a era da inteligência artificial, segundo a CNBC, que citou reportagem da Bloomberg na quinta-feira com base em pessoas a par do assunto."
   ],
   "eventos_recentes": [
     {
@@ -2582,7 +2582,6 @@
     }
   ],
   "hashes_imagens": [
-    "53f8ec4c47d22f3d",
     "40f4867181ce77e5",
     "0688d0206d2bca4c",
     "e6347a6eb0fc503e",
@@ -2881,6 +2880,7 @@
     "01aaf22e8f806605",
     "f55353beb25d0678",
     "5ef629e654c0b53c",
-    "71bbc01a6a72d421"
+    "71bbc01a6a72d421",
+    "7a535a533d8f0576"
   ]
 }
