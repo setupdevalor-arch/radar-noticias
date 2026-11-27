@@ -1,15 +1,5 @@
 {
   "links": [
-    "4c5bc879fbc3f1b0",
-    "a8cf392a08f57737",
-    "41d48353b5732570",
-    "10f4aec6d59080d6",
-    "1536c5620228a4c7",
-    "https://www.poder360.com.br/poder-congresso/trabuco-pode-nao-ser-a-melhor-opcao-para-a-fazenda-diz-uczai/",
-    "8678d197c9db02ba",
-    "2ef32c6315a65d9c",
-    "8b515dcb8d271521",
-    "81616d87e9a00ec1",
     "c49cb3053a8d0497",
     "https://megawhat.uol.com.br/economia-e-politica/receita-com-descomissionamento-aumenta-dez-vezes-no-porto-do-acu/",
     "3f3ba90b44adc222",
@@ -799,10 +789,19 @@
     "52c4396633c0fc55",
     "c2bff0e459676bb7",
     "88ed6e61a80f192d",
-    "f81ccb600c8227cf"
+    "f81ccb600c8227cf",
+    "56d7db1c98d4d9bd",
+    "1bd372f10dc05858",
+    "4973cc6d9906d61b",
+    "06f9b15c226265e4",
+    "28d5ae941462b143",
+    "d517ba5c146d1455",
+    "dad04c6f72ca4708",
+    "4300af0465d3cc08",
+    "https://www.cnnbrasil.com.br/politica/trabuco-e-durigan-irao-juntos-a-almoco-da-febraban-sinalizar-transicao/",
+    "84e61668968df8ef"
   ],
   "titulos": [
-    "IPC-S mantém 0,38% na terceira leitura de novembro",
     "PMI da zona do euro fica estável em novembro; Alemanha compensa queda na França",
     "Receita da Randoncorp cai quase 3% em outubro",
     "CrowdStrike reverte prejuízo, supera projeções e anuncia para compra de empresa",
@@ -1601,10 +1600,10 @@
     "Trabuco na Fazenda pode blindar Banco Central; veja os 3 pontos que o mercado vai monitorar, segundo UBS GWM",
     "Brasília sedia evento de promoção agroexportadora",
     "Trabuco é ‘totalmente diferente’ de Joaquim Levy, diz Andréa Damico, da Bysidebrazil",
-    "Aluguel consome quase 20% do orçamento das famílias de baixa renda, mostra IBGE"
+    "Aluguel consome quase 20% do orçamento das famílias de baixa renda, mostra IBGE",
+    "Trabuco e Durigan irão juntos a almoço da Febraban sinalizar transição"
   ],
   "leads": [
-    "A Amazon Brasil, liderada por Juliana Sztrajtman, celebra 15 anos no país com R$ 75 bilhões investidos e 350 centros logísticos. A empresa vê potencial de crescimento no e-commerce, que representa 17% das vendas no Brasil. Em 2025, investiu R$ 19 bilhões em infraestrutura. A Amazon, quarta no ranking de plataformas, enfrenta concorrência acirrada. ",
     "O consumo consolidado de energia elétrica do grupo Energisa alcançou 4.046 GWh em outubro, volume 5,1% superior ao registrado no mesmo período de 2025. Por outro lado, o volume de gás natural destinado às usinas termelétricas recuou 72,7% no mesmo período.",
     "O investidor Carl Icahn, um dos nomes mais conhecidos do ativismo acionário nos Estados Unidos, atravessa uma crise financeira que reduziu sua fortuna de US$ 26 bilhões para US$ 1,3 bilhão, conforme números da Bloomberg reunidos em reportagem de Matheus Prado no Brazil Journal. A holding Icahn Enterprises (IEP) está endividada e admitiu não ter cer",
     "A CAIXA Seguridade registrou lucro líquido gerencial de R$ 1,2 bilhão no 3º trimestre de 2026 (3T26), alta de 3,7% em relação ao mesmo período do ano anterior. A companhia distribuiu R$ 1,08 bilhão em dividendos, o que representa um payout de 91,3%. O desempenho refletiu, entre outros fatores, a evolução dos resultados das joint ventures (JVs), com",
@@ -1853,17 +1852,10 @@
     "A escolha de Luiz Carlos Trabuco para o Ministério da Fazenda pode trazer benefícios não apenas para a condução da política fiscal brasileira, mas também para a atuação do Banco Central (BC), avalia o UBS GWM em relatório divulgado nesta sexta-feira (27).",
     "O Ministério da Agricultura e Pecuária (Mapa) e a ApexBrasil promovem, na primeira semana de dezembro, em Brasília, o Encontro Nacional do Agro e dos Adidos Agrícolas 2026. A abertura está prevista para 1º de dezembro, com encerramento em 4 de dezembro, e deve reunir autoridades do governo federal, adidos agrícolas e representantes da ApexBrasil lo",
     "Bloomberg Línea — O banqueiro Luiz Carlos Trabuco, escolhido pelo presidente Luiz Inácio Lula da Silva como ministro da Fazenda a partir de 2027, reúne experiências e características que o tornam muito diferente de Joaquim Levy, que ocupou o cargo durante o segundo governo Dilma Rousseff, em 2015, na avaliação da economista Andréa Bastos Damico, fu",
-    "Mais da metade das despesas das famílias brasileiras com renda de até dois salários mínimos vai para moradia e alimentação. Por outro lado, entre as famílias mais ricas, a divisão do orçamento é outra. Na faixa acima de 25 salários mínimos, moradia e alimentação somam pouco mais de um quarto das despesas, e o transporte ocupa o segundo lugar, atrás"
+    "Mais da metade das despesas das famílias brasileiras com renda de até dois salários mínimos vai para moradia e alimentação. Por outro lado, entre as famílias mais ricas, a divisão do orçamento é outra. Na faixa acima de 25 salários mínimos, moradia e alimentação somam pouco mais de um quarto das despesas, e o transporte ocupa o segundo lugar, atrás",
+    "Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda a partir de 2027, e Dario Durigan, que está no cargo atualmente, irão juntos ao tradicional almoço da Febraban (Federação Brasileira de Bancos) na próxima terça-feira (1°)."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795626638.980549
-    },
-    {
-      "chave": "embraer::GERAL_ATIVO",
-      "ts": 1795626638.980549
-    },
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795627019.014531
@@ -2571,10 +2563,13 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795796871.780381
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795799550.138805
     }
   ],
   "hashes_imagens": [
-    "1b7292b3dc1a2ce6",
     "5b81ea77a6aecfbd",
     "9b4af56bcb5ce324",
     "22b513d823a1a2eb",
@@ -2873,6 +2868,7 @@
     "fdbbf65a31b0d1ac",
     "faa74654761eaf1d",
     "434ae743c389cdc9",
-    "e2cf144e9694cb13"
+    "e2cf144e9694cb13",
+    "1a2ebdfafab0eb41"
   ]
 }
