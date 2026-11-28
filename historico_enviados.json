@@ -1,9 +1,5 @@
 {
   "links": [
-    "7f3f4dd2b2bef3da",
-    "https://www.cnnbrasil.com.br/economia/money/negocios/bndes-aprova-r-26-bilhoes-para-capital-de-giro-da-latam-brasil/",
-    "b5f3c803307ca8fd",
-    "8ddbdeb4c70e9891",
     "https://www.mobiletime.com.br/noticias/26/11/2026/pix-automatico-itau/",
     "c27d8c2686a161e2",
     "0854a4c89f4ef58e",
@@ -799,10 +795,13 @@
     "https://www.cnnbrasil.com.br/economia/money/mercado/continuacao-do-efeito-trabuco-no-mercado-depende-de-autonomia-e-ajustes/",
     "9e7a24e4719566b0",
     "https://www.cnnbrasil.com.br/economia/money/mercado/nova-onda-de-tensao-no-oriente-medio-freia-queda-do-petroleo/",
-    "a96ff392c96e68a0"
+    "a96ff392c96e68a0",
+    "dc7448dc9a12a9cf",
+    "52635124d049cf54",
+    "https://www.spacemoney.com.br/agronegocio/macron-carne-brasileira-ue/",
+    "1f48be5812801845"
   ],
   "titulos": [
-    "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
     "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
     "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas",
     "Petróleo fecha em queda de 3% e volta aos US$ 80 com fluxo melhor em Ormuz",
@@ -1601,10 +1600,10 @@
     "IPO da refinaria de Dangote mira maior listagem da África",
     "Arábia Saudita ajusta gastos do Vision 2030 sob pressão",
     "Continuação do “efeito Trabuco” no mercado depende de autonomia e ajustes",
-    "Nova onda de tensão no Oriente Médio freia queda do petróleo"
+    "Nova onda de tensão no Oriente Médio freia queda do petróleo",
+    "Macron chama carne do Brasil de dopada e gera reação"
   ],
   "leads": [
-    "O Senado da Argentina aprovou nesta quinta-feira (26) o projeto de reforma eleitoral integral, que inclui a suspensão das eleições primárias de 2027. Após mais de cinco horas de debate, o projeto recebeu 43 votos a favor e 29 contra.",
     "NESTA EDIÇÃO. Organizações pedem ao TCU auditoria dos impactos climáticos de incentivos aos combustíveis fósseis.",
     "Buscas mais detalhadas exigem ofertas que respondam ao que o consumidor procura. Veja as dicas do Google para aproveitar a mudança",
     "O banqueiro Luiz Carlos Trabuco aceitou nesta quinta-feira (26) comandar a Fazenda. Será ministro no quarto mandato presidencial de Lula (PT), conforme informou o g1. Ele preside o conselho de administração do Bradesco e é um dos executivos do setor financeiro mais próximos do presidente, de acordo com a publicação.",
@@ -1853,7 +1852,8 @@
     "A Dangote Petroleum Refinery and Petrochemicals, refinaria do bilionário nigeriano Aliko Dangote, deve começar a negociar ações na bolsa de Lagos em 1º de dezembro, após aprovação regulatória, segundo a CNBC. A oferta de uma participação minoritária foi fortemente sobrevendida e atraiu investidores de 120 países e de todos os 54 países africanos, i",
     "A Arábia Saudita está recalibrando a execução do Vision 2030, seu plano de diversificação econômica, para priorizar o “custo certo” em vez de gastar e entregar projetos a qualquer preço, segundo reportagem da CNBC. O ministro da Economia, Faisal Alibrahim, disse à CNBC que o país vive uma fase em que cada riyal é aplicado com mais precisão e que o ",
     "A cotação do dólar foi de R$ 4,98 antes do segundo turno e chegou a tocar os R$ 6 na segunda-feira, 23 de novembro. A alta no período foi de quase 20%. Na sexta-feira (27), fim da mesma semana, a divisa acumulava queda de 7% em cinco dias.",
-    "Uma nova escalada de tensões no Oriente Médio está freando a recente queda do petróleo."
+    "Uma nova escalada de tensões no Oriente Médio está freando a recente queda do petróleo.",
+    "O presidente da França, Emmanuel Macron, chamou de “dopada” a carne brasileira e ligou o bloqueio europeu a produtos animais do Brasil a uma vitória da pressão francesa, segundo o g1. A declaração ocorreu em 25 de novembro, durante encontro com representantes do agronegócio francês no Palácio do Eliseu, e gerou reação do governo brasileiro e de exp"
   ],
   "eventos_recentes": [
     {
@@ -2610,7 +2610,6 @@
     }
   ],
   "hashes_imagens": [
-    "36a580bf840ac3e7",
     "9a0cff477f4c19d0",
     "e6c7ce0fe8ee0a1c",
     "52d6454ee87385b4",
@@ -2909,6 +2908,7 @@
     "c9aa8bb68fb5b4bc",
     "047ff6939a47af47",
     "36af8bf9dbc454a0",
-    "cab6d86b70f33eff"
+    "cab6d86b70f33eff",
+    "b5574146d5379b23"
   ]
 }
