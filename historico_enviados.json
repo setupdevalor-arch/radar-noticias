@@ -1,9 +1,5 @@
 {
   "links": [
-    "e81ce1b0dba25b0c",
-    "https://www.spacemoney.com.br/investimentos/criptomoedas/injective-sec-acoes-tokenizadas/",
-    "0f5e7ddee435f8b6",
-    "https://www.infomoney.com.br/mundo/russia-afirma-ter-atacado-embarcacao-que-transportava-carga-militar-no-mar-negro/",
     "f0f9a2f6f7478304",
     "33cd5f71950f2cc2",
     "e368cc5856ac4809",
@@ -799,10 +795,13 @@
     "1c61ac9d57693422",
     "03b376f98e302c0c",
     "https://www.cnnbrasil.com.br/internacional/analise-por-que-a-administracao-trump-esta-tao-evasiva-sobre-jensen-huang/",
-    "bc16df368863bab1"
+    "bc16df368863bab1",
+    "572e50c8f87adfe1",
+    "88fa2533ad4ef710",
+    "https://www.estadao.com.br/economia/negocios/entrevista-david-feffer-presidente-conselho-suzano-ia-emprego-dignidade/",
+    "43456e156aa0c8d9"
   ],
   "titulos": [
-    "Brexit: Reino Unido Busca Reaproximação com UE após Década de Perdas Econômicas",
     "As negociações climáticas da ONU fracassaram. E agora?",
     "Lojas de Shoppings São Escolha de 34% para Compras de Fim de Ano e Superam Marketplaces, Diz Pesquisa da SYN",
     "Investidores Institucionais Retiram R$ 50,8 Bi da Bolsa em 2026; Movimento Alerta sobre Risco Fiscal",
@@ -1601,10 +1600,10 @@
     "Falta de mão de obra trava data centers de IA nos EUA",
     "Itaú (ITUB4), BB Seguridade (BBSE3) e outras três ações para investir, segundo a Terra Investimentos",
     "Stellar reúne Securitize, Spiko e Movantis na Meridian 2026",
-    "Análise: Por que a administração Trump está tão evasiva sobre Jensen Huang?"
+    "Análise: Por que a administração Trump está tão evasiva sobre Jensen Huang?",
+    "IA será como a eletricidade, mas a transição no emprego será dolorosa, diz David Feffer, da Suzano"
   ],
   "leads": [
-    "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
     "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
     "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
     "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação.",
@@ -1853,7 +1852,8 @@
     "A escassez de eletricistas, encanadores e outros profissionais qualificados da construção está dificultando a expansão dos data centers de inteligência artificial nos Estados Unidos, segundo reportagem da CNBC. O problema ganha peso num momento em que o presidente Donald Trump ameaçou, na semana passada, taxar pesadamente empresas americanas que er",
     "A Terra Investimentos não realizou alterações na sua carteira recomendada semanal de ações, para o período de 27 a 4 de dezembro.",
     "A Stellar Network apresentou, durante a conferência Meridian 2026, em Lisboa, três iniciativas que ampliam o uso da rede em ativos do mundo real e pagamentos institucionais. Os anúncios foram divulgados pela própria rede em comunicados sobre cada caso.",
-    "Quando Jensen Huang foi, de forma surpreendente, reconduzido ao cargo de CEO da Nvidia na última segunda-feira (23), tanto o conselho de administração da empresa quanto o presidente dos Estados Unidos, Donald Trump, apresentaram o fato como resultado de garantias dadas pelo governo de que ele não representava um risco à segurança nacional e não enf"
+    "Quando Jensen Huang foi, de forma surpreendente, reconduzido ao cargo de CEO da Nvidia na última segunda-feira (23), tanto o conselho de administração da empresa quanto o presidente dos Estados Unidos, Donald Trump, apresentaram o fato como resultado de garantias dadas pelo governo de que ele não representava um risco à segurança nacional e não enf",
+    "David Feffer, presidente do conselho da Suzano, estuda inteligência artificial (IA) desde 2016, destacando seu impacto transformador nos negócios. A Suzano, pioneira em inovação, aplica IA em processos produtivos e logísticos, visando eficiência e produtividade. Feffer compara a IA à eletricidade, prevendo mudanças rápidas e desafios sociais, como "
   ],
   "eventos_recentes": [
     {
@@ -2559,10 +2559,13 @@
     {
       "chave": "bb_seguridade::GERAL_ATIVO",
       "ts": 1795877705.750642
+    },
+    {
+      "chave": "suzano::GERAL_ATIVO",
+      "ts": 1795879935.676666
     }
   ],
   "hashes_imagens": [
-    "47cad65210ebce9e",
     "47bf20bac89c5e59",
     "bd74640cfd757342",
     "401fd8dfd897f67a",
@@ -2861,6 +2864,7 @@
     "929ab833a32dd856",
     "915b9fc32850901d",
     "9184f6284c0eb3b8",
-    "5e38d005007ff3d1"
+    "5e38d005007ff3d1",
+    "a488fe91b2008d17"
   ]
 }
