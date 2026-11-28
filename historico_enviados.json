@@ -1,10 +1,5 @@
 {
   "links": [
-    "b4fa5f73f88d1873",
-    "d2923da8d5f2acd8",
-    "9f579c0caebc23da",
-    "https://www.spacemoney.com.br/economia/exterior/fundos-soberanos-private-equity-direto/",
-    "8c22cd9aba1290c9",
     "7f3f4dd2b2bef3da",
     "https://www.cnnbrasil.com.br/economia/money/negocios/bndes-aprova-r-26-bilhoes-para-capital-de-giro-da-latam-brasil/",
     "b5f3c803307ca8fd",
@@ -799,11 +794,14 @@
     "5e4830444b8161dc",
     "https://www.spacemoney.com.br/economia/exterior/arabia-saudita-vision-2030-gastos/",
     "70a1e639e37cc32e",
-    "a271dafad5603ead"
+    "a271dafad5603ead",
+    "43ed89d26edf8f40",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/continuacao-do-efeito-trabuco-no-mercado-depende-de-autonomia-e-ajustes/",
+    "9e7a24e4719566b0",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/nova-onda-de-tensao-no-oriente-medio-freia-queda-do-petroleo/",
+    "a96ff392c96e68a0"
   ],
   "titulos": [
-    "Justiça de Nova York nega restrição imediata à Kalshi",
-    "Volta de Jensen Huang ao comando da Nvidia foi decidida sem consulta à diretoria",
     "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
     "CSN Mineração (CMIN3): dívidas podem bater nos dividendos, vê BB Investimentos; ‘melhor vender’",
     "Conta de luz sobe quase o dobro da inflação em 2026 e pressiona empresas",
@@ -1601,11 +1599,11 @@
     "Saúde lidera no Sudeste; educação, no Nordeste",
     "App da Caixa mostra dinheiro esquecido em contas antigas",
     "IPO da refinaria de Dangote mira maior listagem da África",
-    "Arábia Saudita ajusta gastos do Vision 2030 sob pressão"
+    "Arábia Saudita ajusta gastos do Vision 2030 sob pressão",
+    "Continuação do “efeito Trabuco” no mercado depende de autonomia e ajustes",
+    "Nova onda de tensão no Oriente Médio freia queda do petróleo"
   ],
   "leads": [
-    "Dado do Ministério do Turismo é referente aos 10 primeiros meses do ano; valor é maior já registrado para o período",
-    "Players do setor de pagamentos veem com entusiasmo os agentes de inteligência artificial para pagamento. Durante o painel de abertura do Mobimeeting Finance + ID 2026, executivos falaram sobre a transformação que a tecnologia vem provocando no setor e que ela só tende a crescer. Na visão de Bruno Lino, superintendente de e-commerce da Cielo, por ex",
     "O Senado da Argentina aprovou nesta quinta-feira (26) o projeto de reforma eleitoral integral, que inclui a suspensão das eleições primárias de 2027. Após mais de cinco horas de debate, o projeto recebeu 43 votos a favor e 29 contra.",
     "NESTA EDIÇÃO. Organizações pedem ao TCU auditoria dos impactos climáticos de incentivos aos combustíveis fósseis.",
     "Buscas mais detalhadas exigem ofertas que respondam ao que o consumidor procura. Veja as dicas do Google para aproveitar a mudança",
@@ -1853,7 +1851,9 @@
     "O g1 informou que o IBGE divulgou na sexta-feira (27) os resultados da Pesquisa de Orçamentos Familiares (POF) referentes a 2024 e 2025. O levantamento aponta perfis distintos de gasto entre as regiões: a moradia liderou em todas, a saúde teve maior espaço no Sudeste e a educação se destacou no Nordeste.",
     "O novo aplicativo da Caixa Econômica Federal, lançado em 9 de novembro, passou a reunir em uma única tela contas que antes ficavam espalhadas em sistemas diferentes — e, com isso, levou parte dos clientes a encontrar saldos parados em contas sem movimentação. A integração entre conta corrente, poupança tradicional e poupança social digital, modalid",
     "A Dangote Petroleum Refinery and Petrochemicals, refinaria do bilionário nigeriano Aliko Dangote, deve começar a negociar ações na bolsa de Lagos em 1º de dezembro, após aprovação regulatória, segundo a CNBC. A oferta de uma participação minoritária foi fortemente sobrevendida e atraiu investidores de 120 países e de todos os 54 países africanos, i",
-    "A Arábia Saudita está recalibrando a execução do Vision 2030, seu plano de diversificação econômica, para priorizar o “custo certo” em vez de gastar e entregar projetos a qualquer preço, segundo reportagem da CNBC. O ministro da Economia, Faisal Alibrahim, disse à CNBC que o país vive uma fase em que cada riyal é aplicado com mais precisão e que o "
+    "A Arábia Saudita está recalibrando a execução do Vision 2030, seu plano de diversificação econômica, para priorizar o “custo certo” em vez de gastar e entregar projetos a qualquer preço, segundo reportagem da CNBC. O ministro da Economia, Faisal Alibrahim, disse à CNBC que o país vive uma fase em que cada riyal é aplicado com mais precisão e que o ",
+    "A cotação do dólar foi de R$ 4,98 antes do segundo turno e chegou a tocar os R$ 6 na segunda-feira, 23 de novembro. A alta no período foi de quase 20%. Na sexta-feira (27), fim da mesma semana, a divisa acumulava queda de 7% em cinco dias.",
+    "Uma nova escalada de tensões no Oriente Médio está freando a recente queda do petróleo."
   ],
   "eventos_recentes": [
     {
@@ -2599,11 +2599,17 @@
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795832473.845067
+    },
+    {
+      "chave": "macro_mercado::MACRO_EVENTO",
+      "ts": 1795850950.646367
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795850950.646367
     }
   ],
   "hashes_imagens": [
-    "f5fc2fd71373b9ae",
-    "8e0ba42020ee0c10",
     "36a580bf840ac3e7",
     "9a0cff477f4c19d0",
     "e6c7ce0fe8ee0a1c",
@@ -2901,6 +2907,8 @@
     "651568de3a55acf5",
     "58c21b219999b16d",
     "c9aa8bb68fb5b4bc",
-    "047ff6939a47af47"
+    "047ff6939a47af47",
+    "36af8bf9dbc454a0",
+    "cab6d86b70f33eff"
   ]
 }
