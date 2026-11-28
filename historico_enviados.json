@@ -1,8 +1,5 @@
 {
   "links": [
-    "656f6836e96befdb",
-    "https://www.bloomberglinea.com.br/negocios/technos-cresce-com-alta-de-relogios-no-brasil-e-fatura-r-1418-milhoes-no-trimestre/",
-    "35560f128445248b",
     "https://www.poder360.com.br/poder-economia/black-friday-e-realizada-nesta-6a-com-consumidor-mais-cauteloso/",
     "bb17b0f24b7db4ab",
     "https://www.poder360.com.br/poder-economia/saiba-quais-indicadores-e-balancos-saem-nesta-6a-feira-14/",
@@ -799,7 +796,10 @@
     "37e7d6aebbcfc123",
     "142594fe635108a1",
     "c2148ab9b3d99c99",
-    "f4eea30c89facae0"
+    "f4eea30c89facae0",
+    "bc5d47fe79b85406",
+    "e8153ad254e54b7c",
+    "ed19fe48b5f066b6"
   ],
   "titulos": [
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
@@ -1856,10 +1856,6 @@
     "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_credito_juros::RF_EVENTO",
-      "ts": 1795697176.505382
-    },
     {
       "chave": "embraer::GERAL_ATIVO",
       "ts": 1795697541.114584
