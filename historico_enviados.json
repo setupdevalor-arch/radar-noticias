@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://g1.globo.com/politica/noticia/2026/11/27/apos-eua-proporem-taxar-avioes-brasileiros-mauro-vieira-oferece-apoio-a-embraer-para-buscar-novos-mercados.ghtml",
-    "8df3f567b092ed43",
-    "https://www.poder360.com.br/poder-economia/chamado-de-golpista-por-petistas-temer-elogia-trabuco-na-fazenda/",
-    "f26828780517a413",
     "https://www.spacemoney.com.br/tecnologia/sap-corte-vagas-ia/",
     "a879a16cb425ec32",
     "https://g1.globo.com/economia/noticia/2026/11/27/ewz-sobe-apos-confirmacao-de-trabuco-na-fazenda.ghtml",
@@ -799,11 +795,13 @@
     "b2a8e7a0f44f4338",
     "https://www.infomoney.com.br/onde-investir/novas-tarifas-dos-eua-dividendos-da-petrobras-e-nvidia-veja-os-destaques-da-semana/",
     "1e71b2f0a58e309d",
-    "b9ec045beeeabdf0"
+    "b9ec045beeeabdf0",
+    "https://www.spacemoney.com.br/economia/legislacao/asean-3-grupo-pagamentos-digitais/",
+    "ddd713569fb5f7fb",
+    "https://www.poder360.com.br/poder-china/mineradoras-chinesas-pedem-mais-protecao-para-investimentos-no-exterior/",
+    "33bc24c5bf6c5adf"
   ],
   "titulos": [
-    "PC do B acorda emenda para excluir Lei Rouanet do ajuste fiscal",
-    "Meta suspende ações Classe C em meio a litígio de acionistas",
     "Hapvida (HAPV3) confirma contratação de bancos para reavaliar portfólio de ativos",
     "Alares busca R$ 140 milhões para gestão de dívidas e reforço de caixa",
     "PL 4675/2025 não é consenso entre entidades empresariais",
@@ -1601,11 +1599,11 @@
     "Coamo vai antecipar R$ 223 milhões em sobras aos cooperados",
     "Como o Brasil ficou pequeno para a Smart Fit: 17 países e negócios além das academias",
     "Fundos medem resiliência antes do Oscar das Assets",
-    "Novas tarifas dos EUA, dividendos da Petrobras e Nvidia; veja os destaques da semana"
+    "Novas tarifas dos EUA, dividendos da Petrobras e Nvidia; veja os destaques da semana",
+    "Ásia cria grupo para integrar pagamentos digitais",
+    "Mineradoras chinesas pedem mais proteção para investimentos no exterior"
   ],
   "leads": [
-    "Duas entidades holandesas de defesa do consumidor e dos direitos digitais acionaram judicialmente a Meta e a EssilorLuxottica para tentar impedir a venda dos óculos Ray-Ban Meta no país. A Consumentenbond e a Offlimits alegam que os dispositivos facilitam registros de pessoas sem consentimento e pedem a suspensão comercial até que sejam adotadas sa",
-    "Decisão estende até 31 de março de 2027 a suspensão de sanções e da cobrança de garantias ligadas a empréstimos federais do RJ",
     "A compra de um ingresso para um show, a contratação de um serviço de limpeza de ar-condicionado, a aquisição de um imóvel ou de um automóvel e a necessidade de proteger financeiramente uma família são algumas das oportunidades identificadas pelo Santander para ampliar sua base de segurados. Quando a inteligência artificial detecta um pagamento pela",
     "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%.",
     "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
@@ -1853,7 +1851,9 @@
     "A Coamo anunciou que vai antecipar o pagamento de R$ 223 milhões em sobras aos cooperados a partir de 7 de dezembro. O valor corresponde a parte do resultado de 2026 e foi calculado com base no desempenho da cooperativa até novembro.",
     "O Brasil já não concentra a maior parte das academias nem do resultado da Smart Fit (SMFT3). A rede nasceu no país, mas hoje está em 17 mercados e quer levar a eles um conjunto de negócios que vai do treino ao spa. A expansão da Smart Fit combina duas ambições: alcançar mais clientes na América Latina e participar de mais momentos da rotina de quem",
     "A dois meses da cerimônia de 28 de janeiro de 2027, no Teatro B32, em São Paulo, a terceira edição da Premiação Outliers entra na fase final de definição dos destaques do setor de fundos. O evento, conhecido como Oscar das Assets, acontece enquanto a indústria ainda acumula R$ 242,5 bilhões em aportes líquidos desde janeiro até outubro de 2026, ape",
-    "O Escritório do Representante de Comércio dos Estados Unidos (USTR) apresentou uma nova rodada de tarifas que, caso avance nos moldes atuais, vai elevar a alíquota efetiva sobre as exportações brasileiras para o mercado americano de 17,4% para cerca de 18,1%, trazendo potenciais reflexos para a atividade econômica."
+    "O Escritório do Representante de Comércio dos Estados Unidos (USTR) apresentou uma nova rodada de tarifas que, caso avance nos moldes atuais, vai elevar a alíquota efetiva sobre as exportações brasileiras para o mercado americano de 17,4% para cerca de 18,1%, trazendo potenciais reflexos para a atividade econômica.",
+    "China, Japão, Coreia do Sul e os países da ASEAN vão montar um grupo de trabalho para aproximar suas redes domésticas de pagamentos digitais e alinhar as normas que hoje regem o setor, segundo o Cointelegraph.",
+    "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros"
   ],
   "eventos_recentes": [
     {
@@ -2642,8 +2642,6 @@
     }
   ],
   "hashes_imagens": [
-    "3b2e8df89527cd84",
-    "098f487b5d70c2e0",
     "ef14982e2a0f8b08",
     "c7fdc40f8626ffed",
     "8a7ae5d7d227e648",
@@ -2941,6 +2939,8 @@
     "3b7858685447a925",
     "cb3e1c8098b22ed5",
     "be5f742a1efe345b",
-    "d4fc13349225d47b"
+    "d4fc13349225d47b",
+    "ba79cdc6b23bf364",
+    "559cfabd89a26a6b"
   ]
 }
