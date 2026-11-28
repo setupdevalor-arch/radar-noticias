@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://www.poder360.com.br/poder-economia/black-friday-e-realizada-nesta-6a-com-consumidor-mais-cauteloso/",
-    "bb17b0f24b7db4ab",
-    "https://www.poder360.com.br/poder-economia/saiba-quais-indicadores-e-balancos-saem-nesta-6a-feira-14/",
-    "1262029c4f88323b",
-    "https://www.poder360.com.br/poder-economia/eua-compraram-mais-da-metade-dos-avioes-exportados-pelo-brasil-em-2026/",
     "3629d189cafc48a4",
     "1c7ea6c60b166546",
     "a5c1746f2ea40305",
@@ -799,10 +794,14 @@
     "f4eea30c89facae0",
     "bc5d47fe79b85406",
     "e8153ad254e54b7c",
-    "ed19fe48b5f066b6"
+    "ed19fe48b5f066b6",
+    "cc8caa87f432318c",
+    "fd65c7ee5f82dd43",
+    "82dec70c4ae5cf1d",
+    "https://www.infomoney.com.br/mundo/argentina-fracassa-ao-tentar-barrar-exploracao-britanica-de-petroleo-nas-malvinas/",
+    "b85f1e921389cebe"
   ],
   "titulos": [
-    "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
     "Empresas da Ásia veem retorno com IA, mas medição é difícil",
     "Ethereum acelera defesa contra ameaças quânticas e de IA",
     "Vendas nos shoppings esfriam até para Allos, Iguatemi e Multiplan",
@@ -1601,10 +1600,10 @@
     "S&P corta perspectiva da França para negativa por orçamento e política",
     "Fastline, da Tegma, vai comprar transportadora de veículos pesados por R$ 105 mi",
     "Importação de gás da Argentina supera 1 milhão de m³/dia; quais os passos seguintes?",
-    "JPMorgan e HSBC fazem primeira operação com novo ouro digital"
+    "JPMorgan e HSBC fazem primeira operação com novo ouro digital",
+    "Argentina fracassa ao tentar barrar exploração britânica de petróleo nas Malvinas"
   ],
   "leads": [
-    "A CSN anunciou nesta quinta-feira (26) que seu conselho de administração elegeu o executivo Mario Augusto da Silva como o novo diretor financeiro da companhia, no lugar do presidente-executivo, Fabio Schvartsman, que ocupa o cargo interinamente.",
     "Assim como Trabuco, Joaquim Levy fez carreira no Bradesco; Henrique Meirelles comandou o BankBoston e Guedes fundou o Pactual",
     "A comparação é inevitável. Assim como Joaquim Levy em 2015, Luiz Carlos Trabuco chega ao Ministério da Fazenda com a missão de recuperar a confiança do mercado e ajudar o governo a controlar a deterioração das contas públicas.",
     "O mercado financeiro brasileiro teve um dia de forte valorização nesta quinta-feira (26). O Ibovespa disparou cerca de 6%, registrando a maior alta diária desde o primeiro turno das eleições de 2026. O dólar recuou para abaixo de R$ 5,80 pela primeira vez em quase duas semanas.",
@@ -1853,13 +1852,10 @@
     "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit.",
     "– A Tegma (TGMA3) anunciou nesta sexta-feira que ‌sua controlada Fastline acertou acordo para comprar 70% da operadora ‌logística ABC Cargas por R$ 105 milhões, tendo a opção de comprar o restante a partir de 2030, segundo fato ‌relevante.",
     "Petrobras mantém plataformas de SEAP em novo plano de negócios. ANP discute regra para autorização para gasodutos e controle sobre a queima de gás e mais. Confira:",
-    "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas."
+    "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas.",
+    "– Um tribunal apoiado pelas Nações Unidas rejeitou um pedido da Argentina que buscava interromper um projeto petrolífero britânico perto das Ilhas Malvinas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "embraer::GERAL_ATIVO",
-      "ts": 1795697541.114584
-    },
     {
       "chave": "hapvida::EVENTO_CORP",
       "ts": 1795698262.510911
@@ -2567,10 +2563,13 @@
     {
       "chave": "jpmorgan::GERAL_ATIVO",
       "ts": 1795868897.565892
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795870473.774141
     }
   ],
   "hashes_imagens": [
-    "ae10fb7dc1e54e97",
     "c10183e000fb1475",
     "6b8ee7577eadb357",
     "be69faf2221d8422",
@@ -2869,6 +2868,7 @@
     "68982b198383e710",
     "5a1b8a1e1661d3cd",
     "e35896040ad2ab45",
-    "d75923352c2efc5d"
+    "d75923352c2efc5d",
+    "369193f516423925"
   ]
 }
