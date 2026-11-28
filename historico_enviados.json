@@ -1,9 +1,5 @@
 {
   "links": [
-    "4ab67ae275557dbe",
-    "1f4f012bd3e64c69",
-    "https://www.mobiletime.com.br/noticias/26/11/2026/visa-esforcos-agenticos/",
-    "b15ac20e45c46787",
     "a6c08bc060d4783e",
     "b4fa5f73f88d1873",
     "d2923da8d5f2acd8",
@@ -799,11 +795,13 @@
     "43a940a0a7921cdb",
     "9f00e0189f736190",
     "c3e45fd0a90e3e27",
-    "5e87a3f9e495727a"
+    "5e87a3f9e495727a",
+    "https://www.spacemoney.com.br/investimentos/acoes/radar-dos-ipos/ipo-dangote-refinery-lagos/",
+    "5e4830444b8161dc",
+    "https://www.spacemoney.com.br/economia/exterior/arabia-saudita-vision-2030-gastos/",
+    "70a1e639e37cc32e"
   ],
   "titulos": [
-    "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior",
-    "Bitcoin sobe após voltar ao menor nível em dois anos",
     "Justiça de Nova York nega restrição imediata à Kalshi",
     "Volta de Jensen Huang ao comando da Nvidia foi decidida sem consulta à diretoria",
     "Dólar a R$ 6 preocupa governo, mas Fazenda não vê recessão em 2027, só desaceleração, diz secretária",
@@ -1601,11 +1599,11 @@
     "Ministério da Segurança já existiu e será recriado por Lula",
     "Arroz e feijão recuam no orçamento alimentar das famílias",
     "Saúde lidera no Sudeste; educação, no Nordeste",
-    "App da Caixa mostra dinheiro esquecido em contas antigas"
+    "App da Caixa mostra dinheiro esquecido em contas antigas",
+    "IPO da refinaria de Dangote mira maior listagem da África",
+    "Arábia Saudita ajusta gastos do Vision 2030 sob pressão"
   ],
   "leads": [
-    "A demanda por energia elétrica no SIN (Sistema Interligado Nacional) bateu um novo recorde na quarta-feira (25). Com isso, o ONS (Operador Nacional do Sistema Elétrico) registrou três dias consecutivos de picos inéditos de carga em 2026, a pouco mais de 20 dias para o início do verão.",
-    "Um raio atingiu o navio-plataforma P-77 da Petrobras, gerando um princípio de incêndio, rapidamente controlado pelas equipes de segurança da plataforma. Segundo a empresa, não houve vítimas nem danos aos equipamentos.",
     "Dado do Ministério do Turismo é referente aos 10 primeiros meses do ano; valor é maior já registrado para o período",
     "Players do setor de pagamentos veem com entusiasmo os agentes de inteligência artificial para pagamento. Durante o painel de abertura do Mobimeeting Finance + ID 2026, executivos falaram sobre a transformação que a tecnologia vem provocando no setor e que ela só tende a crescer. Na visão de Bruno Lino, superintendente de e-commerce da Cielo, por ex",
     "O Senado da Argentina aprovou nesta quinta-feira (26) o projeto de reforma eleitoral integral, que inclui a suspensão das eleições primárias de 2027. Após mais de cinco horas de debate, o projeto recebeu 43 votos a favor e 29 contra.",
@@ -1853,7 +1851,9 @@
     "A criação de um Ministério da Segurança Pública pelo presidente Luiz Inácio Lula da Silva (PT), que deve ocorrer por medida provisória depois da promulgação da PEC da Segurança Pública aprovada pelo Senado, não é inédita na estrutura do governo federal. Conforme o g1, a pasta já funcionou a partir de fevereiro de 2018, no governo Michel Temer (MDB)",
     "O conjunto formado por arroz e feijão perdeu espaço no orçamento das famílias brasileiras destinado à comida feita em casa, segundo o g1. Dados da Pesquisa de Orçamentos Familiares (POF), do IBGE, divulgada na sexta-feira (27), mostram que a fatia desses alimentos recuou de 10,4% para 5,4% na comparação entre 2002-2003 e 2024-2025. No mesmo interva",
     "O g1 informou que o IBGE divulgou na sexta-feira (27) os resultados da Pesquisa de Orçamentos Familiares (POF) referentes a 2024 e 2025. O levantamento aponta perfis distintos de gasto entre as regiões: a moradia liderou em todas, a saúde teve maior espaço no Sudeste e a educação se destacou no Nordeste.",
-    "O novo aplicativo da Caixa Econômica Federal, lançado em 9 de novembro, passou a reunir em uma única tela contas que antes ficavam espalhadas em sistemas diferentes — e, com isso, levou parte dos clientes a encontrar saldos parados em contas sem movimentação. A integração entre conta corrente, poupança tradicional e poupança social digital, modalid"
+    "O novo aplicativo da Caixa Econômica Federal, lançado em 9 de novembro, passou a reunir em uma única tela contas que antes ficavam espalhadas em sistemas diferentes — e, com isso, levou parte dos clientes a encontrar saldos parados em contas sem movimentação. A integração entre conta corrente, poupança tradicional e poupança social digital, modalid",
+    "A Dangote Petroleum Refinery and Petrochemicals, refinaria do bilionário nigeriano Aliko Dangote, deve começar a negociar ações na bolsa de Lagos em 1º de dezembro, após aprovação regulatória, segundo a CNBC. A oferta de uma participação minoritária foi fortemente sobrevendida e atraiu investidores de 120 países e de todos os 54 países africanos, i",
+    "A Arábia Saudita está recalibrando a execução do Vision 2030, seu plano de diversificação econômica, para priorizar o “custo certo” em vez de gastar e entregar projetos a qualquer preço, segundo reportagem da CNBC. O ministro da Economia, Faisal Alibrahim, disse à CNBC que o país vive uma fase em que cada riyal é aplicado com mais precisão e que o "
   ],
   "eventos_recentes": [
     {
@@ -2602,8 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "db38361aeba6e517",
-    "e80e35fc06727f5b",
     "f5fc2fd71373b9ae",
     "8e0ba42020ee0c10",
     "36a580bf840ac3e7",
@@ -2901,6 +2899,8 @@
     "cdc7689bbea5feff",
     "f39d3f81b57b67e7",
     "651568de3a55acf5",
-    "58c21b219999b16d"
+    "58c21b219999b16d",
+    "c9aa8bb68fb5b4bc",
+    "047ff6939a47af47"
   ]
 }
