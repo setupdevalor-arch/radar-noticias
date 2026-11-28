@@ -1,8 +1,5 @@
 {
   "links": [
-    "ea286f2cac2bd95d",
-    "https://www.cnnbrasil.com.br/politica/hugo-deseja-exito-a-trabuco-na-fazenda-e-prega-dialogo-por-agenda-economica/",
-    "5b276cb5c17e671f",
     "https://www.poder360.com.br/poder-congresso/deputada-pede-bloqueio-de-14-emendas-de-flavio-ao-orcamento-de-2027/",
     "d15263f17a1b9e4f",
     "https://www.poder360.com.br/poder-congresso/motta-e-alcolumbre-recebem-com-otimismo-escolha-de-trabuco-para-fazenda/",
@@ -799,10 +796,12 @@
     "441d219b486f1d81",
     "fd533b9625170e13",
     "https://braziljournal.com/breaking-mubadala-anuncia-opa-para-chegar-a-45-da-kepler-weber",
-    "a8c95666f517a099"
+    "a8c95666f517a099",
+    "539a6a383650fc33",
+    "https://www.spacemoney.com.br/noticias/chuva-parana-risco-colheita/",
+    "f22e814ff006e114"
   ],
   "titulos": [
-    "Tarcísio defende discussão de limites de decisões monocráticas e competência do STF",
     "Ferramentas de IA Ajudam Marcas a Otimizar Promoções de Black Friday",
     "Taxas dos DIs caem em meio a especulações sobre nomes de Lula para a área econômica",
     "Temporal destrói unidades da C.Vale no RS e compromete estoque de grãos",
@@ -1601,10 +1600,10 @@
     "Investidores em ETFs no Brasil aumentam 34% em um ano, segundo B3",
     "Manifesto em Paris propõe discutir os limites do poder dos bilionários nas sociedades democráticas",
     "‘Pretinho básico’ nunca sai de moda: não se faz transição energética com demonização do petróleo",
-    "Mubadala anuncia OPA para chegar a 45% da Kepler Weber"
+    "Mubadala anuncia OPA para chegar a 45% da Kepler Weber",
+    "Chuva de até 86 mm eleva risco à colheita no Paraná"
   ],
   "leads": [
-    "“Vários estudos mostram que mexer muito na carteira prejudica o resultado de longo prazo,” Patrícia Queiroz, a diretora de investimentos da Real Grandeza, disse ao Brazil Journal. “Nossa estratégia é ter uma carteira diversificada, mas com a alocação estratégica mantida ao longo do tempo.”",
     "O IFIX fechou o pregão desta quinta-feira (26) em alta de 1,07%, aos 3.578,98 pontos, impulsionado pelo salto de 13,01% das cotas do CACR11 (Cartesia Recebíveis Imobiliários) na B3, enquanto outros fundos imobiliários registraram movimentos distintos ao longo da sessão.",
     "O deputado federal Júnior Ferrari (PSD-PA) protocolou nesta quarta-feira (25) o PL (Projeto de Lei) 5.964/2026, que regulamenta a realização de consultas a povos indígenas e tribais, previstas na Convenção 169 da OIT (Organização Internacional do Trabalho). A ausência de regras para as consultas está paralisando a execução de projetos de infraestru",
     "O desligamento de duas linhas de transmissão de 500 kV Jurupari–Oriximiná, que pertencem à Linhas de Macapá Transmissora de Energia (LMTE), do grupo Energisa, provocou a interrupção total do fornecimento de energia nas áreas de Manaus, no Amazonas, alcançando o estado de Roraima na tarde desta quinta-feira, 26 de novembro.",
@@ -1853,7 +1852,8 @@
     "Segundo a B3, Bolsa de Valores do Brasil, o número de investidores pessoa física em ETFs aumentou 34% no segundo trimestre deste ano, na comparação com o mesmo período de 2025.",
     "No último dia 21 de novembro, foi lançado em Paris o Manifesto contra a Oligarquia Internacional, subscrito por mais de uma centena de pesquisadores, entre os quais quatro ganhadores do Nobel de Economia: Joseph Stiglitz, Paul Krugman, Esther Duflo e Daron Acemoglu. O documento alerta para os riscos que a crescente concentração de riqueza represent",
     "O início da guerra, em fevereiro de 2022, entre Rússia e Ucrânia deu o que eu chamaria de reset no petróleo. Até 2021, o discurso era “petróleo acabou, ESG, transição, pico de demanda em 2025”. Depois do início da guerra, virou: “segurança energética primeiro”. Agora, o conflito no Irã fez o petróleo voltar a ser rei.",
-    "O Mubadala Capital acaba de anunciar uma oferta pública para comprar até 35% do capital da Kepler Weber, a maior fabricante de equipamentos para armazenagem de grãos da América Latina."
+    "O Mubadala Capital acaba de anunciar uma oferta pública para comprar até 35% do capital da Kepler Weber, a maior fabricante de equipamentos para armazenagem de grãos da América Latina.",
+    "A Climatempo prevê chuva intensa em 10 municípios paranaenses da quarta-feira (2) à sexta-feira (4), com volumes de 61 mm a 86 mm em 24 horas. O cenário eleva o risco de paralisação da colheita, dificulta a atuação de máquinas no campo, satura o solo e limita a circulação em estradas rurais."
   ],
   "eventos_recentes": [
     {
@@ -2602,7 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "a6665a39f6ae00a7",
     "86b4479c6bb71413",
     "2a8ab13572907c6c",
     "f97f930ffc33fbc5",
@@ -2901,6 +2900,7 @@
     "265353b4dbbe0ad8",
     "0f76e17d9b6ecc37",
     "3ded29a86457d666",
-    "02cac82b12a0e021"
+    "02cac82b12a0e021",
+    "7f5e298abe68474e"
   ]
 }
