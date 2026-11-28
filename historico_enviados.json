@@ -1,8 +1,5 @@
 {
   "links": [
-    "53714ab5deacac59",
-    "43c7c5c5ca6d498c",
-    "dd0a3f1706ab8c03",
     "https://www.moneytimes.com.br/axia-energia-axia3-aprova-resgate-de-r-6-bilhoes-em-acoes-preferenciais-classe-c-entenda-o-que-muda-miql/",
     "c863b2b0b398d4e0",
     "https://www.spacemoney.com.br/investimentos/acoes/rheinmetall-corta-projecao-vendas-acao-sobe/",
@@ -799,10 +796,12 @@
     "https://www.moneytimes.com.br/gafisa-gfsa3-adia-novamente-divulgacao-de-balancos-agora-para-janeiro-de-2027-jcav/",
     "f708d1b0a3a1f8bc",
     "05c14503e68f4332",
-    "ff290f3632b2acfb"
+    "ff290f3632b2acfb",
+    "cf33669fe87a1f02",
+    "https://www.cnnbrasil.com.br/politica/gilmar-cita-responsabilidade-social-ao-elogiar-trabuco-para-fazenda/",
+    "495245af72f741ba"
   ],
   "titulos": [
-    "Nvidia: sucessão e governança após retorno de Huang",
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
     "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças",
     "PMI acende alerta de recessão na França antes de eleição",
@@ -1601,10 +1600,10 @@
     "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões",
     "China preocupa mais empresas europeias e acende alerta em novos setores",
     "Governo publica portaria que renova auxílio ao diesel",
-    "Gafisa (GFSA3) adia novamente divulgação de balanços, agora para janeiro de 2027"
+    "Gafisa (GFSA3) adia novamente divulgação de balanços, agora para janeiro de 2027",
+    "Gilmar cita responsabilidade social ao elogiar Trabuco para Fazenda"
   ],
   "leads": [
-    "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
     "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra",
     "Os maiores fundos soberanos do mundo estão deixando de lado o papel de simples cotistas de private equity para fazer negócios por conta própria, assumindo funções típicas das grandes gestoras do setor, segundo reportagem da CNBC. Levantamento da consultoria PwC citado pela emissora americana aponta que esses investidores estatais passaram a origina",
@@ -1853,17 +1852,10 @@
     "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul.",
     "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores.",
     "Medida foi instituída para conter alta dos preços no Brasil depois do início da guerra no Irã",
-    "A Gafisa (GFSA3) voltou a adiar a divulgação de seus resultados financeiros. Em fato relevante publicado na noite de sexta-feira (27), a incorporadora informou que os balanços do segundo e do terceiro trimestres de 2026 serão divulgados em 28 de janeiro de 2027, com teleconferência prevista para o dia seguinte."
+    "A Gafisa (GFSA3) voltou a adiar a divulgação de seus resultados financeiros. Em fato relevante publicado na noite de sexta-feira (27), a incorporadora informou que os balanços do segundo e do terceiro trimestres de 2026 serão divulgados em 28 de janeiro de 2027, com teleconferência prevista para o dia seguinte.",
+    "O ministro Gilmar Mendes, do STF (Supremo Tribunal Federal), destacou neste sábado (28) a capacidade de diálogo e a preocupação com a responsabilidade social de Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda no novo governo Lula."
   ],
   "eventos_recentes": [
-    {
-      "chave": "pacc11::GERAL_ATIVO",
-      "ts": 1795702286.832427
-    },
-    {
-      "chave": "mxrf11::GERAL_ATIVO",
-      "ts": 1795702640.800475
-    },
     {
       "chave": "sabesp::GERAL_ATIVO",
       "ts": 1795702984.334542
@@ -2567,10 +2559,13 @@
     {
       "chave": "gfsa3::EVENTO_CORP",
       "ts": 1795874585.573301
+    },
+    {
+      "chave": "macro_politica_econ::MACRO_EVENTO",
+      "ts": 1795875521.629707
     }
   ],
   "hashes_imagens": [
-    "890fae3a3000e547",
     "13075f0749c3dfda",
     "7ceeecd71fb64a3d",
     "37806db1e7953c60",
@@ -2869,6 +2864,7 @@
     "0a47cbc112b1161a",
     "6aa0622c30a96a77",
     "2168d4ce149b7c28",
-    "f8b6cd50e78c7e96"
+    "f8b6cd50e78c7e96",
+    "fee4ff035d377e4b"
   ]
 }
