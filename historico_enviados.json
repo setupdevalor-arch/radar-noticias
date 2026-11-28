@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/politica/trabuco-fazenda-lula-mercado/",
-    "310c660450a66f03",
-    "87309a84c569ff43",
-    "https://www.moneytimes.com.br/agenda-economica-o-que-pode-mexer-com-a-bolsa-e-o-dolar-nesta-sexta-feira-mlem-2/",
     "1104e8c27381f8f9",
     "bdaaecb14ef5e689",
     "53c6745695854609",
@@ -799,10 +795,13 @@
     "56a663f660049bb9",
     "https://www.poder360.com.br/poder-justica/stf-marca-analise-de-proposta-de-gilmar-para-barrar-pautas-bomba/",
     "fbe83da9322bbe47",
-    "cc20debf4d0aef08"
+    "cc20debf4d0aef08",
+    "f25fe45039133b14",
+    "d207373c5b68bf40",
+    "https://www.cnnbrasil.com.br/economia/money/mercado/fazenda-prorroga-subvencao-de-r-212-ao-diesel-por-mais-30-dias/",
+    "1c6f2edd177263f0"
   ],
   "titulos": [
-    "CFTC edita regra para contratos de eventos e valida cripto",
     "Metade dos executivos prevê retorno de investimentos em IA em até 12 meses",
     "Damares pede a Fachin visita a Vorcaro e depoimento público",
     "Compra da Zscaler pela CrowdStrike: CEO rebate temores",
@@ -1601,10 +1600,10 @@
     "Argentina fracassa ao tentar barrar exploração britânica de petróleo nas Malvinas",
     "O dólar vai continuar subindo? Veja as estimativas do mercado para a moeda",
     "Como viver com calma, apesar das oscilações bruscas dos mercados de ações",
-    "STF marca análise de proposta de Gilmar para barrar pautas-bomba"
+    "STF marca análise de proposta de Gilmar para barrar pautas-bomba",
+    "Fazenda prorroga subvenção de R$ 2,12 ao diesel por mais 30 dias"
   ],
   "leads": [
-    "O Ibovespa tem 2ª maior alta diária desde 2021 em pregão de forte rali na Bolsa brasileira, no qual praticamente toda a carteira do índice subiu e apenas Suzano fechou no campo negativo, com queda de 0,96%.",
     "O comitê-executivo da Câmara de Comércio Exterior (Gecex-Camex) aprovou nesta quinta-feira (26) aplicação de direito antidumping definitivo sobre aços planos laminados a quente originários da China e folha metálica da Alemanha, Holanda e Japão, segundo comunicado à imprensa do Ministério do Desenvolvimento (Mdic).",
     "O presidente da Câmara, Hugo Motta (Republicanos-PB), desejou êxito ao próximo ministro da Fazenda, Luiz Carlos Trabuco, e afirmou estar à disposição para discutir a agenda econômica do país.",
     "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos",
@@ -1853,13 +1852,10 @@
     "– Um tribunal apoiado pelas Nações Unidas rejeitou um pedido da Argentina que buscava interromper um projeto petrolífero britânico perto das Ilhas Malvinas.",
     "Desde dezembro de 2025, o dólar tem enfrentado um sobe e desce frente ao real. Tanto que, na segunda-feira (23), a moeda ultrapassou a marca de R$ 6 durante o pregão. Nesta sexta-feira (27), no entanto, a divisa chegou a ser negociada abaixo de R$ 5,50.",
     "Chicote! É isso que os participantes ativos dos mercados financeiros têm sentido ultimamente.",
-    "Julgamento será no plenário virtual e começa em 11 de dezembro; regras apresentadas pelo ministro são defendidas pelo governo"
+    "Julgamento será no plenário virtual e começa em 11 de dezembro; regras apresentadas pelo ministro são defendidas pelo governo",
+    "O governo federal prorrogou por mais 30 dias a subvenção econômica de R$ 2,12 por litro de óleo diesel paga a produtores e importadores do combustível."
   ],
   "eventos_recentes": [
-    {
-      "chave": "taesa::PROVENTOS",
-      "ts": 1795698983.793324
-    },
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795700848.226541
@@ -2562,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "fb7409cebbb0b920",
     "cf0d49ef14609dff",
     "5f8820f49e362b40",
     "ad5ef701f6568951",
@@ -2861,6 +2856,7 @@
     "369193f516423925",
     "11c8d4c01f69ebe7",
     "38684215eb7c0c73",
-    "2d07f88e23d6fe71"
+    "2d07f88e23d6fe71",
+    "17433f17db3064dc"
   ]
 }
