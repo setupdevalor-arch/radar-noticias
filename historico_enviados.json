@@ -1,9 +1,5 @@
 {
   "links": [
-    "0c352a16974d7439",
-    "https://www.spacemoney.com.br/politica/oab-pb-falhas-brb-depositos-judiciais/",
-    "b81ab6005f41c06a",
-    "https://www.spacemoney.com.br/tecnologia/apple-black-friday-2026-vale-presente/",
     "3147c121ef6296b8",
     "05710691a845e5e6",
     "3a3fa52efbc9f37e",
@@ -799,10 +795,13 @@
     "3a11818ecf51940a",
     "242ce88af807f184",
     "4617e7b48a98de15",
-    "57e084aa1f49aea7"
+    "57e084aa1f49aea7",
+    "c2fbee2779f454a5",
+    "cb1b7b5c9b7a3383",
+    "https://www.infomoney.com.br/business/expansao-smartfit-17-paises-novos-negocios/",
+    "18a56556b6fe0a4d"
   ],
   "titulos": [
-    "HGRE11 adquire 67 salas ocupadas pela WeWork",
     "TRCO11 registra quitação de aluguel de outubro",
     "Mélenchon quer devolver Engie ao controle estatal",
     "PC do B acorda emenda para excluir Lei Rouanet do ajuste fiscal",
@@ -1601,10 +1600,10 @@
     "O elétrico mais vendido quase não perdeu valor na Fipe. O imposto ajudou mais que a confiança",
     "Infra em 1 Minuto: Petrobras dá sinais incertos para acionistas",
     "Análise: Banco do Brasil passa de vitrine do governo Lula a desafio em 2027",
-    "Coamo vai antecipar R$ 223 milhões em sobras aos cooperados"
+    "Coamo vai antecipar R$ 223 milhões em sobras aos cooperados",
+    "Como o Brasil ficou pequeno para a Smart Fit: 17 países e negócios além das academias"
   ],
   "leads": [
-    "As ações ligadas à economia doméstica lideravam os ganhos do Ibovespa nesta quinta-feira, embaladas pelo forte apetite por risco dos investidores e pelo alívio da curva de juros futuros. Empresas mais sensíveis ao custo do crédito e ao ritmo da atividade econômica ocupavam o topo do índice, com altas nos setores de construção civil, varejo, educaçã",
     "O TecMundo informa que a Black Friday de 2026 ocorre em um cenário de custos elevados para celulares, mas Samsung e Motorola ainda tratam a data como uma janela comercial importante. A pressão vem principalmente da escassez de memórias usadas por data centers de inteligência artificial, que encareceu componentes e chegou ao preço final.",
     "O Google iniciou a inserção de patrocínio em respostas criadas por IA no Brasil. A liberação, inicialmente restrita a uma fatia pequena de usuários, alcança o Modo IA e as Visões gerais. No primeiro, o anúncio surge no encerramento da resposta; na busca convencional, aparece depois que o resumo é expandido.",
     "Duas entidades holandesas de defesa do consumidor e dos direitos digitais acionaram judicialmente a Meta e a EssilorLuxottica para tentar impedir a venda dos óculos Ray-Ban Meta no país. A Consumentenbond e a Offlimits alegam que os dispositivos facilitam registros de pessoas sem consentimento e pedem a suspensão comercial até que sejam adotadas sa",
@@ -1853,7 +1852,8 @@
     "Durante uns três anos, a conversa sobre carro elétrico usado no Brasil foi uma só: “isso aí derrete”. Quem comprou ouviu de amigo, de cunhado, de vendedor de concessionária de carro a combustão. E havia motivo, houve modelo que perdeu metade do preço.",
     "em 1 Minuto: Petrobras dá sinais incertos para acionistas",
     "Em 2023, o Banco do Brasil era apresentado como a vitrine do início do terceiro governo Lula. O banco havia passado por uma profunda reestruturação e registrava lucros recordes. No entanto, o retrato atual é bem diferente, marcado por inadimplência crescente e queda expressiva nos resultados.",
-    "A Coamo anunciou que vai antecipar o pagamento de R$ 223 milhões em sobras aos cooperados a partir de 7 de dezembro. O valor corresponde a parte do resultado de 2026 e foi calculado com base no desempenho da cooperativa até novembro."
+    "A Coamo anunciou que vai antecipar o pagamento de R$ 223 milhões em sobras aos cooperados a partir de 7 de dezembro. O valor corresponde a parte do resultado de 2026 e foi calculado com base no desempenho da cooperativa até novembro.",
+    "O Brasil já não concentra a maior parte das academias nem do resultado da Smart Fit (SMFT3). A rede nasceu no país, mas hoje está em 17 mercados e quer levar a eles um conjunto de negócios que vai do treino ao spa. A expansão da Smart Fit combina duas ambições: alcançar mais clientes na América Latina e participar de mais momentos da rotina de quem"
   ],
   "eventos_recentes": [
     {
@@ -2634,7 +2634,6 @@
     }
   ],
   "hashes_imagens": [
-    "78fbc98a5c4c0c86",
     "8b0daa5441ff7e48",
     "51019b22f3169d23",
     "3b2e8df89527cd84",
@@ -2933,6 +2932,7 @@
     "59a12d046287b5a0",
     "25ad57b200d82be5",
     "fb0eb6ef4133dbfb",
-    "3b7858685447a925"
+    "3b7858685447a925",
+    "cb3e1c8098b22ed5"
   ]
 }
