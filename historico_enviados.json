@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/brava-brav3-inicia-producao-do-poco-ppt-53-no-campo-de-papa-terra/",
-    "c911778d1df472a4",
-    "83bce466b98122b0",
     "e81ce1b0dba25b0c",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/injective-sec-acoes-tokenizadas/",
     "0f5e7ddee435f8b6",
@@ -799,10 +796,12 @@
     "fa70aa3d240232fc",
     "c91bae28ea9c59c1",
     "3d5a4b8c7a5f60e9",
-    "1c61ac9d57693422"
+    "1c61ac9d57693422",
+    "03b376f98e302c0c",
+    "https://www.cnnbrasil.com.br/internacional/analise-por-que-a-administracao-trump-esta-tao-evasiva-sobre-jensen-huang/",
+    "bc16df368863bab1"
   ],
   "titulos": [
-    "Aluguel comercial sobe 12% em um ano, quase três vezes a inflação, diz FipeZAP",
     "Brexit: Reino Unido Busca Reaproximação com UE após Década de Perdas Econômicas",
     "As negociações climáticas da ONU fracassaram. E agora?",
     "Lojas de Shoppings São Escolha de 34% para Compras de Fim de Ano e Superam Marketplaces, Diz Pesquisa da SYN",
@@ -1601,10 +1600,10 @@
     "Novas tarifas dos EUA ao Brasil terão efeito quase zero, diz especialista",
     "Falta de mão de obra trava data centers de IA nos EUA",
     "Itaú (ITUB4), BB Seguridade (BBSE3) e outras três ações para investir, segundo a Terra Investimentos",
-    "Stellar reúne Securitize, Spiko e Movantis na Meridian 2026"
+    "Stellar reúne Securitize, Spiko e Movantis na Meridian 2026",
+    "Análise: Por que a administração Trump está tão evasiva sobre Jensen Huang?"
   ],
   "leads": [
-    "A adesão das empresas ao Pix Automático está começando a ganhar tração, segundo Hagner Ferreira, head de produtos de recebimento para pessoa jurídica do Itaú. O método de pagamento de recorrência no arranjo de pagamento instantâneo tem avançado em players, como utilities, seguros e operadoras.",
     "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
     "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
     "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
@@ -1853,7 +1852,8 @@
     "Os Estados Unidos anunciaram novas tarifas sobre produtos brasileiros, incluindo uma alíquota de 10% sobre aeronaves prontas, sob a alegação de que o Brasil não corrigiu o que Washington classifica de \"atos, políticas e práticas irracionais\".",
     "A escassez de eletricistas, encanadores e outros profissionais qualificados da construção está dificultando a expansão dos data centers de inteligência artificial nos Estados Unidos, segundo reportagem da CNBC. O problema ganha peso num momento em que o presidente Donald Trump ameaçou, na semana passada, taxar pesadamente empresas americanas que er",
     "A Terra Investimentos não realizou alterações na sua carteira recomendada semanal de ações, para o período de 27 a 4 de dezembro.",
-    "A Stellar Network apresentou, durante a conferência Meridian 2026, em Lisboa, três iniciativas que ampliam o uso da rede em ativos do mundo real e pagamentos institucionais. Os anúncios foram divulgados pela própria rede em comunicados sobre cada caso."
+    "A Stellar Network apresentou, durante a conferência Meridian 2026, em Lisboa, três iniciativas que ampliam o uso da rede em ativos do mundo real e pagamentos institucionais. Os anúncios foram divulgados pela própria rede em comunicados sobre cada caso.",
+    "Quando Jensen Huang foi, de forma surpreendente, reconduzido ao cargo de CEO da Nvidia na última segunda-feira (23), tanto o conselho de administração da empresa quanto o presidente dos Estados Unidos, Donald Trump, apresentaram o fato como resultado de garantias dadas pelo governo de que ele não representava um risco à segurança nacional e não enf"
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "7c5618623f8acfbb",
     "47cad65210ebce9e",
     "47bf20bac89c5e59",
     "bd74640cfd757342",
@@ -2861,6 +2860,7 @@
     "8d93f53f6750af1d",
     "929ab833a32dd856",
     "915b9fc32850901d",
-    "9184f6284c0eb3b8"
+    "9184f6284c0eb3b8",
+    "5e38d005007ff3d1"
   ]
 }
