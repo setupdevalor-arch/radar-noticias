@@ -1,7 +1,5 @@
 {
   "links": [
-    "af977f6f79ea52d8",
-    "02ffd97f58cc92f1",
     "656f6836e96befdb",
     "https://www.bloomberglinea.com.br/negocios/technos-cresce-com-alta-de-relogios-no-brasil-e-fatura-r-1418-milhoes-no-trimestre/",
     "35560f128445248b",
@@ -799,7 +797,9 @@
     "b56511cee9d3156e",
     "1cb60483d71a05ea",
     "37e7d6aebbcfc123",
-    "142594fe635108a1"
+    "142594fe635108a1",
+    "c2148ab9b3d99c99",
+    "f4eea30c89facae0"
   ],
   "titulos": [
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
@@ -1856,18 +1856,6 @@
     "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "cosan::GERAL_ATIVO",
-      "ts": 1795696502.173912
-    },
-    {
-      "chave": "jbss32::GERAL_ATIVO",
-      "ts": 1795696502.173912
-    },
-    {
-      "chave": "jbs::GERAL_ATIVO",
-      "ts": 1795696502.173912
-    },
     {
       "chave": "rf_credito_juros::RF_EVENTO",
       "ts": 1795697176.505382
