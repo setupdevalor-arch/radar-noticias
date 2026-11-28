@@ -1,9 +1,5 @@
 {
   "links": [
-    "e19be2e8ca91b5a9",
-    "https://www.infomoney.com.br/mercados/com-foco-em-baterias-petrobras-avalia-entrar-em-minerais-criticos-nos-proximos-anos/",
-    "6e4c24fd34b04672",
-    "c9d967951898ee3e",
     "https://www.infomoney.com.br/onde-investir/dois-anos-apos-pacote-de-haddad-o-que-aconteceu-com-quem-comprou-ipca-na-alta/",
     "e47597e9ace6b4e3",
     "https://www.infomoney.com.br/mercados/quanto-wall-street-teria-que-cair-para-ameacar-crescimento-dos-eua-morgan-calcula/",
@@ -799,10 +795,13 @@
     "baa8947427995c93",
     "c6ddcc92e2072d79",
     "https://www.spacemoney.com.br/economia/exterior/golfo-de-oma-eua-atingem-navio-ira-promete-romper-cerco/",
-    "a845077d0badf2dd"
+    "a845077d0badf2dd",
+    "ccbce46d6ce472cf",
+    "ed8e28a4d5107721",
+    "https://www.infomoney.com.br/economia/sp-corta-perspectiva-da-franca-para-negativa-por-orcamento-e-politica/",
+    "945cb24ed5b173e1"
   ],
   "titulos": [
-    "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
     "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
     "Câmara aprova urgência e acelera votação de projeto de ajuste fiscal do governo Lula",
     "Ucrânia afunda navio russo na Líbia com drones navais",
@@ -1601,10 +1600,10 @@
     "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira",
     "Governo vê negociação insuficiente e revê estratégia para relação com EUA",
     "GSFI11 paga primeiro rendimento após captar R$ 99 milhões",
-    "Golfo de Omã: EUA atingem navio; Irã promete romper bloqueio"
+    "Golfo de Omã: EUA atingem navio; Irã promete romper bloqueio",
+    "S&P corta perspectiva da França para negativa por orçamento e política"
   ],
   "leads": [
-    "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
     "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
     "O governo brasileiro lamentou nesta quinta-feira (26) declarações do presidente da França, Emmanuel Macron, que na véspera se referiu à carne brasileira como “dopada” ao celebrar restrições impostas pela União Europeia a produtos brasileiros.",
     "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos.",
@@ -1853,13 +1852,10 @@
     "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira.",
     "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos.",
     "O GSFI11, fundo imobiliário da General Shopping & Outlets do Brasil, concluiu em 8 de outubro sua sexta emissão de cotas, captando R$ 99,1 milhões, conforme relatório gerencial de setembro. No mesmo mês, o fundo anunciou sua primeira distribuição de rendimentos, de R$ 0,11 por cota, paga em 15 de outubro.",
-    "Os Estados Unidos atingiram e desabilitaram o navio comercial Pacific Archer, de bandeira de Palau, no Golfo de Omã, após a embarcação deixar o porto iraniano de Bandar Abbas e tentar furar o bloqueio americano. O ataque ocorreu na quinta-feira e foi divulgado pelo Comando Central dos EUA (Centcom) na sexta-feira (27), enquanto o Irã prometia rompe"
+    "Os Estados Unidos atingiram e desabilitaram o navio comercial Pacific Archer, de bandeira de Palau, no Golfo de Omã, após a embarcação deixar o porto iraniano de Bandar Abbas e tentar furar o bloqueio americano. O ataque ocorreu na quinta-feira e foi divulgado pelo Comando Central dos EUA (Centcom) na sexta-feira (27), enquanto o Irã prometia rompe",
+    "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit."
   ],
   "eventos_recentes": [
-    {
-      "chave": "nvidia::GERAL_ATIVO",
-      "ts": 1795693556.965129
-    },
     {
       "chave": "smft3::PROVENTOS",
       "ts": 1795693977.672764
@@ -2606,7 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "547ff77cae11a467",
     "23a9bf508d3d944e",
     "9a57c3a5fb5ac70a",
     "9285ca8caf46f8a6",
@@ -2905,6 +2900,7 @@
     "4daaafc31408416f",
     "1d4da4aa907097a6",
     "2404d220ace67c05",
-    "09a4610ab353b053"
+    "09a4610ab353b053",
+    "68982b198383e710"
   ]
 }
