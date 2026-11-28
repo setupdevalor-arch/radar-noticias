@@ -1,12 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/investimentos/acoes/rheinmetall-corta-projecao-vendas-acao-sobe/",
-    "4438572b0b7c5ca4",
-    "0d40ce8fde0515fe",
-    "2a23e89bbaa1bdd8",
-    "https://neofeed.com.br/poder/sucateadas-paralisadas-e-sem-comando-a-dura-realidade-das-agencias-reguladoras/",
-    "71cec9a4edab251c",
-    "0292ad0b85e7be40",
     "b8f4e5f5a3e4378d",
     "c66b9ca35cf3cfdb",
     "b8632d6d017a3cd3",
@@ -799,10 +792,16 @@
     "https://www.cnnbrasil.com.br/politica/gilmar-cita-responsabilidade-social-ao-elogiar-trabuco-para-fazenda/",
     "495245af72f741ba",
     "921f7e2fd0f79286",
-    "373d318f318b569a"
+    "373d318f318b569a",
+    "ffdfc9be20509b69",
+    "4072faa8be589616",
+    "9624b74fc766221f",
+    "e0d4e3b46b88d735",
+    "ae6dc138af8517e9",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/novas-tarifas-dos-eua-ao-brasil-terao-efeito-quase-zero-diz-especialista/",
+    "c143e55c5294a728"
   ],
   "titulos": [
-    "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
     "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças",
     "PMI acende alerta de recessão na França antes de eleição",
     "É uma boa hora para vender dólar? O que fazer com o câmbio perto de R$ 6",
@@ -1601,10 +1600,10 @@
     "China preocupa mais empresas europeias e acende alerta em novos setores",
     "Governo publica portaria que renova auxílio ao diesel",
     "Gafisa (GFSA3) adia novamente divulgação de balanços, agora para janeiro de 2027",
-    "Gilmar cita responsabilidade social ao elogiar Trabuco para Fazenda"
+    "Gilmar cita responsabilidade social ao elogiar Trabuco para Fazenda",
+    "Novas tarifas dos EUA ao Brasil terão efeito quase zero, diz especialista"
   ],
   "leads": [
-    "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra",
     "Os maiores fundos soberanos do mundo estão deixando de lado o papel de simples cotistas de private equity para fazer negócios por conta própria, assumindo funções típicas das grandes gestoras do setor, segundo reportagem da CNBC. Levantamento da consultoria PwC citado pela emissora americana aponta que esses investidores estatais passaram a origina",
     "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) liberou financiamento de R$ 2,66 bilhões para capital de giro da operação brasileira da companhia aérea Latam Airlines, informou o banco de fomento nessa quinta-feira (26).",
@@ -1853,13 +1852,10 @@
     "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores.",
     "Medida foi instituída para conter alta dos preços no Brasil depois do início da guerra no Irã",
     "A Gafisa (GFSA3) voltou a adiar a divulgação de seus resultados financeiros. Em fato relevante publicado na noite de sexta-feira (27), a incorporadora informou que os balanços do segundo e do terceiro trimestres de 2026 serão divulgados em 28 de janeiro de 2027, com teleconferência prevista para o dia seguinte.",
-    "O ministro Gilmar Mendes, do STF (Supremo Tribunal Federal), destacou neste sábado (28) a capacidade de diálogo e a preocupação com a responsabilidade social de Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda no novo governo Lula."
+    "O ministro Gilmar Mendes, do STF (Supremo Tribunal Federal), destacou neste sábado (28) a capacidade de diálogo e a preocupação com a responsabilidade social de Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda no novo governo Lula.",
+    "Os Estados Unidos anunciaram novas tarifas sobre produtos brasileiros, incluindo uma alíquota de 10% sobre aeronaves prontas, sob a alegação de que o Brasil não corrigiu o que Washington classifica de \"atos, políticas e práticas irracionais\"."
   ],
   "eventos_recentes": [
-    {
-      "chave": "disney::GERAL_ATIVO",
-      "ts": 1795703415.803793
-    },
     {
       "chave": "macro_commodities::MACRO_EVENTO",
       "ts": 1795704845.238924
@@ -2562,7 +2558,6 @@
     }
   ],
   "hashes_imagens": [
-    "13075f0749c3dfda",
     "7ceeecd71fb64a3d",
     "37806db1e7953c60",
     "5901287fe359d212",
@@ -2861,6 +2856,7 @@
     "6aa0622c30a96a77",
     "2168d4ce149b7c28",
     "f8b6cd50e78c7e96",
-    "fee4ff035d377e4b"
+    "fee4ff035d377e4b",
+    "8d93f53f6750af1d"
   ]
 }
