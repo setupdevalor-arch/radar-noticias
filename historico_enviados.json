@@ -1,10 +1,5 @@
 {
   "links": [
-    "3d102b0f367f259a",
-    "747485004503e8af",
-    "ac853661cfe99e4f",
-    "https://www.infomoney.com.br/business/global/apos-anos-de-bombardeios-russos-maior-siderurgica-da-ucrania-agora-e-alvo-de-tarifas/",
-    "5f446f8fcb5b31cf",
     "https://www.moneytimes.com.br/safra-de-soja-do-brasil-em-2026-27-deve-cair-13-preve-agroconsult-fets/",
     "5129408515131760",
     "065a587d1b874daf",
@@ -799,7 +794,12 @@
     "https://eixos.com.br/newsletters/newsletter-gas-week/importacao-de-gas-da-argentina-supera-1-milhao-de-m%C2%B3-dia-quais-os-passos-seguintes/",
     "b7b98c81d1fd3431",
     "dce5d89162259a9e",
-    "e378b7c3396b2628"
+    "e378b7c3396b2628",
+    "ca0f408094414f0a",
+    "b3fb9953cd3eaa58",
+    "f1186655eb94c6a4",
+    "708576179f95de12",
+    "59014ffb8ba38d94"
   ],
   "titulos": [
     "Ucrânia afunda navio russo na Líbia com drones navais",
@@ -1856,10 +1856,6 @@
     "Petrobras mantém plataformas de SEAP em novo plano de negócios. ANP discute regra para autorização para gasodutos e controle sobre a queima de gás e mais. Confira:"
   ],
   "eventos_recentes": [
-    {
-      "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
-      "ts": 1795695427.617365
-    },
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795695784.355585
