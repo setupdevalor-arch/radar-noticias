@@ -1,6 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/axia-energia-axia3-aprova-resgate-de-r-6-bilhoes-em-acoes-preferenciais-classe-c-entenda-o-que-muda-miql/",
     "c863b2b0b398d4e0",
     "https://www.spacemoney.com.br/investimentos/acoes/rheinmetall-corta-projecao-vendas-acao-sobe/",
     "4438572b0b7c5ca4",
@@ -799,7 +798,8 @@
     "ff290f3632b2acfb",
     "cf33669fe87a1f02",
     "https://www.cnnbrasil.com.br/politica/gilmar-cita-responsabilidade-social-ao-elogiar-trabuco-para-fazenda/",
-    "495245af72f741ba"
+    "495245af72f741ba",
+    "921f7e2fd0f79286"
   ],
   "titulos": [
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
@@ -1856,10 +1856,6 @@
     "O ministro Gilmar Mendes, do STF (Supremo Tribunal Federal), destacou neste sábado (28) a capacidade de diálogo e a preocupação com a responsabilidade social de Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda no novo governo Lula."
   ],
   "eventos_recentes": [
-    {
-      "chave": "sabesp::GERAL_ATIVO",
-      "ts": 1795702984.334542
-    },
     {
       "chave": "disney::GERAL_ATIVO",
       "ts": 1795703415.803793
