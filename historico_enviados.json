@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://bmcnews.com.br/mercados/ibovespa-tem-2a-maior-alta-diaria-desde-2021-e-so-suzano-cai-no-pregao/",
-    "2aae6e25fb738540",
     "0a3ca7cd93a8aa55",
     "244530eee1e524f5",
     "https://www.moneytimes.com.br/governo-aprova-antidumping-para-aco-plano-laminado-a-quente-e-folha-metalica/",
@@ -799,10 +797,11 @@
     "ed45f6025a5b274e",
     "1b0c99325de493bf",
     "https://www.estadao.com.br/economia/fabio-gallo/manifesto-em-paris-propoe-discutir-os-limites-do-poder-dos-bilionarios-nas-sociedades-democraticas/",
-    "6df2854f8b5bc683"
+    "6df2854f8b5bc683",
+    "https://www.estadao.com.br/economia/adriano-pires/pretinho-basico-nunca-sai-de-moda-nao-se-faz-transicao-energetica-com-demonizacao-do-petroleo/",
+    "441d219b486f1d81"
   ],
   "titulos": [
-    "Açúcar fecha em alta de 3,41% em Nova York após mínima de três meses",
     "Durigan projeta resolução sobre alíquota da CBS em duas semanas",
     "Tarcísio defende discussão de limites de decisões monocráticas e competência do STF",
     "Ferramentas de IA Ajudam Marcas a Otimizar Promoções de Black Friday",
@@ -1601,10 +1600,10 @@
     "Fachin libera R$ 316 milhões da liquidação do Master para socorrer BRB",
     "Dolarizar a carteira é importante na economia globalizada, diz investidor",
     "Investidores em ETFs no Brasil aumentam 34% em um ano, segundo B3",
-    "Manifesto em Paris propõe discutir os limites do poder dos bilionários nas sociedades democráticas"
+    "Manifesto em Paris propõe discutir os limites do poder dos bilionários nas sociedades democráticas",
+    "‘Pretinho básico’ nunca sai de moda: não se faz transição energética com demonização do petróleo"
   ],
   "leads": [
-    "Segundo dados reunidos pelo Visual Capitalist com base no World Economic Outlook, do International Monetary Fund, e em pesquisas da New York City Economic Development Corporation, a região metropolitana de Nova York gerou cerca de US$ 2.600 bilhões em PIB nominal em 2025, o que a colocaria na oitava posição entre as maiores economias do mundo caso ",
     "Em novembro de 2026, o custo de uma ceia de Ação de Graças para 8 a 10 pessoas nos Estados Unidos variava bastante conforme a cidade, segundo dados reunidos pelo Visual Capitalist a partir de um comunicado da BC.Game divulgado por RFD-TV e EURweb. O levantamento compara 50 cidades, uma por estado, e usa uma cesta padronizada que inclui um peru padr",
     "“Vários estudos mostram que mexer muito na carteira prejudica o resultado de longo prazo,” Patrícia Queiroz, a diretora de investimentos da Real Grandeza, disse ao Brazil Journal. “Nossa estratégia é ter uma carteira diversificada, mas com a alocação estratégica mantida ao longo do tempo.”",
     "O IFIX fechou o pregão desta quinta-feira (26) em alta de 1,07%, aos 3.578,98 pontos, impulsionado pelo salto de 13,01% das cotas do CACR11 (Cartesia Recebíveis Imobiliários) na B3, enquanto outros fundos imobiliários registraram movimentos distintos ao longo da sessão.",
@@ -1853,7 +1852,8 @@
     "O presidente do STF (Supremo Tribunal Federal), ministro Edson Fachin, autorizou nesta sexta-feira (27) a liberação de R$ 316,4 milhões ao BRB (Banco de Brasília). O dinheiro vem de carteiras de crédito adquiridas do Banco Master e estava retido desde julho, por determinação do relator formal do caso, André Mendonça.",
     "Dolarizar a carteira de investimentos é uma estratégia importante na atual economia globalizada, segundo Bernardo Pascowitch, apresentador do Resenha do Dinheiro.",
     "Segundo a B3, Bolsa de Valores do Brasil, o número de investidores pessoa física em ETFs aumentou 34% no segundo trimestre deste ano, na comparação com o mesmo período de 2025.",
-    "No último dia 21 de novembro, foi lançado em Paris o Manifesto contra a Oligarquia Internacional, subscrito por mais de uma centena de pesquisadores, entre os quais quatro ganhadores do Nobel de Economia: Joseph Stiglitz, Paul Krugman, Esther Duflo e Daron Acemoglu. O documento alerta para os riscos que a crescente concentração de riqueza represent"
+    "No último dia 21 de novembro, foi lançado em Paris o Manifesto contra a Oligarquia Internacional, subscrito por mais de uma centena de pesquisadores, entre os quais quatro ganhadores do Nobel de Economia: Joseph Stiglitz, Paul Krugman, Esther Duflo e Daron Acemoglu. O documento alerta para os riscos que a crescente concentração de riqueza represent",
+    "O início da guerra, em fevereiro de 2022, entre Rússia e Ucrânia deu o que eu chamaria de reset no petróleo. Até 2021, o discurso era “petróleo acabou, ESG, transição, pico de demanda em 2025”. Depois do início da guerra, virou: “segurança energética primeiro”. Agora, o conflito no Irã fez o petróleo voltar a ser rei."
   ],
   "eventos_recentes": [
     {
@@ -2595,10 +2595,13 @@
     {
       "chave": "bdr_exterior::BDR_GERAL",
       "ts": 1795826531.837148
+    },
+    {
+      "chave": "macro_commodities::MACRO_EVENTO",
+      "ts": 1795832473.845067
     }
   ],
   "hashes_imagens": [
-    "ba9d3b114b6c9c0b",
     "fec453549ea4824a",
     "a6665a39f6ae00a7",
     "86b4479c6bb71413",
@@ -2897,6 +2900,7 @@
     "66411535e969068d",
     "2b2a2baaa63e84f5",
     "265353b4dbbe0ad8",
-    "0f76e17d9b6ecc37"
+    "0f76e17d9b6ecc37",
+    "3ded29a86457d666"
   ]
 }
