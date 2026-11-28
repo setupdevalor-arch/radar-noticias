@@ -1,9 +1,5 @@
 {
   "links": [
-    "31e1bb98aa89492f",
-    "78e242f39ec9e6b8",
-    "bb6a620444e87ed1",
-    "https://www.poder360.com.br/poder-economia/bradesco-confirma-ida-de-trabuco-para-a-fazenda/",
     "9a13f54808a43a34",
     "5868d0dd777346f2",
     "dd00cd8db5886bd1",
@@ -799,10 +795,13 @@
     "https://www.spacemoney.com.br/tecnologia/escassez-mao-de-obra-data-centers-ia-eua/",
     "a960f2bd01f5a0e6",
     "https://www.moneytimes.com.br/xxx-xxx-e-outras-tres-acoes-para-investir-no-curto-prazo-segundo-a-terra-investimentos-miql/",
-    "28113a5dd83c156e"
+    "28113a5dd83c156e",
+    "e022b617bc926669",
+    "7fd06c2edbc47815",
+    "https://www.spacemoney.com.br/investimentos/criptomoedas/stellar-securitize-spiko-movantis-meridian-2026/",
+    "fa70aa3d240232fc"
   ],
   "titulos": [
-    "É uma boa hora para vender dólar? O que fazer com o câmbio perto de R$ 6",
     "Aluguel comercial sobe 12% em um ano, quase três vezes a inflação, diz FipeZAP",
     "Brexit: Reino Unido Busca Reaproximação com UE após Década de Perdas Econômicas",
     "As negociações climáticas da ONU fracassaram. E agora?",
@@ -1601,10 +1600,10 @@
     "Gilmar cita responsabilidade social ao elogiar Trabuco para Fazenda",
     "Novas tarifas dos EUA ao Brasil terão efeito quase zero, diz especialista",
     "Falta de mão de obra trava data centers de IA nos EUA",
-    "Itaú (ITUB4), BB Seguridade (BBSE3) e outras três ações para investir, segundo a Terra Investimentos"
+    "Itaú (ITUB4), BB Seguridade (BBSE3) e outras três ações para investir, segundo a Terra Investimentos",
+    "Stellar reúne Securitize, Spiko e Movantis na Meridian 2026"
   ],
   "leads": [
-    "O BNDES (Banco Nacional de Desenvolvimento Econômico e Social) liberou financiamento de R$ 2,66 bilhões para capital de giro da operação brasileira da companhia aérea Latam Airlines, informou o banco de fomento nessa quinta-feira (26).",
     "A adesão das empresas ao Pix Automático está começando a ganhar tração, segundo Hagner Ferreira, head de produtos de recebimento para pessoa jurídica do Itaú. O método de pagamento de recorrência no arranjo de pagamento instantâneo tem avançado em players, como utilities, seguros e operadoras.",
     "Açougues da província de Misiones, no nordeste da Argentina, começaram a vender carne de pombo como uma alternativa mais barata à carne bovina em meio à crise econômica e à alta de preços que pressiona o orçamento das famílias. A venda foi registrada em diferentes estabelecimentos da região e chamou a atenção nas últimas semanas.",
     "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
@@ -1853,7 +1852,8 @@
     "O ministro Gilmar Mendes, do STF (Supremo Tribunal Federal), destacou neste sábado (28) a capacidade de diálogo e a preocupação com a responsabilidade social de Luiz Carlos Trabuco, escolhido para comandar o Ministério da Fazenda no novo governo Lula.",
     "Os Estados Unidos anunciaram novas tarifas sobre produtos brasileiros, incluindo uma alíquota de 10% sobre aeronaves prontas, sob a alegação de que o Brasil não corrigiu o que Washington classifica de \"atos, políticas e práticas irracionais\".",
     "A escassez de eletricistas, encanadores e outros profissionais qualificados da construção está dificultando a expansão dos data centers de inteligência artificial nos Estados Unidos, segundo reportagem da CNBC. O problema ganha peso num momento em que o presidente Donald Trump ameaçou, na semana passada, taxar pesadamente empresas americanas que er",
-    "A Terra Investimentos não realizou alterações na sua carteira recomendada semanal de ações, para o período de 27 a 4 de dezembro."
+    "A Terra Investimentos não realizou alterações na sua carteira recomendada semanal de ações, para o período de 27 a 4 de dezembro.",
+    "A Stellar Network apresentou, durante a conferência Meridian 2026, em Lisboa, três iniciativas que ampliam o uso da rede em ativos do mundo real e pagamentos institucionais. Os anúncios foram divulgados pela própria rede em comunicados sobre cada caso."
   ],
   "eventos_recentes": [
     {
@@ -2562,7 +2562,6 @@
     }
   ],
   "hashes_imagens": [
-    "5901287fe359d212",
     "7c5618623f8acfbb",
     "47cad65210ebce9e",
     "47bf20bac89c5e59",
@@ -2861,6 +2860,7 @@
     "fee4ff035d377e4b",
     "8d93f53f6750af1d",
     "929ab833a32dd856",
-    "915b9fc32850901d"
+    "915b9fc32850901d",
+    "9184f6284c0eb3b8"
   ]
 }
