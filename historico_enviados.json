@@ -1,7 +1,5 @@
 {
   "links": [
-    "6064948a42464f1e",
-    "https://investnews.com.br/investimentos/tokenizacao-mundial-supera-us-40-bilhoes-com-titulos-do-tesouro-americano-no-topo/",
     "4382b8160b3830f5",
     "fbb43454d580b33f",
     "https://www.spacemoney.com.br/agronegocio/black-friday-agro-custo-total/",
@@ -799,10 +797,11 @@
     "44639fbbd8e9c5b4",
     "75fd5a29361dc18b",
     "15a0b0a2c8b0951d",
-    "e3138a8bfd279d96"
+    "e3138a8bfd279d96",
+    "https://www.infomoney.com.br/mercados/china-preocupa-mais-empresas-europeias-e-acende-alerta-em-novos-setores/",
+    "4a0f5aa928657cf8"
   ],
   "titulos": [
-    "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
     "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado",
     "Três petroleiros atingem minas em Ormuz, diz Irã",
     "Nvidia: sucessão e governança após retorno de Huang",
@@ -1601,10 +1600,10 @@
     "Volatilidade: o foco do investidor de longo prazo",
     "Efeito Trabuco, dólar em queda e Vamos (VAMO3) dispara 33%: os destaques do Ibovespa na semana",
     "Queda dos preços dos combustíveis traz alívio para motoristas e bancos centrais",
-    "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões"
+    "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões",
+    "China preocupa mais empresas europeias e acende alerta em novos setores"
   ],
   "leads": [
-    "Ministro da Fazenda diz ter convicção de que seu sucessor conduzirá o país com seriedade e ética",
     "O setor de infraestrutura brasileiro vive um superciclo de investimentos, mas enfrenta desafios significativos para manter o ritmo de crescimento nos próximos anos.",
     "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
     "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
@@ -1853,7 +1852,8 @@
     "A volatilidade que sacudiu Wall Street na última semana, com o vaivém das ações da Nvidia e a intervenção do presidente Donald Trump na crise interna da companhia, reforçou uma lição antiga para quem investe com horizonte longo: oscilações de curto prazo não devem ditar a estratégia. Segundo apurou o InfoMoney, o episódio mostra como notícias corpo",
     "O Ibovespa (IBOV) encerrou a semana com alta de 6,1%, aos 176.573 pontos, em meio à melhora da percepção de risco fiscal com a indicação de Luiz Carlos Trabuco para o Ministério da Fazenda e a divulgação de dados de inflação abaixo das expectativas.",
     "– Em poucas semanas, os mercados globais de combustíveis saíram da crise, pelo menos por enquanto.",
-    "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul."
+    "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul.",
+    "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores."
   ],
   "eventos_recentes": [
     {
@@ -2570,7 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "fbe23082af89c11e",
     "b0c3ad71e547beac",
     "5f2557349e87b53b",
     "890fae3a3000e547",
@@ -2869,6 +2868,7 @@
     "644359506ef584eb",
     "896cd0465a3a2e37",
     "ad0e60264068fc52",
-    "0a47cbc112b1161a"
+    "0a47cbc112b1161a",
+    "6aa0622c30a96a77"
   ]
 }
