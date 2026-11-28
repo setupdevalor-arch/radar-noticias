@@ -1,6 +1,5 @@
 {
   "links": [
-    "74e0d1198f93512e",
     "c0c12a6a624b4689",
     "03d8c61e3a064b4f",
     "ee4bd78ca88af8e8",
@@ -799,7 +798,8 @@
     "https://www.infomoney.com.br/mercados/peso-colombiano-caminha-para-pior-mes-em-4-anos-com-riscos-crescentes-no-radar/",
     "3101665caa894f42",
     "f61644313a4ec396",
-    "3fc8501caf16cf72"
+    "3fc8501caf16cf72",
+    "e17974ba76a4c818"
   ],
   "titulos": [
     "Investidores Institucionais Retiram R$ 50,8 Bi da Bolsa em 2026; Movimento Alerta sobre Risco Fiscal",
@@ -1856,10 +1856,6 @@
     "O peso colombiano caminha para seu pior mês em mais de quatro anos, com uma combinação tóxica de problemas internos e externos que ofuscam uma das moedas mais resilientes do ano."
   ],
   "eventos_recentes": [
-    {
-      "chave": "rf_tesouro::RF_EVENTO",
-      "ts": 1795711001.143721
-    },
     {
       "chave": "vivo::GERAL_ATIVO",
       "ts": 1795712784.259408
