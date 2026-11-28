@@ -1,10 +1,5 @@
 {
   "links": [
-    "https://investnews.com.br/negocios/black-friday-agentes-de-ia-varejo/",
-    "4b37a1593b165319",
-    "b9242a08f8647cb9",
-    "68b71d306b810568",
-    "https://www.moneytimes.com.br/o-espanhol-pablo-hernandez-de-cos-assumira-a-presidencia-do-bce-no-lugar-de-christine-lagarde-fets/",
     "bd7e67e45fcdd4f9",
     "74e6f06df9e7c55d",
     "https://www.spacemoney.com.br/investimentos/fundos-de-investimentos/private-markets-resgates-educacao-investidor/",
@@ -799,10 +794,14 @@
     "5918b5b300d1defc",
     "cce645d70ed1988f",
     "a20d67d648f2e309",
-    "707f5b97fdfbea96"
+    "707f5b97fdfbea96",
+    "c5a22314e91086ab",
+    "074b327ef5f4c6a0",
+    "1bf41549619701e0",
+    "https://investnews.com.br/investimentos/jpmorgan-e-hsbc-fazem-primeira-operacao-com-novo-ouro-digital/",
+    "2605bc55a427b7dc"
   ],
   "titulos": [
-    "Ucrânia afunda navio russo na Líbia com drones navais",
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
     "Empresas da Ásia veem retorno com IA, mas medição é difícil",
     "Ethereum acelera defesa contra ameaças quânticas e de IA",
@@ -1601,10 +1600,10 @@
     "Golfo de Omã: EUA atingem navio; Irã promete romper bloqueio",
     "S&P corta perspectiva da França para negativa por orçamento e política",
     "Fastline, da Tegma, vai comprar transportadora de veículos pesados por R$ 105 mi",
-    "Importação de gás da Argentina supera 1 milhão de m³/dia; quais os passos seguintes?"
+    "Importação de gás da Argentina supera 1 milhão de m³/dia; quais os passos seguintes?",
+    "JPMorgan e HSBC fazem primeira operação com novo ouro digital"
   ],
   "leads": [
-    "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos.",
     "A CSN anunciou nesta quinta-feira (26) que seu conselho de administração elegeu o executivo Mario Augusto da Silva como o novo diretor financeiro da companhia, no lugar do presidente-executivo, Fabio Schvartsman, que ocupa o cargo interinamente.",
     "Assim como Trabuco, Joaquim Levy fez carreira no Bradesco; Henrique Meirelles comandou o BankBoston e Guedes fundou o Pactual",
     "A comparação é inevitável. Assim como Joaquim Levy em 2015, Luiz Carlos Trabuco chega ao Ministério da Fazenda com a missão de recuperar a confiança do mercado e ajudar o governo a controlar a deterioração das contas públicas.",
@@ -1853,13 +1852,10 @@
     "Os Estados Unidos atingiram e desabilitaram o navio comercial Pacific Archer, de bandeira de Palau, no Golfo de Omã, após a embarcação deixar o porto iraniano de Bandar Abbas e tentar furar o bloqueio americano. O ataque ocorreu na quinta-feira e foi divulgado pelo Comando Central dos EUA (Centcom) na sexta-feira (27), enquanto o Irã prometia rompe",
     "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit.",
     "– A Tegma (TGMA3) anunciou nesta sexta-feira que ‌sua controlada Fastline acertou acordo para comprar 70% da operadora ‌logística ABC Cargas por R$ 105 milhões, tendo a opção de comprar o restante a partir de 2030, segundo fato ‌relevante.",
-    "Petrobras mantém plataformas de SEAP em novo plano de negócios. ANP discute regra para autorização para gasodutos e controle sobre a queima de gás e mais. Confira:"
+    "Petrobras mantém plataformas de SEAP em novo plano de negócios. ANP discute regra para autorização para gasodutos e controle sobre a queima de gás e mais. Confira:",
+    "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_selic::MACRO_EVENTO",
-      "ts": 1795695784.355585
-    },
     {
       "chave": "banco_do_brasil::GERAL_ATIVO",
       "ts": 1795696139.622104
@@ -2587,10 +2583,13 @@
     {
       "chave": "fiis_geral::FIIS_GERAL",
       "ts": 1795865997.043282
+    },
+    {
+      "chave": "jpmorgan::GERAL_ATIVO",
+      "ts": 1795868897.565892
     }
   ],
   "hashes_imagens": [
-    "9285ca8caf46f8a6",
     "ae10fb7dc1e54e97",
     "c10183e000fb1475",
     "6b8ee7577eadb357",
@@ -2889,6 +2888,7 @@
     "09a4610ab353b053",
     "68982b198383e710",
     "5a1b8a1e1661d3cd",
-    "e35896040ad2ab45"
+    "e35896040ad2ab45",
+    "d75923352c2efc5d"
   ]
 }
