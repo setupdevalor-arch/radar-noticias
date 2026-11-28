@@ -1,8 +1,5 @@
 {
   "links": [
-    "5639c2c5461995e4",
-    "0611165cbfa682a5",
-    "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/black-friday-ia-pode-mudar-precos-e-a-forma-como-clientes-fazem-compras/",
     "a07abb69c8091941",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/tron-acoes-tokenizadas-titulos-eua-2026/",
     "ac6ac07469dc0fab",
@@ -799,10 +796,12 @@
     "09fff4ca0e05c1db",
     "411ae978aa41f9ed",
     "https://www.infomoney.com.br/mercados/bc-anuncia-leiloes-de-linha-no-total-de-ate-us-2-bilhoes-para-2a-feira/",
-    "d6455a27ffbb9684"
+    "d6455a27ffbb9684",
+    "9d93aa118e97b224",
+    "https://www.cnnbrasil.com.br/politica/governo-ve-negociacao-insuficiente-e-reve-estrategia-para-relacao-com-eua/",
+    "d1f8a474584a9874"
   ],
   "titulos": [
-    "Alares busca R$ 140 milhões para gestão de dívidas e reforço de caixa",
     "PL 4675/2025 não é consenso entre entidades empresariais",
     "BRB mantém operações bancárias após suspensão na CVM",
     "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
@@ -1601,10 +1600,10 @@
     "Novas tarifas dos EUA, dividendos da Petrobras e Nvidia; veja os destaques da semana",
     "Ásia cria grupo para integrar pagamentos digitais",
     "Mineradoras chinesas pedem mais proteção para investimentos no exterior",
-    "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira"
+    "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira",
+    "Governo vê negociação insuficiente e revê estratégia para relação com EUA"
   ],
   "leads": [
-    "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%.",
     "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
     "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
@@ -1853,25 +1852,10 @@
     "O Escritório do Representante de Comércio dos Estados Unidos (USTR) apresentou uma nova rodada de tarifas que, caso avance nos moldes atuais, vai elevar a alíquota efetiva sobre as exportações brasileiras para o mercado americano de 17,4% para cerca de 18,1%, trazendo potenciais reflexos para a atividade econômica.",
     "China, Japão, Coreia do Sul e os países da ASEAN vão montar um grupo de trabalho para aproximar suas redes domésticas de pagamentos digitais e alinhar as normas que hoje regem o setor, segundo o Cointelegraph.",
     "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros",
-    "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira."
+    "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira.",
+    "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795692801.565921
-    },
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795692801.565921
-    },
-    {
-      "chave": "yduq3::GERAL_ATIVO",
-      "ts": 1795692801.565921
-    },
-    {
-      "chave": "afya3::GERAL_ATIVO",
-      "ts": 1795692801.565921
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795693167.698889
@@ -2631,10 +2615,13 @@
     {
       "chave": "macro_selic::MACRO_EVENTO",
       "ts": 1795865345.81637
+    },
+    {
+      "chave": "macro_geopolitica::MACRO_EVENTO",
+      "ts": 1795865667.700572
     }
   ],
   "hashes_imagens": [
-    "c7fdc40f8626ffed",
     "8a7ae5d7d227e648",
     "592861fa5ca26001",
     "547ff77cae11a467",
@@ -2933,6 +2920,7 @@
     "d4fc13349225d47b",
     "ba79cdc6b23bf364",
     "559cfabd89a26a6b",
-    "4daaafc31408416f"
+    "4daaafc31408416f",
+    "1d4da4aa907097a6"
   ]
 }
