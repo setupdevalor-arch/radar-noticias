@@ -1,6 +1,5 @@
 {
   "links": [
-    "f0f9a2f6f7478304",
     "33cd5f71950f2cc2",
     "e368cc5856ac4809",
     "https://www.spacemoney.com.br/economia/exterior/ewz-trabuco-fazenda-rali-ia-mercados/",
@@ -799,7 +798,8 @@
     "572e50c8f87adfe1",
     "88fa2533ad4ef710",
     "https://www.estadao.com.br/economia/negocios/entrevista-david-feffer-presidente-conselho-suzano-ia-emprego-dignidade/",
-    "43456e156aa0c8d9"
+    "43456e156aa0c8d9",
+    "3eccbfb56bcebb62"
   ],
   "titulos": [
     "As negociações climáticas da ONU fracassaram. E agora?",
@@ -1856,14 +1856,6 @@
     "David Feffer, presidente do conselho da Suzano, estuda inteligência artificial (IA) desde 2016, destacando seu impacto transformador nos negócios. A Suzano, pioneira em inovação, aplica IA em processos produtivos e logísticos, visando eficiência e produtividade. Feffer compara a IA à eletricidade, prevendo mudanças rápidas e desafios sociais, como "
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_atividade::MACRO_EVENTO",
-      "ts": 1795707432.244645
-    },
-    {
-      "chave": "macro_mercado::MACRO_EVENTO",
-      "ts": 1795707432.244645
-    },
     {
       "chave": "macro_inflacao::MACRO_EVENTO",
       "ts": 1795707794.743239
