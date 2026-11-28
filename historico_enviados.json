@@ -1,6 +1,5 @@
 {
   "links": [
-    "48e216c3df3a97ca",
     "https://www.spacemoney.com.br/politica/trabuco-fazenda-lula-mercado/",
     "310c660450a66f03",
     "87309a84c569ff43",
@@ -799,7 +798,8 @@
     "https://www.infomoney.com.br/business/global/como-viver-com-calma-apesar-das-oscilacoes-bruscas-dos-mercados-de-acoes/",
     "56a663f660049bb9",
     "https://www.poder360.com.br/poder-justica/stf-marca-analise-de-proposta-de-gilmar-para-barrar-pautas-bomba/",
-    "fbe83da9322bbe47"
+    "fbe83da9322bbe47",
+    "cc20debf4d0aef08"
   ],
   "titulos": [
     "CFTC edita regra para contratos de eventos e valida cripto",
@@ -1856,14 +1856,6 @@
     "Julgamento será no plenário virtual e começa em 11 de dezembro; regras apresentadas pelo ministro são defendidas pelo governo"
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_geopolitica::MACRO_EVENTO",
-      "ts": 1795698604.846749
-    },
-    {
-      "chave": "btlg11::EVENTO_CORP",
-      "ts": 1795698604.846749
-    },
     {
       "chave": "taesa::PROVENTOS",
       "ts": 1795698983.793324
