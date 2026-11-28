@@ -1,10 +1,5 @@
 {
   "links": [
-    "b26b2ad0b2d4a1a9",
-    "101fd22109abe4c6",
-    "https://www.infomoney.com.br/onde-investir/onde-investir-2027-xp-jp-morgan-alocacao/",
-    "37f3181e443eeccb",
-    "https://eixos.com.br/newsletters/comece-seu-dia/setores-regulados-se-juntam-contra-o-fim-da-quarentena-para-politicos-nas-agencias/",
     "b91444b2a096578e",
     "https://www.infomoney.com.br/onde-investir/crise-de-credito-2027-riscos-brasil/",
     "df341cdbdce55a7c",
@@ -799,11 +794,14 @@
     "https://www.spacemoney.com.br/investimentos/volatilidade-mercados-investidor-longo-prazo/",
     "d56220fc13ee02a7",
     "https://www.moneytimes.com.br/efeito-trabuco-dolar-em-queda-e-acao-disparando-33-os-destaques-do-ibovespa-na-semana-jcav/",
-    "e5a34f5945fcc022"
+    "e5a34f5945fcc022",
+    "7a0c7c693cda0b54",
+    "https://www.infomoney.com.br/economia/queda-dos-precos-dos-combustiveis-traz-alivio-para-motoristas-e-bancos-centrais/",
+    "e603779db8ea4958",
+    "https://forbes.com.br/forbes-money/2026/11/america-do-sul-mira-integracao-de-gas-e-eletricidade-com-projetos-de-us18-bilhoes/",
+    "44639fbbd8e9c5b4"
   ],
   "titulos": [
-    "Petrobras prevê investir US$ 122 bi entre 2027-2031",
-    "Inflação na Europa: o mapa que separa Leste e Norte",
     "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
     "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado",
     "Três petroleiros atingem minas em Ormuz, diz Irã",
@@ -1601,11 +1599,11 @@
     "Fazenda prorroga subvenção de R$ 2,12 ao diesel por mais 30 dias",
     "Sentimento do Bitcoin é o pior em ciclos, diz investidor",
     "Volatilidade: o foco do investidor de longo prazo",
-    "Efeito Trabuco, dólar em queda e Vamos (VAMO3) dispara 33%: os destaques do Ibovespa na semana"
+    "Efeito Trabuco, dólar em queda e Vamos (VAMO3) dispara 33%: os destaques do Ibovespa na semana",
+    "Queda dos preços dos combustíveis traz alívio para motoristas e bancos centrais",
+    "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões"
   ],
   "leads": [
-    "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo",
-    "As negociações com boi gordo no mercado paulista ocorrem entre R$ 390 e R$ 400 por arroba, faixa que sinaliza acomodação após um período de valorização, de acordo com Guilherme Jank, da Datagro. O analista avalia que o avanço das cotações perdeu intensidade e encontrou resistência em escalas de abate mais longas.",
     "Ministro da Fazenda diz ter convicção de que seu sucessor conduzirá o país com seriedade e ética",
     "O setor de infraestrutura brasileiro vive um superciclo de investimentos, mas enfrenta desafios significativos para manter o ritmo de crescimento nos próximos anos.",
     "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
@@ -1853,7 +1851,9 @@
     "O governo federal prorrogou por mais 30 dias a subvenção econômica de R$ 2,12 por litro de óleo diesel paga a produtores e importadores do combustível.",
     "O investidor de ativos digitais Jeff Park afirmou que o atual mercado de baixa do Bitcoin, com queda de cerca de 52% até agora, tem sido o ciclo psicologicamente mais difícil de sua trajetória, ainda que o recuo em preço seja menos severo do que em bear markets anteriores.",
     "A volatilidade que sacudiu Wall Street na última semana, com o vaivém das ações da Nvidia e a intervenção do presidente Donald Trump na crise interna da companhia, reforçou uma lição antiga para quem investe com horizonte longo: oscilações de curto prazo não devem ditar a estratégia. Segundo apurou o InfoMoney, o episódio mostra como notícias corpo",
-    "O Ibovespa (IBOV) encerrou a semana com alta de 6,1%, aos 176.573 pontos, em meio à melhora da percepção de risco fiscal com a indicação de Luiz Carlos Trabuco para o Ministério da Fazenda e a divulgação de dados de inflação abaixo das expectativas."
+    "O Ibovespa (IBOV) encerrou a semana com alta de 6,1%, aos 176.573 pontos, em meio à melhora da percepção de risco fiscal com a indicação de Luiz Carlos Trabuco para o Ministério da Fazenda e a divulgação de dados de inflação abaixo das expectativas.",
+    "– Em poucas semanas, os mercados globais de combustíveis saíram da crise, pelo menos por enquanto.",
+    "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul."
   ],
   "eventos_recentes": [
     {
@@ -2570,8 +2570,6 @@
     }
   ],
   "hashes_imagens": [
-    "fde1015787372f9e",
-    "dbfdd0fe77b30f79",
     "fbe23082af89c11e",
     "b0c3ad71e547beac",
     "5f2557349e87b53b",
@@ -2869,6 +2867,8 @@
     "17433f17db3064dc",
     "4b9d2d6faaf081eb",
     "644359506ef584eb",
-    "896cd0465a3a2e37"
+    "896cd0465a3a2e37",
+    "ad0e60264068fc52",
+    "0a47cbc112b1161a"
   ]
 }
