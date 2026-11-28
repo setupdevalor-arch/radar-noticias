@@ -1,9 +1,5 @@
 {
   "links": [
-    "38f7a21d083401b8",
-    "https://www.poder360.com.br/poder-economia/ciro-possobom-deixara-comando-da-volkswagen-do-brasil/",
-    "32d608530531afca",
-    "https://www.moneytimes.com.br/gecex-aprova-minuta-para-grupo-de-trabalho-de-contramedidas-para-eua-fets/",
     "5639c2c5461995e4",
     "0611165cbfa682a5",
     "https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/black-friday-ia-pode-mudar-precos-e-a-forma-como-clientes-fazem-compras/",
@@ -799,10 +795,13 @@
     "33bc24c5bf6c5adf",
     "4dd327bde7608afe",
     "ea988426190d5193",
-    "d7ce3f2ddbaa98d8"
+    "d7ce3f2ddbaa98d8",
+    "09fff4ca0e05c1db",
+    "411ae978aa41f9ed",
+    "https://www.infomoney.com.br/mercados/bc-anuncia-leiloes-de-linha-no-total-de-ate-us-2-bilhoes-para-2a-feira/",
+    "d6455a27ffbb9684"
   ],
   "titulos": [
-    "Hapvida (HAPV3) confirma contratação de bancos para reavaliar portfólio de ativos",
     "Alares busca R$ 140 milhões para gestão de dívidas e reforço de caixa",
     "PL 4675/2025 não é consenso entre entidades empresariais",
     "BRB mantém operações bancárias após suspensão na CVM",
@@ -1601,10 +1600,10 @@
     "Fundos medem resiliência antes do Oscar das Assets",
     "Novas tarifas dos EUA, dividendos da Petrobras e Nvidia; veja os destaques da semana",
     "Ásia cria grupo para integrar pagamentos digitais",
-    "Mineradoras chinesas pedem mais proteção para investimentos no exterior"
+    "Mineradoras chinesas pedem mais proteção para investimentos no exterior",
+    "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira"
   ],
   "leads": [
-    "A compra de um ingresso para um show, a contratação de um serviço de limpeza de ar-condicionado, a aquisição de um imóvel ou de um automóvel e a necessidade de proteger financeiramente uma família são algumas das oportunidades identificadas pelo Santander para ampliar sua base de segurados. Quando a inteligência artificial detecta um pagamento pela",
     "O Conselho Monetário Nacional (CMN) aprovou em reunião desta quinta-feira, 26 de novembro, uma resolução que reduz o custo dos empréstimos do Fundo Clima para financiamento de baterias com conteúdo nacional, conforme os critérios estabelecidos pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES). A taxa saiu de 6,5% ao ano para 3%.",
     "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
@@ -1853,21 +1852,10 @@
     "A dois meses da cerimônia de 28 de janeiro de 2027, no Teatro B32, em São Paulo, a terceira edição da Premiação Outliers entra na fase final de definição dos destaques do setor de fundos. O evento, conhecido como Oscar das Assets, acontece enquanto a indústria ainda acumula R$ 242,5 bilhões em aportes líquidos desde janeiro até outubro de 2026, ape",
     "O Escritório do Representante de Comércio dos Estados Unidos (USTR) apresentou uma nova rodada de tarifas que, caso avance nos moldes atuais, vai elevar a alíquota efetiva sobre as exportações brasileiras para o mercado americano de 17,4% para cerca de 18,1%, trazendo potenciais reflexos para a atividade econômica.",
     "China, Japão, Coreia do Sul e os países da ASEAN vão montar um grupo de trabalho para aproximar suas redes domésticas de pagamentos digitais e alinhar as normas que hoje regem o setor, segundo o Cointelegraph.",
-    "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros"
+    "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros",
+    "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira."
   ],
   "eventos_recentes": [
-    {
-      "chave": "bdr_exterior::BDR_GERAL",
-      "ts": 1795692368.627838
-    },
-    {
-      "chave": "onco3::GERAL_ATIVO",
-      "ts": 1795692368.627838
-    },
-    {
-      "chave": "rf_tesouro::RF_EVENTO",
-      "ts": 1795692368.627838
-    },
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795692801.565921
@@ -2639,10 +2627,13 @@
     {
       "chave": "nvidia::PROVENTOS",
       "ts": 1795862941.955006
+    },
+    {
+      "chave": "macro_selic::MACRO_EVENTO",
+      "ts": 1795865345.81637
     }
   ],
   "hashes_imagens": [
-    "ef14982e2a0f8b08",
     "c7fdc40f8626ffed",
     "8a7ae5d7d227e648",
     "592861fa5ca26001",
@@ -2941,6 +2932,7 @@
     "be5f742a1efe345b",
     "d4fc13349225d47b",
     "ba79cdc6b23bf364",
-    "559cfabd89a26a6b"
+    "559cfabd89a26a6b",
+    "4daaafc31408416f"
   ]
 }
