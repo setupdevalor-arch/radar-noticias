@@ -1,10 +1,5 @@
 {
   "links": [
-    "4382b8160b3830f5",
-    "fbb43454d580b33f",
-    "https://www.spacemoney.com.br/agronegocio/black-friday-agro-custo-total/",
-    "68f8108d0777bd4c",
-    "331f93d59bbc9a7f",
     "38bc566b45dda449",
     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/expectativa-de-vida-no-brasil-sobe-para-769-anos-diz-ibge",
     "e5781bbf49b2217a",
@@ -799,10 +794,14 @@
     "15a0b0a2c8b0951d",
     "e3138a8bfd279d96",
     "https://www.infomoney.com.br/mercados/china-preocupa-mais-empresas-europeias-e-acende-alerta-em-novos-setores/",
-    "4a0f5aa928657cf8"
+    "4a0f5aa928657cf8",
+    "219c04479b1836f2",
+    "c06c841c6483fde8",
+    "c5262461b96b2d7d",
+    "https://www.poder360.com.br/poder-economia/governo-publica-portaria-que-renova-auxilio-ao-diesel/",
+    "b0212050869a982e"
   ],
   "titulos": [
-    "‘Market Friendly’: Equipe econômica sugere a Lula nomes para o BC que sejam amigáveis ao mercado",
     "Três petroleiros atingem minas em Ormuz, diz Irã",
     "Nvidia: sucessão e governança após retorno de Huang",
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
@@ -1601,10 +1600,10 @@
     "Efeito Trabuco, dólar em queda e Vamos (VAMO3) dispara 33%: os destaques do Ibovespa na semana",
     "Queda dos preços dos combustíveis traz alívio para motoristas e bancos centrais",
     "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões",
-    "China preocupa mais empresas europeias e acende alerta em novos setores"
+    "China preocupa mais empresas europeias e acende alerta em novos setores",
+    "Governo publica portaria que renova auxílio ao diesel"
   ],
   "leads": [
-    "O setor de infraestrutura brasileiro vive um superciclo de investimentos, mas enfrenta desafios significativos para manter o ritmo de crescimento nos próximos anos.",
     "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
     "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
     "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
@@ -1853,13 +1852,10 @@
     "O Ibovespa (IBOV) encerrou a semana com alta de 6,1%, aos 176.573 pontos, em meio à melhora da percepção de risco fiscal com a indicação de Luiz Carlos Trabuco para o Ministério da Fazenda e a divulgação de dados de inflação abaixo das expectativas.",
     "– Em poucas semanas, os mercados globais de combustíveis saíram da crise, pelo menos por enquanto.",
     "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul.",
-    "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores."
+    "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores.",
+    "Medida foi instituída para conter alta dos preços no Brasil depois do início da guerra no Irã"
   ],
   "eventos_recentes": [
-    {
-      "chave": "petrobras::GERAL_ATIVO",
-      "ts": 1795700848.226541
-    },
     {
       "chave": "pacc11::GERAL_ATIVO",
       "ts": 1795702286.832427
@@ -2570,7 +2566,6 @@
     }
   ],
   "hashes_imagens": [
-    "b0c3ad71e547beac",
     "5f2557349e87b53b",
     "890fae3a3000e547",
     "13075f0749c3dfda",
@@ -2869,6 +2864,7 @@
     "896cd0465a3a2e37",
     "ad0e60264068fc52",
     "0a47cbc112b1161a",
-    "6aa0622c30a96a77"
+    "6aa0622c30a96a77",
+    "2168d4ce149b7c28"
   ]
 }
