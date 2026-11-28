@@ -1,11 +1,5 @@
 {
   "links": [
-    "3ea1ba469f78ea6f",
-    "https://www.poder360.com.br/poder-economia/durigan-deseja-sucesso-a-trabuco-e-oferece-apoio-na-transicao/",
-    "83661067c8dbfe50",
-    "https://www.cnnbrasil.com.br/infra/infraestrutura-vive-superciclo-de-investimentos-diz-ronei-glanzmann/",
-    "365df06009756588",
-    "https://www.cnnbrasil.com.br/economia/money/negocios/seguranca-e-valor-inegociavel-da-ultracargo-diz-fulvius-tomelin/",
     "726ffcf07b6daaae",
     "https://www.cnnbrasil.com.br/infra/santos-brasil-planeja-investir-r-35-bi-em-4-anos-diz-sepulveda/",
     "750d1e27932c3105",
@@ -799,12 +793,15 @@
     "https://www.spacemoney.com.br/economia/legislacao/congresso-aprova-regras-postes-lula/",
     "0025e6f96d68b1cf",
     "https://www.spacemoney.com.br/politica/ministerio-seguranca-publica-pec/",
-    "69e874e1eb9b6d21"
+    "69e874e1eb9b6d21",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/arroz-feijao-gastos-alimentacao-pof/",
+    "f538db6412596a08",
+    "https://www.spacemoney.com.br/economia/indicadores-economicos/pof-saude-sudeste-educacao-nordeste/",
+    "73eea8d521c59660",
+    "https://www.spacemoney.com.br/economia/app-caixa-dinheiro-esquecido-contas-antigas/",
+    "2a7035c76d99170a"
   ],
   "titulos": [
-    "Temporal destrói unidades da C.Vale no RS e compromete estoque de grãos",
-    "Governo Lula lançará edital de nuvem própria para fugir de big techs",
-    "Amazon compra software de chips da Decart",
     "A Braskem estava com a RJ pronta. Um acordo de última hora evitou o pior",
     "Bitcoin sobe após voltar ao menor nível em dois anos",
     "Justiça de Nova York nega restrição imediata à Kalshi",
@@ -1601,12 +1598,12 @@
     "Mubadala anuncia OPA para chegar a 45% da Kepler Weber",
     "Chuva de até 86 mm eleva risco à colheita no Paraná",
     "Congresso aprova novas regras para postes; texto vai a Lula",
-    "Ministério da Segurança já existiu e será recriado por Lula"
+    "Ministério da Segurança já existiu e será recriado por Lula",
+    "Arroz e feijão recuam no orçamento alimentar das famílias",
+    "Saúde lidera no Sudeste; educação, no Nordeste",
+    "App da Caixa mostra dinheiro esquecido em contas antigas"
   ],
   "leads": [
-    "O desligamento de duas linhas de transmissão de 500 kV Jurupari–Oriximiná, que pertencem à Linhas de Macapá Transmissora de Energia (LMTE), do grupo Energisa, provocou a interrupção total do fornecimento de energia nas áreas de Manaus, no Amazonas, alcançando o estado de Roraima na tarde desta quinta-feira, 26 de novembro.",
-    "Bancos terão de reduzir o limite do cartão de quem recorre com frequência ao rotativo e restringir a concessão de empréstimos sem garantia a clientes com dificuldades financeiras; medidas passam a valer em 2027",
-    "A Real Grandeza, fundo de pensão ligado a Axia Energia e Eletronuclear, manteve sua alocação estratégica em meio à turbulência dos mercados, segundo reportagem de Giuliana Napolitano no Brazil Journal.",
     "A demanda por energia elétrica no SIN (Sistema Interligado Nacional) bateu um novo recorde na quarta-feira (25). Com isso, o ONS (Operador Nacional do Sistema Elétrico) registrou três dias consecutivos de picos inéditos de carga em 2026, a pouco mais de 20 dias para o início do verão.",
     "Um raio atingiu o navio-plataforma P-77 da Petrobras, gerando um princípio de incêndio, rapidamente controlado pelas equipes de segurança da plataforma. Segundo a empresa, não houve vítimas nem danos aos equipamentos.",
     "Dado do Ministério do Turismo é referente aos 10 primeiros meses do ano; valor é maior já registrado para o período",
@@ -1853,7 +1850,10 @@
     "O Mubadala Capital acaba de anunciar uma oferta pública para comprar até 35% do capital da Kepler Weber, a maior fabricante de equipamentos para armazenagem de grãos da América Latina.",
     "A Climatempo prevê chuva intensa em 10 municípios paranaenses da quarta-feira (2) à sexta-feira (4), com volumes de 61 mm a 86 mm em 24 horas. O cenário eleva o risco de paralisação da colheita, dificulta a atuação de máquinas no campo, satura o solo e limita a circulação em estradas rurais.",
     "O Congresso Nacional aprovou um projeto de lei que altera as regras para o uso compartilhado de postes, informou o g1. O texto foi enviado ao presidente Lula (PT), que pode sancioná-lo ou vetar partes até 10 de dezembro.",
-    "A criação de um Ministério da Segurança Pública pelo presidente Luiz Inácio Lula da Silva (PT), que deve ocorrer por medida provisória depois da promulgação da PEC da Segurança Pública aprovada pelo Senado, não é inédita na estrutura do governo federal. Conforme o g1, a pasta já funcionou a partir de fevereiro de 2018, no governo Michel Temer (MDB)"
+    "A criação de um Ministério da Segurança Pública pelo presidente Luiz Inácio Lula da Silva (PT), que deve ocorrer por medida provisória depois da promulgação da PEC da Segurança Pública aprovada pelo Senado, não é inédita na estrutura do governo federal. Conforme o g1, a pasta já funcionou a partir de fevereiro de 2018, no governo Michel Temer (MDB)",
+    "O conjunto formado por arroz e feijão perdeu espaço no orçamento das famílias brasileiras destinado à comida feita em casa, segundo o g1. Dados da Pesquisa de Orçamentos Familiares (POF), do IBGE, divulgada na sexta-feira (27), mostram que a fatia desses alimentos recuou de 10,4% para 5,4% na comparação entre 2002-2003 e 2024-2025. No mesmo interva",
+    "O g1 informou que o IBGE divulgou na sexta-feira (27) os resultados da Pesquisa de Orçamentos Familiares (POF) referentes a 2024 e 2025. O levantamento aponta perfis distintos de gasto entre as regiões: a moradia liderou em todas, a saúde teve maior espaço no Sudeste e a educação se destacou no Nordeste.",
+    "O novo aplicativo da Caixa Econômica Federal, lançado em 9 de novembro, passou a reunir em uma única tela contas que antes ficavam espalhadas em sistemas diferentes — e, com isso, levou parte dos clientes a encontrar saldos parados em contas sem movimentação. A integração entre conta corrente, poupança tradicional e poupança social digital, modalid"
   ],
   "eventos_recentes": [
     {
@@ -2602,9 +2602,6 @@
     }
   ],
   "hashes_imagens": [
-    "f97f930ffc33fbc5",
-    "88db50089c66543d",
-    "fa708b433b1112ee",
     "db38361aeba6e517",
     "e80e35fc06727f5b",
     "f5fc2fd71373b9ae",
@@ -2901,6 +2898,9 @@
     "02cac82b12a0e021",
     "7f5e298abe68474e",
     "7de5e9050bf9f304",
-    "cdc7689bbea5feff"
+    "cdc7689bbea5feff",
+    "f39d3f81b57b67e7",
+    "651568de3a55acf5",
+    "58c21b219999b16d"
   ]
 }
