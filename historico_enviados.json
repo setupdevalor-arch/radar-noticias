@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.spacemoney.com.br/politica/relatora-agencias-reguladoras/",
-    "b506433e6839ae58",
-    "https://www.poder360.com.br/poder-economia/inflacao-de-toquio-vai-a-29-maior-alta-em-16-meses/",
-    "e7844c0b30855b5c",
     "292579ff4a9cc773",
     "4ae216397b8e1050",
     "5fee520146a01c3e",
@@ -799,11 +795,13 @@
     "7f78feb5c06f7516",
     "https://g1.globo.com/economia/noticia/2026/11/28/banco-dos-eua-e-fechado-na-maior-quebra-em-mais-de-dois-anos.ghtml",
     "3debec2b0fabd18c",
-    "69228dcda3dcb47d"
+    "69228dcda3dcb47d",
+    "https://eixos.com.br/transicao-energetica/o-eletrico-mais-vendido-quase-nao-perdeu-valor-na-fipe-o-imposto-ajudou-mais-que-a-confianca/",
+    "b5d83b1ed0b0e377",
+    "https://www.poder360.com.br/poder-infra/infra-em-1-minuto-petrobras-da-sinais-incertos-para-acionistas/",
+    "68e08056ef59582b"
   ],
   "titulos": [
-    "Dólar fecha a R$ 5,92 após romper R$ 6 de olho no BC",
-    "Petrobras (PETR4) vai pagar US$ 15,6 bilhões em dividendos extraordinários; veja prazos e quem pode receber",
     "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi",
     "Dólar toca R$ 6; Ibovespa cai e Magalu sobe",
     "HGRE11 adquire 67 salas ocupadas pela WeWork",
@@ -1601,11 +1599,11 @@
     "Trabuco na Fazenda derruba juros, mas plano fiscal é o teste",
     "Juros, IA e defesa: o mapa dos investimentos em 2027",
     "Trabuco herda dívida de 82,9% do PIB e cobrança por ajuste",
-    "Banco dos EUA é fechado na maior quebra em mais de dois anos"
+    "Banco dos EUA é fechado na maior quebra em mais de dois anos",
+    "O elétrico mais vendido quase não perdeu valor na Fipe. O imposto ajudou mais que a confiança",
+    "Infra em 1 Minuto: Petrobras dá sinais incertos para acionistas"
   ],
   "leads": [
-    "Banqueiro de 75 anos começou como escriturário aos 17 e presidiu o Bradesco de 2009 a 2018",
-    "A Allied estreou na Bolsa há cinco anos, mas raramente entrava no radar de grandes investidores. Um dos principais problemas da ação da maior distribuidora de eletrônicos do Brasil era a baixa liquidez.",
     "Uma inteligência artificial desenvolvida pela Elife conseguiu economizar 12,2 mil horas de trabalho humano no atendimento ao cliente do BMG, entre setembro de 2025 e outubro de 2026. Além disso, ela reduziu em quase 70% o envio de respostas manuais por mês, diminuindo o trabalho repetitivo de atendentes, para que pudessem focar em casos complexos d",
     "Regiões dos estados do Amazonas e de Roraima registraram um apagão na tarde desta quinta-feira (26). Segundo o ONS (Operador Nacional do Sistema Elétrico), a interrupção foi provocada por falhas em linhas de transmissão na região e técnicos já trabalham para a recomposição do serviço.",
     "As ações ligadas à economia doméstica lideravam os ganhos do Ibovespa nesta quinta-feira, embaladas pelo forte apetite por risco dos investidores e pelo alívio da curva de juros futuros. Empresas mais sensíveis ao custo do crédito e ao ritmo da atividade econômica ocupavam o topo do índice, com altas nos setores de construção civil, varejo, educaçã",
@@ -1853,7 +1851,9 @@
     "A chegada de Luiz Carlos Trabuco ao comando do Ministério da Fazenda produziu uma recomposição veloz nos prêmios de risco da renda fixa brasileira, e o mercado passou a semana ajustando a curva de juros para baixo, segundo apurou o InfoMoney. O movimento, concentrado entre 23 e 27 de novembro, levou os contratos longos de DI a devolverem parte do e",
     "A Fortune reuniu cinco tendências que devem moldar 2027 e sugeriu formas de os investidores se posicionarem diante delas, em material divulgado pelo InfoMoney. O quadro descrito combina uma política monetária mais dura nos Estados Unidos, a expansão acelerada da inteligência artificial, tensões geopolíticas em escala global e transformações menos e",
     "O executivo Luiz Carlos Trabuco Cappi, escolhido pelo presidente Luiz Inácio Lula da Silva para comandar o Ministério da Fazenda, assume a pasta em 2027 diante de uma dívida pública em alta, juros elevados e forte cobrança do mercado por corte de gastos, segundo o g1. A publicação também aponta a insatisfação da população com o custo de vida e o en",
-    "O United Fidelity Bank, com sede em Evansville, no estado de Indiana, foi fechado pelos reguladores americanos nesta sexta-feira (27)."
+    "O United Fidelity Bank, com sede em Evansville, no estado de Indiana, foi fechado pelos reguladores americanos nesta sexta-feira (27).",
+    "Durante uns três anos, a conversa sobre carro elétrico usado no Brasil foi uma só: “isso aí derrete”. Quem comprou ouviu de amigo, de cunhado, de vendedor de concessionária de carro a combustão. E havia motivo, houve modelo que perdeu metade do preço.",
+    "em 1 Minuto: Petrobras dá sinais incertos para acionistas"
   ],
   "eventos_recentes": [
     {
@@ -2623,11 +2623,13 @@
     {
       "chave": "macro_atividade::MACRO_EVENTO",
       "ts": 1795855490.461869
+    },
+    {
+      "chave": "petrobras::GERAL_ATIVO",
+      "ts": 1795856740.919216
     }
   ],
   "hashes_imagens": [
-    "80a31caa7893fdd3",
-    "ae8b543c26b0df00",
     "54f64ead640069c2",
     "2bf6acebfdabba13",
     "78fbc98a5c4c0c86",
@@ -2925,6 +2927,8 @@
     "7d4ade074aaebc41",
     "3ffc338cb66fe41c",
     "d3944af5b8e479b3",
-    "34a4d496cbef5f16"
+    "34a4d496cbef5f16",
+    "59a12d046287b5a0",
+    "25ad57b200d82be5"
   ]
 }
