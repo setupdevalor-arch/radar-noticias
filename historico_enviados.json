@@ -1,9 +1,5 @@
 {
   "links": [
-    "292579ff4a9cc773",
-    "4ae216397b8e1050",
-    "5fee520146a01c3e",
-    "https://www.spacemoney.com.br/tecnologia/iphone-16e-128-gb-oferta-magalu/",
     "00124229a609f7a9",
     "https://www.spacemoney.com.br/educacao-financeira/dicas/black-friday-celulares-pix-carne/",
     "c5d2ffb134db6a80",
@@ -799,11 +795,13 @@
     "https://eixos.com.br/transicao-energetica/o-eletrico-mais-vendido-quase-nao-perdeu-valor-na-fipe-o-imposto-ajudou-mais-que-a-confianca/",
     "b5d83b1ed0b0e377",
     "https://www.poder360.com.br/poder-infra/infra-em-1-minuto-petrobras-da-sinais-incertos-para-acionistas/",
-    "68e08056ef59582b"
+    "68e08056ef59582b",
+    "https://www.cnnbrasil.com.br/economia/analise-banco-do-brasil-passa-de-vitrine-do-governo-lula-a-desafio-em-2027/",
+    "0085708ba5e23b6d",
+    "https://www.cnnbrasil.com.br/agro/coamo-vai-antecipar-r-223-milhoes-em-sobras-aos-cooperados/",
+    "4ec5d5286530e766"
   ],
   "titulos": [
-    "Petrobras volta ao mercado de etanol com aquisição de R$ 2,8 bi",
-    "Dólar toca R$ 6; Ibovespa cai e Magalu sobe",
     "HGRE11 adquire 67 salas ocupadas pela WeWork",
     "TRCO11 registra quitação de aluguel de outubro",
     "Mélenchon quer devolver Engie ao controle estatal",
@@ -1601,11 +1599,11 @@
     "Trabuco herda dívida de 82,9% do PIB e cobrança por ajuste",
     "Banco dos EUA é fechado na maior quebra em mais de dois anos",
     "O elétrico mais vendido quase não perdeu valor na Fipe. O imposto ajudou mais que a confiança",
-    "Infra em 1 Minuto: Petrobras dá sinais incertos para acionistas"
+    "Infra em 1 Minuto: Petrobras dá sinais incertos para acionistas",
+    "Análise: Banco do Brasil passa de vitrine do governo Lula a desafio em 2027",
+    "Coamo vai antecipar R$ 223 milhões em sobras aos cooperados"
   ],
   "leads": [
-    "Uma inteligência artificial desenvolvida pela Elife conseguiu economizar 12,2 mil horas de trabalho humano no atendimento ao cliente do BMG, entre setembro de 2025 e outubro de 2026. Além disso, ela reduziu em quase 70% o envio de respostas manuais por mês, diminuindo o trabalho repetitivo de atendentes, para que pudessem focar em casos complexos d",
-    "Regiões dos estados do Amazonas e de Roraima registraram um apagão na tarde desta quinta-feira (26). Segundo o ONS (Operador Nacional do Sistema Elétrico), a interrupção foi provocada por falhas em linhas de transmissão na região e técnicos já trabalham para a recomposição do serviço.",
     "As ações ligadas à economia doméstica lideravam os ganhos do Ibovespa nesta quinta-feira, embaladas pelo forte apetite por risco dos investidores e pelo alívio da curva de juros futuros. Empresas mais sensíveis ao custo do crédito e ao ritmo da atividade econômica ocupavam o topo do índice, com altas nos setores de construção civil, varejo, educaçã",
     "O TecMundo informa que a Black Friday de 2026 ocorre em um cenário de custos elevados para celulares, mas Samsung e Motorola ainda tratam a data como uma janela comercial importante. A pressão vem principalmente da escassez de memórias usadas por data centers de inteligência artificial, que encareceu componentes e chegou ao preço final.",
     "O Google iniciou a inserção de patrocínio em respostas criadas por IA no Brasil. A liberação, inicialmente restrita a uma fatia pequena de usuários, alcança o Modo IA e as Visões gerais. No primeiro, o anúncio surge no encerramento da resposta; na busca convencional, aparece depois que o resumo é expandido.",
@@ -1853,7 +1851,9 @@
     "O executivo Luiz Carlos Trabuco Cappi, escolhido pelo presidente Luiz Inácio Lula da Silva para comandar o Ministério da Fazenda, assume a pasta em 2027 diante de uma dívida pública em alta, juros elevados e forte cobrança do mercado por corte de gastos, segundo o g1. A publicação também aponta a insatisfação da população com o custo de vida e o en",
     "O United Fidelity Bank, com sede em Evansville, no estado de Indiana, foi fechado pelos reguladores americanos nesta sexta-feira (27).",
     "Durante uns três anos, a conversa sobre carro elétrico usado no Brasil foi uma só: “isso aí derrete”. Quem comprou ouviu de amigo, de cunhado, de vendedor de concessionária de carro a combustão. E havia motivo, houve modelo que perdeu metade do preço.",
-    "em 1 Minuto: Petrobras dá sinais incertos para acionistas"
+    "em 1 Minuto: Petrobras dá sinais incertos para acionistas",
+    "Em 2023, o Banco do Brasil era apresentado como a vitrine do início do terceiro governo Lula. O banco havia passado por uma profunda reestruturação e registrava lucros recordes. No entanto, o retrato atual é bem diferente, marcado por inadimplência crescente e queda expressiva nos resultados.",
+    "A Coamo anunciou que vai antecipar o pagamento de R$ 223 milhões em sobras aos cooperados a partir de 7 de dezembro. O valor corresponde a parte do resultado de 2026 e foi calculado com base no desempenho da cooperativa até novembro."
   ],
   "eventos_recentes": [
     {
@@ -2627,11 +2627,13 @@
     {
       "chave": "petrobras::GERAL_ATIVO",
       "ts": 1795856740.919216
+    },
+    {
+      "chave": "banco_do_brasil::GERAL_ATIVO",
+      "ts": 1795857394.821591
     }
   ],
   "hashes_imagens": [
-    "54f64ead640069c2",
-    "2bf6acebfdabba13",
     "78fbc98a5c4c0c86",
     "8b0daa5441ff7e48",
     "51019b22f3169d23",
@@ -2929,6 +2931,8 @@
     "d3944af5b8e479b3",
     "34a4d496cbef5f16",
     "59a12d046287b5a0",
-    "25ad57b200d82be5"
+    "25ad57b200d82be5",
+    "fb0eb6ef4133dbfb",
+    "3b7858685447a925"
   ]
 }
