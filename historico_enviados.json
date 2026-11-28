@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/mercados/quanto-wall-street-teria-que-cair-para-ameacar-crescimento-dos-eua-morgan-calcula/",
-    "d5a21a15e90a6e5d",
-    "https://www.cnnbrasil.com.br/agro/jbs-amplia-investimentos-em-colageno-e-ve-proteinas-funcionais-como-negocio/",
-    "bce652ce7619f3a9",
     "https://www.cnnbrasil.com.br/infra/azul-mudou-programacao-para-proxima-temporada-diante-da-alta-do-qav/",
     "af1feb565a1d6f1e",
     "3d102b0f367f259a",
@@ -799,11 +795,13 @@
     "https://www.infomoney.com.br/economia/sp-corta-perspectiva-da-franca-para-negativa-por-orcamento-e-politica/",
     "945cb24ed5b173e1",
     "c500a0aae9c93ed1",
-    "8a4f3fc102a8bba9"
+    "8a4f3fc102a8bba9",
+    "https://www.infomoney.com.br/mercados/fastline-da-tegma-vai-comprar-transportadora-de-veiculos-pesados-por-r-105-mi/",
+    "eae0fd60ecef71ad",
+    "https://eixos.com.br/newsletters/newsletter-gas-week/importacao-de-gas-da-argentina-supera-1-milhao-de-m%C2%B3-dia-quais-os-passos-seguintes/",
+    "b7b98c81d1fd3431"
   ],
   "titulos": [
-    "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
-    "Câmara aprova urgência e acelera votação de projeto de ajuste fiscal do governo Lula",
     "Ucrânia afunda navio russo na Líbia com drones navais",
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
     "Empresas da Ásia veem retorno com IA, mas medição é difícil",
@@ -1601,11 +1599,11 @@
     "Governo vê negociação insuficiente e revê estratégia para relação com EUA",
     "GSFI11 paga primeiro rendimento após captar R$ 99 milhões",
     "Golfo de Omã: EUA atingem navio; Irã promete romper bloqueio",
-    "S&P corta perspectiva da França para negativa por orçamento e política"
+    "S&P corta perspectiva da França para negativa por orçamento e política",
+    "Fastline, da Tegma, vai comprar transportadora de veículos pesados por R$ 105 mi",
+    "Importação de gás da Argentina supera 1 milhão de m³/dia; quais os passos seguintes?"
   ],
   "leads": [
-    "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
-    "O governo brasileiro lamentou nesta quinta-feira (26) declarações do presidente da França, Emmanuel Macron, que na véspera se referiu à carne brasileira como “dopada” ao celebrar restrições impostas pela União Europeia a produtos brasileiros.",
     "À frente da Citadel, gestora de fundos de hedge criada por ele em 1990, Ken Griffin se acostumou a empilhar, ano após ano, retornos acima da média de boa parte de seus pares. Ao que tudo indica, essa tradição será mantida em 2026 e virá acompanhada de um “cashback” recheado de dígitos.",
     "A CSN anunciou nesta quinta-feira (26) que seu conselho de administração elegeu o executivo Mario Augusto da Silva como o novo diretor financeiro da companhia, no lugar do presidente-executivo, Fabio Schvartsman, que ocupa o cargo interinamente.",
     "Assim como Trabuco, Joaquim Levy fez carreira no Bradesco; Henrique Meirelles comandou o BankBoston e Guedes fundou o Pactual",
@@ -1853,7 +1851,9 @@
     "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos.",
     "O GSFI11, fundo imobiliário da General Shopping & Outlets do Brasil, concluiu em 8 de outubro sua sexta emissão de cotas, captando R$ 99,1 milhões, conforme relatório gerencial de setembro. No mesmo mês, o fundo anunciou sua primeira distribuição de rendimentos, de R$ 0,11 por cota, paga em 15 de outubro.",
     "Os Estados Unidos atingiram e desabilitaram o navio comercial Pacific Archer, de bandeira de Palau, no Golfo de Omã, após a embarcação deixar o porto iraniano de Bandar Abbas e tentar furar o bloqueio americano. O ataque ocorreu na quinta-feira e foi divulgado pelo Comando Central dos EUA (Centcom) na sexta-feira (27), enquanto o Irã prometia rompe",
-    "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit."
+    "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit.",
+    "– A Tegma (TGMA3) anunciou nesta sexta-feira que ‌sua controlada Fastline acertou acordo para comprar 70% da operadora ‌logística ABC Cargas por R$ 105 milhões, tendo a opção de comprar o restante a partir de 2030, segundo fato ‌relevante.",
+    "Petrobras mantém plataformas de SEAP em novo plano de negócios. ANP discute regra para autorização para gasodutos e controle sobre a queima de gás e mais. Confira:"
   ],
   "eventos_recentes": [
     {
@@ -2594,8 +2594,6 @@
     }
   ],
   "hashes_imagens": [
-    "23a9bf508d3d944e",
-    "9a57c3a5fb5ac70a",
     "9285ca8caf46f8a6",
     "ae10fb7dc1e54e97",
     "c10183e000fb1475",
@@ -2893,6 +2891,8 @@
     "1d4da4aa907097a6",
     "2404d220ace67c05",
     "09a4610ab353b053",
-    "68982b198383e710"
+    "68982b198383e710",
+    "5a1b8a1e1661d3cd",
+    "e35896040ad2ab45"
   ]
 }
