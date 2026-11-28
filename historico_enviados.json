@@ -1,10 +1,5 @@
 {
   "links": [
-    "bd7e67e45fcdd4f9",
-    "74e6f06df9e7c55d",
-    "https://www.spacemoney.com.br/investimentos/fundos-de-investimentos/private-markets-resgates-educacao-investidor/",
-    "a6635324ae824bc8",
-    "https://www.cnnbrasil.com.br/infra/azul-fala-em-desacelerar-investimentos-diante-de-incertezas-no-mercado/",
     "af977f6f79ea52d8",
     "02ffd97f58cc92f1",
     "656f6836e96befdb",
@@ -799,7 +794,12 @@
     "074b327ef5f4c6a0",
     "1bf41549619701e0",
     "https://investnews.com.br/investimentos/jpmorgan-e-hsbc-fazem-primeira-operacao-com-novo-ouro-digital/",
-    "2605bc55a427b7dc"
+    "2605bc55a427b7dc",
+    "8ad2fb5cc5f8f0b3",
+    "b56511cee9d3156e",
+    "1cb60483d71a05ea",
+    "37e7d6aebbcfc123",
+    "142594fe635108a1"
   ],
   "titulos": [
     "Crédito está travado; 2027 será difícil para a economia, diz presidente do Bradesco",
@@ -1856,10 +1856,6 @@
     "Embora ainda esteja em fase de testes, a implementação bem-sucedida do novo sistema pode representar uma das mudanças mais significativas na estrutura do mercado de ouro de Londres em décadas."
   ],
   "eventos_recentes": [
-    {
-      "chave": "banco_do_brasil::GERAL_ATIVO",
-      "ts": 1795696139.622104
-    },
     {
       "chave": "cosan::GERAL_ATIVO",
       "ts": 1795696502.173912
