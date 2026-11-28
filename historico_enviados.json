@@ -1,12 +1,5 @@
 {
   "links": [
-    "1104e8c27381f8f9",
-    "bdaaecb14ef5e689",
-    "53c6745695854609",
-    "d80be03574e25425",
-    "https://braziljournal.com/o-preco-da-energia-vai-subir-mesmo-com-sobreoferta-a-tese-da-auren",
-    "2039a38da4fad573",
-    "https://www.mobiletime.com.br/noticias/27/11/2026/central-de-faturas/",
     "b26b2ad0b2d4a1a9",
     "101fd22109abe4c6",
     "https://www.infomoney.com.br/onde-investir/onde-investir-2027-xp-jp-morgan-alocacao/",
@@ -799,12 +792,16 @@
     "f25fe45039133b14",
     "d207373c5b68bf40",
     "https://www.cnnbrasil.com.br/economia/money/mercado/fazenda-prorroga-subvencao-de-r-212-ao-diesel-por-mais-30-dias/",
-    "1c6f2edd177263f0"
+    "1c6f2edd177263f0",
+    "e99be01265251ea1",
+    "https://www.spacemoney.com.br/investimentos/bitcoin-hoje/sentimento-bitcoin-ciclo-investidor/",
+    "d05e7e27655b9dea",
+    "https://www.spacemoney.com.br/investimentos/volatilidade-mercados-investidor-longo-prazo/",
+    "d56220fc13ee02a7",
+    "https://www.moneytimes.com.br/efeito-trabuco-dolar-em-queda-e-acao-disparando-33-os-destaques-do-ibovespa-na-semana-jcav/",
+    "e5a34f5945fcc022"
   ],
   "titulos": [
-    "Metade dos executivos prevê retorno de investimentos em IA em até 12 meses",
-    "Damares pede a Fachin visita a Vorcaro e depoimento público",
-    "Compra da Zscaler pela CrowdStrike: CEO rebate temores",
     "Petrobras prevê investir US$ 122 bi entre 2027-2031",
     "Inflação na Europa: o mapa que separa Leste e Norte",
     "Supersalários serão cortados após a aprovação do pacote fiscal? Entenda o que muda",
@@ -1601,12 +1598,12 @@
     "O dólar vai continuar subindo? Veja as estimativas do mercado para a moeda",
     "Como viver com calma, apesar das oscilações bruscas dos mercados de ações",
     "STF marca análise de proposta de Gilmar para barrar pautas-bomba",
-    "Fazenda prorroga subvenção de R$ 2,12 ao diesel por mais 30 dias"
+    "Fazenda prorroga subvenção de R$ 2,12 ao diesel por mais 30 dias",
+    "Sentimento do Bitcoin é o pior em ciclos, diz investidor",
+    "Volatilidade: o foco do investidor de longo prazo",
+    "Efeito Trabuco, dólar em queda e Vamos (VAMO3) dispara 33%: os destaques do Ibovespa na semana"
   ],
   "leads": [
-    "O comitê-executivo da Câmara de Comércio Exterior (Gecex-Camex) aprovou nesta quinta-feira (26) aplicação de direito antidumping definitivo sobre aços planos laminados a quente originários da China e folha metálica da Alemanha, Holanda e Japão, segundo comunicado à imprensa do Ministério do Desenvolvimento (Mdic).",
-    "O presidente da Câmara, Hugo Motta (Republicanos-PB), desejou êxito ao próximo ministro da Fazenda, Luiz Carlos Trabuco, e afirmou estar à disposição para discutir a agenda econômica do país.",
-    "Emendas somam R$ 79,4 milhões; deputada questiona validade dos pedidos já que o senador está nos Estados Unidos",
     "Presidentes da Câmara e do Senado destacaram experiência do banqueiro e disposição para dialogar sobre a agenda econômica do governo",
     "As negociações com boi gordo no mercado paulista ocorrem entre R$ 390 e R$ 400 por arroba, faixa que sinaliza acomodação após um período de valorização, de acordo com Guilherme Jank, da Datagro. O analista avalia que o avanço das cotações perdeu intensidade e encontrou resistência em escalas de abate mais longas.",
     "Ministro da Fazenda diz ter convicção de que seu sucessor conduzirá o país com seriedade e ética",
@@ -1853,7 +1850,10 @@
     "Desde dezembro de 2025, o dólar tem enfrentado um sobe e desce frente ao real. Tanto que, na segunda-feira (23), a moeda ultrapassou a marca de R$ 6 durante o pregão. Nesta sexta-feira (27), no entanto, a divisa chegou a ser negociada abaixo de R$ 5,50.",
     "Chicote! É isso que os participantes ativos dos mercados financeiros têm sentido ultimamente.",
     "Julgamento será no plenário virtual e começa em 11 de dezembro; regras apresentadas pelo ministro são defendidas pelo governo",
-    "O governo federal prorrogou por mais 30 dias a subvenção econômica de R$ 2,12 por litro de óleo diesel paga a produtores e importadores do combustível."
+    "O governo federal prorrogou por mais 30 dias a subvenção econômica de R$ 2,12 por litro de óleo diesel paga a produtores e importadores do combustível.",
+    "O investidor de ativos digitais Jeff Park afirmou que o atual mercado de baixa do Bitcoin, com queda de cerca de 52% até agora, tem sido o ciclo psicologicamente mais difícil de sua trajetória, ainda que o recuo em preço seja menos severo do que em bear markets anteriores.",
+    "A volatilidade que sacudiu Wall Street na última semana, com o vaivém das ações da Nvidia e a intervenção do presidente Donald Trump na crise interna da companhia, reforçou uma lição antiga para quem investe com horizonte longo: oscilações de curto prazo não devem ditar a estratégia. Segundo apurou o InfoMoney, o episódio mostra como notícias corpo",
+    "O Ibovespa (IBOV) encerrou a semana com alta de 6,1%, aos 176.573 pontos, em meio à melhora da percepção de risco fiscal com a indicação de Luiz Carlos Trabuco para o Ministério da Fazenda e a divulgação de dados de inflação abaixo das expectativas."
   ],
   "eventos_recentes": [
     {
@@ -2555,12 +2555,21 @@
     {
       "chave": "macro_mercado::MACRO_EVENTO",
       "ts": 1795871104.058871
+    },
+    {
+      "chave": "cripto_mercado::CRIPTO_EVENTO",
+      "ts": 1795872368.504992
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795872368.504992
+    },
+    {
+      "chave": "vamo3::GERAL_ATIVO",
+      "ts": 1795872368.504992
     }
   ],
   "hashes_imagens": [
-    "cf0d49ef14609dff",
-    "5f8820f49e362b40",
-    "ad5ef701f6568951",
     "fde1015787372f9e",
     "dbfdd0fe77b30f79",
     "fbe23082af89c11e",
@@ -2857,6 +2866,9 @@
     "11c8d4c01f69ebe7",
     "38684215eb7c0c73",
     "2d07f88e23d6fe71",
-    "17433f17db3064dc"
+    "17433f17db3064dc",
+    "4b9d2d6faaf081eb",
+    "644359506ef584eb",
+    "896cd0465a3a2e37"
   ]
 }
