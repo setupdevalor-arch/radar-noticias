@@ -1,8 +1,5 @@
 {
   "links": [
-    "6f769d8c862d48af",
-    "c81d0e901fcf7b04",
-    "https://www.spacemoney.com.br/economia/macroeconomia/black-friday-eua-gasto-fim-de-ano-inflacao/",
     "a0ecd702908c86b9",
     "https://eixos.com.br/energia-eletrica/ia-intensifica-ataques-ciberneticos-ao-setor-eletrico-e-empresas-montam-grupo-de-defesa-no-brasil/",
     "c467a3f31d3cbc09",
@@ -799,10 +796,12 @@
     "5ceada5c940203d9",
     "efeb2df4cedc2b26",
     "12f07a54b212b9e9",
-    "72748d0191cd2173"
+    "72748d0191cd2173",
+    "a5d51e65fa9415ab",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/13o-salario-deve-ser-amortecedor-para-perda-de-forca-da-economia/",
+    "c3be9dbef41e455a"
   ],
   "titulos": [
-    "As negociações climáticas da ONU fracassaram. E agora?",
     "Lojas de Shoppings São Escolha de 34% para Compras de Fim de Ano e Superam Marketplaces, Diz Pesquisa da SYN",
     "Investidores Institucionais Retiram R$ 50,8 Bi da Bolsa em 2026; Movimento Alerta sobre Risco Fiscal",
     "CEO da Anthropic vende 3,38 milhões de ações em dia da retumbante estreia na Nasdaq",
@@ -1601,10 +1600,10 @@
     "Itaú (ITUB4), BB Seguridade (BBSE3) e outras três ações para investir, segundo a Terra Investimentos",
     "Stellar reúne Securitize, Spiko e Movantis na Meridian 2026",
     "Análise: Por que a administração Trump está tão evasiva sobre Jensen Huang?",
-    "IA será como a eletricidade, mas a transição no emprego será dolorosa, diz David Feffer, da Suzano"
+    "IA será como a eletricidade, mas a transição no emprego será dolorosa, diz David Feffer, da Suzano",
+    "13º salário deve ser “amortecedor” para perda de força da economia"
   ],
   "leads": [
-    "O senador Camilo Santana (PT-CE) foi comunicado de que chefiará a Casa Civil no quarto mandato de Luiz Inácio Lula da Silva (PT). A escolha, conforme apuração do SBT News, ainda não será formalizada por nota oficial, e a expectativa de interlocutores é que o governo confirme o nome nesta sexta-feira (27).",
     "A destruição de dezenas de torres de transmissão por um único temporal no interior paulista evidencia um desafio que vai além da pronta resposta das distribuidoras: como preparar uma infraestrutura essencial para operar sob condições meteorológicas sem precedentes? Em episódios assim, recompor o fornecimento é apenas uma parte da equação; a outra é",
     "O IBGE informou nesta quinta-feira (26) que o Índice de Preços ao Produtor (IPP) subiu 0,98% no mês de outubro de 2026, terceiro mês consecutivo de avanço. O resultado ficou abaixo dos 1,53% observados em setembro. O indicador apura preços na saída das fábricas, sem tributos e despesas de transporte, nas indústrias extrativa e de transformação.",
     "A Latam iniciou nesta quinta-feira (26) sua Mega Promo de Black Friday, com descontos de até 40% em passagens nacionais e internacionais. No mercado doméstico, a companhia oferece bilhetes de ida e volta a partir de R$ 267, com opções para 58 destinos, segundo levantamento do Melhores Destinos. Gol e Azul também deram início a campanhas promocionai",
@@ -1853,7 +1852,8 @@
     "A Terra Investimentos não realizou alterações na sua carteira recomendada semanal de ações, para o período de 27 a 4 de dezembro.",
     "A Stellar Network apresentou, durante a conferência Meridian 2026, em Lisboa, três iniciativas que ampliam o uso da rede em ativos do mundo real e pagamentos institucionais. Os anúncios foram divulgados pela própria rede em comunicados sobre cada caso.",
     "Quando Jensen Huang foi, de forma surpreendente, reconduzido ao cargo de CEO da Nvidia na última segunda-feira (23), tanto o conselho de administração da empresa quanto o presidente dos Estados Unidos, Donald Trump, apresentaram o fato como resultado de garantias dadas pelo governo de que ele não representava um risco à segurança nacional e não enf",
-    "David Feffer, presidente do conselho da Suzano, estuda inteligência artificial (IA) desde 2016, destacando seu impacto transformador nos negócios. A Suzano, pioneira em inovação, aplica IA em processos produtivos e logísticos, visando eficiência e produtividade. Feffer compara a IA à eletricidade, prevendo mudanças rápidas e desafios sociais, como "
+    "David Feffer, presidente do conselho da Suzano, estuda inteligência artificial (IA) desde 2016, destacando seu impacto transformador nos negócios. A Suzano, pioneira em inovação, aplica IA em processos produtivos e logísticos, visando eficiência e produtividade. Feffer compara a IA à eletricidade, prevendo mudanças rápidas e desafios sociais, como ",
+    "O pagamento do 13º salário deve injetar R$ 399,1 bilhões na economia brasileira em 2026, o equivalente a 2,9% do PIB (Produto Interno Bruto) do país."
   ],
   "eventos_recentes": [
     {
@@ -2547,10 +2547,13 @@
     {
       "chave": "suzano::GERAL_ATIVO",
       "ts": 1795879935.676666
+    },
+    {
+      "chave": "macro_atividade::MACRO_EVENTO",
+      "ts": 1795882475.786482
     }
   ],
   "hashes_imagens": [
-    "47bf20bac89c5e59",
     "bd74640cfd757342",
     "401fd8dfd897f67a",
     "64cdfa310a960f0c",
@@ -2849,6 +2852,7 @@
     "915b9fc32850901d",
     "9184f6284c0eb3b8",
     "5e38d005007ff3d1",
-    "a488fe91b2008d17"
+    "a488fe91b2008d17",
+    "5a3ed920ba58c819"
   ]
 }
