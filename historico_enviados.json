@@ -1,8 +1,5 @@
 {
   "links": [
-    "3a3fa52efbc9f37e",
-    "f7a38407a13e525b",
-    "589426b7d0509fc9",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/ripple-emprestimos-xrp-ledger-voto/",
     "c0422ed1f74c04d6",
     "https://www.spacemoney.com.br/investimentos/criptomoedas/binance-retoma-saques-apos-hack-2/",
@@ -799,10 +796,12 @@
     "https://www.infomoney.com.br/business/expansao-smartfit-17-paises-novos-negocios/",
     "18a56556b6fe0a4d",
     "7b136ff7410ffb5b",
-    "441e74ebcd72430a"
+    "441e74ebcd72430a",
+    "0ee92909a4d115cd",
+    "https://www.spacemoney.com.br/investimentos/fundos-de-investimentos/fundos-resiliencia-premiacao-outliers-2027/",
+    "d6226076b10e93e3"
   ],
   "titulos": [
-    "TRCO11 registra quitação de aluguel de outubro",
     "Mélenchon quer devolver Engie ao controle estatal",
     "PC do B acorda emenda para excluir Lei Rouanet do ajuste fiscal",
     "Meta suspende ações Classe C em meio a litígio de acionistas",
@@ -1601,10 +1600,10 @@
     "Infra em 1 Minuto: Petrobras dá sinais incertos para acionistas",
     "Análise: Banco do Brasil passa de vitrine do governo Lula a desafio em 2027",
     "Coamo vai antecipar R$ 223 milhões em sobras aos cooperados",
-    "Como o Brasil ficou pequeno para a Smart Fit: 17 países e negócios além das academias"
+    "Como o Brasil ficou pequeno para a Smart Fit: 17 países e negócios além das academias",
+    "Fundos medem resiliência antes do Oscar das Assets"
   ],
   "leads": [
-    "O TecMundo informa que a Black Friday de 2026 ocorre em um cenário de custos elevados para celulares, mas Samsung e Motorola ainda tratam a data como uma janela comercial importante. A pressão vem principalmente da escassez de memórias usadas por data centers de inteligência artificial, que encareceu componentes e chegou ao preço final.",
     "O Google iniciou a inserção de patrocínio em respostas criadas por IA no Brasil. A liberação, inicialmente restrita a uma fatia pequena de usuários, alcança o Modo IA e as Visões gerais. No primeiro, o anúncio surge no encerramento da resposta; na busca convencional, aparece depois que o resumo é expandido.",
     "Duas entidades holandesas de defesa do consumidor e dos direitos digitais acionaram judicialmente a Meta e a EssilorLuxottica para tentar impedir a venda dos óculos Ray-Ban Meta no país. A Consumentenbond e a Offlimits alegam que os dispositivos facilitam registros de pessoas sem consentimento e pedem a suspensão comercial até que sejam adotadas sa",
     "Decisão estende até 31 de março de 2027 a suspensão de sanções e da cobrança de garantias ligadas a empréstimos federais do RJ",
@@ -1853,7 +1852,8 @@
     "em 1 Minuto: Petrobras dá sinais incertos para acionistas",
     "Em 2023, o Banco do Brasil era apresentado como a vitrine do início do terceiro governo Lula. O banco havia passado por uma profunda reestruturação e registrava lucros recordes. No entanto, o retrato atual é bem diferente, marcado por inadimplência crescente e queda expressiva nos resultados.",
     "A Coamo anunciou que vai antecipar o pagamento de R$ 223 milhões em sobras aos cooperados a partir de 7 de dezembro. O valor corresponde a parte do resultado de 2026 e foi calculado com base no desempenho da cooperativa até novembro.",
-    "O Brasil já não concentra a maior parte das academias nem do resultado da Smart Fit (SMFT3). A rede nasceu no país, mas hoje está em 17 mercados e quer levar a eles um conjunto de negócios que vai do treino ao spa. A expansão da Smart Fit combina duas ambições: alcançar mais clientes na América Latina e participar de mais momentos da rotina de quem"
+    "O Brasil já não concentra a maior parte das academias nem do resultado da Smart Fit (SMFT3). A rede nasceu no país, mas hoje está em 17 mercados e quer levar a eles um conjunto de negócios que vai do treino ao spa. A expansão da Smart Fit combina duas ambições: alcançar mais clientes na América Latina e participar de mais momentos da rotina de quem",
+    "A dois meses da cerimônia de 28 de janeiro de 2027, no Teatro B32, em São Paulo, a terceira edição da Premiação Outliers entra na fase final de definição dos destaques do setor de fundos. O evento, conhecido como Oscar das Assets, acontece enquanto a indústria ainda acumula R$ 242,5 bilhões em aportes líquidos desde janeiro até outubro de 2026, ape"
   ],
   "eventos_recentes": [
     {
@@ -2634,7 +2634,6 @@
     }
   ],
   "hashes_imagens": [
-    "8b0daa5441ff7e48",
     "51019b22f3169d23",
     "3b2e8df89527cd84",
     "098f487b5d70c2e0",
@@ -2933,6 +2932,7 @@
     "25ad57b200d82be5",
     "fb0eb6ef4133dbfb",
     "3b7858685447a925",
-    "cb3e1c8098b22ed5"
+    "cb3e1c8098b22ed5",
+    "be5f742a1efe345b"
   ]
 }
