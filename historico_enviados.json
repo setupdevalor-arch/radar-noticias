@@ -1,8 +1,5 @@
 {
   "links": [
-    "a07abb69c8091941",
-    "https://www.spacemoney.com.br/investimentos/criptomoedas/tron-acoes-tokenizadas-titulos-eua-2026/",
-    "ac6ac07469dc0fab",
     "https://www.moneytimes.com.br/petroleo-sobe-e-caminha-para-interromper-sequencia-de-tres-semanas-de-perdas-fets/",
     "34866f1bb1e6095d",
     "https://www.spacemoney.com.br/agronegocio/carne-brasileira-auditoria-ue-macron/",
@@ -799,10 +796,12 @@
     "d6455a27ffbb9684",
     "9d93aa118e97b224",
     "https://www.cnnbrasil.com.br/politica/governo-ve-negociacao-insuficiente-e-reve-estrategia-para-relacao-com-eua/",
-    "d1f8a474584a9874"
+    "d1f8a474584a9874",
+    "25a588c505598904",
+    "https://www.suno.com.br/noticias/gsfi11-primeiro-rendimento-captacao-outlets/",
+    "b2b93d7700278450"
   ],
   "titulos": [
-    "PL 4675/2025 não é consenso entre entidades empresariais",
     "BRB mantém operações bancárias após suspensão na CVM",
     "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
     "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
@@ -1601,10 +1600,10 @@
     "Ásia cria grupo para integrar pagamentos digitais",
     "Mineradoras chinesas pedem mais proteção para investimentos no exterior",
     "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira",
-    "Governo vê negociação insuficiente e revê estratégia para relação com EUA"
+    "Governo vê negociação insuficiente e revê estratégia para relação com EUA",
+    "GSFI11 paga primeiro rendimento após captar R$ 99 milhões"
   ],
   "leads": [
-    "A Justiça paulista suspendeu, na noite de quinta-feira (26), os efeitos de uma deliberação de 29 de outubro que afastou Erick Carlos Castilho Crus da sociedade da Brasil Bitcoin Serviços Digitais Ltda. A ordem é do desembargador Rui Cascaldi, do Tribunal de Justiça de São Paulo. Ela mantém os 40% de Crus no capital e veta que a Junta Comercial do E",
     "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
     "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
     "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
@@ -1853,29 +1852,10 @@
     "China, Japão, Coreia do Sul e os países da ASEAN vão montar um grupo de trabalho para aproximar suas redes domésticas de pagamentos digitais e alinhar as normas que hoje regem o setor, segundo o Cointelegraph.",
     "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros",
     "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira.",
-    "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos."
+    "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos.",
+    "O GSFI11, fundo imobiliário da General Shopping & Outlets do Brasil, concluiu em 8 de outubro sua sexta emissão de cotas, captando R$ 99,1 milhões, conforme relatório gerencial de setembro. No mesmo mês, o fundo anunciou sua primeira distribuição de rendimentos, de R$ 0,11 por cota, paga em 15 de outubro."
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_inflacao::MACRO_EVENTO",
-      "ts": 1795693167.698889
-    },
-    {
-      "chave": "cripto_mercado::CRIPTO_EVENTO",
-      "ts": 1795693167.698889
-    },
-    {
-      "chave": "fiis_geral::FIIS_GERAL",
-      "ts": 1795693167.698889
-    },
-    {
-      "chave": "cosan::PROVENTOS",
-      "ts": 1795693167.698889
-    },
-    {
-      "chave": "tim::PROVENTOS",
-      "ts": 1795693167.698889
-    },
     {
       "chave": "nvidia::GERAL_ATIVO",
       "ts": 1795693556.965129
@@ -2619,10 +2599,13 @@
     {
       "chave": "macro_geopolitica::MACRO_EVENTO",
       "ts": 1795865667.700572
+    },
+    {
+      "chave": "fiis_geral::FIIS_GERAL",
+      "ts": 1795865997.043282
     }
   ],
   "hashes_imagens": [
-    "8a7ae5d7d227e648",
     "592861fa5ca26001",
     "547ff77cae11a467",
     "23a9bf508d3d944e",
@@ -2921,6 +2904,7 @@
     "ba79cdc6b23bf364",
     "559cfabd89a26a6b",
     "4daaafc31408416f",
-    "1d4da4aa907097a6"
+    "1d4da4aa907097a6",
+    "2404d220ace67c05"
   ]
 }
