@@ -1,6 +1,5 @@
 {
   "links": [
-    "1e92bc5edaf298d9",
     "bc13273021c4fe4a",
     "73709b0ba5a821d7",
     "https://www.poder360.com.br/poder-economia/desemprego-cai-para-51-no-trimestre-encerrado-em-outubro-diz-ibge/",
@@ -799,7 +798,8 @@
     "8ab9015721f4aaec",
     "949ad68def192cd3",
     "d1b0a5106e0da3b0",
-    "8a1b4e4b96bf3e1e"
+    "8a1b4e4b96bf3e1e",
+    "61d125dfcdcfdb36"
   ],
   "titulos": [
     "As negociações climáticas da ONU fracassaram. E agora?",
@@ -1856,10 +1856,6 @@
     "David Feffer, presidente do conselho da Suzano, estuda inteligência artificial (IA) desde 2016, destacando seu impacto transformador nos negócios. A Suzano, pioneira em inovação, aplica IA em processos produtivos e logísticos, visando eficiência e produtividade. Feffer compara a IA à eletricidade, prevendo mudanças rápidas e desafios sociais, como "
   ],
   "eventos_recentes": [
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795708503.364068
-    },
     {
       "chave": "usiminas::GERAL_ATIVO",
       "ts": 1795709896.333422
