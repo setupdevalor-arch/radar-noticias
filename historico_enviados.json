@@ -1,14 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/csn-elege-ex-presidente-da-cosan-como-novo-diretor-de-financas/",
-    "c580bc2712496ff9",
-    "https://www.poder360.com.br/poder-economia/relembre-quais-ministros-da-fazenda-vieram-do-mercado-financeiro/",
-    "cce7b0c9e7d68d2e",
-    "420314d3cbfee374",
-    "c108206bfcdb0cd2",
-    "8f295ecdb1ee1b34",
-    "https://www.moneytimes.com.br/trabuco-nao-sera-levy-2-0-diz-banqueiro-outra-estatura/",
-    "65fc1ee90b653032",
     "fe9aab68ed0f789d",
     "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bolsa-sobe-6-e-tem-maior-alta-desde-o-1o-turno-dolar-cai-r-574",
     "a7d5e65bfe45f5b3",
@@ -799,13 +790,18 @@
     "0104f6c984d4f342",
     "78cf96ddbd5dd0bf",
     "efc52dd108c793fb",
-    "d86e229038745d88"
+    "d86e229038745d88",
+    "86bc04363f2d8761",
+    "https://www.cnnbrasil.com.br/infra/ons-preve-alta-da-carga-de-energia-e-chuvas-no-sul-e-sudeste-em-dezembro/",
+    "6019aad3815c3d5c",
+    "https://www.cnnbrasil.com.br/politica/fachin-libera-r-316-milhoes-da-liquidacao-do-master-para-socorrer-brb/",
+    "24c2982871799670",
+    "https://www.cnnbrasil.com.br/economia/money/macroeconomia/dolarizar-a-carteira-e-importante-na-economia-globalizada-diz-investidor/",
+    "3f008b45b9f9798d",
+    "https://www.cnnbrasil.com.br/economia/investimentos/investidores-em-etfs-no-brasil-aumentam-34-em-um-ano-segundo-b3/",
+    "ed45f6025a5b274e"
   ],
   "titulos": [
-    "UE economizou € 120 bilhões em importações de energia desde 2022",
-    "BDR da Anthropic (ANTH34) recua mais de 6% após estreia positiva na Bolsa brasileira",
-    "Cemig restringe injeção de energia solar à noite e caso vai parar na Aneel",
-    "Raízen (RAIZ55) deve atingir meta de capitalização, mas Ometto pode ficar de fora e diluir participação",
     "Equatorial recebe nova multa por favorecer comercializadora do grupo",
     "Açúcar fecha em alta de 3,41% em Nova York após mínima de três meses",
     "Durigan projeta resolução sobre alíquota da CBS em duas semanas",
@@ -1601,13 +1597,13 @@
     "Crédito restrito e endividamento devem limitar recuperação do agro",
     "Senacon multa BRB em R$ 14,6 milhões por práticas abusivas de crédito",
     "Fundo imobiliário JCSC11 antecipa parcelas e reduz custo de shopping",
-    "Black Friday: Cielo e Itaú registram crescimento nas primeiras 12 horas"
+    "Black Friday: Cielo e Itaú registram crescimento nas primeiras 12 horas",
+    "ONS prevê alta da carga de energia e chuvas no Sul e Sudeste em dezembro",
+    "Fachin libera R$ 316 milhões da liquidação do Master para socorrer BRB",
+    "Dolarizar a carteira é importante na economia globalizada, diz investidor",
+    "Investidores em ETFs no Brasil aumentam 34% em um ano, segundo B3"
   ],
   "leads": [
-    "A Subsecretaria de Tecnologia da Informação (STI) do Ministério da Agricultura e Pecuária (Mapa) chegou aos 50 anos nesta quinta (26), em evento na sede da pasta. A estrutura vigente foi definida em 2023 pelo Decreto nº 11.332, que converteu o antigo Departamento de Tecnologia da Informação (DTI) na subsecretaria. Hoje, a STI concentra a governança",
-    "O MME (Ministério de Minas e Energia) informou, nesta quinta-feira (26), que não identificou riscos de desabastecimento de etanol anidro durante a entressafra da cana-de-açúcar. A avaliação foi apresentada na quarta-feira (25), durante a sexta reunião de monitoramento do abastecimento de etanol da safra 2026/2027.",
-    "O Pix terá novas funcionalidades e mecanismos de segurança em 2027.",
-    "Cibercriminosos usaram uma brecha crítica no Azure API Management (Apim), da Microsoft, para obter credenciais e comandar sistemas de companhias norueguesas do setor elétrico, segundo o TecMundo. A Microsoft confirmou ter aplicado uma correção automática para interromper o acesso indevido, mas orienta os clientes a checarem se houve invasões antes ",
     "O próximo ciclo de investimentos em infraestrutura no Brasil deve exigir maior participação de recursos públicos para garantir a viabilidade de concessões e PPPs (parcerias público-privadas), segundo avaliou o secretário especial do PPI (Programa de Parcerias de Investimentos), Marcus Cavalcanti.",
     "Segundo dados reunidos pelo Visual Capitalist com base no World Economic Outlook, do International Monetary Fund, e em pesquisas da New York City Economic Development Corporation, a região metropolitana de Nova York gerou cerca de US$ 2.600 bilhões em PIB nominal em 2025, o que a colocaria na oitava posição entre as maiores economias do mundo caso ",
     "Em novembro de 2026, o custo de uma ceia de Ação de Graças para 8 a 10 pessoas nos Estados Unidos variava bastante conforme a cidade, segundo dados reunidos pelo Visual Capitalist a partir de um comunicado da BC.Game divulgado por RFD-TV e EURweb. O levantamento compara 50 cidades, uma por estado, e usa uma cesta padronizada que inclui um peru padr",
@@ -1853,7 +1849,11 @@
     "A perspectiva de recuperação econômica da atividade agrícola nos próximos ciclos deve esbarrar em um problema financeiro que vem se agravando no agronegócio brasileiro: o endividamento dos produtores e a restrição ao acesso ao crédito. Mesmo com expectativas de melhora nos preços internacionais das commodities e de uma safra com bons níveis de prod",
     "A Senacon (Secretaria Nacional do Consumidor), vinculada ao Ministério da Justiça e Segurança Pública, aplicou multa de R$ 14,6 milhões ao BRB (Banco de Brasília) por descumprimento de dispositivos do Código de Defesa do Consumidor. A decisão foi publicada no DOU (Diário Oficial da União) desta sexta-feira (27).",
     "O fundo imobiliário JCSC11 (JHSF Capital SCJ) antecipou, nesta sexta-feira (27), o pagamento das parcelas restantes da aquisição de 16,99% do Shopping Cidade Jardim, em São Paulo, negociada com o XPML11 (XP Malls). Com a renegociação, o valor total da operação caiu de R$ 454 milhões para R$ 444,24 milhões, uma redução de cerca de R$ 9,8 milhões em ",
-    "A Cielo registrou crescimento de 6,4% no volume de transações no comércio físico e eletrônico durante as primeiras 12 horas da Black Friday (de meia-noite às 14h), registrando um total de 13,2 milhões de transações. No mesmo período de 2025, a empresa tinha chegado a 12,4 milhões de transações. O Itaú Unibanco também fez uma parcial da data e regis"
+    "A Cielo registrou crescimento de 6,4% no volume de transações no comércio físico e eletrônico durante as primeiras 12 horas da Black Friday (de meia-noite às 14h), registrando um total de 13,2 milhões de transações. No mesmo período de 2025, a empresa tinha chegado a 12,4 milhões de transações. O Itaú Unibanco também fez uma parcial da data e regis",
+    "O Brasil deverá registrar um crescimento de mais de 6% da carga de energia elétrica em dezembro, além de novas chuvas abundantes nas usinas hidrelétricas dos subsistemas Sul e Sudeste/Centro-Oeste, segundo estimativas do ONS (Operador Nacional do Sistema Elétrico) nesta sexta-feira (27).",
+    "O presidente do STF (Supremo Tribunal Federal), ministro Edson Fachin, autorizou nesta sexta-feira (27) a liberação de R$ 316,4 milhões ao BRB (Banco de Brasília). O dinheiro vem de carteiras de crédito adquiridas do Banco Master e estava retido desde julho, por determinação do relator formal do caso, André Mendonça.",
+    "Dolarizar a carteira de investimentos é uma estratégia importante na atual economia globalizada, segundo Bernardo Pascowitch, apresentador do Resenha do Dinheiro.",
+    "Segundo a B3, Bolsa de Valores do Brasil, o número de investidores pessoa física em ETFs aumentou 34% no segundo trimestre deste ano, na comparação com o mesmo período de 2025."
   ],
   "eventos_recentes": [
     {
@@ -2591,13 +2591,13 @@
     {
       "chave": "itau::GERAL_ATIVO",
       "ts": 1795823037.185118
+    },
+    {
+      "chave": "bdr_exterior::BDR_GERAL",
+      "ts": 1795826531.837148
     }
   ],
   "hashes_imagens": [
-    "7da7e9ef347bafe0",
-    "62a44b792d966ac2",
-    "5367907c883b4f90",
-    "344f180b2af26539",
     "9d9a2ea35240a1e5",
     "ba9d3b114b6c9c0b",
     "fec453549ea4824a",
@@ -2893,6 +2893,10 @@
     "913cc8dda668fb56",
     "2eb86de02432df46",
     "33de7ef552ddc092",
-    "0d9aef3fda77c0a3"
+    "0d9aef3fda77c0a3",
+    "f2fd0c0cbbfcd05b",
+    "66411535e969068d",
+    "2b2a2baaa63e84f5",
+    "265353b4dbbe0ad8"
   ]
 }
