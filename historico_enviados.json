@@ -1,8 +1,5 @@
 {
   "links": [
-    "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/expectativa-de-vida-no-brasil-sobe-para-769-anos-diz-ibge",
-    "e5781bbf49b2217a",
-    "https://www.infomoney.com.br/mercados/sabesp-diz-que-arsesp-aprova-base-de-ativos-11-maior-para-2025/",
     "86f15c82cf458a9e",
     "d091a55502533e74",
     "53714ab5deacac59",
@@ -799,10 +796,12 @@
     "c5262461b96b2d7d",
     "https://www.poder360.com.br/poder-economia/governo-publica-portaria-que-renova-auxilio-ao-diesel/",
     "b0212050869a982e",
-    "ef534cd5cf303586"
+    "ef534cd5cf303586",
+    "830c409fd78056ad",
+    "https://www.moneytimes.com.br/gafisa-gfsa3-adia-novamente-divulgacao-de-balancos-agora-para-janeiro-de-2027-jcav/",
+    "f708d1b0a3a1f8bc"
   ],
   "titulos": [
-    "Três petroleiros atingem minas em Ormuz, diz Irã",
     "Nvidia: sucessão e governança após retorno de Huang",
     "Tesla e SpaceX discutem fusão de US$ 3,5 trilhões",
     "Preços do petróleo próximos das mínimas de três meses com aumento da oferta compensando ameaças",
@@ -1601,10 +1600,10 @@
     "Queda dos preços dos combustíveis traz alívio para motoristas e bancos centrais",
     "América do Sul Mira Integração de Gás e Eletricidade com Projetos de US$18 Bilhões",
     "China preocupa mais empresas europeias e acende alerta em novos setores",
-    "Governo publica portaria que renova auxílio ao diesel"
+    "Governo publica portaria que renova auxílio ao diesel",
+    "Gafisa (GFSA3) adia novamente divulgação de balanços, agora para janeiro de 2027"
   ],
   "leads": [
-    "Em entrevista ao CNN Talks Brasil 2030 – O Novo Ciclo da Infraestrutura, Fulvius Tomelin, CEO da Ultracargo, destacou a segurança como valor central das operações da empresa e discutiu os principais desafios logísticos do país.",
     "A Santos Brasil planeja investir R$ 3,5 bilhões ao longo dos próximos quatro anos para ampliar sua capacidade no Porto de Santos, com previsão de conclusão até 2030.",
     "O ministro da Secretaria de Relações Institucionais, José Guimarães, definiu como uma \"excelente notícia\" a confirmação de Luiz Carlos Trabuco como próximo ministro da Fazenda e desejou sorte ao banqueiro no comando da pasta.",
     "Os pagamentos agênticos são a próxima onda do setor e ocupam posição central na estratégia da Visa. A avaliação é de Marcos Martins, diretor executivo de aceitação da bandeira. Durante o Mobimeeting Finance + ID 2026, evento organizado pelo Mobile Time nesta quinta-feira, 25, o executivo afirmou que esse movimento já está em curso, inclusive no Bra",
@@ -1853,7 +1852,8 @@
     "– Em poucas semanas, os mercados globais de combustíveis saíram da crise, pelo menos por enquanto.",
     "Um estudo apoiado pelo banco de desenvolvimento regional CAF e pela Organização Latino-Americana e Caribenha de Energia (OLACDE) identificou, nesta sexta-feira, 17 projetos de infraestrutura no valor de US$ 18 bilhões que criariam um mercado integrado de gás natural e eletricidade em seis países da América do Sul.",
     "–O impacto negativo da China sobre as empresas europeias está se espalhando para além das montadoras de automóveis e das marcas de luxo, à medida que a fraca demanda e a concorrência mais acirrada de rivais locais afetam uma gama mais ampla de setores.",
-    "Medida foi instituída para conter alta dos preços no Brasil depois do início da guerra no Irã"
+    "Medida foi instituída para conter alta dos preços no Brasil depois do início da guerra no Irã",
+    "A Gafisa (GFSA3) voltou a adiar a divulgação de seus resultados financeiros. Em fato relevante publicado na noite de sexta-feira (27), a incorporadora informou que os balanços do segundo e do terceiro trimestres de 2026 serão divulgados em 28 de janeiro de 2027, com teleconferência prevista para o dia seguinte."
   ],
   "eventos_recentes": [
     {
@@ -2563,10 +2563,13 @@
     {
       "chave": "vamo3::GERAL_ATIVO",
       "ts": 1795872368.504992
+    },
+    {
+      "chave": "gfsa3::EVENTO_CORP",
+      "ts": 1795874585.573301
     }
   ],
   "hashes_imagens": [
-    "5f2557349e87b53b",
     "890fae3a3000e547",
     "13075f0749c3dfda",
     "7ceeecd71fb64a3d",
@@ -2865,6 +2868,7 @@
     "ad0e60264068fc52",
     "0a47cbc112b1161a",
     "6aa0622c30a96a77",
-    "2168d4ce149b7c28"
+    "2168d4ce149b7c28",
+    "f8b6cd50e78c7e96"
   ]
 }
