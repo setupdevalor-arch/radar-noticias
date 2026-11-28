@@ -1,7 +1,5 @@
 {
   "links": [
-    "https://www.infomoney.com.br/onde-investir/dois-anos-apos-pacote-de-haddad-o-que-aconteceu-com-quem-comprou-ipca-na-alta/",
-    "e47597e9ace6b4e3",
     "https://www.infomoney.com.br/mercados/quanto-wall-street-teria-que-cair-para-ameacar-crescimento-dos-eua-morgan-calcula/",
     "d5a21a15e90a6e5d",
     "https://www.cnnbrasil.com.br/agro/jbs-amplia-investimentos-em-colageno-e-ve-proteinas-funcionais-como-negocio/",
@@ -799,7 +797,9 @@
     "ccbce46d6ce472cf",
     "ed8e28a4d5107721",
     "https://www.infomoney.com.br/economia/sp-corta-perspectiva-da-franca-para-negativa-por-orcamento-e-politica/",
-    "945cb24ed5b173e1"
+    "945cb24ed5b173e1",
+    "c500a0aae9c93ed1",
+    "8a4f3fc102a8bba9"
   ],
   "titulos": [
     "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
@@ -1856,14 +1856,6 @@
     "– A S&P revisou a perspectiva do rating de crédito da França de “estável” para “negativa” nesta sexta-feira, citando as crescentes ‌pressões orçamentárias, já que o fraco crescimento econômico e os custos mais elevados com juros tornam mais difícil ‌reduzir o déficit."
   ],
   "eventos_recentes": [
-    {
-      "chave": "smft3::PROVENTOS",
-      "ts": 1795693977.672764
-    },
-    {
-      "chave": "macro_politica_econ::MACRO_EVENTO",
-      "ts": 1795693977.672764
-    },
     {
       "chave": "rv_derivativos::DERIVATIVOS_EVENTO",
       "ts": 1795695427.617365
