@@ -1,9 +1,5 @@
 {
   "links": [
-    "https://www.moneytimes.com.br/petroleo-sobe-e-caminha-para-interromper-sequencia-de-tres-semanas-de-perdas-fets/",
-    "34866f1bb1e6095d",
-    "https://www.spacemoney.com.br/agronegocio/carne-brasileira-auditoria-ue-macron/",
-    "0f9aec150eca16fa",
     "e19be2e8ca91b5a9",
     "https://www.infomoney.com.br/mercados/com-foco-em-baterias-petrobras-avalia-entrar-em-minerais-criticos-nos-proximos-anos/",
     "6e4c24fd34b04672",
@@ -799,10 +795,13 @@
     "d1f8a474584a9874",
     "25a588c505598904",
     "https://www.suno.com.br/noticias/gsfi11-primeiro-rendimento-captacao-outlets/",
-    "b2b93d7700278450"
+    "b2b93d7700278450",
+    "baa8947427995c93",
+    "c6ddcc92e2072d79",
+    "https://www.spacemoney.com.br/economia/exterior/golfo-de-oma-eua-atingem-navio-ira-promete-romper-cerco/",
+    "a845077d0badf2dd"
   ],
   "titulos": [
-    "BRB mantém operações bancárias após suspensão na CVM",
     "Jornada 5x2: veja como ficam regras de salário, folgas e horas extras",
     "Ajuste fiscal “é um bom começo”, diz Trabuco, novo presidente do Movimento Brasil Competitivo",
     "Câmara aprova urgência e acelera votação de projeto de ajuste fiscal do governo Lula",
@@ -1601,10 +1600,10 @@
     "Mineradoras chinesas pedem mais proteção para investimentos no exterior",
     "BC anuncia leilões de linha no total de até US$ 2 bilhões para 2ª-feira",
     "Governo vê negociação insuficiente e revê estratégia para relação com EUA",
-    "GSFI11 paga primeiro rendimento após captar R$ 99 milhões"
+    "GSFI11 paga primeiro rendimento após captar R$ 99 milhões",
+    "Golfo de Omã: EUA atingem navio; Irã promete romper bloqueio"
   ],
   "leads": [
-    "O HGLG11, gerido pela Pátria Log, concluiu a compra dos 12,59% que faltavam no galpão HGLG Itupeva G400, informou a Suno Notícias nesta quinta-feira (26). A transação somou cerca de R$ 31,3 milhões por 6.570 m², a R$ 4.762,45 por metro quadrado. O pagamento ocorreu em 19 de novembro; faltam procedimentos de registro para finalizar a transferência.",
     "O Conselho Monetário Nacional (CMN) aprovou nesta quinta-feira (26), em reunião extraordinária, resolução que amplia os limites para contratação de operações de crédito pelos Estados, Distrito Federal e pelos municípios para o exercício de 2026.",
     "O Itaipu Parquetec pesquisa como reaproveitar baterias retiradas de veículos elétricos para armazenar a energia produzida por painéis solares em residências.",
     "O governo brasileiro lamentou nesta quinta-feira (26) declarações do presidente da França, Emmanuel Macron, que na véspera se referiu à carne brasileira como “dopada” ao celebrar restrições impostas pela União Europeia a produtos brasileiros.",
@@ -1853,7 +1852,8 @@
     "Tensões geopolíticas e regras mais duras elevam custos e dificultam viabilidade de projetos estrangeiros",
     "– O Banco Central ‌realizará na segunda-feira dois leilões ‌de venda de dólares com compromisso de recompra no valor total de ‌até US$ 2 bilhões, segundo comunicado divulgado pela autarquia nesta terça-feira.",
     "O governo do presidente Luiz Inácio Lula da Silva (PT) avalia, segundo fontes na gestão federal, que as negociações com os Estados Unidos foram insuficientes para lidar com o tarifaço e revê sua estratégia para a relação com os norte-americanos.",
-    "O GSFI11, fundo imobiliário da General Shopping & Outlets do Brasil, concluiu em 8 de outubro sua sexta emissão de cotas, captando R$ 99,1 milhões, conforme relatório gerencial de setembro. No mesmo mês, o fundo anunciou sua primeira distribuição de rendimentos, de R$ 0,11 por cota, paga em 15 de outubro."
+    "O GSFI11, fundo imobiliário da General Shopping & Outlets do Brasil, concluiu em 8 de outubro sua sexta emissão de cotas, captando R$ 99,1 milhões, conforme relatório gerencial de setembro. No mesmo mês, o fundo anunciou sua primeira distribuição de rendimentos, de R$ 0,11 por cota, paga em 15 de outubro.",
+    "Os Estados Unidos atingiram e desabilitaram o navio comercial Pacific Archer, de bandeira de Palau, no Golfo de Omã, após a embarcação deixar o porto iraniano de Bandar Abbas e tentar furar o bloqueio americano. O ataque ocorreu na quinta-feira e foi divulgado pelo Comando Central dos EUA (Centcom) na sexta-feira (27), enquanto o Irã prometia rompe"
   ],
   "eventos_recentes": [
     {
@@ -2606,7 +2606,6 @@
     }
   ],
   "hashes_imagens": [
-    "592861fa5ca26001",
     "547ff77cae11a467",
     "23a9bf508d3d944e",
     "9a57c3a5fb5ac70a",
@@ -2905,6 +2904,7 @@
     "559cfabd89a26a6b",
     "4daaafc31408416f",
     "1d4da4aa907097a6",
-    "2404d220ace67c05"
+    "2404d220ace67c05",
+    "09a4610ab353b053"
   ]
 }
